@@ -1,3 +1,8 @@
+2005-02-03  Richard Hoelscher  <rahga@localhost.localdomain>
+
+	* gnotski.c: Second half of "Sunshine" removed as it requires a
+	special feature... though at 345 moves, it's hard enough anyway.
+
 2005-01-21  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c (configure_pixmaps_idle): Blank pixbuf when the
