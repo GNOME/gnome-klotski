@@ -1,4 +1,4 @@
-scoredir=$(localstatedir)/games
+scoredir=$(DESTDIR)$(localstatedir)/games
 pixmapdir=$(datadir)/pixmaps
 Gamesdir=$(datadir)/gnome/apps/Games
 
@@ -24,8 +24,8 @@ Games_DATA = gnotski.desktop
 EXTRA_DIST = README gnotski.desktop $(pixmap_DATA)
 
 install-data-local:
-	-$(mkinstalldirs) $(scoredir)
-	-chgrp games $(bindir)/gnotski && chmod 2111 $(bindir)/gnotski
+	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
+	-chgrp games $(DESTDIR)$(bindir)/gnotski && chmod 2111 $(DESTDIR)$(bindir)/gnotski
 	-touch             $(scoredir)/gnotski.1.scores
 	-chown games.games $(scoredir)/gnotski.1.scores
 	-chmod 664         $(scoredir)/gnotski.1.scores
