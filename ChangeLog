@@ -1,3 +1,13 @@
+2005-03-21  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c : Minor code updates and clean up functions that didn't
+	need prototypes and could use 'static' instead. 
+	Use games-stock items.
+	(creates_statusbar): Status now resembles gnomine and same-gnome.
+	(button_release_space): Win message shortened.
+	(update_menu_state): Moved, use new GtkAction functions.
+	
+
 2005-03-17  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c (new_move): Ensure that no moves means no prior piece.

@@ -25,8 +25,9 @@
 #include <string.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#include "games-preimage.h"
-#include "games-gridframe.h"
+#include <games-preimage.h>
+#include <games-gridframe.h>
+#include <games-stock.h>
 
 #include "pieces.h"
 
@@ -45,11 +46,11 @@
 GConfClient *conf_client;
 
 GtkWidget *window;
-GtkWidget *menubar;
 GtkWidget *statusbar;
 GtkWidget *space;
-GtkWidget *move_value;
 GtkWidget *gameframe;
+GtkWidget *messagewidget;
+GtkWidget *moveswidget;
 
 GdkGC *space_gc = NULL;
 
@@ -83,31 +84,25 @@ guint redraw_all_idle_id = 0;
 guint configure_idle_id = 0;
 
 void create_space (void);
-void create_menubar (void);
+GtkWidget * create_menubar (void);
 void create_statusbar (void);
 
-gboolean redraw_all (void);
-void status_message (gchar *);
 void load_image (void);
 void gui_draw_space (void);
 void gui_draw_pixmap (char *, gint, gint);
 gint get_piece_nr (char *, gint, gint);
 gint get_piece_id (char *, gint, gint);
 void set_piece_id (char *, gint, gint, gint);
-gint check_valid_move (gint, gint, gint);
-gint do_move_piece (gint, gint, gint);
 gint move_piece (gint, gint, gint, gint, gint);
 void copymap (char *, char *);
 gint mapcmp (char *, char *);
-static gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
+gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
                         GnomeInteractStyle, gint fast, gpointer);
-void set_move (gint);
 void new_move (void);
 void game_score (void);
 gint game_over (void);
-void update_menu_state (void);
 
-static gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
+gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
 
 void new_game (gint requested_level);
 
@@ -640,14 +635,14 @@ const GtkActionEntry entries[] = {
   { "SkillPack", NULL, N_("Skill Pack") },
                           /* set of puzzles */
   { "MinoruClimb", NULL, N_("Minoru Climb") },
-  { "RestartPuzzle", NULL, N_("_Restart Puzzle"), "<control>R", NULL, G_CALLBACK (restart_level_cb) },
-  { "NextPuzzle", NULL, N_("Next Puzzle"), NULL, NULL, G_CALLBACK (next_level_cb) },
-  { "PrevPuzzle", NULL, N_("Previous Puzzle"), NULL, NULL, G_CALLBACK (prev_level_cb) },
-  { "Hint", NULL, N_("_Hint"), NULL, NULL, G_CALLBACK (hint_cb) },
+  { "RestartPuzzle", GTK_STOCK_REFRESH, N_("_Restart Puzzle"), "<control>R", NULL, G_CALLBACK (restart_level_cb) },
+  { "NextPuzzle", GTK_STOCK_GO_FORWARD, N_("Next Puzzle"), NULL, NULL, G_CALLBACK (next_level_cb) },
+  { "PrevPuzzle", GTK_STOCK_GO_BACK, N_("Previous Puzzle"), NULL, NULL, G_CALLBACK (prev_level_cb) },
+  { "Hint", GAMES_STOCK_HINT, NULL, NULL, NULL, G_CALLBACK (hint_cb) },
   { "Quit", GTK_STOCK_QUIT,  NULL, NULL, NULL, G_CALLBACK (quit_game_cb) },
-  { "Contents", GTK_STOCK_HELP, "_Contents", "F1", NULL, G_CALLBACK (help_cb) },
+  { "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) },
-  { "Scores", GNOME_STOCK_SCORES, N_("_Scores"), NULL, NULL, G_CALLBACK (score_cb) }
+  { "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (score_cb) }
 };
 
 const char *ui_description =
@@ -685,23 +680,25 @@ static const struct poptOption options[] = {
 
 /* ------------------------------------------------------- */
 
-int 
+int
 main (int argc, char **argv)
 {
   GnomeClient *client;
   GtkWidget *vbox;
+  GtkWidget *menubar;
   gint win_width, win_height, startup_level;
 
   gnome_score_init (APPNAME);
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
-   
+  
   gnome_program_init (APPNAME, VERSION,
                        LIBGNOMEUI_MODULE,
                        argc, argv,
                        GNOME_PARAM_POPT_TABLE, options,
                        GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+  games_stock_init ();
   gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
   client = gnome_master_client ();
   g_object_ref (G_OBJECT (client));
@@ -730,13 +727,14 @@ main (int argc, char **argv)
   gnome_app_set_contents (GNOME_APP (window), vbox);
 
   load_image ();
-  create_space (); 
-  create_menubar ();
+  create_space ();
+  menubar = create_menubar ();
   create_statusbar ();
 
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), gameframe, TRUE, TRUE, 0);
-  gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox), gtk_hseparator_new (), FALSE, FALSE, 0);
+  gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, GNOME_PAD);
  
   if (session_xpos >= 0 && session_ypos >= 0)
     gtk_window_move (GTK_WINDOW (window), session_xpos, session_ypos);
@@ -764,7 +762,7 @@ expose_space (GtkWidget *widget, GdkEventExpose *event)
   return FALSE; 
 }
 
-gboolean
+static gboolean
 redraw_all (void)
 {
   gint x, y;
@@ -816,7 +814,7 @@ button_release_space (GtkWidget *widget, GdkEventButton *event)
 	if (mapcmp (move_map, map)) {
 	  new_move ();
 	  if (game_over ()) {
-	    status_message (_("Level completed. Well done."));
+	    gtk_label_set_text (GTK_LABEL (messagewidget), _("Level completed."));
 	    game_score ();
 	  }
 	}
@@ -969,12 +967,12 @@ update_score_state (void)
   top = gnome_score_get_notable (APPNAME, current_level_scorefile,
                                  &names, &scores, &scoretimes);
   if (top > 0) {
-    g_object_set (score_action, "sensitive", TRUE, NULL);
+    gtk_action_set_sensitive (score_action, TRUE);
     g_strfreev (names);
     g_free (scores);
     g_free (scoretimes);
   } else {
-    g_object_set (score_action, "sensitive", FALSE, NULL);
+    gtk_action_set_sensitive (score_action, FALSE);
   }
 }
 
@@ -1125,7 +1123,7 @@ void add_puzzle_menu (GtkUIManager *ui_manager)
 			 NULL, 0);
 }
 
-void
+GtkWidget *
 create_menubar (void)
 {
   GtkUIManager *ui_manager;
@@ -1144,34 +1142,20 @@ create_menubar (void)
   accel_group = gtk_ui_manager_get_accel_group (ui_manager);
   gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
   
-  menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
+  return gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
 }
 
 void
 create_statusbar (void)
 {
-  GtkWidget *frame, *move_box, *move_label;
+  statusbar = gtk_hbox_new (TRUE, 0);
 
-  statusbar = gtk_statusbar_new ();
-  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
+  messagewidget = gtk_label_new ("");
+  gtk_box_pack_start (GTK_BOX (statusbar), messagewidget, FALSE, FALSE, 0);
 
-  move_box = gtk_hbox_new (FALSE, 0);
-  move_label = gtk_label_new (_("Moves:"));
-  gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
-  move_value = gtk_label_new ("000");
-  gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
 
-  frame = gtk_frame_new (NULL);
-  gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
-  gtk_container_add (GTK_CONTAINER (frame), move_box);
-  gtk_box_pack_end (GTK_BOX (statusbar),frame, FALSE, FALSE, 0);
-}
-
-void
-status_message (gchar *message)
-{
-  gtk_statusbar_pop (GTK_STATUSBAR (statusbar), 0);
-  gtk_statusbar_push (GTK_STATUSBAR (statusbar), 0, message);
+  moveswidget = gtk_label_new ("");
+  gtk_box_pack_end (GTK_BOX (statusbar), moveswidget, FALSE, FALSE, 0);
 }
 
 void
@@ -1198,7 +1182,7 @@ load_image (void)
   g_free (fname);
 }
 
-void
+static void
 set_move (gint x)
 {
   moves = x - 1;
@@ -1216,8 +1200,8 @@ new_move (void)
   if (moves < 999 && last_piece_id != piece_id)
     moves++;
   last_piece_id = piece_id;
-  str = g_strdup_printf ("%03d", moves);
-  gtk_label_set_text (GTK_LABEL (move_value), str);
+  str = g_strdup_printf ("Moves: %d", moves);
+  gtk_label_set_text (GTK_LABEL (moveswidget), str);
   g_free (str);
 }
 
@@ -1233,7 +1217,7 @@ game_over (void)
   return over;
 }
 
-gint
+static gint
 do_move_piece (gint id, gint dx, gint dy)
 {
   gint x, y;
@@ -1271,7 +1255,7 @@ do_move_piece (gint id, gint dx, gint dy)
   return 1;
 }
 
-gint
+static gint
 check_valid_move (gint id, gint dx, gint dy)
 {
   gint x, y, valid = 1;
@@ -1392,7 +1376,7 @@ prepare_map (current_level)
                          current_level + 1, 
                          level[current_level].name);
   
-  status_message (tmp);
+  gtk_label_set_text (GTK_LABEL (messagewidget), tmp);
   g_free (tmp);
 
   if (map) {
@@ -1416,6 +1400,30 @@ prepare_map (current_level)
   copymap (orig_map, map);
 }
 
+static void
+update_menu_state (void)
+{
+  GtkAction *action;
+  gboolean action_is_sensitive;
+
+  /* Puzzle Radio Action */
+  gtk_toggle_action_set_active (level_action[current_level], TRUE);
+
+  /* Hint Sensitivity */
+  action_is_sensitive = level[current_level].minimum_moves > 0;
+  action = gtk_action_group_get_action (action_group, "Hint");
+  gtk_action_set_sensitive (action, action_is_sensitive);
+
+  /* Next Puzzle Sensitivity */
+  action_is_sensitive = current_level < max_level;
+  action = gtk_action_group_get_action (action_group, "NextPuzzle");
+  gtk_action_set_sensitive (action, action_is_sensitive);
+
+  /* Previous Puzzle Sensitivity */
+  action_is_sensitive = current_level > 0;
+  action = gtk_action_group_get_action (action_group, "PrevPuzzle");
+  gtk_action_set_sensitive (action, action_is_sensitive);
+}
 
 void
 new_game (gint requested_level)
@@ -1443,7 +1451,7 @@ quit_game_cb (GtkAction *action)
   gtk_main_quit ();
 }
 
-static gboolean
+gboolean
 window_resize_cb (GtkWidget *w, GdkEventConfigure *e, gpointer data)
 {
   gconf_client_set_int (conf_client, "/apps/gnotski/width",
@@ -1453,7 +1461,7 @@ window_resize_cb (GtkWidget *w, GdkEventConfigure *e, gpointer data)
   return FALSE;
 }
 
-static gint
+gint
 save_state (GnomeClient *client, gint phase, 
             GnomeRestartStyle save_style, gint shutdown,
             GnomeInteractStyle interact_style, gint fast,
@@ -1510,31 +1518,6 @@ void
 help_cb (GtkAction *action)
 {
   gnome_help_display ("gnotski.xml", NULL, NULL);
-}
-
-void 
-update_menu_state (void)
-{
-  GtkAction *action;
-  gboolean action_is_sensitive; 
-
-  /* Puzzle Radio Action */
-  gtk_toggle_action_set_active (level_action[current_level], TRUE);
-
-  /* Hint Sensitivity */
-  action_is_sensitive = level[current_level].minimum_moves > 0;
-  action = gtk_action_group_get_action (action_group, "Hint");
-  g_object_set (action, "sensitive", action_is_sensitive, NULL); 
-
-  /* Next Puzzle Sensitivity */
-  action_is_sensitive = current_level < max_level;
-  action = gtk_action_group_get_action (action_group, "NextPuzzle");
-  g_object_set (action, "sensitive", action_is_sensitive, NULL);
-
-  /* Previous Puzzle Sensitivity */
-  action_is_sensitive = current_level > 0;
-  action = gtk_action_group_get_action (action_group, "PrevPuzzle");
-  g_object_set (action, "sensitive", action_is_sensitive, NULL);
 }
 
 void
