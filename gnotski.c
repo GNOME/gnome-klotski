@@ -1013,14 +1013,14 @@ configure_pixmaps_idle (void)
     if (tiles_pixbuf != NULL) 
       g_object_unref (tiles_pixbuf);
     
-    tiles_pixbuf=games_preimage_render (tiles_preimage,
-                                        tile_size * THEME_TILE_SEGMENTS,
-                                        tile_size * 2, NULL);
+    tiles_pixbuf = games_preimage_render (tiles_preimage,
+                                          tile_size * THEME_TILE_SEGMENTS,
+                                          tile_size * 2, NULL);
     prior_tile_size = tile_size;
   }
 
   if (redraw_all_idle_id)
-    g_source_remove (configure_idle_id);
+    g_source_remove (redraw_all_idle_id);
 
   redraw_all_idle_id = g_idle_add_full (G_PRIORITY_DEFAULT_IDLE + 1, 
                                         (GSourceFunc) redraw_all, 
@@ -1151,22 +1151,23 @@ create_menubar (void)
 }
 
 void
-create_statusbar (void){
-   GtkWidget *frame, *move_box, *move_label;
+create_statusbar (void)
+{
+  GtkWidget *frame, *move_box, *move_label;
 
-   statusbar = gtk_statusbar_new ();
-   gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
+  statusbar = gtk_statusbar_new ();
+  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
 
-   move_box = gtk_hbox_new (FALSE, 0);
-   move_label = gtk_label_new (_("Moves:"));
-   gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
-   move_value = gtk_label_new ("000");
-   gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
- 
-   frame = gtk_frame_new (NULL);
-   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
-   gtk_container_add (GTK_CONTAINER (frame), move_box);
-   gtk_box_pack_end (GTK_BOX (statusbar),frame, FALSE, FALSE, 0);
+  move_box = gtk_hbox_new (FALSE, 0);
+  move_label = gtk_label_new (_("Moves:"));
+  gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
+  move_value = gtk_label_new ("000");
+  gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
+
+  frame = gtk_frame_new (NULL);
+  gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
+  gtk_container_add (GTK_CONTAINER (frame), move_box);
+  gtk_box_pack_end (GTK_BOX (statusbar),frame, FALSE, FALSE, 0);
 }
 
 void
@@ -1282,6 +1283,7 @@ check_valid_move (gint id, gint dx, gint dy)
               || (id == '*' && get_piece_id (map, x + dx, y + dy) == '-'))) {
 	  valid = 0;
 	}
+
   return valid;
 }
 
@@ -1307,6 +1309,7 @@ move_piece (gint id, gint x1, gint y1, gint x2, gint y2)
       if (check_valid_move (id, 0, -1))
 	return do_move_piece (id, 0, -1);
   }
+
   if (abs (x1 - x2) == 1) {
     if (x1 - x2 < 0) 
       if (check_valid_move (id, 1, 0))
@@ -1315,6 +1318,7 @@ move_piece (gint id, gint x1, gint y1, gint x2, gint y2)
       if (check_valid_move (id, -1, 0))
 	return do_move_piece (id, -1, 0);
   }
+
   return return_value;
 }
 
@@ -1329,7 +1333,6 @@ set_piece_id (char *src, gint x, gint y, gint id)
 {
   src[x + 1 + (y + 1) * (width + 2)] = id;
 }
-
 
 gint
 get_piece_nr (char *src, gint x, gint y)
@@ -1416,8 +1419,8 @@ void
 new_game (gint requested_level)
 {
   clear_game = TRUE;
-  set_move (0);
 
+  set_move (0);
   current_level = CLAMP (requested_level, 0, max_level);
 
   g_snprintf (current_level_scorefile, sizeof(current_level_scorefile), 

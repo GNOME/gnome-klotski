@@ -1,4 +1,9 @@
-2004-12-13  Richard Hoelscher  <rahga@rahga.com>
+2004-12-16  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c (create_statusbar): Fix indentations in source.
+	(configure_pixmaps_idle): Fix thinko in handling of idle draw.
+
+2004-12-13  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c: Replace "New Game" menu item with "Restart Puzzle"
 	(expose_space): Draw when scaling, but not while changing levels.
