@@ -638,11 +638,9 @@ gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
 }
 
 void create_space(){
-  gtk_widget_push_visual(gdk_rgb_get_visual ());
   gtk_widget_push_colormap(gdk_rgb_get_cmap());
   space = gtk_drawing_area_new();
   gtk_widget_pop_colormap();
-  gtk_widget_pop_visual();
   gnome_app_set_contents(GNOME_APP(window),space);
   gtk_drawing_area_size(GTK_DRAWING_AREA(space),
 			TILE_SIZE*width,TILE_SIZE*height); 
