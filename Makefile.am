@@ -29,7 +29,7 @@ EXTRA_DIST = README gnotski.desktop.in $(pixmap_DATA)
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-chgrp games $(DESTDIR)$(bindir)/gnotski && chmod 2111 $(DESTDIR)$(bindir)/gnotski
+	-chgrp games $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski
 	-touch             $(scoredir)/gnotski.1.scores
 	-chown games.games $(scoredir)/gnotski.1.scores
 	-chmod 664         $(scoredir)/gnotski.1.scores
