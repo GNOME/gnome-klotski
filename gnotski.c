@@ -24,7 +24,6 @@
 
 #define APPNAME "gnotski"
 #define APPNAME_LONG "Gnome Klotski"
-#define GNOTSKI_VERSION "0.20"
 
 #define TILE_SIZE 34
 
@@ -90,7 +89,7 @@ void about_cb(GtkWidget *, gpointer);
 void score_cb(GtkWidget *, gpointer);
 
 GnomeUIInfo level_1_menu[] = {
-  { GNOME_APP_UI_ITEM, N_("Novice 1"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
     "1#10#11#" \
     "          " \
     "          " \
@@ -105,7 +104,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..", 
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 2"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
     "2#10#11#" \
     "          " \
     "          " \
@@ -120,7 +119,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 3"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
     "3#10#11#" \
     "          " \
     "          " \
@@ -135,7 +134,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 4"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
     "4#10#11#" \
     "          " \
     "          " \
@@ -150,7 +149,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 5"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
     "5#10#11#" \
     "          " \
     "          " \
@@ -165,7 +164,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 6"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
     "6#10#11#" \
     "          " \
     "          " \
@@ -180,7 +179,7 @@ GnomeUIInfo level_1_menu[] = {
     "        ..",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Novice 7"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
     "7#10#7#" \
     "..        " \
     ".         " \
@@ -192,7 +191,7 @@ GnomeUIInfo level_1_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
 /* Tile Mismatch
-  { GNOME_APP_UI_ITEM, N_("Novice 8"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
     "8#13#11#" \
     "  ########## " \
     "  #a**bcccd# " \
@@ -211,7 +210,7 @@ GnomeUIInfo level_1_menu[] = {
 
 GnomeUIInfo level_2_menu[] = {
 
-  { GNOME_APP_UI_ITEM, N_("Medium 1"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
     "11#10#9#" \
     "         a" \
     " #######  " \
@@ -225,7 +224,7 @@ GnomeUIInfo level_2_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
 
-  { GNOME_APP_UI_ITEM, N_("Medium 2"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
     "12#10#10#" \
     "          " \
     "  ######  " \
@@ -239,7 +238,7 @@ GnomeUIInfo level_2_menu[] = {
     "        . ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Medium 3"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
     "13#10#11#" \
     "        .." \
     "        . " \
@@ -254,7 +253,7 @@ GnomeUIInfo level_2_menu[] = {
     "          ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Medium 4"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
     "14#10#7#" \
     "  ########" \
     "  -aabc  #" \
@@ -265,7 +264,7 @@ GnomeUIInfo level_2_menu[] = {
     "        .." ,
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Medium 5"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
     "15#10#9#" \
     " .        " \
     "..        " \
@@ -278,7 +277,7 @@ GnomeUIInfo level_2_menu[] = {
     "  ####### ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Medium 6"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
     "16#10#8#" \
     "  ######  " \
     "  #abcd#  " \
@@ -291,7 +290,7 @@ GnomeUIInfo level_2_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
    /* Tiles mismatch
-  { GNOME_APP_UI_ITEM, N_("Medium 7"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
     "14#13#11#" \
     "         ... " \
     "          .  " \
@@ -306,7 +305,7 @@ GnomeUIInfo level_2_menu[] = {
     "             ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL }, */
 
-  { GNOME_APP_UI_ITEM, N_("Medium 7"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
     "17#10#8#" \
     " ######## " \
     " #abcc**# " \
@@ -323,7 +322,7 @@ GnomeUIInfo level_2_menu[] = {
 
 GnomeUIInfo level_3_menu[] = {
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 1"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
     "21#19#19#" \
     ".aaaaaaaaaaaaaaaaab" \
     "..  cddeffffffffffb" \
@@ -346,7 +345,7 @@ GnomeUIInfo level_3_menu[] = {
     "ttttttuvvvvvvvwwwwx",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 2"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
     "22#11#10#" \
     " ######### " \
     " #abbb***# " \
@@ -361,7 +360,7 @@ GnomeUIInfo level_3_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
    /* Tiles mismatch
-  { GNOME_APP_UI_ITEM, N_("Advanced X"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("X"), NULL, level_cb,
     "14#20#12#" \
     "a     bbbbbb  cccccc" \
     "a     bbbbbb  cccccc" \
@@ -377,7 +376,7 @@ GnomeUIInfo level_3_menu[] = {
     "kkkkkggg   iiiii....",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL }, */
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 3"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
     "23#13#11#" \
     "ABBBBBBBBBBBB" \
     "AC          D" \
@@ -392,7 +391,7 @@ GnomeUIInfo level_3_menu[] = {
     "EHHHHJJJJJ..G",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 4"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
     "24#11#11#" \
     " ABCCCCCCCC" \
     " ABCCCCCCCC" \
@@ -407,7 +406,7 @@ GnomeUIInfo level_3_menu[] = {
     " .FFGGGGGGD",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 5"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
     "25#8#10#" \
     ".       " \
     ".       " \
@@ -421,7 +420,7 @@ GnomeUIInfo level_3_menu[] = {
     " ###### ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-  { GNOME_APP_UI_ITEM, N_("Advanced 6"), NULL, level_cb,
+  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
     "26#12#12#" \
     " ########## " \
     " #a*bcdefg# " \
@@ -441,7 +440,7 @@ GnomeUIInfo level_3_menu[] = {
 };
 
 GnomeUIInfo game_menu[] = {
-  { GNOME_APP_UI_SUBTREE, N_("_Easy"), NULL, level_1_menu,  NULL,NULL,
+  { GNOME_APP_UI_SUBTREE, N_("_Novice"), NULL, level_1_menu,  NULL,NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_BLANK, 
     (GdkModifierType) 0, GDK_CONTROL_MASK },
   { GNOME_APP_UI_SUBTREE, N_("_Medium"), NULL, level_2_menu,  NULL,NULL,
@@ -977,7 +976,7 @@ void about_cb(GtkWidget *widget, gpointer data){
   
   const gchar *authors[] = { "Lars Rydlinge", NULL };
   about = gnome_about_new(_(APPNAME_LONG), 
-                          GNOTSKI_VERSION, 
+                          VERSION, 
                           "(C) 1999 Lars Rydlinge",
 			  (const char **)authors, 
 			  _("Klotski clone\n" \
