@@ -26,6 +26,7 @@ Comment[no]=Gnome Klotski
 Comment[sk]=Klotski pre GNOME
 Comment[sv]=Gnome Klotski
 Exec=gnotski
+Icon=gnotski.png
 Terminal=0
 Type=Application
 

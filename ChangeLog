@@ -1,0 +1,5 @@
+2001-06-09  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* Makefile.am, gnotski.c: Move the image file to $(datadir)/pixmaps.
+	* gnotski.desktop: Add Icon=gnotski.png.
+

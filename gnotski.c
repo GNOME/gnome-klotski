@@ -484,7 +484,7 @@ int main (int argc, char **argv){
   textdomain(PACKAGE);
    
   gnome_init_with_popt_table(APPNAME, VERSION, argc, argv, options, 0, NULL);
-  gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski/gnotski.png");
+  gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski.png");
   client = gnome_master_client();
   gtk_object_ref(GTK_OBJECT(client));
   gtk_object_sink(GTK_OBJECT(client));
@@ -684,13 +684,11 @@ void message(gchar *message){
 }
 
 void load_image(){
-  char *tmp, *fname;
+  char *fname;
   GdkImlibImage *image;
   GdkVisual *visual;
 
-  tmp = g_strconcat("gnotski/", "gnotski.png", NULL);
-  fname = gnome_unconditional_pixmap_file(tmp);
-  g_free(tmp);
+  fname = gnome_unconditional_pixmap_file("gnotski.png");
   if(!g_file_exists(fname)) {
     g_print(_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
   }
