@@ -4,8 +4,7 @@ Gamesdir=$(datadir)/applications
 
 INCLUDES = 			\
 	$(GNOME_GAMES_CFLAGS)		\
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
-	-I$(includedir) 
+	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
 
 bin_PROGRAMS = gnotski
 
