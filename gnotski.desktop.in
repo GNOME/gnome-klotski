@@ -7,3 +7,6 @@ Icon=gnotski-icon.png
 Terminal=false
 Type=Application
 Categories=GNOME;Application;Game;PuzzleGame;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-games
+X-GNOME-Bugzilla-Component=gnotski
