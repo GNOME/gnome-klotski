@@ -1,3 +1,8 @@
+2002-08-23  Andrew Sobala  <andrew@sobala.net>
+
+	* help/C/gnotski-C.omf: Fix the OMF file, to stop confusing
+	Scrollkeeper. Fixing #91402.
+
 2002-08-23  Ross Burton  <ross@burtonini.com>
 
 	* gnotski.c: Enable the high scores dialog. Patch from Andrew

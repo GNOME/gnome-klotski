@@ -1,4 +1,6 @@
-<?xml version="1.0" standalone="no"?>
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE omf PUBLIC "-//OMF/DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+
 <omf>
        <resource>
        <creator>
@@ -15,16 +17,13 @@
    </date>
      <version identifier="2.0" date="2002-08-11" description="Initial revision"/>
      <subject category="GNOME|Games"/>
-     <description>
-    FIXME
-   </description>
      <type>
      user's guide
-   </type>
+     </type>
      <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-     <identifier url="file://usr/share/gnome/help/gnotski/C/gnotski.xml"/> <!--FIXME-->
+     <identifier url="file://usr/share/gnome/help/gnotski/C/gnotski.xml"/>
      <language code="C"/>
-     <relation seriesid="54d3211e-6006-11d6-9a4c-97ceaf12a926"/> <!--FIXME ARGH -->
+     <relation seriesid="948b45bc-b5c3-11d6-870d-ce2cbe999e76"/> 
      <rights type="GNU FDL" license.version="1.1" holder="Andrew Sobala"/>
      </resource>
      </omf>
