@@ -1,3 +1,8 @@
+2003-01-07  Ross Burton  <ross@burtonini.com>
+
+	* Makefile.am: Fix the use of $DESTDIR, closing #102757. Also
+	clean the EXTRA_DIST rule. Thanks to gdx@poczta.fm.
+
 2002-11-27  Ross Burton  <ross@burtonini.com>
 
 	* gnotski.c: s/Gnome/GNOME/, for #99683.
