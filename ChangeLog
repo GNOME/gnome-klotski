@@ -1,3 +1,7 @@
+2005-01-03  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c (load_image): Preimage API update, uri -> file.
+
 2004-12-16  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c (create_statusbar): Fix indentations in source.

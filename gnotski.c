@@ -1185,7 +1185,7 @@ load_image (void)
   fname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
                                      "gnotski.svg", FALSE, NULL);
   if (g_file_test (fname, G_FILE_TEST_EXISTS)) {
-    tiles_preimage = games_preimage_new_from_uri (fname, NULL);
+    tiles_preimage = games_preimage_new_from_file (fname, NULL);
   } else {
     GtkWidget *dialog;
 
