@@ -1,3 +1,7 @@
+2003-06-24  William Jon McCann  <mccann@jhu.edu>
+
+	* gnotski.c (new_move): Try not to use fixed length string buffer.
+
 2003-06-18  William Jon McCann  <mccann@jhu.edu>
 
 	* gnotski.c: Fixed compiler warnings.

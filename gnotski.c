@@ -826,11 +826,12 @@ set_move (gint x)
 void
 new_move (void)
 {
-  char str[4];
+  gchar *str = NULL;
   if (moves < 999)
     moves++;
-  sprintf (str,"%03d", moves);
+  str = g_strdup_printf ("%03d", moves);
   gtk_label_set_text (GTK_LABEL (move_value), str);
+  g_free (str);
 }
 
 void
