@@ -523,6 +523,9 @@ void create_window(){
 }
 
 gint expose_space(GtkWidget *widget, GdkEventExpose *event){ 
+if (buffer == NULL)
+	return FALSE;
+
   gdk_draw_drawable(widget->window, 
                   widget->style->fg_gc[GTK_WIDGET_STATE(widget)], 
                   buffer, event->area.x, event->area.y, 

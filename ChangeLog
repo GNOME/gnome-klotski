@@ -1,5 +1,10 @@
 2002-04-30  Bastien Nocera  <hadess@hadess.net>
 
+	* gnotski.c: (expose_space): fix run-time warning, patch by Shahms E.
+	King <shahms@shahms.com>
+
+2002-04-30  Bastien Nocera  <hadess@hadess.net>
+
 	* gnotski.c: (load_image), (about_cb): have a nice dialog when the map
 	can't be loaded, add icon to about box
 
