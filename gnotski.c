@@ -22,6 +22,7 @@
 
 #include <config.h>
 #include <gnome.h>
+#include <string.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include "pieces.h"
@@ -61,14 +62,14 @@ gint session_position = 0;
 
 char current_level[16];
 
-void create_window ();
-void create_space ();
-void create_statusbar ();
+void create_window (void);
+void create_space (void);
+void create_statusbar (void);
 
-GdkColor *get_bg_color ();
-void redraw_all ();
+GdkColor *get_bg_color (void);
+void redraw_all (void);
 void message (gchar *);
-void load_image ();
+void load_image (void);
 void gui_draw_pixmap (char *, gint, gint);
 gint get_piece_nr (char *, gint, gint);
 gint get_piece_id (char *, gint, gint);
@@ -82,9 +83,9 @@ static gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
                         GnomeInteractStyle, gint fast, gpointer);
 void print_map (char *);
 void set_move (gint);
-void new_move ();
-gint game_over ();
-void game_score ();
+void new_move (void);
+gint game_over (void);
+void game_score (void);
 
 /* ------------------------- MENU ------------------------ */
 void new_game_cb (GtkWidget *, gpointer);
@@ -498,13 +499,13 @@ main (int argc, char **argv)
                        GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
   client = gnome_master_client ();
-  gtk_object_ref (GTK_OBJECT (client));
+  g_object_ref (G_OBJECT (client));
   gtk_object_sink (GTK_OBJECT (client));
   
-  g_signal_connect(G_OBJECT (client), "save_yourself", 
-                   G_CALLBACK (save_state), argv[0]);
-  g_signal_connect(G_OBJECT (client), "die",
-                   G_CALLBACK (quit_game_cb), argv[0]);
+  g_signal_connect (G_OBJECT (client), "save_yourself", 
+                    G_CALLBACK (save_state), argv[0]);
+  g_signal_connect (G_OBJECT (client), "die",
+                    G_CALLBACK (quit_game_cb), argv[0]);
 
   create_window ();
   gnome_app_create_menus (GNOME_APP (window), main_menu);
@@ -513,7 +514,7 @@ main (int argc, char **argv)
   create_statusbar ();
 
   if (session_xpos >= 0 && session_ypos >= 0)
-    gtk_widget_set_uposition (window, session_xpos, session_ypos);
+    gtk_window_move (GTK_WINDOW (window), session_xpos, session_ypos);
     
   gtk_widget_show_all (window);
   new_game_cb (space, NULL);
@@ -525,7 +526,7 @@ main (int argc, char **argv)
 }
 
 GdkColor *
-get_bg_color () 
+get_bg_color (void) 
 {
   GtkStyle *style;
   GdkColor *color;
@@ -535,7 +536,7 @@ get_bg_color ()
 }
 
 void
-create_window ()
+create_window (void)
 {
   window = gnome_app_new (APPNAME, N_(APPNAME_LONG));
   gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
@@ -544,7 +545,7 @@ create_window ()
                     GTK_SIGNAL_FUNC (quit_game_cb), NULL);
 }
 
-gint
+static gint
 expose_space (GtkWidget *widget, GdkEventExpose *event)
 {
   if (buffer == NULL)
@@ -559,7 +560,7 @@ expose_space (GtkWidget *widget, GdkEventExpose *event)
 }
 
 void
-redraw_all()
+redraw_all (void)
 {
   gint x, y;
   for (y = 0; y < height; y++)
@@ -567,7 +568,7 @@ redraw_all()
       gui_draw_pixmap (map, x, y);
 }
 
-gint
+static gint
 movable (gint id)
 {
   if(! (id == '#' || id == '.' || id == ' ' || id == '-'))
@@ -580,7 +581,7 @@ gint piece_id = -1;
 gint piece_x = 0; 
 gint piece_y = 0; 
 
-gint
+static gint
 button_press_space (GtkWidget *widget, GdkEventButton *event)
 {
   if (event->button == 1) {
@@ -595,7 +596,7 @@ button_press_space (GtkWidget *widget, GdkEventButton *event)
   return FALSE;
 }
 
-gint
+static gint
 button_release_space (GtkWidget *widget, GdkEventButton *event)
 {
   if (event->button == 1) {
@@ -614,7 +615,7 @@ button_release_space (GtkWidget *widget, GdkEventButton *event)
   return FALSE;
 }
 
-gint
+static gint
 button_motion_space (GtkWidget *widget, GdkEventButton *event)
 { 
   gint new_piece_x, new_piece_y;
@@ -638,7 +639,6 @@ void
 gui_draw_pixmap (char *target, gint x, gint y)
 {
   GdkGC *gc;
-  GdkRectangle area;
   GdkColor *bg_color;
   GtkStyle *style;
   GdkColor *fg_color;
@@ -674,14 +674,12 @@ gui_draw_pixmap (char *target, gint x, gint y)
                      x * TILE_SIZE + 10, y * TILE_SIZE + 10, 8, 8,
                      GDK_RGB_DITHER_NORMAL, 0, 0);
   }
-  area.x = x * TILE_SIZE;
-  area.y = y * TILE_SIZE; 
-  area.width = TILE_SIZE;
-  area.height = TILE_SIZE;
-  gtk_widget_draw (space, &area);
+
+  gtk_widget_queue_draw_area (space, x * TILE_SIZE, y * TILE_SIZE,
+                              TILE_SIZE, TILE_SIZE);
 }
 
-void
+static void
 show_score_dialog (gint pos)
 {
   GtkWidget *dialog;
@@ -699,8 +697,8 @@ score_cb (GtkWidget *widget, gpointer data)
   show_score_dialog (0);
 }
 
-void
-update_score_state ()
+static void
+update_score_state (void)
 {
   gchar **names = NULL;
   gfloat *scores = NULL;
@@ -728,29 +726,29 @@ game_score ()
   show_score_dialog (pos);
 }
 
-gint
+static gint
 configure_space (GtkWidget *widget, GdkEventConfigure *event)
 {
   if (width > 0) {
     if (buffer)
-      gdk_drawable_unref (buffer);
+      g_object_unref (buffer);
     buffer = gdk_pixmap_new (widget->window, widget->allocation.width, 
                              widget->allocation.height, -1);
     redraw_all ();
   }
-  return (TRUE);
+  return TRUE;
 }
 
 void
-create_space ()
+create_space (void)
 {
   gtk_widget_push_colormap (gdk_rgb_get_colormap ());
   space = gtk_drawing_area_new ();
   gtk_widget_pop_colormap ();
   gnome_app_set_contents (GNOME_APP (window), space);
-  gtk_drawing_area_size (GTK_DRAWING_AREA (space),
-                         TILE_SIZE * width,
-                         TILE_SIZE * height); 
+  gtk_widget_set_size_request (GTK_WIDGET (space),
+                               TILE_SIZE * width,
+                               TILE_SIZE * height);
   gtk_widget_set_events (space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK
                          | GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
   gtk_widget_realize (space);
@@ -768,7 +766,7 @@ create_space ()
 }
 
 void
-create_statusbar ()
+create_statusbar (void)
 {
   GtkWidget *move_label, *move_box;
 
@@ -793,10 +791,9 @@ message (gchar *message)
 }
 
 void
-load_image ()
+load_image (void)
 {
   char *fname;
-  GdkPixbuf *image;
 
   fname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
                                      "gnotski.png", FALSE, NULL);
@@ -827,7 +824,7 @@ set_move (gint x)
 }
 
 void
-new_move ()
+new_move (void)
 {
   char str[4];
   if (moves < 999)
@@ -848,7 +845,7 @@ print_map (char *src)
 }
 
 int
-game_over ()
+game_over (void)
 {
   gint x, y, over = 1;
   for (y = 0; y < height; y++)
@@ -1002,7 +999,7 @@ copymap (char *dest, char *src)
   memcpy (dest, src, (width + 2) * (height + 1));
 }
 
-void
+static void
 prepare_map (char *level)
 {
   gint x, y, i = 0;
@@ -1077,8 +1074,8 @@ new_game_cb (GtkWidget *widget, gpointer data)
   widget = space;
 
   prepare_map (data);
-  gtk_drawing_area_size (GTK_DRAWING_AREA (space),
-                         width * TILE_SIZE, height * TILE_SIZE);
+  gtk_widget_set_size_request (GTK_WIDGET (space),
+                               width * TILE_SIZE, height * TILE_SIZE);
   gtk_widget_realize (window);
 
   set_move (0);
@@ -1090,7 +1087,7 @@ void
 quit_game_cb (GtkWidget *widget, gpointer data)
 {
   if (buffer)
-    gdk_drawable_unref (buffer);
+    g_object_unref (buffer);
   if (tiles_pixmap)
     g_object_unref (tiles_pixmap);
 

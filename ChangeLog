@@ -1,3 +1,7 @@
+2003-06-18  William Jon McCann  <mccann@jhu.edu>
+
+	* gnotski.c: Fixed compiler warnings.
+
 2003-06-12  William Jon McCann  <mccann@jhu.edu>
 
 	* gnotski.c: Use pixbuf for tile images.  Tried to make coding
