@@ -534,7 +534,8 @@ get_bg_color ()
   return color;
 }
 
-void create_window ()
+void
+create_window ()
 {
   window = gnome_app_new (APPNAME, N_(APPNAME_LONG));
   gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
@@ -557,7 +558,8 @@ expose_space (GtkWidget *widget, GdkEventExpose *event)
   return FALSE; 
 }
 
-void redraw_all()
+void
+redraw_all()
 {
   gint x, y;
   for (y = 0; y < height; y++)
@@ -807,7 +809,8 @@ load_image ()
                                      GTK_DIALOG_MODAL,
                                      GTK_MESSAGE_ERROR,
                                      GTK_BUTTONS_OK,
-                                     _("Could not find \'%s\' pixmap file\n"), fname);
+                                     _("Could not find \'%s\' pixmap file\n"),
+                                     fname);
     gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
     gtk_dialog_run (GTK_DIALOG (dialog));
 
@@ -1068,7 +1071,7 @@ prepare_map (char *level)
 }
 
 
-void 
+void
 new_game_cb (GtkWidget *widget, gpointer data)
 {
   widget = space;
@@ -1146,7 +1149,8 @@ about_cb (GtkWidget *widget, gpointer data)
     char *filename = NULL;
     
     filename = gnome_program_locate_file (NULL,
-                                          GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnotski-icon.png"),
+                                          GNOME_FILE_DOMAIN_APP_PIXMAP,
+                                          ("gnotski-icon.png"),
                                           TRUE, NULL);
     if (filename != NULL)
       {
@@ -1167,6 +1171,7 @@ about_cb (GtkWidget *widget, gpointer data)
     gdk_pixbuf_unref (pixbuf);
   
   gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
-  g_signal_connect (G_OBJECT (about), "destroy", G_CALLBACK (gtk_widget_destroyed), &about);
+  g_signal_connect (G_OBJECT (about), "destroy",
+                    G_CALLBACK (gtk_widget_destroyed), &about);
   gtk_widget_show_all (about);
 }
