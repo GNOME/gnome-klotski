@@ -1,3 +1,8 @@
+2002-04-15  Bastien Nocera  <hadess@hadess.net>
+
+	* gnotski.c: (save_state): remove nstr(), patch from
+	r_kinder@yahoo.com (Richard Kinder)
+
 2002-02-02  Zbigniew Chyla  <cyba@gnome.pl>
 
 	* gnotski.c (about_cb): Don't try to translate empty string.
