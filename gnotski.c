@@ -1003,11 +1003,14 @@ configure_pixmaps_idle (void)
     }
 
     if (tiles_pixbuf == NULL) {
-      /* FIXME: Add an error dialog for corrupt images or bad loader. */
-      tiles_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
-                                     tile_size * THEME_TILE_SEGMENTS, 
-                                     tile_size * 2);
-      gdk_pixbuf_fill (tiles_pixbuf, 0x00000000);
+      GtkWidget *dialog;
+      dialog = gtk_message_dialog_new (GTK_WINDOW (window),
+                                       GTK_DIALOG_MODAL,
+                                       GTK_MESSAGE_ERROR,
+                                       GTK_BUTTONS_OK,
+                                       _("The theme for this game failed to render.\n\nPlease check that Klotski is installed correctly."));
+      gtk_dialog_run (GTK_DIALOG (dialog));
+      exit (1);
     }
 
     prior_tile_size = tile_size;
@@ -1187,7 +1190,7 @@ load_image (void)
                                      GTK_DIALOG_MODAL,
                                      GTK_MESSAGE_ERROR,
                                      GTK_BUTTONS_OK,
-                                     _("Could not find the image: \n%s\n\nPlease check your gnome-games installation."),
+                                     _("Could not find the image:\n%s\n\nPlease check that Klotski is installed correctly."),
                                      fname);
     gtk_dialog_run (GTK_DIALOG (dialog));
     exit (1);
@@ -1205,9 +1208,12 @@ set_move (gint x)
 void
 new_move (void)
 {
+  static gint last_piece_id = -2;
+
   gchar *str = NULL;
-  if (moves < 999)
+  if (moves < 999 && last_piece_id != piece_id)
     moves++;
+  last_piece_id = piece_id;
   str = g_strdup_printf ("%03d", moves);
   gtk_label_set_text (GTK_LABEL (move_value), str);
   g_free (str);

@@ -1,3 +1,11 @@
+2005-03-16  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c (configure_pixmaps_idle): Show error then exit when 
+	rendering fails, removing stand-in pixbuf since it is no longer needed.
+	(new_move): Don't add to the move total when it's the same piece 
+	moved as last time.
+	* help/C/gnotski.xml: Checked and removed FIXME in docs.
+
 2005-03-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnotski.c (prepare_map): Fix a typo (bug #167275).

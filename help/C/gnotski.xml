@@ -64,7 +64,7 @@
 		<firstname>Lars</firstname>
 		<surname>Rydlinge</surname>
 		<affiliation>
-			<orgname>GNOME Project</orgname> <!-- FIXME: Is this right? -->
+			<orgname>GNOME Project</orgname>
 			<address> <email> Lars.Rydlinge@HIG.SE </email> </address>
 		</affiliation>
 	</othercredit>
@@ -73,7 +73,7 @@
 		<firstname>Ross</firstname>
 		<surname>Burton</surname>
 		<affiliation>
-			<orgname>GNOME Project</orgname> <!-- FIXME: Is this right? -->
+			<orgname>GNOME Project</orgname>
 			<address> <email> ross@burtonini.com </email> </address>
 		</affiliation>
 	</othercredit>
