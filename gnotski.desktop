@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Gnotski
+Name[et]=Gnotski
 Name[fi]=Gnotski
 Name[ja]=Gnotski
 Name[no]=Gnotski
 Comment=Gnome Klotski
+Comment[et]=Klotski GNOME variant
 Comment[fi]=GNOME-versio Klotskista
 Comment[ja]=GNOMEÈÇKlotski
 Comment[no]=Gnome Klotski
