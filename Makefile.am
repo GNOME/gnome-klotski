@@ -2,6 +2,8 @@ scoredir=$(DESTDIR)$(localstatedir)/games
 pixmapdir=$(datadir)/pixmaps
 Gamesdir=$(datadir)/applications
 
+SUBDIRS = help
+
 INCLUDES = 			\
 	$(GNOME_GAMES_CFLAGS)		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
