@@ -2,8 +2,8 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.0">
-  <!ENTITY manrevision "2.0">
+  <!ENTITY appversion "2.4">
+  <!ENTITY manrevision "2.4">
   <!ENTITY date "13 August 2002">
   <!ENTITY app "<application>GNOME Klotski</application>">
   <!-- Information about the entities
@@ -339,18 +339,7 @@
 <sect1 id="gnotski-bugs">
 	<title>Known Bugs and Limitations</title>
 	<para>
-	<itemizedlist>
-		<listitem>
-		<!-- BUG #90546 -->
-		<para>Under some font sizes, the number of moves taken is not visible.</para>
-		</listitem>
-
-		<!-- BUG #84235 : I (Andrew Sobala) am currently fixing this bug across gnome-games -->
-		<listitem>
-		<para>Before the game has been played once, the "High scores" menu item is non-functional.</para>
-		</listitem>
-
-	</itemizedlist>
+        There are no known bugs in this game.
 	</para>
 </sect1>
 

@@ -1,3 +1,7 @@
+2003-08-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gnotski.xml: Updates for 2.4, including screenshots.
+
 2003-07-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnotski.desktop.in: Update name to fit HIG (bug 116916).

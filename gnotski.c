@@ -746,9 +746,6 @@ create_space (void)
   space = gtk_drawing_area_new ();
   gtk_widget_pop_colormap ();
   gnome_app_set_contents (GNOME_APP (window), space);
-  gtk_widget_set_size_request (GTK_WIDGET (space),
-                               TILE_SIZE * width,
-                               TILE_SIZE * height);
   gtk_widget_set_events (space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK
                          | GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
   gtk_widget_realize (space);
