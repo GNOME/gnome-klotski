@@ -3,8 +3,8 @@
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
   <!ENTITY appversion "2.10">
-  <!ENTITY manrevision "2.8">
-  <!ENTITY date "September 2004">
+  <!ENTITY manrevision "2.10">
+  <!ENTITY date "March 2004">
   <!ENTITY app "<application>GNOME Klotski</application>">
   <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file. 
@@ -288,7 +288,6 @@
 			</para>
 			</listitem>
 		</varlistentry>
-<!-- statusbar "moves" is buggy (see known bugs for bug #) -->
 		<varlistentry>
 			<term>Statusbar</term>
 			<listitem>
@@ -297,27 +296,25 @@
 		</varlistentry>
 		</variablelist></para>
 
-		<note><para>When you first start the application, the Game window shows a practise screen. You
-		have to start a new game using the <guimenu>Game menu</guimenu> before you can play
-		&app; </para></note>
 	</sect2>
 
 	<!-- =========== Starting a new game ============================== -->
 	<sect2 id="gnotski-new-game">
 		<title>Starting a new game</title>
-		<para>Use the <guimenu>Game menu</guimenu> to start a new game. The  submenus named
-		<guisubmenu>Novice</guisubmenu>, <guisubmenu>Medium</guisubmenu> and
-		<guisubmenu>Advanced</guisubmenu> allow you to start a new game with these three difficulty levels.
-		In each submenu, there is a series of numbers. Each number refers to a game scenario. The scenarios
-		in each submenu get increasingly difficult.
+		<para>Use the <guimenu>Game menu</guimenu> to start a new game. The items 
+		<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</guimenuitem> allows you to
+		navigate the puzzles sequentially. Each puzzle belongs to one of the four categories found in the 
+		submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu>,
+		<guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru Climb</guisubmenu>. In these submenus, 
+		each puzzle name refers to a game scenario.
 		</para>
 		<example>
 		<title>Starting a game</title>
-		<para>To start the easiest game provided, choose
+		<para>To start the hardest game provided, choose
 		<menuchoice>
 			<guimenu>Game</guimenu>
-			<guisubmenu>Novice</guisubmenu>
-			<guimenuitem>1</guimenuitem>
+			<guisubmenu>Minoru Climb</guisubmenu>
+			<guimenuitem>Climb 24 Pro</guimenuitem>
 		</menuchoice>
 		</para></example>
 	</sect2>
@@ -326,8 +323,7 @@
 	<sect2 id="gnotski-moving">
 		<title>Moving blocks</title>
 		<para>To move a block, click on it, hold down the mouse button and drag it to its new location.
-		<!-- FIXME: are there a11y alternatives? -->
-		You 	cannot move the green blocks or the block that borders the game. You cannot move a block to a
+		You cannot move the green blocks or the block that borders the game. You cannot move a block to a
 		space already occupied by another block, with the exception that you may move the patterned block 
 		through the green blocks to win.
 		</para>

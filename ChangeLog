@@ -1,3 +1,8 @@
+2005-03-03  Richard Hoelscher  <rah@rahga.com>
+
+	* help/C/gnotski.xml: Update documentation for 2.10
+	* help/C/figures/*.png: Update screenshots.
+
 2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/gnotski.xml: Bump the app version number. No revisions.
