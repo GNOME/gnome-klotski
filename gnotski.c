@@ -1208,8 +1208,10 @@ set_move (gint x)
 void
 new_move (void)
 {
-  static gint last_piece_id = -2;
+  static gint last_piece_id;
 
+  if (moves < 1)
+	last_piece_id = -2;
   gchar *str = NULL;
   if (moves < 999 && last_piece_id != piece_id)
     moves++;
