@@ -1,3 +1,8 @@
+2004-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnotski.c (load_image): Remove references to _has_separator when
+	dealing with message dialogs
+
 2003-10-30  Callum McKenzie  <callum@localhost.localdomain>
 
 	* Makefile.am: Removed *_DISABLE_DEPRECATED.
