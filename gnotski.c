@@ -453,7 +453,7 @@ GnomeUIInfo game_menu[] = {
     (GdkModifierType) 0, GDK_CONTROL_MASK },
   GNOMEUIINFO_MENU_SCORES_ITEM (score_cb, NULL),
   GNOMEUIINFO_SEPARATOR,
-  GNOMEUIINFO_MENU_EXIT_ITEM (quit_game_cb, NULL),
+  GNOMEUIINFO_MENU_QUIT_ITEM (quit_game_cb, NULL),
   GNOMEUIINFO_END
 };
 
