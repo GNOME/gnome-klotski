@@ -9,12 +9,13 @@ INCLUDES = 			\
 bin_PROGRAMS = gnotski
 
 gnotski_SOURCES =	\
-	gnotski.c
+	gnotski.c \
+	pieces.h
 
 gnotski_LDADD = \
 	$(GNOME_LIBDIR)	\
-	$(GNOMEUI_LIBS)					
-#	$(INTLLIBS) 
+	$(GNOMEUI_LIBS)	\
+	$(INTLLIBS) 
 
 pixmap_DATA = gnotski.png
 
