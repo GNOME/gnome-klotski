@@ -566,7 +566,7 @@ gint button_release_space(GtkWidget *widget, GdkEventButton *event){
 	if(mapcmp(move_map,map)){
 	  new_move();
 	  if(game_over()){
-	    message("Level completed. Well done.");
+	    message(_("Level completed. Well done."));
 	    game_score();
 	  }
 	}
@@ -691,7 +691,7 @@ void load_image(){
   fname = gnome_unconditional_pixmap_file(tmp);
   g_free(tmp);
   if(!g_file_exists(fname)) {
-    g_print(N_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
+    g_print(_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
   }
   image = gdk_imlib_load_image(fname);
   visual = gdk_imlib_get_visual();
@@ -873,7 +873,7 @@ void prepare_map(char *level){
       width = 9;
       height = 7;
       first = 0;
-      message("Welcome to Gnome Klotski");
+      message(_("Welcome to Gnome Klotski"));
     } else {
       return;
     }
@@ -890,7 +890,7 @@ void prepare_map(char *level){
     while(i<16 && *p != '#') tmp[i++] = *p++;
     tmp[i] = '\0'; height = atoi(tmp); p++;
     
-    sprintf(tmp,"Playing level %s",current_level);
+    sprintf(tmp,_("Playing level %s"),current_level);
     
     message(tmp);
   }
