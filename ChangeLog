@@ -1,3 +1,7 @@
+2001-07-27  Abel Cheung  <maddog@linux.org.hk>
+
+	* gnotski.desktop: Added traditional Chinese translation.
+
 2001-07-07  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
         * gnotski.c: So long imlib, you was a good friend but we don't
