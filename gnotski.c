@@ -609,8 +609,8 @@ void gui_draw_pixmap(char *target, gint x, gint y){
     else
       value = 22;
     gdk_draw_pixmap(buffer, space->style->black_gc, tiles_pixmap,
-		    value*TILE_SIZE+7,7,
-		    x*TILE_SIZE+7, y*TILE_SIZE+7,13,13);
+		    value*TILE_SIZE+10,10,
+		    x*TILE_SIZE+10, y*TILE_SIZE+10,8,8);
   }
   area.x = x*TILE_SIZE; area.y = y*TILE_SIZE; 
   area.width = TILE_SIZE; area.height = TILE_SIZE;
