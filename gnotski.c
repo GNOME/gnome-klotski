@@ -458,7 +458,7 @@ GnomeUIInfo game_menu[] = {
 };
 
 GnomeUIInfo help_menu[] = {
-  /* FIXME GNOMEUIINFO_HELP("gnotski"), */
+  GNOMEUIINFO_HELP("gnotski"), 
   GNOMEUIINFO_MENU_ABOUT_ITEM(about_cb, NULL),
   GNOMEUIINFO_END
 };
@@ -980,7 +980,7 @@ void about_cb(GtkWidget *widget, gpointer data){
   GtkWidget *about;
   
   const gchar *authors[] = { "Lars Rydlinge", NULL };
-  gchar *documenters[] = { NULL };
+  gchar *documenters[] = { "Andrew Sobala (andrew@sobala.net)", NULL };
   /* Translator credits */
   gchar *translator_credits = _("translator_credits");
 

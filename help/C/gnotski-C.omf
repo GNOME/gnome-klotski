@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+       <resource>
+       <creator>
+    andrew@sobala.net (Andrew Sobala)
+   </creator>
+     <maintainer>
+    chris@wilddev.net (Chris Lyttle)
+   </maintainer>
+     <title>
+     GNOME Klotski Manual
+   </title>
+     <date>
+    2002-08-11
+   </date>
+     <version identifier="2.0" date="2002-08-11" description="Initial revision"/>
+     <subject category="GNOME|Games"/>
+     <description>
+    FIXME
+   </description>
+     <type>
+     user's guide
+   </type>
+     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+     <identifier url="file://usr/share/gnome/help/gnotski/C/gnotski.xml"/> <!--FIXME-->
+     <language code="C"/>
+     <relation seriesid="54d3211e-6006-11d6-9a4c-97ceaf12a926"/> <!--FIXME ARGH -->
+     <rights type="GNU FDL" license.version="1.1" holder="Andrew Sobala"/>
+     </resource>
+     </omf>
