@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Gnotski
+Name[fi]=Gnotski
 Name[no]=Gnotski
 Comment=Gnome Klotski
+Comment[fi]=GNOME-versio Klotskista
 Comment[no]=Gnome Klotski
 Exec=gnotski
 Terminal=0
