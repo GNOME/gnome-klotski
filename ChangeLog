@@ -5,7 +5,7 @@
 
 2001-06-24  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
-	From Dean Scott <drscott@rochester.rr.com>.
+	From Dean Scott <drscott12@hotmail.com>.
 	
 	* gnotski-icon.png: Added, gnotski.png wasn't really a icon.
 	* Makefile.am (pixmap_DATA): Added gnotski-icon.png.
