@@ -3,8 +3,9 @@ pixmapdir=$(datadir)/pixmaps
 Gamesdir=$(datadir)/gnome/apps/Games
 
 INCLUDES = 			\
+	$(GNOME_GAMES_CFLAGS)		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
-	-I$(includedir) $(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)
+	-I$(includedir) 
 
 bin_PROGRAMS = gnotski
 
@@ -13,9 +14,7 @@ gnotski_SOURCES =	\
 	pieces.h
 
 gnotski_LDADD = \
-	$(GNOME_LIBDIR)	\
-	$(GNOMEUI_LIBS)	\
-	$(GDK_PIXBUF_LIBS) \
+	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS) 
 
 pixmap_DATA = gnotski.png gnotski-icon.png

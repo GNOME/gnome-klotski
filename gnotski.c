@@ -692,7 +692,7 @@ void load_image(){
   if(!g_file_exists(fname)) {
     g_print(_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
   }
-  image = gdk_pixbuf_new_from_file(fname);
+  image = gdk_pixbuf_new_from_file(fname, NULL);
 
   gdk_pixbuf_render_pixmap_and_mask (image, &tiles_pixmap, NULL, 127);
 
@@ -968,12 +968,20 @@ void about_cb(GtkWidget *widget, gpointer data){
   GtkWidget *about;
   
   const gchar *authors[] = { "Lars Rydlinge", NULL };
+  gchar *documenters[] = {
+                          NULL
+                         };
+  /* Translator credits */
+  gchar *translator_credits = _("");
+  
   about = gnome_about_new(_(APPNAME_LONG), 
                           VERSION, 
                           "(C) 1999 Lars Rydlinge",
-			  (const char **)authors, 
 			  _("Klotski clone\n" \
 			    "(Comments to: Lars.Rydlinge@HIG.SE)"), 
-                          NULL);
+                          (const char **)authors, 
+                          (const char **)documenters,
+                          (const char *)translator_credits,
+			  NULL);
   gtk_widget_show(about);
 }
