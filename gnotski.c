@@ -1,3 +1,5 @@
+/* -*- mode:C; indent-tabs-mode: nil; tab-width: 8; c-basic-offset: 2; -*- */
+
 /* 
  *   Gnome Klotski: Klotski clone
  *   Written by Lars Rydlinge <lars.rydlinge@hig.se>
@@ -41,54 +43,55 @@ GtkWidget *space;
 GtkWidget *move_value;
 
 GdkPixmap *buffer = NULL;
-GdkPixmap *tiles_pixmap = NULL;
-
-GdkColor bg_color;
+GdkPixbuf *tiles_pixmap = NULL;
 
 char *map = NULL;
 char *tmpmap = NULL;
 char *move_map = NULL;
 char *orig_map = NULL;
 
-gint statusbar_id,height=-1,width=-1,moves=0;
+gint height = -1, 
+  width = -1, 
+  moves = 0;
 
-int session_flag = 0;
-int session_xpos = 0;
-int session_ypos = 0;
-int session_position  = 0;
+gint session_flag = 0;
+gint session_xpos = 0;
+gint session_ypos = 0;
+gint session_position = 0;
 
 char current_level[16];
 
-void create_window();
-void create_space();
-void create_statusbar();
+void create_window ();
+void create_space ();
+void create_statusbar ();
 
-void redraw_all();
-void message(gchar *);
-void load_image();
-void gui_draw_pixmap(char *, gint, gint);
-int get_piece_nr(char *,int,int);
-int get_piece_id(char *,int,int);
-void set_piece_id(char *,int,int,int);
-int check_valid_move(int, int, int);
-int do_move_piece(int, int, int);
-int move_piece(int,int,int,int,int);
-void copymap(char *,char *);
-int mapcmp(char *,char *);
-static int save_state(GnomeClient *,gint, GnomeRestartStyle, gint,
-                      GnomeInteractStyle, gint fast, gpointer);
-void print_map(char *);
-void set_move(int);
-void new_move();
-int game_over();
-void game_score();
+GdkColor *get_bg_color ();
+void redraw_all ();
+void message (gchar *);
+void load_image ();
+void gui_draw_pixmap (char *, gint, gint);
+gint get_piece_nr (char *, gint, gint);
+gint get_piece_id (char *, gint, gint);
+void set_piece_id (char *, gint, gint, gint);
+gint check_valid_move (gint, gint, gint);
+gint do_move_piece (gint, gint, gint);
+gint move_piece (gint, gint, gint, gint, gint);
+void copymap (char *, char *);
+gint mapcmp (char *, char *);
+static gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
+                        GnomeInteractStyle, gint fast, gpointer);
+void print_map (char *);
+void set_move (gint);
+void new_move ();
+gint game_over ();
+void game_score ();
 
 /* ------------------------- MENU ------------------------ */
-void new_game_cb(GtkWidget *, gpointer);
-void quit_game_cb(GtkWidget *, gpointer);
-void level_cb(GtkWidget *, gpointer);
-void about_cb(GtkWidget *, gpointer);
-void score_cb(GtkWidget *, gpointer);
+void new_game_cb (GtkWidget *, gpointer);
+void quit_game_cb (GtkWidget *, gpointer);
+void level_cb (GtkWidget *, gpointer);
+void about_cb (GtkWidget *, gpointer);
+void score_cb (GtkWidget *, gpointer);
 
 GnomeUIInfo level_1_menu[] = {
   { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
@@ -361,7 +364,7 @@ GnomeUIInfo level_3_menu[] = {
     "       . . ",
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
-   /* Tiles mismatch
+  /* Tiles mismatch
   { GNOME_APP_UI_ITEM, N_("X"), NULL, level_cb,
     "14#20#12#" \
     "a     bbbbbb  cccccc" \
@@ -376,7 +379,8 @@ GnomeUIInfo level_3_menu[] = {
     "fff ###########     " \
     "fff  ggghhhiiiii  .j" \
     "kkkkkggg   iiiii....",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL }, */
+    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL }, 
+   */
 
   { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
     "23#13#11#" \
@@ -458,14 +462,14 @@ GnomeUIInfo game_menu[] = {
 };
 
 GnomeUIInfo help_menu[] = {
-  GNOMEUIINFO_HELP("gnotski"), 
-  GNOMEUIINFO_MENU_ABOUT_ITEM(about_cb, NULL),
+  GNOMEUIINFO_HELP ("gnotski"), 
+  GNOMEUIINFO_MENU_ABOUT_ITEM (about_cb, NULL),
   GNOMEUIINFO_END
 };
 
 GnomeUIInfo main_menu[] = {
-  GNOMEUIINFO_MENU_GAME_TREE(game_menu),
-  GNOMEUIINFO_MENU_HELP_TREE(help_menu),
+  GNOMEUIINFO_MENU_GAME_TREE (game_menu),
+  GNOMEUIINFO_MENU_HELP_TREE (help_menu),
   GNOMEUIINFO_END
 };
 
@@ -477,13 +481,15 @@ static const struct poptOption options[] = {
 
 /* ------------------------------------------------------- */
 
-int main (int argc, char **argv){
+int 
+main (int argc, char **argv)
+{
   GnomeClient *client;
 
-  gnome_score_init(APPNAME);
-  bindtextdomain(GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  gnome_score_init (APPNAME);
+  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-  textdomain(GETTEXT_PACKAGE);
+  textdomain (GETTEXT_PACKAGE);
    
   gnome_program_init (APPNAME, VERSION,
                        LIBGNOMEUI_MODULE,
@@ -491,26 +497,26 @@ int main (int argc, char **argv){
                        GNOME_PARAM_POPT_TABLE, options,
                        GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
-  client = gnome_master_client();
-  gtk_object_ref(GTK_OBJECT(client));
-  gtk_object_sink(GTK_OBJECT(client));
+  client = gnome_master_client ();
+  gtk_object_ref (GTK_OBJECT (client));
+  gtk_object_sink (GTK_OBJECT (client));
   
-  g_signal_connect(GTK_OBJECT (client), "save_yourself", 
-		     GTK_SIGNAL_FUNC (save_state), argv[0]);
-  g_signal_connect(GTK_OBJECT(client), "die", GTK_SIGNAL_FUNC(quit_game_cb),
-		     argv[0]);
+  g_signal_connect(G_OBJECT (client), "save_yourself", 
+                   G_CALLBACK (save_state), argv[0]);
+  g_signal_connect(G_OBJECT (client), "die",
+                   G_CALLBACK (quit_game_cb), argv[0]);
 
-  create_window();
-  gnome_app_create_menus(GNOME_APP(window), main_menu);
-  load_image();
-  create_space(); 
-  create_statusbar();
+  create_window ();
+  gnome_app_create_menus (GNOME_APP (window), main_menu);
+  load_image ();
+  create_space (); 
+  create_statusbar ();
 
-  if(session_xpos >= 0 && session_ypos >= 0)
-    gtk_widget_set_uposition(window, session_xpos, session_ypos);
+  if (session_xpos >= 0 && session_ypos >= 0)
+    gtk_widget_set_uposition (window, session_xpos, session_ypos);
     
-  gtk_widget_show(window);
-  new_game_cb(space,NULL);
+  gtk_widget_show_all (window);
+  new_game_cb (space, NULL);
   
   gtk_main ();
   
@@ -518,66 +524,86 @@ int main (int argc, char **argv){
   return 0;
 }
 
-void create_window(){
-  window = gnome_app_new(APPNAME, N_(APPNAME_LONG));
-  gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
-  gtk_widget_realize(window);
-  g_signal_connect(GTK_OBJECT(window), "delete_event", 
-		     GTK_SIGNAL_FUNC(quit_game_cb), NULL);
+GdkColor *
+get_bg_color () 
+{
+  GtkStyle *style;
+  GdkColor *color;
+  style = gtk_widget_get_style (space);
+  color = gdk_color_copy (&style->bg[GTK_STATE_NORMAL]);
+  return color;
 }
 
-gint expose_space(GtkWidget *widget, GdkEventExpose *event){ 
-if (buffer == NULL)
-	return FALSE;
+void create_window ()
+{
+  window = gnome_app_new (APPNAME, N_(APPNAME_LONG));
+  gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+  gtk_widget_realize (window);
+  g_signal_connect (GTK_OBJECT (window), "delete_event", 
+                    GTK_SIGNAL_FUNC (quit_game_cb), NULL);
+}
 
-  gdk_draw_drawable(widget->window, 
-                  widget->style->fg_gc[GTK_WIDGET_STATE(widget)], 
-                  buffer, event->area.x, event->area.y, 
-                  event->area.x, event->area.y, 
-                  event->area.width, event->area.height);
+gint
+expose_space (GtkWidget *widget, GdkEventExpose *event)
+{
+  if (buffer == NULL)
+    return FALSE;
+
+  gdk_draw_drawable (widget->window, 
+                     widget->style->fg_gc[GTK_WIDGET_STATE(widget)], 
+                     buffer, event->area.x, event->area.y, 
+                     event->area.x, event->area.y, 
+                     event->area.width, event->area.height);
   return FALSE; 
 }
 
-void redraw_all(){
-  int x,y;
-  for(y = 0; y < height; y++)
-    for(x = 0; x < width; x++)
-      gui_draw_pixmap(map, x, y);
+void redraw_all()
+{
+  gint x, y;
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      gui_draw_pixmap (map, x, y);
 }
 
-int movable(int id){
-  if(!(id == '#' || id == '.' || id == ' ' || id == '-'))
+gint
+movable (gint id)
+{
+  if(! (id == '#' || id == '.' || id == ' ' || id == '-'))
      return 1;
   return 0;
 }
 
-int button_down = 0;
-int piece_id = -1;
-int piece_x = 0; 
-int piece_y = 0; 
+gint button_down = 0;
+gint piece_id = -1;
+gint piece_x = 0; 
+gint piece_y = 0; 
 
-gint button_press_space(GtkWidget *widget, GdkEventButton *event){ 
-  if(event->button == 1){
-    if(game_over())
+gint
+button_press_space (GtkWidget *widget, GdkEventButton *event)
+{
+  if (event->button == 1) {
+    if (game_over ())
       return FALSE;
     button_down = 1;
-    piece_x = (int) event->x/TILE_SIZE;
-    piece_y = (int) event->y/TILE_SIZE;
-    piece_id = get_piece_id(map,piece_x,piece_y); 
-    copymap(move_map,map);
+    piece_x = (gint) event->x / TILE_SIZE;
+    piece_y = (gint) event->y / TILE_SIZE;
+    piece_id = get_piece_id (map, piece_x, piece_y); 
+    copymap (move_map, map);
   }
   return FALSE;
 }
 
-gint button_release_space(GtkWidget *widget, GdkEventButton *event){ 
-  if(event->button == 1){
-    if(button_down == 1){
-      if(movable(piece_id))
-	if(mapcmp(move_map,map)){
-	  new_move();
-	  if(game_over()){
-	    message(_("Level completed. Well done."));
-	    game_score();
+gint
+button_release_space (GtkWidget *widget, GdkEventButton *event)
+{
+  if (event->button == 1) {
+    if (button_down == 1) {
+      if (movable (piece_id))
+	if (mapcmp (move_map, map)) {
+	  new_move ();
+	  if (game_over ()) {
+	    message (_("Level completed. Well done."));
+	    game_score ();
 	  }
 	}
       button_down = 0;
@@ -586,326 +612,403 @@ gint button_release_space(GtkWidget *widget, GdkEventButton *event){
   return FALSE;
 }
 
-gint button_motion_space(GtkWidget *widget, GdkEventButton *event){ 
-  int new_piece_x, new_piece_y;
-  if(button_down == 1){
-    new_piece_x = (int) event->x/TILE_SIZE;
-    new_piece_y = (int) event->y/TILE_SIZE;
-    if(new_piece_x >= width || event->x < 0 ||
-       new_piece_y >= height || event->y < 0) return FALSE;
-    if(movable(piece_id))
-      if(move_piece(piece_id,piece_x, piece_y, new_piece_x, new_piece_y)==1){
-	piece_x = new_piece_x; piece_y = new_piece_y;
+gint
+button_motion_space (GtkWidget *widget, GdkEventButton *event)
+{ 
+  gint new_piece_x, new_piece_y;
+  if (button_down == 1) {
+    new_piece_x = (gint) event->x / TILE_SIZE;
+    new_piece_y = (gint) event->y / TILE_SIZE;
+    if (new_piece_x >= width || event->x < 0
+        || new_piece_y >= height || event->y < 0) 
+      return FALSE;
+    if (movable (piece_id))
+      if (move_piece (piece_id, piece_x, piece_y, new_piece_x, new_piece_y) == 1) {
+	piece_x = new_piece_x;
+        piece_y = new_piece_y;
       }
     return TRUE;
   }
   return FALSE;
 }
 
-void gui_draw_pixmap(char *target, gint x, gint y){
+void
+gui_draw_pixmap (char *target, gint x, gint y)
+{
+  GdkGC *gc;
   GdkRectangle area;
-  int value;
-  
-  gdk_draw_drawable(buffer, space->style->black_gc, tiles_pixmap,
-		  get_piece_nr(target,x,y)*TILE_SIZE, 0, 
-		  x*TILE_SIZE, y*TILE_SIZE, TILE_SIZE, TILE_SIZE);
-  if(get_piece_id(target,x,y)=='*'){
-    if(get_piece_id(orig_map,x,y)=='.')
+  GdkColor *bg_color;
+  GtkStyle *style;
+  GdkColor *fg_color;
+  gint value;
+
+  gc = space->style->black_gc;
+
+  style = gtk_widget_get_style (space);
+  fg_color = &style->fg[GTK_STATE_NORMAL];
+
+  /* blank background */
+  bg_color = get_bg_color ();
+  gdk_gc_set_foreground (gc, bg_color);
+  gdk_color_free (bg_color);
+  gdk_draw_rectangle (buffer, gc, TRUE,
+                      x * TILE_SIZE, y * TILE_SIZE,
+                      TILE_SIZE, TILE_SIZE);
+  gdk_gc_set_foreground (gc, fg_color);
+
+  gdk_draw_pixbuf (buffer, gc, tiles_pixmap,
+                   get_piece_nr (target, x, y) * TILE_SIZE, 0, 
+                   x * TILE_SIZE, y * TILE_SIZE,
+                   TILE_SIZE, TILE_SIZE,
+                   GDK_RGB_DITHER_NORMAL, 0, 0);
+
+  if (get_piece_id (target, x, y) == '*') {
+    if (get_piece_id (orig_map, x, y) == '.')
       value = 20;
     else
       value = 22;
-    gdk_draw_drawable(buffer, space->style->black_gc, tiles_pixmap,
-		    value*TILE_SIZE+10,10,
-		    x*TILE_SIZE+10, y*TILE_SIZE+10,8,8);
+    gdk_draw_pixbuf (buffer, gc, tiles_pixmap,
+                     value * TILE_SIZE + 10, 10,
+                     x * TILE_SIZE + 10, y * TILE_SIZE + 10, 8, 8,
+                     GDK_RGB_DITHER_NORMAL, 0, 0);
   }
-  area.x = x*TILE_SIZE; area.y = y*TILE_SIZE; 
-  area.width = TILE_SIZE; area.height = TILE_SIZE;
+  area.x = x * TILE_SIZE;
+  area.y = y * TILE_SIZE; 
+  area.width = TILE_SIZE;
+  area.height = TILE_SIZE;
   gtk_widget_draw (space, &area);
 }
 
-void show_score_dialog (gint pos)
+void
+show_score_dialog (gint pos)
 {
   GtkWidget *dialog;
 
   dialog = gnome_scores_display (_(APPNAME_LONG), APPNAME, current_level, pos);
   if (dialog != NULL) {
-    gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(window));
-    gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+    gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
+    gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
   }
 }
 
-void score_cb(GtkWidget *widget, gpointer data){
+void
+score_cb (GtkWidget *widget, gpointer data)
+{
   show_score_dialog (0);
 }
 
-void update_score_state ()
+void
+update_score_state ()
 {
-        gchar **names = NULL;
-        gfloat *scores = NULL;
-        time_t *scoretimes = NULL;
-	gint top;
-
-	top = gnome_score_get_notable(APPNAME, current_level, &names, &scores, &scoretimes);
-	if (top > 0) {
-		gtk_widget_set_sensitive (game_menu[3].widget, TRUE);
-		g_strfreev(names);
-		g_free(scores);
-		g_free(scoretimes);
-	} else {
-		gtk_widget_set_sensitive (game_menu[3].widget, FALSE);
-	}
+  gchar **names = NULL;
+  gfloat *scores = NULL;
+  time_t *scoretimes = NULL;
+  gint top;
+  
+  top = gnome_score_get_notable (APPNAME, current_level,
+                                 &names, &scores, &scoretimes);
+  if (top > 0) {
+    gtk_widget_set_sensitive (game_menu[3].widget, TRUE);
+    g_strfreev (names);
+    g_free (scores);
+    g_free (scoretimes);
+  } else {
+    gtk_widget_set_sensitive (game_menu[3].widget, FALSE);
+  }
 }
 
-void game_score(){
+void
+game_score ()
+{
   gint pos;
-  pos = gnome_score_log(moves,current_level,FALSE);
+  pos = gnome_score_log (moves, current_level, FALSE);
   update_score_state ();
   show_score_dialog (pos);
 }
 
-gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
-  if(width>0){
-    if(buffer)
-      gdk_drawable_unref(buffer);
-    buffer = gdk_pixmap_new(widget->window, widget->allocation.width, 
-			    widget->allocation.height, -1);
-    redraw_all();
+gint
+configure_space (GtkWidget *widget, GdkEventConfigure *event)
+{
+  if (width > 0) {
+    if (buffer)
+      gdk_drawable_unref (buffer);
+    buffer = gdk_pixmap_new (widget->window, widget->allocation.width, 
+                             widget->allocation.height, -1);
+    redraw_all ();
   }
-  return(TRUE);
+  return (TRUE);
 }
 
-void create_space(){
-  gtk_widget_push_colormap(gdk_rgb_get_colormap());
-  space = gtk_drawing_area_new();
-  gtk_widget_pop_colormap();
-  gnome_app_set_contents(GNOME_APP(window),space);
-  gtk_drawing_area_size(GTK_DRAWING_AREA(space),
-			TILE_SIZE*width,TILE_SIZE*height); 
-  gtk_widget_set_events(space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
-			GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
-  gtk_widget_realize(space);
-  g_signal_connect(GTK_OBJECT(space), "expose_event", 
-                     GTK_SIGNAL_FUNC(expose_space), NULL);
-  g_signal_connect(GTK_OBJECT(space), "configure_event", 
-                     GTK_SIGNAL_FUNC(configure_space), NULL);
-  g_signal_connect(GTK_OBJECT(space), "button_press_event", 
-                     GTK_SIGNAL_FUNC(button_press_space), NULL);
-  g_signal_connect (GTK_OBJECT(space),"button_release_event",
-                      GTK_SIGNAL_FUNC(button_release_space), NULL);
-  g_signal_connect (GTK_OBJECT(space), "motion_notify_event",
-                      GTK_SIGNAL_FUNC(button_motion_space), NULL);
-  gtk_widget_show(space);
+void
+create_space ()
+{
+  gtk_widget_push_colormap (gdk_rgb_get_colormap ());
+  space = gtk_drawing_area_new ();
+  gtk_widget_pop_colormap ();
+  gnome_app_set_contents (GNOME_APP (window), space);
+  gtk_drawing_area_size (GTK_DRAWING_AREA (space),
+                         TILE_SIZE * width,
+                         TILE_SIZE * height); 
+  gtk_widget_set_events (space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK
+                         | GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
+  gtk_widget_realize (space);
+  g_signal_connect (G_OBJECT (space), "expose_event", 
+                    G_CALLBACK (expose_space), NULL);
+  g_signal_connect (G_OBJECT (space), "configure_event", 
+                    G_CALLBACK (configure_space), NULL);
+  g_signal_connect(G_OBJECT(space), "button_press_event", 
+                   G_CALLBACK (button_press_space), NULL);
+  g_signal_connect (G_OBJECT(space),"button_release_event",
+                    G_CALLBACK (button_release_space), NULL);
+  g_signal_connect (G_OBJECT(space), "motion_notify_event",
+                    G_CALLBACK (button_motion_space), NULL);
+  gtk_widget_show (space);
 }
 
-void create_statusbar(){
-  GtkWidget *move_label,*move_box;
-  move_box = gtk_hbox_new(0, FALSE);
+void
+create_statusbar ()
+{
+  GtkWidget *move_label, *move_box;
+
+  move_box = gtk_hbox_new (FALSE, 0);
   move_label = gtk_label_new (_("Moves:"));
-  gtk_box_pack_start (GTK_BOX(move_box), move_label, FALSE, FALSE, 6);
+  gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
   move_value = gtk_label_new ("000");
-  gtk_box_pack_start (GTK_BOX(move_box), move_value, FALSE, FALSE, 6);
-  gtk_widget_show (move_label); gtk_widget_show (move_value); 
-  gtk_widget_show (move_box);
+  gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
 
-  statusbar = gtk_statusbar_new();
-  statusbar_id = gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar),
-					      APPNAME);
-  gtk_statusbar_set_has_resize_grip(GTK_STATUSBAR(statusbar),FALSE);
-  gtk_box_pack_end(GTK_BOX(statusbar), move_box, FALSE, FALSE, 0);
-  gnome_app_set_statusbar(GNOME_APP(window), statusbar);
-  gtk_statusbar_push(GTK_STATUSBAR(statusbar), statusbar_id,APPNAME_LONG);
+  statusbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
+  gtk_box_pack_end (GTK_BOX (statusbar), move_box, FALSE, FALSE, 0);
+  gnome_app_set_statusbar (GNOME_APP (window), statusbar);
+
+  /*gnome_app_install_menu_hints (GNOME_APP (window), main_menu);*/
 }
 
-void message(gchar *message){
-  gtk_statusbar_pop(GTK_STATUSBAR(statusbar), statusbar_id);
-  gtk_statusbar_push(GTK_STATUSBAR(statusbar), statusbar_id, message);
+void
+message (gchar *message)
+{
+  gnome_appbar_pop (GNOME_APPBAR (statusbar));
+  gnome_appbar_push (GNOME_APPBAR (statusbar), message);
 }
 
-void load_image(){
+void
+load_image ()
+{
   char *fname;
   GdkPixbuf *image;
 
-  fname = gnome_program_locate_file(NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
-	                                  "gnotski.png", FALSE, NULL);
-  if(g_file_test(fname, G_FILE_TEST_EXISTS)) {
-    image = gdk_pixbuf_new_from_file(fname, NULL);
-
-    gdk_pixbuf_render_pixmap_and_mask (image, &tiles_pixmap, NULL, 127);
-    gdk_pixbuf_unref(image);
+  fname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
+                                     "gnotski.png", FALSE, NULL);
+  if (g_file_test (fname, G_FILE_TEST_EXISTS)) {
+    tiles_pixmap = gdk_pixbuf_new_from_file (fname, NULL);
   } else {
     GtkWidget *dialog;
 
     dialog = gtk_message_dialog_new (NULL,
-		    GTK_DIALOG_MODAL,
-		    GTK_MESSAGE_ERROR,
-		    GTK_BUTTONS_OK,
-		    _("Could not find \'%s\' pixmap file\n"), fname);
+                                     GTK_DIALOG_MODAL,
+                                     GTK_MESSAGE_ERROR,
+                                     GTK_BUTTONS_OK,
+                                     _("Could not find \'%s\' pixmap file\n"), fname);
     gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
-    gtk_dialog_run (GTK_DIALOG(dialog));
+    gtk_dialog_run (GTK_DIALOG (dialog));
 
-    exit(1);
+    exit (1);
   }
-  g_free(fname);
+  g_free (fname);
 }
 
-void set_move(int x){
-  moves = x-1;
-  new_move();
+void
+set_move (gint x)
+{
+  moves = x - 1;
+  new_move ();
 }
 
-void new_move() {
+void
+new_move ()
+{
   char str[4];
-  if(moves<999) moves++;
-  sprintf(str,"%03d", moves);
-  gtk_label_set_text(GTK_LABEL(move_value), str);
+  if (moves < 999)
+    moves++;
+  sprintf (str,"%03d", moves);
+  gtk_label_set_text (GTK_LABEL (move_value), str);
 }
 
-
-void print_map(char *src){
-  int x,y;
-  for(y=0; y<height; y++){
-    for(x=0; x<width; x++)
-      printf("%c", get_piece_id(src,x,y));
-    printf("\n");
+void
+print_map (char *src)
+{
+  gint x, y;
+  for (y = 0; y < height; y++) {
+    for (x = 0; x < width; x++)
+      printf ("%c", get_piece_id (src, x, y));
+    printf ("\n");
   }
 }
 
-int game_over(){
-  int x,y, over=1;
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(map,x,y) == '*' && get_piece_id(orig_map,x,y) != '.')
+int
+game_over ()
+{
+  gint x, y, over = 1;
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (map, x, y) == '*'
+          && get_piece_id (orig_map, x, y) != '.')
 	over = 0;
   return over;
 }
 
-int do_move_piece(int id, int dx, int dy){
-  int x,y;
-  copymap(tmpmap,map);
+gint
+do_move_piece (gint id, gint dx, gint dy)
+{
+  gint x, y;
+  copymap (tmpmap, map);
 
   /* Move pieces */
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(tmpmap,x,y) == id)
-	set_piece_id(tmpmap,x,y,' ');
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (tmpmap, x, y) == id)
+	set_piece_id (tmpmap, x, y, ' ');
 
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(map,x,y) == id)
-	set_piece_id(tmpmap,(x+dx),(y+dy),id);
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (map, x, y) == id)
+	set_piece_id (tmpmap, (x+dx), (y+dy), id);
 
   /* Preserve some from original map */
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++){
-      if(get_piece_id(tmpmap,x,y)==' ' && get_piece_id(orig_map,x,y)=='.')
-	set_piece_id(tmpmap,x,y,'.');
-      if(get_piece_id(tmpmap,x,y)==' ' && get_piece_id(orig_map,x,y)=='-')
-	set_piece_id(tmpmap,x,y,'-');
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++){
+      if (get_piece_id (tmpmap, x, y) == ' '
+          && get_piece_id (orig_map, x, y) == '.')
+	set_piece_id (tmpmap, x, y, '.');
+      if (get_piece_id (tmpmap, x, y) == ' '
+          && get_piece_id (orig_map, x, y) == '-')
+	set_piece_id (tmpmap, x, y, '-');
     }
   /* Paint changes */
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(map,x,y) != get_piece_id(tmpmap,x,y) ||
-	 get_piece_id(tmpmap,x,y) == id)
-	gui_draw_pixmap(tmpmap, x, y);
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (map, x, y) != get_piece_id (tmpmap, x, y)
+          || get_piece_id (tmpmap, x, y) == id)
+	gui_draw_pixmap (tmpmap, x, y);
 
-  copymap(map,tmpmap);
+  copymap (map, tmpmap);
   return 1;
 }
 
-int check_valid_move(int id, int dx, int dy){
-  int x,y,valid = 1;
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(map,x,y) == id)
-	if(!(get_piece_id(map,x+dx,y+dy) == ' ' ||
-	     get_piece_id(map,x+dx,y+dy) == '.' ||
-	     get_piece_id(map,x+dx,y+dy) == id ||
-	   (id == '*' && get_piece_id(map,x+dx,y+dy) == '-'))){
+gint
+check_valid_move (gint id, gint dx, gint dy)
+{
+  gint x, y, valid = 1;
+
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (map, x, y) == id)
+	if (!(get_piece_id (map, x + dx, y + dy) == ' '
+              || get_piece_id (map, x + dx, y + dy) == '.'
+              || get_piece_id (map, x + dx, y + dy) == id
+              || (id == '*' && get_piece_id (map, x + dx, y + dy) == '-'))) {
 	  valid = 0;
 	}
   return valid;
 }
 
-int move_piece(int id,int x1,int y1,int x2,int y2){
-  int return_value = 0;
+gint
+move_piece (gint id, gint x1, gint y1, gint x2, gint y2)
+{
+  gint return_value = 0;
 
-  if(get_piece_id(map,x2,y2) == id)
+  if (get_piece_id (map, x2, y2) == id)
     return_value = 1;
 
-  if(!((abs(y1-y2)==0 && abs(x1-x2)==1) || (abs(x1-x2)==0 && abs(y1-y2)==1)))
+  if (! ((abs (y1 - y2) == 0
+          && abs (x1 - x2) == 1)
+         || (abs (x1 - x2) == 0
+             && abs (y1 - y2) == 1)))
     return 0;
 
-  if(abs(y1-y2)==1){
-    if(y1-y2<0) 
-      if(check_valid_move(id,0,1))
-	return do_move_piece(id,0,1);
-    if(y1-y2>0) 
-      if(check_valid_move(id,0,-1))
-	return do_move_piece(id,0,-1);
+  if (abs (y1 - y2) == 1) {
+    if (y1 - y2 < 0) 
+      if (check_valid_move (id, 0, 1))
+	return do_move_piece (id, 0, 1);
+    if (y1 - y2 > 0) 
+      if (check_valid_move (id, 0, -1))
+	return do_move_piece (id, 0, -1);
   }
-  if(abs(x1-x2)==1){
-    if(x1-x2<0) 
-      if(check_valid_move(id,1,0))
-	return do_move_piece(id,1,0);
-    if(x1-x2>0) 
-      if(check_valid_move(id,-1,0))
-	return do_move_piece(id,-1,0);
+  if (abs (x1 - x2) == 1) {
+    if (x1 - x2 < 0) 
+      if (check_valid_move (id, 1, 0))
+	return do_move_piece (id, 1, 0);
+    if (x1 - x2 > 0) 
+      if (check_valid_move (id, -1, 0))
+	return do_move_piece (id, -1, 0);
   }
-  return return_value;;
+  return return_value;
 }
 
-int get_piece_id(char *src, int x, int y){
-  return src[x + 1 + (y + 1) * (width+2)];
+gint
+get_piece_id (char *src, gint x, gint y)
+{
+  return src[x + 1 + (y + 1) * (width + 2)];
 }
 
-void set_piece_id(char *src, int x, int y, int id){
-  src[x + 1 + (y + 1) * (width+2)] = id;
+void
+set_piece_id (char *src, gint x, gint y, gint id)
+{
+  src[x + 1 + (y + 1) * (width + 2)] = id;
 }
 
 
-int get_piece_nr(char *src, int x,int y){
+gint
+get_piece_nr (char *src, gint x, gint y)
+{
   char c;
-  int i=0, nr = 0;
-  x++; y++;
-  c = src[x + y * (width+2)];
-  if(c=='-') return 23;
-  if(c==' ') return 21;
-  if(c=='.') return 20;
+  gint i = 0, nr = 0;
+  x++;
+  y++;
+  c = src[x + y * (width + 2)];
+  if (c == '-') return 23;
+  if (c == ' ') return 21;
+  if (c == '.') return 20;
 
-  nr += 1   * (src[(x - 1) + (y - 1) * (width+2)] == c);
-  nr += 2   * (src[(x - 0) + (y - 1) * (width+2)] == c);
-  nr += 4   * (src[(x + 1) + (y - 1) * (width+2)] == c);
-  nr += 8   * (src[(x - 1) + (y - 0) * (width+2)] == c);
-  nr += 16  * (src[(x + 1) + (y - 0) * (width+2)] == c);
-  nr += 32  * (src[(x - 1) + (y + 1) * (width+2)] == c);
-  nr += 64  * (src[(x - 0) + (y + 1) * (width+2)] == c);
-  nr += 128 * (src[(x + 1) + (y + 1) * (width+2)] == c);
-  while(nr != image_map[i] && image_map[i] != -1) i+=2;
-  return image_map[i+1];
+  nr += 1   * (src[(x - 1) + (y - 1) * (width + 2)] == c);
+  nr += 2   * (src[(x - 0) + (y - 1) * (width + 2)] == c);
+  nr += 4   * (src[(x + 1) + (y - 1) * (width + 2)] == c);
+  nr += 8   * (src[(x - 1) + (y - 0) * (width + 2)] == c);
+  nr += 16  * (src[(x + 1) + (y - 0) * (width + 2)] == c);
+  nr += 32  * (src[(x - 1) + (y + 1) * (width + 2)] == c);
+  nr += 64  * (src[(x - 0) + (y + 1) * (width + 2)] == c);
+  nr += 128 * (src[(x + 1) + (y + 1) * (width + 2)] == c);
+  while (nr != image_map[i] && image_map[i] != -1) 
+    i += 2;
+  return image_map[i + 1];
 }
 
-int mapcmp(char *m1, char *m2){
-  int x,y;
-  for(y=0; y<height; y++)
-    for(x=0; x<width; x++)
-      if(get_piece_id(m1,x,y) != get_piece_id(m2,x,y))
+gint
+mapcmp (char *m1, char *m2)
+{
+  gint x, y;
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+      if (get_piece_id (m1, x, y) != get_piece_id (m2, x, y))
 	return 1;
   return 0;
 }
 
-void copymap(char *dest,char *src){
-  memcpy(dest,src,(width+2)*(height+1));
+void
+copymap (char *dest, char *src)
+{
+  memcpy (dest, src, (width + 2) * (height + 1));
 }
 
-void prepare_map(char *level){
-  int x,y,i=0;
-  static int first = 1;
+void
+prepare_map (char *level)
+{
+  gint x, y, i = 0;
+  static gint first = 1;
   char tmp[32];
   char *p = level;
 
-  if(p==NULL){
-    if(first){
+  if (p == NULL) {
+    if (first) {
       p = \
 	".  ddjk ." \
 	"  **  hh " \
@@ -917,99 +1020,116 @@ void prepare_map(char *level){
       width = 9;
       height = 7;
       first = 0;
-      message(_("Welcome to GNOME Klotski"));
+      message (_("Welcome to GNOME Klotski"));
     } else {
       return;
     }
   } else {
-    while(i<16 && *p != '#')
+    while (i < 16 && *p != '#')
       current_level[i++] = *p++;
-    current_level[i] = '\0'; p++;
+    current_level[i] = '\0';
+    p++;
     
     i = 0; 
-    while(i<16 && *p != '#') tmp[i++] = *p++;
-    tmp[i] = '\0'; width = atoi(tmp); p++;
+    while (i < 16 && *p != '#')
+      tmp[i++] = *p++;
+    tmp[i] = '\0'; 
+    width = atoi (tmp);
+    p++;
     
     i = 0; 
-    while(i<16 && *p != '#') tmp[i++] = *p++;
-    tmp[i] = '\0'; height = atoi(tmp); p++;
+    while (i < 16 && *p != '#')
+      tmp[i++] = *p++;
+    tmp[i] = '\0'; 
+    height = atoi (tmp);
+    p++;
     
-    sprintf(tmp,_("Playing level %s"),current_level);
+    sprintf (tmp, _("Playing level %s"), current_level);
     
-    message(tmp);
+    message (tmp);
   }
 
-  if(map){
-    free(map);
-    free(tmpmap);
-    free(move_map);
-    free(orig_map);
+  if (map) {
+    free (map);
+    free (tmpmap);
+    free (move_map);
+    free (orig_map);
   }
 
-  map = calloc(1,(width+2)*(height+2));
-  tmpmap = calloc(1,(width+2)*(height+2));
-  orig_map = calloc(1,(width+2)*(height+2));
-  move_map = calloc(1,(width+2)*(height+2));
-  if(p!=NULL)
-    for(y=0; y<height; y++)
-      for(x=0; x<width; x++)
-	set_piece_id(map,x,y,*p++);
-  copymap(orig_map,map);
+  map = calloc (1, (width + 2) * (height + 2));
+  tmpmap = calloc (1, (width + 2) * (height + 2));
+  orig_map = calloc (1, (width + 2) * (height + 2));
+  move_map = calloc (1, (width + 2) * (height + 2));
+  if (p != NULL)
+    for (y = 0; y < height; y++)
+      for (x = 0; x < width; x++)
+	set_piece_id (map, x, y, *p++);
+  copymap (orig_map, map);
 }
 
 
-void new_game_cb(GtkWidget *widget, gpointer data){
+void 
+new_game_cb (GtkWidget *widget, gpointer data)
+{
   widget = space;
 
-  prepare_map(data);
-  gtk_drawing_area_size(GTK_DRAWING_AREA(space),
-			width*TILE_SIZE,height*TILE_SIZE);
-  gtk_widget_realize(window);
+  prepare_map (data);
+  gtk_drawing_area_size (GTK_DRAWING_AREA (space),
+                         width * TILE_SIZE, height * TILE_SIZE);
+  gtk_widget_realize (window);
 
-  set_move(0);
+  set_move (0);
 
   update_score_state ();
 }
 
-void quit_game_cb(GtkWidget *widget, gpointer data){
-  if(buffer)
-    gdk_drawable_unref(buffer);
-  if(tiles_pixmap)
-    gdk_drawable_unref(tiles_pixmap);
+void
+quit_game_cb (GtkWidget *widget, gpointer data)
+{
+  if (buffer)
+    gdk_drawable_unref (buffer);
+  if (tiles_pixmap)
+    g_object_unref (tiles_pixmap);
 
-  gtk_main_quit();
+  gtk_main_quit ();
 }
 
-static int save_state(GnomeClient *client,gint phase, 
-                      GnomeRestartStyle save_style, gint shutdown,
-                      GnomeInteractStyle interact_style, gint fast,
-                      gpointer client_data){
+static gint
+save_state (GnomeClient *client, gint phase, 
+            GnomeRestartStyle save_style, gint shutdown,
+            GnomeInteractStyle interact_style, gint fast,
+            gpointer client_data)
+{
   gchar *argv[20];
   gint i;
   gint xpos, ypos;
   
-  gdk_window_get_origin(window->window, &xpos, &ypos);
+  gdk_window_get_origin (window->window, &xpos, &ypos);
   
   i = 0;
   argv[i++] = (gchar *)client_data;
   argv[i++] = "-x";
-  argv[i++] = g_strdup_printf("%d",xpos);
+  argv[i++] = g_strdup_printf ("%d", xpos);
   argv[i++] = "-y";
-  argv[i++] = g_strdup_printf("%d",ypos);
+  argv[i++] = g_strdup_printf ("%d", ypos);
   
-  gnome_client_set_restart_command(client, i, argv);
-  gnome_client_set_clone_command(client, 0, NULL);
+  gnome_client_set_restart_command (client, i, argv);
+  gnome_client_set_clone_command (client, 0, NULL);
   
-  g_free(argv[2]);
-  g_free(argv[4]);
+  g_free (argv[2]);
+  g_free (argv[4]);
   return TRUE;
 }
 
-void level_cb(GtkWidget *widget, gpointer data){
-  new_game_cb(space,data);
+void
+level_cb (GtkWidget *widget, gpointer data)
+{
+  new_game_cb (space, data);
 }
 
-void about_cb(GtkWidget *widget, gpointer data){
+void
+about_cb (GtkWidget *widget, gpointer data)
+{
   GdkPixbuf *pixbuf = NULL;
   static GtkWidget *about = NULL;
   
@@ -1019,34 +1139,34 @@ void about_cb(GtkWidget *widget, gpointer data){
   gchar *translator_credits = _("translator_credits");
 
   if (about != NULL) {
-    gtk_window_present (GTK_WINDOW(about));
+    gtk_window_present (GTK_WINDOW (about));
     return;
   }
   {
-	  char *filename = NULL;
-
-	  filename = gnome_program_locate_file (NULL,
-			  GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnotski-icon.png"),
-			  TRUE, NULL);
-	  if (filename != NULL)
-	  {
-		  pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
-		  g_free (filename);
-	  }
+    char *filename = NULL;
+    
+    filename = gnome_program_locate_file (NULL,
+                                          GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnotski-icon.png"),
+                                          TRUE, NULL);
+    if (filename != NULL)
+      {
+        pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
+        g_free (filename);
+      }
   }
-
-  about = gnome_about_new(_(APPNAME_LONG), VERSION, 
-                          "Copyright \xc2\xa9 1999-2003 Lars Rydlinge",
-                          _("A Klotski clone"),
-                          (const char **)authors, 
-                          (const char **)documenters,
-                          strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
-			  pixbuf);
+  
+  about = gnome_about_new (_(APPNAME_LONG), VERSION, 
+                           "Copyright \xc2\xa9 1999-2003 Lars Rydlinge",
+                           _("A Klotski clone"),
+                           (const char **)authors, 
+                           (const char **)documenters,
+                           strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
+                           pixbuf);
   
   if (pixbuf != NULL)
-		gdk_pixbuf_unref (pixbuf);
+    gdk_pixbuf_unref (pixbuf);
   
   gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
   g_signal_connect (G_OBJECT (about), "destroy", G_CALLBACK (gtk_widget_destroyed), &about);
-  gtk_widget_show(about);
+  gtk_widget_show_all (about);
 }

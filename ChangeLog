@@ -1,3 +1,13 @@
+2003-06-12  William Jon McCann  <mccann@jhu.edu>
+
+	* gnotski.c: Use pixbuf for tile images.  Tried to make coding
+	style consistent.
+	(gui_draw_pixmap): Clear tile to default background color
+	before drawing pixbuf.
+
+	* gnotski.png: Modified to use transparent background and
+	alpha layer shadows.
+
 2003-06-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnotski.c: i18n fixes from Christian Neumair (bug #114875).
