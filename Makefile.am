@@ -35,64 +35,9 @@ CLEANFILES = $(Games_DATA)
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-chgrp games $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski
-	-touch             $(DESTDIR)$(scoredir)/gnotski.1.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.1.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.1.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.2.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.2.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.2.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.3.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.3.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.3.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.4.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.4.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.4.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.5.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.5.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.5.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.6.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.6.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.6.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.7.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.7.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.7.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.11.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.11.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.11.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.12.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.12.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.12.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.13.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.13.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.13.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.14.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.14.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.14.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.15.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.15.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.15.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.16.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.16.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.16.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.17.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.17.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.17.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.21.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.21.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.21.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.22.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.22.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.22.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.23.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.23.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.23.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.24.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.24.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.24.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.25.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.25.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.25.scores
-	-touch             $(DESTDIR)$(scoredir)/gnotski.26.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnotski.26.scores
-	-chmod 664         $(DESTDIR)$(scoredir)/gnotski.26.scores
+	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ; fi
+	-for i in 1 2 3 4 5 6 7 11 12 13 14 15 16 17 21 22 23 24 25 26 ; do \
+	  touch             $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
+	  chown $(scores_user).$(scores_group) $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
+	  chmod 664         $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
+	done
