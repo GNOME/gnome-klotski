@@ -1,3 +1,9 @@
+2004-11-08  Richard Hoelscher  <rah@rahga.com>
+	
+	* Makefile.am: Add high score files for the new levels.
+	* gnotski.c: Fix level 3-8, remove a debug printf,
+	rename draw_idle_id to configure_idle_id.
+
 2004-11-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnotski.schemas.in: Fix closing tag.

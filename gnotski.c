@@ -45,6 +45,7 @@
 
 #define THEME_TILE_CENTER 14
 #define THEME_TILE_SIZE 34
+#define THEME_TILE_SEGMENTS 27
 #define THEME_OVERLAY_SIZE 8
 
 GConfClient *conf_client;
@@ -78,7 +79,7 @@ gint moves = 0;
 gint session_xpos = 0;
 gint session_ypos = 0;
 
-guint draw_idle_id = 0;
+guint configure_idle_id = 0;
 
 char current_level[16];
 
@@ -415,7 +416,7 @@ GnomeUIInfo level_3_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
-    "Sunshine#29#35#" \
+    "28#29#35#" \
     "           #######           " \
     "           # ... #           " \
     "           #.. ..#           " \
@@ -431,7 +432,7 @@ GnomeUIInfo level_3_menu[] = {
     "#\x84\x84\x84\x84\x84#################\x83\x83\x83\x83\x83#" \
     "#\x84\x84\x84\x84\x84#ddFeeA***BffOZZ#\x83\x83\x83\x83\x83#" \
     "#\x84\x84\x84\x84\x84#ddFee** **ffOZZ#\x83\x83\x83\x83\x83#" \
-    "#\x84\x84\x84\x84\x84#MMKQQ* C *PPS\xde\xde#\x83\x83\x83\x83\x83#" \
+    "#\x84\x84\x84\x84\x84#MMKQQ*   *PPS\xde\xde#\x83\x83\x83\x83\x83#" \
     "#\x84\x84\x84\x84\x84#VVLXX** **bbRcc#\x83\x83\x83\x83\x83#" \
     "#     #VVLXXD***EbbRcc#     #" \
     "#\xc0\xc0\xc1\xc2\xc2#\x89\x89\x89\x89\x89TTJWW\x8a\x8a\x8a\x8a\x8a#\xc8\xc8\xc9\xca\xca#" \
@@ -459,7 +460,7 @@ GnomeUIInfo level_3_menu[] = {
 GnomeUIInfo level_bt_menu[] = {
     /* 42 moves */
   { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
-    "1#6#7#" \
+    "30#6#7#" \
     "##..##" \
     "#a..c#" \
     "#aabc#" \
@@ -470,7 +471,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
-    "4#6#7#" \
+    "31#6#7#" \
     "##..##" \
     "#a..b#" \
     "#cdde#" \
@@ -481,7 +482,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
-    "8#6#7#" \
+    "32#6#7#" \
     "##..##" \
     "#a..h#" \
     "#bbgh#" \
@@ -492,7 +493,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("10"), NULL, level_cb,
-    "10#6#7#" \
+    "33#6#7#" \
     "##..##" \
     "#a..d#" \
     "#bcdd#" \
@@ -503,7 +504,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("11"), NULL, level_cb,
-    "11#6#7#" \
+    "34#6#7#" \
     "##..##" \
     "#a..c#" \
     "#bbcc#" \
@@ -514,7 +515,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
   { GNOME_APP_UI_ITEM, N_("13"), NULL, level_cb,
-    "13#6#7#" \
+    "35#6#7#" \
     "##..##" \
     "#a..c#" \
     "#aabb#" \
@@ -525,7 +526,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
  { GNOME_APP_UI_ITEM, N_("16"), NULL, level_cb,
-    "16#6#7#" \
+    "36#6#7#" \
     "##..##" \
     "#a..c#" \
     "#abcc#" \
@@ -536,7 +537,7 @@ GnomeUIInfo level_bt_menu[] = {
     NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
 
  { GNOME_APP_UI_ITEM, N_("17"), NULL, level_cb,
-    "17#6#7#" \
+    "37#6#7#" \
     "##..##" \
     "#a..b#" \
     "#ccdd#" \
@@ -548,7 +549,7 @@ GnomeUIInfo level_bt_menu[] = {
 
 
  { GNOME_APP_UI_ITEM, N_("19"), NULL, level_cb,
-    "19#6#7#" \
+    "38#6#7#" \
     "##..##" \
     "#a..d#" \
     "#abcc#" \
@@ -560,7 +561,7 @@ GnomeUIInfo level_bt_menu[] = {
 
 
  { GNOME_APP_UI_ITEM, N_("20"), NULL, level_cb,
-    "20#6#7#" \
+    "39#6#7#" \
     "##..##" \
     "#a..d#" \
     "#abcd#" \
@@ -572,7 +573,7 @@ GnomeUIInfo level_bt_menu[] = {
 
                      /* Dodge i18n for the moment */
   { GNOME_APP_UI_ITEM, "Climb Pro 24", NULL, level_cb,
-    "Climb Pro 24#9#11#" \
+    "40#9#11#" \
     "####.####" \
     "#aa...bb#" \
     "#ccdddee#" \
@@ -896,8 +897,9 @@ configure_pixmaps_idle (void)
     if (tiles_pixbuf != NULL) 
       g_object_unref (tiles_pixbuf);
     
-    tiles_pixbuf=games_preimage_render (tiles_preimage, tile_size*27,
-                                        tile_size*2, NULL);
+    tiles_pixbuf=games_preimage_render (tiles_preimage,
+                                        tile_size * THEME_TILE_SEGMENTS,
+                                        tile_size * 2, NULL);
     prior_tile_size = tile_size;
   }
 
@@ -908,7 +910,7 @@ configure_pixmaps_idle (void)
                            height * tile_size, -1);
   clear_buffer = FALSE;
   redraw_all();
-  draw_idle_id = 0;
+  configure_idle_id = 0;
   return FALSE;
 }
 
@@ -921,8 +923,8 @@ configure_pixmaps (void)
   if (tile_size % 2) tile_size--;
   
   if (clear_buffer || (tile_size != prior_tile_size)) {
-    if (!draw_idle_id)
-      draw_idle_id = g_idle_add ((GSourceFunc) configure_pixmaps_idle, NULL);
+    if (!configure_idle_id)
+      configure_idle_id = g_idle_add ((GSourceFunc) configure_pixmaps_idle, NULL);
     clear_buffer = TRUE;
   }
   
@@ -1170,7 +1172,6 @@ get_piece_nr (char *src, gint x, gint y)
   nr += 128 * (src[(x + 1) + (y + 1) * (width + 2)] == c);
   while (nr != image_map[i] && image_map[i] != -1) 
     i += 2;
-  if (image_map[i] == -1){printf ("nr: %i\n",nr);}
   return image_map[i + 1];
 }
 
@@ -1246,8 +1247,6 @@ prepare_map (char *level)
 void
 new_game_cb (GtkWidget *widget, gpointer data)
 {
-  widget = space;
-
   clear_buffer = TRUE;
   set_move (0);
 
