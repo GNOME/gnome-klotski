@@ -1,3 +1,7 @@
+2002-06-03  Bastien Nocera  <hadess@hadess.net>
+
+	* gnotski.c: remove help menu item
+
 2002-04-30  Bastien Nocera  <hadess@hadess.net>
 
 	* gnotski.c: (expose_space): fix run-time warning, patch by Shahms E.

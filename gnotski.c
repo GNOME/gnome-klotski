@@ -458,7 +458,7 @@ GnomeUIInfo game_menu[] = {
 };
 
 GnomeUIInfo help_menu[] = {
-  GNOMEUIINFO_HELP("gnotski"),
+  /* FIXME GNOMEUIINFO_HELP("gnotski"), */
   GNOMEUIINFO_MENU_ABOUT_ITEM(about_cb, NULL),
   GNOMEUIINFO_END
 };
