@@ -689,14 +689,23 @@ void load_image(){
 
   fname = gnome_program_locate_file(NULL, GNOME_FILE_DOMAIN_PIXMAP, 
 	                                  "gnotski.png", FALSE, NULL);
-  if(!g_file_test(fname, G_FILE_TEST_EXISTS)) {
-    g_print(_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
+  if(g_file_test(fname, G_FILE_TEST_EXISTS)) {
+    image = gdk_pixbuf_new_from_file(fname, NULL);
+
+    gdk_pixbuf_render_pixmap_and_mask (image, &tiles_pixmap, NULL, 127);
+    gdk_pixbuf_unref(image);
+  } else {
+    GtkWidget *dialog;
+
+    dialog = gtk_message_dialog_new (NULL,
+		    GTK_DIALOG_MODAL,
+		    GTK_MESSAGE_ERROR,
+		    GTK_BUTTONS_OK,
+		    _("Could not find \'%s\' pixmap file\n"), fname);
+    gtk_dialog_run (GTK_DIALOG(dialog));
+
+    exit(1);
   }
-  image = gdk_pixbuf_new_from_file(fname, NULL);
-
-  gdk_pixbuf_render_pixmap_and_mask (image, &tiles_pixmap, NULL, 127);
-
-  gdk_pixbuf_unref(image);
   g_free(fname);
 }
 
@@ -960,15 +969,27 @@ void level_cb(GtkWidget *widget, gpointer data){
 }
 
 void about_cb(GtkWidget *widget, gpointer data){
+  GdkPixbuf *pixbuf = NULL;
   GtkWidget *about;
   
   const gchar *authors[] = { "Lars Rydlinge", NULL };
-  gchar *documenters[] = {
-                          NULL
-                         };
+  gchar *documenters[] = { NULL };
   /* Translator credits */
   gchar *translator_credits = _("translator_credits");
-  
+
+  {
+	  char *filename = NULL;
+
+	  filename = gnome_program_locate_file (NULL,
+			  GNOME_FILE_DOMAIN_PIXMAP,  ("iagno.png"),
+			  TRUE, NULL);
+	  if (filename != NULL)
+	  {
+		  pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
+		  g_free (filename);
+	  }
+  }
+
   about = gnome_about_new(_(APPNAME_LONG), 
                           VERSION, 
                           "(C) 1999 Lars Rydlinge",
@@ -977,6 +998,6 @@ void about_cb(GtkWidget *widget, gpointer data){
                           (const char **)authors, 
                           (const char **)documenters,
                           strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
-			  NULL);
+			  pixbuf);
   gtk_widget_show(about);
 }

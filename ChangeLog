@@ -1,3 +1,8 @@
+2002-04-30  Bastien Nocera  <hadess@hadess.net>
+
+	* gnotski.c: (load_image), (about_cb): have a nice dialog when the map
+	can't be loaded, add icon to about box
+
 2002-04-29  Bastien Nocera  <hadess@hadess.net>
 
 	* Makefile.am:
