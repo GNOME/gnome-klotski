@@ -1,4 +1,12 @@
-2005-02-03  Richard Hoelscher  <rahga@localhost.localdomain>
+2005-02-17  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c: Minor edit to a few puzzles.
+
+2005-02-11  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c: Added hint targets for 8 more puzzles. 7 remain.
+
+2005-02-03  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c: Second half of "Sunshine" removed as it requires a
 	special feature... though at 345 moves, it's hard enough anyway.

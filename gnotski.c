@@ -132,11 +132,11 @@ typedef struct _levelinfo {
   gchar *data;
 } levelinfo;
 
-/* The remarks below provide context for translation. */
+/* The "puzzle name" remarks provide context for translation. */
 const levelinfo level[]= {
      /* puzzle name */ 
   { N_("Only 18 Steps"), 0,
-    6, 9, 18, 
+    6, 9, 18,
     "######" \
     "#a**b#" \
     "#m**n#" \
@@ -212,7 +212,7 @@ const levelinfo level[]= {
     "    .." \
     "    .." },
 
-     /* puzzle name */
+     /* puzzle name - sometimes called "Le'Ane Rouge" */
   { N_("Red Donkey"), 0,
     6, 9, 81,
     "######" \
@@ -253,7 +253,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Agatka"), 1,
-    7, 7, 0,
+    7, 7, 30,
     "..     " \
     ".      " \
     "#####--" \
@@ -264,7 +264,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Success"), 1,
-    9, 6, 0,
+    9, 6, 25,
     "#######  " \
     "#**bbc#  " \
     "#defgh#  " \
@@ -274,7 +274,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Bone"), 1,
-    6, 9, 0,
+    6, 9, 14,
     "######" \
     "#abc*#" \
     "# dd*#" \
@@ -287,7 +287,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Fortune"), 1,
-    7, 10, 0,
+    7, 10, 25,
     "     .." \
     "     . " \
     "####-. " \
@@ -301,7 +301,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Fool"), 1,
-    10, 6, 0,
+    10, 6, 29,
     "  ########" \
     "  -aabc  #" \
     "  #aabdef#" \
@@ -311,20 +311,20 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Solomon"), 1,
-    7, 9, 0,
+    7, 9, 29, 
     " .     " \
     "..     " \
     "#--####" \
     "#  aab#" \
     "# cdfb#" \
-    "-hcefg#" \
+    "#hcefg#" \
     "#hijk*#" \
     "#hll**#" \
     "#######" },
 
      /* puzzle name */
   { N_("Cleopatra"), 1,
-    6, 8, 0,
+    6, 8, 32, 
     "######" \
     "#abcd#" \
     "#**ee#" \
@@ -336,7 +336,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Shark"), 1,
-    11, 8, 0,
+    11, 8, 0, /* SOLVEME */
     "########   " \
     "#nrr s #   " \
     "#n*op q#   " \
@@ -348,15 +348,15 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Rome"), 1,
-    8, 8, 0,
+    8, 8, 38, 
     "########" \
     "#abcc**#" \
     "#ddeef*#" \
     "#ddghfi#" \
-    "-   jki#" \
+    "#   jki#" \
     "#--#####" \
-    "      .." \
-    "       ." },
+    " ..     " \
+    "  .     " },
 
      /* puzzle name */
   { N_("Pennant Puzzle"), 1,
@@ -373,7 +373,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Ithaca"), 2,
-    19, 19, 0,
+    19, 19, 0, /* SOLVEME */
     ".aaaaaaaaaaaaaaaaab" \
     "..  cddeffffffffffb" \
     " .. cddeffffffffffb" \
@@ -396,22 +396,20 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Pelopones"), 2,
-    9, 10, 0,
+    9, 8, 0, /* SOLVEME */
     "#########" \
     "#abbb***#" \
     "#abbb*c*#" \
     "#adeefgg#" \
     "#  eefhh#" \
-    "#    ihh#" \
-    "#    ihh#" \
-    "#---#####" \
-    "      ..." \
-    "      . ." },
+    "#... ihh#" \
+    "#. . ihh#" \
+    "#########" },
 
      /* puzzle name */
   { N_("Transeuropa"), 2,
-    15, 8, 0,
-    "    -##-#######" \
+    15, 8, 0, /* SOLVEME */
+    "    ###########" \
     "    -AAAAABBCC#" \
     "    -   DEFGHI#" \
     "    #   DEFGJI#" \
@@ -422,36 +420,32 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("Lodzianka"), 2,
-    11, 7, 0,
-    "#########  " \
-    "#**abbcc#  " \
-    "#**abbdd#  " \
-    "#eefgh  #  " \
-    "#iiijk  -  " \
-    "#iiijk  -.." \
-    "#########.." },
+    9, 7, 0, /* SOLVEME */
+    "#########" \
+    "#**abbcc#" \
+    "#**abbdd#" \
+    "#eefgh  #" \
+    "#iiijk..#" \
+    "#iiijk..#" \
+    "#########" },
 
      /* puzzle name */
   { N_("Polonaise"), 2,
-    7, 9, 0,
+    7, 7, 0, /* SOLVEME */
     "#######" \
     "#aab**#" \
     "#aabc*#" \
-    "-defgg#" \
-    "#  fhh#" \
-    "#  ihh#" \
-    "#--####" \
-    "     .." \
-    "      ." },
+    "#defgg#" \
+    "#..fhh#" \
+    "# .ihh#" \
+    "#######" },
 
      /* puzzle name */
   { N_("Baltic Sea"), 2,
-    6, 10, 0,
-    ".     " \
-    ".     " \
-    "#-####" \
-    "# abc#" \
-    "# dec#" \
+    6, 8, 42,
+    "######" \
+    "#.abc#" \
+    "#.dec#" \
     "#fggc#" \
     "#fhhi#" \
     "#fjk*#" \
@@ -460,7 +454,7 @@ const levelinfo level[]= {
 
      /* puzzle name */
   { N_("American Pie"), 2,
-    10, 12, 0,
+    10, 12, 0, /* SOLVEME */
     "##########" \
     "#a*bcdefg#" \
     "#**bhhhhg#" \
