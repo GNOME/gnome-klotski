@@ -1,3 +1,8 @@
+2002-09-11  jacob berkman  <jacob@ximian.com>
+
+	* help/C/gnotski-C.omf: remove <!DOCTYPE> as it breaks
+	scrollkeeper-preinstall
+
 2002-09-09  jacob berkman  <jacob@ximian.com>
 
 	* help/C/gnotski-C.omf: fix to be valid XML
