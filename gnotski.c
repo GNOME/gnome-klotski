@@ -738,7 +738,7 @@ main (int argc, char **argv)
   win_height = gconf_client_get_int (conf_client, "/apps/gnotski/height", NULL);
   startup_level = gconf_client_get_int (conf_client, "/apps/gnotski/level", NULL);
 
-  gtk_window_set_default_size(GTK_WINDOW(window), win_width, win_height);
+  gtk_window_set_default_size (GTK_WINDOW (window), win_width, win_height);
   
   g_signal_connect (G_OBJECT (window), "delete_event",
                     G_CALLBACK(quit_game_cb), NULL);
@@ -1010,12 +1010,25 @@ static gboolean
 configure_pixmaps_idle (void)
 {
   if (tile_size != prior_tile_size) {
+
     if (tiles_pixbuf != NULL) 
       g_object_unref (tiles_pixbuf);
+    tiles_pixbuf = NULL;
     
-    tiles_pixbuf = games_preimage_render (tiles_preimage,
-                                          tile_size * THEME_TILE_SEGMENTS,
-                                          tile_size * 2, NULL);
+    if (tiles_preimage) {
+      tiles_pixbuf = games_preimage_render (tiles_preimage,
+                                            tile_size * THEME_TILE_SEGMENTS,
+                                            tile_size * 2, NULL);
+    }
+
+    if (tiles_pixbuf == NULL) {
+      /* FIXME: Add an error dialog for corrupt images or bad loader. */
+      tiles_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
+                                     tile_size * THEME_TILE_SEGMENTS, 
+                                     tile_size * 2);
+      gdk_pixbuf_fill (tiles_pixbuf, 0x00000000);
+    }
+
     prior_tile_size = tile_size;
   }
 

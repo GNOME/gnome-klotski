@@ -1,3 +1,8 @@
+2005-01-21  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c (configure_pixmaps_idle): Blank pixbuf when the
+	image is corrupt or loader fails.
+
 2005-01-03  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c (load_image): Preimage API update, uri -> file.
