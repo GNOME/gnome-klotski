@@ -1,3 +1,7 @@
+2003-07-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnotski.desktop.in: Update name to fit HIG (bug 116916).
+
 2003-06-24  William Jon McCann  <mccann@jhu.edu>
 
 	* gnotski.c (new_move): Try not to use fixed length string buffer.
