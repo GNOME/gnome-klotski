@@ -17,7 +17,7 @@ gnotski_LDADD = \
 	$(GNOMEUI_LIBS)	\
 	$(INTLLIBS) 
 
-pixmap_DATA = gnotski.png
+pixmap_DATA = gnotski.png gnotski-icon.png
 
 Games_DATA = gnotski.desktop
 

@@ -1,3 +1,12 @@
+2001-06-24  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	From Dean Scott <drscott@rochester.rr.com>.
+	
+	* gnotski-icon.png: Added, gnotski.png wasn't really a icon.
+	* Makefile.am (pixmap_DATA): Added gnotski-icon.png.
+	* gnotski.c (main): Use gnotski-icon.png as the window icon.
+	* gnotski.desktop: Use gnotski-icon.png. 
+
 2001-06-23  Kjartan Maraas  <kmaraas@gnome.org>
 
 	* Makefile.am: Prefix scoredir with $(DESTDIR).

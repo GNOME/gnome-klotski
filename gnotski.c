@@ -484,7 +484,7 @@ int main (int argc, char **argv){
   textdomain(PACKAGE);
    
   gnome_init_with_popt_table(APPNAME, VERSION, argc, argv, options, 0, NULL);
-  gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski.png");
+  gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
   client = gnome_master_client();
   gtk_object_ref(GTK_OBJECT(client));
   gtk_object_sink(GTK_OBJECT(client));
