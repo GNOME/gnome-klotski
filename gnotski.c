@@ -485,7 +485,11 @@ int main (int argc, char **argv){
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain(GETTEXT_PACKAGE);
    
-  gnome_init_with_popt_table(APPNAME, VERSION, argc, argv, options, 0, NULL);
+  gnome_program_init (APPNAME, VERSION,
+                       LIBGNOMEUI_MODULE,
+                       argc, argv,
+                       GNOME_PARAM_POPT_TABLE, options,
+                       GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
   client = gnome_master_client();
   gtk_object_ref(GTK_OBJECT(client));
