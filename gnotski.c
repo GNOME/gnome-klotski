@@ -740,6 +740,7 @@ void load_image(){
 		    GTK_MESSAGE_ERROR,
 		    GTK_BUTTONS_OK,
 		    _("Could not find \'%s\' pixmap file\n"), fname);
+    gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
     gtk_dialog_run (GTK_DIALOG(dialog));
 
     exit(1);
