@@ -690,15 +690,16 @@ void create_statusbar(){
   GtkWidget *move_label,*move_box;
   move_box = gtk_hbox_new(0, FALSE);
   move_label = gtk_label_new (_("Moves:"));
-  gtk_box_pack_start (GTK_BOX(move_box), move_label, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX(move_box), move_label, FALSE, FALSE, 6);
   move_value = gtk_label_new ("000");
-  gtk_box_pack_start (GTK_BOX(move_box), move_value, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX(move_box), move_value, FALSE, FALSE, 6);
   gtk_widget_show (move_label); gtk_widget_show (move_value); 
   gtk_widget_show (move_box);
 
   statusbar = gtk_statusbar_new();
   statusbar_id = gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar),
 					      APPNAME);
+  gtk_statusbar_set_has_resize_grip(GTK_STATUSBAR(statusbar),FALSE);
   gtk_box_pack_end(GTK_BOX(statusbar), move_box, FALSE, FALSE, 0);
   gnome_app_set_statusbar(GNOME_APP(window), statusbar);
   gtk_statusbar_push(GTK_STATUSBAR(statusbar), statusbar_id,APPNAME_LONG);

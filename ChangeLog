@@ -1,3 +1,9 @@
+2002-09-29  Ross Burton  <ross@burtonini.com>
+
+	* gnotski.c: Remove the useless resize grip and add some padding,
+	so the resize grip doesn't hide the text in the status bar. Patch
+	from Callum McKenzie <callum@physics.otago.ac.nz>, fixing #90546.
+
 2002-09-11  Eric Baudais  <baudais@kkpsi.org>
 
 	* help/C/gnotski-C.omf: It is a valid XML file.  I'd 
