@@ -1,7 +1,7 @@
 /* -*- mode:C; indent-tabs-mode: nil; tab-width: 8; c-basic-offset: 2; -*- */
 
 /* 
- *   Gnome Klotski: Klotski clone
+ *   Gnome Klotski
  *   Written by Lars Rydlinge <lars.rydlinge@hig.se>
  * 
  *   This program is free software; you can redistribute it and/or modify
@@ -32,13 +32,15 @@
 
 #define APPNAME "gnotski"
 #define APPNAME_LONG "GNOME Klotski"
+
 #define MINWIDTH 250
 #define MINHEIGHT 250
-
 #define THEME_TILE_CENTER 14
 #define THEME_TILE_SIZE 34
 #define THEME_TILE_SEGMENTS 27
 #define THEME_OVERLAY_SIZE 8
+#define SPACE_PADDING 5
+#define SPACE_OFFSET 4
 
 GConfClient *conf_client;
 
@@ -47,17 +49,18 @@ GtkWidget *menubar;
 GtkWidget *statusbar;
 GtkWidget *space;
 GtkWidget *move_value;
-GtkWidget *outerframe;
 GtkWidget *gameframe;
+
+GdkGC *space_gc = NULL;
 
 GdkPixmap *buffer = NULL;
 GdkPixbuf *tiles_pixbuf = NULL;
-
 GamesPreimage *tiles_preimage;
 
 GtkActionGroup *action_group;
 
-gboolean clear_buffer = FALSE;
+gboolean clear_buffer = TRUE;
+gboolean clear_game = TRUE;
 
 gchar *map = NULL;
 gchar *tmpmap = NULL;
@@ -76,18 +79,17 @@ gint session_xpos = 0;
 gint session_ypos = 0;
 gint current_level = -1;
 
+guint redraw_all_idle_id = 0;
 guint configure_idle_id = 0;
-
-/* Prototypes */
 
 void create_space (void);
 void create_menubar (void);
 void create_statusbar (void);
 
-GdkColor *get_bg_color (void);
-void redraw_all (void);
+gboolean redraw_all (void);
 void status_message (gchar *);
 void load_image (void);
+void gui_draw_space (void);
 void gui_draw_pixmap (char *, gint, gint);
 gint get_piece_nr (char *, gint, gint);
 gint get_piece_id (char *, gint, gint);
@@ -108,8 +110,6 @@ void update_menu_state (void);
 static gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
 
 void new_game (gint requested_level);
-
-/* Action Callbacks */
 
 void next_level_cb (GtkAction *);
 void prev_level_cb (GtkAction *);
@@ -659,7 +659,7 @@ const GtkActionEntry entries[] = {
   { "SkillPack", NULL, N_("Skill Pack") },
                           /* set of puzzles */
   { "MinoruClimb", NULL, N_("Minoru Climb") },
-  { "NewGame", NULL, N_("_New Game"), "<control>N", NULL, G_CALLBACK (restart_level_cb) },
+  { "RestartPuzzle", NULL, N_("_Restart Puzzle"), "<control>R", NULL, G_CALLBACK (restart_level_cb) },
   { "NextPuzzle", NULL, N_("Next Puzzle"), NULL, NULL, G_CALLBACK (next_level_cb) },
   { "PrevPuzzle", NULL, N_("Previous Puzzle"), NULL, NULL, G_CALLBACK (prev_level_cb) },
   { "Hint", NULL, N_("_Hint"), NULL, NULL, G_CALLBACK (hint_cb) },
@@ -673,7 +673,7 @@ const char *ui_description =
 "<ui>"
 "  <menubar name='MainMenu'>"
 "    <menu action='GameMenu'>"
-"      <menuitem action='NewGame'/>"
+"      <menuitem action='RestartPuzzle'/>"
 "      <menuitem action='NextPuzzle'/>"
 "      <menuitem action='PrevPuzzle'/>"
 "      <menuitem action='Hint'/>"
@@ -754,8 +754,9 @@ main (int argc, char **argv)
   create_statusbar ();
 
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
-  gtk_box_pack_start (GTK_BOX (vbox), outerframe, TRUE, TRUE, 0);
-
+  gtk_box_pack_start (GTK_BOX (vbox), gameframe, TRUE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
+ 
   if (session_xpos >= 0 && session_ypos >= 0)
     gtk_window_move (GTK_WINDOW (window), session_xpos, session_ypos);
     
@@ -768,20 +769,10 @@ main (int argc, char **argv)
   return 0;
 }
 
-GdkColor *
-get_bg_color (void) 
-{
-  GtkStyle *style;
-  GdkColor *color;
-  style = gtk_widget_get_style (space);
-  color = gdk_color_copy (&style->bg[GTK_STATE_NORMAL]);
-  return color;
-}
-
 static gboolean
 expose_space (GtkWidget *widget, GdkEventExpose *event)
 {
-  if (buffer == NULL || clear_buffer)
+  if (clear_game)
     return FALSE;
 
   gdk_draw_drawable (widget->window, 
@@ -792,13 +783,19 @@ expose_space (GtkWidget *widget, GdkEventExpose *event)
   return FALSE; 
 }
 
-void
+gboolean
 redraw_all (void)
 {
   gint x, y;
+
+  if (clear_buffer)
+    gui_draw_space();
+
   for (y = 0; y < height; y++)
     for (x = 0; x < width; x++)
       gui_draw_pixmap (map, x, y);
+
+  return FALSE;
 }
 
 static gboolean
@@ -869,34 +866,68 @@ button_motion_space (GtkWidget *widget, GdkEventButton *event)
 }
 
 void
-gui_draw_pixmap (char *target, gint x, gint y)
+gui_draw_space ()
 {
-  GdkGC *gc;
+  static GdkGC *bordergc = NULL;
+  static GdkGC *backgc = NULL;
   GdkColor *bg_color;
   GtkStyle *style;
-  GdkColor *fg_color;
+
+  if (!backgc)
+    backgc = gdk_gc_new (space->window);
+  if (!bordergc)
+    bordergc = gdk_gc_new (space->window);
+
+  style = gtk_widget_get_style (space);
+
+  bg_color = gdk_color_copy (&style->bg[GTK_STATE_NORMAL]);
+  gdk_gc_set_foreground (backgc, bg_color);
+  gdk_gc_set_fill (backgc, GDK_SOLID);
+  gdk_color_free (bg_color);
+
+  bg_color = gdk_color_copy (&style->fg[GTK_STATE_NORMAL]);
+  gdk_gc_set_foreground (bordergc, bg_color);
+  gdk_gc_set_fill (bordergc, GDK_SOLID);
+  gdk_color_free (bg_color);
+ 
+  if (buffer)
+    g_object_unref (buffer);
   
+  buffer = gdk_pixmap_new (space->window,
+                           width * tile_size + SPACE_PADDING,
+                           height * tile_size + SPACE_PADDING, -1);
+
+  gdk_draw_rectangle (buffer, bordergc, FALSE, 0, 0,
+                      width * tile_size + SPACE_PADDING -1,
+                      height * tile_size + SPACE_PADDING -1);
+  gdk_draw_rectangle (buffer, backgc, TRUE, 1, 1,
+                      width * tile_size + SPACE_PADDING - 2,
+                      height * tile_size + SPACE_PADDING - 2);
+
+  clear_buffer = clear_game = FALSE;
+
+  space_gc = backgc;  
+
+  gtk_widget_queue_draw (space);
+}
+
+void
+gui_draw_pixmap (char *target, gint x, gint y)
+{
   gint value;
   gint overlay_size;
   gint overlay_offset;
-
-  gc = space->style->black_gc;
-  style = gtk_widget_get_style (space);
-  fg_color = &style->fg[GTK_STATE_NORMAL];
-
-  /* blank background */
-  bg_color = get_bg_color ();
-  gdk_gc_set_foreground (gc, bg_color);
-  gdk_color_free (bg_color);
-  gdk_draw_rectangle (buffer, gc, TRUE,
-                      x * tile_size, y * tile_size,
+  
+  gdk_draw_rectangle (buffer, space_gc, TRUE,
+                      x * tile_size + SPACE_OFFSET, 
+                      y * tile_size + SPACE_OFFSET,
                       tile_size, tile_size);
-  gdk_gc_set_foreground (gc, fg_color);
 
   if (get_piece_id (target,x,y) != ' ') {
-    gdk_draw_pixbuf (buffer, gc, tiles_pixbuf,
+    gdk_draw_pixbuf (buffer, NULL, tiles_pixbuf,
                      get_piece_nr (target,x,y) * tile_size, tile_size/2, 
-                     x * tile_size, y * tile_size,
+                     x * tile_size + SPACE_OFFSET, 
+                     y * tile_size + SPACE_OFFSET,
                      tile_size, tile_size,
                      GDK_RGB_DITHER_NORMAL, 0, 0);
   }
@@ -909,16 +940,18 @@ gui_draw_pixmap (char *target, gint x, gint y)
    
     overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
     overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
-    gdk_draw_pixbuf (buffer, gc, tiles_pixbuf,
+    gdk_draw_pixbuf (buffer, NULL, tiles_pixbuf,
                      value * tile_size + overlay_offset, 
                      overlay_offset + tile_size/2,
-                     x * tile_size + overlay_offset, 
-                     y * tile_size + overlay_offset, 
+                     x * tile_size + overlay_offset + SPACE_OFFSET, 
+                     y * tile_size + overlay_offset + SPACE_OFFSET, 
                      overlay_size, overlay_size,
                      GDK_RGB_DITHER_NORMAL, 0, 0);
   }
 
-  gtk_widget_queue_draw_area (space, x * tile_size, y * tile_size,
+  gtk_widget_queue_draw_area (space, 
+                              x * tile_size + SPACE_OFFSET, 
+                              y * tile_size + SPACE_OFFSET,
                               tile_size, tile_size);
 }
 
@@ -986,28 +1019,34 @@ configure_pixmaps_idle (void)
     prior_tile_size = tile_size;
   }
 
-  if (buffer != NULL)
-    g_object_unref(buffer);
+  if (redraw_all_idle_id)
+    g_source_remove (configure_idle_id);
 
-  buffer = gdk_pixmap_new (space->window, width * tile_size, 
-                           height * tile_size, -1);
-  clear_buffer = FALSE;
-  redraw_all();
+  redraw_all_idle_id = g_idle_add_full (G_PRIORITY_DEFAULT_IDLE + 1, 
+                                        (GSourceFunc) redraw_all, 
+                                        NULL, NULL);
+
   configure_idle_id = 0;
   return FALSE;
 }
 
-static void 
+static void
 configure_pixmaps (void)
 {
-  tile_size = MIN ((space_width / width), (space_height / height));
+  tile_size = MIN (((space_width - SPACE_PADDING) / width),
+                   ((space_height - SPACE_PADDING) / height));
   
-  /* Specify tile_size in multiples of 2 to handle double-height SVG theme.*/
+  /* SVG theme renders best when tile size is multiple of 2 */
+  if (tile_size < 1) return;
+
   if (tile_size % 2) tile_size--;
-  
-  if (clear_buffer || (tile_size != prior_tile_size)) {
-    if (!configure_idle_id)
-      configure_idle_id = g_idle_add ((GSourceFunc) configure_pixmaps_idle, NULL);
+
+  if (clear_buffer || clear_game || (tile_size != prior_tile_size)) {
+    if (configure_idle_id)
+      g_source_remove (configure_idle_id);
+
+    configure_idle_id = g_idle_add ((GSourceFunc) configure_pixmaps_idle, NULL);
+
     clear_buffer = TRUE;
   }
   
@@ -1019,21 +1058,20 @@ configure_space (GtkWidget *widget, GdkEventConfigure *event)
 {
   space_width = event -> width;
   space_height = event -> height;
+  configure_pixmaps ();
 
-  configure_pixmaps();
- 
   return TRUE;
 }
 
 void
 create_space (void)
 {
-  outerframe = gtk_aspect_frame_new (NULL,.5, .5, 1, TRUE);
-  gtk_widget_set_size_request (GTK_WIDGET(outerframe), MINWIDTH, MINHEIGHT);
-
   gameframe = games_grid_frame_new (9,7);
-  gtk_container_add (GTK_CONTAINER(outerframe), gameframe);
-
+  games_grid_frame_set_padding (GAMES_GRID_FRAME(gameframe),
+                                SPACE_PADDING, SPACE_PADDING);
+  gtk_widget_set_size_request (GTK_WIDGET(gameframe),
+                               MINWIDTH, MINHEIGHT);
+  
   space = gtk_drawing_area_new ();
 
   gtk_container_add (GTK_CONTAINER(gameframe),space);
@@ -1113,26 +1151,29 @@ create_menubar (void)
 }
 
 void
-create_statusbar (void)
-{
-  GtkWidget *move_label, *move_box;
+create_statusbar (void){
+   GtkWidget *frame, *move_box, *move_label;
 
-  move_box = gtk_hbox_new (FALSE, 0);
-  move_label = gtk_label_new (_("Moves:"));
-  gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
-  move_value = gtk_label_new ("000");
-  gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
+   statusbar = gtk_statusbar_new ();
+   gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
 
-  statusbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
-  gtk_box_pack_end (GTK_BOX (statusbar), move_box, FALSE, FALSE, 0);
-  gnome_app_set_statusbar (GNOME_APP (window), statusbar);
+   move_box = gtk_hbox_new (FALSE, 0);
+   move_label = gtk_label_new (_("Moves:"));
+   gtk_box_pack_start (GTK_BOX (move_box), move_label, FALSE, FALSE, 6);
+   move_value = gtk_label_new ("000");
+   gtk_box_pack_start (GTK_BOX (move_box), move_value, FALSE, FALSE, 6);
+ 
+   frame = gtk_frame_new (NULL);
+   gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_IN);
+   gtk_container_add (GTK_CONTAINER (frame), move_box);
+   gtk_box_pack_end (GTK_BOX (statusbar),frame, FALSE, FALSE, 0);
 }
 
 void
 status_message (gchar *message)
 {
-  gnome_appbar_pop (GNOME_APPBAR (statusbar));
-  gnome_appbar_push (GNOME_APPBAR (statusbar), message);
+  gtk_statusbar_pop (GTK_STATUSBAR (statusbar), 0);
+  gtk_statusbar_push (GTK_STATUSBAR (statusbar), 0, message);
 }
 
 void
@@ -1151,10 +1192,9 @@ load_image (void)
                                      GTK_DIALOG_MODAL,
                                      GTK_MESSAGE_ERROR,
                                      GTK_BUTTONS_OK,
-                                     _("Could not find \'%s\' pixmap file\n"),
+                                     _("Could not find the image: \n%s\n\nPlease check your gnome-games installation."),
                                      fname);
     gtk_dialog_run (GTK_DIALOG (dialog));
-
     exit (1);
   }
   g_free (fname);
@@ -1337,18 +1377,18 @@ static void
 prepare_map (current_level)
 {
   gint x, y = 0;
-  static gchar *tmp = NULL; 
+  gchar *tmp; 
   gchar *leveldata;
 
   leveldata = level[current_level].data; 
   width = level[current_level].width;
   height = level[current_level].height;
-  g_free (tmp);
   tmp = g_strdup_printf (_("Level %d : %s"), 
                          current_level + 1, 
                          level[current_level].name);
   
   status_message (tmp);
+  g_free (tmp);
 
   if (map) {
     free (map);
@@ -1356,6 +1396,9 @@ prepare_map (current_level)
     free (move_map);
     free (orig_map);
   }
+
+  piece_id = -1;
+  button_down = piece_x = piece_y = 0;
 
   map = calloc (1, (width + 2) * (height + 2));
   tmpmap = calloc (1, (width + 2) * (height + 2));
@@ -1372,7 +1415,7 @@ prepare_map (current_level)
 void
 new_game (gint requested_level)
 {
-  clear_buffer = TRUE;
+  clear_game = TRUE;
   set_move (0);
 
   current_level = CLAMP (requested_level, 0, max_level);
@@ -1383,10 +1426,7 @@ new_game (gint requested_level)
                         current_level, NULL);
 
   prepare_map (current_level);
-  gtk_aspect_frame_set (GTK_ASPECT_FRAME(outerframe), .5, .5, 
-                        (gfloat)width/(gfloat)height, FALSE);
   games_grid_frame_set (GAMES_GRID_FRAME(gameframe), width, height);
-
   configure_pixmaps();
   update_menu_state ();
   update_score_state ();
@@ -1438,11 +1478,9 @@ save_state (GnomeClient *client, gint phase,
 void
 level_cb (GtkAction *action, GtkRadioAction *current)
 {
-
   gint requested_level = gtk_radio_action_get_current_value (current);
   if (requested_level != current_level)
     new_game (requested_level);
-  /* else: radio action was updated */
 }
 
 void
@@ -1473,7 +1511,7 @@ void
 update_menu_state (void)
 {
   GtkAction *action;
-  gboolean action_is_sensitive = FALSE; 
+  gboolean action_is_sensitive; 
 
   /* Puzzle Radio Action */
   gtk_toggle_action_set_active (level_action[current_level], TRUE);
@@ -1520,7 +1558,7 @@ void
 about_cb (GtkAction *action)
 {
   const gchar *authors[] = { "Lars Rydlinge", NULL };
-  const gchar *documenters[] = { "Andrew Sobala (andrew@sobala.net)", NULL };
+  const gchar *documenters[] = { "Andrew Sobala", NULL };
 
   gtk_show_about_dialog (GTK_WINDOW (window),
                          "name", _(APPNAME_LONG),

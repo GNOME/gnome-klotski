@@ -1,3 +1,16 @@
+2004-12-13  Richard Hoelscher  <rahga@rahga.com>
+
+	* gnotski.c: Replace "New Game" menu item with "Restart Puzzle"
+	(expose_space): Draw when scaling, but not while changing levels.
+	(gui_draw_space): New. Prepares GCs and the pixmap buffer, draws
+	a border. Allows us to remove get_bg_color() and the old frame.
+	(gui_draw_pixmap),(create_space): Support the new puzzle border.
+	(configure_pixmaps),(confiugre_pixmaps_idle),(draw_all):
+	Add an idle to draw_all() rather than call it right after we've
+	finished rendering the SVG.
+	(main)(create_statusbar): Switch from GnomeAppbar to GtkStatusbar.
+	(prepare_map)(update_menu_state)(about_cb): Minor cleanup.
+
 2004-11-15  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c: Fix Climb 24 Pro, it only had 23 pieces.
