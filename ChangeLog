@@ -1,3 +1,7 @@
+2005-03-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnotski.c (prepare_map): Fix a typo (bug #167275).
+
 2005-03-03  Richard Hoelscher  <rah@rahga.com>
 
 	* help/C/gnotski.xml: Update documentation for 2.10

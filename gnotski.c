@@ -1380,7 +1380,7 @@ prepare_map (current_level)
   leveldata = level[current_level].data; 
   width = level[current_level].width;
   height = level[current_level].height;
-  tmp = g_strdup_printf (_("Level %d : %s"), 
+  tmp = g_strdup_printf (_("Level %d: %s"), 
                          current_level + 1, 
                          level[current_level].name);
   
