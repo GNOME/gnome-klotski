@@ -7,7 +7,7 @@
     andrew@sobala.net (Andrew Sobala)
    </creator>
      <maintainer>
-    Callum McKenzie <callum.otago.ac.nz>
+    callum.otago.ac.nz (Callum McKenzie)
    </maintainer>
      <title>
      GNOME Klotski Manual
@@ -21,7 +21,7 @@
      user's guide
      </type>
      <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-     <identifier url="file://usr/share/gnome/help/gnotski/C/gnotski.xml"/>
+     <identifier url="gnotski.xml"/>
      <language code="C"/>
      <relation seriesid="948b45bc-b5c3-11d6-870d-ce2cbe999e76"/> 
      <rights type="GNU FDL" license.version="1.1" holder="Andrew Sobala"/>
