@@ -19,9 +19,11 @@ gnotski_LDADD = \
 
 pixmap_DATA = gnotski.png gnotski-icon.png
 
-Games_DATA = gnotski.desktop
+Games_in_files = gnotski.desktop.in
+Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = README gnotski.desktop $(pixmap_DATA)
+EXTRA_DIST = README gnotski.desktop.in $(pixmap_DATA)
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
