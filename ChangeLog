@@ -1,3 +1,7 @@
+2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/gnotski.xml: Bump the app version number. No revisions.
+
 2005-02-17  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c: Minor edit to a few puzzles.
