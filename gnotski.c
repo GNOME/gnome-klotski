@@ -627,9 +627,28 @@ void score_cb(GtkWidget *widget, gpointer data){
   gnome_scores_display (_(APPNAME_LONG), APPNAME, current_level, 0);
 }
 
+void update_score_state ()
+{
+        gchar **names = NULL;
+        gfloat *scores = NULL;
+        time_t *scoretimes = NULL;
+	gint top;
+
+	top = gnome_score_get_notable(APPNAME, current_level, &names, &scores, &scoretimes);
+	if (top > 0) {
+		gtk_widget_set_sensitive (game_menu[3].widget, TRUE);
+		g_strfreev(names);
+		g_free(scores);
+		g_free(scoretimes);
+	} else {
+		gtk_widget_set_sensitive (game_menu[3].widget, FALSE);
+	}
+}
+
 void game_score(){
   gint pos;
   pos = gnome_score_log(moves,current_level,FALSE);
+  update_score_state ();
   gnome_scores_display(_(APPNAME_LONG), APPNAME, current_level, pos);
 }
 
@@ -935,6 +954,8 @@ void new_game_cb(GtkWidget *widget, gpointer data){
   gtk_widget_realize(window);
 
   set_move(0);
+
+  update_score_state ();
 }
 
 void quit_game_cb(GtkWidget *widget, gpointer data){

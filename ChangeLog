@@ -1,3 +1,8 @@
+2002-08-23  Ross Burton  <ross@burtonini.com>
+
+	* gnotski.c: Enable the high scores dialog. Patch from Andrew
+	Sobala <andrew@sobala.net>, fixing #84235.
+
 2002-06-03  Ross Burton  <ross@burtonini.com>
 
 	* gnotski.c: Load pixmaps from the application path instead of the
