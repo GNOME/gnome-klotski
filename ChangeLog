@@ -1,3 +1,8 @@
+2003-10-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (install-data-local): Consolidated the score file
+	lists under a variable.
+
 2003-10-09  Stanislav Brabec  <sbrabec@suse.cz>
 
 	* help/C/gnotski-C.omf: Fixed typo in DOCTYPE (bug 106719).

@@ -33,10 +33,12 @@ EXTRA_DIST = README $(Games_in_files) $(pixmap_DATA)
 
 CLEANFILES = $(Games_DATA)
 
+SCOREFILES = 1 2 3 4 5 6 7 11 12 13 14 15 16 17 21 22 23 24 25 26
+
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ; fi
-	-for i in 1 2 3 4 5 6 7 11 12 13 14 15 16 17 21 22 23 24 25 26 ; do \
+	-for i in ${SCOREFILES} ; do \
 	  touch             $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
 	  chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
 	  chmod 664         $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
