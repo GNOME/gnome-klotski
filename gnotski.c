@@ -49,7 +49,7 @@ char *tmpmap = NULL;
 char *move_map = NULL;
 char *orig_map = NULL;
 
-gint statusbar_id,height,width,moves=0;
+gint statusbar_id,height=-1,width=-1,moves=0;
 
 int session_flag = 0;
 int session_xpos = 0;
@@ -481,7 +481,6 @@ static const struct poptOption options[] = {
 
 int main (int argc, char **argv){
   GnomeClient *client;
-  width = 10; height = 11;
 
   gnome_score_init(APPNAME);
   bindtextdomain(PACKAGE, GNOMELOCALEDIR);
@@ -629,7 +628,13 @@ void game_score(){
 }
 
 gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
-  new_game_cb(widget,NULL);
+  if(width>0){
+    if(buffer)
+      gdk_pixmap_unref(buffer);
+    buffer = gdk_pixmap_new(widget->window, widget->allocation.width, 
+			    widget->allocation.height, -1);
+    redraw_all();
+  }
   return(TRUE);
 }
 
@@ -919,13 +924,6 @@ void new_game_cb(GtkWidget *widget, gpointer data){
   prepare_map(data);
   gtk_drawing_area_size(GTK_DRAWING_AREA(space),
 			width*TILE_SIZE,height*TILE_SIZE);
-  if(buffer)
-    gdk_pixmap_unref(buffer);
-
-  buffer = gdk_pixmap_new(widget->window, widget->allocation.width, 
-			  widget->allocation.height, -1);
-
-  redraw_all();
   gtk_widget_realize(window);
 
   set_move(0);
