@@ -1035,11 +1035,9 @@ void about_cb(GtkWidget *widget, gpointer data){
 	  }
   }
 
-  about = gnome_about_new(_(APPNAME_LONG), 
-                          VERSION, 
-                          "(C) 1999 Lars Rydlinge",
-			  _("Klotski clone\n" \
-			    "(Comments to: Lars.Rydlinge@HIG.SE)"), 
+  about = gnome_about_new(_(APPNAME_LONG), VERSION, 
+                          "Copyright \xc2\xa9 1999-2003 Lars Rydlinge",
+                          _("A Klotski clone"),
                           (const char **)authors, 
                           (const char **)documenters,
                           strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
