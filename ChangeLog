@@ -1,3 +1,7 @@
+2002-09-09  jacob berkman  <jacob@ximian.com>
+
+	* help/C/gnotski-C.omf: fix to be valid XML
+
 2002-09-06  jacob berkman  <jacob@ximian.com>
 
 	* Makefile.am (SUBDIRS): add help
