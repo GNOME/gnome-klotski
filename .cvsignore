@@ -1,0 +1,6 @@
+.libs
+.deps
+gnotski
+Makefile
+Makefile.in
+gnotski.desktop
