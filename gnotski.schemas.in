@@ -24,3 +24,6 @@
           <long>The requested height of the main window in pixels. If this isn't big enough it will be ignored.</long>
         </locale>
       </schema>
+
+    </schemalist>
+<gconfschemafile>
