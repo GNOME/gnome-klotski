@@ -23,7 +23,6 @@
 #include <gnome.h>
 #include <gconf/gconf-client.h>
 #include <string.h>
-#include <libgnomeui/gnome-window-icon.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include "games-preimage.h"
@@ -33,13 +32,6 @@
 
 #define APPNAME "gnotski"
 #define APPNAME_LONG "GNOME Klotski"
-
-#define RELEASE 4
-#define PRESS 3
-#define MOVING 2
-#define UNUSED 1
-#define USED 0
-
 #define MINWIDTH 250
 #define MINHEIGHT 250
 
@@ -51,6 +43,7 @@
 GConfClient *conf_client;
 
 GtkWidget *window;
+GtkWidget *menubar;
 GtkWidget *statusbar;
 GtkWidget *space;
 GtkWidget *move_value;
@@ -59,36 +52,41 @@ GtkWidget *gameframe;
 
 GdkPixmap *buffer = NULL;
 GdkPixbuf *tiles_pixbuf = NULL;
+
 GamesPreimage *tiles_preimage;
 
-gint space_width = 0;
-gint space_height = 0;
+GtkActionGroup *action_group;
 
 gboolean clear_buffer = FALSE;
 
-char *map = NULL;
-char *tmpmap = NULL;
-char *move_map = NULL;
-char *orig_map = NULL;
+gchar *map = NULL;
+gchar *tmpmap = NULL;
+gchar *move_map = NULL;
+gchar *orig_map = NULL;
+gchar current_level_scorefile[4];
 
-gint tile_size = 0,
-  prior_tile_size = 0;
-gint height = -1, 
-  width = -1;
+gint space_width = 0;
+gint space_height = 0;
+gint tile_size = 0;
+gint prior_tile_size = 0;
+gint height = -1;
+gint width = -1;
 gint moves = 0;
 gint session_xpos = 0;
 gint session_ypos = 0;
+gint current_level = -1;
 
 guint configure_idle_id = 0;
 
-char current_level[16];
+/* Prototypes */
 
 void create_space (void);
+void create_menubar (void);
 void create_statusbar (void);
 
 GdkColor *get_bg_color (void);
 void redraw_all (void);
-void message (gchar *);
+void status_message (gchar *);
 void load_image (void);
 void gui_draw_pixmap (char *, gint, gint);
 gint get_piece_nr (char *, gint, gint);
@@ -103,34 +101,68 @@ static gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
                         GnomeInteractStyle, gint fast, gpointer);
 void set_move (gint);
 void new_move (void);
-gint game_over (void);
 void game_score (void);
+gint game_over (void);
+void update_menu_state (void);
 
 static gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
 
-/* ------------------------- MENU ------------------------ */
-void new_game_cb (GtkWidget *, gpointer);
-void quit_game_cb (GtkWidget *, gpointer);
-void level_cb (GtkWidget *, gpointer);
-void about_cb (GtkWidget *, gpointer);
-void score_cb (GtkWidget *, gpointer);
+void new_game (gint requested_level);
 
-GnomeUIInfo level_1_menu[] = {
-  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
-    "1#6#9#" \
+/* Action Callbacks */
+
+void next_level_cb (GtkAction *);
+void prev_level_cb (GtkAction *);
+void level_cb (GtkAction *, GtkRadioAction *);
+void quit_game_cb (GtkAction *);
+void restart_level_cb (GtkAction *);
+void help_cb (GtkAction *);
+void hint_cb (GtkAction *);
+void about_cb (GtkAction *);
+void score_cb (GtkAction *);
+
+/* Puzzle Info */
+
+typedef struct _levelinfo {
+  gchar *name;
+  gint group;
+  gint width;
+  gint height;
+  gint minimum_moves;
+  gchar *data;
+} levelinfo;
+
+/* The remarks below provide context for translation. */
+const levelinfo level[]= {
+     /* puzzle name */ 
+  { N_("Only 18 Steps"), 0,
+    6, 9, 18, 
     "######" \
     "#a**b#" \
-    "#a**b#" \
+    "#m**n#" \
     "#cdef#" \
     "#ghij#" \
     "#k  l#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
-    "2#6#9#" \
+     /* puzzle name */
+  { N_("Daisy"), 0,
+    6, 9, 28,
+    "######" \
+    "#a**b#" \
+    "#a**b#" \
+    "#cdef#" \
+    "#zghi#" \
+    "#j  k#" \
+    "##--##" \
+    "    .." \
+    "    .." },
+
+     /* puzzle name */
+  { N_("Violet"), 0,
+    6, 9, 27,
     "######" \
     "#a**b#" \
     "#a**b#" \
@@ -139,11 +171,11 @@ GnomeUIInfo level_1_menu[] = {
     "#j  k#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
-    "3#6#9#" \
+     /* puzzle name */
+  { N_("Poppy"), 0,
+    6, 9, 40,
     "######" \
     "#a**b#" \
     "#a**b#" \
@@ -152,11 +184,11 @@ GnomeUIInfo level_1_menu[] = {
     "#j  k#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
-    "4#6#9#" \
+     /* puzzle name */ 
+  { N_("Pansy"), 0,
+    6, 9, 28,
     "######" \
     "#a**b#" \
     "#a**b#" \
@@ -165,11 +197,11 @@ GnomeUIInfo level_1_menu[] = {
     "#i  j#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
-    "5#6#9#" \
+     /* puzzle name */
+  { N_("Snowdrop"), 0,
+    6, 9, 46,
     "######" \
     "#a**b#" \
     "#a**b#" \
@@ -178,11 +210,11 @@ GnomeUIInfo level_1_menu[] = {
     "#i  j#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
-    "6#6#9#" \
+     /* puzzle name */
+  { N_("Red Donkey"), 0,
+    6, 9, 81,
     "######" \
     "#a**b#" \
     "#a**b#" \
@@ -191,38 +223,58 @@ GnomeUIInfo level_1_menu[] = {
     "#h  i#" \
     "##--##" \
     "    .." \
-    "    ..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "    .." },
 
-  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
-    "7#7#7#" \
+     /* puzzle name */
+  { N_("Trail"), 0,
+    6, 9, 102,
+    "######" \
+    "#a**c#" \
+    "#a**c#" \
+    "#eddg#" \
+    "#hffj#" \
+    "# ii #" \
+    "##--##" \
+    "    .." \
+    "    .." },
+
+     /* puzzle name */
+  { N_("Ambush"), 0,
+    6, 9, 120,
+    "######" \
+    "#a**c#" \
+    "#d**e#" \
+    "#dffe#" \
+    "#ghhi#" \
+    "# jj #" \
+    "##--##" \
+    "    .." \
+    "    .." },
+
+     /* puzzle name */
+  { N_("Agatka"), 1,
+    7, 7, 0,
     "..     " \
     ".      " \
     "#####--" \
     "#**aab-" \
     "#*ccde#" \
     "#fgh  #" \
-    "#######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#######" },
 
-  GNOMEUIINFO_END
-};
-
-GnomeUIInfo level_2_menu[] = {
-
-  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
-    "11#9#6#" \
+     /* puzzle name */
+  { N_("Success"), 1,
+    9, 6, 0,
     "#######  " \
     "#**bbc#  " \
     "#defgh#  " \
     "#ijkgh-  " \
     "#llk  #  " \
-    "#######..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#######.." },
 
-
-  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
-    "12#6#9#" \
+     /* puzzle name */
+  { N_("Bone"), 1,
+    6, 9, 0,
     "######" \
     "#abc*#" \
     "# dd*#" \
@@ -231,11 +283,11 @@ GnomeUIInfo level_2_menu[] = {
     "##-###" \
     "     ." \
     "     ." \
-    "     .",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "     ." },
 
-  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
-    "13#7#10#" \
+     /* puzzle name */
+  { N_("Fortune"), 1,
+    7, 10, 0,
     "     .." \
     "     . " \
     "####-. " \
@@ -245,21 +297,21 @@ GnomeUIInfo level_2_menu[] = {
     "#**ee# " \
     "#*fgh# " \
     "#*iih# " \
-    "###### ",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "###### " },
 
-  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
-    "14#10#6#" \
+     /* puzzle name */
+  { N_("Fool"), 1,
+    10, 6, 0,
     "  ########" \
     "  -aabc  #" \
     "  #aabdef#" \
     "  #ijggef#" \
     "  #klhh**#" \
-    "..########",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "..########" },
 
-  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
-    "15#7#9#" \
+     /* puzzle name */
+  { N_("Solomon"), 1,
+    7, 9, 0,
     " .     " \
     "..     " \
     "#--####" \
@@ -268,11 +320,11 @@ GnomeUIInfo level_2_menu[] = {
     "-hcefg#" \
     "#hijk*#" \
     "#hll**#" \
-    "#######",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#######" },
 
-  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
-    "16#6#8#" \
+     /* puzzle name */
+  { N_("Cleopatra"), 1,
+    6, 8, 0,
     "######" \
     "#abcd#" \
     "#**ee#" \
@@ -280,11 +332,11 @@ GnomeUIInfo level_2_menu[] = {
     "#fh i-" \
     "####--" \
     "    .." \
-    "     .",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "     ." },
 
-  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
-    "17#11#8#" \
+     /* puzzle name */
+  { N_("Shark"), 1,
+    11, 8, 0,
     "########   " \
     "#nrr s #   " \
     "#n*op q#   " \
@@ -292,11 +344,11 @@ GnomeUIInfo level_2_menu[] = {
     "#hhijkl#   " \
     "#ffcddg-   " \
     "#abcdde- . " \
-    "########...",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "########..." },
 
-  { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
-    "18#8#8#" \
+     /* puzzle name */
+  { N_("Rome"), 1,
+    8, 8, 0,
     "########" \
     "#abcc**#" \
     "#ddeef*#" \
@@ -304,16 +356,24 @@ GnomeUIInfo level_2_menu[] = {
     "-   jki#" \
     "#--#####" \
     "      .." \
-    "       .",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "       ." },
 
-   GNOMEUIINFO_END
-};
+     /* puzzle name */
+  { N_("Pennant Puzzle"), 1,
+    6, 9, 59,
+    "######" \
+    "#**aa#" \
+    "#**bb#" \
+    "#de  #" \
+    "#fghh#" \
+    "#fgii#" \
+    "#--###" \
+    "    .." \
+    "    .." },
 
-GnomeUIInfo level_3_menu[] = {
-
-  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
-    "21#19#19#" \
+     /* puzzle name */
+  { N_("Ithaca"), 2,
+    19, 19, 0,
     ".aaaaaaaaaaaaaaaaab" \
     "..  cddeffffffffffb" \
     " .. cddeffffffffffb" \
@@ -332,11 +392,11 @@ GnomeUIInfo level_3_menu[] = {
     "jjjnooooooooooppppb" \
     "jjjqooooooooooppppb" \
     "       rrrssssppppb" \
-    "ttttttuvvvvvvvwwwwx",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "ttttttuvvvvvvvwwwwx" },
 
-  { GNOME_APP_UI_ITEM, N_("2"), NULL, level_cb,
-    "22#9#10#" \
+     /* puzzle name */
+  { N_("Pelopones"), 2,
+    9, 10, 0,
     "#########" \
     "#abbb***#" \
     "#abbb*c*#" \
@@ -346,11 +406,11 @@ GnomeUIInfo level_3_menu[] = {
     "#    ihh#" \
     "#---#####" \
     "      ..." \
-    "      . .",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "      . ." },
 
-  { GNOME_APP_UI_ITEM, N_("3"), NULL, level_cb,
-    "23#15#8#" \
+     /* puzzle name */
+  { N_("Transeuropa"), 2,
+    15, 8, 0,
     "    -##-#######" \
     "    -AAAAABBCC#" \
     "    -   DEFGHI#" \
@@ -358,22 +418,22 @@ GnomeUIInfo level_3_menu[] = {
     "    #   KEFGLI#" \
     "    #   KEFG*I#" \
     "  . #   MM****#" \
-    "....###########",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "....###########" },
 
-  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
-    "24#11#7#" \
+     /* puzzle name */
+  { N_("Lodzianka"), 2,
+    11, 7, 0,
     "#########  " \
     "#**abbcc#  " \
     "#**abbdd#  " \
     "#eefgh  #  " \
     "#iiijk  -  " \
     "#iiijk  -.." \
-    "#########..",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#########.." },
 
-  { GNOME_APP_UI_ITEM, N_("5"), NULL, level_cb,
-    "25#7#9#" \
+     /* puzzle name */
+  { N_("Polonaise"), 2,
+    7, 9, 0,
     "#######" \
     "#aab**#" \
     "#aabc*#" \
@@ -382,11 +442,11 @@ GnomeUIInfo level_3_menu[] = {
     "#  ihh#" \
     "#--####" \
     "     .." \
-    "      .",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "      ." },
 
-  { GNOME_APP_UI_ITEM, N_("6"), NULL, level_cb,
-    "26#6#10#" \
+     /* puzzle name */
+  { N_("Baltic Sea"), 2,
+    6, 10, 0,
     ".     " \
     ".     " \
     "#-####" \
@@ -396,11 +456,11 @@ GnomeUIInfo level_3_menu[] = {
     "#fhhi#" \
     "#fjk*#" \
     "#flk*#" \
-    "######",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "######" },
 
-  { GNOME_APP_UI_ITEM, N_("7"), NULL, level_cb,
-    "27#10#12#" \
+     /* puzzle name */
+  { N_("American Pie"), 2,
+    10, 12, 0,
     "##########" \
     "#a*bcdefg#" \
     "#**bhhhhg#" \
@@ -412,11 +472,22 @@ GnomeUIInfo level_3_menu[] = {
     "######--##" \
     "         ." \
     "        .." \
-    "        . ",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "        . " },
 
-  { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
-    "28#29#35#" \
+     /* puzzle name */
+  { N_("Traffic Jam"), 2,
+    10, 7, 132,
+    "########  " \
+    "#** ffi#  " \
+    "#** fgh#  " \
+    "#aacehh#  " \
+    "#bbdjlm-  " \
+    "#bddklm-.." \
+    "########.." },
+
+     /* puzzle name */
+  { N_("Sunshine"), 2,
+    29, 35, 0,
     "           #######           " \
     "           # ... #           " \
     "           #.. ..#           " \
@@ -451,177 +522,179 @@ GnomeUIInfo level_3_menu[] = {
     "#\xa3\xa3 \xa4\xa4\x88\x88\x88\x88\x88 \xbb\xbb \xbc\xbc \x87\x87\x87\x87\x87\xab\xab \xac\xac#" \
     "#\xa5\xa5\xa6\xa7\xa7\x88\x88\x88\x88\x88 \xbd\xbd\xbe\xbf\xbf \x87\x87\x87\x87\x87\xad\xad\xae\xaf\xaf#" \
     "#\xa5\xa5\xa6\xa7\xa7\x88\x88\x88\x88\x88 \xbd\xbd\xbe\xbf\xbf \x87\x87\x87\x87\x87\xad\xad\xae\xaf\xaf#" \
-    "#############################",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#############################" },
 
-  GNOMEUIINFO_END
-};
-
-GnomeUIInfo level_bt_menu[] = {
-    /* 42 moves */
-  { GNOME_APP_UI_ITEM, N_("1"), NULL, level_cb,
-    "30#6#7#" \
+     /* puzzle name */
+  { N_("Block 10"), 3,
+    6, 7, 30,
     "##..##" \
     "#a..c#" \
-    "#aabc#" \
-    "#h**d#" \
-    "#g**e#" \
-    "#gfee#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
-  { GNOME_APP_UI_ITEM, N_("4"), NULL, level_cb,
-    "31#6#7#" \
-    "##..##" \
-    "#a..b#" \
-    "#cdde#" \
-    "#ccee#" \
-    "#f**h#" \
-    "#g**h#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
-  { GNOME_APP_UI_ITEM, N_("8"), NULL, level_cb,
-    "32#6#7#" \
-    "##..##" \
-    "#a..h#" \
-    "#bbgh#" \
-    "#cbff#" \
-    "#c**f#" \
-    "#d**e#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
-  { GNOME_APP_UI_ITEM, N_("10"), NULL, level_cb,
-    "33#6#7#" \
-    "##..##" \
-    "#a..d#" \
-    "#bcdd#" \
-    "#ccef#" \
-    "#h**f#" \
-    "#h**g#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
-  { GNOME_APP_UI_ITEM, N_("11"), NULL, level_cb,
-    "34#6#7#" \
-    "##..##" \
-    "#a..c#" \
-    "#bbcc#" \
+    "#abcc#" \
     "#ddfg#" \
     "#d**g#" \
     "#e**h#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "######" },
 
-  { GNOME_APP_UI_ITEM, N_("13"), NULL, level_cb,
-    "35#6#7#" \
-    "##..##" \
-    "#a..c#" \
-    "#aabb#" \
-    "#debg#" \
-    "#d**h#" \
-    "#f**h#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
- { GNOME_APP_UI_ITEM, N_("16"), NULL, level_cb,
-    "36#6#7#" \
-    "##..##" \
-    "#a..c#" \
-    "#abcc#" \
-    "#deeh#" \
-    "#**eg#" \
-    "#**fg#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
- { GNOME_APP_UI_ITEM, N_("17"), NULL, level_cb,
-    "37#6#7#" \
+     /* puzzle name */
+  { N_("Block 10 Pro"), 3,
+    6, 7, 81,
     "##..##" \
     "#a..b#" \
     "#ccdd#" \
-    "#ecdg#" \
-    "#e**g#" \
-    "#f**h#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+    "#ecdf#" \
+    "#e**f#" \
+    "#g**h#" \
+    "######" },
 
+     /* puzzle name */
+  { N_("Climb 12"), 3,
+    7, 7, 59,
+    "###.###" \
+    "#a...b#" \
+    "#accdb#" \
+    "#ecddf#" \
+    "#gg*hh#" \
+    "#i***j#" \
+    "#######" },
 
- { GNOME_APP_UI_ITEM, N_("19"), NULL, level_cb,
-    "38#6#7#" \
-    "##..##" \
-    "#a..d#" \
-    "#abcc#" \
-    "#**ce#" \
-    "#**gh#" \
-    "#fggh#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+     /* puzzle name */
+  { N_("Climb 12 Pro"), 3,
+    7, 7, 92,
+    "###.###" \
+    "#a...b#" \
+    "#acddb#" \
+    "#effgh#" \
+    "#ee*hh#" \
+    "#i***j#" \
+    "#######" },
 
+     /* puzzle name */
+  { N_("Climb 15 Winter"), 3,
+    7, 9, 101,
+    "###.###" \
+    "#a...b#" \
+    "#cdefg#" \
+    "#ccegg#" \
+    "#hhijj#" \
+    "#hhikk#" \
+    "#ll*mm#" \
+    "#l***m#" \
+    "#######" },
 
- { GNOME_APP_UI_ITEM, N_("20"), NULL, level_cb,
-    "39#6#7#" \
-    "##..##" \
-    "#a..d#" \
-    "#abcd#" \
-    "#eegg#" \
-    "#e**g#" \
-    "#f**i#" \
-    "######" ,
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
+     /* puzzle name */
+  { N_("Climb 15 Spring"), 3,
+    7, 9, 104,
+    "###.###" \
+    "#a...b#" \
+    "#fedcc#" \
+    "#feddc#" \
+    "#hhigg#" \
+    "#hiigg#" \
+    "#ll*mm#" \
+    "#j***k#" \
+    "#######" },
 
-                     /* Dodge i18n for the moment */
-  { GNOME_APP_UI_ITEM, "Climb Pro 24", NULL, level_cb,
-    "40#9#11#" \
+     /* puzzle name */
+  { N_("Climb 15 Summer"), 3,
+    7, 9, 132,
+    "###.###" \
+    "#a...b#" \
+    "#cceff#" \
+    "#ddeff#" \
+    "#gghii#" \
+    "#kghij#" \
+    "#kk*jj#" \
+    "#l***m#" \
+    "#######" },
+
+     /* puzzle name */
+  { N_("Climb 15 Fall"), 3,
+    7, 9, 148,
+    "###.###" \
+    "#a...b#" \
+    "#cceff#" \
+    "#ddegg#" \
+    "#dijjg#" \
+    "#hijjk#" \
+    "#hh*kk#" \
+    "#l***l#" \
+    "#######" },
+
+     /* puzzle name */
+  { N_("Climb 24 Pro"), 3,
+    9, 11, 227,
     "####.####" \
     "#aa...bb#" \
     "#ccdddee#" \
     "#ccfggee#" \
     "#hhffgnn#" \
     "#ihklmno#" \
-    "#ijklmpo#" \
+    "#ijkzmpo#" \
     "#jjqqqpp#" \
     "#rrs*tuu#" \
     "#rr***uu#" \
-    "#########",
-    NULL, GNOME_APP_PIXMAP_DATA, NULL, 0, 0, NULL },
-
-   GNOMEUIINFO_END
+    "#########" },
 };
 
+const gint max_level = G_N_ELEMENTS(level) - 1;
+GtkToggleAction *level_action[G_N_ELEMENTS(level)];
 
-GnomeUIInfo game_menu[] = {
-  { GNOME_APP_UI_SUBTREE, N_("_Novice"), NULL, level_1_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, NULL, 
-    (GdkModifierType) 0, GDK_CONTROL_MASK },
-  { GNOME_APP_UI_SUBTREE, N_("_Medium"), NULL, level_2_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, NULL, 
-    (GdkModifierType) 0, GDK_CONTROL_MASK },
-  { GNOME_APP_UI_SUBTREE, N_("_Advanced"), NULL, level_3_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, NULL,
-    (GdkModifierType) 0, GDK_CONTROL_MASK },
-                        /* Dodge i18n for the moment. */
-  { GNOME_APP_UI_SUBTREE, "Block 10", NULL, level_bt_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, NULL,
-    (GdkModifierType) 0, GDK_CONTROL_MASK },
-  GNOMEUIINFO_MENU_SCORES_ITEM (score_cb, NULL),
-  GNOMEUIINFO_SEPARATOR,
-  GNOMEUIINFO_MENU_QUIT_ITEM (quit_game_cb, NULL),
-  GNOMEUIINFO_END
+/* Menu Info */
+
+const char *pack_uipath[] = { 
+                 "/ui/MainMenu/GameMenu/HuaRongTrail", 
+                 "/ui/MainMenu/GameMenu/ChallengePack", 
+                 "/ui/MainMenu/GameMenu/SkillPack",
+                 "/ui/MainMenu/GameMenu/MinoruClimb"
 };
 
-GnomeUIInfo help_menu[] = {
-  GNOMEUIINFO_HELP ("gnotski"), 
-  GNOMEUIINFO_MENU_ABOUT_ITEM (about_cb, NULL),
-  GNOMEUIINFO_END
+const GtkActionEntry entries[] = {
+  { "GameMenu", NULL, N_("_Game") },
+  { "HelpMenu", NULL, N_("_Help") },
+                           /* set of puzzles */
+  { "HuaRongTrail", NULL, N_("HuaRong Trail") },
+                            /* set of puzzles */
+  { "ChallengePack", NULL, N_("Challenge Pack") },
+                        /* set of puzzles */
+  { "SkillPack", NULL, N_("Skill Pack") },
+                          /* set of puzzles */
+  { "MinoruClimb", NULL, N_("Minoru Climb") },
+  { "NewGame", NULL, N_("_New Game"), "<control>N", NULL, G_CALLBACK (restart_level_cb) },
+  { "NextPuzzle", NULL, N_("Next Puzzle"), NULL, NULL, G_CALLBACK (next_level_cb) },
+  { "PrevPuzzle", NULL, N_("Previous Puzzle"), NULL, NULL, G_CALLBACK (prev_level_cb) },
+  { "Hint", NULL, N_("_Hint"), NULL, NULL, G_CALLBACK (hint_cb) },
+  { "Quit", GTK_STOCK_QUIT,  NULL, NULL, NULL, G_CALLBACK (quit_game_cb) },
+  { "Contents", GTK_STOCK_HELP, "_Contents", "F1", NULL, G_CALLBACK (help_cb) },
+  { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) },
+  { "Scores", GNOME_STOCK_SCORES, N_("_Scores"), NULL, NULL, G_CALLBACK (score_cb) }
 };
 
-GnomeUIInfo main_menu[] = {
-  GNOMEUIINFO_MENU_GAME_TREE (game_menu),
-  GNOMEUIINFO_MENU_HELP_TREE (help_menu),
-  GNOMEUIINFO_END
-};
+const char *ui_description =
+"<ui>"
+"  <menubar name='MainMenu'>"
+"    <menu action='GameMenu'>"
+"      <menuitem action='NewGame'/>"
+"      <menuitem action='NextPuzzle'/>"
+"      <menuitem action='PrevPuzzle'/>"
+"      <menuitem action='Hint'/>"
+"      <separator/>"
+"      <menu action='HuaRongTrail'/>"
+"      <menu action='ChallengePack'/>"
+"      <menu action='SkillPack'/>"
+"      <menu action='MinoruClimb'/>"
+"      <separator/>"
+"      <menuitem action='Scores'/>"
+"      <separator/>"
+"      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='HelpMenu'>"
+"      <menuitem action='Contents'/>"
+"      <menuitem action='About'/>"
+"    </menu>"
+"  </menubar>"
+"</ui>";
+
+/* Session Options */
 
 static const struct poptOption options[] = {
   { NULL, 'x', POPT_ARG_INT, &session_xpos, 0, NULL, NULL },
@@ -635,8 +708,8 @@ int
 main (int argc, char **argv)
 {
   GnomeClient *client;
-
-  int win_width, win_height;
+  GtkWidget *vbox;
+  gint win_width, win_height, startup_level;
 
   gnome_score_init (APPNAME);
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -663,25 +736,32 @@ main (int argc, char **argv)
 
   win_width = gconf_client_get_int (conf_client, "/apps/gnotski/width", NULL);
   win_height = gconf_client_get_int (conf_client, "/apps/gnotski/height", NULL);
+  startup_level = gconf_client_get_int (conf_client, "/apps/gnotski/level", NULL);
+
   gtk_window_set_default_size(GTK_WINDOW(window), win_width, win_height);
-  
-  gtk_widget_realize (window);
   
   g_signal_connect (G_OBJECT (window), "delete_event",
                     G_CALLBACK(quit_game_cb), NULL);
   g_signal_connect (G_OBJECT (window), "configure_event",
                     G_CALLBACK(window_resize_cb), NULL);
+  
+  vbox = gtk_vbox_new (FALSE, 0);
+  gnome_app_set_contents (GNOME_APP (window), vbox);
 
-  gnome_app_create_menus (GNOME_APP (window), main_menu);
   load_image ();
   create_space (); 
+  create_menubar ();
   create_statusbar ();
+
+  gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox), outerframe, TRUE, TRUE, 0);
 
   if (session_xpos >= 0 && session_ypos >= 0)
     gtk_window_move (GTK_WINDOW (window), session_xpos, session_ypos);
     
   gtk_widget_show_all (window);
-  new_game_cb (space, NULL);
+
+  new_game (startup_level);
   
   gtk_main ();
   
@@ -758,7 +838,7 @@ button_release_space (GtkWidget *widget, GdkEventButton *event)
 	if (mapcmp (move_map, map)) {
 	  new_move ();
 	  if (game_over ()) {
-	    message (_("Level completed. Well done."));
+	    status_message (_("Level completed. Well done."));
 	    game_score ();
 	  }
 	}
@@ -848,7 +928,8 @@ show_score_dialog (gint pos)
 {
   GtkWidget *dialog;
 
-  dialog = gnome_scores_display (_(APPNAME_LONG), APPNAME, current_level, pos);
+  dialog = gnome_scores_display (_(APPNAME_LONG), APPNAME, 
+                                 current_level_scorefile, pos);
   if (dialog != NULL) {
     gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
     gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
@@ -856,7 +937,7 @@ show_score_dialog (gint pos)
 }
 
 void
-score_cb (GtkWidget *widget, gpointer data)
+score_cb (GtkAction *action)
 {
   show_score_dialog (0);
 }
@@ -864,20 +945,22 @@ score_cb (GtkWidget *widget, gpointer data)
 static void
 update_score_state (void)
 {
+  GtkAction *score_action;
   gchar **names = NULL;
   gfloat *scores = NULL;
   time_t *scoretimes = NULL;
   gint top;
   
-  top = gnome_score_get_notable (APPNAME, current_level,
+  score_action = gtk_action_group_get_action (action_group, "Scores");
+  top = gnome_score_get_notable (APPNAME, current_level_scorefile,
                                  &names, &scores, &scoretimes);
   if (top > 0) {
-    gtk_widget_set_sensitive (game_menu[4].widget, TRUE);
+    g_object_set (score_action, "sensitive", TRUE, NULL);
     g_strfreev (names);
     g_free (scores);
     g_free (scoretimes);
   } else {
-    gtk_widget_set_sensitive (game_menu[4].widget, FALSE);
+    g_object_set (score_action, "sensitive", FALSE, NULL);
   }
 }
 
@@ -885,7 +968,7 @@ void
 game_score ()
 {
   gint pos;
-  pos = gnome_score_log (moves, current_level, FALSE);
+  pos = gnome_score_log (moves, current_level_scorefile, FALSE);
   update_score_state ();
   show_score_dialog (pos);
 }
@@ -947,14 +1030,11 @@ create_space (void)
 {
   outerframe = gtk_aspect_frame_new (NULL,.5, .5, 1, TRUE);
   gtk_widget_set_size_request (GTK_WIDGET(outerframe), MINWIDTH, MINHEIGHT);
-  gnome_app_set_contents (GNOME_APP(window), outerframe);
 
   gameframe = games_grid_frame_new (9,7);
   gtk_container_add (GTK_CONTAINER(outerframe), gameframe);
 
-  gtk_widget_push_colormap (gdk_rgb_get_colormap());
   space = gtk_drawing_area_new ();
-  gtk_widget_pop_colormap ();
 
   gtk_container_add (GTK_CONTAINER(gameframe),space);
   gtk_widget_set_events (space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK
@@ -969,6 +1049,67 @@ create_space (void)
                     G_CALLBACK (button_release_space), NULL);
   g_signal_connect (G_OBJECT(space), "motion_notify_event",
                     G_CALLBACK (button_motion_space), NULL);
+}
+
+/* Add puzzles to the game menu. */
+static
+void add_puzzle_menu (GtkUIManager *ui_manager)
+{
+  gint i;
+  GSList *group = NULL;
+  GtkRadioAction *top_action;
+
+  g_return_if_fail (GTK_IS_ACTION_GROUP (action_group));
+
+  for (i = max_level; i >= 0 ; i--)
+    {
+      GtkRadioAction *action;
+      const gchar *label;
+
+      label = gtk_action_group_translate_string (action_group, level[i].name);
+
+      action = top_action = gtk_radio_action_new (level[i].name, label,
+                                                  NULL, NULL, i);
+
+      gtk_radio_action_set_group (action, group);
+      group = gtk_radio_action_get_group (action);
+
+      gtk_action_group_add_action(action_group, GTK_ACTION (action));
+
+      gtk_ui_manager_add_ui (ui_manager, 
+                             gtk_ui_manager_new_merge_id (ui_manager),
+                             pack_uipath[level[i].group], 
+                             level[i].name, level[i].name, 
+                             GTK_UI_MANAGER_MENUITEM, TRUE);
+
+      level_action[i] = GTK_TOGGLE_ACTION (action);
+    }
+
+  g_signal_connect_data (top_action, "changed",
+			 G_CALLBACK(level_cb), window, 
+			 NULL, 0);
+}
+
+void
+create_menubar (void)
+{
+  GtkUIManager *ui_manager;
+  GtkAccelGroup *accel_group;
+
+  action_group = gtk_action_group_new ("MenuActions");
+  gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
+  gtk_action_group_add_actions (action_group, entries,
+                                G_N_ELEMENTS (entries), window);
+
+  ui_manager = gtk_ui_manager_new();
+  gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
+  gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
+  add_puzzle_menu (ui_manager);
+
+  accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+  gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+  
+  menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
 }
 
 void
@@ -988,7 +1129,7 @@ create_statusbar (void)
 }
 
 void
-message (gchar *message)
+status_message (gchar *message)
 {
   gnome_appbar_pop (GNOME_APPBAR (statusbar));
   gnome_appbar_push (GNOME_APPBAR (statusbar), message);
@@ -1193,37 +1334,21 @@ copymap (char *dest, char *src)
 }
 
 static void
-prepare_map (char *level)
+prepare_map (current_level)
 {
-  gint x, y, i = 0;
-  char tmp[32];
-  char *p = level;
-  if (p == NULL) {
-    p = level_1_menu[5].user_data;
-  }
-    
-  while (i < 16 && *p != '#')
-    current_level[i++] = *p++;
-  current_level[i] = '\0';
-  p++;
+  gint x, y = 0;
+  static gchar *tmp = NULL; 
+  gchar *leveldata;
+
+  leveldata = level[current_level].data; 
+  width = level[current_level].width;
+  height = level[current_level].height;
+  g_free (tmp);
+  tmp = g_strdup_printf (_("Level %d : %s"), 
+                         current_level + 1, 
+                         level[current_level].name);
   
-  i = 0; 
-  while (i < 16 && *p != '#')
-    tmp[i++] = *p++;
-  tmp[i] = '\0'; 
-  width = atoi (tmp);
-  p++;
-  
-  i = 0; 
-  while (i < 16 && *p != '#')
-    tmp[i++] = *p++;
-  tmp[i] = '\0'; 
-  height = atoi (tmp);
-  p++;
-  
-  sprintf (tmp, _("Playing level %s"), current_level);
-  
-  message (tmp);
+  status_message (tmp);
 
   if (map) {
     free (map);
@@ -1236,32 +1361,39 @@ prepare_map (char *level)
   tmpmap = calloc (1, (width + 2) * (height + 2));
   orig_map = calloc (1, (width + 2) * (height + 2));
   move_map = calloc (1, (width + 2) * (height + 2));
-  if (p != NULL)
+  if (leveldata)
     for (y = 0; y < height; y++)
       for (x = 0; x < width; x++)
-	set_piece_id (map, x, y, *p++);
+        set_piece_id (map, x, y, *leveldata++);
   copymap (orig_map, map);
 }
 
 
 void
-new_game_cb (GtkWidget *widget, gpointer data)
+new_game (gint requested_level)
 {
   clear_buffer = TRUE;
   set_move (0);
 
-  prepare_map (data);
-  
-  gtk_aspect_frame_set (GTK_ASPECT_FRAME(outerframe), .5, .5, (gfloat)width/(gfloat)height, FALSE);
+  current_level = CLAMP (requested_level, 0, max_level);
+
+  g_snprintf (current_level_scorefile, sizeof(current_level_scorefile), 
+              "%d", current_level+1);
+  gconf_client_set_int (conf_client, "/apps/gnotski/level",
+                        current_level, NULL);
+
+  prepare_map (current_level);
+  gtk_aspect_frame_set (GTK_ASPECT_FRAME(outerframe), .5, .5, 
+                        (gfloat)width/(gfloat)height, FALSE);
   games_grid_frame_set (GAMES_GRID_FRAME(gameframe), width, height);
 
   configure_pixmaps();
-
+  update_menu_state ();
   update_score_state ();
 }
 
 void
-quit_game_cb (GtkWidget *widget, gpointer data)
+quit_game_cb (GtkAction *action)
 {
   gtk_main_quit ();
 }
@@ -1273,7 +1405,6 @@ window_resize_cb (GtkWidget *w, GdkEventConfigure *e, gpointer data)
                         e->width, NULL);
   gconf_client_set_int (conf_client, "/apps/gnotski/height",
                         e->height, NULL);	
-
   return FALSE;
 }
 
@@ -1305,53 +1436,99 @@ save_state (GnomeClient *client, gint phase,
 }
 
 void
-level_cb (GtkWidget *widget, gpointer data)
+level_cb (GtkAction *action, GtkRadioAction *current)
 {
-  new_game_cb (space, data);
+
+  gint requested_level = gtk_radio_action_get_current_value (current);
+  if (requested_level != current_level)
+    new_game (requested_level);
+  /* else: radio action was updated */
 }
 
 void
-about_cb (GtkWidget *widget, gpointer data)
+restart_level_cb (GtkAction *action)
 {
-  GdkPixbuf *pixbuf = NULL;
-  static GtkWidget *about = NULL;
-  
-  const gchar *authors[] = { "Lars Rydlinge", NULL };
-  gchar *documenters[] = { "Andrew Sobala (andrew@sobala.net)", NULL };
-  /* Translator credits */
-  gchar *translator_credits = _("translator-credits");
+  new_game (current_level);
+}
 
-  if (about != NULL) {
-    gtk_window_present (GTK_WINDOW (about));
-    return;
-  }
-  {
-    char *filename = NULL;
-    
-    filename = gnome_program_locate_file (NULL,
-                                          GNOME_FILE_DOMAIN_APP_PIXMAP,
-                                          ("gnotski-icon.png"),
-                                          TRUE, NULL);
-    if (filename != NULL)
-      {
-        pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
-        g_free (filename);
-      }
-  }
+void
+next_level_cb (GtkAction *action)
+{ 
+  new_game (current_level + 1);
+}
+
+void
+prev_level_cb (GtkAction *action)
+{
+  new_game (current_level - 1);
+}
+
+void
+help_cb (GtkAction *action)
+{
+  gnome_help_display ("gnotski.xml", NULL, NULL);
+}
+
+void 
+update_menu_state (void)
+{
+  GtkAction *action;
+  gboolean action_is_sensitive = FALSE; 
+
+  /* Puzzle Radio Action */
+  gtk_toggle_action_set_active (level_action[current_level], TRUE);
+
+  /* Hint Sensitivity */
+  action_is_sensitive = level[current_level].minimum_moves > 0;
+  action = gtk_action_group_get_action (action_group, "Hint");
+  g_object_set (action, "sensitive", action_is_sensitive, NULL); 
+
+  /* Next Puzzle Sensitivity */
+  action_is_sensitive = current_level < max_level;
+  action = gtk_action_group_get_action (action_group, "NextPuzzle");
+  g_object_set (action, "sensitive", action_is_sensitive, NULL);
+
+  /* Previous Puzzle Sensitivity */
+  action_is_sensitive = current_level > 0;
+  action = gtk_action_group_get_action (action_group, "PrevPuzzle");
+  g_object_set (action, "sensitive", action_is_sensitive, NULL);
+}
+
+void
+hint_cb (GtkAction *action)
+{
+  GtkWidget *hint_dlg;
+  char *message;
+
+  message = g_strdup_printf (ngettext ("This puzzle is solvable in %d move.",
+                                       "This puzzle is solvable in %d moves.",
+                                       level[current_level].minimum_moves),
+                                       level[current_level].minimum_moves);
   
-  about = gnome_about_new (_(APPNAME_LONG), VERSION, 
-                           "Copyright \xc2\xa9 1999-2004 Lars Rydlinge",
-                           _("A Klotski clone"),
-                           (const char **)authors, 
-                           (const char **)documenters,
-                           strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
-                           pixbuf);
-  
-  if (pixbuf != NULL)
-    gdk_pixbuf_unref (pixbuf);
-  
-  gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
-  g_signal_connect (G_OBJECT (about), "destroy",
-                    G_CALLBACK (gtk_widget_destroyed), &about);
-  gtk_widget_show_all (about);
+  hint_dlg = gtk_message_dialog_new (GTK_WINDOW (window),
+                                     GTK_DIALOG_DESTROY_WITH_PARENT,
+                                     GTK_MESSAGE_INFO,
+                                     GTK_BUTTONS_OK,
+                                     message);
+
+  gtk_dialog_run (GTK_DIALOG (hint_dlg));
+  gtk_widget_destroy (hint_dlg);
+  g_free (message);
+}
+
+void
+about_cb (GtkAction *action)
+{
+  const gchar *authors[] = { "Lars Rydlinge", NULL };
+  const gchar *documenters[] = { "Andrew Sobala (andrew@sobala.net)", NULL };
+
+  gtk_show_about_dialog (GTK_WINDOW (window),
+                         "name", _(APPNAME_LONG),
+                         "version", VERSION,
+                         "comments", _("Sliding Block Puzzles"),
+                         "copyright", "Copyright \xc2\xa9 1999-2004 Lars Rydlinge",
+                         "authors", authors,
+                         "documenters", documenters,
+                         "translator_credits", _("translator-credits"),
+                         NULL);
 }

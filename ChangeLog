@@ -1,3 +1,28 @@
+2004-11-15  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c: Fix Climb 24 Pro, it only had 23 pieces.
+	(prepare_map): Free the new strdup.
+	(level_cb): Start new game from radio actions only on new levels.
+
+2004-11-14  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c: New puzzles, GtkAction menus, misc changes.
+	(*_cb): Support GtkAction
+	(next_level_cb, prev_level_cb, restart_level_cb): New, navigation.
+	(level_cb): Replace callback part of new_game_cb().
+	(main): Load last played game from gconf, support new menubar.
+	(new_game): converted from new_game_cb.
+	(prepare_map): Vastly simplified with changes to level format.
+	(create_menubar): New menubar to support GtkAction.
+	(update_menu_state): New, set menu sensitities on puzzle change.
+	(about_cb): Switch to GtkAboutDialog.
+	(hint_cb): New, show minimum number of moves if known.
+	(add_puzzle_menu): New, create radio actions for each puzzle.
+	(status_message): Renamed message() for to new and future locals.
+	(create_space): Removed pre-gnome2 rgb gtk_widget_push_colormap.
+	* Makefile.am: Update for high score files.
+	* gnotski.schemas.in: Level tracking.
+
 2004-11-08  Richard Hoelscher  <rah@rahga.com>
 	
 	* Makefile.am: Add high score files for the new levels.
