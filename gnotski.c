@@ -1200,7 +1200,7 @@ new_move (void)
   if (moves < 999 && last_piece_id != piece_id)
     moves++;
   last_piece_id = piece_id;
-  str = g_strdup_printf ("Moves: %d", moves);
+  str = g_strdup_printf (_("Moves: %d"), moves);
   gtk_label_set_text (GTK_LABEL (moveswidget), str);
   g_free (str);
 }
@@ -1366,18 +1366,12 @@ static void
 prepare_map (current_level)
 {
   gint x, y = 0;
-  gchar *tmp; 
   gchar *leveldata;
 
   leveldata = level[current_level].data; 
   width = level[current_level].width;
   height = level[current_level].height;
-  tmp = g_strdup_printf (_("Level %d: %s"), 
-                         current_level + 1, 
-                         level[current_level].name);
-  
-  gtk_label_set_text (GTK_LABEL (messagewidget), tmp);
-  g_free (tmp);
+  gtk_label_set_text (GTK_LABEL (messagewidget), _(level[current_level].name));
 
   if (map) {
     free (map);
