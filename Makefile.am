@@ -29,7 +29,7 @@ Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST = README $(Games_in_files) $(pixmap_DATA)
 
-CLEANFILES = $(Games_DATA)
+DISTCLEANFILES = $(Games_DATA)
 
 SCOREFILES = 1 2 3 4 5 6 7 11 12 13 14 15 16 17 21 22 23 24 25 26
 
