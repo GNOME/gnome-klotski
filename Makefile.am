@@ -29,6 +29,8 @@ Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST = README gnotski.desktop.in $(pixmap_DATA)
 
+CLEANFILES = $(Games_DATA)
+
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-chgrp games $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski
