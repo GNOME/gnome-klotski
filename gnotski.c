@@ -25,7 +25,7 @@
 #include "pieces.h"
 
 #define APPNAME "gnotski"
-#define APPNAME_LONG "Gnome Klotski"
+#define APPNAME_LONG "GNOME Klotski"
 
 #define TILE_SIZE 34
 
@@ -916,7 +916,7 @@ void prepare_map(char *level){
       width = 9;
       height = 7;
       first = 0;
-      message(_("Welcome to Gnome Klotski"));
+      message(_("Welcome to GNOME Klotski"));
     } else {
       return;
     }
