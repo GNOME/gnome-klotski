@@ -443,13 +443,13 @@ GnomeUIInfo level_3_menu[] = {
 
 GnomeUIInfo game_menu[] = {
   { GNOME_APP_UI_SUBTREE, N_("_Novice"), NULL, level_1_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_BLANK, 
+    GNOME_APP_PIXMAP_STOCK, NULL, 
     (GdkModifierType) 0, GDK_CONTROL_MASK },
   { GNOME_APP_UI_SUBTREE, N_("_Medium"), NULL, level_2_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_BLANK, 
+    GNOME_APP_PIXMAP_STOCK, NULL, 
     (GdkModifierType) 0, GDK_CONTROL_MASK },
   { GNOME_APP_UI_SUBTREE, N_("_Advanced"), NULL, level_3_menu,  NULL,NULL,
-    GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_BLANK,
+    GNOME_APP_PIXMAP_STOCK, NULL,
     (GdkModifierType) 0, GDK_CONTROL_MASK },
   GNOMEUIINFO_MENU_SCORES_ITEM (score_cb, NULL),
   GNOMEUIINFO_SEPARATOR,
@@ -491,9 +491,9 @@ int main (int argc, char **argv){
   gtk_object_ref(GTK_OBJECT(client));
   gtk_object_sink(GTK_OBJECT(client));
   
-  gtk_signal_connect(GTK_OBJECT (client), "save_yourself", 
+  g_signal_connect(GTK_OBJECT (client), "save_yourself", 
 		     GTK_SIGNAL_FUNC (save_state), argv[0]);
-  gtk_signal_connect(GTK_OBJECT(client), "die", GTK_SIGNAL_FUNC(quit_game_cb),
+  g_signal_connect(GTK_OBJECT(client), "die", GTK_SIGNAL_FUNC(quit_game_cb),
 		     argv[0]);
 
   create_window();
@@ -518,12 +518,12 @@ void create_window(){
   window = gnome_app_new(APPNAME, N_(APPNAME_LONG));
   gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
   gtk_widget_realize(window);
-  gtk_signal_connect(GTK_OBJECT(window), "delete_event", 
+  g_signal_connect(GTK_OBJECT(window), "delete_event", 
 		     GTK_SIGNAL_FUNC(quit_game_cb), NULL);
 }
 
 gint expose_space(GtkWidget *widget, GdkEventExpose *event){ 
-  gdk_draw_pixmap(widget->window, 
+  gdk_draw_drawable(widget->window, 
                   widget->style->fg_gc[GTK_WIDGET_STATE(widget)], 
                   buffer, event->area.x, event->area.y, 
                   event->area.x, event->area.y, 
@@ -599,7 +599,7 @@ void gui_draw_pixmap(char *target, gint x, gint y){
   GdkRectangle area;
   int value;
   
-  gdk_draw_pixmap(buffer, space->style->black_gc, tiles_pixmap,
+  gdk_draw_drawable(buffer, space->style->black_gc, tiles_pixmap,
 		  get_piece_nr(target,x,y)*TILE_SIZE, 0, 
 		  x*TILE_SIZE, y*TILE_SIZE, TILE_SIZE, TILE_SIZE);
   if(get_piece_id(target,x,y)=='*'){
@@ -607,7 +607,7 @@ void gui_draw_pixmap(char *target, gint x, gint y){
       value = 20;
     else
       value = 22;
-    gdk_draw_pixmap(buffer, space->style->black_gc, tiles_pixmap,
+    gdk_draw_drawable(buffer, space->style->black_gc, tiles_pixmap,
 		    value*TILE_SIZE+10,10,
 		    x*TILE_SIZE+10, y*TILE_SIZE+10,8,8);
   }
@@ -629,7 +629,7 @@ void game_score(){
 gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
   if(width>0){
     if(buffer)
-      gdk_pixmap_unref(buffer);
+      gdk_drawable_unref(buffer);
     buffer = gdk_pixmap_new(widget->window, widget->allocation.width, 
 			    widget->allocation.height, -1);
     redraw_all();
@@ -638,7 +638,7 @@ gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
 }
 
 void create_space(){
-  gtk_widget_push_colormap(gdk_rgb_get_cmap());
+  gtk_widget_push_colormap(gdk_rgb_get_colormap());
   space = gtk_drawing_area_new();
   gtk_widget_pop_colormap();
   gnome_app_set_contents(GNOME_APP(window),space);
@@ -647,15 +647,15 @@ void create_space(){
   gtk_widget_set_events(space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
 			GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
   gtk_widget_realize(space);
-  gtk_signal_connect(GTK_OBJECT(space), "expose_event", 
+  g_signal_connect(GTK_OBJECT(space), "expose_event", 
                      GTK_SIGNAL_FUNC(expose_space), NULL);
-  gtk_signal_connect(GTK_OBJECT(space), "configure_event", 
+  g_signal_connect(GTK_OBJECT(space), "configure_event", 
                      GTK_SIGNAL_FUNC(configure_space), NULL);
-  gtk_signal_connect(GTK_OBJECT(space), "button_press_event", 
+  g_signal_connect(GTK_OBJECT(space), "button_press_event", 
                      GTK_SIGNAL_FUNC(button_press_space), NULL);
-  gtk_signal_connect (GTK_OBJECT(space),"button_release_event",
+  g_signal_connect (GTK_OBJECT(space),"button_release_event",
                       GTK_SIGNAL_FUNC(button_release_space), NULL);
-  gtk_signal_connect (GTK_OBJECT(space), "motion_notify_event",
+  g_signal_connect (GTK_OBJECT(space), "motion_notify_event",
                       GTK_SIGNAL_FUNC(button_motion_space), NULL);
   gtk_widget_show(space);
 }
@@ -687,8 +687,9 @@ void load_image(){
   char *fname;
   GdkPixbuf *image;
 
-  fname = gnome_unconditional_pixmap_file("gnotski.png");
-  if(!g_file_exists(fname)) {
+  fname = gnome_program_locate_file(NULL, GNOME_FILE_DOMAIN_PIXMAP, 
+	                                  "gnotski.png", FALSE, NULL);
+  if(!g_file_test(fname, G_FILE_TEST_EXISTS)) {
     g_print(_("Could not find \'%s\' pixmap file\n"), fname); exit(1);
   }
   image = gdk_pixbuf_new_from_file(fname, NULL);
@@ -708,7 +709,7 @@ void new_move() {
   char str[4];
   if(moves<999) moves++;
   sprintf(str,"%03d", moves);
-  gtk_label_set(GTK_LABEL(move_value), str);
+  gtk_label_set_text(GTK_LABEL(move_value), str);
 }
 
 
@@ -922,9 +923,9 @@ void new_game_cb(GtkWidget *widget, gpointer data){
 
 void quit_game_cb(GtkWidget *widget, gpointer data){
   if(buffer)
-    gdk_pixmap_unref(buffer);
+    gdk_drawable_unref(buffer);
   if(tiles_pixmap)
-    gdk_pixmap_unref(tiles_pixmap);
+    gdk_drawable_unref(tiles_pixmap);
 
   gtk_main_quit();
 }

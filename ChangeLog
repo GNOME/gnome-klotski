@@ -1,3 +1,11 @@
+2002-04-29  Bastien Nocera  <hadess@hadess.net>
+
+	* Makefile.am:
+	* gnotski.c: (main), (create_window), (expose_space),
+	(gui_draw_pixmap), (configure_space), (create_space), (load_image),
+	(new_move), (quit_game_cb): patch from Shahms E. King
+	<shahms@shahms.com> to port gnotski
+
 2002-04-15  Bastien Nocera  <hadess@hadess.net>
 
 	* gnotski.c: (save_state): remove nstr(), patch from
