@@ -35,4 +35,4 @@ Exec=gnotski
 Icon=gnotski-icon.png
 Terminal=0
 Type=Application
-
+Categories=Application;Game;
