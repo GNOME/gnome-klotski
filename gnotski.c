@@ -623,8 +623,19 @@ void gui_draw_pixmap(char *target, gint x, gint y){
   gtk_widget_draw (space, &area);
 }
 
+void show_score_dialog (gint pos)
+{
+  GtkWidget *dialog;
+
+  dialog = gnome_scores_display (_(APPNAME_LONG), APPNAME, current_level, pos);
+  if (dialog != NULL) {
+    gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(window));
+    gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+  }
+}
+
 void score_cb(GtkWidget *widget, gpointer data){
-  gnome_scores_display (_(APPNAME_LONG), APPNAME, current_level, 0);
+  show_score_dialog (0);
 }
 
 void update_score_state ()
@@ -649,7 +660,7 @@ void game_score(){
   gint pos;
   pos = gnome_score_log(moves,current_level,FALSE);
   update_score_state ();
-  gnome_scores_display(_(APPNAME_LONG), APPNAME, current_level, pos);
+  show_score_dialog (pos);
 }
 
 gint configure_space(GtkWidget *widget, GdkEventConfigure *event){
@@ -999,18 +1010,22 @@ void level_cb(GtkWidget *widget, gpointer data){
 
 void about_cb(GtkWidget *widget, gpointer data){
   GdkPixbuf *pixbuf = NULL;
-  GtkWidget *about;
+  static GtkWidget *about = NULL;
   
   const gchar *authors[] = { "Lars Rydlinge", NULL };
   gchar *documenters[] = { "Andrew Sobala (andrew@sobala.net)", NULL };
   /* Translator credits */
   gchar *translator_credits = _("translator_credits");
 
+  if (about != NULL) {
+    gtk_window_present (GTK_WINDOW(about));
+    return;
+  }
   {
 	  char *filename = NULL;
 
 	  filename = gnome_program_locate_file (NULL,
-			  GNOME_FILE_DOMAIN_APP_PIXMAP,  ("iagno.png"),
+			  GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnotski-icon.png"),
 			  TRUE, NULL);
 	  if (filename != NULL)
 	  {
@@ -1029,5 +1044,6 @@ void about_cb(GtkWidget *widget, gpointer data){
                           strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 			  pixbuf);
   gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
+  g_signal_connect (G_OBJECT (about), "destroy", G_CALLBACK (gtk_widget_destroyed), &about);
   gtk_widget_show(about);
 }
