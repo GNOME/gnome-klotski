@@ -1,3 +1,7 @@
+2002-11-11  Ross Burton  <ross@burtonini.com>
+
+	* gnotski-icon.png: New icon contributed by Timothy Musson.
+
 2002-09-29  Ross Burton  <ross@burtonini.com>
 
 	* gnotski.c: Remove the useless resize grip and add some padding,
