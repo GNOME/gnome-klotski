@@ -1,3 +1,9 @@
+2002-06-03  Ross Burton  <ross@burtonini.com>
+
+	* gnotski.c: Load pixmaps from the application path instead of the
+	system path (fixes #83917). Also set the about dialog to be a transient for the
+	parent window.
+
 2002-06-03  Bastien Nocera  <hadess@hadess.net>
 
 	* gnotski.c: remove help menu item

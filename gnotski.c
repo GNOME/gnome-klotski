@@ -694,7 +694,7 @@ void load_image(){
   char *fname;
   GdkPixbuf *image;
 
-  fname = gnome_program_locate_file(NULL, GNOME_FILE_DOMAIN_PIXMAP, 
+  fname = gnome_program_locate_file(NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, 
 	                                  "gnotski.png", FALSE, NULL);
   if(g_file_test(fname, G_FILE_TEST_EXISTS)) {
     image = gdk_pixbuf_new_from_file(fname, NULL);
@@ -988,7 +988,7 @@ void about_cb(GtkWidget *widget, gpointer data){
 	  char *filename = NULL;
 
 	  filename = gnome_program_locate_file (NULL,
-			  GNOME_FILE_DOMAIN_PIXMAP,  ("iagno.png"),
+			  GNOME_FILE_DOMAIN_APP_PIXMAP,  ("iagno.png"),
 			  TRUE, NULL);
 	  if (filename != NULL)
 	  {
@@ -1006,5 +1006,6 @@ void about_cb(GtkWidget *widget, gpointer data){
                           (const char **)documenters,
                           strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 			  pixbuf);
+  gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (window));
   gtk_widget_show(about);
 }
