@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gnotski
+Comment=Gnome Klotski
+Exec=gnotski
+Terminal=0
+Type=Application
+
