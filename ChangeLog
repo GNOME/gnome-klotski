@@ -1,3 +1,11 @@
+2005-04-22  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c : Alan Horkan's PgUp/Dn puzzle switching feature request
+	has been implemented.
+	(new_move): Support undo of last move. If you move a block around, 
+	but eventually return it to the original position, it won't count
+	against you. Moves prior to the last move can not be undone.
+
 2005-03-31  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c (prepare_map): Just give the puzzle name, not "Level #:..."

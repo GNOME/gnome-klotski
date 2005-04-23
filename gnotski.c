@@ -67,6 +67,9 @@ gchar *map = NULL;
 gchar *tmpmap = NULL;
 gchar *move_map = NULL;
 gchar *orig_map = NULL;
+gchar *lastmove_map = NULL;
+gchar *undomove_map = NULL;
+
 gchar current_level_scorefile[4];
 
 gint space_width = 0;
@@ -636,8 +639,8 @@ const GtkActionEntry entries[] = {
                           /* set of puzzles */
   { "MinoruClimb", NULL, N_("Minoru Climb") },
   { "RestartPuzzle", GTK_STOCK_REFRESH, N_("_Restart Puzzle"), "<control>R", NULL, G_CALLBACK (restart_level_cb) },
-  { "NextPuzzle", GTK_STOCK_GO_FORWARD, N_("Next Puzzle"), NULL, NULL, G_CALLBACK (next_level_cb) },
-  { "PrevPuzzle", GTK_STOCK_GO_BACK, N_("Previous Puzzle"), NULL, NULL, G_CALLBACK (prev_level_cb) },
+  { "NextPuzzle", GTK_STOCK_GO_FORWARD, N_("Next Puzzle"), "Page_Down", NULL, G_CALLBACK (next_level_cb) },
+  { "PrevPuzzle", GTK_STOCK_GO_BACK, N_("Previous Puzzle"), "Page_Up", NULL, G_CALLBACK (prev_level_cb) },
   { "Hint", GAMES_STOCK_HINT, NULL, NULL, NULL, G_CALLBACK (hint_cb) },
   { "Quit", GTK_STOCK_QUIT,  NULL, NULL, NULL, G_CALLBACK (quit_game_cb) },
   { "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
@@ -1192,14 +1195,27 @@ set_move (gint x)
 void
 new_move (void)
 {
-  static gint last_piece_id;
+  static gint last_piece_id = -2;
+  gchar *str = NULL;
 
   if (moves < 1)
 	last_piece_id = -2;
-  gchar *str = NULL;
-  if (moves < 999 && last_piece_id != piece_id)
-    moves++;
-  last_piece_id = piece_id;
+
+  if (last_piece_id != piece_id) {
+    copymap (undomove_map, lastmove_map);
+    if (moves < 999) 
+      moves++;
+  }
+
+  if ((moves > 0) && !mapcmp(undomove_map,map)) {    
+    moves--;
+    last_piece_id = -2;
+  } else {
+    last_piece_id = piece_id;
+  }
+
+  copymap (lastmove_map, map);
+
   str = g_strdup_printf (_("Moves: %d"), moves);
   gtk_label_set_text (GTK_LABEL (moveswidget), str);
   g_free (str);
@@ -1378,6 +1394,8 @@ prepare_map (current_level)
     free (tmpmap);
     free (move_map);
     free (orig_map);
+    free (lastmove_map);
+    free (undomove_map);
   }
 
   piece_id = -1;
@@ -1387,11 +1405,14 @@ prepare_map (current_level)
   tmpmap = calloc (1, (width + 2) * (height + 2));
   orig_map = calloc (1, (width + 2) * (height + 2));
   move_map = calloc (1, (width + 2) * (height + 2));
+  lastmove_map = calloc (1, (width + 2) * (height + 2));
+  undomove_map = calloc (1, (width + 2) * (height + 2));
   if (leveldata)
     for (y = 0; y < height; y++)
       for (x = 0; x < width; x++)
         set_piece_id (map, x, y, *leveldata++);
   copymap (orig_map, map);
+  copymap (lastmove_map, map);
 }
 
 static void
