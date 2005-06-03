@@ -32,7 +32,7 @@
 #include "pieces.h"
 
 #define APPNAME "gnotski"
-#define APPNAME_LONG "GNOME Klotski"
+#define APPNAME_LONG "Klotski"
 
 #define MINWIDTH 250
 #define MINHEIGHT 250

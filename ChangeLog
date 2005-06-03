@@ -1,3 +1,7 @@
+2005-06-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnotski.c: Debranding.
+
 2005-04-22  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c : Alan Horkan's PgUp/Dn puzzle switching feature request
