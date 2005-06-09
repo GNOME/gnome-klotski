@@ -331,12 +331,14 @@
 
 </sect1>
 
-<!-- ============= Bugs ================================== -->
+<!-- Known bugs.  Try to manage user expectations and warn them of known bugs
+but it is better to omit this section than give a false sense of perfection
 <sect1 id="gnotski-bugs">
 	<title>Known Bugs and Limitations</title>
 	<para>
         There are no known bugs in this game.
 	</para>
 </sect1>
+-->
 
 </article>
