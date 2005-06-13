@@ -1,3 +1,8 @@
+2005-05-09  Alan Horkan <horkana tcd ie>
+
+	* help/C/gnotski.xml: Removed Known Bugs sections where not
+	needed.
+	
 2005-06-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnotski.c: Debranding.
