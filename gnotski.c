@@ -115,7 +115,6 @@ void level_cb (GtkAction *, GtkRadioAction *);
 void quit_game_cb (GtkAction *);
 void restart_level_cb (GtkAction *);
 void help_cb (GtkAction *);
-void hint_cb (GtkAction *);
 void about_cb (GtkAction *);
 void score_cb (GtkAction *);
 
@@ -641,21 +640,19 @@ const GtkActionEntry entries[] = {
   { "RestartPuzzle", GTK_STOCK_REFRESH, N_("_Restart Puzzle"), "<control>R", NULL, G_CALLBACK (restart_level_cb) },
   { "NextPuzzle", GTK_STOCK_GO_FORWARD, N_("Next Puzzle"), "Page_Down", NULL, G_CALLBACK (next_level_cb) },
   { "PrevPuzzle", GTK_STOCK_GO_BACK, N_("Previous Puzzle"), "Page_Up", NULL, G_CALLBACK (prev_level_cb) },
-  { "Hint", GAMES_STOCK_HINT, NULL, NULL, NULL, G_CALLBACK (hint_cb) },
   { "Quit", GTK_STOCK_QUIT,  NULL, NULL, NULL, G_CALLBACK (quit_game_cb) },
   { "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) },
   { "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (score_cb) }
 };
 
-const char *ui_description =
+const char ui_description[] =
 "<ui>"
 "  <menubar name='MainMenu'>"
 "    <menu action='GameMenu'>"
 "      <menuitem action='RestartPuzzle'/>"
 "      <menuitem action='NextPuzzle'/>"
 "      <menuitem action='PrevPuzzle'/>"
-"      <menuitem action='Hint'/>"
 "      <separator/>"
 "      <menu action='HuaRongTrail'/>"
 "      <menu action='ChallengePack'/>"
@@ -1424,11 +1421,6 @@ update_menu_state (void)
   /* Puzzle Radio Action */
   gtk_toggle_action_set_active (level_action[current_level], TRUE);
 
-  /* Hint Sensitivity */
-  action_is_sensitive = level[current_level].minimum_moves > 0;
-  action = gtk_action_group_get_action (action_group, "Hint");
-  gtk_action_set_sensitive (action, action_is_sensitive);
-
   /* Next Puzzle Sensitivity */
   action_is_sensitive = current_level < max_level;
   action = gtk_action_group_get_action (action_group, "NextPuzzle");
@@ -1533,28 +1525,6 @@ void
 help_cb (GtkAction *action)
 {
   gnome_help_display ("gnotski.xml", NULL, NULL);
-}
-
-void
-hint_cb (GtkAction *action)
-{
-  GtkWidget *hint_dlg;
-  char *message;
-
-  message = g_strdup_printf (ngettext ("This puzzle is solvable in %d move.",
-                                       "This puzzle is solvable in %d moves.",
-                                       level[current_level].minimum_moves),
-                                       level[current_level].minimum_moves);
-  
-  hint_dlg = gtk_message_dialog_new (GTK_WINDOW (window),
-                                     GTK_DIALOG_DESTROY_WITH_PARENT,
-                                     GTK_MESSAGE_INFO,
-                                     GTK_BUTTONS_OK,
-                                     message);
-
-  gtk_dialog_run (GTK_DIALOG (hint_dlg));
-  gtk_widget_destroy (hint_dlg);
-  g_free (message);
 }
 
 void

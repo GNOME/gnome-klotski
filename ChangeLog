@@ -1,3 +1,9 @@
+2005-07-11  Richard Hoelscher  <rah@rahga.com>
+
+	* gnotski.c: Remove hint support. There was only partial coverage,
+	and this sort of information is better suited for a wiki. Make
+	ui_description readonly.
+
 2005-05-09  Alan Horkan <horkana tcd ie>
 
 	* help/C/gnotski.xml: Removed Known Bugs sections where not
