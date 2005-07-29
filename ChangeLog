@@ -1,3 +1,9 @@
+2005-07-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/figures/*:
+	* help/C/gnotski.xml: Bumped the version number for 2.12 and redid
+	the screenshots.
+
 2005-07-11  Richard Hoelscher  <rah@rahga.com>
 
 	* gnotski.c: Remove hint support. There was only partial coverage,
