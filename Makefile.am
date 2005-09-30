@@ -23,6 +23,7 @@ gnotski_SOURCES =	\
 	pieces.h
 
 gnotski_LDADD = \
+	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS) 
 
