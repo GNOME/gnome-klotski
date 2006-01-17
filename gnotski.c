@@ -744,6 +744,8 @@ main (int argc, char **argv)
   new_game (startup_level);
   
   gtk_main ();
+
+  gnome_accelerators_sync();
   
   return 0;
 }

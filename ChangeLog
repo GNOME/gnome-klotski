@@ -1,3 +1,8 @@
+2006-01-17  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnotski.c: Patch from Scott Bronson to ensure user-edited
+	accelerators are saved (bug #327280).
+
 2005-07-30  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/figures/*:
