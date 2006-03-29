@@ -672,10 +672,12 @@ const char ui_description[] =
 
 /* Session Options */
 
-static const struct poptOption options[] = {
-  { NULL, 'x', POPT_ARG_INT, &session_xpos, 0, NULL, NULL },
-  { NULL, 'y', POPT_ARG_INT, &session_ypos, 0, NULL, NULL },
-  { NULL, '\0', 0, NULL, 0 }
+static const GOptionEntry options[] = {
+  { "x", 'x', 0, G_OPTION_ARG_INT, &session_xpos, N_("X location of window"), 
+   N_("X")},
+  { "y", 'y', 0, G_OPTION_ARG_INT, &session_ypos, N_("Y location of window"), 
+   N_("Y")},
+  { NULL }
 };
 
 /* ------------------------------------------------------- */
@@ -687,17 +689,20 @@ main (int argc, char **argv)
   GtkWidget *vbox;
   GtkWidget *menubar;
   gint win_width, win_height, startup_level;
+  GOptionContext *context;
 
   gnome_score_init (APPNAME);
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
   
+  context = g_option_context_new ("");
+  g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
   gnome_program_init (APPNAME, VERSION,
-                       LIBGNOMEUI_MODULE,
-                       argc, argv,
-                       GNOME_PARAM_POPT_TABLE, options,
-                       GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+                      LIBGNOMEUI_MODULE,
+                      argc, argv,
+                      GNOME_PARAM_GOPTION_CONTEXT, context,
+                      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   games_stock_init ();
   gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
   client = gnome_master_client ();

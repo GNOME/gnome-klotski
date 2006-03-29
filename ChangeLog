@@ -1,3 +1,7 @@
+2006-03-29  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnotski.c: Migrate from popt -> GOption.
+
 2006-03-22  Callum McKenzie  <callum@spooky-possum.org>
 
 	* help/C/gnotski.xml: Add an authors section and a license
