@@ -704,7 +704,7 @@ main (int argc, char **argv)
                       GNOME_PARAM_GOPTION_CONTEXT, context,
                       GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   games_stock_init ();
-  gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnotski-icon.png");
+  gtk_window_set_default_icon_name ("gnome-klotski.png");
   client = gnome_master_client ();
   g_object_ref (G_OBJECT (client));
   gtk_object_sink (GTK_OBJECT (client));
@@ -1548,5 +1548,6 @@ about_cb (GtkAction *action)
                          "authors", authors,
                          "documenters", documenters,
                          "translator_credits", _("translator-credits"),
+                         "logo-icon-name", "gnome-klotski",
                          NULL);
 }

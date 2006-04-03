@@ -1,3 +1,10 @@
+2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnotski.desktop.in: 
+	* Makefile.am:
+	* gnotski.c: Update the icon handling to use icon themes. Rename
+	gnotski-icon.png to gnome-klotski.png.
+
 2006-03-29  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnotski.c: Migrate from popt -> GOption.

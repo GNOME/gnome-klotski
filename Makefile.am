@@ -27,13 +27,17 @@ gnotski_LDADD = \
 	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS) 
 
-pixmap_DATA = gnotski.svg gnotski-icon.png
+pixmap_DATA = gnotski.svg
+
+icondir = $(datadir)/icons/hicolor/48x48/apps/
+icon_DATA = gnome-klotski.png
 
 Games_in_files = gnotski.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = README $(Games_in_files) $(pixmap_DATA) $(schema_in_files)
+EXTRA_DIST = README $(Games_in_files) $(pixmap_DATA) $(schema_in_files) \
+             $(icon_DATA)
 
 CLEANFILES = $(Games_DATA)
 
