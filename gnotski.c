@@ -686,6 +686,7 @@ int
 main (int argc, char **argv)
 {
   GnomeClient *client;
+  GnomeProgram *program;
   GtkWidget *vbox;
   GtkWidget *menubar;
   gint win_width, win_height, startup_level;
@@ -698,11 +699,11 @@ main (int argc, char **argv)
   
   context = g_option_context_new ("");
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
-  gnome_program_init (APPNAME, VERSION,
-                      LIBGNOMEUI_MODULE,
-                      argc, argv,
-                      GNOME_PARAM_GOPTION_CONTEXT, context,
-                      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+  program = gnome_program_init (APPNAME, VERSION,
+                                LIBGNOMEUI_MODULE,
+                                argc, argv,
+                                GNOME_PARAM_GOPTION_CONTEXT, context,
+                                GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   games_stock_init ();
   gtk_window_set_default_icon_name ("gnome-klotski.png");
   client = gnome_master_client ();
@@ -751,6 +752,8 @@ main (int argc, char **argv)
   gtk_main ();
 
   gnome_accelerators_sync();
+
+  g_object_unref (program);
   
   return 0;
 }
