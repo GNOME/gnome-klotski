@@ -1,3 +1,8 @@
+2006-04-04  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnotski.c: Patch from Przemys©aw Grzegorczyk to unref
+	the GnomeProgram in all main loops.
+
 2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnotski.desktop.in: 
