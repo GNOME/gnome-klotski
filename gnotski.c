@@ -1547,10 +1547,13 @@ about_cb (GtkAction *action)
                          "name", _(APPNAME_LONG),
                          "version", VERSION,
                          "comments", _("Sliding Block Puzzles"),
-                         "copyright", "Copyright \xc2\xa9 1999-2004 Lars Rydlinge",
+                         "copyright", "Copyright \xc2\xa9 1999-2006 Lars Rydlinge",
+                         "license", "GPL 2+",
                          "authors", authors,
                          "documenters", documenters,
                          "translator_credits", _("translator-credits"),
                          "logo-icon-name", "gnome-klotski",
+                         "website", "http://www.gnome.org/projects/gnome-games/",
+                         "wrap-license", TRUE,
                          NULL);
 }
