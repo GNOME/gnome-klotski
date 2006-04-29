@@ -1082,6 +1082,8 @@ create_space (void)
   gtk_container_add (GTK_CONTAINER(gameframe),space);
   gtk_widget_set_events (space, GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK
                          | GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
+  /* We do our own double-buffering. */
+  gtk_widget_set_double_buffered(space, FALSE);
   g_signal_connect (G_OBJECT(space), "expose_event", 
                     G_CALLBACK (expose_space), NULL);
   g_signal_connect (G_OBJECT(space), "configure_event", 
@@ -1092,6 +1094,7 @@ create_space (void)
                     G_CALLBACK (button_release_space), NULL);
   g_signal_connect (G_OBJECT(space), "motion_notify_event",
                     G_CALLBACK (button_motion_space), NULL);
+
 }
 
 /* Add puzzles to the game menu. */
