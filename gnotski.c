@@ -59,6 +59,8 @@ GdkPixbuf *tiles_pixbuf = NULL;
 GamesPreimage *tiles_preimage;
 
 GtkActionGroup *action_group;
+GtkAction *fullscreen_action;
+GtkAction *leave_fullscreen_action;
 
 gboolean clear_buffer = TRUE;
 gboolean clear_game = TRUE;
@@ -106,6 +108,9 @@ void game_score (void);
 gint game_over (void);
 
 gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
+static void set_fullscreen_actions (gboolean is_fullscreen);
+static void fullscreen_cb (GtkAction *action);
+static void window_state_cb (GtkWidget *widget, GdkEventWindowState *event);
 
 void new_game (gint requested_level);
 
@@ -628,6 +633,7 @@ const char *pack_uipath[] = {
 
 const GtkActionEntry entries[] = {
   { "GameMenu", NULL, N_("_Game") },
+  { "ViewMenu", NULL, N_("_View") },
   { "HelpMenu", NULL, N_("_Help") },
                            /* set of puzzles */
   { "HuaRongTrail", NULL, N_("HuaRong Trail") },
@@ -643,6 +649,8 @@ const GtkActionEntry entries[] = {
   { "Quit", GTK_STOCK_QUIT,  NULL, NULL, NULL, G_CALLBACK (quit_game_cb) },
   { "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb) },
   { "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb) },
+  { "Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_cb) },
+  { "LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_cb) },
   { "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (score_cb) }
 };
 
@@ -662,6 +670,10 @@ const char ui_description[] =
 "      <menuitem action='Scores'/>"
 "      <separator/>"
 "      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='ViewMenu'>"
+"      <menuitem action='Fullscreen'/>"
+"      <menuitem action='LeaveFullscreen'/>"
 "    </menu>"
 "    <menu action='HelpMenu'>"
 "      <menuitem action='Contents'/>"
@@ -728,6 +740,9 @@ main (int argc, char **argv)
                     G_CALLBACK(quit_game_cb), NULL);
   g_signal_connect (G_OBJECT (window), "configure_event",
                     G_CALLBACK(window_resize_cb), NULL);
+  g_signal_connect (G_OBJECT (window), "window_state_event",
+                    G_CALLBACK (window_state_cb), NULL);
+
   
   vbox = gtk_vbox_new (FALSE, 0);
   gnome_app_set_contents (GNOME_APP (window), vbox);
@@ -748,7 +763,9 @@ main (int argc, char **argv)
   gtk_widget_show_all (window);
 
   new_game (startup_level);
-  
+ 
+  set_fullscreen_actions (FALSE);
+ 
   gtk_main ();
 
   gnome_accelerators_sync();
@@ -785,6 +802,33 @@ redraw_all (void)
       gui_draw_pixmap (map, x, y);
 
   return FALSE;
+}
+
+
+static void set_fullscreen_actions (gboolean is_fullscreen)
+{
+  gtk_action_set_sensitive (leave_fullscreen_action, is_fullscreen);
+  gtk_action_set_visible (leave_fullscreen_action, is_fullscreen);
+
+  gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
+  gtk_action_set_visible (fullscreen_action, !is_fullscreen);
+}
+
+static void fullscreen_cb (GtkAction *action)
+{
+  if (action == fullscreen_action) {
+    gtk_window_fullscreen (GTK_WINDOW (window));
+  } else {
+    gtk_window_unfullscreen (GTK_WINDOW (window));
+  }
+}
+
+/* Just in case something else takes us to/from fullscreen. */
+static void window_state_cb (GtkWidget *widget, GdkEventWindowState *event)
+{
+  if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
+    set_fullscreen_actions (event->new_window_state &
+		            GDK_WINDOW_STATE_FULLSCREEN);
 }
 
 static gboolean
@@ -1443,6 +1487,11 @@ update_menu_state (void)
   action_is_sensitive = current_level > 0;
   action = gtk_action_group_get_action (action_group, "PrevPuzzle");
   gtk_action_set_sensitive (action, action_is_sensitive);
+
+  fullscreen_action = gtk_action_group_get_action (action_group, "Fullscreen");
+  leave_fullscreen_action = gtk_action_group_get_action (action_group, 
+						         "LeaveFullscreen");
+
 }
 
 void

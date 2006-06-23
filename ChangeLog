@@ -1,3 +1,7 @@
+2006-06-21  Andreas Røsdal  <andrearo@stud.ntnu.no>
+
+	* gnotski.c: Add fullscreen mode.
+
 2006-04-29  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnotski.c (create_space): Disable GTK+ double-buffering since we
