@@ -717,7 +717,7 @@ main (int argc, char **argv)
                                 GNOME_PARAM_GOPTION_CONTEXT, context,
                                 GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
   games_stock_init ();
-  gtk_window_set_default_icon_name ("gnome-klotski.png");
+  gtk_window_set_default_icon_name ("gnome-klotski");
   client = gnome_master_client ();
   g_object_ref (G_OBJECT (client));
   gtk_object_sink (GTK_OBJECT (client));
