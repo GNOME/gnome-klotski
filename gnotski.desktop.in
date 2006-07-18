@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 _Name=Klotski
-_Comment=Solve puzzles by sliding blocks
+_Comment=Slide blocks to solve the puzzle
 Exec=gnotski
 Icon=gnome-klotski
 Terminal=false
