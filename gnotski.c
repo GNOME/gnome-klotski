@@ -1594,13 +1594,14 @@ about_cb (GtkAction *action)
 {
   const gchar *authors[] = { "Lars Rydlinge", NULL };
   const gchar *documenters[] = { "Andrew Sobala", NULL };
+  gchar *license = games_get_license (_(APPNAME_LONG));
 
   gtk_show_about_dialog (GTK_WINDOW (window),
                          "name", _(APPNAME_LONG),
                          "version", VERSION,
                          "comments", _("Sliding Block Puzzles"),
                          "copyright", "Copyright \xc2\xa9 1999-2006 Lars Rydlinge",
-                         "license", "GPL 2+",
+                         "license", license,
                          "authors", authors,
                          "documenters", documenters,
                          "translator_credits", _("translator-credits"),
@@ -1608,4 +1609,5 @@ about_cb (GtkAction *action)
                          "website", "http://www.gnome.org/projects/gnome-games/",
                          "wrap-license", TRUE,
                          NULL);
+  g_free (license);
 }
