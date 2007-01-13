@@ -1402,7 +1402,7 @@ about_cb (GtkAction * action)
 			 "version", VERSION,
 			 "comments", _("Sliding Block Puzzles"),
 			 "copyright",
-			 "Copyright \xc2\xa9 1999-2006 Lars Rydlinge",
+			 "Copyright \xc2\xa9 1999-2007 Lars Rydlinge",
 			 "license", license, "authors", authors,
 			 "documenters", documenters, "translator_credits",
 			 _("translator-credits"), "logo-icon-name",
