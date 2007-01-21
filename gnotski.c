@@ -93,6 +93,8 @@ GtkWidget *create_menubar (void);
 void create_statusbar (void);
 
 void load_image (void);
+gchar *get_level_key (gint);
+void load_solved_state (void);
 void gui_draw_space (void);
 void gui_draw_pixmap (char *, gint, gint);
 gint get_piece_nr (char *, gint, gint);
@@ -409,18 +411,17 @@ const levelinfo level[] = {
 };
 
 const gint max_level = G_N_ELEMENTS (level) - 1;
-     GtkToggleAction *
-     level_action[G_N_ELEMENTS (level)];
+GtkToggleAction *level_action[G_N_ELEMENTS (level)];
+GtkWidget *level_image[G_N_ELEMENTS (level)];
 
 /* Menu Info */
 
-     const char *
-       pack_uipath[] = {
-       "/ui/MainMenu/GameMenu/HuaRongTrail",
-       "/ui/MainMenu/GameMenu/ChallengePack",
-       "/ui/MainMenu/GameMenu/SkillPack",
-       "/ui/MainMenu/GameMenu/MinoruClimb"
-     };
+const char *pack_uipath[] = {
+  "/ui/MainMenu/GameMenu/HuaRongTrail",
+  "/ui/MainMenu/GameMenu/ChallengePack",
+  "/ui/MainMenu/GameMenu/SkillPack",
+  "/ui/MainMenu/GameMenu/MinoruClimb"
+};
 
 const GtkActionEntry entries[] = {
   {"GameMenu", NULL, N_("_Game")},
@@ -546,6 +547,7 @@ main (int argc, char **argv)
   create_space ();
   menubar = create_menubar ();
   create_statusbar ();
+  load_solved_state ();
 
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), gameframe, TRUE, TRUE, 0);
@@ -832,6 +834,14 @@ void
 game_score ()
 {
   gint pos;
+  gchar *key;
+    
+  /* Level is complete */
+  key = get_level_key (current_level);
+  gconf_client_set_bool (conf_client, key, TRUE, NULL);
+  g_free (key);
+  gtk_image_set_from_stock (GTK_IMAGE(level_image[current_level]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
+
   pos = gnome_score_log (moves, current_level_scorefile, FALSE);
   update_score_state ();
   show_score_dialog (pos);
@@ -942,23 +952,26 @@ create_space (void)
 }
 
 /* Add puzzles to the game menu. */
-static
-  void
+static void
 add_puzzle_menu (GtkUIManager * ui_manager)
 {
   gint i;
   GSList *group = NULL;
   GtkRadioAction *top_action;
-
+  GtkSizeGroup *groups[G_N_ELEMENTS (pack_uipath)];
+    
   g_return_if_fail (GTK_IS_ACTION_GROUP (action_group));
-
+    
+  memset (groups, 0, sizeof(groups));
+  
   for (i = max_level; i >= 0; i--) {
     GtkRadioAction *action;
     const gchar *label;
+    GtkWidget *item, *box, *labelw, *image;
 
     label = gtk_action_group_translate_string (action_group, level[i].name);
 
-    action = top_action = gtk_radio_action_new (level[i].name, label,
+    action = top_action = gtk_radio_action_new (level[i].name, "",
 						NULL, NULL, i);
 
     gtk_radio_action_set_group (action, group);
@@ -972,6 +985,29 @@ add_puzzle_menu (GtkUIManager * ui_manager)
 			   level[i].name, level[i].name,
 			   GTK_UI_MANAGER_MENUITEM, TRUE);
 
+    /* Unfortunately GtkUIManager only supports labels for items, so remove the label it creates and
+     * replace it with our own widget */
+    item = gtk_ui_manager_get_widget (ui_manager, g_strjoin("/", pack_uipath[level[i].group], level[i].name, NULL));
+
+    /* Create a label and image for the menu item */
+    box = gtk_hbox_new (FALSE, 6);
+    labelw = gtk_label_new(label);
+    gtk_misc_set_alignment (GTK_MISC (labelw), 0.0, 0.5);
+    image = gtk_image_new ();
+    gtk_box_pack_start (GTK_BOX (box), labelw, TRUE, TRUE, 0);
+    gtk_box_pack_start (GTK_BOX (box), image, FALSE, TRUE, 0);
+      
+    /* Keep all elements the same size */
+    if (groups[level[i].group] == NULL)
+       groups[level[i].group] = gtk_size_group_new (GTK_SIZE_GROUP_BOTH);
+    gtk_size_group_add_widget (GTK_SIZE_GROUP (groups[level[i].group]), box);
+
+    /* Replace the label with the new one */
+    gtk_container_remove (GTK_CONTAINER (item), gtk_bin_get_child (GTK_BIN (item)));
+    gtk_container_add (GTK_CONTAINER (item), box);	  
+    gtk_widget_show_all (box);
+      
+    level_image[i] = image;
     level_action[i] = GTK_TOGGLE_ACTION (action);
   }
 
@@ -1012,6 +1048,45 @@ create_statusbar (void)
 
   moveswidget = gtk_label_new ("");
   gtk_box_pack_end (GTK_BOX (statusbar), moveswidget, FALSE, FALSE, 0);
+}
+
+gchar *
+get_level_key (gint level_number)
+{
+    gchar *c;
+    unsigned char octet;
+    unsigned int result;
+    gint i;
+
+    /* Calculate the CRC of the level data */
+    result = 0xFFFFFFFF;
+    for (c = level[level_number].data; *c != '\0'; c++) {
+	octet = *c;
+	for (i = 0; i < 8; i++) {
+	    if ((octet >> 7) ^ (result >> 31))
+		result = (result << 1) ^ 0x04c11db7;
+	    else
+		result = (result << 1);
+	    result &= 0xFFFFFFFF;
+	    octet <<= 1;
+	}
+    }
+
+    return g_strdup_printf ("/apps/gnotski/level_info/%08X/solved", ~result);
+}
+
+void
+load_solved_state (void)
+{
+    gint i;
+    gchar *key;
+    
+    for (i = 0; i < max_level; i++) {
+	key = get_level_key (i);
+	if (gconf_client_get_bool (conf_client, key, NULL))
+	    gtk_image_set_from_stock (GTK_IMAGE(level_image[i]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
+	g_free (key);
+    }
 }
 
 void
