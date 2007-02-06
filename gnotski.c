@@ -112,7 +112,7 @@ gint game_over (void);
 gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
 static void set_fullscreen_actions (gboolean is_fullscreen);
 static void fullscreen_cb (GtkAction * action);
-static void window_state_cb (GtkWidget * widget, GdkEventWindowState * event);
+static gboolean window_state_cb (GtkWidget * widget, GdkEventWindowState * event);
 
 void new_game (gint requested_level);
 
@@ -623,12 +623,13 @@ fullscreen_cb (GtkAction * action)
 }
 
 /* Just in case something else takes us to/from fullscreen. */
-static void
+static gboolean
 window_state_cb (GtkWidget * widget, GdkEventWindowState * event)
 {
   if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
     set_fullscreen_actions (event->new_window_state &
 			    GDK_WINDOW_STATE_FULLSCREEN);
+  return FALSE;
 }
 
 static gboolean
