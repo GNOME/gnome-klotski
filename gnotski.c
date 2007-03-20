@@ -28,9 +28,7 @@
 #include <games-preimage.h>
 #include <games-gridframe.h>
 #include <games-stock.h>
-#include <games-scores.h>
-#include <games-scores-dialog.h>
- 
+
 #include "pieces.h"
 
 #define APPNAME "gnotski"
@@ -74,6 +72,8 @@ gchar *orig_map = NULL;
 gchar *lastmove_map = NULL;
 gchar *undomove_map = NULL;
 
+gchar current_level_scorefile[4];
+
 gint space_width = 0;
 gint space_height = 0;
 gint tile_size = 0;
@@ -87,54 +87,6 @@ gint current_level = -1;
 
 guint redraw_all_idle_id = 0;
 guint configure_idle_id = 0;
-
-static const GamesScoresCategory scorecats[] = { {"1", N_("Only 18 steps")},
-{"2", N_("Daisy")},
-{"3", N_("Violet")},
-{"4", N_("Poppy")},
-{"5", N_("Pansy")},
-{"6", N_("Snowdrop")},
-{"7", N_("Red Donkey")},
-{"8", N_("Trail")},
-{"9", N_("Ambush")},
-{"10", N_("Agatka")},
-{"11", N_("Success")},
-{"12", N_("Bone")},
-{"13", N_("Fortune")},
-{"14", N_("Fool")},
-{"15", N_("Solomon")},
-{"16", N_("Cleopatra")},
-{"17", N_("Shark")},
-{"18", N_("Rome")},
-{"19", N_("Pennant Puzzle")},
-{"20", N_("Ithaca")},
-{"21", N_("Pelopones")},
-{"22", N_("Transeuropa")},
-{"23", N_("Lodzianka")},
-{"24", N_("Polonaise")},
-{"25", N_("Baltic Sea")},
-{"26", N_("American Pie")},
-{"27", N_("Traffic Jam")},
-{"28", N_("Sunshine")},
-{"29", N_("Block 10")},
-{"30", N_("Block 10 Pro")},
-{"31", N_("Climb 12")},
-{"32", N_("Climb 12 Pro")},
-{"33", N_("Climb 15 Winter")},
-{"34", N_("Climb 15 Spring")},
-{"35", N_("Climb 15 Summer")},
-{"36", N_("Climb 15 Fall")},
-{"37", N_("Climb 24 Pro")},
-GAMES_SCORES_LAST_CATEGORY
-};
-
-static const GamesScoresDescription scoredesc = { scorecats,
-  "1",
-  "gnotski",
-  GAMES_SCORES_STYLE_PLAIN_ASCENDING
-};
-
-GamesScores *highscores;
 
 void create_space (void);
 GtkWidget *create_menubar (void);
@@ -546,7 +498,7 @@ main (int argc, char **argv)
   gint win_width, win_height, startup_level;
   GOptionContext *context;
 
-  setgid_io_init ();
+  gnome_score_init (APPNAME);
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
@@ -558,9 +510,6 @@ main (int argc, char **argv)
 				argc, argv,
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
-
-  highscores = games_scores_new (&scoredesc);
-
   games_stock_init ();
   gtk_window_set_default_icon_name ("gnome-klotski");
   client = gnome_master_client ();
@@ -840,100 +789,51 @@ gui_draw_pixmap (char *target, gint x, gint y)
 			      tile_size, tile_size);
 }
 
-static gint
-show_score_dialog (gint pos, gboolean endofgame)
+
+static void
+show_score_dialog (gint pos)
 {
-  gchar *message;
-  static GtkWidget *scoresdialog = NULL;
-  static GtkWidget *sorrydialog = NULL;
   GtkWidget *dialog;
-  gint result;
 
-  if (endofgame && (pos <= 0)) {
-    if (sorrydialog != NULL) {
-      gtk_window_present (GTK_WINDOW (sorrydialog));
-    } else {
-      sorrydialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (window),
-							GTK_DIALOG_DESTROY_WITH_PARENT,
-							GTK_MESSAGE_INFO,
-							GTK_BUTTONS_NONE,
-							"<b>%s</b>\n%s",
-							_
-							("The Puzzle Has Been Solved!"),
-							_
-							("Great work, but unfortunately your score did not make the top ten."));
-      gtk_dialog_add_buttons (GTK_DIALOG (sorrydialog), GTK_STOCK_QUIT,
-			      GTK_RESPONSE_REJECT, _("_New Game"),
-			      GTK_RESPONSE_ACCEPT, NULL);
-      gtk_dialog_set_default_response (GTK_DIALOG (sorrydialog),
-				       GTK_RESPONSE_ACCEPT);
-      gtk_window_set_title (GTK_WINDOW (sorrydialog), "");
-    }
-    dialog = sorrydialog;
-  } else {
-
-    if (scoresdialog != NULL) {
-      gtk_window_present (GTK_WINDOW (scoresdialog));
-    } else {
-      scoresdialog = games_scores_dialog_new (highscores, _("Klotski Scores"));
-      games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG
-						    (scoresdialog),
-						    _("Puzzle:"));
-    }
-
-    if (pos > 0) {
-      games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (scoresdialog),
-				       pos);
-      message = g_strdup_printf ("<b>%s</b>\n\n%s",
-				 _("Congratulations!"),
-				 _("Your score has made the top ten."));
-      games_scores_dialog_set_message (GAMES_SCORES_DIALOG (scoresdialog),
-				       message);
-      g_free (message);
-    } else {
-      games_scores_dialog_set_message (GAMES_SCORES_DIALOG (scoresdialog),
-				       NULL);
-    }
-
-    if (endofgame) {
-      games_scores_dialog_set_buttons (GAMES_SCORES_DIALOG (scoresdialog),
-				       GAMES_SCORES_QUIT_BUTTON |
-				       GAMES_SCORES_NEW_GAME_BUTTON);
-    } else {
-      games_scores_dialog_set_buttons (GAMES_SCORES_DIALOG (scoresdialog), 0);
-    }
-    dialog = scoresdialog;
+  dialog = gnome_scores_display (_(APPNAME_LONG), APPNAME,
+				 current_level_scorefile, pos);
+  if (dialog != NULL) {
+    gtk_window_set_transient_for (GTK_WINDOW (dialog), GTK_WINDOW (window));
+    gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
   }
-
-  result = gtk_dialog_run (GTK_DIALOG (dialog));
-  gtk_widget_hide (dialog);
-
-  return result;
 }
-
 
 void
 score_cb (GtkAction * action)
 {
-  show_score_dialog (0, FALSE);
+  show_score_dialog (0);
 }
 
 static void
 update_score_state (void)
 {
   GtkAction *score_action;
-  GList *top;
+  gchar **names = NULL;
+  gfloat *scores = NULL;
+  time_t *scoretimes = NULL;
+  gint top;
 
   score_action = gtk_action_group_get_action (action_group, "Scores");
-  top = games_scores_get (highscores);
-  gtk_action_set_sensitive (score_action, top != NULL);
-
+  top = gnome_score_get_notable (APPNAME, current_level_scorefile,
+				 &names, &scores, &scoretimes);
+  if (top > 0) {
+    gtk_action_set_sensitive (score_action, TRUE);
+    g_strfreev (names);
+    g_free (scores);
+    g_free (scoretimes);
+  } else {
+    gtk_action_set_sensitive (score_action, FALSE);
+  }
 }
 
 void
 game_score ()
 {
-  GamesScoreValue score;
   gint pos;
   gchar *key;
     
@@ -943,13 +843,9 @@ game_score ()
   g_free (key);
   gtk_image_set_from_stock (GTK_IMAGE(level_image[current_level]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
 
-  score.plain = (guint32) moves;
-  pos = games_scores_add_score (highscores, score);
+  pos = gnome_score_log (moves, current_level_scorefile, FALSE);
   update_score_state ();
-  if (show_score_dialog (pos, TRUE) == GTK_RESPONSE_REJECT)
-    gtk_main_quit ();
-  else
-    new_game (current_level);
+  show_score_dialog (pos);
 }
 
 static gboolean
@@ -1485,8 +1381,8 @@ new_game (gint requested_level)
   set_move (0);
   current_level = CLAMP (requested_level, 0, max_level);
 
-  games_scores_set_category (highscores, scorecats[current_level].key);
-
+  g_snprintf (current_level_scorefile, sizeof (current_level_scorefile),
+	      "%d", current_level + 1);
   gconf_client_set_int (conf_client, "/apps/gnotski/level",
 			current_level, NULL);
 
