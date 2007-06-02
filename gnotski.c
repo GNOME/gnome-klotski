@@ -34,7 +34,7 @@
 #include "pieces.h"
 
 #define APPNAME "gnotski"
-#define APPNAME_LONG "Klotski"
+#define APPNAME_LONG N_("Klotski")
 
 #define MINWIDTH 250
 #define MINHEIGHT 250
@@ -573,7 +573,7 @@ main (int argc, char **argv)
 
   conf_client = gconf_client_get_default ();
 
-  window = gnome_app_new (APPNAME, N_(APPNAME_LONG));
+  window = gnome_app_new (APPNAME, _(APPNAME_LONG));
 
   win_width = gconf_client_get_int (conf_client, "/apps/gnotski/width", NULL);
   win_height =
@@ -965,7 +965,7 @@ configure_pixmaps_idle (void)
     if (tiles_preimage) {
       tiles_pixbuf = games_preimage_render (tiles_preimage,
 					    tile_size * THEME_TILE_SEGMENTS,
-					    tile_size * 2, NULL);
+					    tile_size * 2);
     }
 
     if (tiles_pixbuf == NULL) {
