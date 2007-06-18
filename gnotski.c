@@ -21,7 +21,6 @@
 
 #include <config.h>
 #include <gnome.h>
-#include <gconf/gconf-client.h>
 #include <string.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
@@ -30,6 +29,7 @@
 #include <games-stock.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
+#include <games-conf.h>
  
 #include "pieces.h"
 
@@ -45,7 +45,8 @@
 #define SPACE_PADDING 5
 #define SPACE_OFFSET 4
 
-GConfClient *conf_client;
+#define KEY_LEVEL "level"
+#define KEY_LEVEL_INFO_GROUP "level_info"
 
 GtkWidget *window;
 GtkWidget *statusbar;
@@ -543,7 +544,7 @@ main (int argc, char **argv)
   GnomeProgram *program;
   GtkWidget *vbox;
   GtkWidget *menubar;
-  gint win_width, win_height, startup_level;
+  gint startup_level;
   GOptionContext *context;
 
   setgid_io_init ();
@@ -561,38 +562,34 @@ main (int argc, char **argv)
 
   highscores = games_scores_new (&scoredesc);
 
+  games_conf_initialise ("Gnotski");
+
   games_stock_init ();
+
   gtk_window_set_default_icon_name ("gnome-klotski");
   client = gnome_master_client ();
-  g_object_ref (G_OBJECT (client));
-  gtk_object_sink (GTK_OBJECT (client));
+
   g_signal_connect (G_OBJECT (client), "save_yourself",
 		    G_CALLBACK (save_state), argv[0]);
   g_signal_connect (G_OBJECT (client), "die",
 		    G_CALLBACK (quit_game_cb), argv[0]);
 
-  conf_client = gconf_client_get_default ();
+  window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window), _(APPNAME_LONG));
 
-  window = gnome_app_new (APPNAME, _(APPNAME_LONG));
+  gtk_window_set_default_size (GTK_WINDOW (window), MINWIDTH, MINHEIGHT);
+  games_conf_add_window (GTK_WINDOW (window));
 
-  win_width = gconf_client_get_int (conf_client, "/apps/gnotski/width", NULL);
-  win_height =
-    gconf_client_get_int (conf_client, "/apps/gnotski/height", NULL);
-  startup_level =
-    gconf_client_get_int (conf_client, "/apps/gnotski/level", NULL);
-
-  gtk_window_set_default_size (GTK_WINDOW (window), win_width, win_height);
+  startup_level = games_conf_get_integer (NULL, KEY_LEVEL, NULL);
 
   g_signal_connect (G_OBJECT (window), "delete_event",
 		    G_CALLBACK (quit_game_cb), NULL);
-  g_signal_connect (G_OBJECT (window), "configure_event",
-		    G_CALLBACK (window_resize_cb), NULL);
   g_signal_connect (G_OBJECT (window), "window_state_event",
 		    G_CALLBACK (window_state_cb), NULL);
 
 
   vbox = gtk_vbox_new (FALSE, 0);
-  gnome_app_set_contents (GNOME_APP (window), vbox);
+  gtk_container_add (GTK_CONTAINER (window), vbox);
 
   load_image ();
   create_space ();
@@ -612,11 +609,9 @@ main (int argc, char **argv)
 
   new_game (startup_level);
 
-  set_fullscreen_actions (FALSE);
-
   gtk_main ();
 
-  gnome_accelerators_sync ();
+  games_conf_shutdown ();
 
   g_object_unref (program);
 
@@ -940,7 +935,7 @@ game_score ()
     
   /* Level is complete */
   key = get_level_key (current_level);
-  gconf_client_set_bool (conf_client, key, TRUE, NULL);
+  games_conf_set_boolean (KEY_LEVEL_INFO_GROUP, key, TRUE);
   g_free (key);
   gtk_image_set_from_stock (GTK_IMAGE(level_image[current_level]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
 
@@ -1132,6 +1127,13 @@ create_menubar (void)
   gtk_action_group_add_actions (action_group, entries,
 				G_N_ELEMENTS (entries), window);
 
+  fullscreen_action =
+    gtk_action_group_get_action (action_group, "Fullscreen");
+  leave_fullscreen_action =
+    gtk_action_group_get_action (action_group, "LeaveFullscreen");
+
+  set_fullscreen_actions (FALSE);
+
   ui_manager = gtk_ui_manager_new ();
   gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
   gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
@@ -1178,7 +1180,7 @@ get_level_key (gint level_number)
 	}
     }
 
-    return g_strdup_printf ("/apps/gnotski/level_info/%08X/solved", ~result);
+    return g_strdup_printf ("%08X/solved", ~result);
 }
 
 void
@@ -1189,7 +1191,7 @@ load_solved_state (void)
     
     for (i = 0; i < max_level; i++) {
 	key = get_level_key (i);
-	if (gconf_client_get_bool (conf_client, key, NULL))
+	if (games_conf_get_boolean (KEY_LEVEL_INFO_GROUP, key, NULL))
 	    gtk_image_set_from_stock (GTK_IMAGE(level_image[i]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
 	g_free (key);
     }
@@ -1470,12 +1472,6 @@ update_menu_state (void)
   action_is_sensitive = current_level > 0;
   action = gtk_action_group_get_action (action_group, "PrevPuzzle");
   gtk_action_set_sensitive (action, action_is_sensitive);
-
-  fullscreen_action =
-    gtk_action_group_get_action (action_group, "Fullscreen");
-  leave_fullscreen_action =
-    gtk_action_group_get_action (action_group, "LeaveFullscreen");
-
 }
 
 void
@@ -1488,8 +1484,7 @@ new_game (gint requested_level)
 
   games_scores_set_category (highscores, scorecats[current_level].key);
 
-  gconf_client_set_int (conf_client, "/apps/gnotski/level",
-			current_level, NULL);
+  games_conf_set_integer (NULL, KEY_LEVEL, current_level);
 
   prepare_map (current_level);
   games_grid_frame_set (GAMES_GRID_FRAME (gameframe), width, height);
@@ -1502,14 +1497,6 @@ void
 quit_game_cb (GtkAction * action)
 {
   gtk_main_quit ();
-}
-
-gboolean
-window_resize_cb (GtkWidget * w, GdkEventConfigure * e, gpointer data)
-{
-  gconf_client_set_int (conf_client, "/apps/gnotski/width", e->width, NULL);
-  gconf_client_set_int (conf_client, "/apps/gnotski/height", e->height, NULL);
-  return FALSE;
 }
 
 gint
