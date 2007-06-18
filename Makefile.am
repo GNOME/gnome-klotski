@@ -1,6 +1,3 @@
-
-
-
 pixmapdir=$(datadir)/pixmaps
 Gamesdir=$(datadir)/applications
 
@@ -29,11 +26,11 @@ gnotski_LDADD = \
 
 pixmap_DATA = gnotski.svg
 
-Games_in_files = gnotski.desktop.in
-Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+Games_in_files = gnotski.desktop.in.in
+Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = README $(Games_in_files) $(pixmap_DATA) $(schema_in_files)
+EXTRA_DIST = README $(pixmap_DATA) $(schema_in_files)
 
 CLEANFILES = $(Games_DATA)
 
