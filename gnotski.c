@@ -562,7 +562,7 @@ main (int argc, char **argv)
 
   highscores = games_scores_new (&scoredesc);
 
-  games_conf_initialise ("Gnotski");
+  games_conf_initialise (APPNAME);
 
   games_stock_init ();
 
