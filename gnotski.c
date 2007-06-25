@@ -578,7 +578,7 @@ main (int argc, char **argv)
   gtk_window_set_title (GTK_WINDOW (window), _(APPNAME_LONG));
 
   gtk_window_set_default_size (GTK_WINDOW (window), MINWIDTH, MINHEIGHT);
-  games_conf_add_window (GTK_WINDOW (window));
+  games_conf_add_window (GTK_WINDOW (window), NULL);
 
   startup_level = games_conf_get_integer (NULL, KEY_LEVEL, NULL);
 
