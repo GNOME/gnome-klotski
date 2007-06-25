@@ -2,30 +2,6 @@
     <schemalist>
 
       <schema>
-        <key>/schemas/apps/gnotski/width</key>
-        <applyto>/apps/gnotski/width</applyto>
-        <owner>gnotski</owner>
-        <type>int</type>
-        <default>400</default>
-        <locale name="C">
-          <short>The width of the window</short>
-          <long>The requested width of the main window in pixels. If this isn't big enough it will be ignored.</long>
-        </locale>
-      </schema>
-
-      <schema>
-        <key>/schemas/apps/gnotski/height</key>
-        <applyto>/apps/gnotski/height</applyto>
-        <owner>gnotski</owner>
-        <type>int</type>
-        <default>400</default>
-        <locale name="C">
-          <short>The height of the window</short>
-          <long>The requested height of the main window in pixels. If this isn't big enough it will be ignored.</long>
-        </locale>
-      </schema>
-
-      <schema>
         <key>/schemas/apps/gnotski/level</key>
         <applyto>/apps/gnotski/level</applyto>
         <owner>gnotski</owner>
