@@ -20,9 +20,13 @@
  */
 
 #include <config.h>
-#include <gnome.h>
+
 #include <string.h>
+#include <stdlib.h>
+
+#include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gtk/gtk.h>
 
 #include <games-preimage.h>
 #include <games-gridframe.h>
@@ -30,7 +34,11 @@
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-conf.h>
- 
+
+#ifdef HAVE_GNOME
+#include <gnome.h>
+#endif
+
 #include "pieces.h"
 
 #define APPNAME "gnotski"
@@ -152,8 +160,10 @@ void set_piece_id (char *, gint, gint, gint);
 gint move_piece (gint, gint, gint, gint, gint);
 void copymap (char *, char *);
 gint mapcmp (char *, char *);
+#ifdef HAVE_GNOME
 gint save_state (GnomeClient *, gint, GnomeRestartStyle, gint,
 		 GnomeInteractStyle, gint fast, gpointer);
+#endif /* HAVE_GNOME */              
 void new_move (void);
 void game_score (void);
 gint game_over (void);
@@ -540,39 +550,73 @@ static const GOptionEntry options[] = {
 int
 main (int argc, char **argv)
 {
-  GnomeClient *client;
-  GnomeProgram *program;
+  GOptionContext *context;
   GtkWidget *vbox;
   GtkWidget *menubar;
   gint startup_level;
-  GOptionContext *context;
+#ifdef HAVE_GNOME
+  GnomeClient *client;
+  GnomeProgram *program;
+#else
+  gboolean retval;
+  GError *error = NULL;
+#endif
+
+#if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
+  /* If we're going to use gnome-vfs, we need to init threads before
+   * calling any glib functions.
+   */
+  g_thread_init (NULL);
+#endif
 
   setgid_io_init ();
+
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  context = g_option_context_new ("");
+  context = g_option_context_new (NULL);
+#if GLIB_CHECK_VERSION (2, 12, 0)
+  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+#endif
+
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
+
+#ifdef HAVE_GNOME
   program = gnome_program_init (APPNAME, VERSION,
 				LIBGNOMEUI_MODULE,
 				argc, argv,
 				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
-  highscores = games_scores_new (&scoredesc);
+  client = gnome_master_client ();
+
+  g_signal_connect (client, "save_yourself",
+                    G_CALLBACK (save_state), argv[0]);
+  g_signal_connect (client, "die",
+                    G_CALLBACK (quit_game_cb), argv[0]);
+
+#else
+  g_option_context_add_group (context, gtk_get_option_group (TRUE));
+
+  retval = g_option_context_parse (context, &argc, &argv, &error);
+  g_option_context_free (context);
+  if (!retval) {
+    g_print ("%s", error->message);
+    g_error_free (error);
+    exit (1);
+  }
+#endif /* HAVE_GNOME */
+
+  g_set_application_name (_(APPNAME_LONG));
 
   games_conf_initialise (APPNAME);
 
   games_stock_init ();
 
   gtk_window_set_default_icon_name ("gnome-klotski");
-  client = gnome_master_client ();
-
-  g_signal_connect (G_OBJECT (client), "save_yourself",
-		    G_CALLBACK (save_state), argv[0]);
-  g_signal_connect (G_OBJECT (client), "die",
-		    G_CALLBACK (quit_game_cb), argv[0]);
+  
+  highscores = games_scores_new (&scoredesc);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(APPNAME_LONG));
@@ -582,9 +626,9 @@ main (int argc, char **argv)
 
   startup_level = games_conf_get_integer (NULL, KEY_LEVEL, NULL);
 
-  g_signal_connect (G_OBJECT (window), "delete_event",
+  g_signal_connect (window, "delete_event",
 		    G_CALLBACK (quit_game_cb), NULL);
-  g_signal_connect (G_OBJECT (window), "window_state_event",
+  g_signal_connect (window, "window_state_event",
 		    G_CALLBACK (window_state_cb), NULL);
 
 
@@ -600,7 +644,7 @@ main (int argc, char **argv)
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), gameframe, TRUE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), gtk_hseparator_new (), FALSE, FALSE, 0);
-  gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, GNOME_PAD);
+  gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
 
   if (session_xpos >= 0 && session_ypos >= 0)
     gtk_window_move (GTK_WINDOW (window), session_xpos, session_ypos);
@@ -613,7 +657,9 @@ main (int argc, char **argv)
 
   games_conf_shutdown ();
 
+#ifdef HAVE_GNOME
   g_object_unref (program);
+#endif /* HAVE_GNOME */
 
   return 0;
 }
@@ -1200,13 +1246,14 @@ load_solved_state (void)
 void
 load_image (void)
 {
-  char *fname;
+  char *path;
+  GError *error = NULL;
 
-  fname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-				     "gnotski.svg", FALSE, NULL);
-  if (g_file_test (fname, G_FILE_TEST_EXISTS)) {
-    tiles_preimage = games_preimage_new_from_file (fname, NULL);
-  } else {
+  path = g_build_filename (PIXMAPDIR, "gnotski.svg", NULL);
+  tiles_preimage = games_preimage_new_from_file (path, &error);
+  g_free (path);
+
+  if (!tiles_preimage) {
     GtkWidget *dialog;
 
     dialog = gtk_message_dialog_new (NULL,
@@ -1215,11 +1262,11 @@ load_image (void)
 				     GTK_BUTTONS_OK,
 				     _
 				     ("Could not find the image:\n%s\n\nPlease check that Klotski is installed correctly."),
-				     fname);
+				     error->message);
+    g_error_free (error);
     gtk_dialog_run (GTK_DIALOG (dialog));
     exit (1);
   }
-  g_free (fname);
 }
 
 static void
@@ -1499,6 +1546,8 @@ quit_game_cb (GtkAction * action)
   gtk_main_quit ();
 }
 
+#ifdef HAVE_GNOME
+
 gint
 save_state (GnomeClient * client, gint phase,
 	    GnomeRestartStyle save_style, gint shutdown,
@@ -1525,6 +1574,8 @@ save_state (GnomeClient * client, gint phase,
   g_free (argv[4]);
   return TRUE;
 }
+
+#endif /* HAVE_GNOME */
 
 void
 level_cb (GtkAction * action, GtkRadioAction * current)
@@ -1555,7 +1606,11 @@ prev_level_cb (GtkAction * action)
 void
 help_cb (GtkAction * action)
 {
+#ifdef HAVE_GNOME
   gnome_help_display ("gnotski.xml", NULL, NULL);
+#else
+#warning need to port help to gtk-only!
+#endif /* HAVE_GNOME */
 }
 
 void
@@ -1566,16 +1621,23 @@ about_cb (GtkAction * action)
   gchar *license = games_get_license (_(APPNAME_LONG));
 
   gtk_show_about_dialog (GTK_WINDOW (window),
-			 "name", _(APPNAME_LONG),
+#if GTK_CHECK_VERSION (2, 11, 0)
+                         "program-name", _(APPNAME_LONG),
+#else
+                         "name", _(APPNAME_LONG),
+#endif
 			 "version", VERSION,
 			 "comments", _("Sliding Block Puzzles"),
 			 "copyright",
 			 "Copyright \xc2\xa9 1999-2007 Lars Rydlinge",
-			 "license", license, "authors", authors,
-			 "documenters", documenters, "translator_credits",
-			 _("translator-credits"), "logo-icon-name",
-			 "gnome-klotski", "website",
-			 "http://www.gnome.org/projects/gnome-games/",
-			 "wrap-license", TRUE, NULL);
+			 "license", license,
+                         "wrap-license", TRUE,
+                         "authors", authors,
+			 "documenters", documenters,
+                         "translator_credits", _("translator-credits"),
+                         "logo-icon-name", "gnome-klotski",
+                         "website", "http://www.gnome.org/projects/gnome-games",
+                         "website-label", _("GNOME Games web site"),
+                         NULL);
   g_free (license);
 }
