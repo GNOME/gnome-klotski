@@ -1,3 +1,8 @@
+2007-06-29  Christian Persch <chpe@gnome.org>
+
+        * gnotski.c:
+        * Makefile.am: Allow building with gtk-only platform.
+
 2006-09-17  Robert Ancell <robert.ancell@gmail.com>
 
         * gnotski.c: Mark solved puzzles in the menu (Gnome Bug #111543).
