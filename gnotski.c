@@ -1627,7 +1627,8 @@ about_cb (GtkAction * action)
                          "name", _(APPNAME_LONG),
 #endif
 			 "version", VERSION,
-			 "comments", _("Sliding Block Puzzles"),
+			 "comments", _("Sliding Block Puzzles\n\n"
+			 "Klotski is a part of GNOME Games."),
 			 "copyright",
 			 "Copyright \xc2\xa9 1999-2007 Lars Rydlinge",
 			 "license", license,
