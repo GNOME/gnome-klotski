@@ -456,7 +456,7 @@ const levelinfo level[] = {
    7, 9, 148,
    "###.###"
    "#a...b#"
-   "#cceff#" "#ddegg#" "#dijjg#" "#hijjk#" "#hh*kk#" "#l***l#" "#######"},
+   "#cceff#" "#ddegg#" "#dijjg#" "#hijjk#" "#hh*kk#" "#l***m#" "#######"},
 
   /* puzzle name */
   {N_("Climb 24 Pro"), 3,
