@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: klotski doc\n"
-"POT-Creation-Date: 2007-04-30 11:54+0100\n"
-"PO-Revision-Date: 2007-07-22 15:52+0100\n"
+"Project-Id-Version: gnotski doc\n"
+"POT-Creation-Date: 2008-01-03 18:49+0000\n"
+"PO-Revision-Date: 2008-02-29 13:58+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -11,37 +11,35 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:200(None)
+#: C/gnotski.xml:202(None)
 msgid "@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
 msgstr "@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:257(None)
+#: C/gnotski.xml:259(None)
 msgid "@@image: 'figures/gnotski_start_window.png'; md5=23e584de3f58e5baf5c9ca5098a7961e"
 msgstr "@@image: 'figures/gnotski_start_window.png'; md5=23e584de3f58e5baf5c9ca5098a7961e"
 
 #: C/gnotski.xml:28(title)
-msgid "<application>GNOME Klotski</application> Manual V2.10"
-msgstr "Handbok för <application>GNOME Klotski</application> v2.10"
+msgid "<application>Klotski</application> Manual"
+msgstr "Handbok för <application>Klotski</application>"
 
 #: C/gnotski.xml:31(para)
-#: C/gnotski.xml:157(primary)
-#: C/gnotski.xml:0(application)
-msgid "GNOME Klotski"
-msgstr "GNOME Klotski"
+msgid "Klotski is a puzzle game of which the objective is to get the patterned block to the marker, which is done by moving the blocks in its way."
+msgstr "Klotski är ett pusselspel vars mål är att få det mönstrade blocket till markören, vilket görs genom att flytta undan de block som är i vägen."
 
-#: C/gnotski.xml:37(year)
+#: C/gnotski.xml:39(year)
 msgid "2002"
 msgstr "2002"
 
-#: C/gnotski.xml:38(holder)
+#: C/gnotski.xml:40(holder)
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
-#: C/gnotski.xml:52(publishername)
-#: C/gnotski.xml:65(orgname)
-#: C/gnotski.xml:138(para)
+#: C/gnotski.xml:54(publishername)
+#: C/gnotski.xml:67(orgname)
+#: C/gnotski.xml:140(para)
 msgid "GNOME Documentation Project"
 msgstr "Dokumentationsprojekt för GNOME"
 
@@ -69,230 +67,238 @@ msgstr "UNDER INGA OMSTÄNDIGHETER ELLER INOM RAMEN FÖR NÅGON LAGSTIFTNING, OA
 msgid "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: <placeholder-1/>"
 msgstr "DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS UNDER VILLKOREN I GNU FREE DOCUMENTATION LICENSE ENDAST UNDER FÖLJANDE FÖRUTSÄTTNINGAR: <placeholder-1/>"
 
-#: C/gnotski.xml:62(firstname)
+#: C/gnotski.xml:64(firstname)
 msgid "Andrew"
 msgstr "Andrew"
 
-#: C/gnotski.xml:63(surname)
+#: C/gnotski.xml:65(surname)
 msgid "Sobala"
 msgstr "Sobala"
 
-#: C/gnotski.xml:66(email)
+#: C/gnotski.xml:68(email)
 msgid "andrew@sobala.net"
 msgstr "andrew@sobala.net"
 
-#: C/gnotski.xml:71(firstname)
+#: C/gnotski.xml:73(firstname)
 msgid "Lars"
 msgstr "Lars"
 
-#: C/gnotski.xml:72(surname)
+#: C/gnotski.xml:74(surname)
 msgid "Rydlinge"
 msgstr "Rydlinge"
 
-#: C/gnotski.xml:74(orgname)
-#: C/gnotski.xml:83(orgname)
+#: C/gnotski.xml:76(orgname)
+#: C/gnotski.xml:85(orgname)
 msgid "GNOME Project"
 msgstr "GNOME-projektet"
 
-#: C/gnotski.xml:75(email)
+#: C/gnotski.xml:77(email)
 msgid "Lars.Rydlinge@HIG.SE"
 msgstr "Lars.Rydlinge@HIG.SE"
 
-#: C/gnotski.xml:80(firstname)
+#: C/gnotski.xml:82(firstname)
 msgid "Ross"
 msgstr "Ross"
 
-#: C/gnotski.xml:81(surname)
+#: C/gnotski.xml:83(surname)
 msgid "Burton"
 msgstr "Burton"
 
-#: C/gnotski.xml:84(email)
+#: C/gnotski.xml:86(email)
 msgid "ross@burtonini.com"
 msgstr "ross@burtonini.com"
 
-#: C/gnotski.xml:132(revnumber)
+#: C/gnotski.xml:134(revnumber)
 msgid "V2.0"
 msgstr "V2.0"
 
-#: C/gnotski.xml:133(date)
+#: C/gnotski.xml:135(date)
 msgid "13 August 2002"
 msgstr "13 Augusti 2002"
 
-#: C/gnotski.xml:135(para)
+#: C/gnotski.xml:137(para)
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: C/gnotski.xml:144(releaseinfo)
+#: C/gnotski.xml:146(releaseinfo)
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Den här handboken beskriver version 2.12 av GNOME Klotski."
 
-#: C/gnotski.xml:147(title)
+#: C/gnotski.xml:149(title)
 msgid "Feedback"
 msgstr "Återkoppling"
 
-#: C/gnotski.xml:148(para)
-msgid "To report a bug or make a suggestion regarding the <application>GNOME Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>GNOME Klotski</application> eller den här handboken, följ anvisningarna på <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME:s återkopplingssida</ulink>."
+#: C/gnotski.xml:150(para)
+msgid "To report a bug or make a suggestion regarding the <application>Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>Klotski</application> eller den här handboken, följ anvisningarna på <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME:s återkopplingssida</ulink>."
 
-#: C/gnotski.xml:163(title)
+#: C/gnotski.xml:159(primary)
+msgid "GNOME Klotski"
+msgstr "GNOME Klotski"
+
+#: C/gnotski.xml:165(title)
 msgid "Introduction"
 msgstr "Introduktion"
 
-#: C/gnotski.xml:164(para)
-msgid "The <application>GNOME Klotski</application> application is a clone of the Klotski game. The objective is to move the patterned block to the area bordered by green markers."
-msgstr "Programmet <application>GNOME Klotski</application> är en klon av spelet Klotski. Målet är att flytta det mönstrade blocket till området som är utmärkt med gröna markeringar."
+#: C/gnotski.xml:166(para)
+msgid "The <application>Klotski</application> application is a clone of the Klotski game. The objective is to move the patterned block to the area bordered by green markers."
+msgstr "Programmet <application>Klotski</application> är en klon av spelet Klotski. Målet är att flytta det mönstrade blocket till området som är utmärkt med gröna markeringar."
 
-#: C/gnotski.xml:167(para)
-msgid "<application>GNOME Klotski</application> was written by Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>)."
-msgstr "<application>GNOME Klotski</application> skrevs av Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>)."
+#: C/gnotski.xml:169(para)
+msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>)."
+msgstr "<application>Klotski</application> skrevs av Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>)."
 
-#: C/gnotski.xml:170(para)
-msgid "<application>GNOME Klotski</application> is included in the gnome-games package, which is part of the GNOME desktop environment. This document describes version 2.12 of <application>GNOME Klotski</application>."
-msgstr "<application>GNOME Klotski</application> är inkluderat i paketet gnome-games, som är en del av skrivbordsmiljön GNOME. Det här dokumentet beskriver version 2.12 av <application>GNOME Klotski</application>."
+#: C/gnotski.xml:172(para)
+msgid "<application>Klotski</application> is included in the gnome-games package, which is part of the GNOME desktop environment. This document describes version 2.12 of <application>Klotski</application>."
+msgstr "<application>Klotski</application> är inkluderat i paketet gnome-games, som är en del av skrivbordsmiljön GNOME. Det här dokumentet beskriver version 2.12 av <application>Klotski</application>."
 
-#: C/gnotski.xml:173(para)
+#: C/gnotski.xml:175(para)
 msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"ghelp:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
 msgstr "Det här programmet distribueras under villkoren för GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (enligt dig) någon senare version. En kopia av den här licensen kan hittas på den här <ulink url=\"ghelp:gpl\" type=\"help\">länken</ulink>, eller i filen COPYING som inkluderats i källkoden för det här programmet."
 
-#: C/gnotski.xml:180(para)
+#: C/gnotski.xml:182(para)
 msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
 msgstr "För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
 
-#: C/gnotski.xml:189(title)
+#: C/gnotski.xml:191(title)
 msgid "Objective"
 msgstr "Mål"
 
-#: C/gnotski.xml:196(title)
+#: C/gnotski.xml:198(title)
 msgid "The winning move"
 msgstr "Det vinnande steget"
 
-#: C/gnotski.xml:203(phrase)
+#: C/gnotski.xml:205(phrase)
 msgid "The patterned block should be moved to the space bordered by the green markers."
 msgstr "Det mönstrade blocket ska flyttas till området som är utmärkt med gröna markeringar."
 
-#: C/gnotski.xml:190(para)
-msgid "The objective of <application>GNOME Klotski</application> is to move the patterned block to the green markers in as few moves as possible. You do this by moving the blocks one at a time with the mouse until you can get the patterned block to the markers. <placeholder-1/>"
-msgstr "Målet för <application>GNOME Klotski</application> är att flytta det mönstrade blocket till de gröna markeringarna med så få steg som möjligt. Du kan göra det här genom att flytta blocken, ett åt gången, med musen tills det mönstrade blocket kommer till markeringarna. <placeholder-1/>"
+#: C/gnotski.xml:192(para)
+msgid "The objective of <application>Klotski</application> is to move the patterned block to the green markers in as few moves as possible. You do this by moving the blocks one at a time with the mouse until you can get the patterned block to the markers. <placeholder-1/>"
+msgstr "Målet för <application>Klotski</application> är att flytta det mönstrade blocket till de gröna markeringarna med så få steg som möjligt. Du kan göra det här genom att flytta blocken, ett åt gången, med musen tills det mönstrade blocket kommer till markeringarna. <placeholder-1/>"
 
-#: C/gnotski.xml:215(title)
-msgid "Playing <application>GNOME Klotski</application>"
-msgstr "Spela <application>GNOME Klotski</application>"
+#: C/gnotski.xml:217(title)
+msgid "Playing <application>Klotski</application>"
+msgstr "Spela <application>Klotski</application>"
 
-#: C/gnotski.xml:238(title)
-msgid "To Start <application>GNOME Klotski</application>"
-msgstr "Starta <application>GNOME Klotski</application>"
+#: C/gnotski.xml:240(title)
+msgid "To Start <application>Klotski</application>"
+msgstr "Starta <application>Klotski</application>"
 
-#: C/gnotski.xml:239(para)
-msgid "You can start <application>GNOME Klotski</application> from the Applications menu by choosing <menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>Gnotski</guimenuitem></menuchoice>."
-msgstr "Du kan starta <application>GNOME Klotski</application> från Program-menyn genom att välja <menuchoice><guisubmenu>Spel</guisubmenu><guimenuitem>Klotski</guimenuitem></menuchoice>."
+#: C/gnotski.xml:241(para)
+msgid "You can start <application>Klotski</application> from the Applications menu by choosing <menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>Gnotski</guimenuitem></menuchoice>."
+msgstr "Du kan starta <application>Klotski</application> från Program-menyn genom att välja <menuchoice><guisubmenu>Spel</guisubmenu><guimenuitem>Gnotski</guimenuitem></menuchoice>."
 
-#: C/gnotski.xml:248(title)
+#: C/gnotski.xml:250(title)
 msgid "The main window"
 msgstr "Huvudfönstret"
 
-#: C/gnotski.xml:249(para)
-msgid "When you start <application><application>GNOME Klotski</application></application>, the following window is displayed."
-msgstr "När du startar <application><application>GNOME Klotski</application></application> kommer följande fönster att visas."
+#: C/gnotski.xml:251(para)
+msgid "When you start <application><application>Klotski</application></application>, the following window is displayed."
+msgstr "När du startar <application><application>Klotski</application></application> kommer följande fönster att visas."
 
-#: C/gnotski.xml:253(title)
-msgid "<application>GNOME Klotski</application> Start Up Window"
-msgstr "Uppstartsfönster för <application>GNOME Klotski</application>"
+#: C/gnotski.xml:255(title)
+msgid "<application>Klotski</application> Start Up Window"
+msgstr "Uppstartsfönster för <application>Klotski</application>"
 
-#: C/gnotski.xml:260(phrase)
+#: C/gnotski.xml:0(application)
+msgid "Klotski"
+msgstr "Klotski"
+
+#: C/gnotski.xml:262(phrase)
 msgid "Shows <placeholder-1/> main window. Contains titlebar, menubar, game area and statusbar. Menubar contains Game and Help menus."
 msgstr "Visar huvudfönstret <placeholder-1/>. Innehåller titellist, menyrad, spelområde och statusrad. Menyraden innehåller menyerna Spel och Hjälp."
 
-#: C/gnotski.xml:271(term)
+#: C/gnotski.xml:273(term)
 msgid "Menubar"
 msgstr "Menyrad"
 
-#: C/gnotski.xml:275(term)
+#: C/gnotski.xml:277(term)
 msgid "Game menu"
 msgstr "Spelmenyn"
 
-#: C/gnotski.xml:277(para)
+#: C/gnotski.xml:279(para)
 msgid "The game menu allows you to start new games, view the highest scores and quit the program."
 msgstr "Spelmenyn låter dig starta nya spel, visa poänglistan och avsluta programmet."
 
-#: C/gnotski.xml:282(term)
+#: C/gnotski.xml:284(term)
 msgid "Help menu"
 msgstr "Hjälpmenyn"
 
-#: C/gnotski.xml:284(para)
-msgid "The help menu allows you to view the documentation for <application>GNOME Klotski</application>"
-msgstr "Hjälpmenyn låter dig visa dokumentationen för <application>GNOME Klotski</application>"
+#: C/gnotski.xml:286(para)
+msgid "The help menu allows you to view the documentation for <application>Klotski</application>"
+msgstr "Hjälpmenyn låter dig visa dokumentationen för <application>Klotski</application>"
 
-#: C/gnotski.xml:291(term)
+#: C/gnotski.xml:293(term)
 msgid "Game area"
 msgstr "Spelområdet"
 
-#: C/gnotski.xml:293(para)
+#: C/gnotski.xml:295(para)
 msgid "The game area shows the blocks in the current game. You can drag the blocks around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
 msgstr "Spelområdet visar blocken i det aktuella spelet. Du kan dra runt blocken med musen som beskrivs i <xref linkend=\"gnotski-moving\"/>."
 
-#: C/gnotski.xml:299(term)
+#: C/gnotski.xml:301(term)
 msgid "Statusbar"
 msgstr "Statusrad"
 
-#: C/gnotski.xml:301(para)
+#: C/gnotski.xml:303(para)
 msgid "The statusbar shows how many moves you have taken so far."
 msgstr "Statusraden visar hur många steg du har tagit än så länge."
 
 #. ==== End of Figure ====
-#: C/gnotski.xml:268(para)
-msgid "The <application>GNOME Klotski</application> window contains the following elements: <placeholder-1/>"
-msgstr "<application>GNOME Klotski</application>-fönstret innehåller följande element: <placeholder-1/>"
+#: C/gnotski.xml:270(para)
+msgid "The <application>Klotski</application> window contains the following elements: <placeholder-1/>"
+msgstr "<application>Klotski</application>-fönstret innehåller följande element: <placeholder-1/>"
 
-#: C/gnotski.xml:310(title)
+#: C/gnotski.xml:312(title)
 msgid "Starting a new game"
 msgstr "Starta ett nytt spel"
 
-#: C/gnotski.xml:311(para)
+#: C/gnotski.xml:313(para)
 msgid "Use the <guimenu>Game menu</guimenu> to start a new game. The items <guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle belongs to one of the four categories found in the submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru Climb</guisubmenu>. In these submenus, each puzzle name refers to a game scenario."
 msgstr "Använd <guimenu>Spel-menyn</guimenu> för att starta ett nytt spel. Objekten <guimenuitem>Nästa pussel</guimenuitem> och <guimenuitem>Föregående pussel</guimenuitem> låter dig navigera bland pusslen. Varje pussel tillhör en av de fyra kategorierna som hittas i undermenyerna <guisubmenu>HuaRong-stigen</guisubmenu>, <guisubmenu>Utmaningspaketet</guisubmenu>, <guisubmenu>Skicklighetspaketet</guisubmenu> och <guisubmenu>Minoru-klättring</guisubmenu>. I dessa undermenyer refererar pusselnamnet till ett spelscenario."
 
-#: C/gnotski.xml:319(title)
+#: C/gnotski.xml:321(title)
 msgid "Starting a game"
 msgstr "Starta ett spel"
 
-#: C/gnotski.xml:320(para)
+#: C/gnotski.xml:322(para)
 msgid "To start the hardest game provided, choose <menuchoice><guimenu>Game</guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</guimenuitem></menuchoice>"
 msgstr "För att starta det svåraste spelet som finns tillgängligt ska du välja <menuchoice><guimenu>Spel</guimenu><guisubmenu>Minoru-klättring</guisubmenu><guimenuitem>Klättring 24 Pro</guimenuitem></menuchoice>"
 
-#: C/gnotski.xml:331(title)
+#: C/gnotski.xml:333(title)
 msgid "Moving blocks"
 msgstr "Flytta block"
 
-#: C/gnotski.xml:332(para)
+#: C/gnotski.xml:334(para)
 msgid "To move a block, click on it, hold down the mouse button and drag it to its new location. You cannot move the green blocks or the block that borders the game. You cannot move a block to a space already occupied by another block, with the exception that you may move the patterned block through the green blocks to win."
 msgstr "För att flytta ett block ska du klicka på det, hålla ner musknappen och dra det till dess nya plats. Du kan inte flytta de gröna blocken eller blocket som avgränsar spelområdet. Du kan inte flytta ett block till en plats som det redan finns ett block på, med undantaget att du får flytta det mönstrade blocket genom de gröna blocken för att vinna spelet."
 
-#: C/gnotski.xml:352(title)
+#: C/gnotski.xml:354(title)
 msgid "Authors"
 msgstr "Upphovsmän"
 
-#: C/gnotski.xml:353(para)
+#: C/gnotski.xml:355(para)
 msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
 msgstr "<application>Klotski</application> skrevs av Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Den här handboken skrevs av Andrew Sobala. För att rapportera fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
 
-#: C/gnotski.xml:373(title)
+#: C/gnotski.xml:375(title)
 msgid "License"
 msgstr "Licens"
 
-#: C/gnotski.xml:374(para)
+#: C/gnotski.xml:376(para)
 msgid "This program and tile artwork is free software; you can redistribute it and/or modify it under the terms of the <citetitle>GNU General Public License</citetitle> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
 msgstr "Det här programmet och grafiken är fri programvara; du kan distribuera det och/eller ändra det under villkoren för <citetitle>GNU General Public License</citetitle> som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (upp till dig) någon senare version."
 
-#: C/gnotski.xml:381(para)
+#: C/gnotski.xml:383(para)
 msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public License</citetitle> for more details."
 msgstr "Det här programmet distribueras i hopp om att det ska vara användbart, men UTAN GARANTIER; även utan garanti för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SPECIFIKT ÄNDAMÅL. Se <citetitle>GNU General Public License</citetitle> för mer information."
 
-#: C/gnotski.xml:387(para)
+#: C/gnotski.xml:389(para)
 msgid "A copy of the <citetitle>GNU General Public License</citetitle> is included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy of the <citetitle>GNU General Public License</citetitle> from the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing to <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
 msgstr "En kopia av <citetitle>GNU General Public License</citetitle> finns inkluderad som en bilaga till <citetitle>Användarguide för GNOME</citetitle>. Du kan även få en kopia av <citetitle>GNU General Public License</citetitle> från Free Software Foundation genom att besöka <ulink type=\"http\" url=\"http://www.fsf.org\">deras webbplats</ulink> eller genom att skriva till <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/gnotski.xml:0(None)
 msgid "translator-credits"
-msgstr "Daniel Nylander <po@danielnylander.se>, 2007"
+msgstr "Daniel Nylander <po@danielnylander.se>, 2007, 2008"
 
