@@ -125,15 +125,6 @@ static const GamesScoresCategory scorecats[] = { {"1", N_("Only 18 steps")},
 {"26", N_("American Pie")},
 {"27", N_("Traffic Jam")},
 {"28", N_("Sunshine")},
-{"29", N_("Block 10")},
-{"30", N_("Block 10 Pro")},
-{"31", N_("Climb 12")},
-{"32", N_("Climb 12 Pro")},
-{"33", N_("Climb 15 Winter")},
-{"34", N_("Climb 15 Spring")},
-{"35", N_("Climb 15 Summer")},
-{"36", N_("Climb 15 Fall")},
-{"37", N_("Climb 24 Pro")},
 GAMES_SCORES_LAST_CATEGORY
 };
 
@@ -409,64 +400,6 @@ const levelinfo level[] = {
    "#ddFee** **ffOZZ#"
    "#MMKQQ*   *PPS^^#"
    "#VVLXX** **bbRcc#" "#VVLXXD***EbbRcc#" "#################"},
-
-  /* puzzle name */
-  {N_("Block 10"), 3,
-   6, 7, 30,
-   "##..##" "#a..c#" "#abcc#" "#ddfg#" "#d**g#" "#e**h#" "######"},
-
-  /* puzzle name */
-  {N_("Block 10 Pro"), 3,
-   6, 7, 81,
-   "##..##" "#a..b#" "#ccdd#" "#ecdf#" "#e**f#" "#g**h#" "######"},
-
-  /* puzzle name */
-  {N_("Climb 12"), 3,
-   7, 7, 59,
-   "###.###" "#a...b#" "#accdb#" "#ecddf#" "#gg*hh#" "#i***j#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 12 Pro"), 3,
-   7, 7, 92,
-   "###.###" "#a...b#" "#acddb#" "#effgh#" "#ee*hh#" "#i***j#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 15 Winter"), 3,
-   7, 9, 101,
-   "###.###"
-   "#a...b#"
-   "#cdefg#" "#ccegg#" "#hhijj#" "#hhikk#" "#ll*mm#" "#l***m#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 15 Spring"), 3,
-   7, 9, 104,
-   "###.###"
-   "#a...b#"
-   "#fedcc#" "#feddc#" "#hhigg#" "#hiigg#" "#ll*mm#" "#j***k#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 15 Summer"), 3,
-   7, 9, 132,
-   "###.###"
-   "#a...b#"
-   "#cceff#" "#ddeff#" "#gghii#" "#kghij#" "#kk*jj#" "#l***m#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 15 Fall"), 3,
-   7, 9, 148,
-   "###.###"
-   "#a...b#"
-   "#cceff#" "#ddegg#" "#dijjg#" "#hijjk#" "#hh*kk#" "#l***m#" "#######"},
-
-  /* puzzle name */
-  {N_("Climb 24 Pro"), 3,
-   9, 11, 227,
-   "####.####"
-   "#aa...bb#"
-   "#ccdddee#"
-   "#ccfggee#"
-   "#hhffgnn#"
-   "#ihklmno#" "#ijkzmpo#" "#jjqqqpp#" "#rrs*tuu#" "#rr***uu#" "#########"},
 };
 
 const gint max_level = G_N_ELEMENTS (level) - 1;
@@ -479,7 +412,6 @@ const char *pack_uipath[] = {
   "/ui/MainMenu/GameMenu/HuaRongTrail",
   "/ui/MainMenu/GameMenu/ChallengePack",
   "/ui/MainMenu/GameMenu/SkillPack",
-  "/ui/MainMenu/GameMenu/MinoruClimb"
 };
 
 const GtkActionEntry entries[] = {
@@ -492,8 +424,6 @@ const GtkActionEntry entries[] = {
   {"ChallengePack", NULL, N_("Challenge Pack")},
   /* set of puzzles */
   {"SkillPack", NULL, N_("Skill Pack")},
-  /* set of puzzles */
-  {"MinoruClimb", NULL, N_("Minoru Climb")},
   {"RestartPuzzle", GTK_STOCK_REFRESH, N_("_Restart Puzzle"), "<control>R",
    NULL, G_CALLBACK (restart_level_cb)},
   {"NextPuzzle", GTK_STOCK_GO_FORWARD, N_("Next Puzzle"), "Page_Down", NULL,
@@ -521,7 +451,6 @@ const char ui_description[] =
   "      <menu action='HuaRongTrail'/>"
   "      <menu action='ChallengePack'/>"
   "      <menu action='SkillPack'/>"
-  "      <menu action='MinoruClimb'/>"
   "      <separator/>"
   "      <menuitem action='Scores'/>"
   "      <separator/>"

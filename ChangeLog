@@ -1,3 +1,7 @@
+2008-04-22  Thomas H.P. Andersen <phomes@gmail.com>
+
+        * gnotski.c: Remove Minoru climb.
+
 2007-10-01  Thomas H.P. Andersen <phomes@gmail.com>
 
         * gnotski.c: Fix impossible move by splitting a block. Fixes bug #481245
