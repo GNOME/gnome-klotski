@@ -34,6 +34,7 @@
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-conf.h>
+#include <games-runtime.h>
 
 #ifdef HAVE_GNOME
 #include <gnome.h>
@@ -498,6 +499,9 @@ main (int argc, char **argv)
   g_thread_init (NULL);
 #endif
 
+  if (!games_runtime_init ("gnotski"))
+    return 1;
+
   setgid_io_init ();
 
   bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -589,6 +593,8 @@ main (int argc, char **argv)
 #ifdef HAVE_GNOME
   g_object_unref (program);
 #endif /* HAVE_GNOME */
+
+  games_runtime_shutdown ();
 
   return 0;
 }
