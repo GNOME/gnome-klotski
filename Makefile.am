@@ -10,11 +10,7 @@ gnotski_SOURCES = \
 	$(NULL)
 
 gnotski_CPPFLAGS = \
-	-I$(top_srcdir)					\
-	-I$(top_srcdir)/libgames-support		\
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-DDATADIR="\"$(datadir)\""			\
-	-DPIXMAPDIR="\"$(pkgdatadir)/gnotski/pixmaps\""		\
+	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
 
 gnotski_CFLAGS = \
