@@ -883,18 +883,6 @@ score_cb (GtkAction * action)
   show_score_dialog (0, FALSE);
 }
 
-static void
-update_score_state (void)
-{
-  GtkAction *score_action;
-  GList *top;
-
-  score_action = gtk_action_group_get_action (action_group, "Scores");
-  top = games_scores_get (highscores);
-  gtk_action_set_sensitive (score_action, top != NULL);
-
-}
-
 void
 game_score ()
 {
@@ -910,7 +898,6 @@ game_score ()
 
   score.plain = (guint32) moves;
   pos = games_scores_add_score (highscores, score);
-  update_score_state ();
   if (show_score_dialog (pos, TRUE) == GTK_RESPONSE_REJECT)
     gtk_main_quit ();
   else
@@ -1462,7 +1449,6 @@ new_game (gint requested_level)
   games_grid_frame_set (GAMES_GRID_FRAME (gameframe), width, height);
   configure_pixmaps ();
   update_menu_state ();
-  update_score_state ();
 }
 
 void
