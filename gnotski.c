@@ -99,7 +99,8 @@ gint current_level = -1;
 guint redraw_all_idle_id = 0;
 guint configure_idle_id = 0;
 
-static const GamesScoresCategory scorecats[] = { {"1", N_("Only 18 steps")},
+static const GamesScoresCategory scorecats[] = {
+{"1", N_("Only 18 steps")},
 {"2", N_("Daisy")},
 {"3", N_("Violet")},
 {"4", N_("Poppy")},
@@ -126,14 +127,7 @@ static const GamesScoresCategory scorecats[] = { {"1", N_("Only 18 steps")},
 {"25", N_("Baltic Sea")},
 {"26", N_("American Pie")},
 {"27", N_("Traffic Jam")},
-{"28", N_("Sunshine")},
-GAMES_SCORES_LAST_CATEGORY
-};
-
-static const GamesScoresDescription scoredesc = { scorecats,
-  "1",
-  "gnotski",
-  GAMES_SCORES_STYLE_PLAIN_ASCENDING
+{"28", N_("Sunshine")}
 };
 
 GamesScores *highscores;
@@ -530,7 +524,11 @@ main (int argc, char **argv)
                     G_CALLBACK (quit_cb), NULL);
 #endif /* WITH_SMCLIENT */
 
-  highscores = games_scores_new (&scoredesc);
+  highscores = games_scores_new ("gnotski",
+                                 scorecats, G_N_ELEMENTS (scorecats),
+                                 NULL, NULL,
+                                 0 /* default category */,
+                                 GAMES_SCORES_STYLE_PLAIN_ASCENDING);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(APPNAME_LONG));
