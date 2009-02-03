@@ -704,7 +704,7 @@ button_motion_space (GtkWidget * widget, GdkEventButton * event)
 }
 
 void
-gui_draw_space ()
+gui_draw_space (void)
 {
   static GdkGC *bordergc = NULL;
   static GdkGC *backgc = NULL;
@@ -872,7 +872,7 @@ score_cb (GtkAction * action)
 }
 
 void
-game_score ()
+game_score (void)
 {
   GamesScoreValue score;
   gint pos;
@@ -1364,7 +1364,7 @@ copymap (char *dest, char *src)
 }
 
 static void
-prepare_map (current_level)
+prepare_map (void)
 {
   gint x, y = 0;
   gchar *leveldata;
@@ -1433,7 +1433,7 @@ new_game (gint requested_level)
 
   games_conf_set_integer (NULL, KEY_LEVEL, current_level);
 
-  prepare_map (current_level);
+  prepare_map ();
   games_grid_frame_set (GAMES_GRID_FRAME (gameframe), width, height);
   configure_pixmaps ();
   update_menu_state ();
