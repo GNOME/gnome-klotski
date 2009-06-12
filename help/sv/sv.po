@@ -129,8 +129,8 @@ msgid "Feedback"
 msgstr "Återkoppling"
 
 #: C/gnotski.xml:150(para)
-msgid "To report a bug or make a suggestion regarding the <application>Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>Klotski</application> eller den här handboken, följ anvisningarna på <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME:s återkopplingssida</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>Klotski</application> eller den här handboken, följ anvisningarna på <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME:s återkopplingssida</ulink>."
 
 #: C/gnotski.xml:159(primary)
 msgid "GNOME Klotski"
@@ -157,8 +157,8 @@ msgid "This program is distributed under the terms of the GNU General Public lic
 msgstr "Det här programmet distribueras under villkoren för GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (enligt dig) någon senare version. En kopia av den här licensen kan hittas på den här <ulink url=\"ghelp:gpl\" type=\"help\">länken</ulink>, eller i filen COPYING som inkluderats i källkoden för det här programmet."
 
 #: C/gnotski.xml:182(para)
-msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
+msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentet</ulink>."
 
 #: C/gnotski.xml:191(title)
 msgid "Objective"
@@ -278,8 +278,8 @@ msgid "Authors"
 msgstr "Upphovsmän"
 
 #: C/gnotski.xml:355(para)
-msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "<application>Klotski</application> skrevs av Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Den här handboken skrevs av Andrew Sobala. För att rapportera fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
+msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "<application>Klotski</application> skrevs av Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Den här handboken skrevs av Andrew Sobala. För att rapportera fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentet</ulink>."
 
 #: C/gnotski.xml:375(title)
 msgid "License"

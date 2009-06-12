@@ -129,8 +129,8 @@ msgid "Feedback"
 msgstr "Commenti"
 
 #: C/gnotski.xml:150(para)
-msgid "To report a bug or make a suggestion regarding the <application>Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Klotski</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url=\"ghelp:gnome-feedback\" type=\"help\">pagina di commenti su GNOME</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Klotski</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Klotski</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">pagina di commenti su GNOME</ulink>."
 
 #: C/gnotski.xml:159(primary)
 msgid "GNOME Klotski"
@@ -157,8 +157,8 @@ msgid "This program is distributed under the terms of the GNU General Public lic
 msgstr "Questo programma è distribuito secondo i termini della GNU General Public License come pubblicata dalla Free Software Foundation; sia la versione 2 di questa licenza, che (secondo la proprio scelta) ogni altra versione successiva. Una copia di questa licenza può essere trovata a questo <ulink url=\"ghelp:gpl\" type=\"help\">collegamento</ulink>, oppure nel file COPYING incluso con il codice sorgente di questo programma."
 
 #: C/gnotski.xml:182(para)
-msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "Per segnalare un problema o inviare suggerimenti su questa applicazione o su questo manuale, seguire le istruzioni presenti in questo <ulink url=\"ghelp:gnome-feedback\" type=\"help\">documento</ulink>."
+msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "Per segnalare un problema o inviare suggerimenti su questa applicazione o su questo manuale, seguire le istruzioni presenti in questo <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">documento</ulink>."
 
 #: C/gnotski.xml:191(title)
 msgid "Objective"
@@ -278,8 +278,8 @@ msgid "Authors"
 msgstr "Autori"
 
 #: C/gnotski.xml:355(para)
-msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "<application>Klotski</application> è stato scritto da Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Questo manuale è stato scritto da Andrew Sobala. Per segnalare un problema o inviare suggerimenti su questa applicazione o su questo manuale, seguire le indicazioni contenute in questo <ulink url=\"ghelp:gnome-feedback\" type=\"help\">documento</ulink>."
+msgid "<application>Klotski</application> was written by Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "<application>Klotski</application> è stato scritto da Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Questo manuale è stato scritto da Andrew Sobala. Per segnalare un problema o inviare suggerimenti su questa applicazione o su questo manuale, seguire le indicazioni contenute in questo <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">documento</ulink>."
 
 #: C/gnotski.xml:375(title)
 msgid "License"

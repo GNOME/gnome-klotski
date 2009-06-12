@@ -184,7 +184,7 @@ msgstr ""
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
 msgstr ""
 
 #: C/gnotski.xml:159(primary)
@@ -227,7 +227,7 @@ msgstr ""
 #: C/gnotski.xml:182(para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
-"manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" "
+"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
 "type=\"help\">document</ulink>."
 msgstr ""
 
@@ -390,7 +390,7 @@ msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
 "report a bug or make a suggestion regarding this application or this manual, "
-"follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help"
+"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">document</ulink>."
 msgstr ""
 
