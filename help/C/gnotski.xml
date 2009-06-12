@@ -150,7 +150,7 @@
     <legalnotice> 
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
-      this manual, follow the directions in the <ulink url="ghelp:gnome-feedback"
+      this manual, follow the directions in the <ulink url="ghelp:user-guide?feedback-bugs"
 	  type="help">GNOME Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
@@ -184,7 +184,7 @@
 	<para>
 	To report a bug or make a suggestion regarding this application or
 	this manual, follow the directions in this 
-	<ulink url="ghelp:gnome-feedback"   type="help">document</ulink>.
+	<ulink url="ghelp:user-guide?feedback-bugs" type="help">document</ulink>.
 	</para>
   </sect1>
 
@@ -359,7 +359,7 @@ but it is better to omit this section than give a false sense of perfection
    (<email>lars.rydlinge@hig.se</email>). This manual was written by Andrew Sobala.
    To report a bug or make a suggestion regarding this application or
    this manual, follow the directions in this
-   <ulink url="ghelp:gnome-feedback" type="help">document</ulink>.
+   <ulink url="ghelp:user-guide?feedback-bugs" type="help">document</ulink>.
   </para>
 
   <!-- For translations: uncomment this:
