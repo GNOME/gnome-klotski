@@ -582,8 +582,8 @@ expose_space (GtkWidget * widget, GdkEventExpose * event)
   if (clear_game)
     return FALSE;
 
-  gdk_draw_drawable (widget->window,
-		     widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
+  gdk_draw_drawable (gtk_widget_get_window (widget),
+		     gtk_widget_get_style (widget)->fg_gc[GTK_STATE_NORMAL],
 		     buffer, event->area.x, event->area.y,
 		     event->area.x, event->area.y,
 		     event->area.width, event->area.height);
@@ -714,9 +714,9 @@ gui_draw_space (void)
   GtkStyle *style;
 
   if (!backgc)
-    backgc = gdk_gc_new (space->window);
+    backgc = gdk_gc_new (gtk_widget_get_window (space));
   if (!bordergc)
-    bordergc = gdk_gc_new (space->window);
+    bordergc = gdk_gc_new (gtk_widget_get_window (space));
 
   style = gtk_widget_get_style (space);
 
@@ -733,7 +733,7 @@ gui_draw_space (void)
   if (buffer)
     g_object_unref (buffer);
 
-  buffer = gdk_pixmap_new (space->window,
+  buffer = gdk_pixmap_new (gtk_widget_get_window (space),
 			   width * tile_size + SPACE_PADDING,
 			   height * tile_size + SPACE_PADDING, -1);
 
@@ -1457,7 +1457,7 @@ save_state_cb (EggSMClient *client,
   gint argc;
   gint xpos, ypos;
 
-  gdk_window_get_origin (window->window, &xpos, &ypos);
+  gdk_window_get_origin (gtk_widget_get_window (window), &xpos, &ypos);
 
   argc = 0;
   argv[argc++] = g_get_prgname ();
