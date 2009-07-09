@@ -79,7 +79,6 @@ endif
 
 install-scorefiles-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ; fi
 	-for i in ${SCOREFILES} ; do \
 	  touch             $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
 	  chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gnotski.$$i.scores; \
@@ -87,6 +86,11 @@ install-scorefiles-local:
 	done
 
 install-data-local: install-schemas-local install-scorefiles-local
+
+install-exec-hook:
+	-if test "$(setgid)" = "true"; then \
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ;\
+	fi
 
 @INTLTOOL_SCHEMAS_RULE@
 @INTLTOOL_DESKTOP_RULE@
