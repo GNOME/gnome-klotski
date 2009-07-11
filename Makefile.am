@@ -48,8 +48,10 @@ pixmap_DATA = \
 	$(NULL)
 
 schema_in_files = gnotski.schemas.in
+if HAVE_GNOME
 schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+endif
 
 desktop_in_files = gnotski.desktop.in.in
 desktopdir = $(datadir)/applications
