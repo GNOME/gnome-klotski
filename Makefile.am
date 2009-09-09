@@ -53,6 +53,8 @@ schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 endif
 
+man_MANS = gnotski.6
+
 desktop_in_files = gnotski.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
@@ -63,6 +65,7 @@ EXTRA_DIST = \
 	README			\
 	$(pixmap_DATA)		\
 	$(schema_in_files)	\
+	$(man_MANS)		\
 	$(NULL)
 
 CLEANFILES = $(desktop_DATA) $(schema_DATA)
