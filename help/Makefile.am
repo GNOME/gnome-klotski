@@ -1,6 +1,6 @@
 include $(top_srcdir)/gnome-doc-utils.make
 
-DOC_LINGUAS = ca cs de el en_GB es eu fr it oc sv
+DOC_LINGUAS = ca cs de el en_GB es eu fr it oc sr sv
 
 DOC_MODULE = gnotski
 
