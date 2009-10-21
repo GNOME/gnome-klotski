@@ -97,3 +97,5 @@ install-exec-hook:
 
 @INTLTOOL_SCHEMAS_RULE@
 @INTLTOOL_DESKTOP_RULE@
+
+-include $(top_srcdir)/git.mk
