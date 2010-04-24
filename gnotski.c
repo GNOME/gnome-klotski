@@ -36,6 +36,7 @@
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-stock.h>
+#include <libgames-support/games-fullscreen-action.h>
 
 #ifdef WITH_SMCLIENT
 #include <libgames-support/eggsmclient.h>
@@ -73,7 +74,6 @@ GamesPreimage *tiles_preimage;
 
 GtkActionGroup *action_group;
 GtkAction *fullscreen_action;
-GtkAction *leave_fullscreen_action;
 
 gboolean clear_buffer = TRUE;
 gboolean clear_game = TRUE;
@@ -156,9 +156,6 @@ void game_score (void);
 gint game_over (void);
 
 gboolean window_resize_cb (GtkWidget *, GdkEventConfigure *, gpointer);
-static void set_fullscreen_actions (gboolean is_fullscreen);
-static void fullscreen_cb (GtkAction * action);
-static gboolean window_state_cb (GtkWidget * widget, GdkEventWindowState * event);
 
 void new_game (gint requested_level);
 
@@ -429,10 +426,6 @@ const GtkActionEntry entries[] = {
   {"Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game_cb)},
   {"Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_cb)},
   {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_cb)},
-  {"Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_cb)},
-  {"LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_cb)},
   {"Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (score_cb)}
 };
 
@@ -454,7 +447,6 @@ const char ui_description[] =
   "    </menu>"
   "    <menu action='ViewMenu'>"
   "      <menuitem action='Fullscreen'/>"
-  "      <menuitem action='LeaveFullscreen'/>"
   "    </menu>"
   "    <menu action='HelpMenu'>"
   "      <menuitem action='Contents'/>"
@@ -542,8 +534,6 @@ main (int argc, char **argv)
 
   g_signal_connect (window, "delete_event",
 		    G_CALLBACK (quit_game_cb), NULL);
-  g_signal_connect (window, "window_state_event",
-		    G_CALLBACK (window_state_cb), NULL);
 
 
   vbox = gtk_vbox_new (FALSE, 0);
@@ -602,37 +592,6 @@ redraw_all (void)
     for (x = 0; x < width; x++)
       gui_draw_pixmap (map, x, y);
 
-  return FALSE;
-}
-
-
-static void
-set_fullscreen_actions (gboolean is_fullscreen)
-{
-  gtk_action_set_sensitive (leave_fullscreen_action, is_fullscreen);
-  gtk_action_set_visible (leave_fullscreen_action, is_fullscreen);
-
-  gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
-  gtk_action_set_visible (fullscreen_action, !is_fullscreen);
-}
-
-static void
-fullscreen_cb (GtkAction * action)
-{
-  if (action == fullscreen_action) {
-    gtk_window_fullscreen (GTK_WINDOW (window));
-  } else {
-    gtk_window_unfullscreen (GTK_WINDOW (window));
-  }
-}
-
-/* Just in case something else takes us to/from fullscreen. */
-static gboolean
-window_state_cb (GtkWidget * widget, GdkEventWindowState * event)
-{
-  if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
-    set_fullscreen_actions (event->new_window_state &
-			    GDK_WINDOW_STATE_FULLSCREEN);
   return FALSE;
 }
 
@@ -1073,12 +1032,8 @@ create_menubar (void)
   gtk_action_group_add_actions (action_group, entries,
 				G_N_ELEMENTS (entries), window);
 
-  fullscreen_action =
-    gtk_action_group_get_action (action_group, "Fullscreen");
-  leave_fullscreen_action =
-    gtk_action_group_get_action (action_group, "LeaveFullscreen");
-
-  set_fullscreen_actions (FALSE);
+  fullscreen_action = GTK_ACTION (games_fullscreen_action_new ("Fullscreen", GTK_WINDOW (window)));
+  gtk_action_group_add_action_with_accel (action_group, fullscreen_action, NULL);
 
   ui_manager = gtk_ui_manager_new ();
   gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
