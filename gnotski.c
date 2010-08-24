@@ -66,8 +66,6 @@ GtkWidget *gameframe;
 GtkWidget *messagewidget;
 GtkWidget *moveswidget;
 
-GdkGC *space_gc = NULL;
-
 GdkPixmap *buffer = NULL;
 GdkPixbuf *tiles_pixbuf = NULL;
 GamesPreimage *tiles_preimage;
@@ -569,14 +567,17 @@ main (int argc, char **argv)
 static gboolean
 expose_space (GtkWidget * widget, GdkEventExpose * event)
 {
+  cairo_t *cr;
+
   if (clear_game)
     return FALSE;
 
-  gdk_draw_drawable (gtk_widget_get_window (widget),
-		     gtk_widget_get_style (widget)->fg_gc[GTK_STATE_NORMAL],
-		     buffer, event->area.x, event->area.y,
-		     event->area.x, event->area.y,
-		     event->area.width, event->area.height);
+  cr = gdk_cairo_create (gtk_widget_get_window (widget));
+  gdk_cairo_rectangle (cr, &event->area);
+  gdk_cairo_set_source_pixmap (cr, buffer, 0, 0);
+  cairo_fill (cr);
+  cairo_destroy (cr);
+
   return FALSE;
 }
 
@@ -667,27 +668,10 @@ button_motion_space (GtkWidget * widget, GdkEventButton * event)
 void
 gui_draw_space (void)
 {
-  static GdkGC *bordergc = NULL;
-  static GdkGC *backgc = NULL;
-  GdkColor *bg_color;
+  cairo_t *cr;
   GtkStyle *style;
 
-  if (!backgc)
-    backgc = gdk_gc_new (gtk_widget_get_window (space));
-  if (!bordergc)
-    bordergc = gdk_gc_new (gtk_widget_get_window (space));
-
   style = gtk_widget_get_style (space);
-
-  bg_color = gdk_color_copy (&style->bg[GTK_STATE_NORMAL]);
-  gdk_gc_set_foreground (backgc, bg_color);
-  gdk_gc_set_fill (backgc, GDK_SOLID);
-  gdk_color_free (bg_color);
-
-  bg_color = gdk_color_copy (&style->fg[GTK_STATE_NORMAL]);
-  gdk_gc_set_foreground (bordergc, bg_color);
-  gdk_gc_set_fill (bordergc, GDK_SOLID);
-  gdk_color_free (bg_color);
 
   if (buffer)
     g_object_unref (buffer);
@@ -696,16 +680,20 @@ gui_draw_space (void)
 			   width * tile_size + SPACE_PADDING,
 			   height * tile_size + SPACE_PADDING, -1);
 
-  gdk_draw_rectangle (buffer, bordergc, FALSE, 0, 0,
-		      width * tile_size + SPACE_PADDING - 1,
-		      height * tile_size + SPACE_PADDING - 1);
-  gdk_draw_rectangle (buffer, backgc, TRUE, 1, 1,
-		      width * tile_size + SPACE_PADDING - 2,
-		      height * tile_size + SPACE_PADDING - 2);
+  cr = gdk_cairo_create (buffer);
+
+  gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+  cairo_paint (cr);
+
+  gdk_cairo_set_source_color (cr, &style->fg[GTK_STATE_NORMAL]);
+  cairo_set_line_width (cr, 1.0);
+  cairo_rectangle (cr, 1.5, 1.5, width * tile_size + SPACE_PADDING - 2.0,
+		      height * tile_size + SPACE_PADDING - 2.0);
+  cairo_stroke (cr);
+
+  cairo_destroy (cr);
 
   clear_buffer = clear_game = FALSE;
-
-  space_gc = backgc;
 
   gtk_widget_queue_draw (space);
 }
@@ -716,17 +704,29 @@ gui_draw_pixmap (char *target, gint x, gint y)
   gint value;
   gint overlay_size;
   gint overlay_offset;
+  cairo_t *cr;
+  GtkStyle *style;
+  GdkRectangle rect;
 
-  gdk_draw_rectangle (buffer, space_gc, TRUE,
-		      x * tile_size + SPACE_OFFSET,
-		      y * tile_size + SPACE_OFFSET, tile_size, tile_size);
+  rect.x = x * tile_size + SPACE_OFFSET;
+  rect.y = y * tile_size + SPACE_OFFSET;
+  rect.width = tile_size;
+  rect.height = tile_size;
+
+  style = gtk_widget_get_style (space);
+
+  cr = gdk_cairo_create (buffer);
+  gdk_cairo_rectangle (cr, &rect);
+  gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+
+  cairo_fill (cr);
 
   if (get_piece_id (target, x, y) != ' ') {
-    gdk_draw_pixbuf (buffer, NULL, tiles_pixbuf,
-		     get_piece_nr (target, x, y) * tile_size, tile_size / 2,
-		     x * tile_size + SPACE_OFFSET,
-		     y * tile_size + SPACE_OFFSET,
-		     tile_size, tile_size, GDK_RGB_DITHER_NORMAL, 0, 0);
+    gdk_cairo_rectangle (cr, &rect);
+    gdk_cairo_set_source_pixbuf (cr, tiles_pixbuf,
+                                 rect.x - get_piece_nr (target, x, y) * tile_size,
+                                 rect.y - tile_size / 2);
+    cairo_fill (cr);
   }
 
   if (get_piece_id (target, x, y) == '*') {
@@ -738,18 +738,20 @@ gui_draw_pixmap (char *target, gint x, gint y)
     overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
     overlay_offset =
       THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
-    gdk_draw_pixbuf (buffer, NULL, tiles_pixbuf,
-		     value * tile_size + overlay_offset,
-		     overlay_offset + tile_size / 2,
-		     x * tile_size + overlay_offset + SPACE_OFFSET,
-		     y * tile_size + overlay_offset + SPACE_OFFSET,
-		     overlay_size, overlay_size, GDK_RGB_DITHER_NORMAL, 0, 0);
+
+    cairo_rectangle (cr,
+                     rect.x + overlay_offset, rect.y + overlay_offset,
+                     overlay_size, overlay_size);
+
+    gdk_cairo_set_source_pixbuf (cr, tiles_pixbuf,
+                                 rect.x - value * tile_size,
+                                 rect.y - tile_size / 2);
+    cairo_fill (cr);
   }
 
-  gtk_widget_queue_draw_area (space,
-			      x * tile_size + SPACE_OFFSET,
-			      y * tile_size + SPACE_OFFSET,
-			      tile_size, tile_size);
+  gdk_window_invalidate_rect (gtk_widget_get_window (space), &rect, TRUE);
+
+  cairo_destroy (cr);
 }
 
 static gint
