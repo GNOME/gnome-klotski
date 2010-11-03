@@ -66,7 +66,7 @@ GtkWidget *gameframe;
 GtkWidget *messagewidget;
 GtkWidget *moveswidget;
 
-GdkPixmap *buffer = NULL;
+cairo_surface_t *buffer = NULL;
 GdkPixbuf *tiles_pixbuf = NULL;
 GamesPreimage *tiles_preimage;
 
@@ -565,18 +565,13 @@ main (int argc, char **argv)
 }
 
 static gboolean
-expose_space (GtkWidget * widget, GdkEventExpose * event)
+draw_space (GtkWidget * widget, cairo_t *cr)
 {
-  cairo_t *cr;
-
   if (clear_game)
     return FALSE;
 
-  cr = gdk_cairo_create (gtk_widget_get_window (widget));
-  gdk_cairo_rectangle (cr, &event->area);
-  gdk_cairo_set_source_pixmap (cr, buffer, 0, 0);
-  cairo_fill (cr);
-  cairo_destroy (cr);
+  cairo_set_source_surface (cr, buffer, 0, 0);
+  cairo_paint (cr);
 
   return FALSE;
 }
@@ -674,13 +669,14 @@ gui_draw_space (void)
   style = gtk_widget_get_style (space);
 
   if (buffer)
-    g_object_unref (buffer);
+    cairo_surface_destroy (buffer);
 
-  buffer = gdk_pixmap_new (gtk_widget_get_window (space),
+  buffer = gdk_window_create_similar_surface (gtk_widget_get_window (space),
+			   CAIRO_CONTENT_COLOR_ALPHA,
 			   width * tile_size + SPACE_PADDING,
-			   height * tile_size + SPACE_PADDING, -1);
+			   height * tile_size + SPACE_PADDING);
 
-  cr = gdk_cairo_create (buffer);
+  cr = cairo_create (buffer);
 
   gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
   cairo_paint (cr);
@@ -715,7 +711,7 @@ gui_draw_pixmap (char *target, gint x, gint y)
 
   style = gtk_widget_get_style (space);
 
-  cr = gdk_cairo_create (buffer);
+  cr = cairo_create (buffer);
   gdk_cairo_rectangle (cr, &rect);
   gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
 
@@ -946,8 +942,8 @@ create_space (void)
 			 | GDK_POINTER_MOTION_MASK | GDK_BUTTON_RELEASE_MASK);
   /* We do our own double-buffering. */
   gtk_widget_set_double_buffered (space, FALSE);
-  g_signal_connect (G_OBJECT (space), "expose_event",
-		    G_CALLBACK (expose_space), NULL);
+  g_signal_connect (G_OBJECT (space), "draw",
+		    G_CALLBACK (draw_space), NULL);
   g_signal_connect (G_OBJECT (space), "configure_event",
 		    G_CALLBACK (configure_space), NULL);
   g_signal_connect (G_OBJECT (space), "button_press_event",
