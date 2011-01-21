@@ -831,7 +831,6 @@ score_cb (GtkAction * action)
 void
 game_score (void)
 {
-  GamesScoreValue score;
   gint pos;
   gchar *key;
     
@@ -841,8 +840,7 @@ game_score (void)
   g_free (key);
   gtk_image_set_from_stock (GTK_IMAGE(level_image[current_level]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
 
-  score.plain = (guint32) moves;
-  pos = games_scores_add_score (highscores, score);
+  pos = games_scores_add_plain_score (highscores, (guint32) moves);
   if (show_score_dialog (pos, TRUE) == GTK_RESPONSE_REJECT)
     gtk_main_quit ();
   else
