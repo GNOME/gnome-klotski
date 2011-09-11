@@ -532,7 +532,7 @@ main (int argc, char **argv)
 		    G_CALLBACK (quit_game_cb), NULL);
 
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
   load_image ();
@@ -662,9 +662,13 @@ void
 gui_draw_space (void)
 {
   cairo_t *cr;
-  GtkStyle *style;
+  GtkStyleContext *style;
+  GdkRGBA fg;
+  GdkRGBA bg;
 
-  style = gtk_widget_get_style (space);
+  style = gtk_widget_get_style_context (space);
+  gtk_style_context_get_color (style, GTK_STATE_FLAG_NORMAL, &fg);
+  gtk_style_context_get_background_color (style, GTK_STATE_FLAG_NORMAL, &bg);
 
   if (buffer)
     cairo_surface_destroy (buffer);
@@ -676,10 +680,10 @@ gui_draw_space (void)
 
   cr = cairo_create (buffer);
 
-  gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+  gdk_cairo_set_source_rgba (cr, &bg);
   cairo_paint (cr);
 
-  gdk_cairo_set_source_color (cr, &style->fg[GTK_STATE_NORMAL]);
+  gdk_cairo_set_source_rgba (cr, &fg);
   cairo_set_line_width (cr, 1.0);
   cairo_rectangle (cr, 1.5, 1.5, width * tile_size + SPACE_PADDING - 2.0,
 		      height * tile_size + SPACE_PADDING - 2.0);
@@ -699,7 +703,8 @@ gui_draw_pixmap (char *target, gint x, gint y)
   gint overlay_size;
   gint overlay_offset;
   cairo_t *cr;
-  GtkStyle *style;
+  GtkStyleContext *style;
+  GdkRGBA bg;
   GdkRectangle rect;
 
   rect.x = x * tile_size + SPACE_OFFSET;
@@ -707,11 +712,12 @@ gui_draw_pixmap (char *target, gint x, gint y)
   rect.width = tile_size;
   rect.height = tile_size;
 
-  style = gtk_widget_get_style (space);
+  style = gtk_widget_get_style_context (space);
+  gtk_style_context_get_background_color (style, GTK_STATE_FLAG_NORMAL, &bg);
 
   cr = cairo_create (buffer);
   gdk_cairo_rectangle (cr, &rect);
-  gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+  gdk_cairo_set_source_rgba (cr, &bg);
 
   cairo_fill (cr);
 
@@ -990,7 +996,7 @@ add_puzzle_menu (GtkUIManager * ui_manager)
     item = gtk_ui_manager_get_widget (ui_manager, g_strjoin("/", pack_uipath[level[i].group], level[i].name, NULL));
 
     /* Create a label and image for the menu item */
-    box = gtk_hbox_new (FALSE, 6);
+    box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
     labelw = gtk_label_new(label);
     gtk_misc_set_alignment (GTK_MISC (labelw), 0.0, 0.5);
     image = gtk_image_new ();
@@ -1043,7 +1049,8 @@ create_menubar (void)
 void
 create_statusbar (void)
 {
-  statusbar = gtk_hbox_new (TRUE, 0);
+  statusbar = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  gtk_box_set_homogeneous (GTK_BOX (statusbar), TRUE);
 
   messagewidget = gtk_label_new ("");
   gtk_box_pack_start (GTK_BOX (statusbar), messagewidget, FALSE, FALSE, 0);
