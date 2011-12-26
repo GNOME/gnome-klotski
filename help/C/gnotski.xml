@@ -313,19 +313,19 @@
 	<sect2 id="gnotski-new-game">
 		<title>Starting a new game</title>
 		<para>Use the <guimenu>Game menu</guimenu> to start a new game. The items 
-		<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</guimenuitem> allows you to
-		navigate the puzzles sequentially. Each puzzle belongs to one of the four categories found in the 
-		submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu>,
-		<guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru Climb</guisubmenu>. In these submenus, 
+		<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</guimenuitem> allows you to
+		navigate the puzzles sequentially. Each puzzle belongs to one of the three categories found in the 
+		submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and
+		<guisubmenu>Skill Pack</guisubmenu>.In these submenus, 
 		each puzzle name refers to a game scenario.
 		</para>
 		<example>
 		<title>Starting a game</title>
-		<para>To start the hardest game provided, choose
+		<para>To start a game, choose
 		<menuchoice>
 			<guimenu>Game</guimenu>
-			<guisubmenu>Minoru Climb</guisubmenu>
-			<guimenuitem>Climb 24 Pro</guimenuitem>
+			<guisubmenu>[category]</guisubmenu>
+			<guimenuitem>[game scenario]</guimenuitem>
 		</menuchoice>
 		</para></example>
 	</sect2>
