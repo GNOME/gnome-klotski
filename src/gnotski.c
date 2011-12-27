@@ -543,7 +543,7 @@ main (int argc, char **argv)
 
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), gameframe, TRUE, TRUE, 0);
-  gtk_box_pack_start (GTK_BOX (vbox), gtk_hseparator_new (), FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (vbox), gtk_separator_new (GTK_ORIENTATION_HORIZONTAL), FALSE, FALSE, 0);
   gtk_box_pack_end (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
 
   if (session_xpos >= 0 && session_ypos >= 0)
