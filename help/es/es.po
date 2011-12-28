@@ -1,27 +1,31 @@
 # translation of gnotski.HEAD.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnotski.HEAD\n"
-"POT-Creation-Date: 2008-01-03 18:49+0000\n"
-"PO-Revision-Date: 2008-02-12 11:35+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2011-12-26 23:38+0000\n"
+"PO-Revision-Date: 2011-12-28 13:55+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:202(None)
-msgid "@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
-msgstr "@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
+#: C/gnotski.xml:204(None)
+msgid ""
+"@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
+msgstr ""
+"@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:259(None)
+#: C/gnotski.xml:261(None)
 msgid ""
 "@@image: 'figures/gnotski_start_window.png'; "
 "md5=23e584de3f58e5baf5c9ca5098a7961e"
@@ -38,8 +42,9 @@ msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
 msgstr ""
-"Klotski es un juego tipo puzle en el que el objetivo es mover el bloque patrón "
-"al marcador, lo que se consigue moviendo los bloques que están en su camino."
+"Klotski es un juego tipo puzle en el que el objetivo es mover el bloque "
+"patrón al marcador, lo que se consigue moviendo los bloques que están en su "
+"camino."
 
 #: C/gnotski.xml:39(year)
 msgid "2002"
@@ -50,7 +55,7 @@ msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #: C/gnotski.xml:54(publishername) C/gnotski.xml:67(orgname)
-#: C/gnotski.xml:140(para)
+#: C/gnotski.xml:142(para)
 msgid "GNOME Documentation Project"
 msgstr "Proyecto de documentación de GNOME"
 
@@ -201,45 +206,47 @@ msgstr "Burton"
 msgid "ross@burtonini.com"
 msgstr "ross@burtonini.com"
 
-#: C/gnotski.xml:134(revnumber)
+#: C/gnotski.xml:136(revnumber)
 msgid "V2.0"
 msgstr "V2.0"
 
-#: C/gnotski.xml:135(date)
+#: C/gnotski.xml:137(date)
 msgid "13 August 2002"
 msgstr "13 de Agosto de 2002"
 
-#: C/gnotski.xml:137(para)
+#: C/gnotski.xml:139(para)
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: C/gnotski.xml:146(releaseinfo)
+#: C/gnotski.xml:148(releaseinfo)
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Este manual describe la versión 2.12 de Klotski."
 
-#: C/gnotski.xml:149(title)
+#: C/gnotski.xml:151(title)
 msgid "Feedback"
 msgstr "Comentarios"
 
-#: C/gnotski.xml:150(para)
+#: C/gnotski.xml:152(para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
 msgstr ""
-"Para informar de un fallo o hacer alguna sugerencia concerniente la aplicación <application>Klotski</"
-"application> o este manual, siga las indicaciones en la <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Página "
-"de comentarios de GNOME</ulink>."
+"Para informar de un fallo o hacer alguna sugerencia concerniente la "
+"aplicación <application>Klotski</application> o este manual, siga las "
+"indicaciones en la <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">Página de comentarios de GNOME</ulink>."
 
-#: C/gnotski.xml:159(primary)
+#: C/gnotski.xml:161(primary)
 msgid "GNOME Klotski"
 msgstr "Klotski"
 
-#: C/gnotski.xml:165(title)
+#: C/gnotski.xml:167(title)
 msgid "Introduction"
 msgstr "Introducción"
 
-#: C/gnotski.xml:166(para)
+#: C/gnotski.xml:168(para)
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
@@ -249,7 +256,7 @@ msgstr ""
 "Klotski. El objetivo es mover el bloque patrón al área rodeado por "
 "marcadores verdes."
 
-#: C/gnotski.xml:169(para)
+#: C/gnotski.xml:171(para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -257,7 +264,7 @@ msgstr ""
 "Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>) escribió "
 "<application>Klotski</application>."
 
-#: C/gnotski.xml:172(para)
+#: C/gnotski.xml:174(para)
 msgid ""
 "<application>Klotski</application> is included in the gnome-games package, "
 "which is part of the GNOME desktop environment. This document describes "
@@ -267,7 +274,7 @@ msgstr ""
 "que es parte del entorno de escritorio GNOME. Este documento describe la "
 "versión 2.12 de <application>Klotski</application>."
 
-#: C/gnotski.xml:175(para)
+#: C/gnotski.xml:177(para)
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -282,25 +289,25 @@ msgstr ""
 "type=\"help\">enlace</ulink>, o en el archivo COPYING incluido con el código "
 "fuente de este programa."
 
-#: C/gnotski.xml:182(para)
+#: C/gnotski.xml:184(para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
-"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">document</ulink>."
+"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">document</ulink>."
 msgstr ""
 "Para informar de un fallo o hacer alguna sugerencia concerniente a esta "
 "aplicación o este manual, siga las indicaciones en este <ulink url=\"ghelp:"
 "GNOME-feedback\" type=\"help\">documento</ulink>."
 
-#: C/gnotski.xml:191(title)
+#: C/gnotski.xml:193(title)
 msgid "Objective"
 msgstr "Objetivo"
 
-#: C/gnotski.xml:198(title)
+#: C/gnotski.xml:200(title)
 msgid "The winning move"
 msgstr "El movimiento ganador"
 
-#: C/gnotski.xml:205(phrase)
+#: C/gnotski.xml:207(phrase)
 msgid ""
 "The patterned block should be moved to the space bordered by the green "
 "markers."
@@ -308,7 +315,7 @@ msgstr ""
 "El bloque patrón debería moverse al espacio rodeado por los marcadores "
 "verdes."
 
-#: C/gnotski.xml:192(para)
+#: C/gnotski.xml:194(para)
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
@@ -320,15 +327,15 @@ msgstr ""
 "consigue moviendo un bloque cada vez con el ratón hasta que mueva el bloque "
 "patrón a los marcadores. <placeholder-1/>"
 
-#: C/gnotski.xml:217(title)
+#: C/gnotski.xml:219(title)
 msgid "Playing <application>Klotski</application>"
 msgstr "Jugar a <application>Klotski</application>"
 
-#: C/gnotski.xml:240(title)
+#: C/gnotski.xml:242(title)
 msgid "To Start <application>Klotski</application>"
 msgstr "Para iniciar <application>Klotski</application>"
 
-#: C/gnotski.xml:241(para)
+#: C/gnotski.xml:243(para)
 msgid ""
 "You can start <application>Klotski</application> from the Applications menu "
 "by choosing <menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>Gnotski</"
@@ -338,11 +345,11 @@ msgstr ""
 "eligiendo <menuchoice><guisubmenu>Juegos</guisubmenu><guimenuitem>Gnotski</"
 "guimenuitem></menuchoice>."
 
-#: C/gnotski.xml:250(title)
+#: C/gnotski.xml:252(title)
 msgid "The main window"
 msgstr "La ventana principal"
 
-#: C/gnotski.xml:251(para)
+#: C/gnotski.xml:253(para)
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -350,7 +357,7 @@ msgstr ""
 "Se mostrará la siguiente ventana cuando inicie "
 "<application><application>Klotski</application></application>."
 
-#: C/gnotski.xml:255(title)
+#: C/gnotski.xml:257(title)
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Ventana de inicio de <application>Klotski</application>"
 
@@ -358,7 +365,7 @@ msgstr "Ventana de inicio de <application>Klotski</application>"
 msgid "Klotski"
 msgstr "Klotski"
 
-#: C/gnotski.xml:262(phrase)
+#: C/gnotski.xml:264(phrase)
 msgid ""
 "Shows <placeholder-1/> main window. Contains titlebar, menubar, game area "
 "and statusbar. Menubar contains Game and Help menus."
@@ -367,15 +374,15 @@ msgstr ""
 "una barra de menú, un área de juego y una barra de estado. La barra de menú "
 "contiene los menús Juego y Ayuda."
 
-#: C/gnotski.xml:273(term)
+#: C/gnotski.xml:275(term)
 msgid "Menubar"
 msgstr "Barra de menú"
 
-#: C/gnotski.xml:277(term)
+#: C/gnotski.xml:279(term)
 msgid "Game menu"
 msgstr "Menú de Juego"
 
-#: C/gnotski.xml:279(para)
+#: C/gnotski.xml:281(para)
 msgid ""
 "The game menu allows you to start new games, view the highest scores and "
 "quit the program."
@@ -383,11 +390,11 @@ msgstr ""
 "El menú de juego le permite iniciar nuevos juegos, ver las máximas "
 "puntuaciones y salir del programa."
 
-#: C/gnotski.xml:284(term)
+#: C/gnotski.xml:286(term)
 msgid "Help menu"
 msgstr "Menú de Ayuda"
 
-#: C/gnotski.xml:286(para)
+#: C/gnotski.xml:288(para)
 msgid ""
 "The help menu allows you to view the documentation for <application>Klotski</"
 "application>"
@@ -395,11 +402,11 @@ msgstr ""
 "El menú de ayuda le permite ver la documentación de <application>Klotski</"
 "application>"
 
-#: C/gnotski.xml:293(term)
+#: C/gnotski.xml:295(term)
 msgid "Game area"
 msgstr "Área de juego"
 
-#: C/gnotski.xml:295(para)
+#: C/gnotski.xml:297(para)
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -408,16 +415,17 @@ msgstr ""
 "bloques alrededor con el ratón tal y como se describe en <xref linkend="
 "\"gnotski-moving\"/>."
 
-#: C/gnotski.xml:301(term)
+#: C/gnotski.xml:303(term)
 msgid "Statusbar"
 msgstr "Barra de estado"
 
-#: C/gnotski.xml:303(para)
+#: C/gnotski.xml:305(para)
 msgid "The statusbar shows how many moves you have taken so far."
-msgstr "La barra de estado muestra cuántos movimientos ha realizado hasta el momento."
+msgstr ""
+"La barra de estado muestra cuántos movimientos ha realizado hasta el momento."
 
 #. ==== End of Figure ====
-#: C/gnotski.xml:270(para)
+#: C/gnotski.xml:272(para)
 msgid ""
 "The <application>Klotski</application> window contains the following "
 "elements: <placeholder-1/>"
@@ -425,49 +433,59 @@ msgstr ""
 "La ventana de <application>Klotski</application> contiene los siguientes "
 "elementos: <placeholder-1/>"
 
-#: C/gnotski.xml:312(title)
+#: C/gnotski.xml:314(title)
 msgid "Starting a new game"
 msgstr "Iniciar un nuevo juego"
 
-#: C/gnotski.xml:313(para)
+#: C/gnotski.xml:315(para)
+#| msgid ""
+#| "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
+#| "<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</"
+#| "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
+#| "belongs to one of the four categories found in the submenus named "
+#| "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
+#| "guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru "
+#| "Climb</guisubmenu>. In these submenus, each puzzle name refers to a game "
+#| "scenario."
 msgid ""
 "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-"<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</"
+"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
 "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-"belongs to one of the four categories found in the submenus named "
+"belongs to one of the three categories found in the submenus named "
 "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru "
-"Climb</guisubmenu>. In these submenus, each puzzle name refers to a game "
-"scenario."
+"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
+"puzzle name refers to a game scenario."
 msgstr ""
-"Use el menú de <guimenu>Juego</guimenu> para iniciar un nuevo juego. Los "
-"elementos <guimenuitem>Siguiente juego</guimenuitem> y <guimenuitem>Juego "
+"Use el <guimenu>menú de juego</guimenu> para iniciar un juego nuevo. Los "
+"elementos <guimenuitem>Siguiente puzle</guimenuitem> y <guimenuitem>Puzle "
 "anterior</guimenuitem> le permiten navegar secuencialmente por los puzles. "
-"Cada puzle pertenece a una de las cuatro categorías llamadas "
+"Cada puzle pertenece a una de las tres categorías llamadas "
 "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, y <guisubmenu>Minoru "
-"Climb</guisubmenu> que están en los submenús. En estos submenús, el nombre "
-"de cada puzle se refiere al escenario de un juego."
+"guisubmenu> y <guisubmenu>Skill Pack</guisubmenu>. En estos submenús, el "
+"nombre de cada puzle se refiere al escenario de un juego."
 
-#: C/gnotski.xml:321(title)
+#: C/gnotski.xml:323(title)
 msgid "Starting a game"
 msgstr "Iniciar un juego"
 
-#: C/gnotski.xml:322(para)
+#: C/gnotski.xml:324(para)
+#| msgid ""
+#| "To start the hardest game provided, choose <menuchoice><guimenu>Game</"
+#| "guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</"
+#| "guimenuitem></menuchoice>"
 msgid ""
-"To start the hardest game provided, choose <menuchoice><guimenu>Game</"
-"guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</"
-"guimenuitem></menuchoice>"
+"To start a game, choose <menuchoice><guimenu>Game</guimenu><guisubmenu>"
+"[category]</guisubmenu><guimenuitem>[game scenario]</guimenuitem></"
+"menuchoice>"
 msgstr ""
-"Para iniciar el juego más difícil posible, elija <menuchoice><guimenu>Juego</"
-"guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</"
-"guimenuitem></menuchoice>"
+"Para iniciar un juego, elija <menuchoice><guimenu>Game</guimenu><guisubmenu>"
+"[categoría]</guisubmenu><guimenuitem>[escenario]</guimenuitem></menuchoice>"
 
-#: C/gnotski.xml:333(title)
+#: C/gnotski.xml:335(title)
 msgid "Moving blocks"
 msgstr "Mover los bloques"
 
-#: C/gnotski.xml:334(para)
+#: C/gnotski.xml:336(para)
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -481,17 +499,17 @@ msgstr ""
 "ocupado por otro bloque, a excepción del bloque patrón que puede pasar a "
 "través de los bloques verdes para así ganar."
 
-#: C/gnotski.xml:354(title)
+#: C/gnotski.xml:356(title)
 msgid "Authors"
 msgstr "Autores"
 
-#: C/gnotski.xml:355(para)
+#: C/gnotski.xml:357(para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
 "report a bug or make a suggestion regarding this application or this manual, "
-"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
-"\">document</ulink>."
+"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">document</ulink>."
 msgstr ""
 "Lars Rydlinge (<email>lars.rydlinge@hig.se</email>) escribió "
 "<application>Klotski</application>. Andrew Sobala escribió este manual. Para "
@@ -499,11 +517,11 @@ msgstr ""
 "o este manual, siga las indicaciones en este <ulink url=\"ghelp:gnome-"
 "feedback\" type=\"help\">documento</ulink>."
 
-#: C/gnotski.xml:375(title)
+#: C/gnotski.xml:377(title)
 msgid "License"
 msgstr "Licencia"
 
-#: C/gnotski.xml:376(para)
+#: C/gnotski.xml:378(para)
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -515,7 +533,7 @@ msgstr ""
 "GNU</citetitle> como se publicó por la Free Software Foundation, en la "
 "versión 2 de la licencia, o (a su elección) cualquier versión posterior."
 
-#: C/gnotski.xml:383(para)
+#: C/gnotski.xml:385(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -527,7 +545,7 @@ msgstr ""
 "IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la <citetitle>Licencia Pública "
 "General GNU</citetitle> para más detalles."
 
-#: C/gnotski.xml:389(para)
+#: C/gnotski.xml:391(para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -543,12 +561,11 @@ msgstr ""
 "citetitle>. También puede obtener una copia de la <citetitle>Licencia "
 "Pública General GNU</citetitle> de la Free Software Foundation visitando "
 "<ulink url=\"http://www.fsf.org\" type=\"http\">su página web</ulink> o "
-"escribiendo a la <address>Free Software Foundation, Inc. <street>59 Temple Place</"
-"street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-"1307</postcode><country>USA</country></address>"
+"escribiendo a la <address>Free Software Foundation, Inc. <street>59 Temple "
+"Place</street> - Suite 330 <city>Boston</city>, <state>MA</"
+"state><postcode>02111-1307</postcode><country>USA</country></address>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/gnotski.xml:0(None)
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
-
