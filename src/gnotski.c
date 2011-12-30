@@ -504,7 +504,7 @@ main (int argc, char **argv)
 
   games_stock_init ();
 
-  gtk_window_set_default_icon_name ("gnome-klotski");
+  gtk_window_set_default_icon_name ("gnotski");
   
 #ifdef WITH_SMCLIENT
   sm_client = egg_sm_client_get ();
@@ -1492,7 +1492,7 @@ about_cb (GtkAction * action)
                          "authors", authors,
 			 "documenters", documenters,
                          "translator-credits", _("translator-credits"),
-                         "logo-icon-name", "gnome-klotski",
+                         "logo-icon-name", "gnotski",
                          "website", "http://www.gnome.org/projects/gnome-games",
                          "website-label", _("GNOME Games web site"),
                          NULL);
