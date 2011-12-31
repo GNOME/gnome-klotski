@@ -2,8 +2,7 @@ SUBDIRS = icons
 
 pixmapdir = $(pkgdatadir)/gnotski/pixmaps
 pixmap_DATA = \
-	gnotski.svg	\
-	$(NULL)
+	gnotski.svg
 
 schema_in_files = gnotski.schemas.in
 if HAVE_GNOME
