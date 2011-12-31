@@ -38,10 +38,6 @@
 #include <libgames-support/games-stock.h>
 #include <libgames-support/games-fullscreen-action.h>
 
-#ifdef WITH_SMCLIENT
-#include <libgames-support/eggsmclient.h>
-#endif /* WITH_SMCLIENT */
-
 #include "pieces.h"
 
 #define APPNAME "gnotski"
@@ -145,10 +141,6 @@ void set_piece_id (char *, gint, gint, gint);
 gint move_piece (gint, gint, gint, gint, gint);
 void copymap (char *, char *);
 gint mapcmp (char *, char *);
-#ifdef WITH_SMCLIENT
-static int save_state_cb (EggSMClient *client, GKeyFile *keyfile, gpointer client_data);
-static int quit_cb (EggSMClient *client, gpointer client_data);
-#endif /* WITH_SMCLIENT */     
 void new_move (void);
 void game_score (void);
 gint game_over (void);
@@ -471,9 +463,6 @@ main (int argc, char **argv)
   gint startup_level;
   gboolean retval;
   GError *error = NULL;
-#ifdef WITH_SMCLIENT
-  EggSMClient *sm_client;
-#endif /* WITH_SMCLIENT */
 
   if (!games_runtime_init ("gnotski"))
     return 1;
@@ -485,9 +474,6 @@ main (int argc, char **argv)
   context = g_option_context_new (NULL);
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
-#ifdef WITH_SMCLIENT
-  g_option_context_add_group (context, egg_sm_client_get_option_group ());
-#endif /* WITH_SMCLIENT */
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
@@ -506,14 +492,6 @@ main (int argc, char **argv)
 
   gtk_window_set_default_icon_name ("gnotski");
   
-#ifdef WITH_SMCLIENT
-  sm_client = egg_sm_client_get ();
-  g_signal_connect (sm_client, "save-state",
-		    G_CALLBACK (save_state_cb), NULL);
-  g_signal_connect (sm_client, "quit",
-                    G_CALLBACK (quit_cb), NULL);
-#endif /* WITH_SMCLIENT */
-
   highscores = games_scores_new ("gnotski",
                                  scorecats, G_N_ELEMENTS (scorecats),
                                  NULL, NULL,
@@ -1402,44 +1380,6 @@ quit_game_cb (GtkAction * action)
 {
   gtk_main_quit ();
 }
-
-#ifdef WITH_SMCLIENT
-static int
-save_state_cb (EggSMClient *client,
-	    GKeyFile* keyfile,
-	    gpointer client_data)
-{
-  gchar *argv[20];
-  gint argc;
-  gint xpos, ypos;
-
-  gdk_window_get_origin (gtk_widget_get_window (window), &xpos, &ypos);
-
-  argc = 0;
-  argv[argc++] = g_get_prgname ();
-  argv[argc++] = "-x";
-  argv[argc++] = g_strdup_printf ("%d", xpos);
-  argv[argc++] = "-y";
-  argv[argc++] = g_strdup_printf ("%d", ypos);
-
-  egg_sm_client_set_restart_command (client, argc, (const char **) argv);
-
-  g_free (argv[2]);
-  g_free (argv[4]);
-
-  return TRUE;
-}
-
-static gint
-quit_cb (EggSMClient *client,
-         gpointer client_data)
-{
-  gtk_main_quit ();
-
-  return FALSE;
-}
-
-#endif /* WITH_SMCLIENT */
 
 void
 level_cb (GtkAction * action, GtkRadioAction * current)
