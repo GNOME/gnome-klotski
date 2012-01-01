@@ -9,6 +9,7 @@ gnotski_CPPFLAGS = \
 	$(AM_CPPFLAGS)
 
 gnotski_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
 		

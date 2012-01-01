@@ -1079,12 +1079,10 @@ load_solved_state (void)
 void
 load_image (void)
 {
-  const char *dname;
   char *path;
   GError *error = NULL;
 
-  dname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  path = g_build_filename (dname, "gnotski.svg", NULL);
+  path = g_build_filename (DATA_DIRECTORY, "gnotski.svg", NULL);
   tiles_preimage = games_preimage_new_from_file (path, &error);
   g_free (path);
 

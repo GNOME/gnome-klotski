@@ -1,6 +1,6 @@
 SUBDIRS = icons
 
-pixmapdir = $(pkgdatadir)/gnotski/pixmaps
+pixmapdir = $(datadir)/gnotski
 pixmap_DATA = \
 	gnotski.svg
 
