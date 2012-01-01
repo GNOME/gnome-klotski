@@ -30,7 +30,6 @@
 
 #include <libgames-support/games-conf.h>
 #include <libgames-support/games-gridframe.h>
-#include <libgames-support/games-help.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.h>
@@ -1410,7 +1409,12 @@ prev_level_cb (GtkAction * action)
 void
 help_cb (GtkAction * action)
 {
-  games_help_display (window, "gnotski", NULL);
+  GError *error = NULL;
+
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "ghelp:gnotski", gtk_get_current_event_time (), &error);
+  if (error)
+    g_warning ("Failed to show help: %s", error->message);
+  g_clear_error (&error);
 }
 
 void
