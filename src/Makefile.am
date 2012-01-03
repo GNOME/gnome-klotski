@@ -23,11 +23,6 @@ gnotski_CFLAGS += $(RSVG_CFLAGS)
 gnotski_LDADD += $(RSVG_LIBS)
 endif
 
-if WITH_GTHREAD
-gnotski_CFLAGS += $(GHTREAD_CFLAGS)
-gnotski_LDADD += $(GTHREAD_LIBS)
-endif
-
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
 	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ;\
