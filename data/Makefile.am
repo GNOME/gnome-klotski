@@ -4,11 +4,10 @@ pixmapdir = $(datadir)/gnotski
 pixmap_DATA = \
 	gnotski.svg
 
-schema_in_files = gnotski.schemas.in
-if HAVE_GNOME
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-endif
+gsettings_in_file = org.gnome.gnotski.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
 
 man_MANS = gnotski.6
 
@@ -20,25 +19,13 @@ SCOREFILES = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 2
 
 EXTRA_DIST = \
 	$(pixmap_DATA)		\
-	$(schema_in_files)	\
+	$(gsettings_in_file)	\
 	$(man_MANS) \
 	$(desktop_in_files)
 
-CLEANFILES = $(desktop_DATA) $(schema_DATA)
-DISTCLEANFILES = $(desktop_DATA) $(schema_DATA)
+CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
 
-install-schemas-local: $(schema_DATA)
-if GCONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-		for p in $^ ; do \
-			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $$p 2>&1 > /dev/null; \
-		done \
-	fi
-endif
-
-install-data-local: install-schemas-local
-
-@INTLTOOL_SCHEMAS_RULE@
 @INTLTOOL_DESKTOP_RULE@
 
 -include $(top_srcdir)/git.mk

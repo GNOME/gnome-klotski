@@ -1,0 +1,9 @@
+<schemalist>
+  <schema id="org.gnome.gnotski" path="/org/gnome/gnotski/" gettext-domain="gnome-games">
+    <key name="level" type="i">
+      <default>0</default>
+      <_summary>The puzzle in play</_summary>
+      <_description>The number of the puzzle being played.</_description>
+    </key>
+  </schema>
+</schemalist>

@@ -18,11 +18,6 @@ gnotski_LDADD = \
 	$(GTK_LIBS)	\
 	$(INTLLIBS)
 
-if HAVE_GNOME
-gnotski_CFLAGS += $(GNOME_CFLAGS)
-gnotski_LDADD += $(GNOME_LIBS)
-endif
-
 if HAVE_RSVG
 gnotski_CFLAGS += $(RSVG_CFLAGS)
 gnotski_LDADD += $(RSVG_LIBS)

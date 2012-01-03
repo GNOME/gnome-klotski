@@ -28,7 +28,6 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#include <libgames-support/games-conf.h>
 #include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-scores.h>
@@ -50,9 +49,7 @@
 #define SPACE_PADDING 5
 #define SPACE_OFFSET 4
 
-#define KEY_LEVEL "level"
-#define KEY_LEVEL_INFO_GROUP "level_info"
-
+GSettings *settings;
 GtkWidget *window;
 GtkWidget *statusbar;
 GtkWidget *space;
@@ -477,11 +474,11 @@ main (int argc, char **argv)
 
   g_set_application_name (_(APPNAME_LONG));
 
-  games_conf_initialise (APPNAME);
-
   games_stock_init ();
 
   gtk_window_set_default_icon_name ("gnotski");
+  
+  settings = g_settings_new ("org.gnome.gnotski");
   
   highscores = games_scores_new ("gnotski",
                                  scorecats, G_N_ELEMENTS (scorecats),
@@ -493,9 +490,9 @@ main (int argc, char **argv)
   gtk_window_set_title (GTK_WINDOW (window), _(APPNAME_LONG));
 
   gtk_window_set_default_size (GTK_WINDOW (window), MINWIDTH, MINHEIGHT);
-  games_conf_add_window (GTK_WINDOW (window), NULL);
+  //games_conf_add_window (GTK_WINDOW (window), NULL);
 
-  startup_level = games_conf_get_integer (NULL, KEY_LEVEL, NULL);
+  startup_level = g_settings_get_int (settings, "level");
 
   g_signal_connect (window, "delete_event",
 		    G_CALLBACK (quit_game_cb), NULL);
@@ -523,8 +520,6 @@ main (int argc, char **argv)
   new_game (startup_level);
 
   gtk_main ();
-
-  games_conf_shutdown ();
 
   return 0;
 }
@@ -805,12 +800,34 @@ void
 game_score (void)
 {
   gint pos;
-  gchar *key;
-    
+  gchar *key, *filename;
+  GKeyFile *keyfile;
+  gchar *data;
+  gsize data_length;
+
+  filename = g_build_filename (g_get_user_data_dir (), "gnotski", NULL);
+  g_mkdir_with_parents (filename, 0775);
+  g_free (filename);
+
   /* Level is complete */
   key = get_level_key (current_level);
-  games_conf_set_boolean (KEY_LEVEL_INFO_GROUP, key, TRUE);
+  keyfile = g_key_file_new ();
+  filename = g_build_filename (g_get_user_data_dir (), "gnotski", "levels", NULL);
+printf("%s\n", filename);
+  g_key_file_load_from_file (keyfile, filename, G_KEY_FILE_NONE, NULL);
+
+  g_key_file_set_boolean (keyfile, key, "solved", TRUE);
+
+  data = g_key_file_to_data (keyfile, &data_length, NULL);
+  if (data)
+  {
+     g_file_set_contents (filename, data, data_length, NULL);
+     g_free (data);
+  }  
   g_free (key);
+  g_key_file_unref (keyfile);
+  g_free (filename);
+
   gtk_image_set_from_stock (GTK_IMAGE(level_image[current_level]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
 
   pos = games_scores_add_plain_score (highscores, (guint32) moves);
@@ -1049,21 +1066,29 @@ get_level_key (gint level_number)
 	}
     }
 
-    return g_strdup_printf ("%08X/solved", ~result);
+    return g_strdup_printf ("%08X", ~result);
 }
 
 void
 load_solved_state (void)
 {
-    gint i;
-    gchar *key;
-    
-    for (i = 0; i < max_level; i++) {
-	key = get_level_key (i);
-	if (games_conf_get_boolean (KEY_LEVEL_INFO_GROUP, key, NULL))
-	    gtk_image_set_from_stock (GTK_IMAGE(level_image[i]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
-	g_free (key);
-    }
+	gint i;
+	gchar *key, *filename;
+	GKeyFile *keyfile;
+
+	keyfile = g_key_file_new ();
+	filename = g_build_filename (g_get_user_data_dir (), "gnotski", "levels", NULL);
+	g_key_file_load_from_file (keyfile, filename, G_KEY_FILE_NONE, NULL);
+	g_free (filename);
+	
+	for (i = 0; i < max_level; i++) {
+		key = get_level_key (i);
+		if (g_key_file_get_boolean (keyfile, key, "solved", NULL))
+			gtk_image_set_from_stock (GTK_IMAGE(level_image[i]), GTK_STOCK_YES, GTK_ICON_SIZE_MENU);
+		g_free (key);
+	}
+
+	g_key_file_unref (keyfile);
 }
 
 void
@@ -1354,7 +1379,7 @@ new_game (gint requested_level)
 
   games_scores_set_category (highscores, scorecats[current_level].key);
 
-  games_conf_set_integer (NULL, KEY_LEVEL, current_level);
+  g_settings_get_int (settings, "level");
 
   prepare_map ();
   games_grid_frame_set (GAMES_GRID_FRAME (gameframe), width, height);
