@@ -813,7 +813,6 @@ game_score (void)
   key = get_level_key (current_level);
   keyfile = g_key_file_new ();
   filename = g_build_filename (g_get_user_data_dir (), "gnotski", "levels", NULL);
-printf("%s\n", filename);
   g_key_file_load_from_file (keyfile, filename, G_KEY_FILE_NONE, NULL);
 
   g_key_file_set_boolean (keyfile, key, "solved", TRUE);
