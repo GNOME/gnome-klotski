@@ -1,16 +1,14 @@
-include $(top_srcdir)/gnome-doc-utils.make
+@YELP_HELP_RULES@
+HELP_ID = gnotski
 
-DOC_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
-
-DOC_MODULE = gnotski
-
-DOC_ENTITIES = \
-	legal.xml
-
-DOC_FIGURES = \
+HELP_MEDIA = \
 	figures/gnotski_start_window.png \
 	figures/gnotski_win.png
 
-dist-hook: doc-dist-hook
+HELP_FILES = \
+	gnotski.xml \
+	legal.xml
+
+HELP_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk
