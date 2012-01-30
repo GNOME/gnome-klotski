@@ -10,9 +10,10 @@ gnotski_CPPFLAGS = \
 
 gnotski_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
+	-DLOCALEDIR=\"$(datadir)/locale\" \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
-		
+
 gnotski_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
