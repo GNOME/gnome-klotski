@@ -11,18 +11,15 @@ gnotski_CPPFLAGS = \
 gnotski_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GTK_CFLAGS)	\
+	$(GTK_CFLAGS) \
+	$(RSVG_CFLAGS) \
 	$(AM_CFLAGS)
 
 gnotski_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
+	$(RSVG_LIBS) \
 	$(INTLLIBS)
-
-if HAVE_RSVG
-gnotski_CFLAGS += $(RSVG_CFLAGS)
-gnotski_LDADD += $(RSVG_LIBS)
-endif
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
