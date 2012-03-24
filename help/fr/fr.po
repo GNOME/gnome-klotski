@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Klotski V2.10\n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
+"POT-Creation-Date: 2012-03-24 13:51+0000\n"
 "PO-Revision-Date: 2012-03-23 14:04+0100\n"
 "Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
@@ -34,7 +34,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnotski.xml:204(imagedata)
-#, fuzzy
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
@@ -51,7 +50,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnotski.xml:261(imagedata)
-#, fuzzy
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
@@ -381,11 +379,9 @@ msgid ""
 msgstr ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
 "\"PNG\"/> </imageobject> <textobject> <phrase>Affiche la fenêtre principale "
-"de "
-"<application>Klotski</application>. Elle comprend la barre de titre et de "
-"menus, la zone de jeu "
-"et la barre de statut. La barre de menus comprend les menus Jeu et Aide. <"
-"/phrase> </textobject>"
+"de <application>Klotski</application>. Elle comprend la barre de titre et de "
+"menus, la zone de jeu et la barre de statut. La barre de menus comprend les "
+"menus Jeu et Aide. </phrase> </textobject>"
 
 #: C/gnotski.xml:275(varlistentry/term)
 msgid "Menubar"
@@ -464,8 +460,8 @@ msgstr ""
 "successivement parmi les grilles. Chaque grille appartient à une des trois "
 "catégories que vous trouvez dans les sous-menus <guisubmenu>Course de "
 "Huarong</guisubmenu>, <guisubmenu>Pack Défi</guisubmenu> et <guisubmenu>Pack "
-"Compétence</guisubmenu>. Dans "
-"ces sous-menus, chaque nom de grille fait référence à un scénario de jeu."
+"Compétence</guisubmenu>. Dans ces sous-menus, chaque nom de grille fait "
+"référence à un scénario de jeu."
 
 #: C/gnotski.xml:323(example/title)
 msgid "Starting a game"
@@ -477,9 +473,9 @@ msgid ""
 "[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
 "menuchoice>"
 msgstr ""
-"Pour démarrer un jeu, choisissez "
-"<menuchoice> <guimenu>Jeu</guimenu><guisubmenu>[catégorie]</"
-"guisubmenu><guimenuitem>[scénario de jeu]</guimenuitem></menuchoice>"
+"Pour démarrer un jeu, choisissez <menuchoice> <guimenu>Jeu</"
+"guimenu><guisubmenu>[catégorie]</guisubmenu><guimenuitem>[scénario de jeu]</"
+"guimenuitem></menuchoice>"
 
 #: C/gnotski.xml:335(sect2/title)
 msgid "Moving blocks"
@@ -599,4 +595,3 @@ msgstr ""
 "page de couverture. Vous trouverez un exemplaire de cette licence en suivant "
 "ce <_:ulink-1/> ou dans le fichier COPYING-DOCS fourni avec le présent "
 "manuel."
-
