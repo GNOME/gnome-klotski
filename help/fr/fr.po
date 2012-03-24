@@ -1,44 +1,70 @@
 # French translation of gnotski documentation.
-# Copyright (C) 2007-2008 Free Software Foundation, Inc.
+# Copyright (C) 2007-2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnotski documentation package.
 #
-# Bruno Brouard <annoa.b@gmail.com>, 2007-2008.
-# Claude Paroz <claude@2xlibre.net>, 2007-2008.
 #
+# Bruno Brouard <annoa.b@gmail.com>, 2007-2008, 2012.
+# Claude Paroz <claude@2xlibre.net>, 2007-2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Klotski V2.10\n"
-"POT-Creation-Date: 2008-02-07 15:42+0100\n"
-"PO-Revision-Date: 2008-02-07 15:50+0100\n"
-"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"POT-Creation-Date: 2012-01-22 20:08+0000\n"
+"PO-Revision-Date: 2012-03-23 14:04+0100\n"
+"Last-Translator: Bruno Brouard <annoa.b@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: ../C/gnotski.xml:202(None)
-msgid ""
-"@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
 msgstr ""
-"@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
+"Bruno Brouard <annoa.b@gmail.com>, 2007-2008,2012\n"
+"Claude Paroz <claude@2xlibre.net>, 2007-2008"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: ../C/gnotski.xml:259(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnotski.xml:204(imagedata)
+#, fuzzy
+msgctxt "_"
 msgid ""
-"@@image: 'figures/gnotski_start_window.png'; "
-"md5=23e584de3f58e5baf5c9ca5098a7961e"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 msgstr ""
-"@@image: 'figures/gnotski_start_window.png'; "
-"md5=23e584de3f58e5baf5c9ca5098a7961e"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 
-#: ../C/gnotski.xml:28(title)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnotski.xml:261(imagedata)
+#, fuzzy
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
+
+#: C/gnotski.xml:28(articleinfo/title)
 msgid "<application>Klotski</application> Manual"
 msgstr "Manuel de <application>Klotski</application>"
 
-#: ../C/gnotski.xml:31(para)
+#: C/gnotski.xml:31(abstract/para)
 msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
@@ -46,20 +72,16 @@ msgstr ""
 "Klotski est un casse-tête dont le but est de placer le bloc à motifs sur les "
 "marqueurs en déplaçant les blocs en travers de son chemin."
 
-#: ../C/gnotski.xml:39(year)
-msgid "2002"
-msgstr "2002"
+#: C/gnotski.xml:38(articleinfo/copyright)
+msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
+msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#: ../C/gnotski.xml:40(holder)
-msgid "Andrew Sobala"
-msgstr "Andrew Sobala"
-
-#: ../C/gnotski.xml:54(publishername) ../C/gnotski.xml:67(orgname)
-#: ../C/gnotski.xml:140(para)
+#: C/gnotski.xml:54(publisher/publishername)
+#: C/gnotski.xml:142(revdescription/para)
 msgid "GNOME Documentation Project"
 msgstr "Projet de documentation GNOME"
 
-#: ../C/gnotski.xml:2(para)
+#: C/gnotski.xml:2(legalnotice/para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -76,7 +98,7 @@ msgstr ""
 "ce <ulink type=\"help\" url=\"ghelp:fdl\">lien</ulink> ou dans le fichier "
 "COPYING-DOCS fourni avec le présent manuel."
 
-#: ../C/gnotski.xml:12(para)
+#: C/gnotski.xml:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -89,7 +111,7 @@ msgstr ""
 "exemplaire de la licence au document, comme indiqué dans la section 6 de "
 "celle-ci."
 
-#: ../C/gnotski.xml:19(para)
+#: C/gnotski.xml:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -103,7 +125,7 @@ msgstr ""
 "Documentation GNOME sont informés de l'existence de ces marques déposées, "
 "soit ces noms entiers, soit leur première lettre est en majuscule."
 
-#: ../C/gnotski.xml:35(para)
+#: C/gnotski.xml:35(listitem/para) C/legal.xml:35(listitem/para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -130,7 +152,7 @@ msgstr ""
 "SA VERSION MODIFIÉE N'EST AUTORISÉE AUX TERMES DU PRÉSENT ACCORD, EXCEPTÉ "
 "SOUS CETTE DÉNÉGATION DE RESPONSABILITÉ ; ET"
 
-#: ../C/gnotski.xml:55(para)
+#: C/gnotski.xml:55(listitem/para) C/legal.xml:55(listitem/para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -156,95 +178,84 @@ msgstr ""
 "À JOUR, ET CE MÊME SI CES PARTIES ONT ÉTÉ INFORMÉES DE LA POSSIBILITÉ DE "
 "TELS DOMMAGES."
 
-#: ../C/gnotski.xml:28(para)
+#: C/gnotski.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
 "LE PRÉSENT DOCUMENT ET SES VERSIONS MODIFIÉES SONT FOURNIS SELON LES TERMES "
-"DE LA LICENCE DE DOCUMENTATION LIBRE GNU SACHANT QUE : <placeholder-1/>"
+"DE LA LICENCE DE DOCUMENTATION LIBRE GNU SACHANT QUE : <_:orderedlist-1/>"
 
-#: ../C/gnotski.xml:64(firstname)
-msgid "Andrew"
-msgstr "Andrew"
+#: C/gnotski.xml:63(authorgroup/author)
+msgid ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>Projet de documentation GNOME</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
 
-#: ../C/gnotski.xml:65(surname)
-msgid "Sobala"
-msgstr "Sobala"
+#: C/gnotski.xml:72(authorgroup/othercredit)
+msgid ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>Projet GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
 
-#: ../C/gnotski.xml:68(email)
-msgid "andrew@sobala.net"
-msgstr "andrew@sobala.net"
+#: C/gnotski.xml:81(authorgroup/othercredit)
+msgid ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>Projet GNOME</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
 
-#: ../C/gnotski.xml:73(firstname)
-msgid "Lars"
-msgstr "Lars"
-
-#: ../C/gnotski.xml:74(surname)
-msgid "Rydlinge"
-msgstr "Rydlinge"
-
-#: ../C/gnotski.xml:76(orgname) ../C/gnotski.xml:85(orgname)
-msgid "GNOME Project"
-msgstr "Projet GNOME"
-
-#: ../C/gnotski.xml:77(email)
-msgid "Lars.Rydlinge@HIG.SE"
-msgstr "Lars.Rydlinge@HIG.SE"
-
-#: ../C/gnotski.xml:82(firstname)
-msgid "Ross"
-msgstr "Ross"
-
-#: ../C/gnotski.xml:83(surname)
-msgid "Burton"
-msgstr "Burton"
-
-#: ../C/gnotski.xml:86(email)
-msgid "ross@burtonini.com"
-msgstr "ross@burtonini.com"
-
-#: ../C/gnotski.xml:134(revnumber)
-msgid "V2.0"
-msgstr "V2.0"
-
-#: ../C/gnotski.xml:135(date)
-msgid "13 August 2002"
-msgstr "13 août 2002"
-
-#: ../C/gnotski.xml:137(para)
+#: C/gnotski.xml:139(revdescription/para)
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: ../C/gnotski.xml:146(releaseinfo)
+#: C/gnotski.xml:135(revhistory/revision)
+msgid ""
+"<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>V 2.0</revnumber> <date>13 août 2002</date> <_:revdescription-1/>"
+
+#: C/gnotski.xml:148(articleinfo/releaseinfo)
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Ce manuel documente la version 2.12 de GNOME Klotski."
 
-#: ../C/gnotski.xml:149(title)
+#: C/gnotski.xml:151(legalnotice/title)
 msgid "Feedback"
 msgstr "Votre avis"
 
-#: ../C/gnotski.xml:150(para)
+#: C/gnotski.xml:152(legalnotice/para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
 msgstr ""
 "Pour rapporter une anomalie ou émettre une suggestion concernant "
 "<application>Klotski</application> ou ce manuel, procédez comme indiqué sur "
-"la <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">page de réactions sur "
-"GNOME</ulink>."
+"la <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">page de "
+"réactions sur GNOME</ulink>."
 
-#: ../C/gnotski.xml:159(primary)
-msgid "GNOME Klotski"
-msgstr "GNOME Klotski"
+#: C/gnotski.xml:160(article/indexterm)
+msgid "<primary>GNOME Klotski</primary>"
+msgstr "<primary>GNOME Klotski</primary>"
 
-#: ../C/gnotski.xml:165(title)
+#: C/gnotski.xml:167(sect1/title)
 msgid "Introduction"
 msgstr "Introduction"
 
-#: ../C/gnotski.xml:166(para)
+#: C/gnotski.xml:168(sect1/para)
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
@@ -253,7 +264,7 @@ msgstr ""
 "<application>Klotski</application> est un clone du jeu Klotski. Le but est "
 "de déplacer le bloc à motifs dans la zone bordée de marqueurs verts."
 
-#: ../C/gnotski.xml:169(para)
+#: C/gnotski.xml:171(sect1/para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -261,7 +272,7 @@ msgstr ""
 "<application>Klotski</application> a été écrit par Lars Rydlinge "
 "(<email>Lars.Rydlinge@HIG.SE</email>)."
 
-#: ../C/gnotski.xml:172(para)
+#: C/gnotski.xml:174(sect1/para)
 msgid ""
 "<application>Klotski</application> is included in the gnome-games package, "
 "which is part of the GNOME desktop environment. This document describes "
@@ -271,7 +282,7 @@ msgstr ""
 "qui fait partie de l'environnement de bureau GNOME. Ce document présente la "
 "version 2.12 de <application>Klotski</application>."
 
-#: ../C/gnotski.xml:175(para)
+#: C/gnotski.xml:177(sect1/para)
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -286,67 +297,70 @@ msgstr ""
 "\"help\">lien</ulink> ou dans le fichier COPYING inclus avec le code source "
 "de ce programme."
 
-#: ../C/gnotski.xml:182(para)
+#: C/gnotski.xml:184(sect1/para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
-"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">document</ulink>."
+"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">document</ulink>."
 msgstr ""
 "Pour rapporter une anomalie ou émettre une suggestion concernant cette "
 "application ou ce manuel, procédez selon les instructions de ce <ulink url="
 "\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
 
-#: ../C/gnotski.xml:191(title)
+#: C/gnotski.xml:193(sect1/title)
 msgid "Objective"
 msgstr "Objectif"
 
-#: ../C/gnotski.xml:198(title)
+#: C/gnotski.xml:200(figure/title)
 msgid "The winning move"
 msgstr "Le mouvement gagnant"
 
-#: ../C/gnotski.xml:205(phrase)
+#: C/gnotski.xml:202(screenshot/mediaobject)
 msgid ""
-"The patterned block should be moved to the space bordered by the green "
-"markers."
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>The patterned block should be moved to "
+"the space bordered by the green markers.</phrase> </textobject>"
 msgstr ""
-"Le bloc à motifs doit être déplacé dans la zone bordée de marqueurs verts."
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>Le bloc à motifs doit être déplacé "
+"dans la zone bordée de marqueurs verts.</phrase> </textobject>"
 
-#: ../C/gnotski.xml:192(para)
+#: C/gnotski.xml:194(sect1/para)
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
 "moving the blocks one at a time with the mouse until you can get the "
-"patterned block to the markers. <placeholder-1/>"
+"patterned block to the markers. <_:figure-1/>"
 msgstr ""
 "Le but de <application>Klotski</application> est de déplacer le bloc à "
 "motifs dans la zone bordée de marqueurs verts en effectuant le moins de "
 "déplacements possible. Pour cela, déplacez les blocs un par un avec la "
 "souris jusqu'à ce que vous puissiez glisser le bloc à motifs sur les "
-"marqueurs. <placeholder-1/>"
+"marqueurs. <_:figure-1/>"
 
-#: ../C/gnotski.xml:217(title)
+#: C/gnotski.xml:219(sect1/title)
 msgid "Playing <application>Klotski</application>"
 msgstr "Le jeu <application>Klotski</application>"
 
-#: ../C/gnotski.xml:240(title)
+#: C/gnotski.xml:242(sect2/title)
 msgid "To Start <application>Klotski</application>"
 msgstr "Démarrage de <application>Klotski</application>"
 
-#: ../C/gnotski.xml:241(para)
+#: C/gnotski.xml:243(sect2/para)
 msgid ""
 "You can start <application>Klotski</application> from the Applications menu "
-"by choosing <menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>Gnotski</"
-"guimenuitem></menuchoice>."
+"by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
+"<guimenuitem>Gnotski</guimenuitem> </menuchoice>."
 msgstr ""
 "Vous pouvez démarrer <application>Klotski</application> à partir du menu "
 "Applications en choisissant <menuchoice><guisubmenu>Jeux</"
-"guisubmenu><guimenuitem>Klotski</guimenuitem></menuchoice>."
+"guisubmenu><guimenuitem>Gnotski</guimenuitem></menuchoice>."
 
-#: ../C/gnotski.xml:250(title)
+#: C/gnotski.xml:252(sect2/title)
 msgid "The main window"
 msgstr "La fenêtre principale"
 
-#: ../C/gnotski.xml:251(para)
+#: C/gnotski.xml:253(sect2/para)
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -354,32 +368,34 @@ msgstr ""
 "Quand vous démarrez <application><application>Klotski</application></"
 "application>, la fenêtre suivante est affichée."
 
-#: ../C/gnotski.xml:255(title)
+#: C/gnotski.xml:257(figure/title)
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Fenêtre de démarrage de <application>Klotski</application>"
 
-#: ../C/gnotski.xml:0(application)
-msgid "Klotski"
-msgstr "Klotski"
-
-#: ../C/gnotski.xml:262(phrase)
+#: C/gnotski.xml:259(screenshot/mediaobject)
 msgid ""
-"Shows <placeholder-1/> main window. Contains titlebar, menubar, game area "
-"and statusbar. Menubar contains Game and Help menus."
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
+"application> main window. Contains titlebar, menubar, game area and "
+"statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
 msgstr ""
-"Montre la fenêtre principale de <placeholder-1/>. Elle contient la barre de "
-"titre, la barre de menus, la zone de jeu et la barre d'état. La barre de "
-"menus contient les menus Jeu, Affichage et Aide."
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Affiche la fenêtre principale "
+"de "
+"<application>Klotski</application>. Elle comprend la barre de titre et de "
+"menus, la zone de jeu "
+"et la barre de statut. La barre de menus comprend les menus Jeu et Aide. <"
+"/phrase> </textobject>"
 
-#: ../C/gnotski.xml:273(term)
+#: C/gnotski.xml:275(varlistentry/term)
 msgid "Menubar"
 msgstr "Barre de menus"
 
-#: ../C/gnotski.xml:277(term)
+#: C/gnotski.xml:279(varlistentry/term)
 msgid "Game menu"
 msgstr "Menu Jeu"
 
-#: ../C/gnotski.xml:279(para)
+#: C/gnotski.xml:281(listitem/para)
 msgid ""
 "The game menu allows you to start new games, view the highest scores and "
 "quit the program."
@@ -387,11 +403,11 @@ msgstr ""
 "Le menu Jeu vous permet de démarrer de nouvelles grilles, de regarder les "
 "meilleurs scores et de quitter le programme."
 
-#: ../C/gnotski.xml:284(term)
+#: C/gnotski.xml:286(varlistentry/term)
 msgid "Help menu"
 msgstr "Menu Aide"
 
-#: ../C/gnotski.xml:286(para)
+#: C/gnotski.xml:288(listitem/para)
 msgid ""
 "The help menu allows you to view the documentation for <application>Klotski</"
 "application>"
@@ -399,11 +415,11 @@ msgstr ""
 "Le menu Aide vous permet de consulter la documentation de "
 "<application>Klotski</application>."
 
-#: ../C/gnotski.xml:293(term)
+#: C/gnotski.xml:295(varlistentry/term)
 msgid "Game area"
 msgstr "Zone de jeu"
 
-#: ../C/gnotski.xml:295(para)
+#: C/gnotski.xml:297(listitem/para)
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -411,67 +427,65 @@ msgstr ""
 "La zone de jeu montre les blocs du jeu actuel. Vous pouvez déplacer les "
 "blocs avec la souris comme indiqué dans <xref linkend=\"gnotski-moving\"/>."
 
-#: ../C/gnotski.xml:301(term)
+#: C/gnotski.xml:303(varlistentry/term)
 msgid "Statusbar"
 msgstr "Barre d'état"
 
-#: ../C/gnotski.xml:303(para)
+#: C/gnotski.xml:305(listitem/para)
 msgid "The statusbar shows how many moves you have taken so far."
 msgstr ""
 "La barre d'état indique combien de déplacements vous avez déjà effectués."
 
-#. ==== End of Figure ====
-#: ../C/gnotski.xml:270(para)
+#: C/gnotski.xml:272(sect2/para)
 msgid ""
 "The <application>Klotski</application> window contains the following "
-"elements: <placeholder-1/>"
+"elements: <_:variablelist-1/>"
 msgstr ""
 "La fenêtre <application>Klotski</application> contient les éléments "
-"suivants : <placeholder-1/>"
+"suivants : <_:variablelist-1/>"
 
-#: ../C/gnotski.xml:312(title)
+#: C/gnotski.xml:314(sect2/title)
 msgid "Starting a new game"
 msgstr "Démarrage d'un nouveau tableau"
 
-#: ../C/gnotski.xml:313(para)
+#: C/gnotski.xml:315(sect2/para)
 msgid ""
 "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-"<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</"
+"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
 "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-"belongs to one of the four categories found in the submenus named "
+"belongs to one of the three categories found in the submenus named "
 "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru "
-"Climb</guisubmenu>. In these submenus, each puzzle name refers to a game "
-"scenario."
+"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
+"puzzle name refers to a game scenario."
 msgstr ""
 "Utilisez le menu <guimenu>Jeu</guimenu> pour démarrer une nouvelle grille. "
 "Les commandes <guimenuitem>Grille suivante</guimenuitem> et "
 "<guimenuitem>Grille précédente</guimenuitem> vous permettent de naviguer "
-"successivement parmi les grilles. Chaque grille appartient à une des quatre "
+"successivement parmi les grilles. Chaque grille appartient à une des trois "
 "catégories que vous trouvez dans les sous-menus <guisubmenu>Course de "
-"Huarong</guisubmenu>, <guisubmenu>Pack Défi</guisubmenu>, <guisubmenu>Pack "
-"Compétence</guisubmenu> et <guisubmenu>Escalade de Minoru</guisubmenu>. Dans "
+"Huarong</guisubmenu>, <guisubmenu>Pack Défi</guisubmenu> et <guisubmenu>Pack "
+"Compétence</guisubmenu>. Dans "
 "ces sous-menus, chaque nom de grille fait référence à un scénario de jeu."
 
-#: ../C/gnotski.xml:321(title)
+#: C/gnotski.xml:323(example/title)
 msgid "Starting a game"
 msgstr "Démarrer une grille"
 
-#: ../C/gnotski.xml:322(para)
+#: C/gnotski.xml:324(example/para)
 msgid ""
-"To start the hardest game provided, choose <menuchoice><guimenu>Game</"
-"guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</"
-"guimenuitem></menuchoice>"
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> <guisubmenu>"
+"[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
+"menuchoice>"
 msgstr ""
-"Pour démarrer la grille la plus difficile qui est fournie, choisissez "
-"<menuchoice><guimenu>Jeu</guimenu><guisubmenu>Escalade de Minoru</"
-"guisubmenu><guimenuitem>Escalade 24 Pro</guimenuitem></menuchoice>"
+"Pour démarrer un jeu, choisissez "
+"<menuchoice> <guimenu>Jeu</guimenu><guisubmenu>[catégorie]</"
+"guisubmenu><guimenuitem>[scénario de jeu]</guimenuitem></menuchoice>"
 
-#: ../C/gnotski.xml:333(title)
+#: C/gnotski.xml:335(sect2/title)
 msgid "Moving blocks"
 msgstr "Déplacement des blocs"
 
-#: ../C/gnotski.xml:334(para)
+#: C/gnotski.xml:336(sect2/para)
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -486,17 +500,17 @@ msgstr ""
 "dans le cas où vous déplacez le bloc à motifs à travers les blocs verts pour "
 "gagner."
 
-#: ../C/gnotski.xml:354(title)
+#: C/gnotski.xml:356(sect1/title)
 msgid "Authors"
 msgstr "Auteurs"
 
-#: ../C/gnotski.xml:355(para)
+#: C/gnotski.xml:357(sect1/para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
 "report a bug or make a suggestion regarding this application or this manual, "
-"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
-"\">document</ulink>."
+"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">document</ulink>."
 msgstr ""
 "<application>Klotski</application> a été écrit par Lars Rydlinge "
 "(<email>lars.rydlinge@hig.se</email>). Ce manuel a été écrit par Andrew "
@@ -504,11 +518,11 @@ msgstr ""
 "cette application ou ce manuel, procédez comme indiqué sur ce <ulink url="
 "\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
 
-#: ../C/gnotski.xml:375(title)
+#: C/gnotski.xml:377(sect1/title)
 msgid "License"
 msgstr "Licence"
 
-#: ../C/gnotski.xml:376(para)
+#: C/gnotski.xml:378(sect1/para)
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -521,7 +535,7 @@ msgstr ""
 "Foundation; soit la version 2 de cette licence ou (à votre choix) toute "
 "version ultérieure."
 
-#: ../C/gnotski.xml:383(para)
+#: C/gnotski.xml:385(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -533,29 +547,56 @@ msgstr ""
 "commercialisation ou d’adaptation dans un but spécifique. Se référer à la "
 "<citetitle>GNU General Public License</citetitle> pour plus de détails."
 
-#: ../C/gnotski.xml:389(para)
+#: C/gnotski.xml:398(para/address)
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#: C/gnotski.xml:391(sect1/para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
 "obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
 "the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
-"www.fsf.org\">their Web site</ulink> or by writing to <address> Free "
-"Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "Une copie de la <citetitle>GNU General Public License</citetitle> est "
 "incluse sous forme d'annexe au <citetitle>Guide d'utilisation du bureau "
 "GNOME</citetitle>. Vous pouvez également obtenir une copie de la "
 "<citetitle>GNU General Public License</citetitle> à la Free Software "
 "Foundation en visitant <ulink type=\"http\" url=\"http://www.fsf.org\">leur "
-"site Web</ulink> ou en écrivant à <address> Free Software Foundation, Inc. "
-"<street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</"
-"state><postcode>02111-1307</postcode><country>USA</country></address>"
+"site Web</ulink> ou en écrivant à <_:address-1/>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: ../C/gnotski.xml:0(None)
-msgid "translator-credits"
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "lien"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
 msgstr ""
-"Bruno Brouard <annoa.b@gmail.com>, 2007-2008\n"
-"Claude Paroz <claude@2xlibre.net>, 2007-2008"
+"Permission vous est donnée de copier, distribuer et/ou modifier ce document "
+"selon les termes de la Licence GNU Free Documentation License, Version 1.1 "
+"ou ultérieure publiée par la Free Software Foundation sans section "
+"inaltérable, sans texte de première page de couverture ni texte de dernière "
+"page de couverture. Vous trouverez un exemplaire de cette licence en suivant "
+"ce <_:ulink-1/> ou dans le fichier COPYING-DOCS fourni avec le présent "
+"manuel."
+
