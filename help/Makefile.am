@@ -6,7 +6,7 @@ HELP_MEDIA = \
 	figures/gnotski_win.png
 
 HELP_FILES = \
-	gnotski.xml \
+	index.docbook \
 	legal.xml
 
 HELP_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
