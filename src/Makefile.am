@@ -2,6 +2,8 @@ bin_PROGRAMS = gnotski
 
 gnotski_SOURCES = \
 	gnotski.c	\
+	games-preimage.c	\
+	games-preimage.h	\
 	pieces.h
 
 gnotski_CPPFLAGS = \
