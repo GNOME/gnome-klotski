@@ -44,8 +44,8 @@ msgid "GNOME Documentation Project"
 msgstr "Dokumentationsprojekt för GNOME"
 
 #: C/gnotski.xml:2(para)
-msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
-msgstr "Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges under villkoren i GNU Free Documentation License (GFDL), version 1.1 eller senare, utgivet av Free Software Foundation utan standardavsnitt och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type=\"help\" url=\"ghelp:fdl\">länk</ulink> eller i filen COPYING-DOCS som medföljer denna handbok."
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+msgstr "Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges under villkoren i GNU Free Documentation License (GFDL), version 1.1 eller senare, utgivet av Free Software Foundation utan standardavsnitt och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type=\"help\" url=\"help:fdl\">länk</ulink> eller i filen COPYING-DOCS som medföljer denna handbok."
 
 #: C/gnotski.xml:12(para)
 msgid "This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the license to the manual, as described in section 6 of the license."
@@ -153,8 +153,8 @@ msgid "<application>Klotski</application> is included in the gnome-games package
 msgstr "<application>Klotski</application> är inkluderat i paketet gnome-games, som är en del av skrivbordsmiljön GNOME. Det här dokumentet beskriver version 2.12 av <application>Klotski</application>."
 
 #: C/gnotski.xml:175(para)
-msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"ghelp:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
-msgstr "Det här programmet distribueras under villkoren för GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (enligt dig) någon senare version. En kopia av den här licensen kan hittas på den här <ulink url=\"ghelp:gpl\" type=\"help\">länken</ulink>, eller i filen COPYING som inkluderats i källkoden för det här programmet."
+msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
+msgstr "Det här programmet distribueras under villkoren för GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen, eller (enligt dig) någon senare version. En kopia av den här licensen kan hittas på den här <ulink url=\"help:gpl\" type=\"help\">länken</ulink>, eller i filen COPYING som inkluderats i källkoden för det här programmet."
 
 #: C/gnotski.xml:182(para)
 msgid "To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
