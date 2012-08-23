@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: packagename\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-05 09:25+0000\n"
-"PO-Revision-Date: 2012-08-22 02:33+0200\n"
+"PO-Revision-Date: 2012-08-23 13:59+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "Language: el\n"
@@ -87,8 +87,8 @@ msgid ""
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Χορηγείται άδεια αντιγραφής, διανομής και/ή τροποποίησης του παρόντος "
 "εγγράφου υπό τους όρους της έκδοσης 1.1 της Ελεύθερης Άδειας Τεκμηρίωσης GNU "
@@ -232,7 +232,7 @@ msgstr ""
 
 #: C/index.docbook:148(articleinfo/releaseinfo)
 msgid "This manual describes version 2.12 of GNOME Klotski."
-msgstr "Αυτό το εγχειρίδιο περιγράφει την έκδοση 2.12 του Κλότσκι GNOME."
+msgstr "Αυτό το εγχειρίδιο περιγράφει την έκδοση 2.12 του Κλότσκι."
 
 #: C/index.docbook:151(legalnotice/title)
 msgid "Feedback"
@@ -252,7 +252,7 @@ msgstr ""
 
 #: C/index.docbook:160(article/indexterm)
 msgid "<primary>GNOME Klotski</primary>"
-msgstr "<primary>Κλότσκι GNOME</primary>"
+msgstr "<primary>Κλότσκι</primary>"
 
 #: C/index.docbook:167(sect1/title)
 msgid "Introduction"
@@ -299,8 +299,8 @@ msgstr ""
 "Χρήσης GNU (GPL), όπως αυτή έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου "
 "Λογισμικού (FSS) — είτε της έκδοσης 2 της ‘Αδειας, είτε (κατ' επιλογήν σας) "
 "οποιασδήποτε μεταγενέστερης έκδοσης. Αντίγραφο της άδειας είναι διαθέσιμο "
-"στον ακόλουθο  <ulink url=\"help:gpl\" type=\"help\">σύνδεσμο</ulink>, ή "
-"στο αρχείο COPYING-DOCS που διανέμεται μαζί με τον πηγαίο κώδικα αυτού του "
+"στον ακόλουθο  <ulink url=\"help:gpl\" type=\"help\">σύνδεσμο</ulink>, ή στο "
+"αρχείο COPYING-DOCS που διανέμεται μαζί με τον πηγαίο κώδικα αυτού του "
 "προγράμματος."
 
 #: C/index.docbook:184(sect1/para)
