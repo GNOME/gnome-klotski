@@ -2,6 +2,8 @@ bin_PROGRAMS = gnotski
 
 gnotski_SOURCES = \
 	gnotski.c	\
+	games-gridframe.c	\
+	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
 	pieces.h

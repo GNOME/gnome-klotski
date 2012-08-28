@@ -29,7 +29,6 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-stock.h>
@@ -37,6 +36,7 @@
 
 #include "pieces.h"
 #include "games-preimage.h"
+#include "games-gridframe.h"
 
 #define APPNAME "gnotski"
 #define APPNAME_LONG N_("Klotski")
