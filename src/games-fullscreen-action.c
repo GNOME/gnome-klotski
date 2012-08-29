@@ -20,9 +20,9 @@
  */
 
 #include <glib/gi18n.h>
-#include <libgames-support/games-stock.h>
 
 #include "games-fullscreen-action.h"
+#include "games-stock.h"
 
 enum {
     PROP_0,

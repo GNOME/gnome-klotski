@@ -8,6 +8,8 @@ gnotski_SOURCES = \
 	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
+	games-stock.c	\
+	games-stock.h	\
 	pieces.h
 
 gnotski_CPPFLAGS = \
@@ -17,6 +19,7 @@ gnotski_CPPFLAGS = \
 gnotski_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	$(GTK_CFLAGS) \
 	$(RSVG_CFLAGS) \
 	$(AM_CFLAGS)
