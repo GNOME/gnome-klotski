@@ -8,9 +8,23 @@ gnotski_SOURCES = \
 	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
+	games-score.h			\
+	games-score.c			\
+	games-scores.c			\
+	games-scores.h			\
+	games-scores-dialog.c	\
+	games-scores-dialog.h	\
+	games-scores-backend.c	\
+	games-scores-backend.h	\
 	games-stock.c	\
 	games-stock.h	\
 	pieces.h
+
+if ENABLE_SETGID
+gnotski_SOURCES +=		\
+	games-setgid-io.c		\
+	games-setgid-io.h
+endif # ENABLE_SETGID
 
 gnotski_CPPFLAGS = \
 	-I$(top_srcdir) \
@@ -20,12 +34,12 @@ gnotski_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
+	-DSCORESDIR="\"$(scoredir)\""				\
 	$(GTK_CFLAGS) \
 	$(RSVG_CFLAGS) \
 	$(AM_CFLAGS)
 
 gnotski_LDADD = \
-	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
 	$(RSVG_LIBS) \
 	$(INTLLIBS)
