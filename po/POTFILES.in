@@ -1,8 +1,8 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
-data/gnotski.desktop.in.in
-data/org.gnome.gnotski.gschema.xml.in
+data/gnome-klotski.desktop.in.in
+data/org.gnome.klotski.gschema.xml.in
 src/games-scores-dialog.c
 src/games-stock.c
-src/gnotski.c
+src/gnome-klotski.c
