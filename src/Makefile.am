@@ -1,7 +1,7 @@
-bin_PROGRAMS = gnotski
+bin_PROGRAMS = gnome-klotski
 
-gnotski_SOURCES = \
-	gnotski.c	\
+gnome_klotski_SOURCES = \
+	gnome-klotski.c	\
 	games-fullscreen-action.c	\
 	games-fullscreen-action.h	\
 	games-gridframe.c	\
@@ -21,32 +21,28 @@ gnotski_SOURCES = \
 	pieces.h
 
 if ENABLE_SETGID
-gnotski_SOURCES +=		\
+gnome_klotski_SOURCES +=		\
 	games-setgid-io.c		\
 	games-setgid-io.h
 endif # ENABLE_SETGID
 
-gnotski_CPPFLAGS = \
+gnome_klotski_CPPFLAGS = \
 	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
 
-gnotski_CFLAGS = \
-	-DDATA_DIRECTORY=\"$(datadir)/gnotski\" \
+gnome_klotski_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/gnome-klotski\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	-DSCORESDIR="\"$(scoredir)\""				\
-	$(GTK_CFLAGS) \
-	$(RSVG_CFLAGS) \
-	$(AM_CFLAGS)
+	$(GNOME_KLOTSKI_CFLAGS)
 
-gnotski_LDADD = \
-	$(GTK_LIBS)	\
-	$(RSVG_LIBS) \
-	$(INTLLIBS)
+gnome_klotski_LDADD = \
+	$(GNOME_KLOTSKI_LIBS)
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
-	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gnotski && chmod 2555 $(DESTDIR)$(bindir)/gnotski ;\
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gnome-klotski && chmod 2555 $(DESTDIR)$(bindir)/gnome-klotski ;\
 	fi
 
 -include $(top_srcdir)/git.mk

@@ -1,17 +1,17 @@
 SUBDIRS = icons
 
-pixmapdir = $(datadir)/gnotski
+pixmapdir = $(datadir)/gnome-klotski
 pixmap_DATA = \
-	gnotski.svg
+	gnome-klotski.svg
 
-gsettings_in_file = org.gnome.gnotski.gschema.xml.in
+gsettings_in_file = org.gnome.klotski.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-man_MANS = gnotski.6
+man_MANS = gnome-klotski.6
 
-desktop_in_files = gnotski.desktop.in.in
+desktop_in_files = gnome-klotski.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 

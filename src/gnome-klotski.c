@@ -37,7 +37,6 @@
 #include "games-scores-dialog.h"
 #include "games-stock.h"
 
-#define APPNAME "gnotski"
 #define APPNAME_LONG N_("Klotski")
 
 #define MINWIDTH 250
@@ -483,11 +482,11 @@ main (int argc, char **argv)
 
   games_stock_init ();
 
-  gtk_window_set_default_icon_name ("gnotski");
+  gtk_window_set_default_icon_name ("gnome-klotski");
   
-  settings = g_settings_new ("org.gnome.gnotski");
+  settings = g_settings_new ("org.gnome.klotski");
   
-  highscores = games_scores_new ("gnotski",
+  highscores = games_scores_new ("gnome-klotski",
                                  scorecats, G_N_ELEMENTS (scorecats),
                                  NULL, NULL,
                                  0 /* default category */,
@@ -812,14 +811,14 @@ game_score (void)
   gchar *data;
   gsize data_length;
 
-  filename = g_build_filename (g_get_user_data_dir (), "gnotski", NULL);
+  filename = g_build_filename (g_get_user_data_dir (), "gnome-klotski", NULL);
   g_mkdir_with_parents (filename, 0775);
   g_free (filename);
 
   /* Level is complete */
   key = get_level_key (current_level);
   keyfile = g_key_file_new ();
-  filename = g_build_filename (g_get_user_data_dir (), "gnotski", "levels", NULL);
+  filename = g_build_filename (g_get_user_data_dir (), "gnome-klotski", "levels", NULL);
   g_key_file_load_from_file (keyfile, filename, G_KEY_FILE_NONE, NULL);
 
   g_key_file_set_boolean (keyfile, key, "solved", TRUE);
@@ -1083,7 +1082,7 @@ load_solved_state (void)
 	GKeyFile *keyfile;
 
 	keyfile = g_key_file_new ();
-	filename = g_build_filename (g_get_user_data_dir (), "gnotski", "levels", NULL);
+	filename = g_build_filename (g_get_user_data_dir (), "gnome-klotski", "levels", NULL);
 	g_key_file_load_from_file (keyfile, filename, G_KEY_FILE_NONE, NULL);
 	g_free (filename);
 	
@@ -1103,7 +1102,7 @@ load_image (void)
   char *path;
   GError *error = NULL;
 
-  path = g_build_filename (DATA_DIRECTORY, "gnotski.svg", NULL);
+  path = g_build_filename (DATA_DIRECTORY, "gnome-klotski.svg", NULL);
   tiles_preimage = games_preimage_new_from_file (path, &error);
   g_free (path);
 
@@ -1430,7 +1429,7 @@ help_cb (GtkAction * action)
 {
   GError *error = NULL;
 
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "help:gnotski", gtk_get_current_event_time (), &error);
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (window)), "help:gnome-klotski", gtk_get_current_event_time (), &error);
   if (error)
     g_warning ("Failed to show help: %s", error->message);
   g_clear_error (&error);
@@ -1455,7 +1454,7 @@ about_cb (GtkAction * action)
                          "authors", authors,
 			 "documenters", documenters,
                          "translator-credits", _("translator-credits"),
-                         "logo-icon-name", "gnotski",
+                         "logo-icon-name", "gnome-klotski",
                          "website", "http://www.gnome.org/projects/gnome-games",
                          "website-label", _("GNOME Games web site"),
                          NULL);
