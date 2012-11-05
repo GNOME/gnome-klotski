@@ -635,7 +635,7 @@ public class Klotski : Gtk.Application
         view.show ();
         vbox.pack_start (view, true, true, 0);
 
-        vbox.pack_start (new Gtk.HSeparator (), false, false, 0);
+        vbox.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, false, 0);
 
         load_solved_state ();
 
