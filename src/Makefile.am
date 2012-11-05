@@ -17,10 +17,7 @@ gnome_klotski_CFLAGS = \
 gnome_klotski_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
-	--pkg gmodule-2.0 \
-	--pkg librsvg-2.0 \
-	--pkg pango \
-	--pkg pangocairo
+	--pkg librsvg-2.0
 
 gnome_klotski_LDADD = \
 	$(GNOME_KLOTSKI_LIBS)

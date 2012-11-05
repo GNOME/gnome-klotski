@@ -598,11 +598,6 @@ public class Klotski : Gtk.Application
 
         status_box.pack_start (moves_label, false, false, 0);
 
-        /* game clock */
-        //clock_label = new Gtk.Label ("");
-        //clock_label.show ();
-        //status_box.pack_start (clock_label, false, false, 0);
-
         var toolbar = new Gtk.Toolbar ();
         toolbar.show ();
         toolbar.show_arrow = false;
