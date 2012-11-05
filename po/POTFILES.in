@@ -3,6 +3,5 @@
 [encoding: UTF-8]
 data/gnome-klotski.desktop.in.in
 data/org.gnome.klotski.gschema.xml.in
-src/games-scores-dialog.c
-src/games-stock.c
-src/gnome-klotski.c
+src/gnome-klotski.vala
+src/puzzle-view.vala
