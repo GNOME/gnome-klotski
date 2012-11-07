@@ -27,4 +27,11 @@
       <gnome:userid>jclinton</gnome:userid>
     </foaf:Person>
   </maintainer>
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>John Cheetham</foaf:name>
+      <foaf:mbox rdf:resource="mailto:kaama12@yahoo.co.uk" />
+      <gnome:userid>jcheetham</gnome:userid>
+    </foaf:Person>
+  </maintainer>
 </Project>
