@@ -21,6 +21,8 @@ public class PuzzleView : Gtk.DrawingArea
     private double kx = 0;
     private double ky = 0;
 
+    private string image_filepath = "";
+
     private Puzzle? _puzzle = null;
     public Puzzle? puzzle
     {
@@ -58,11 +60,11 @@ public class PuzzleView : Gtk.DrawingArea
 
     private void load_image ()
     {
-        var path = Path.build_filename (DATA_DIRECTORY, "gnome-klotski.svg", null);
+        image_filepath = Path.build_filename (DATA_DIRECTORY, "gnome-klotski.svg", null);
 
         try
         {
-            tiles_image = Rsvg.pixbuf_from_file (path);
+            tiles_image = Rsvg.pixbuf_from_file (image_filepath);
         }
         catch (Error e)
         {
@@ -74,7 +76,7 @@ public class PuzzleView : Gtk.DrawingArea
                                                 e.message);
             dialog.run ();*/
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
-            stderr.printf ( "%s %s\n", "image path:", path);
+            stderr.printf ( "%s %s\n", "image path:", image_filepath);
             Posix.exit (Posix.EXIT_FAILURE);
         }
     }
@@ -89,7 +91,20 @@ public class PuzzleView : Gtk.DrawingArea
             tiles_pixbuf = null;
 
             if (tiles_image != null)
-                tiles_pixbuf = tiles_image.scale_simple(tile_size * THEME_TILE_SEGMENTS, tile_size * 2, Gdk.InterpType.BILINEAR);
+            {                
+                int height = tile_size * 2;
+                int width = tile_size * THEME_TILE_SEGMENTS;
+
+                try
+                { 
+                    tiles_pixbuf = Rsvg.pixbuf_from_file_at_size (image_filepath, width, height);
+                }
+                catch (Error e)
+                {
+                    stderr.printf ("%s %s\n", "Error in puzzle-view.vala draw function:", e.message);
+                }
+            }
+
         }
 
         var style = get_style_context ();
