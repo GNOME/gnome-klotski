@@ -632,6 +632,7 @@ public class Klotski : Gtk.Application
         vbox.pack_start (toolbar, false, false, 0);
 
         view = new PuzzleView ();
+        view.set_size_request (MINWIDTH, MINHEIGHT);
         view.show ();
         vbox.pack_start (view, true, true, 0);
 
