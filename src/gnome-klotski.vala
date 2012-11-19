@@ -603,7 +603,7 @@ public class Klotski : Gtk.Application
         toolbar.show_arrow = false;
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
 
-        var new_game_button = new Gtk.ToolButton (null, N_("_New"));
+        var new_game_button = new Gtk.ToolButton (null, _("_New"));
         new_game_button.icon_name = "document-new";
         new_game_button.use_underline = true;
         new_game_button.action_name = "app.new-game";
@@ -856,7 +856,7 @@ public class Klotski : Gtk.Application
 
         settings.set_int (KEY_LEVEL, current_level);
 
-        messagewidget.set_text (N_("Puzzle: ") + _(level[current_level].name));
+        messagewidget.set_text (_("Puzzle: ") + _(level[current_level].name));
         puzzle = new Puzzle (level[current_level].width, level[current_level].height, level[current_level].data);
         puzzle.moved.connect (puzzle_moved_cb);
         view.puzzle = puzzle;
