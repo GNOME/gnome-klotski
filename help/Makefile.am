@@ -1,5 +1,5 @@
 @YELP_HELP_RULES@
-HELP_ID = gnotski
+HELP_ID = gnome-klotski
 
 HELP_MEDIA = \
 	figures/gnotski_start_window.png \

@@ -909,7 +909,7 @@ public class Klotski : Gtk.Application
     {
         try
         {
-            Gtk.show_uri (window.get_screen (), "help:gnotski", Gtk.get_current_event_time ());
+            Gtk.show_uri (window.get_screen (), "help:gnome-klotski", Gtk.get_current_event_time ());
         }
         catch (Error e)
         {
