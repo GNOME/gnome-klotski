@@ -1,11 +1,6 @@
-gnome-klotski 3.7.1
+gnome-klotski 3.7.2
 ====================
 
+* First release split from gnome-games
 * Port to vala
-
 * Add John Cheetham as maintainer
-
-gnome-klotski 3.7.0
-====================
-
-First release split from gnome-games
