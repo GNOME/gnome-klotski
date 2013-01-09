@@ -1,6 +1,7 @@
 [Desktop Entry]
 _Name=Klotski
 _Comment=Slide blocks to solve the puzzle
+_Keywords=game;strategy;logic;move;
 Exec=gnome-klotski
 Icon=gnome-klotski
 Terminal=false
