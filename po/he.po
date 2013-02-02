@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-20 14:48+0200\n"
-"PO-Revision-Date: 2012-12-20 14:48+0200\n"
+"POT-Creation-Date: 2013-02-02 11:39+0200\n"
+"PO-Revision-Date: 2013-02-02 11:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Gezer (Hebrew)\n"
 "Language: he\n"
@@ -31,6 +31,10 @@ msgstr "בלוקים Klotski"
 #: ../data/gnome-klotski.desktop.in.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "יש להחליק בלוקים כדי לפתור את התצרף"
+
+#: ../data/gnome-klotski.desktop.in.in.h:3
+msgid "game;strategy;logic;move;"
+msgstr "משחק;אסטרטגיה;הגיון;היגיון;תנועה;הזזה;"
 
 #: ../data/org.gnome.klotski.gschema.xml.in.h:1
 msgid "The puzzle in play"
