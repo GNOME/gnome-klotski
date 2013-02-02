@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-02 21:46+0000\n"
-"PO-Revision-Date: 2011-11-09 16:10+0900\n"
-"Last-Translator: Gheyret Kenji<gheyret@yahoo.com>\n"
+"POT-Creation-Date: 2013-01-28 23:17+0000\n"
+"PO-Revision-Date: 2013-02-02 12:37+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,10 @@ msgstr "Klotski"
 msgid "Slide blocks to solve the puzzle"
 msgstr "تېپىشماقنى تېپىش ئۈچۈن بۆلەكنى سىيرىڭ"
 
+#: ../data/gnome-klotski.desktop.in.in.h:3
+msgid "game;strategy;logic;move;"
+msgstr "game؛strategy؛logic؛move؛ئويۇن؛ئىستراتېگىيە؛لوگىكىلىق؛مېڭىش؛"
+
 #: ../data/org.gnome.klotski.gschema.xml.in.h:1
 msgid "The puzzle in play"
 msgstr "ئويناۋاتقان تېپىشماق"
@@ -37,12 +41,10 @@ msgid "The number of the puzzle being played."
 msgstr "ئوينالغان تېپىشماقلارنىڭ سانى."
 
 #: ../data/org.gnome.klotski.gschema.xml.in.h:3
-#| msgid "The width of the main window in pixels."
 msgid "Width of the window in pixels"
 msgstr "كۆزنەكنىڭ پىكسېل  بىلەن ئىپادىلەنگەن كەڭلىكى"
 
 #: ../data/org.gnome.klotski.gschema.xml.in.h:4
-#| msgid "The height of the main window in pixels."
 msgid "Height of the window in pixels"
 msgstr "كۆزنەكنىڭ پىكسېل  بىلەن ئىپادىلەنگەن ئېگىزلىكى"
 
@@ -238,7 +240,6 @@ msgid "_Leave Fullscreen"
 msgstr "پۈتۈن ئېكراندىن ئايرىل(_L)"
 
 #: ../src/gnome-klotski.vala:859
-#| msgid "Puzzle:"
 msgid "Puzzle: "
 msgstr "تېپىشماق: "
 
@@ -264,13 +265,7 @@ msgstr "بۆلەكلەرنى سىيرىش تېپىشمىقى\n"
 msgid "translator-credits"
 msgstr "Gheyret Kenji <gheyret@gmail.com>\n"
 "Sahran<sahran@live.com>\n"
-"Muhemmed Erdem <misran_erdem@hotmail.com>\n"
-"\n"
-"Launchpad Contributions:\n"
-"  Abdumomin.Kadir https://launchpad.net/~abdumomin-kadir\n"
-"  Gheyret T.Kenji https://launchpad.net/~gheyret\n"
-"  Gheyret T.Kenji https://launchpad.net/~gheyretkenji\n"
-"  Sahran https://launchpad.net/~sahran"
+"Muhemmed Erdem <misran_erdem@hotmail.com>"
 
 #: ../src/gnome-klotski.vala:967
 msgid "GNOME Games web site"
@@ -289,7 +284,6 @@ msgid "Date"
 msgstr "چېسلا"
 
 #: ../src/gnome-klotski.vala:1060
-#| msgid "_Move"
 msgid "Moves"
 msgstr "يوللار"
 
