@@ -10,6 +10,6 @@ icon22_DATA = 22x22/gnome-klotski.png
 icon24_DATA = 24x24/gnome-klotski.png
 icon32_DATA = 32x32/gnome-klotski.png
 icon48_DATA = 48x48/gnome-klotski.png
-icon256_DATA = 48x48/gnome-klotski.png
+icon256_DATA = 256x256/gnome-klotski.png
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(icon256_DATA)
