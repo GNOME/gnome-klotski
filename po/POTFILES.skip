@@ -1,3 +1,3 @@
-data/gnome-klotski.desktop.in
+data/gnotski.desktop.in
 src/gnome-klotski.c
 src/puzzle-view.c

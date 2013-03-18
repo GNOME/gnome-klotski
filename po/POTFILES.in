@@ -1,7 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
-data/gnome-klotski.desktop.in.in
+data/gnotski.desktop.in.in
 data/org.gnome.klotski.gschema.xml.in
 src/gnome-klotski.vala
 src/puzzle-view.vala
