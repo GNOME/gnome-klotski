@@ -45,7 +45,7 @@ data/Makefile
 data/icons/Makefile
 data/icons/hicolor/Makefile
 data/icons/HighContrast/Makefile
-data/gnome-klotski.desktop.in
+data/gnotski.desktop.in
 help/Makefile
 src/Makefile
 ])
