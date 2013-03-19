@@ -1,0 +1,283 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tajik Gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-03-18 18:37+0000\n"
+"PO-Revision-Date: 2013-01-21 13:45+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: \n"
+"Language: Tajik\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
+msgid "Klotski"
+msgstr ""
+
+#: ../data/gnotski.desktop.in.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr ""
+
+#: ../data/gnotski.desktop.in.in.h:3
+msgid "game;strategy;logic;move;"
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+msgid "The puzzle in play"
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+msgid "The number of the puzzle being played."
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:3
+msgid "Width of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:4
+msgid "Height of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:5
+msgid "true if the window is maximized"
+msgstr ""
+
+#: ../data/org.gnome.klotski.gschema.xml.in.h:6
+msgid "true if the window is fullscren"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:49
+msgid "Only 18 Steps"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:62
+msgid "Daisy"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:75
+msgid "Violet"
+msgstr "Бунафшаранг"
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:88
+msgid "Poppy"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:101
+msgid "Pansy"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:114
+msgid "Snowdrop"
+msgstr ""
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: ../src/gnome-klotski.vala:127
+msgid "Red Donkey"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:140
+msgid "Trail"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:153
+msgid "Ambush"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:166
+msgid "Agatka"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:177
+msgid "Success"
+msgstr "Анҷоми бомуваффақият"
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:187
+msgid "Bone"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:200
+msgid "Fortune"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:214
+msgid "Fool"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:224
+msgid "Solomon"
+msgstr "Соломон"
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:237
+msgid "Cleopatra"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:249
+msgid "Shark"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:261
+msgid "Rome"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:273
+msgid "Pennant Puzzle"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:286
+msgid "Ithaca"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:309
+msgid "Pelopones"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:321
+msgid "Transeuropa"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:333
+msgid "Lodzianka"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:344
+msgid "Polonaise"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:355
+msgid "Baltic Sea"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:367
+msgid "American Pie"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:383
+msgid "Traffic Jam"
+msgstr ""
+
+#. puzzle name
+#: ../src/gnome-klotski.vala:394
+msgid "Sunshine"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:439
+msgid "_Game"
+msgstr "_Бозӣ"
+
+#. set of puzzles
+#: ../src/gnome-klotski.vala:441
+msgid "HuaRong Trail"
+msgstr ""
+
+#. set of puzzles
+#: ../src/gnome-klotski.vala:443
+msgid "Challenge Pack"
+msgstr ""
+
+#. set of puzzles
+#: ../src/gnome-klotski.vala:445
+msgid "Skill Pack"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:446
+msgid "_Restart Puzzle"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:447
+msgid "Next Puzzle"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:448
+msgid "Previous Puzzle"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:606
+msgid "_New"
+msgstr "_Нав"
+
+#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
+msgid "_Fullscreen"
+msgstr "_Экрани пурра"
+
+#: ../src/gnome-klotski.vala:667
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:859
+msgid "Puzzle: "
+msgstr ""
+
+#: ../src/gnome-klotski.vala:873
+#, c-format
+msgid "Moves: %d"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:876
+msgid "Level completed."
+msgstr ""
+
+#: ../src/gnome-klotski.vala:957
+msgid ""
+"Sliding Block Puzzles\n"
+"\n"
+"Klotski is a part of GNOME Games."
+msgstr ""
+
+#: ../src/gnome-klotski.vala:964
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:967
+msgid "GNOME Games web site"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:1017
+msgid "New Game"
+msgstr "Бозии нав"
+
+#: ../src/gnome-klotski.vala:1032
+msgid "Puzzle:"
+msgstr ""
+
+#: ../src/gnome-klotski.vala:1057
+msgid "Date"
+msgstr "Сана"
+
+#: ../src/gnome-klotski.vala:1060
+msgid "Moves"
+msgstr ""
