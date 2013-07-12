@@ -1,15 +1,17 @@
 # Czech translation of gnotski help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnotski help.
-# Marek Černocký <marek@manet.cz>, 2009.
+#
+# Marek Černocký <marek@manet.cz>, 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2009-07-04 11:46+0000\n"
-"PO-Revision-Date: 2009-07-04 19:58+0100\n"
+"POT-Creation-Date: 2012-12-02 21:49+0000\n"
+"PO-Revision-Date: 2013-07-12 10:52+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,75 +19,96 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:204(None)
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
-msgstr "image"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
+msgstr ""
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnotski.xml:261(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/gnotski_start_window.png'; "
-"md5=23e584de3f58e5baf5c9ca5098a7961e"
-msgstr "image"
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
 
-#: C/gnotski.xml:28(title)
+#: C/index.docbook:28(articleinfo/title)
 msgid "<application>Klotski</application> Manual"
 msgstr "Příručka ke hře <application>Klotski</application>"
 
-#: C/gnotski.xml:31(para)
+#: C/index.docbook:31(abstract/para)
 msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
 msgstr ""
-"Klotski je logická hra, jejímž cílem je dostat označkovaný blok na značky, "
-"což se dělá přesouváním bloků."
+"Klotski je logická hra, jejímž cílem je dostat vzorovaný blok na značky, což "
+"se dělá přesouváním bloků."
 
-#: C/gnotski.xml:39(year)
-msgid "2002"
-msgstr "2002"
+#: C/index.docbook:38(articleinfo/copyright)
+msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
+msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#: C/gnotski.xml:40(holder)
-msgid "Andrew Sobala"
-msgstr "Andrew Sobala"
-
-#: C/gnotski.xml:54(publishername) C/gnotski.xml:67(orgname)
-#: C/gnotski.xml:142(para)
+#: C/index.docbook:54(publisher/publishername)
+#: C/index.docbook:142(revdescription/para)
 msgid "GNOME Documentation Project"
 msgstr "Dokumentační projekt GNOME"
 
-#: C/gnotski.xml:2(para)
+#: C/index.docbook:2(legalnotice/para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
-"Free Documentation License, verze 1.1 nebo jakékoli další verze vydané "
-"nadací Free Software Foundation; bez neměnných oddílů, bez textů předních "
-"desek a bez textů zadních desek. Kopie této licence je zahrnuta v oddílu "
-"jménem <ulink type=\"help\" url=\"help:fdl\">GNU Free Documentation "
-"License</ulink> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"<ulink type=\"help\" url=\"help:fdl\">tímto odkazem</ulink> nebo v souboru "
+"COPYING-DOCS dodávaném s touto příručkou."
 
-#: C/gnotski.xml:12(para)
+#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
 "you can do so by adding a copy of the license to the manual, as described in "
 "section 6 of the license."
 msgstr ""
-"Tato příručka je součástí kolekce příruček GNOME, distribuovaných pod "
-"licencí GNU FDL. Pokud chcete tento dokument šířit odděleně od kolekce, "
-"musíte přiložit kopii licence dle popisu v sekci 6 dané licence."
+"Tato příručka je součástí sbírky příruček GNOME šířených za podmínek licence "
+"GNU FDL. Pokud chcete tento dokument šířit odděleně od sbírky, musíte "
+"přiložit kopii licence dle popisu v oddílu 6 dané licence."
 
-#: C/gnotski.xml:19(para)
+#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -93,13 +116,13 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
-"Mnoho užívaných jmen určených k zviditelnění produktů nebo služeb jsou "
+"Mnoho užívaných názvů určených k zviditelnění produktů nebo služeb jsou "
 "ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a "
 "členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se "
 "jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s "
 "velkým písmenem na začátku."
 
-#: C/gnotski.xml:35(para)
+#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -113,18 +136,18 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“ BEZ ZÁRUKY V JAKÉKOLIV PODOBĚ, "
+"DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“, BEZ ZÁRUKY JAKÉHOKOLIV DRUHU, "
 "NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ "
-"VERZE, JE BEZCHYBNÝ NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL NEBO "
-"NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ DOKUMENTU, "
-"NEBO JEHO UPRAVENÉ VERZE, LEŽÍ NA VÁS. POKUD KVŮLI TOMUTO DOKUMENTU, NEBO "
-"JEHO UPRAVENÉ VERZI, NASTANE PROBLÉM, VY (NIKOLIV PŮVODNÍ AUTOR NEBO "
-"JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE JAKÉKOLIV NÁKLADY ZA NUTNÉ ÚPRAVY, OPRAVY "
-"ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE ZÁKLADNÍ SOUČÁST TÉTO "
-"LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ, PODLE TÉTO DOHODY, POVOLENO UŽÍVÁNÍ ANI "
-"ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
+"VERZE, JE BEZCHYBNÝ, NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL, "
+"NEBO NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ "
+"DOKUMENTU, NEBO JEHO UPRAVENÉ VERZE, NESETE VY. POKUD JE TENTO DOKUMENT NEBO "
+"JEHO UPRAVENÁ VERZE VADNÁ V JAKÉMKOLIV SMYSLU, VY (NIKOLIV PŮVODCE, AUTOR "
+"NEBO JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE ODPOVĚDNOST ZA JAKÉKOLIV NÁKLADY NA "
+"NUTNÉ ÚPRAVY, OPRAVY ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE "
+"ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ PODLE TÉTO DOHODY "
+"POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
 
-#: C/gnotski.xml:55(para)
+#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -148,76 +171,64 @@ msgstr ""
 "K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY "
 "TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ."
 
-#: C/gnotski.xml:28(para)
+#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
 "DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU "
-"FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <placeholder-1/>"
+"FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <_:orderedlist-1/>"
 
-#: C/gnotski.xml:64(firstname)
-msgid "Andrew"
-msgstr "Andrew"
+#: C/index.docbook:63(authorgroup/author)
+msgid ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>Dokumentační projekt GNOME</orgname> <address> <email>andrew@sobala."
+"net</email> </address> </affiliation>"
 
-#: C/gnotski.xml:65(surname)
-msgid "Sobala"
-msgstr "Sobala"
+#: C/index.docbook:72(authorgroup/othercredit)
+msgid ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>Projekt GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
 
-#: C/gnotski.xml:68(email)
-msgid "andrew@sobala.net"
-msgstr "andrew@sobala.net"
+#: C/index.docbook:81(authorgroup/othercredit)
+msgid ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>Projekt GNOME</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
 
-#: C/gnotski.xml:73(firstname)
-msgid "Lars"
-msgstr "Lars"
-
-#: C/gnotski.xml:74(surname)
-msgid "Rydlinge"
-msgstr "Rydlinge"
-
-#: C/gnotski.xml:76(orgname) C/gnotski.xml:85(orgname)
-msgid "GNOME Project"
-msgstr "Projekt GNOME"
-
-#: C/gnotski.xml:77(email)
-msgid "Lars.Rydlinge@HIG.SE"
-msgstr "Lars.Rydlinge@HIG.SE"
-
-#: C/gnotski.xml:82(firstname)
-msgid "Ross"
-msgstr "Ross"
-
-#: C/gnotski.xml:83(surname)
-msgid "Burton"
-msgstr "Burton"
-
-#: C/gnotski.xml:86(email)
-msgid "ross@burtonini.com"
-msgstr "ross@burtonini.com"
-
-#: C/gnotski.xml:136(revnumber)
-msgid "V2.0"
-msgstr "V2.0"
-
-#: C/gnotski.xml:137(date)
-msgid "13 August 2002"
-msgstr "13. srpna 2002"
-
-#: C/gnotski.xml:139(para)
+#: C/index.docbook:139(revdescription/para)
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: C/gnotski.xml:148(releaseinfo)
+#: C/index.docbook:135(revhistory/revision)
+msgid ""
+"<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>V2.0</revnumber> <date>13. srpna 2002</date> <_:revdescription-1/>"
+
+#: C/index.docbook:148(articleinfo/releaseinfo)
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Tato příručka popisuje GNOME Klotski ve verzi 2.12."
 
-#: C/gnotski.xml:151(title)
+#: C/index.docbook:151(legalnotice/title)
 msgid "Feedback"
 msgstr "Ohlasy"
 
-#: C/gnotski.xml:152(para)
+#: C/index.docbook:152(legalnotice/para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -229,24 +240,24 @@ msgstr ""
 "instrukcí na stránce <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
 "\"help\">Stránka s ohlasy na GNOME</ulink>."
 
-#: C/gnotski.xml:161(primary)
-msgid "GNOME Klotski"
-msgstr "GNOME Klotski"
+#: C/index.docbook:160(article/indexterm)
+msgid "<primary>GNOME Klotski</primary>"
+msgstr "<primary>GNOME Klotski</primary>"
 
-#: C/gnotski.xml:167(title)
+#: C/index.docbook:167(sect1/title)
 msgid "Introduction"
 msgstr "Úvod"
 
-#: C/gnotski.xml:168(para)
+#: C/index.docbook:168(sect1/para)
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
 "green markers."
 msgstr ""
 "Aplikace <application>Klotski</application> je klonem hry Klotski. Podstatou "
-"hry je přesunout označkovaný blok na místo určené zelenými značkami."
+"hry je přesunout vzorovaný blok na místo určené zelenými značkami."
 
-#: C/gnotski.xml:171(para)
+#: C/index.docbook:171(sect1/para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -254,7 +265,7 @@ msgstr ""
 "Hru <application>Klotski</application> napsal Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
 
-#: C/gnotski.xml:174(para)
+#: C/index.docbook:174(sect1/para)
 msgid ""
 "<application>Klotski</application> is included in the gnome-games package, "
 "which is part of the GNOME desktop environment. This document describes "
@@ -264,7 +275,7 @@ msgstr ""
 "filename>, který patří k pracovnímu prostředí GNOME. Tento dokument popisuje "
 "verzi 2.12 aplikace <application>Klotski</application>."
 
-#: C/gnotski.xml:177(para)
+#: C/index.docbook:177(sect1/para)
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -278,7 +289,7 @@ msgstr ""
 "pod tímto <ulink url=\"help:gpl\" type=\"help\">odkazek</ulink> nebo v "
 "souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. "
 
-#: C/gnotski.xml:184(para)
+#: C/index.docbook:184(sect1/para)
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
@@ -288,55 +299,58 @@ msgstr ""
 "tohoto návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-"
 "guide?feedback-bugs\" type=\"help\">dokumentu</ulink>."
 
-#: C/gnotski.xml:193(title)
+#: C/index.docbook:193(sect1/title)
 msgid "Objective"
 msgstr "Cíl hry"
 
-#: C/gnotski.xml:200(title)
+#: C/index.docbook:200(figure/title)
 msgid "The winning move"
 msgstr "Vítězný tah"
 
-#: C/gnotski.xml:207(phrase)
+#: C/index.docbook:202(screenshot/mediaobject)
 msgid ""
-"The patterned block should be moved to the space bordered by the green "
-"markers."
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>The patterned block should be moved to "
+"the space bordered by the green markers.</phrase> </textobject>"
 msgstr ""
-"Označkovaný blok by měl být přesunut do prostoru vyhraničeného zelenými "
-"značkami."
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>Vzorovaný blok by měl být přesunut na "
+"místo ohraničené zelenými značkami.</phrase> </textobject>"
 
-#: C/gnotski.xml:194(para)
+#: C/index.docbook:194(sect1/para)
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
 "moving the blocks one at a time with the mouse until you can get the "
-"patterned block to the markers. <placeholder-1/>"
+"patterned block to the markers. <_:figure-1/>"
 msgstr ""
-"Podstatou hry <application>Klotski</application> je přesunout označkovaný "
-"blok na zelené značky"
+"Podstatou hry <application>Klotski</application> je přesunout vzorovaný blok "
+"na zelené značky co nejméně tahy to jde. Toho dosáhnete přesouváním bloků po "
+"jednom pomocí myši, dokud nedostanete vzorovaný blok na značky. <_:figure-1/>"
 
-#: C/gnotski.xml:219(title)
+#: C/index.docbook:219(sect1/title)
 msgid "Playing <application>Klotski</application>"
 msgstr "Jak hrát <application>Klotski</application>"
 
-#: C/gnotski.xml:242(title)
+#: C/index.docbook:242(sect2/title)
 msgid "To Start <application>Klotski</application>"
 msgstr "Spuštění hry <application>Klotski</application>"
 
-#: C/gnotski.xml:243(para)
+#: C/index.docbook:243(sect2/para)
 msgid ""
 "You can start <application>Klotski</application> from the Applications menu "
-"by choosing <menuchoice><guisubmenu>Games</guisubmenu><guimenuitem>Gnotski</"
-"guimenuitem></menuchoice>."
+"by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
+"<guimenuitem>Gnotski</guimenuitem> </menuchoice>."
 msgstr ""
 "Hru <application>Klotski</application> můžete spustit z nabídky aplikací "
-"výběrem <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Klotski</"
+"výběrem <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Gnotski</"
 "guimenuitem></menuchoice>."
 
-#: C/gnotski.xml:252(title)
+#: C/index.docbook:252(sect2/title)
 msgid "The main window"
 msgstr "Hlavní okno"
 
-#: C/gnotski.xml:253(para)
+#: C/index.docbook:253(sect2/para)
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -344,32 +358,32 @@ msgstr ""
 "Po spuštění hry <application>Klotski</application> se zobrazí následující "
 "okno."
 
-#: C/gnotski.xml:257(title)
+#: C/index.docbook:257(figure/title)
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Okno hry <application>Klotski</application> po spuštění"
 
-#: C/gnotski.xml:0(application)
-msgid "Klotski"
-msgstr "Klotski"
-
-#: C/gnotski.xml:264(phrase)
+#: C/index.docbook:259(screenshot/mediaobject)
 msgid ""
-"Shows <placeholder-1/> main window. Contains titlebar, menubar, game area "
-"and statusbar. Menubar contains Game and Help menus."
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
+"application> main window. Contains titlebar, menubar, game area and "
+"statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
 msgstr ""
-"Zobrazuje placeholder-1/> hlavní okno. To obsahuje pruh s názvem, panel "
-"nabídek, hrací plochu a stavový řádek. Panel nabídek obsahuje nabídky Hra a "
-"Nápověda."
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject><phrase>Ukazuje hlavní okno hry "
+"<application>Klotski</application>. To obsahuje záhlaví, lištu nabídek, "
+"herní plochu a stavovou lištu. Lišta nabídek obsahuje nabídky Hra a Nápověda."
+"</phrase></textobject>"
 
-#: C/gnotski.xml:275(term)
+#: C/index.docbook:275(varlistentry/term)
 msgid "Menubar"
 msgstr "Panel nabídek"
 
-#: C/gnotski.xml:279(term)
+#: C/index.docbook:279(varlistentry/term)
 msgid "Game menu"
 msgstr "Nabídka Hra"
 
-#: C/gnotski.xml:281(para)
+#: C/index.docbook:281(listitem/para)
 msgid ""
 "The game menu allows you to start new games, view the highest scores and "
 "quit the program."
@@ -377,11 +391,11 @@ msgstr ""
 "Nabídka Hra vám umožňuje spustit novou hru, zobrazit tabulku nejlepších "
 "výsledků a ukončit program."
 
-#: C/gnotski.xml:286(term)
+#: C/index.docbook:286(varlistentry/term)
 msgid "Help menu"
 msgstr "Nabídka Nápověda"
 
-#: C/gnotski.xml:288(para)
+#: C/index.docbook:288(listitem/para)
 msgid ""
 "The help menu allows you to view the documentation for <application>Klotski</"
 "application>"
@@ -389,11 +403,11 @@ msgstr ""
 "Nabídka Nápověda vám umožňuje přístup k dokumentaci hry "
 "<application>Klotski</application>."
 
-#: C/gnotski.xml:295(term)
+#: C/index.docbook:295(varlistentry/term)
 msgid "Game area"
 msgstr "Hrací plocha"
 
-#: C/gnotski.xml:297(para)
+#: C/index.docbook:297(listitem/para)
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -401,37 +415,35 @@ msgstr ""
 "Na hrací ploše jsou zobrazené bloky současné hry. Můžete po ní přesouvat "
 "bloky pomocí myši, jak popisuje <xref linkend=\"gnotski-moving\"/>."
 
-#: C/gnotski.xml:303(term)
+#: C/index.docbook:303(varlistentry/term)
 msgid "Statusbar"
 msgstr "Panel nástrojů"
 
-#: C/gnotski.xml:305(para)
+#: C/index.docbook:305(listitem/para)
 msgid "The statusbar shows how many moves you have taken so far."
 msgstr "Stavový řádek vás informuje, kolik jste již provedli tahů."
 
-#. ==== End of Figure ====
-#: C/gnotski.xml:272(para)
+#: C/index.docbook:272(sect2/para)
 msgid ""
 "The <application>Klotski</application> window contains the following "
-"elements: <placeholder-1/>"
+"elements: <_:variablelist-1/>"
 msgstr ""
-"Okno hry <application>Klotski</application> obsahuje následující prvky: "
-"<placeholder-1/>"
+"Okno hry <application>Klotski</application> obsahuje následující prvky: <_:"
+"variablelist-1/>"
 
-#: C/gnotski.xml:314(title)
+#: C/index.docbook:314(sect2/title)
 msgid "Starting a new game"
 msgstr "Spuštění nové hry"
 
-#: C/gnotski.xml:315(para)
+#: C/index.docbook:315(sect2/para)
 msgid ""
 "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-"<guimenuitem>Next Puzzle</guimenuitem>and <guimenuitem>Previous Puzzle</"
+"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
 "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-"belongs to one of the four categories found in the submenus named "
+"belongs to one of the three categories found in the submenus named "
 "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu>, <guisubmenu>Skill Pack</guisubmenu>, and <guisubmenu>Minoru "
-"Climb</guisubmenu>. In these submenus, each puzzle name refers to a game "
-"scenario."
+"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
+"puzzle name refers to a game scenario."
 msgstr ""
 "Novou hru začnete použitím nabídky <guimenu>Hra</guimenu>. Pomocí položek "
 "<guimenuitem>Následující hádanka</guimenuitem> a <guimenuitem>Předchozí "
@@ -441,25 +453,24 @@ msgstr ""
 "<guisubmenu>Sbírka dovedností</guisubmenu>. V každé této podnabídce jsou "
 "názvy hlavolamů, které odkazují na daný scénář hry."
 
-#: C/gnotski.xml:323(title)
+#: C/index.docbook:323(example/title)
 msgid "Starting a game"
 msgstr "Spuštění hry"
 
-#: C/gnotski.xml:324(para)
+#: C/index.docbook:324(example/para)
 msgid ""
-"To start the hardest game provided, choose <menuchoice><guimenu>Game</"
-"guimenu><guisubmenu>Minoru Climb</guisubmenu><guimenuitem>Climb 24 Pro</"
-"guimenuitem></menuchoice>"
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> <guisubmenu>"
+"[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
+"menuchoice>"
 msgstr ""
-"Když chcete spustit nejtěžší nabízenou hru, vyberte "
-"<menuchoice><guimenu>Hra</guimenu><guisubmenu>Sbírka dovedností</"
-"guisubmenu><guimenuitem>Sluneční svit</guimenuitem></menuchoice>."
+"Když chcete začít hru, vyberte <menuchoice><guimenu>Hra</guimenu><guisubmenu>"
+"[kategorie]</guisubmenu><guimenuitem>[scénář hry]</guimenuitem></menuchoice>."
 
-#: C/gnotski.xml:335(title)
+#: C/index.docbook:335(sect2/title)
 msgid "Moving blocks"
 msgstr "Přesouvání bloků"
 
-#: C/gnotski.xml:336(para)
+#: C/index.docbook:336(sect2/para)
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -470,14 +481,14 @@ msgstr ""
 "Blok přesunete tak, že na něj kliknete, držíte zmáčknuté tlačítko myši a "
 "přesunete jej na nové místo. Přesouvat nelze zelené bloky a bloky tvořící "
 "hranice hry. Blok nemůžete přesunout na místo, které je již obsazené jiným "
-"blokem, s výjimkou, že můžete přesunout označkovaný blok skrz zelené bloky "
-"ve vítězném tahu."
+"blokem, s výjimkou, že můžete přesunout vzorovaný blok skrz zelené bloky ve "
+"vítězném tahu."
 
-#: C/gnotski.xml:356(title)
+#: C/index.docbook:356(sect1/title)
 msgid "Authors"
 msgstr "Autoři"
 
-#: C/gnotski.xml:357(para)
+#: C/index.docbook:357(sect1/para)
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
@@ -491,11 +502,11 @@ msgstr ""
 "návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-guide?"
 "feedback-bugs\" type=\"help\">dokumentu</ulink>."
 
-#: C/gnotski.xml:377(title)
+#: C/index.docbook:377(sect1/title)
 msgid "License"
 msgstr "Licence"
 
-#: C/gnotski.xml:378(para)
+#: C/index.docbook:378(sect1/para)
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -504,11 +515,11 @@ msgid ""
 msgstr ""
 "Tento program, včetně grafických návrhů, je svobodný software. Můžete jej "
 "dále šířit a/nebo upravovat za dodržení podmínek <ulink type=\"help\" url="
-"\"help:gpl\"><citetitle>GNU General Public License</citetitle></"
-"ulink>, tak jak ji vydala Free Software Foundation ve verzi 2 nebo (dle vaší "
-"volby) novější."
+"\"help:gpl\"><citetitle>GNU General Public License</citetitle></ulink>, tak "
+"jak ji vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) "
+"novější."
 
-#: C/gnotski.xml:385(para)
+#: C/index.docbook:385(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -520,27 +531,52 @@ msgstr ""
 "VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
 "Public License</citetitle>."
 
-#: C/gnotski.xml:391(para)
+#: C/index.docbook:398(para/address)
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#: C/index.docbook:391(sect1/para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
 "obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
 "the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
-"www.fsf.org\">their Web site</ulink> or by writing to <address> Free "
-"Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 "
-"<city>Boston</city>, <state>MA</state><postcode>02111-1307</"
-"postcode><country>USA</country></address>"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "Kopie <citetitle>GNU General Public License</citetitle> je zahrnuta v "
 "dodatku <citetitle>Uživatelské přiručky GNOME</citetitle>. Kopii "
 "<citetitle>GNU General Public License</citetitle> můžete také získat od Free "
 "Software Foundation navštívením <ulink type=\"http\" url=\"http://www.fsf.org"
-"\">jejich webu</ulink> nebo zasláním žádosti na <address> Free Software "
-"Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</"
-"city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</"
-"country></address>"
+"\">jejich webu</ulink> nebo zasláním žádosti na <_:address-1/>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/gnotski.xml:0(None)
-msgid "translator-credits"
-msgstr "Marek Černocký <marek@manet.cz>, 2009."
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "odkazem"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"tímto <_:ulink-1/> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."
