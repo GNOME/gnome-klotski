@@ -1,3 +1,9 @@
+gnome-klotski 3.9.90
+====================
+
+* Set prgname so WM_CLASS matches the desktop file
+* Updated translations
+
 gnome-klotski 3.8.0
 ===================
 
