@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">gnotski.desktop</id>
+ <licence>CC0</licence>
+ <name>GNOME Klotski</name>
+ <description>
+  <p>
+   GNOME Klotski is a set of block sliding puzzles. The objective is to move the
+   patterned block to the area bordered by green markers. To do so, you'll need
+   to slide other blocks out of the way. Complete each puzzle in as few moves as
+   possible!
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="602" height="440">https://wiki.gnome.org/Klotski?action=AttachFile&#x26;do=get&#x26;target=klotski.png</screenshot>
+ </screenshots>
+ <url type="homepage">https://wiki.gnome.org/Klotski</url>
+ <updatecontact>games_list_at_gnome.org</updatecontact>
+</application>
