@@ -8,14 +8,15 @@
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-27 17:02+0000\n"
-"PO-Revision-Date: 2013-04-13 23:07+0900\n"
-"Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
+"POT-Creation-Date: 2013-08-17 17:13+0000\n"
+"PO-Revision-Date: 2013-09-16 10:12+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +35,7 @@ msgstr "ブロックをずらしながらパズルを解いてください"
 
 #: ../data/gnotski.desktop.in.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr ""
+msgstr "game;strategy;logic;move;ゲーム;ストラテジー;ロジック;論理;思考;puzzle;パズル;"
 
 #: ../data/org.gnome.klotski.gschema.xml.in.h:1
 msgid "The puzzle in play"
@@ -276,24 +277,25 @@ msgstr ""
 "Yuusuke Tahara <tahara@gnome.gr.jp>\n"
 "Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
 "Yukihiro Nakai <Nakai@technologist.com>\n"
+"松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
 #: ../src/gnome-klotski.vala:967
 msgid "GNOME Games web site"
 msgstr "GNOME ゲーム集のウェブサイト"
 
-#: ../src/gnome-klotski.vala:1017
+#: ../src/gnome-klotski.vala:1020
 msgid "New Game"
 msgstr "新しいゲーム"
 
-#: ../src/gnome-klotski.vala:1032
+#: ../src/gnome-klotski.vala:1035
 msgid "Puzzle:"
 msgstr "パズル:"
 
-#: ../src/gnome-klotski.vala:1057
+#: ../src/gnome-klotski.vala:1060
 msgid "Date"
 msgstr "日付"
 
-#: ../src/gnome-klotski.vala:1060
+#: ../src/gnome-klotski.vala:1063
 msgid "Moves"
 msgstr "移動数"
