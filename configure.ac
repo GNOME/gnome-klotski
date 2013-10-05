@@ -48,7 +48,6 @@ data/Makefile
 data/icons/Makefile
 data/icons/hicolor/Makefile
 data/icons/HighContrast/Makefile
-data/gnotski.desktop.in
 help/Makefile
 src/Makefile
 ])
