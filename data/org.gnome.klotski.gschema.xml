@@ -2,24 +2,24 @@
   <schema id="org.gnome.klotski" path="/org/gnome/klotski/" gettext-domain="gnome-games">
     <key name="level" type="i">
       <default>0</default>
-      <_summary>The puzzle in play</_summary>
-      <_description>The number of the puzzle being played.</_description>
+      <summary>The puzzle in play</summary>
+      <description>The number of the puzzle being played.</description>
     </key>
     <key name="window-width" type="i">
       <default>600</default>
-      <_summary>Width of the window in pixels</_summary>
+      <summary>Width of the window in pixels</summary>
     </key>
     <key name="window-height" type="i">
       <default>400</default>
-      <_summary>Height of the window in pixels</_summary>
+      <summary>Height of the window in pixels</summary>
     </key>
     <key name="window-is-maximized" type="b">
       <default>false</default>
-      <_summary>true if the window is maximized</_summary>
+      <summary>true if the window is maximized</summary>
     </key>
     <key name="window-is-fullscreen" type="b">
       <default>false</default>
-      <_summary>true if the window is fullscren</_summary>
+      <summary>true if the window is fullscren</summary>
     </key>
   </schema>
 </schemalist>
