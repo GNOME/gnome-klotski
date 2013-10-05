@@ -11,6 +11,11 @@
    to slide other blocks out of the way. Complete each puzzle in as few moves as
    possible!
   </_p>
+  <_p>
+   GNOME Klotski comes with nearly thirty different puzzle layouts of varying
+   difficulty. Some of the layouts are similar and only the size of one or more
+   blocks differ. Other layouts have more variety.
+  </_p>
  </description>
  <screenshots>
   <_screenshot type="default" width="602" height="440">https://people.gnome.org/~mcatanzaro/klotski.png</_screenshot>
