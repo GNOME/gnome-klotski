@@ -12,6 +12,7 @@ gnome_klotski_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/gnome-klotski\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-w \
 	$(GNOME_KLOTSKI_CFLAGS)
 
 gnome_klotski_VALAFLAGS = \
