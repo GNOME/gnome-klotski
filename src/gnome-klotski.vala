@@ -453,9 +453,9 @@ public class Klotski : Gtk.Application
         {"ChallengePack", null, N_("Challenge Pack")},
         /* set of puzzles */
         {"SkillPack", null, N_("Skill Pack")},
-        {"RestartPuzzle", Gtk.Stock.REFRESH, N_("_Restart Puzzle"), "<control>R", null, restart_level_cb},
-        {"NextPuzzle", Gtk.Stock.GO_FORWARD, N_("Next Puzzle"), "Page_Down", null, next_level_cb},
-        {"PrevPuzzle", Gtk.Stock.GO_BACK, N_("Previous Puzzle"), "Page_Up", null, prev_level_cb}
+        {"RestartPuzzle", null, N_("_Restart Puzzle"), "<control>R", null, restart_level_cb},
+        {"NextPuzzle", null, N_("Next Puzzle"), "Page_Down", null, next_level_cb},
+        {"PrevPuzzle", null, N_("Previous Puzzle"), "Page_Up", null, prev_level_cb}
     };
 
     const string ui_description =
@@ -716,7 +716,7 @@ public class Klotski : Gtk.Application
         {
         }
 
-        level_image[current_level].set_from_stock (Gtk.Stock.YES, Gtk.IconSize.MENU);
+        level_image[current_level].set_from_icon_name ("gtk-yes", Gtk.IconSize.MENU);
 
         var date = new DateTime.now_local ();
         var entry = new HistoryEntry (date, current_level, puzzle.moves);
@@ -840,7 +840,7 @@ public class Klotski : Gtk.Application
             {
             }
             if (value)
-                level_image[i].set_from_stock (Gtk.Stock.YES, Gtk.IconSize.MENU);
+                level_image[i].set_from_icon_name ("gtk-yes", Gtk.IconSize.MENU);
         }
     }
 
@@ -1026,11 +1026,11 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (Gtk.Stock.QUIT, Gtk.ResponseType.CLOSE);
+            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
             add_button (_("New Game"), Gtk.ResponseType.OK);
         }
         else
-            add_button (Gtk.Stock.OK, Gtk.ResponseType.DELETE_EVENT);
+            add_button (_("_OK"), Gtk.ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
