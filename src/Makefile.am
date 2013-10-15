@@ -3,7 +3,7 @@ bin_PROGRAMS = gnome-klotski
 gnome_klotski_SOURCES = \
 	config.vapi \
 	gnome-klotski.vala \
-        history.vala \
+	history.vala \
 	puzzle.vala \
 	puzzle-view.vala
 
