@@ -34,8 +34,12 @@ public class Klotski : Gtk.Application
     private bool is_fullscreen;
     private bool is_maximized;
 
-    private Gtk.MenuItem next_menu_item;
-    private Gtk.MenuItem prev_menu_item;
+    private Gtk.Box puzzles_panel;
+
+    private Gtk.Button next_button;
+    private Gtk.Button prev_button;
+    private SimpleAction next_level_action;
+    private SimpleAction prev_level_action;
 
     private PuzzleView view;
 
@@ -51,9 +55,8 @@ public class Klotski : Gtk.Application
     private History history;
 
     /* The "puzzle name" remarks provide context for translation. */
-    private Gtk.SizeGroup groups[3];
-    private Gtk.Image[] level_images;
-    private Gtk.RadioMenuItem[] level_items;
+    private Gtk.TreeStore puzzles;
+    private Gtk.TreeIter[] puzzles_items;
     public const LevelInfo level[] =
     {
       /* puzzle name */
@@ -431,7 +434,10 @@ public class Klotski : Gtk.Application
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",             restart_level_cb  },
+        { "show-puzzles",         toggle_puzzles_cb },
         { "fullscreen",           fullscreen_cb     },
+        { "next-level",           next_level_cb     },
+        { "prev-level",           prev_level_cb     },
         { "scores",               scores_cb         },
         { "help",                 help_cb           },
         { "about",                about_cb          },
@@ -453,10 +459,18 @@ public class Klotski : Gtk.Application
 
         Gtk.Window.set_default_icon_name ("gnome-klotski");
 
-        add_accelerator ("F11", "app.fullscreen", null);
+        add_action_entries (action_entries, this);
+        next_level_action = lookup_action ("next-level") as SimpleAction;
+        next_level_action.set_enabled (current_level < level.length - 1);
+        prev_level_action = lookup_action ("prev-level") as SimpleAction;
+        prev_level_action.set_enabled (current_level > 0);
 
-        level_items = new Gtk.RadioMenuItem[level.length];
-        level_images = new Gtk.Image[level.length];
+        add_accelerator ("<Primary>n", "app.new-game", null);
+        add_accelerator ("<Primary>q", "app.quit", null);
+        add_accelerator ("F1", "app.help", null);
+        add_accelerator ("F11", "app.fullscreen", null);
+        add_accelerator ("Page_Up", "app.next-level", null);
+        add_accelerator ("Page_Down", "app.prev-level", null);
 
         string histfile = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "history");
 
@@ -464,17 +478,14 @@ public class Klotski : Gtk.Application
         history.load ();
 
         window = new Gtk.ApplicationWindow (this);
-        window.set_title (_("Klotski"));
+        window.title = _("Klotski");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
-        int ww = settings.get_int ("window-width");
-        int wh = settings.get_int ("window-height");
-        if (ww < MINWIDTH)
-            ww = MINWIDTH;
-        if (wh < MINHEIGHT)
-           wh = MINHEIGHT;
 
+        int ww = int.max (settings.get_int ("window-width"), MINWIDTH);
+        int wh = int.max (settings.get_int ("window-height"), MINHEIGHT);
         window.set_default_size (ww, wh);
+
         if (settings.get_boolean ("window-is-fullscreen"))
             window.fullscreen ();
         else if (settings.get_boolean ("window-is-maximized"))
@@ -495,7 +506,6 @@ public class Klotski : Gtk.Application
                    <item>
                       <attribute name='label' translatable='yes'>_New Game</attribute>
                       <attribute name='action'>app.new-game</attribute>
-                      <attribute name='accel'>&lt;Primary&gt;n</attribute>
                    </item>
                    <item>
                       <attribute name='label' translatable='yes'>_Scores</attribute>
@@ -506,7 +516,6 @@ public class Klotski : Gtk.Application
                    <item>
                       <attribute name='label' translatable='yes'>_Help</attribute>
                       <attribute name='action'>app.help</attribute>
-                      <attribute name='accel'>F1</attribute>
                    </item>
                    <item>
                       <attribute name='label' translatable='yes'>_About</attribute>
@@ -517,7 +526,6 @@ public class Klotski : Gtk.Application
                    <item>
                       <attribute name='label' translatable='yes'>_Quit</attribute>
                       <attribute name='action'>app.quit</attribute>
-                      <attribute name='accel'>&lt;Primary&gt;q</attribute>
                    </item>
                   </section>
                 </menu>
@@ -537,107 +545,6 @@ public class Klotski : Gtk.Application
         }
 
         set_app_menu (builder.get_object ("app-menu") as MenuModel);
-
-        var menubar = new Gtk.MenuBar ();
-        menubar.visible = true;
-        vbox.pack_start (menubar, false, false, 0);
-
-        var game_item = new Gtk.MenuItem ();
-        game_item.label = _("_Game");
-        game_item.use_underline = true;
-        game_item.visible = true;
-        menubar.append (game_item);
-        game_item.submenu = new Gtk.Menu ();
-
-        var accel_group = new Gtk.AccelGroup ();
-        window.add_accel_group (accel_group);
-
-        var item = new Gtk.MenuItem ();
-        item.label = _("_Restart Puzzle");
-        item.use_underline = true;
-        item.activate.connect (restart_level_cb);
-        item.add_accelerator ("activate", accel_group, Gdk.Key.R, Gdk.ModifierType.CONTROL_MASK, Gtk.AccelFlags.VISIBLE);
-        item.visible = true;
-        game_item.submenu.append (item);
-
-        next_menu_item = new Gtk.MenuItem ();
-        next_menu_item.label = _("Next Puzzle");
-        next_menu_item.activate.connect (next_level_cb);
-        next_menu_item.add_accelerator ("activate", accel_group, Gdk.Key.Page_Down, 0, Gtk.AccelFlags.VISIBLE);
-        next_menu_item.visible = true;
-        game_item.submenu.append (next_menu_item);
-
-        prev_menu_item = new Gtk.MenuItem ();
-        prev_menu_item.label = _("Previous Puzzle");
-        prev_menu_item.activate.connect (prev_level_cb);
-        prev_menu_item.add_accelerator ("activate", accel_group, Gdk.Key.Page_Up, 0, Gtk.AccelFlags.VISIBLE);
-        prev_menu_item.visible = true;
-        game_item.submenu.append (prev_menu_item);
-
-        item = new Gtk.SeparatorMenuItem ();
-        item.visible = true;
-        game_item.submenu.append (item);
-
-        var huarong_item = new Gtk.MenuItem ();
-        huarong_item.label = _("HuaRong Trail");
-        huarong_item.visible = true;
-        huarong_item.submenu = new Gtk.Menu ();
-        game_item.submenu.append (huarong_item);
-
-        var challenge_item = new Gtk.MenuItem ();
-        challenge_item.label = _("Challenge Pack");
-        challenge_item.visible = true;
-        challenge_item.submenu = new Gtk.Menu ();
-        game_item.submenu.append (challenge_item);
-
-        var skill_item = new Gtk.MenuItem ();
-        skill_item.label = _("Skill Pack");
-        skill_item.visible = true;
-        skill_item.submenu = new Gtk.Menu ();
-        game_item.submenu.append (skill_item);
-
-        unowned SList group = null;
-        for (var i = 0; i < level.length; i++)
-        {
-            var label = _(level[i].name);
-
-            level_items[i] = new Gtk.RadioMenuItem (group);
-            group = level_items[i].get_group ();
-            level_items[i].visible = true;
-            level_items[i].activate.connect (level_cb);
-            level_items[i].set_data<int> ("level-id", i);
-            switch (level[i].group)
-            {
-            case 0:
-                huarong_item.submenu.append (level_items[i]);
-                break;
-            case 1:
-                challenge_item.submenu.append (level_items[i]);
-                break;
-            case 2:
-                skill_item.submenu.append (level_items[i]);
-                break;
-            }
-
-            /* Create a label and image for the menu item */
-            var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            var labelw = new Gtk.Label (label);
-            labelw.set_alignment (0.0f, 0.5f);
-            var image = new Gtk.Image ();
-            box.pack_start (labelw, true, true, 0);
-            box.pack_start (image, false, true, 0);
-
-            /* Keep all elements the same size */
-            if (groups[level[i].group] == null)
-                groups[level[i].group] = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
-            groups[level[i].group].add_widget (box);
-
-            /* Replace the label with the new one */
-            level_items[i].add (box);
-            box.show_all ();
-
-            level_images[i] = image;
-        }
 
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         status_box.show ();
@@ -665,6 +572,14 @@ public class Klotski : Gtk.Application
         new_game_button.show ();
         toolbar.insert (new_game_button, -1);
 
+        var puzzles_button = new Gtk.ToggleToolButton ();
+        puzzles_button.action_name = "app.show-puzzles";
+        puzzles_button.label = _("_Puzzles");
+        puzzles_button.use_underline = true;
+        puzzles_button.is_important = true;
+        puzzles_button.show ();
+        toolbar.insert (puzzles_button, -1);
+
         fullscreen_button = new Gtk.ToolButton (null, _("_Fullscreen"));
         fullscreen_button.icon_name = "view-fullscreen";
         fullscreen_button.use_underline = true;
@@ -685,10 +600,90 @@ public class Klotski : Gtk.Application
 
         vbox.pack_start (toolbar, false, false, 0);
 
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        hbox.show();
+
+        puzzles = new Gtk.TreeStore (3, typeof (string), typeof (bool), typeof (int));
+
+        Gtk.TreeIter huarong_item;
+        puzzles.append (out huarong_item, null);
+        puzzles.set (huarong_item, 0, "HuaRong Trail", 2, -1, -1);
+
+        Gtk.TreeIter challenge_item;
+        puzzles.append (out challenge_item, null);
+        puzzles.set (challenge_item, 0, "Challenge Pack", 2, -1, -1);
+
+        Gtk.TreeIter skill_item;
+        puzzles.append (out skill_item, null);
+        puzzles.set (skill_item, 0, "Skill Pack", 2, -1, -1);
+
+        puzzles_items = new Gtk.TreeIter[level.length];
+
+        for (var i = 0; i < level.length; i++)
+        {
+            switch (level[i].group)
+            {
+            case 0:
+                puzzles.append (out puzzles_items[i], huarong_item);
+                puzzles.set (puzzles_items[i], 0, _(level[i].name), 1, false, 2, i, -1);
+                break;
+            case 1:
+                puzzles.append (out puzzles_items[i], challenge_item);
+                puzzles.set (puzzles_items[i], 0, _(level[i].name), 1, false, 2, i, -1);
+                break;
+            case 2:
+                puzzles.append (out puzzles_items[i], skill_item);
+                puzzles.set (puzzles_items[i], 0, _(level[i].name), 1, false, 2, i, -1);
+                break;
+            }
+        }
+
+        puzzles_panel = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        puzzles_panel.visible = false;
+
+        var puzzles_view = new Gtk.TreeView.with_model (puzzles);
+        puzzles_view.set_headers_visible (false);
+
+        var cell = new Gtk.CellRendererText ();
+        var col = new Gtk.TreeViewColumn.with_attributes ("Puzzle", cell, "text", 0, null);
+        col.set_data<Klotski> ("app", this);
+        col.set_cell_data_func (cell, (Gtk.CellLayoutDataFunc) render_puzzle_name);
+        puzzles_view.append_column (col);
+
+        puzzles_view.insert_column_with_attributes (-1, "Complete", new CellRendererLevel (), "visible", 1, null);
+        puzzles_view.row_activated.connect (level_cb);
+        puzzles_view.show_all ();
+
+        var scroll = new Gtk.ScrolledWindow (null, null);
+        scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        scroll.add (puzzles_view);
+        scroll.show ();
+        puzzles_panel.pack_start (scroll, true, true, 0);
+
+        var bbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        bbox.show();
+
+        prev_button = new Gtk.Button.with_label (_("Previous Puzzle"));
+        prev_button.clicked.connect (prev_level_cb);
+        prev_button.sensitive = current_level > 0;
+        prev_button.show ();
+        bbox.add (prev_button);
+
+        next_button = new Gtk.Button.with_label (_("Next Puzzle"));
+        next_button.clicked.connect (next_level_cb);
+        next_button.sensitive = current_level < level.length - 1;
+        next_button.show ();
+        bbox.add (next_button);
+
+        puzzles_panel.pack_start (bbox, false, true, 0);
+        hbox.pack_start (puzzles_panel, false, true, 0);
+
         view = new PuzzleView ();
         view.set_size_request (MINWIDTH, MINHEIGHT);
         view.show ();
-        vbox.pack_start (view, true, true, 0);
+        hbox.pack_start (view, true, true, 0);
+
+        vbox.pack_start (hbox, true, true, 0);
 
         vbox.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, false, 0);
 
@@ -696,6 +691,19 @@ public class Klotski : Gtk.Application
 
         var startup_level = settings.get_int (KEY_LEVEL);
         new_game (startup_level);
+    }
+
+    private static void render_puzzle_name (Gtk.CellLayout cell_layout, Gtk.CellRendererText cell,
+                                            Gtk.TreeModel tree_model, Gtk.TreeIter iter)
+    {
+        Value val;
+        tree_model.get_value (iter, 2, out val);
+        int selected_level = (int) val;
+        Klotski app = cell_layout.get_data<Klotski> ("app");
+        if (app.current_level == selected_level)
+            cell.weight = 700;
+        else
+            cell.weight = 400;
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
@@ -760,7 +768,7 @@ public class Klotski : Gtk.Application
         {
         }
 
-        level_images[current_level].set_from_icon_name ("gtk-yes", Gtk.IconSize.MENU);
+        puzzles.set (puzzles_items[current_level], 1, true, -1);
 
         var date = new DateTime.now_local ();
         var entry = new HistoryEntry (date, current_level, puzzle.moves);
@@ -830,18 +838,19 @@ public class Klotski : Gtk.Application
             catch (Error e)
             {
             }
-            if (value)
-                level_images[i].set_from_icon_name ("gtk-yes", Gtk.IconSize.MENU);
+            puzzles.set (puzzles_items[i], 1, value, -1);
         }
     }
 
     private void update_menu_state ()
     {
-        /* Puzzle Radio Action */
-        level_items[current_level].active = true;
+        puzzles_panel.queue_draw ();
 
-        next_menu_item.sensitive = current_level < level.length - 1;
-        prev_menu_item.sensitive = current_level > 0;
+        next_button.sensitive = current_level < level.length - 1;
+        prev_button.sensitive = current_level > 0;
+
+        next_level_action.set_enabled (current_level < level.length - 1);
+        prev_level_action.set_enabled (current_level > 0);
 
         update_moves_label ();
     }
@@ -879,11 +888,18 @@ public class Klotski : Gtk.Application
         window.destroy ();
     }
 
-    private void level_cb (Gtk.MenuItem item)
+    private void level_cb (Gtk.TreePath path, Gtk.TreeViewColumn column)
     {
-        if (!(item as Gtk.RadioMenuItem).active)
+        Gtk.TreeIter iter;
+        Value val;
+
+        puzzles.get_iter (out iter, path);
+        puzzles.get_value (iter, 2, out val);
+
+        int requested_level = (int) val;
+        if (requested_level < 0)
             return;
-        var requested_level = item.get_data<int> ("level-id");
+
         if (current_level != requested_level)
             new_game (requested_level);
     }
@@ -891,6 +907,11 @@ public class Klotski : Gtk.Application
     private void restart_level_cb ()
     {
         new_game (current_level);
+    }
+
+    private void toggle_puzzles_cb ()
+    {
+        puzzles_panel.visible = !puzzles_panel.visible;
     }
 
     private void next_level_cb ()
@@ -1147,3 +1168,47 @@ public class ScoreDialog : Gtk.Dialog
         }
     }
 }
+
+private class CellRendererLevel : Gtk.CellRenderer
+{
+    private const int icon_size = 10;
+
+    public CellRendererLevel ()
+    {
+        GLib.Object ();
+    }
+
+    public override void get_size (Gtk.Widget widget, Gdk.Rectangle? cell_area,
+                                   out int x_offset, out int y_offset,
+                                   out int width, out int height)
+    {
+        x_offset = 0;
+        y_offset = 0;
+        width = height = icon_size;
+    }
+
+    public override void render (Cairo.Context ctx, Gtk.Widget widget,
+                                 Gdk.Rectangle background_area,
+                                 Gdk.Rectangle cell_area,
+                                 Gtk.CellRendererState flags)
+    {
+        Gdk.cairo_rectangle (ctx, background_area);
+
+        try
+        {
+            var icon_theme = Gtk.IconTheme.get_default ();
+            var icon = icon_theme.load_icon ("gtk-yes", icon_size, 0);
+
+            int x = background_area.x + (background_area.width - icon_size)/2;
+            int y = background_area.y + (background_area.height - icon_size)/2;
+            Gdk.cairo_set_source_pixbuf (ctx, icon, x, y);
+        }
+        catch (Error e)
+        {
+            warning (e.message);
+        }
+
+        ctx.fill ();
+    }
+}
+
