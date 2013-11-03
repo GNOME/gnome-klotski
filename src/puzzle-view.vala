@@ -21,8 +21,15 @@ public class PuzzleView : Gtk.DrawingArea
 
     private int piece_x = 0;
     private int piece_y = 0;
+    private bool piece_unmoved = false;
 
-    private char piece_id = '\0';
+    private char _piece_id = '\0';
+    private char piece_id
+    {
+        get { return _piece_id; }
+        set { _piece_id = value; queue_draw (); }
+    }
+
     private char last_piece_id = '\0';
 
     private double kx = 0;
@@ -140,7 +147,16 @@ public class PuzzleView : Gtk.DrawingArea
 
         for (var y = 0; y < puzzle.height; y++)
             for (var x = 0; x < puzzle.width; x++)
+            {
                 draw_square (cr, x, y, kx, ky);
+
+                if (piece_id == puzzle.get_piece_id (puzzle.map, x, y))
+                {
+                    Gdk.cairo_set_source_rgba (cr, {1.0, 1.0, 1.0, 0.2});
+                    cr.rectangle (x*tile_size + kx, y*tile_size + ky, tile_size, tile_size);
+                    cr.fill ();
+                }
+            }
 
         return false;
     }
@@ -191,9 +207,22 @@ public class PuzzleView : Gtk.DrawingArea
         {
             if (puzzle.game_over ())
                 return false;
+
             piece_x = (int) (event.x - kx) / tile_size;
             piece_y = (int) (event.y - ky) / tile_size;
-            piece_id = puzzle.get_piece_id (puzzle.map, piece_x, piece_y);
+            char new_piece_id = puzzle.get_piece_id (puzzle.map, piece_x, piece_y);
+
+            if (piece_id != '\0' && piece_unmoved)
+            {
+                piece_id = '\0';
+                return false;
+            }
+            if (new_piece_id == ' ' || new_piece_id == '.' || new_piece_id == '-'
+                || new_piece_id == '#' || new_piece_id == piece_id)
+                return false;
+
+            piece_unmoved = true;
+            piece_id = new_piece_id;
             puzzle.move_map = puzzle.map;
         }
 
@@ -204,6 +233,9 @@ public class PuzzleView : Gtk.DrawingArea
     {
         if (event.button == 1 && piece_id != '\0')
         {
+            if (piece_unmoved)
+                return false;
+
             if (puzzle.movable (piece_id) && puzzle.mapcmp (puzzle.move_map, puzzle.map))
             {
                 if (last_piece_id == '\0' || last_piece_id != piece_id)
@@ -243,6 +275,7 @@ public class PuzzleView : Gtk.DrawingArea
                 return false;
             if (puzzle.move_piece (piece_id, piece_x, piece_y, new_piece_x, new_piece_y))
             {
+                piece_unmoved = false;
                 piece_x = new_piece_x;
                 piece_y = new_piece_y;
             }
