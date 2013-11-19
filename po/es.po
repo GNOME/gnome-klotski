@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-06 16:21+0000\n"
-"PO-Revision-Date: 2013-11-06 17:22+0100\n"
+"POT-Creation-Date: 2013-11-19 05:37+0000\n"
+"PO-Revision-Date: 2013-11-19 16:34+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -52,7 +52,7 @@ msgstr ""
 "variedad."
 
 #: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:974
+#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:971
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -233,7 +233,6 @@ msgid "_New"
 msgstr "_Nuevo"
 
 #: ../src/gnome-klotski.vala:577
-#| msgid "Puzzle:"
 msgid "_Puzzles"
 msgstr "_Puzles"
 
@@ -253,22 +252,26 @@ msgstr "Siguiente puzle"
 msgid "_Leave Fullscreen"
 msgstr "Abandonar _pantalla completa"
 
-#: ../src/gnome-klotski.vala:864
+#: ../src/gnome-klotski.vala:862
 msgid "Puzzle: "
 msgstr "Puzle: "
 
-#: ../src/gnome-klotski.vala:878
+#: ../src/gnome-klotski.vala:876
 #, c-format
 msgid "Moves: %d"
 msgstr "Movimientos: %d"
 
-#: ../src/gnome-klotski.vala:881
+#: ../src/gnome-klotski.vala:879
 msgid "Level completed."
 msgstr "Nivel completado."
 
-#: ../src/gnome-klotski.vala:976
+#: ../src/gnome-klotski.vala:973
+#| msgid ""
+#| "Sliding Block Puzzles\n"
+#| "\n"
+#| "Klotski is a part of GNOME Games."
 msgid ""
-"Sliding Block Puzzles\n"
+"Sliding block puzzles\n"
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
@@ -276,7 +279,7 @@ msgstr ""
 "\n"
 "Klotski es parte de los juegos de GNOME."
 
-#: ../src/gnome-klotski.vala:983
+#: ../src/gnome-klotski.vala:979
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -285,33 +288,27 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gnome-klotski.vala:986
+#: ../src/gnome-klotski.vala:982
 msgid "GNOME Games web site"
 msgstr "Página web de los juegos de GNOME"
 
-#: ../src/gnome-klotski.vala:1036
-msgid "_Quit"
-msgstr "_Salir"
+#~ msgid "_Quit"
+#~ msgstr "_Salir"
 
-#: ../src/gnome-klotski.vala:1037
-msgid "New Game"
-msgstr "Partida nueva"
+#~ msgid "New Game"
+#~ msgstr "Partida nueva"
 
-#: ../src/gnome-klotski.vala:1040
-msgid "_OK"
-msgstr "_Aceptar"
+#~ msgid "_OK"
+#~ msgstr "_Aceptar"
 
-#: ../src/gnome-klotski.vala:1052
-msgid "Puzzle:"
-msgstr "Puzle:"
+#~ msgid "Puzzle:"
+#~ msgstr "Puzle:"
 
-#: ../src/gnome-klotski.vala:1077
-msgid "Date"
-msgstr "Fecha"
+#~ msgid "Date"
+#~ msgstr "Fecha"
 
-#: ../src/gnome-klotski.vala:1080
-msgid "Moves"
-msgstr "Movimientos"
+#~ msgid "Moves"
+#~ msgstr "Movimientos"
 
 #~ msgid "_Game"
 #~ msgstr "_Juego"
