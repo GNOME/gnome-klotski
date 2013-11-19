@@ -17,13 +17,13 @@
     private Gtk.ComboBox level_combo;
     private Gtk.TreeView scores;
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_close = false)
     {
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
 
-        if (show_quit)
+        if (show_close)
         {
             add_button (_("_Close"), Gtk.ResponseType.CLOSE);
             add_button (_("New Game"), Gtk.ResponseType.OK);
