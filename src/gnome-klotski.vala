@@ -971,7 +971,7 @@ public class Klotski : Gtk.Application
         Gtk.show_about_dialog (window,
                                "program-name", _("Klotski"),
                                "version", VERSION,
-                               "comments", _("Sliding Block Puzzles\n\nKlotski is a part of GNOME Games."),
+                               "comments", _("Sliding block puzzles\n\nKlotski is a part of GNOME Games."),
                                "copyright",
                                "Copyright \xc2\xa9 1999-2008 Lars Rydlinge",
                                "license", license,
