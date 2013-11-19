@@ -5,7 +5,8 @@ gnome_klotski_SOURCES = \
 	gnome-klotski.vala \
 	history.vala \
 	puzzle.vala \
-	puzzle-view.vala
+	puzzle-view.vala \
+	score-dialog.vala
 
 gnome_klotski_CFLAGS = \
 	-DVERSION=\"$(VERSION)\" \
