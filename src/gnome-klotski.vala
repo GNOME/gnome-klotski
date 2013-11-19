@@ -775,9 +775,7 @@ public class Klotski : Gtk.Application
         history.add (entry);
         history.save ();
 
-        if (show_scores (entry, true) == Gtk.ResponseType.CLOSE)
-            window.destroy ();
-        else
+        if (show_scores (entry, true) == Gtk.ResponseType.OK)
             new_game (current_level);
     }
 
@@ -1033,7 +1031,7 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
+            add_button (_("_Close"), Gtk.ResponseType.CLOSE);
             add_button (_("New Game"), Gtk.ResponseType.OK);
         }
         else
