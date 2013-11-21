@@ -1,3 +1,4 @@
 data/gnotski.desktop.in
 src/gnome-klotski.c
 src/puzzle-view.c
+src/score-dialog.c

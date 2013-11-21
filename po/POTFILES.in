@@ -6,3 +6,4 @@ data/gnotski.desktop.in
 data/org.gnome.klotski.gschema.xml
 src/gnome-klotski.vala
 src/puzzle-view.vala
+src/score-dialog.vala
