@@ -521,8 +521,6 @@ public class Klotski : Gtk.Application
                       <attribute name='label' translatable='yes'>_About</attribute>
                       <attribute name='action'>app.about</attribute>
                    </item>
-                  </section>
-                  <section>
                    <item>
                       <attribute name='label' translatable='yes'>_Quit</attribute>
                       <attribute name='action'>app.quit</attribute>
