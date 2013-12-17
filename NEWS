@@ -1,3 +1,12 @@
+GNOME Klotski 3.11.3
+====================
+
+* Add click-to-move support (Isaac Lenton)
+* Replace menubar with ToggleButton/TreeView for levels list (Isaac Lenton)
+* Scores dialog: scroll to the new high score (Isaac Lenton)
+* Scores dialog: replace Quit button with Close (Michael Catanzaro)
+* Updated translations
+
 gnome-klotski 3.11.1
 ====================
 
