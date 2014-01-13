@@ -29,16 +29,16 @@
 # Simos Xenitellis <simos.lists@googlemail.com>, 2010.
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-04 04:10+0000\n"
-"PO-Revision-Date: 2013-11-06 17:40+0300\n"
+"POT-Creation-Date: 2014-01-12 18:00+0000\n"
+"PO-Revision-Date: 2014-01-11 14:43+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
-"Language-Team: team@gnome.gr\n"
+"Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +48,6 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "GNOME Κλότσκι"
 
@@ -77,7 +76,7 @@ msgstr ""
 "ποικιλία. "
 
 #: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:974
+#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
 msgid "Klotski"
 msgstr "Κλότσκι"
 
@@ -110,7 +109,7 @@ msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:6
-msgid "true if the window is fullscren"
+msgid "true if the window is fullscreen"
 msgstr "αληθής αν το παράθυρο είναι σε πλήρη οθόνη"
 
 #. puzzle name
@@ -253,47 +252,46 @@ msgstr "Μποτιλιάρισμα"
 msgid "Sunshine"
 msgstr "Λιακάδα"
 
-#: ../src/gnome-klotski.vala:567
+#: ../src/gnome-klotski.vala:565
 msgid "_New"
 msgstr "_Νέο"
 
-#: ../src/gnome-klotski.vala:577
-#| msgid "Puzzle:"
+#: ../src/gnome-klotski.vala:575
 msgid "_Puzzles"
 msgstr "_Παζλ"
 
-#: ../src/gnome-klotski.vala:583 ../src/gnome-klotski.vala:734
+#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
 msgid "_Fullscreen"
 msgstr "_Πλήρης οθόνη"
 
-#: ../src/gnome-klotski.vala:666
+#: ../src/gnome-klotski.vala:664
 msgid "Previous Puzzle"
 msgstr "Προηγούμενο παζλ"
 
-#: ../src/gnome-klotski.vala:672
+#: ../src/gnome-klotski.vala:670
 msgid "Next Puzzle"
 msgstr "Επόμενο παζλ"
 
-#: ../src/gnome-klotski.vala:729
+#: ../src/gnome-klotski.vala:727
 msgid "_Leave Fullscreen"
 msgstr "Έ_ξοδος από πλήρη οθόνη"
 
-#: ../src/gnome-klotski.vala:864
+#: ../src/gnome-klotski.vala:860
 msgid "Puzzle: "
 msgstr "Παζλ: "
 
-#: ../src/gnome-klotski.vala:878
+#: ../src/gnome-klotski.vala:874
 #, c-format
 msgid "Moves: %d"
 msgstr "Κινήσεις: %d"
 
-#: ../src/gnome-klotski.vala:881
+#: ../src/gnome-klotski.vala:877
 msgid "Level completed."
 msgstr "Ολοκλήρωση επιπέδου."
 
-#: ../src/gnome-klotski.vala:976
+#: ../src/gnome-klotski.vala:971
 msgid ""
-"Sliding Block Puzzles\n"
+"Sliding block puzzles\n"
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
@@ -301,7 +299,7 @@ msgstr ""
 "\n"
 "Το Klotski είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/gnome-klotski.vala:983
+#: ../src/gnome-klotski.vala:977
 msgid "translator-credits"
 msgstr ""
 "Δημήτρης Σπίγγος <dmtrs32@gmail.com>\n"
@@ -310,33 +308,35 @@ msgstr ""
 "Κώστας Παπαδήμας <pkst@gmx.net>\n"
 "Τζένη Πετούμενου <epetoumenou@gmail.com>"
 
-#: ../src/gnome-klotski.vala:986
-msgid "GNOME Games web site"
-msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
+#: ../src/score-dialog.vala:28
+msgid "_Close"
+msgstr "Κ_λείσιμο"
 
-#: ../src/gnome-klotski.vala:1036
-msgid "_Quit"
-msgstr "Έ_ξοδος"
-
-#: ../src/gnome-klotski.vala:1037
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Νέο Παιχνίδι"
 
-#: ../src/gnome-klotski.vala:1040
+#: ../src/score-dialog.vala:32
 msgid "_OK"
 msgstr "Ε_ντάξει"
 
-#: ../src/gnome-klotski.vala:1052
+#: ../src/score-dialog.vala:44
 msgid "Puzzle:"
 msgstr "Παζλ:"
 
-#: ../src/gnome-klotski.vala:1077
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: ../src/gnome-klotski.vala:1080
+#: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Μετακινήσεις"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
+
+#~ msgid "_Quit"
+#~ msgstr "Έ_ξοδος"
 
 #~ msgid "_Game"
 #~ msgstr "_Παιχνίδι"
