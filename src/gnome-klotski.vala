@@ -970,7 +970,7 @@ public class Klotski : Gtk.Application
                                "version", VERSION,
                                "comments", _("Sliding block puzzles\n\nKlotski is a part of GNOME Games."),
                                "copyright",
-                               "Copyright \xc2\xa9 1999-2008 Lars Rydlinge",
+                               "Copyright © 1999–2008 Lars Rydlinge",
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "documenters", documenters,
