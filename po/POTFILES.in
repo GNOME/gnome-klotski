@@ -2,7 +2,7 @@
 # Please keep this file in alphabetical order.
 [encoding: UTF-8]
 data/gnome-klotski.appdata.xml.in
-data/gnotski.desktop.in
+data/gnome-klotski.desktop.in
 data/org.gnome.klotski.gschema.xml
 src/gnome-klotski.vala
 src/puzzle-view.vala

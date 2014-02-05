@@ -10,7 +10,7 @@ pixmap_DATA = \
 	gnome-klotski.svg
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnotski.desktop.in
+desktop_in_files = gnome-klotski.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 

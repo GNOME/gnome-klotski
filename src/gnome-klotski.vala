@@ -988,9 +988,6 @@ public class Klotski : Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
-        /* Required if the desktop file does not match the binary */
-        Environment.set_prgname ("gnotski");
-
         var context = new OptionContext (null);
         context.set_translation_domain (GETTEXT_PACKAGE);
         context.add_group (Gtk.get_option_group (true));
