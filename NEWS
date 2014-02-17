@@ -1,3 +1,10 @@
+GNOME Klotski 3.11.90
+=====================
+
+* Renamed desktop file to gnome-klotski.desktop
+* Appdata: specify project_group
+* Updated translations
+
 GNOME Klotski 3.11.3
 ====================
 
