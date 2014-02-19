@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 12:31+0100\n"
+"POT-Creation-Date: 2014-02-19 23:35+0100\n"
 "PO-Revision-Date: 2014-01-25 12:32+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -37,16 +37,16 @@ msgid ""
 "blocks differ. Other layouts have more variety."
 msgstr ""
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
 #: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Flytt på blokkene for å løse puslespillet"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "spill;strategi;logikk;"
 
