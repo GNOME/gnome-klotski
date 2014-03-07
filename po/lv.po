@@ -5,14 +5,14 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-03-18 14:27+0200\n"
+"POT-Creation-Date: 2014-01-12 18:00+0000\n"
+"PO-Revision-Date: 2014-03-07 17:05+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -21,247 +21,260 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
-#: ../data/gnome-klotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
+#: ../data/gnome-klotski.appdata.xml.in.h:1
+#| msgid "Klotski"
+msgid "GNOME Klotski"
+msgstr "GNOME Klotski"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:2
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you'll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"GNOME Klotski ir bloku bīdīšanas mīklu kolekcija. Mērķis ir pārvietot "
+"rakstainos blokus uz vietu, ko iezīmē zaļie marķieri. Lai to izdarītu, tev "
+"vajadzēs slidināt citus blokus, lai tie nebūtu ceļā. Atrisini katru mīklu ar "
+"pēc iespējas mazāk gājieniem."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"GNOME Klotski komplektā ir gandrīz trīsdesmit dažādu bloku izkārtojumu ar "
+"dažādu sarežģītību. Daži izkārtojumi ir līdzīgi — atšķiras tikai dažu bloku "
+"izmērs. Citiem izkārtojumiem ir lielāka dažādība."
+
+#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
+#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
 msgid "Klotski"
 msgstr "Klotski spēle"
 
-#: ../data/gnome-klotski.desktop.in.in.h:2
+#: ../data/gnotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Slidiniet klucīšus, lai atrisinātu mīklu"
 
-#: ../data/gnome-klotski.desktop.in.in.h:3
+#: ../data/gnotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "spēle;stratēģija;loģika;gājiens;"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+#: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "Mīkla spēlē"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+#: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
 msgstr "Numurs mīklai, kas tiek spēlēta."
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:3
+#: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
 msgstr "Galvenā loga platums pikseļos"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:4
+#: ../data/org.gnome.klotski.gschema.xml.h:4
 msgid "Height of the window in pixels"
 msgstr "Galvenā loga augstums pikseļos"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:5
+#: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
 msgstr "patiess, ja logs ir maksimizēts"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:6
-msgid "true if the window is fullscren"
+#: ../data/org.gnome.klotski.gschema.xml.h:6
+#| msgid "true if the window is fullscren"
+msgid "true if the window is fullscreen"
 msgstr "patiess, ja logs ir pilnekrāna"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:49
+#: ../src/gnome-klotski.vala:63
 msgid "Only 18 Steps"
 msgstr "Tikai 18 soļi"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:62
+#: ../src/gnome-klotski.vala:76
 msgid "Daisy"
 msgstr "Pīpene"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:75
+#: ../src/gnome-klotski.vala:89
 msgid "Violet"
 msgstr "Vijolīte"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:88
+#: ../src/gnome-klotski.vala:102
 msgid "Poppy"
 msgstr "Magone"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:101
+#: ../src/gnome-klotski.vala:115
 msgid "Pansy"
 msgstr "Atraitnīte"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:114
+#: ../src/gnome-klotski.vala:128
 msgid "Snowdrop"
 msgstr "Sniegpulkstenīte"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:127
+#: ../src/gnome-klotski.vala:141
 msgid "Red Donkey"
 msgstr "Sarkans ēzelis"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:140
+#: ../src/gnome-klotski.vala:154
 msgid "Trail"
 msgstr "Pēdas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:153
+#: ../src/gnome-klotski.vala:167
 msgid "Ambush"
 msgstr "Slēpnis"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:166
+#: ../src/gnome-klotski.vala:180
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:177
+#: ../src/gnome-klotski.vala:191
 msgid "Success"
 msgstr "Panākumi"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:187
+#: ../src/gnome-klotski.vala:201
 msgid "Bone"
 msgstr "Kauls"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:200
+#: ../src/gnome-klotski.vala:214
 msgid "Fortune"
 msgstr "Veiksme"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:228
 msgid "Fool"
 msgstr "Dumiķis"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:224
+#: ../src/gnome-klotski.vala:238
 msgid "Solomon"
 msgstr "Zālamans"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:237
+#: ../src/gnome-klotski.vala:251
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:263
 msgid "Shark"
 msgstr "Haizivs"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:275
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:287
 msgid "Pennant Puzzle"
 msgstr "Karodziņa mīkla"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:286
+#: ../src/gnome-klotski.vala:300
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:309
+#: ../src/gnome-klotski.vala:323
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:335
 msgid "Transeuropa"
 msgstr "Transeiropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:347
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:344
+#: ../src/gnome-klotski.vala:358
 msgid "Polonaise"
 msgstr "Polonēze"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:355
+#: ../src/gnome-klotski.vala:369
 msgid "Baltic Sea"
 msgstr "Baltijas jūra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:381
 msgid "American Pie"
 msgstr "Amerikāņu pīrāgs"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:383
+#: ../src/gnome-klotski.vala:397
 msgid "Traffic Jam"
 msgstr "Sastrēgums"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:394
+#: ../src/gnome-klotski.vala:408
 msgid "Sunshine"
 msgstr "Saules gaisma"
 
-#: ../src/gnome-klotski.vala:439
-msgid "_Game"
-msgstr "_Spēle"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:441
-msgid "HuaRong Trail"
-msgstr "HuaRong taka"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:443
-msgid "Challenge Pack"
-msgstr "Izaicinājuma paka"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:445
-msgid "Skill Pack"
-msgstr "Iemaņu paka"
-
-#: ../src/gnome-klotski.vala:446
-msgid "_Restart Puzzle"
-msgstr "Atkā_rtot mīklu"
-
-#: ../src/gnome-klotski.vala:447
-msgid "Next Puzzle"
-msgstr "Nākamā mīkla"
-
-#: ../src/gnome-klotski.vala:448
-msgid "Previous Puzzle"
-msgstr "Iepriekšējā mīkla"
-
-#: ../src/gnome-klotski.vala:606
+#: ../src/gnome-klotski.vala:565
 msgid "_New"
 msgstr "Jau_na"
 
-#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
+#: ../src/gnome-klotski.vala:575
+#| msgid "Puzzle:"
+msgid "_Puzzles"
+msgstr "_Mīklas"
+
+#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
 msgid "_Fullscreen"
 msgstr "_Pilnekrāna"
 
-#: ../src/gnome-klotski.vala:667
+#: ../src/gnome-klotski.vala:664
+msgid "Previous Puzzle"
+msgstr "Iepriekšējā mīkla"
+
+#: ../src/gnome-klotski.vala:670
+msgid "Next Puzzle"
+msgstr "Nākamā mīkla"
+
+#: ../src/gnome-klotski.vala:727
 msgid "_Leave Fullscreen"
 msgstr "Pamest pi_lnekrāna režīmu"
 
-#: ../src/gnome-klotski.vala:859
-#| msgid "Puzzle:"
+#: ../src/gnome-klotski.vala:860
 msgid "Puzzle: "
 msgstr "Mīkla: "
 
-#: ../src/gnome-klotski.vala:873
+#: ../src/gnome-klotski.vala:874
 #, c-format
 msgid "Moves: %d"
 msgstr "Gājieni: %d"
 
-#: ../src/gnome-klotski.vala:876
+#: ../src/gnome-klotski.vala:877
 msgid "Level completed."
 msgstr "Līmenis pabeigts."
 
-#: ../src/gnome-klotski.vala:957
+#: ../src/gnome-klotski.vala:971
+#| msgid ""
+#| "Sliding Block Puzzles\n"
+#| "\n"
+#| "Klotski is a part of GNOME Games."
 msgid ""
-"Sliding Block Puzzles\n"
+"Sliding block puzzles\n"
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
@@ -269,33 +282,54 @@ msgstr ""
 "\n"
 "Klotski ir daļa no GNOME spēlēm."
 
-#: ../src/gnome-klotski.vala:964
+#: ../src/gnome-klotski.vala:977
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
 "Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: ../src/gnome-klotski.vala:967
-msgid "GNOME Games web site"
-msgstr "GNOME Games tīmekļa vietne"
+#: ../src/score-dialog.vala:28
+msgid "_Close"
+msgstr "_Aizvērt"
 
-#: ../src/gnome-klotski.vala:1017
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Jauna spēle"
 
-#: ../src/gnome-klotski.vala:1032
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_Labi"
+
+#: ../src/score-dialog.vala:44
 msgid "Puzzle:"
 msgstr "Mīkla:"
 
-#: ../src/gnome-klotski.vala:1057
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "Datums"
 
-#: ../src/gnome-klotski.vala:1060
-#| msgid "_Move"
+#: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Gājieni"
+
+#~ msgid "_Game"
+#~ msgstr "_Spēle"
+
+#~ msgid "HuaRong Trail"
+#~ msgstr "HuaRong taka"
+
+#~ msgid "Challenge Pack"
+#~ msgstr "Izaicinājuma paka"
+
+#~ msgid "Skill Pack"
+#~ msgstr "Iemaņu paka"
+
+#~ msgid "_Restart Puzzle"
+#~ msgstr "Atkā_rtot mīklu"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME Games tīmekļa vietne"
 
 #~ msgid "Chess"
 #~ msgstr "Šahs"
@@ -5229,12 +5263,6 @@ msgstr "Gājieni"
 
 #~ msgid "_Cancel"
 #~ msgstr "At_celt"
-
-#~ msgid "_Close"
-#~ msgstr "_Aizvērt"
-
-#~ msgid "_OK"
-#~ msgstr "_Labi"
 
 #~ msgid "Qua"
 #~ msgstr "Qua"
