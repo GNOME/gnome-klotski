@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-20 23:51+0000\n"
+"POT-Creation-Date: 2014-03-08 07:53+0000\n"
 "PO-Revision-Date: 2012-03-23 17:59+0800\n"
 "Last-Translator: tuhaihe <wangdianjin@linuxdeepin.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "GNOME 华容道"
 
@@ -29,25 +28,26 @@ msgid ""
 "the patterned block to the area bordered by green markers. To do so, you'll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
-msgstr ""
+msgstr "GNOME Klotski(华容道)是一套滑块谜题。游戏的目标是将带图案的块移动到绿色标记围起来的区域。"
+"这个过程中，您需要移开挡路的其他块。挑战用最少的步数完成移动！"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
-msgstr ""
+msgstr "GNOME Klotski(华容道)有近 30 种难度不一的谜局。有些布局相似，只有一两个块的大小不同。有些布局就很不一样。"
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
 #: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
 msgid "Klotski"
 msgstr "华容道"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "滑动方块以解开布局"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "game;strategy;logic;move;游戏;策略;逻辑;移动;"
 
@@ -72,7 +72,6 @@ msgid "true if the window is maximized"
 msgstr "若窗口已最大化则为 true"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:6
-#| msgid "true if the window is fullscren"
 msgid "true if the window is fullscreen"
 msgstr "若窗口已全屏则为 true"
 
@@ -221,7 +220,6 @@ msgid "_New"
 msgstr "新建(_N)"
 
 #: ../src/gnome-klotski.vala:575
-#| msgid "Puzzle"
 msgid "_Puzzles"
 msgstr "谜题(_P)"
 
@@ -255,10 +253,6 @@ msgid "Level completed."
 msgstr "本级完成。"
 
 #: ../src/gnome-klotski.vala:971
-#| msgid ""
-#| "Sliding Block Puzzles\n"
-#| "\n"
-#| "Klotski is a part of GNOME Games."
 msgid ""
 "Sliding block puzzles\n"
 "\n"
