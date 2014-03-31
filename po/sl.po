@@ -5,15 +5,15 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006 - 2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2013.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-20 03:06+0000\n"
-"PO-Revision-Date: 2013-10-24 20:52+0100\n"
+"POT-Creation-Date: 2014-03-31 19:18+0000\n"
+"PO-Revision-Date: 2014-03-31 22:47+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -44,16 +44,16 @@ msgid ""
 "blocks differ. Other layouts have more variety."
 msgstr ""
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:450
-#: ../src/gnome-klotski.vala:467 ../src/gnome-klotski.vala:953
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
+#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Z drsenjem ploščic reši sestavljanko"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "igra;strategija;logika;premiki;"
 
@@ -78,205 +78,189 @@ msgid "true if the window is maximized"
 msgstr "prav, če je okno razpeto."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:6
-msgid "true if the window is fullscren"
-msgstr "prav, če je okno razpeto čez celoten zaslon"
+msgid "true if the window is fullscreen"
+msgstr "prav, če je okno razpeto"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:60
+#: ../src/gnome-klotski.vala:63
 msgid "Only 18 Steps"
 msgstr "Samo 18 potez"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:73
+#: ../src/gnome-klotski.vala:76
 msgid "Daisy"
 msgstr "Marjetica"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:86
+#: ../src/gnome-klotski.vala:89
 msgid "Violet"
 msgstr "Vijolična"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:99
+#: ../src/gnome-klotski.vala:102
 msgid "Poppy"
 msgstr "Poppy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:112
+#: ../src/gnome-klotski.vala:115
 msgid "Pansy"
 msgstr "Pansy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:125
+#: ../src/gnome-klotski.vala:128
 msgid "Snowdrop"
 msgstr "Zvonček"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:138
+#: ../src/gnome-klotski.vala:141
 msgid "Red Donkey"
 msgstr "Rdeči osel"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:151
+#: ../src/gnome-klotski.vala:154
 msgid "Trail"
 msgstr "Steza"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:164
+#: ../src/gnome-klotski.vala:167
 msgid "Ambush"
 msgstr "Zaseda"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:177
+#: ../src/gnome-klotski.vala:180
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:188
+#: ../src/gnome-klotski.vala:191
 msgid "Success"
 msgstr "Uspešno zaključeno"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:198
+#: ../src/gnome-klotski.vala:201
 msgid "Bone"
 msgstr "Kost"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:211
+#: ../src/gnome-klotski.vala:214
 msgid "Fortune"
 msgstr "Sreča"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:225
+#: ../src/gnome-klotski.vala:228
 msgid "Fool"
 msgstr "Norec"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:235
+#: ../src/gnome-klotski.vala:238
 msgid "Solomon"
 msgstr "Solomon"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:248
+#: ../src/gnome-klotski.vala:251
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:260
+#: ../src/gnome-klotski.vala:263
 msgid "Shark"
 msgstr "Morski pes"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:272
+#: ../src/gnome-klotski.vala:275
 msgid "Rome"
 msgstr "Rim"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:284
+#: ../src/gnome-klotski.vala:287
 msgid "Pennant Puzzle"
 msgstr "Sestavljanka zastavica"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:297
+#: ../src/gnome-klotski.vala:300
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:320
+#: ../src/gnome-klotski.vala:323
 msgid "Pelopones"
 msgstr "Peloponez"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:332
+#: ../src/gnome-klotski.vala:335
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:344
+#: ../src/gnome-klotski.vala:347
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:355
+#: ../src/gnome-klotski.vala:358
 msgid "Polonaise"
 msgstr "Poloneza"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:366
+#: ../src/gnome-klotski.vala:369
 msgid "Baltic Sea"
 msgstr "Baltsko morje"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:378
+#: ../src/gnome-klotski.vala:381
 msgid "American Pie"
 msgstr "Ameriška pita"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:394
+#: ../src/gnome-klotski.vala:397
 msgid "Traffic Jam"
 msgstr "Prometni zamašek"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:405
+#: ../src/gnome-klotski.vala:408
 msgid "Sunshine"
 msgstr "Sončna svetloba"
 
-#: ../src/gnome-klotski.vala:546
-msgid "_Game"
-msgstr "_Igra"
-
-#: ../src/gnome-klotski.vala:556
-msgid "_Restart Puzzle"
-msgstr "_Znova začni sestavljanko"
-
-#: ../src/gnome-klotski.vala:564
-msgid "Next Puzzle"
-msgstr "Naslednja sestavljanka"
-
-#: ../src/gnome-klotski.vala:571
-msgid "Previous Puzzle"
-msgstr "Prejšnja sestavljanka"
-
-#: ../src/gnome-klotski.vala:582
-msgid "HuaRong Trail"
-msgstr "Steza HuaRong"
-
-#: ../src/gnome-klotski.vala:588
-msgid "Challenge Pack"
-msgstr "Paket izziva"
-
-#: ../src/gnome-klotski.vala:594
-msgid "Skill Pack"
-msgstr "Paket veščine"
-
-#: ../src/gnome-klotski.vala:660
+#: ../src/gnome-klotski.vala:565
 msgid "_New"
 msgstr "_Nova"
 
-#: ../src/gnome-klotski.vala:668 ../src/gnome-klotski.vala:726
+#: ../src/gnome-klotski.vala:575
+msgid "_Puzzles"
+msgstr "_Igre"
+
+#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
 msgid "_Fullscreen"
 msgstr "_Celozaslonski način"
 
-#: ../src/gnome-klotski.vala:721
+#: ../src/gnome-klotski.vala:664
+msgid "Previous Puzzle"
+msgstr "Prejšnja sestavljanka"
+
+#: ../src/gnome-klotski.vala:670
+msgid "Next Puzzle"
+msgstr "Naslednja sestavljanka"
+
+#: ../src/gnome-klotski.vala:727
 msgid "_Leave Fullscreen"
 msgstr "_Zapusti celozaslonski način"
 
-#: ../src/gnome-klotski.vala:855
+#: ../src/gnome-klotski.vala:860
 msgid "Puzzle: "
 msgstr "Sestavljanka:"
 
-#: ../src/gnome-klotski.vala:869
+#: ../src/gnome-klotski.vala:874
 #, c-format
 msgid "Moves: %d"
 msgstr "Premiki: %d"
 
-#: ../src/gnome-klotski.vala:872
+#: ../src/gnome-klotski.vala:877
 msgid "Level completed."
 msgstr "Raven je končana."
 
-#: ../src/gnome-klotski.vala:955
+#: ../src/gnome-klotski.vala:971
 msgid ""
-"Sliding Block Puzzles\n"
+"Sliding block puzzles\n"
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
@@ -284,7 +268,7 @@ msgstr ""
 "\n"
 "Igra Klotski je del iger GNOME."
 
-#: ../src/gnome-klotski.vala:962
+#: ../src/gnome-klotski.vala:977
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -292,30 +276,47 @@ msgstr ""
 "Tadej Janež <tadej_janez@email.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/gnome-klotski.vala:965
-msgid "GNOME Games web site"
-msgstr "Spletna stran iger GNOME"
+#: ../src/score-dialog.vala:28
+msgid "_Close"
+msgstr "_Zapri"
 
-#: ../src/gnome-klotski.vala:1015
-msgid "_Quit"
-msgstr "_Končaj"
-
-#: ../src/gnome-klotski.vala:1016
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Nova igra"
 
-#: ../src/gnome-klotski.vala:1019
+#: ../src/score-dialog.vala:32
 msgid "_OK"
 msgstr "_V redu"
 
-#: ../src/gnome-klotski.vala:1031
+#: ../src/score-dialog.vala:44
 msgid "Puzzle:"
 msgstr "Sestavljanka:"
 
-#: ../src/gnome-klotski.vala:1056
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "Datum"
 
-#: ../src/gnome-klotski.vala:1059
+#: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Premiki"
+
+#~ msgid "_Game"
+#~ msgstr "_Igra"
+
+#~ msgid "_Restart Puzzle"
+#~ msgstr "_Znova začni sestavljanko"
+
+#~ msgid "HuaRong Trail"
+#~ msgstr "Steza HuaRong"
+
+#~ msgid "Challenge Pack"
+#~ msgstr "Paket izziva"
+
+#~ msgid "Skill Pack"
+#~ msgstr "Paket veščine"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Spletna stran iger GNOME"
+
+#~ msgid "_Quit"
+#~ msgstr "_Končaj"
