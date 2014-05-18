@@ -31,7 +31,6 @@ public class Klotski : Gtk.Application
     private Gtk.Window window;
     private int window_width;
     private int window_height;
-    private bool is_fullscreen;
     private bool is_maximized;
 
     private Gtk.Box puzzles_panel;
@@ -42,8 +41,6 @@ public class Klotski : Gtk.Application
     private SimpleAction prev_level_action;
 
     private PuzzleView view;
-
-    private Gtk.ToolButton fullscreen_button;
 
     private Gtk.Label messagewidget;
     private Gtk.Label moves_label;
@@ -435,7 +432,6 @@ public class Klotski : Gtk.Application
     {
         { "new-game",             restart_level_cb  },
         { "show-puzzles",         toggle_puzzles_cb },
-        { "fullscreen",           fullscreen_cb     },
         { "next-level",           next_level_cb     },
         { "prev-level",           prev_level_cb     },
         { "scores",               scores_cb         },
@@ -468,7 +464,6 @@ public class Klotski : Gtk.Application
         add_accelerator ("<Primary>n", "app.new-game", null);
         add_accelerator ("<Primary>q", "app.quit", null);
         add_accelerator ("F1", "app.help", null);
-        add_accelerator ("F11", "app.fullscreen", null);
         add_accelerator ("Page_Up", "app.next-level", null);
         add_accelerator ("Page_Down", "app.prev-level", null);
 
@@ -486,9 +481,7 @@ public class Klotski : Gtk.Application
         int wh = int.max (settings.get_int ("window-height"), MINHEIGHT);
         window.set_default_size (ww, wh);
 
-        if (settings.get_boolean ("window-is-fullscreen"))
-            window.fullscreen ();
-        else if (settings.get_boolean ("window-is-maximized"))
+        if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -577,13 +570,6 @@ public class Klotski : Gtk.Application
         puzzles_button.is_important = true;
         puzzles_button.show ();
         toolbar.insert (puzzles_button, -1);
-
-        fullscreen_button = new Gtk.ToolButton (null, _("_Fullscreen"));
-        fullscreen_button.icon_name = "view-fullscreen";
-        fullscreen_button.use_underline = true;
-        fullscreen_button.action_name = "app.fullscreen";
-        fullscreen_button.show ();
-        toolbar.insert (fullscreen_button, -1);
 
         var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
         status_alignment.add (status_box);
@@ -706,7 +692,7 @@ public class Klotski : Gtk.Application
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
     {
-        if (!is_maximized && !is_fullscreen)
+        if (!is_maximized)
         {
             window_width = event.width;
             window_height = event.height;
@@ -719,20 +705,6 @@ public class Klotski : Gtk.Application
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
-        {
-            is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
-            if (is_fullscreen)
-            {
-                fullscreen_button.label = _("_Leave Fullscreen");
-                fullscreen_button.icon_name = "view-restore";
-            }
-            else
-            {
-                fullscreen_button.label = _("_Fullscreen");
-                fullscreen_button.icon_name = "view-fullscreen";
-            }
-        }
         return false;
     }
 
@@ -940,24 +912,11 @@ public class Klotski : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
-        settings.set_boolean ("window-is-fullscreen", is_fullscreen);
     }
 
     protected override void activate ()
     {
         window.present ();
-    }
-
-    private void fullscreen_cb ()
-    {
-        if (is_fullscreen)
-        {
-            window.unfullscreen ();
-        }
-        else
-        {
-            window.fullscreen ();
-        }
     }
 
     private void about_cb ()
