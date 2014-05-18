@@ -42,8 +42,7 @@ public class Klotski : Gtk.Application
 
     private PuzzleView view;
 
-    private Gtk.Label messagewidget;
-    private Gtk.Label moves_label;
+    private Gtk.HeaderBar headerbar;
 
     private Puzzle puzzle;
 
@@ -472,8 +471,12 @@ public class Klotski : Gtk.Application
         history = new History (histfile);
         history.load ();
 
+        headerbar = new Gtk.HeaderBar ();
+        headerbar.show_close_button = true;
+        headerbar.show ();
+
         window = new Gtk.ApplicationWindow (this);
-        window.title = _("Klotski");
+        window.set_titlebar (headerbar);
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
 
@@ -536,53 +539,6 @@ public class Klotski : Gtk.Application
         }
 
         set_app_menu (builder.get_object ("app-menu") as MenuModel);
-
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        status_box.show ();
-
-        /* show the puzzle name and number of moves */
-        messagewidget = new Gtk.Label ("");
-        messagewidget.show ();
-        status_box.pack_start (messagewidget, false, false, 0);
-
-        moves_label = new Gtk.Label ("");
-        moves_label.show ();
-
-        status_box.pack_start (moves_label, false, false, 0);
-
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.show ();
-        toolbar.show_arrow = false;
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-
-        var new_game_button = new Gtk.ToolButton (null, _("_New"));
-        new_game_button.icon_name = "document-new";
-        new_game_button.use_underline = true;
-        new_game_button.action_name = "app.new-game";
-        new_game_button.is_important = true;
-        new_game_button.show ();
-        toolbar.insert (new_game_button, -1);
-
-        var puzzles_button = new Gtk.ToggleToolButton ();
-        puzzles_button.action_name = "app.show-puzzles";
-        puzzles_button.label = _("_Puzzles");
-        puzzles_button.use_underline = true;
-        puzzles_button.is_important = true;
-        puzzles_button.show ();
-        toolbar.insert (puzzles_button, -1);
-
-        var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
-        status_alignment.add (status_box);
-        status_alignment.show ();
-
-        var status_item = new Gtk.ToolItem ();
-        status_item.set_expand (true);
-        status_item.add (status_alignment);
-        status_item.show ();
-
-        toolbar.insert (status_item, -1);
-
-        vbox.pack_start (toolbar, false, false, 0);
 
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         hbox.show();
@@ -848,7 +804,7 @@ public class Klotski : Gtk.Application
 
         settings.set_int (KEY_LEVEL, current_level);
 
-        messagewidget.set_text (_("Puzzle: ") + _(level[current_level].name));
+        headerbar.set_title (_(level[current_level].name));
         puzzle = new Puzzle (level[current_level].width, level[current_level].height, level[current_level].data);
         puzzle.moved.connect (puzzle_moved_cb);
         view.puzzle = puzzle;
@@ -862,10 +818,10 @@ public class Klotski : Gtk.Application
 
     private void update_moves_label ()
     {
-        moves_label.set_text (_("Moves: %d").printf (puzzle.moves));
+        headerbar.set_subtitle (_("Moves: %d").printf (puzzle.moves));
         if (puzzle.game_over ())
         {
-            messagewidget.set_text (_("Level completed."));
+            headerbar.set_title (_("Level completed."));
             game_score ();
         }
     }
