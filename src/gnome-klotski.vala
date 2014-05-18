@@ -584,7 +584,7 @@ public class Klotski : Gtk.Application
 
         vbox.pack_start (toolbar, false, false, 0);
 
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         hbox.show();
 
         puzzles = new Gtk.TreeStore (3, typeof (string), typeof (bool), typeof (int));
@@ -667,7 +667,26 @@ public class Klotski : Gtk.Application
         view.show ();
         hbox.pack_start (view, true, true, 0);
 
-        vbox.pack_start (hbox, true, true, 0);
+        var sizegroup = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
+        bbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 8);
+        bbox.show ();
+        hbox.pack_start (bbox, false, true, 15);
+
+        Gtk.Button button = new Gtk.ToggleButton.with_mnemonic (_("_View Puzzles"));
+        button.action_name = "app.show-puzzles";
+        ((Gtk.Label) button.get_child ()).margin = 12;
+        button.show ();
+        sizegroup.add_widget (button);
+        bbox.pack_end (button, false, true, 0);
+
+        button = new Gtk.Button.with_mnemonic (_("_Start Over"));
+        button.action_name = "app.new-game";
+        ((Gtk.Label) button.get_child ()).margin = 12;
+        button.show ();
+        sizegroup.add_widget (button);
+        bbox.pack_end (button, false, true, 0);
+
+        vbox.pack_start (hbox, true, true, 15);
 
         vbox.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, false, 0);
 
