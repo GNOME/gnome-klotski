@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of gnome-games.
-# Copyright (C) 1999-2013 Free Software Foundation, Inc.
+# Copyright (C) 1999-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -22,22 +22,23 @@
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2013.
+# Enrico Nicoletto <liverig@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-09 18:10+0000\n"
-"PO-Revision-Date: 2013-12-13 08:07-0300\n"
-"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
+"POT-Creation-Date: 2014-05-21 06:49+0000\n"
+"PO-Revision-Date: 2014-05-21 14:15-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
@@ -67,16 +68,16 @@ msgstr ""
 "semelhantes e apenas o tamanho de um ou mais blocos são diferentes. Outras "
 "disposições tem mais variedade."
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:451
+#: ../src/gnome-klotski.vala:903
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Deslize os blocos para resolver o quebra-cabeça"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "jogo;game;estratégia;lógica;movimento;"
 
@@ -100,188 +101,174 @@ msgstr "A altura da janela em pixels."
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:6
-msgid "true if the window is fullscreen"
-msgstr "verdadeiro se a janela estiver em tela cheia"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:63
+#: ../src/gnome-klotski.vala:59
 msgid "Only 18 Steps"
 msgstr "Apenas 18 passos"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:76
+#: ../src/gnome-klotski.vala:72
 msgid "Daisy"
 msgstr "Margarida"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:89
+#: ../src/gnome-klotski.vala:85
 msgid "Violet"
 msgstr "Violeta"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:102
+#: ../src/gnome-klotski.vala:98
 msgid "Poppy"
 msgstr "Papoula"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:115
+#: ../src/gnome-klotski.vala:111
 msgid "Pansy"
 msgstr "Amor-perfeito"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:128
+#: ../src/gnome-klotski.vala:124
 msgid "Snowdrop"
 msgstr "Floco de neve"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:141
+#: ../src/gnome-klotski.vala:137
 msgid "Red Donkey"
 msgstr "Asno vermelho"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:154
+#: ../src/gnome-klotski.vala:150
 msgid "Trail"
 msgstr "Trilha"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:167
+#: ../src/gnome-klotski.vala:163
 msgid "Ambush"
 msgstr "Emboscada"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:180
+#: ../src/gnome-klotski.vala:176
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:191
+#: ../src/gnome-klotski.vala:187
 msgid "Success"
 msgstr "Sucesso"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:201
+#: ../src/gnome-klotski.vala:197
 msgid "Bone"
 msgstr "Osso"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:210
 msgid "Fortune"
 msgstr "Sorte"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:228
+#: ../src/gnome-klotski.vala:224
 msgid "Fool"
 msgstr "Tolo"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:238
+#: ../src/gnome-klotski.vala:234
 msgid "Solomon"
 msgstr "Solomão"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:251
+#: ../src/gnome-klotski.vala:247
 msgid "Cleopatra"
 msgstr "Cleópatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:263
+#: ../src/gnome-klotski.vala:259
 msgid "Shark"
 msgstr "Tubarão"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:275
+#: ../src/gnome-klotski.vala:271
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:287
+#: ../src/gnome-klotski.vala:283
 msgid "Pennant Puzzle"
 msgstr "Bandeirola"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:300
+#: ../src/gnome-klotski.vala:296
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:323
+#: ../src/gnome-klotski.vala:319
 msgid "Pelopones"
 msgstr "Peloponeso"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:335
+#: ../src/gnome-klotski.vala:331
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:347
+#: ../src/gnome-klotski.vala:343
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:358
+#: ../src/gnome-klotski.vala:354
 msgid "Polonaise"
 msgstr "Polonês"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:369
+#: ../src/gnome-klotski.vala:365
 msgid "Baltic Sea"
 msgstr "Mar Báltico"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:381
+#: ../src/gnome-klotski.vala:377
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:397
+#: ../src/gnome-klotski.vala:393
 msgid "Traffic Jam"
 msgstr "Engarrafamento"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:408
+#: ../src/gnome-klotski.vala:404
 msgid "Sunshine"
 msgstr "Raio de Sol"
 
-#: ../src/gnome-klotski.vala:565
-msgid "_New"
-msgstr "_Novo"
-
-#: ../src/gnome-klotski.vala:575
-msgid "_Puzzles"
-msgstr "_Quebra-cabeças"
-
-#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
-msgid "_Fullscreen"
-msgstr "_Tela cheia"
-
-#: ../src/gnome-klotski.vala:664
+#: ../src/gnome-klotski.vala:606
 msgid "Previous Puzzle"
 msgstr "Quebra-cabeça anterior"
 
-#: ../src/gnome-klotski.vala:670
+#: ../src/gnome-klotski.vala:612
 msgid "Next Puzzle"
 msgstr "Próximo quebra-cabeça"
 
-#: ../src/gnome-klotski.vala:727
-msgid "_Leave Fullscreen"
-msgstr "Sair de tela c_heia"
+#: ../src/gnome-klotski.vala:631
+#| msgid "_Puzzles"
+msgid "_View Puzzles"
+msgstr "Ve_r quebra-cabeças"
 
-#: ../src/gnome-klotski.vala:860
-msgid "Puzzle: "
-msgstr "Quebra-cabeça: "
+#: ../src/gnome-klotski.vala:638
+#| msgid "_Starting level:"
+msgid "_Start Over"
+msgstr "Reco_meçar"
 
-#: ../src/gnome-klotski.vala:874
+#: ../src/gnome-klotski.vala:821
 #, c-format
 msgid "Moves: %d"
 msgstr "Movimentos: %d"
 
-#: ../src/gnome-klotski.vala:877
+#: ../src/gnome-klotski.vala:824
 msgid "Level completed."
 msgstr "Nível concluído."
 
-#: ../src/gnome-klotski.vala:971
+#: ../src/gnome-klotski.vala:905
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -291,7 +278,7 @@ msgstr ""
 "\n"
 "O Klotski faz parte do GNOME Games."
 
-#: ../src/gnome-klotski.vala:977
+#: ../src/gnome-klotski.vala:911
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -309,10 +296,6 @@ msgstr ""
 "Sérgio Cipolla <secipolla@gmail.com>\n"
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>"
-
-#: ../src/gnome-klotski.vala:980
-msgid "GNOME Games web site"
-msgstr "Site do GNOME Games"
 
 #: ../src/score-dialog.vala:28
 msgid "_Close"
@@ -337,6 +320,24 @@ msgstr "Data"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Movimentos"
+
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "verdadeiro se a janela estiver em tela cheia"
+
+#~ msgid "_New"
+#~ msgstr "_Novo"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Tela cheia"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "Sair de tela c_heia"
+
+#~ msgid "Puzzle: "
+#~ msgstr "Quebra-cabeça: "
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Site do GNOME Games"
 
 #~ msgid "_Game"
 #~ msgstr "_Jogo"
@@ -1643,9 +1644,6 @@ msgstr "Movimentos"
 
 #~ msgid "_Enable fake bonuses"
 #~ msgstr "_Habilitar bônus falsos"
-
-#~ msgid "_Starting level:"
-#~ msgstr "Nível _inicial:"
 
 #~ msgid "Number of _human players:"
 #~ msgstr "Número de jogadores _humanos:"
