@@ -1,0 +1,38 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="puzzles">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.12" date="2014-05-24" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Puzzles</title>
+  <p>Puzzles are divided into three categories namely, <gui>HuaRong
+  Trail</gui>, <gui>Challenge Pack</gui> and <gui>Skill Pack</gui> based on the
+  difficulty level of the game. While the first and the last each contains nine
+  puzzles, the second one provides ten beautiful puzzles to the user.</p>
+
+  <section id="navigate-puzzles">
+    <title>Navigate among puzzles</title>
+      <p>To navigate between the puzzles:</p>
+        <steps>
+          <item><p>Click on <gui style="button">View Puzzles</gui> in the
+          bottom right, choose a category. All the puzzles in the category will
+          be displayed</p></item>
+          <item><p>You can navigate sequentially among the puzzles with the
+          <gui style="button">Next Puzzle</gui> and <gui style="button">
+          Previous Puzzle</gui>.</p></item>
+        </steps>
+  </section>
+
+</page>

@@ -1,0 +1,41 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="start-game">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.12" date="2014-05-26" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Start a new game</title>
+
+  <p><app>Klotski</app> offers you a large collection of games, to play a new
+  game:</p>
+    <steps>
+      <item><p>Select <guiseq><gui style="menu">Klotski</gui>
+      <gui style="menuitem">New Game</gui></guiseq> from the application menu.
+      Alternatively, you can click the <gui style="button">Start Over</gui>
+      button in the bottom right. It will start a new game of the default
+      puzzle, <gui>Only 18 steps</gui>.</p></item>
+      <item><p>To play a different puzzle, click the <gui style="button">View
+      Puzzles</gui> button, choose a game category and start a new puzzle by
+      double clicking on it.</p></item>
+    </steps>
+ 
+  <section id="new-game-on-close">
+  <title>Start a new game on completion of a puzzle</title>
+
+  <p>On finishing a puzzle, you can start a new game of the same puzzle
+  directly. To start a new game, click on <gui>New Game</gui> in the appeared
+  dialog box.</p>
+  </section>
+</page>

@@ -1,0 +1,33 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="scores">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.12" date="2014-05-26" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Scores</title>
+
+  <p>You can compare your performance by looking at the number of moves you
+  took in solving each puzzle in the previous games. To view your number of
+  moves:</p>
+    <steps>
+      <item><p>Select <guiseq><gui style="menu">Klotski</gui>
+      <gui style="menuitem">Scores</gui></guiseq>.</p></item>
+      <item><p> The dialog will display the <gui>Only 18 steps</gui> puzzle by
+      default, to view other puzzles, select them in the drop down menu at the
+      top of the dialog.</p></item>
+      <item><p>Click on <gui style="button">OK</gui> to close the scores dialog
+      box.</p></item>
+    </steps>
+</page>

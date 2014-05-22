@@ -1,0 +1,26 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="game-introduction">
+
+  <info>
+    <link type="guide" xref="index"/>
+    <revision version="3.12" date="2014-06-02" status="review"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+  </info>
+
+  <title>Introduction</title>
+
+  <p><app>The Klotski</app> application is same as the Klotski game. The
+  objective of the game is to move the patterned block to the area bordered by
+  the green markers in the minimum number of moves. You can achieve this by
+  sliding the blocks horizontally or vertically.</p>
+
+</page>
