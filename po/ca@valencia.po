@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-25 00:56+0200\n"
-"PO-Revision-Date: 2014-03-03 22:29+0100\n"
+"POT-Creation-Date: 2014-05-25 00:59+0200\n"
+"PO-Revision-Date: 2014-05-25 00:58+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca-XV\n"
@@ -84,9 +84,8 @@ msgid "true if the window is maximized"
 msgstr "«true» (cert) si la finestra està maximitzada"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:6
-#, fuzzy
 msgid "true if the window is fullscreen"
-msgstr "«true» (cert) si la finestra està maximitzada"
+msgstr "«true» (cert) si la finestra està a pantalla completa"
 
 #. puzzle name
 #: ../src/gnome-klotski.vala:63
@@ -230,16 +229,15 @@ msgstr "Raigs de sol"
 
 #: ../src/gnome-klotski.vala:565
 msgid "_New"
-msgstr ""
+msgstr "_Nou"
 
 #: ../src/gnome-klotski.vala:575
-#, fuzzy
 msgid "_Puzzles"
-msgstr "Trencaclosques:"
+msgstr "_Trencaclosques"
 
 #: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
 msgid "_Fullscreen"
-msgstr ""
+msgstr "Pantalla _completa"
 
 #: ../src/gnome-klotski.vala:664
 msgid "Previous Puzzle"
@@ -251,12 +249,11 @@ msgstr "Trencaclosques següent"
 
 #: ../src/gnome-klotski.vala:727
 msgid "_Leave Fullscreen"
-msgstr ""
+msgstr "I_x de la pantalla completa"
 
 #: ../src/gnome-klotski.vala:860
-#, fuzzy
 msgid "Puzzle: "
-msgstr "Trencaclosques:"
+msgstr "Trencaclosques: "
 
 #
 #: ../src/gnome-klotski.vala:874
