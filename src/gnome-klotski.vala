@@ -40,6 +40,8 @@ public class Klotski : Gtk.Application
     private SimpleAction next_level_action;
     private SimpleAction prev_level_action;
 
+    private SimpleAction new_game_action;
+
     private PuzzleView view;
 
     private Gtk.HeaderBar headerbar;
@@ -455,6 +457,8 @@ public class Klotski : Gtk.Application
         Gtk.Window.set_default_icon_name ("gnome-klotski");
 
         add_action_entries (action_entries, this);
+        new_game_action = lookup_action ("new-game") as SimpleAction;
+        new_game_action.set_enabled (false);
         next_level_action = lookup_action ("next-level") as SimpleAction;
         next_level_action.set_enabled (current_level < level.length - 1);
         prev_level_action = lookup_action ("prev-level") as SimpleAction;
@@ -808,12 +812,14 @@ public class Klotski : Gtk.Application
         puzzle = new Puzzle (level[current_level].width, level[current_level].height, level[current_level].data);
         puzzle.moved.connect (puzzle_moved_cb);
         view.puzzle = puzzle;
+        new_game_action.set_enabled (false);
         update_menu_state ();
     }
 
     private void puzzle_moved_cb ()
     {
         update_moves_label ();
+        new_game_action.set_enabled (true);
     }
 
     private void update_moves_label ()
