@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Klotski], [3.12.0], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Klotski], [3.13.3], [https://bugzilla.gnome.org/],
         [gnome-klotski], [https://wiki.gnome.org/Apps/Klotski])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
@@ -15,7 +15,7 @@ dnl ###########################################################################
 dnl Dependencies
 dnl ###########################################################################
 
-GTK_REQUIRED=3.4.0
+GTK_REQUIRED=3.10.0
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(GNOME_KLOTSKI, [
