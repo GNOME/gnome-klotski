@@ -1,3 +1,13 @@
+GNOME Klotski 3.13.3
+====================
+
+Dependencies: GTK+ 3.10
+
+* Use a header bar, not a toolbar
+* Add Start Over and View Puzzle buttons
+* Remove fullscreen mode
+* Updated translations
+
 GNOME Klotski 3.12.0
 ====================
 
