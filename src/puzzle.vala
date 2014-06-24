@@ -84,7 +84,7 @@ private const int[] image_map =
   -1, -1
 };
 
-public class Puzzle
+public class Puzzle : Object
 {
     public int width;
     public int height;
