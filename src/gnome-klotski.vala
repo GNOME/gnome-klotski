@@ -632,15 +632,15 @@ public class Klotski : Gtk.Application
         bbox.show ();
         hbox.pack_start (bbox, false, true, 15);
 
-        Gtk.Button button = new Gtk.ToggleButton.with_mnemonic (_("_View Puzzles"));
-        button.action_name = "app.show-puzzles";
+        var button = new Gtk.Button.with_mnemonic (_("_Start Over"));
+        button.action_name = "app.new-game";
         ((Gtk.Label) button.get_child ()).margin = 12;
         button.show ();
         sizegroup.add_widget (button);
         bbox.pack_end (button, false, true, 0);
 
-        button = new Gtk.Button.with_mnemonic (_("_Start Over"));
-        button.action_name = "app.new-game";
+        button = new Gtk.ToggleButton.with_mnemonic (_("_View Puzzles"));
+        button.action_name = "app.show-puzzles";
         ((Gtk.Label) button.get_child ()).margin = 12;
         button.show ();
         sizegroup.add_widget (button);
