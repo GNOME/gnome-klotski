@@ -12,24 +12,24 @@
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
 # Balázs Úr <urbalazs at gmail dot com>, 2012, 2013.
+# Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-12 18:00+0000\n"
-"PO-Revision-Date: 2014-03-20 00:28+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"POT-Creation-Date: 2014-06-30 19:09+0000\n"
+"PO-Revision-Date: 2014-07-01 00:13+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "GNOME Klotski"
 
@@ -55,26 +55,26 @@ msgstr ""
 "tartalmaz. Néhány feladvány hasonló, és csak egy vagy több blokk mérete "
 "különbözik. Más feladványok nagyobb változatosságot kínálnak."
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:453
+#: ../src/gnome-klotski.vala:909
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Csúsztassa el az elemeket a fejtörő megoldásához"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "játék;stratégia;logika;lépés;"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "A játszott feladvány"
+msgstr "A játszott fejtörő"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
-msgstr "A játszott feladvány száma."
+msgstr "A játszott fejtörő száma."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
@@ -88,194 +88,174 @@ msgstr "Az ablak magassága képpontokban"
 msgid "true if the window is maximized"
 msgstr "Az ablak teljes méretű-e"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:6
-#| msgid "true if the window is fullscren"
-msgid "true if the window is fullscreen"
-msgstr "Az ablak teljes képernyős-e"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:63
+#: ../src/gnome-klotski.vala:61
 msgid "Only 18 Steps"
 msgstr "Csak 18 lépés"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:76
+#: ../src/gnome-klotski.vala:74
 msgid "Daisy"
 msgstr "Százszorszép"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:89
+#: ../src/gnome-klotski.vala:87
 msgid "Violet"
 msgstr "Viola"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:102
+#: ../src/gnome-klotski.vala:100
 msgid "Poppy"
 msgstr "Pipacs"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:115
+#: ../src/gnome-klotski.vala:113
 msgid "Pansy"
 msgstr "Árvácska"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:128
+#: ../src/gnome-klotski.vala:126
 msgid "Snowdrop"
 msgstr "Hóvirág"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:141
+#: ../src/gnome-klotski.vala:139
 msgid "Red Donkey"
 msgstr "Vörös csacsi"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:154
+#: ../src/gnome-klotski.vala:152
 msgid "Trail"
 msgstr "Ösvény"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:167
+#: ../src/gnome-klotski.vala:165
 msgid "Ambush"
 msgstr "Csapda"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:180
+#: ../src/gnome-klotski.vala:178
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:191
+#: ../src/gnome-klotski.vala:189
 msgid "Success"
 msgstr "Siker"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:201
+#: ../src/gnome-klotski.vala:199
 msgid "Bone"
 msgstr "Csont"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:212
 msgid "Fortune"
 msgstr "Szerencse"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:228
+#: ../src/gnome-klotski.vala:226
 msgid "Fool"
 msgstr "Bolond"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:238
+#: ../src/gnome-klotski.vala:236
 msgid "Solomon"
 msgstr "Salamon"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:251
+#: ../src/gnome-klotski.vala:249
 msgid "Cleopatra"
 msgstr "Kleopátra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:263
+#: ../src/gnome-klotski.vala:261
 msgid "Shark"
 msgstr "Cápa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:275
+#: ../src/gnome-klotski.vala:273
 msgid "Rome"
 msgstr "Róma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:287
+#: ../src/gnome-klotski.vala:285
 msgid "Pennant Puzzle"
-msgstr "Zászló"
+msgstr "Zászló fejtörő"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:300
+#: ../src/gnome-klotski.vala:298
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:323
+#: ../src/gnome-klotski.vala:321
 msgid "Pelopones"
 msgstr "Peloponész"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:335
+#: ../src/gnome-klotski.vala:333
 msgid "Transeuropa"
 msgstr "Transzeurópa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:347
+#: ../src/gnome-klotski.vala:345
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:358
+#: ../src/gnome-klotski.vala:356
 msgid "Polonaise"
 msgstr "Lengyel"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:369
+#: ../src/gnome-klotski.vala:367
 msgid "Baltic Sea"
 msgstr "Balti tenger"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:381
+#: ../src/gnome-klotski.vala:379
 msgid "American Pie"
 msgstr "Amerikai pite"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:397
+#: ../src/gnome-klotski.vala:395
 msgid "Traffic Jam"
 msgstr "Dugó"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:408
+#: ../src/gnome-klotski.vala:406
 msgid "Sunshine"
 msgstr "Napfény"
 
-#: ../src/gnome-klotski.vala:565
-msgid "_New"
-msgstr "Ú_j"
-
-#: ../src/gnome-klotski.vala:575
-#| msgid "Puzzle:"
-msgid "_Puzzles"
-msgstr "_Fejtörők"
-
-#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
-msgid "_Fullscreen"
-msgstr "_Teljes képernyő"
-
-#: ../src/gnome-klotski.vala:664
+#: ../src/gnome-klotski.vala:610
 msgid "Previous Puzzle"
-msgstr "Előző feladvány"
+msgstr "Előző fejtörő"
 
-#: ../src/gnome-klotski.vala:670
+#: ../src/gnome-klotski.vala:616
 msgid "Next Puzzle"
-msgstr "Következő feladvány"
+msgstr "Következő fejtörő"
 
-#: ../src/gnome-klotski.vala:727
-msgid "_Leave Fullscreen"
-msgstr "T_eljes képernyő elhagyása"
+#: ../src/gnome-klotski.vala:635
+#| msgid "_Puzzles"
+msgid "_View Puzzles"
+msgstr "_Fejtörők megtekintése"
 
-#: ../src/gnome-klotski.vala:860
-msgid "Puzzle: "
-msgstr "Fejtörő: "
+#: ../src/gnome-klotski.vala:642
+#| msgid "_Starting level:"
+msgid "_Start Over"
+msgstr "Újra_kezdés"
 
-#: ../src/gnome-klotski.vala:874
+#: ../src/gnome-klotski.vala:827
 #, c-format
 msgid "Moves: %d"
 msgstr "Lépések: %d"
 
-#: ../src/gnome-klotski.vala:877
+#: ../src/gnome-klotski.vala:830
 msgid "Level completed."
 msgstr "Szint teljesítve."
 
-#: ../src/gnome-klotski.vala:971
-#| msgid ""
-#| "Sliding Block Puzzles\n"
-#| "\n"
-#| "Klotski is a part of GNOME Games."
+#: ../src/gnome-klotski.vala:911
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -285,7 +265,7 @@ msgstr ""
 "\n"
 "A Klotski a GNOME játékok része."
 
-#: ../src/gnome-klotski.vala:977
+#: ../src/gnome-klotski.vala:917
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -319,6 +299,22 @@ msgstr "Dátum"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Lépések"
+
+#~| msgid "true if the window is fullscren"
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "Az ablak teljes képernyős-e"
+
+#~ msgid "_New"
+#~ msgstr "Ú_j"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Teljes képernyő"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "T_eljes képernyő elhagyása"
+
+#~ msgid "Puzzle: "
+#~ msgstr "Fejtörő: "
 
 #~ msgid "_Game"
 #~ msgstr "_Játék"
@@ -1626,9 +1622,6 @@ msgstr "Lépések"
 
 #~ msgid "_Enable fake bonuses"
 #~ msgstr "_Hamis bónuszok bekapcsolása"
-
-#~ msgid "_Starting level:"
-#~ msgstr "_Kezdőszint:"
 
 #~ msgid "Number of _human players:"
 #~ msgstr "_Emberi játékosok száma:"
