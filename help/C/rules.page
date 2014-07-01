@@ -20,20 +20,27 @@
 
   <p>You have to follow some rules while sliding the blocks in order to solve
   <app>Klotski</app>. The rules are listed below:</p>
+  <!--Saying "you have to" is a aggressive language for documentation. Rephrase this? To say "These are the rules to follow when sliding blocks..." -->
 
   <section id="move-block">
     <title>Move a block</title>
       <steps>
         <item><p>Click on the block to be moved.</p></item> 
+        <!--There would be no click on a touch screen interface if GNOME were to be used on it. Besides, Click and Drag is the action to make a move right? So combine first and second instruction to say something like "Click and drag and the desired block to a location of your choice on the board" -->
         <item><p>Move the block to the desired location with the help of
         mouse.</p></item>
+        <!--mouse? Bring out that checklist please. Doesn't it not say that all help instructions should be system agnostic? Rephrase this.-->
         <item><p>Click on the block again.</p></item>
+        <!--If you combine first and second instuctions, this one won't be required -->
       </steps>
   </section>
 
+
+<!-- This section should be placed first and then "Move a block" section. -->
  <section id="rules">
    <title>Rules to move a block</title>
      <list>
+      <!-- Language is a bit negative for documentation. Try to say something like "The green blocks and boundary blocks cannot be moved. A block cannot be moved over the green blocks. However, it is allowed to move a patterend block. Only a single step is allowed in one move.-->
        <item><p>You can not move the green blocks and the boundary
        blocks.</p></item>
        <item><p>You can not move over a block with the exception that the

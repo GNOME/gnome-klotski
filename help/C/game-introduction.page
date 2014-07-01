@@ -22,5 +22,7 @@
   objective of the game is to move the patterned block to the area bordered by
   the green markers in the minimum number of moves. You can achieve this by
   sliding the blocks horizontally or vertically.</p>
+  <!-- Just this setence would be fine ...<app>Klotski</app> is a <app>GNOME</app> game. -->
+<!-- Perhaps a screenshot? If you can't take one now, do it right before the 3.14 release. Mark this is as a TODO -->
 
 </page>

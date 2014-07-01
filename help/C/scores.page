@@ -21,13 +21,16 @@
   <p>You can compare your performance by looking at the number of moves you
   took in solving each puzzle in the previous games. To view your number of
   moves:</p>
+  <!-- Rephrase, this language is commanding for documentation. Start with "To check your performance..." and keep the sentence simple. -->
     <steps>
       <item><p>Select <guiseq><gui style="menu">Klotski</gui>
       <gui style="menuitem">Scores</gui></guiseq>.</p></item>
       <item><p> The dialog will display the <gui>Only 18 steps</gui> puzzle by
       default, to view other puzzles, select them in the drop down menu at the
       top of the dialog.</p></item>
+      <!-- Simplify this. Say "The dialog by default displays scores of the "Only 18 Steps" puzzle, to view...". Do not say drop down menu or top of the dialog, you are using language to describe UI which is bound to change!, just menu is enough. In another sentence say "From the menu, select the puzzle whose scores you wish to see.-->
       <item><p>Click on <gui style="button">OK</gui> to close the scores dialog
       box.</p></item>
+      <!-- This is what I would write "Click on OK to close <gui>Scores<gui>" -->
     </steps>
 </page>

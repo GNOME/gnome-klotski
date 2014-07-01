@@ -18,6 +18,7 @@
   <title>Keyboard shortcuts</title>
   <p>Some things can be done with a simple press of a key. Here are a few
   Keyboard shortcuts for <app>Klotski</app>:</p>
+  <!-- I like the language but sentence needs rephrasing, say something like "To access the game the game through keyboard, use the the following shortcuts:" -->
     <table frame="all" rules="cols" shade="rows">
       <tr>
         <td><p>New game</p></td>

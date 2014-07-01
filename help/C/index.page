@@ -24,7 +24,8 @@
   <p>Slide blocks to solve the puzzle. You can visit
   <link xref="game-introduction">Game introduction</link> to know more about
   the game. Other help topics are grouped together into sections below.</p>
-
+  <!--"You can visit" doesn't sound right. Rephrase this sentence to say "To know more about the game, visit <link>..." -->
+  <!--Why does the introduction link appear again on the index? Fix it. -->
 
   <section id="play" style="2column">
     <title>Playing Klotski</title>

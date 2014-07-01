@@ -26,6 +26,7 @@
 
   <section id="patterned-block-moves">
     <title>Goal piece moves</title>
+    <!-- Break the first sentence into two sentences. -->
       <p>The goal location may be positioned slightly off the board and the
       goal piece which is the patterned block is always permitted to move to
       it. However, no other blocks are permitted to move off the board</p>
