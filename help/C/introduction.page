@@ -1,0 +1,29 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="introduction">
+
+  <info>
+    <link type="guide"/>
+    <revision version="3.12" date="2014-06-02" status="review"/>
+    <link type="seealso" xref="start-game"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>Know about <app>Klotski</app></desc>
+
+  </info>
+
+  <title>Introduction</title>
+
+  <p><app>Klotski</app> is a <app>GNOME</app> game. The objective of the game
+  is to move the patterned block to the area bordered by the green markers in
+  the minimum number of moves. You can achieve this by sliding the blocks
+  horizontally or vertically.</p>
+
+</page>
