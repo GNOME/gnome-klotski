@@ -4,6 +4,9 @@
 
   <info>
     <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="rules"/>
+    <link type="seealso" xref="keyboard-shortcuts"/>
+    <link type="seealso" xref="puzzles"/>
     <revision version="3.12" date="2014-05-26" status="review"/>
 
     <credit type="author">
@@ -14,34 +17,26 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
+    <desc>Play another game.</desc>
+
   </info>
 
   <title>Start a new game</title>
 
-  <p><app>Klotski</app> offers you a large collection of games, to play a new
+  <p><app>Klotski</app> offers a large collection of games, to play a new
   game:</p>
-  <!-- No need to say "you" -->
-    <steps>
-      <item><p>Select <guiseq><gui style="menu">Klotski</gui>
-      <gui style="menuitem">New Game</gui></guiseq> from the application menu.
-      <!--Don't describe the UI! Don't say "Application Menu", your mark up is enough to indicate that the user should go to App Menu -->
-      Alternatively, you can click the <gui style="button">Start Over</gui>
-      button in the bottom right. It will start a new game of the default
-      <!-- No need to say "bottom right", the users are not blind! they can see for themselves-->
-      puzzle, <gui>Only 18 steps</gui>.</p></item>
+  <p>Select <guiseq><gui style="menu">Klotski</gui>
+  <gui style="menuitem">New Game</gui></guiseq>.
+  Alternatively, you can click the <gui style="button">Start Over</gui>
+  button. It will start a new game of the default puzzle, <gui>Only 18
+  Steps</gui>.</p>
 
-      <!--This needs to go as a new section, on how to play different puzzles other than default one -->
-      <item><p>To play a different puzzle, click the <gui style="button">View
-      Puzzles</gui> button, choose a game category and start a new puzzle by
-      double clicking on it.</p></item>
-    </steps>
- 
- <!-- Dont need this section -->
-  <section id="new-game-on-close">
-  <title>Start a new game on completion of a puzzle</title>
+  <section id="play-different-puzzles">
+  <title>Play a different puzzle</title>
 
-  <p>On finishing a puzzle, you can start a new game of the same puzzle
-  directly. To start a new game, click on <gui>New Game</gui> in the appeared
-  dialog box.</p>
+    <p>To play a different puzzle, click the <gui style="button">View
+    Puzzles</gui> button, choose a game category and start a new puzzle by
+    double clicking on it.</p>
   </section>
+
 </page>
