@@ -4,6 +4,7 @@
 
   <info>
     <link type="guide" xref="index#play"/>
+    <link type="seealso" xref="scores"/>
     <revision version="3.12" date="2014-05-24" status="review"/>
 
     <credit type="author">
@@ -14,22 +15,22 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-  </info>
+    <desc>Check the number of moves you made.</desc>
 
+  </info>
 
   <title>Moves</title>
 
-  <p>You can see your number of moves at the top of the game screen. The 
+  <p>You can view your number of moves at the top of the game screen. The
   consecutive moves of a block are considered to be a single move. For example,
   moving a block up one square then right two squares is considered one
   move.</p>
 
   <section id="patterned-block-moves">
     <title>Goal piece moves</title>
-    <!-- Break the first sentence into two sentences. -->
-      <p>The goal location may be positioned slightly off the board and the
-      goal piece which is the patterned block is always permitted to move to
-      it. However, no other blocks are permitted to move off the board</p>
+      <p>The goal location may be positioned slightly off the board. The
+      goal piece, which is the patterned block, is always permitted to move to
+      it. However, no other blocks are permitted to move off the board.</p>
   </section>
  
 </page>
