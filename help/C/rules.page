@@ -28,7 +28,7 @@
       <list>
         <item><p>The green blocks and the boundary blocks cannot be moved.</p>
         </item>
-        <item><p>A block cannot be move over the green blocks. However, it is
+        <item><p>A block cannot be moved over the green blocks. However, it is
         allowed to move a patterened block.</p></item>
         <item><p>You can take more than one step in a single move.</p></item>
       </list>
