@@ -15,7 +15,7 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-    <desc>Know about <app>Klotski</app></desc>
+    <desc>Know about <app>Klotski</app>.</desc>
 
   </info>
 
