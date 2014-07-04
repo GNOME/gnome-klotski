@@ -9,7 +9,6 @@
     src="figures/logo.png"/></title>
     <title type="link">Klotski</title>
     <title type="text">Klotski</title>
-    <desc>GNOME Klotski help.</desc>
     <revision version="3.12" date="2014-05-22" status="draft"/>
     <credit type="author">
       <name>Rashi Aswani</name>
@@ -19,7 +18,7 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
 
-    <desc>GNOME Klotski help</desc>
+    <desc>GNOME Klotski help.</desc>
   </info>
 
   <title><media type="image" its:translate="no" src="figures/logo32.png">
