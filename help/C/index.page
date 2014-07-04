@@ -5,7 +5,8 @@
   style="2column">
 
   <info>
-    <title type="link" role="trail"><media type="image" its:translate="no" src="figures/logo.png"/></title>
+    <title type="link" role="trail"><media type="image" its:translate="no"
+    src="figures/logo.png"/></title>
     <title type="link">Klotski</title>
     <title type="text">Klotski</title>
     <desc>GNOME Klotski help.</desc>
