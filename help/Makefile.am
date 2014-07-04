@@ -6,17 +6,15 @@ HELP_MEDIA = \
   figures/logo.png
 HELP_FILES = \
   index.page \
-  rules.page \
-  puzzles.page \
-  start-game.page \
-  scores.page \
-  puzzles-moves.page \
+  introduction.page \
+  keyboard-shortcuts.page \
+  legal.xml \
   moves.page \
+  puzzles.page \
+  rules.page \
   scores.page \
-  game-introduction.page \
-  shortcuts.page \
-  legal.xml
+  start-game.page
 
-HELP_LINGUAS = 
+HELP_LINGUAS =
 
 -include $(top_srcdir)/git.mk
