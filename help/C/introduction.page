@@ -3,7 +3,7 @@
       id="introduction">
 
   <info>
-    <link type="guide"/>
+    <link type="guide" xref="index#play"/>
     <revision version="3.12" date="2014-06-02" status="review"/>
     <link type="seealso" xref="start-game"/>
 
