@@ -14,9 +14,8 @@
       <name>Rashi Aswani</name>
       <email>aswanirashi19@gmail.com</email>
     </credit>
-    <license>
-      <p>Creative Commons Share Alike 3.0</p>
-    </license>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
     <desc>GNOME Klotski help.</desc>
   </info>
