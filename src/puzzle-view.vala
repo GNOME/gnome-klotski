@@ -17,7 +17,7 @@ public class PuzzleView : Gtk.DrawingArea
     private const int THEME_TILE_CENTER = 14;
     private const int THEME_TILE_SIZE = 34;
 
-    private int render_size = 0;    
+    private int render_size = 0;
 
     private int piece_x = 0;
     private int piece_y = 0;
@@ -79,8 +79,8 @@ public class PuzzleView : Gtk.DrawingArea
         image_filepath = Path.build_filename (DATA_DIRECTORY, "gnome-klotski.svg", null);
 
         try
-        {            
-            tiles_handle = new Rsvg.Handle.from_file (image_filepath);           
+        {
+            tiles_handle = new Rsvg.Handle.from_file (image_filepath);
         }
         catch (Error e)
         {
@@ -99,29 +99,25 @@ public class PuzzleView : Gtk.DrawingArea
 
     protected override bool draw (Cairo.Context cr)
     {
-
         if (tile_size != render_size)
-        {          
-
+        {
             if (tiles_handle != null)
-            {                
+            {
                 int height = tile_size * 2;
                 int width = tile_size * THEME_TILE_SEGMENTS;
 
-                surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height); 
+                surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
                 var c = new Cairo.Context (surface);
 
                 /* calc scale factor */
                 double sfw = (double) width / 918;
-                double sfh = (double) height / 68; 
-               
+                double sfh = (double) height / 68;
+
                 c.scale (sfw, sfh);
 
                 tiles_handle.render_cairo (c);
-
             }
             render_size = tile_size;
-
         }
 
         var style = get_style_context ();
@@ -179,7 +175,7 @@ public class PuzzleView : Gtk.DrawingArea
 
         if (puzzle.get_piece_id (puzzle.map, x, y) != ' ')
         {
-            Gdk.cairo_rectangle (cr, rect);            
+            Gdk.cairo_rectangle (cr, rect);
             cr.set_source_surface (surface, rect.x - puzzle.get_piece_nr (x, y) * tile_size, rect.y - tile_size / 2);
             cr.fill ();
         }
@@ -195,7 +191,7 @@ public class PuzzleView : Gtk.DrawingArea
 
             cr.rectangle (rect.x + overlay_offset, rect.y + overlay_offset,
                           overlay_size, overlay_size);
-            
+
             cr.set_source_surface (surface, rect.x - value * tile_size, rect.y - tile_size / 2);
             cr.fill ();
         }
