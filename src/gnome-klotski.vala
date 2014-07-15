@@ -429,6 +429,12 @@ public class Klotski : Gtk.Application
        "#################"}
     };
 
+    private const OptionEntry[] option_entries =
+    {
+        { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
+        { null }
+    };
+
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",             restart_level_cb  },
@@ -444,6 +450,8 @@ public class Klotski : Gtk.Application
     public Klotski ()
     {
         Object (application_id: "org.gnome.klotski", flags: ApplicationFlags.FLAGS_NONE);
+
+        add_main_option_entries (option_entries);
     }
 
     protected override void startup ()
@@ -895,6 +903,19 @@ public class Klotski : Gtk.Application
         settings.set_boolean ("window-is-maximized", is_maximized);
     }
 
+    protected override int handle_local_options (GLib.VariantDict options)
+    {
+        if (options.contains ("version"))
+        {
+            /* NOTE: Is not translated so can be easily parsed */
+            stderr.printf ("%1$s %2$s\n", "gnome-klotski", VERSION);
+            return Posix.EXIT_SUCCESS;
+        }
+
+        /* Activate */
+        return -1;
+    }
+
     protected override void activate ()
     {
         window.present ();
@@ -927,20 +948,6 @@ public class Klotski : Gtk.Application
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-
-        var context = new OptionContext (null);
-        context.set_translation_domain (GETTEXT_PACKAGE);
-        context.add_group (Gtk.get_option_group (true));
-
-        try
-        {
-            context.parse (ref args);
-        }
-        catch (Error e)
-        {
-            stderr.printf ("%s\n", e.message);
-            Posix.exit (Posix.EXIT_FAILURE);
-        }
 
         var app = new Klotski ();
         return app.run (args);
