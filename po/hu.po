@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-30 19:09+0000\n"
-"PO-Revision-Date: 2014-07-01 00:13+0200\n"
+"POT-Creation-Date: 2014-07-25 06:55+0000\n"
+"PO-Revision-Date: 2014-07-25 09:26+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -55,8 +55,8 @@ msgstr ""
 "tartalmaz. Néhány feladvány hasonló, és csak egy vagy több blokk mérete "
 "különbözik. Más feladványok nagyobb változatosságot kínálnak."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:453
-#: ../src/gnome-klotski.vala:909
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
+#: ../src/gnome-klotski.vala:930
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -228,34 +228,37 @@ msgstr "Dugó"
 msgid "Sunshine"
 msgstr "Napfény"
 
-#: ../src/gnome-klotski.vala:610
+#: ../src/gnome-klotski.vala:434
+#| msgid "Show release version"
+msgid "Print release version and exit"
+msgstr "Kiadási verzió kiírása és kilépés"
+
+#: ../src/gnome-klotski.vala:618
 msgid "Previous Puzzle"
 msgstr "Előző fejtörő"
 
-#: ../src/gnome-klotski.vala:616
+#: ../src/gnome-klotski.vala:624
 msgid "Next Puzzle"
 msgstr "Következő fejtörő"
 
-#: ../src/gnome-klotski.vala:635
-#| msgid "_Puzzles"
+#: ../src/gnome-klotski.vala:643
 msgid "_View Puzzles"
 msgstr "_Fejtörők megtekintése"
 
-#: ../src/gnome-klotski.vala:642
-#| msgid "_Starting level:"
+#: ../src/gnome-klotski.vala:650
 msgid "_Start Over"
 msgstr "Újra_kezdés"
 
-#: ../src/gnome-klotski.vala:827
+#: ../src/gnome-klotski.vala:835
 #, c-format
 msgid "Moves: %d"
 msgstr "Lépések: %d"
 
-#: ../src/gnome-klotski.vala:830
+#: ../src/gnome-klotski.vala:838
 msgid "Level completed."
 msgstr "Szint teljesítve."
 
-#: ../src/gnome-klotski.vala:911
+#: ../src/gnome-klotski.vala:932
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -265,7 +268,7 @@ msgstr ""
 "\n"
 "A Klotski a GNOME játékok része."
 
-#: ../src/gnome-klotski.vala:917
+#: ../src/gnome-klotski.vala:938
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -925,9 +928,6 @@ msgstr "Lépések"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "A játék megnyitása sikertelen: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Verziószám megjelenítése"
 
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FÁJL] – Sakk"
