@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-22 06:52+0000\n"
-"PO-Revision-Date: 2014-06-22 16:24+0300\n"
+"POT-Creation-Date: 2014-07-26 18:55+0000\n"
+"PO-Revision-Date: 2014-07-27 00:21+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -53,8 +53,8 @@ msgstr ""
 "galvosūkių išdėstymų. Kai kurie išdėstymai yra panašūs, skiriasi tik vieno "
 "ar daugiau blokų dydis. Kiti išdėstymai yra įvairesni."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:453
-#: ../src/gnome-klotski.vala:909
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
+#: ../src/gnome-klotski.vala:930
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -226,33 +226,36 @@ msgstr "Eismo kamštis"
 msgid "Sunshine"
 msgstr "Saulės šviesa"
 
-#: ../src/gnome-klotski.vala:610
+#: ../src/gnome-klotski.vala:434
+msgid "Print release version and exit"
+msgstr "Atspausdinti leidimo versiją ir išeiti"
+
+#: ../src/gnome-klotski.vala:618
 msgid "Previous Puzzle"
 msgstr "Ankstesnis galvosūkis"
 
-#: ../src/gnome-klotski.vala:616
+#: ../src/gnome-klotski.vala:624
 msgid "Next Puzzle"
 msgstr "Kitas galvosūkis"
 
-#: ../src/gnome-klotski.vala:635
-#| msgid "_Puzzles"
+#: ../src/gnome-klotski.vala:643
 msgid "_View Puzzles"
 msgstr "_Rodyti galvosūkius"
 
-#: ../src/gnome-klotski.vala:642
+#: ../src/gnome-klotski.vala:650
 msgid "_Start Over"
 msgstr "_Pradėti iš naujo"
 
-#: ../src/gnome-klotski.vala:827
+#: ../src/gnome-klotski.vala:835
 #, c-format
 msgid "Moves: %d"
 msgstr "Ėjimai: %d"
 
-#: ../src/gnome-klotski.vala:830
+#: ../src/gnome-klotski.vala:838
 msgid "Level completed."
 msgstr "Lygis užbaigtas."
 
-#: ../src/gnome-klotski.vala:911
+#: ../src/gnome-klotski.vala:932
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -262,7 +265,7 @@ msgstr ""
 "\n"
 "Klotski yra GNOME žaidimų dalis."
 
-#: ../src/gnome-klotski.vala:917
+#: ../src/gnome-klotski.vala:938
 msgid "translator-credits"
 msgstr ""
 "Paskutinieji vertėjai:\n"
@@ -296,4 +299,3 @@ msgstr "Data"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Ėjimai"
-
