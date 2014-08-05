@@ -1,7 +1,6 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
-      id="start-game">
-
+      id="start">
   <info>
     <link type="guide" xref="index#play"/>
     <link type="seealso" xref="rules"/>
@@ -25,18 +24,20 @@
 
   <p><app>Klotski</app> offers a large collection of games, to play a new
   game:</p>
-  <p>Select <guiseq><gui style="menu">Klotski</gui>
-  <gui style="menuitem">New Game</gui></guiseq>.
-  Alternatively, you can click the <gui style="button">Start Over</gui>
-  button. It will start a new game of the default puzzle, <gui>Only 18
-  Steps</gui>.</p>
+  <steps>
+    <item><p>Select <guiseq><gui style="menu">Klotski</gui>
+    <gui style="menuitem">New Game</gui></guiseq>. Alternatively, you can
+    click on <gui style="button">Start Over</gui>. It will start a new game of
+    the default puzzle, <gui>Only 18 Steps</gui>.</p></item>
+  </steps>
 
   <section id="play-different-puzzles">
   <title>Play a different puzzle</title>
-
-    <p>To play a different puzzle, click the <gui style="button">View
-    Puzzles</gui> button, choose a game category and start a new puzzle by
-    double clicking on it.</p>
+  <steps>
+    <item><p>To play a different puzzle, click on
+    <gui style="button">View Puzzles</gui>.</p></item>
+    <item><p>Choose a game category and double click to start playing.</p>
+    </item>
+  </steps>
   </section>
-
 </page>

@@ -13,7 +13,7 @@ HELP_FILES = \
   puzzles.page \
   rules.page \
   scores.page \
-  start-game.page
+  start.page
 
 HELP_LINGUAS =
 
