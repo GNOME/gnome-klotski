@@ -6,7 +6,7 @@
 # Xavier Conde Rueda <xavi.conde@gmail.com>, 2004.
 # Jesús Corrius <jesus@softcatala.org>, 2005.
 # Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
-# Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012.
+# Gil Forcada <gilforcada@guifi.net>, 2008, 2010, 2011, 2012, 2014.
 # Carles Ferrando <carles.ferrando@gmail.com>, 2010.
 # Jordi Serratosa <jordis@softcatala.cat>, 2012.
 #
@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-08 10:56+0000\n"
-"PO-Revision-Date: 2012-09-18 20:37+0200\n"
+"POT-Creation-Date: 2014-08-17 06:56+0000\n"
+"PO-Revision-Date: 2014-08-17 14:20+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
@@ -25,243 +25,238 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/gnome-klotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
+#: ../data/gnome-klotski.appdata.xml.in.h:1
+msgid "GNOME Klotski"
+msgstr "GNOME Klotski"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:2
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you'll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"El GNOME Klotski és un conjunt de trencaclosques de moure blocs. L'objectiu "
+"és moure el bloc amb un patró a l'àrea delimitada pels punts verds. Per "
+"aconseguir-ho heu de fer que els altres blocs deixin pas. Completeu cada "
+"trencaclosques amb com menys moviments millor!"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"El GNOME Klotski conté una trentena de disposicions de trencaclosques "
+"diferents de diversa dificultat. Algunes disposicions són semblants i només "
+"canvia la mida d'algun bloc. Altres disposicions són més variades."
+
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
+#: ../src/gnome-klotski.vala:930
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnome-klotski.desktop.in.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Moveu els blocs per resoldre el trencaclosques"
 
-#: ../data/gnome-klotski.desktop.in.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "joc;estratègia;lògica;moviment;"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+#: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "El trencaclosques que s'està jugant"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+#: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
 msgstr "El número del trencaclosques que s'està jugant."
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:3
+#: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
 msgstr "L'amplada, en píxels, de la finestra"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:4
+#: ../data/org.gnome.klotski.gschema.xml.h:4
 msgid "Height of the window in pixels"
 msgstr "L'alçada, en píxels, de la finestra"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:5
+#: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
 msgstr "«true» (cert) si la finestra està maximitzada"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:6
-msgid "true if the window is fullscren"
-msgstr "«true» (cert) si la finestra està a pantalla completa"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:49
+#: ../src/gnome-klotski.vala:61
 msgid "Only 18 Steps"
 msgstr "Només 18 moviments"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:62
+#: ../src/gnome-klotski.vala:74
 msgid "Daisy"
 msgstr "Daisy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:75
+#: ../src/gnome-klotski.vala:87
 msgid "Violet"
 msgstr "Violet"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:88
+#: ../src/gnome-klotski.vala:100
 msgid "Poppy"
 msgstr "Poppy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:101
+#: ../src/gnome-klotski.vala:113
 msgid "Pansy"
 msgstr "Pansy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:114
+#: ../src/gnome-klotski.vala:126
 msgid "Snowdrop"
 msgstr "Floc de neu"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:127
+#: ../src/gnome-klotski.vala:139
 msgid "Red Donkey"
 msgstr "Ase vermell"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:140
+#: ../src/gnome-klotski.vala:152
 msgid "Trail"
 msgstr "Senda"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:153
+#: ../src/gnome-klotski.vala:165
 msgid "Ambush"
 msgstr "Complot"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:166
+#: ../src/gnome-klotski.vala:178
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:177
+#: ../src/gnome-klotski.vala:189
 msgid "Success"
 msgstr "Èxit"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:187
+#: ../src/gnome-klotski.vala:199
 msgid "Bone"
 msgstr "Ós"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:200
+#: ../src/gnome-klotski.vala:212
 msgid "Fortune"
 msgstr "Sort"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:226
 msgid "Fool"
 msgstr "Boig"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:224
+#: ../src/gnome-klotski.vala:236
 msgid "Solomon"
 msgstr "Salomó"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:237
+#: ../src/gnome-klotski.vala:249
 msgid "Cleopatra"
 msgstr "Cleòpatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:261
 msgid "Shark"
 msgstr "Tauró"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:273
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:285
 msgid "Pennant Puzzle"
 msgstr "Trencaclosques Pennant"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:286
+#: ../src/gnome-klotski.vala:298
 msgid "Ithaca"
 msgstr "Ítaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:309
+#: ../src/gnome-klotski.vala:321
 msgid "Pelopones"
 msgstr "Peloponès"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:333
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:345
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:344
+#: ../src/gnome-klotski.vala:356
 msgid "Polonaise"
 msgstr "Polonesa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:355
+#: ../src/gnome-klotski.vala:367
 msgid "Baltic Sea"
 msgstr "Oceà bàltic"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:379
 msgid "American Pie"
 msgstr "Pastís americà"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:383
+#: ../src/gnome-klotski.vala:395
 msgid "Traffic Jam"
 msgstr "Embús de trànsit"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:394
+#: ../src/gnome-klotski.vala:406
 msgid "Sunshine"
 msgstr "Raigs de sol"
 
-#: ../src/gnome-klotski.vala:439
-msgid "_Game"
-msgstr "P_artida"
+#: ../src/gnome-klotski.vala:434
+msgid "Print release version and exit"
+msgstr "Mostra la informació de la versió i surt"
 
-#. set of puzzles
-#: ../src/gnome-klotski.vala:441
-msgid "HuaRong Trail"
-msgstr "Senda HuaRong"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:443
-msgid "Challenge Pack"
-msgstr "Paquet de desafiament"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:445
-msgid "Skill Pack"
-msgstr "Paquet d'habilitat"
-
-#: ../src/gnome-klotski.vala:446
-msgid "_Restart Puzzle"
-msgstr "To_rna a començar el trencaclosques"
-
-#: ../src/gnome-klotski.vala:447
-msgid "Next Puzzle"
-msgstr "Trencaclosques següent"
-
-#: ../src/gnome-klotski.vala:448
+#: ../src/gnome-klotski.vala:618
 msgid "Previous Puzzle"
 msgstr "Trencaclosques anterior"
 
-#: ../src/gnome-klotski.vala:606
-msgid "_New"
-msgstr "_Nova"
+#: ../src/gnome-klotski.vala:624
+msgid "Next Puzzle"
+msgstr "Trencaclosques següent"
 
-#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
-msgid "_Fullscreen"
-msgstr "_Pantalla completa"
+#: ../src/gnome-klotski.vala:643
+msgid "_View Puzzles"
+msgstr "_Visualitza els trencaclosques"
 
-#: ../src/gnome-klotski.vala:667
-msgid "_Leave Fullscreen"
-msgstr "Surt de la panta_lla completa"
-
-#: ../src/gnome-klotski.vala:859
-msgid "Puzzle: "
-msgstr "Trencaclosques: "
+#: ../src/gnome-klotski.vala:650
+msgid "_Start Over"
+msgstr "To_rna a començar"
 
 #
-#: ../src/gnome-klotski.vala:873
+#: ../src/gnome-klotski.vala:835
 #, c-format
 msgid "Moves: %d"
 msgstr "Moviments: %d"
 
-#: ../src/gnome-klotski.vala:876
+#: ../src/gnome-klotski.vala:838
 msgid "Level completed."
 msgstr "S'ha completat el nivell."
 
-#: ../src/gnome-klotski.vala:957
+#: ../src/gnome-klotski.vala:932
 msgid ""
-"Sliding Block Puzzles\n"
+"Sliding block puzzles\n"
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
@@ -269,7 +264,7 @@ msgstr ""
 "\n"
 "El Klotski forma part dels jocs del GNOME."
 
-#: ../src/gnome-klotski.vala:964
+#: ../src/gnome-klotski.vala:938
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -279,23 +274,27 @@ msgstr ""
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "David Planella <david.planella@gmail.com>"
 
-#: ../src/gnome-klotski.vala:967
-msgid "GNOME Games web site"
-msgstr "Lloc web dels jocs del GNOME"
+#: ../src/score-dialog.vala:28
+msgid "_Close"
+msgstr "_Tanca"
 
-#: ../src/gnome-klotski.vala:1017
+#: ../src/score-dialog.vala:29
 msgid "New Game"
 msgstr "Partida nova"
 
-#: ../src/gnome-klotski.vala:1032
+#: ../src/score-dialog.vala:32
+msgid "_OK"
+msgstr "_D'acord"
+
+#: ../src/score-dialog.vala:44
 msgid "Puzzle:"
 msgstr "Trencaclosques:"
 
-#: ../src/gnome-klotski.vala:1057
+#: ../src/score-dialog.vala:69
 msgid "Date"
 msgstr "Data"
 
 #
-#: ../src/gnome-klotski.vala:1060
+#: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Moviments"
