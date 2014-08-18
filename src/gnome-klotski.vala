@@ -464,6 +464,19 @@ public class Klotski : Gtk.Application
 
         Gtk.Window.set_default_icon_name ("gnome-klotski");
 
+        var css_provider = new Gtk.CssProvider ();
+        try
+        {
+            /* Pixel-perfect compatibility with games that have a Button without ButtonBox. */
+            var data = """GtkButtonBox { -GtkButtonBox-child-internal-pad-x:0; }""";
+            css_provider.load_from_data (data, data.length);
+        }
+        catch (GLib.Error e)
+        {
+            warning ("Error loading css styles: %s", e.message);
+        }
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
         new_game_action.set_enabled (false);
@@ -495,13 +508,13 @@ public class Klotski : Gtk.Application
         int ww = int.max (settings.get_int ("window-width"), MINWIDTH);
         int wh = int.max (settings.get_int ("window-height"), MINHEIGHT);
         window.set_default_size (ww, wh);
+        window.border_width = 25;
 
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        window.add (vbox);
-        vbox.show ();
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 25);
+        window.add (hbox);
 
         /* Create the menu */
 
@@ -551,9 +564,6 @@ public class Klotski : Gtk.Application
         }
 
         set_app_menu (builder.get_object ("app-menu") as MenuModel);
-
-        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        hbox.show();
 
         puzzles = new Gtk.TreeStore (3, typeof (string), typeof (bool), typeof (int));
 
@@ -635,28 +645,32 @@ public class Klotski : Gtk.Application
         view.show ();
         hbox.pack_start (view, true, true, 0);
 
-        var sizegroup = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
-        bbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 8);
+        bbox = new Gtk.ButtonBox (Gtk.Orientation.VERTICAL);
+        bbox.halign = Gtk.Align.END;
+        bbox.valign = Gtk.Align.END;
+        bbox.spacing = 6;
         bbox.show ();
-        hbox.pack_start (bbox, false, true, 15);
+        hbox.pack_start (bbox, false, true, 0);
 
-        Gtk.Button button = new Gtk.ToggleButton.with_mnemonic (_("_View Puzzles"));
-        button.action_name = "app.show-puzzles";
-        ((Gtk.Label) button.get_child ()).margin = 12;
-        button.show ();
-        sizegroup.add_widget (button);
-        bbox.pack_end (button, false, true, 0);
-
-        button = new Gtk.Button.with_mnemonic (_("_Start Over"));
+        var button = new Gtk.Button ();
+        button.label = _("_Start Over");
+        button.use_underline = true;
+        button.width_request = 120;
+        button.height_request = 60;
         button.action_name = "app.new-game";
-        ((Gtk.Label) button.get_child ()).margin = 12;
         button.show ();
-        sizegroup.add_widget (button);
         bbox.pack_end (button, false, true, 0);
 
-        vbox.pack_start (hbox, true, true, 15);
+        var togglebutton = new Gtk.ToggleButton ();
+        togglebutton.label = _("_View Puzzles");
+        togglebutton.use_underline = true;
+        togglebutton.width_request = 120;
+        togglebutton.height_request = 60;
+        togglebutton.action_name = "app.show-puzzles";
+        togglebutton.show ();
+        bbox.pack_end (togglebutton, false, true, 0);
 
-        vbox.pack_start (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), false, false, 0);
+        hbox.show ();
 
         load_solved_state ();
 
