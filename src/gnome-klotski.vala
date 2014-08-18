@@ -617,12 +617,16 @@ public class Klotski : Gtk.Application
         puzzles_view.show_all ();
 
         var scroll = new Gtk.ScrolledWindow (null, null);
+        scroll.name = "puzzles";
         scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
         scroll.add (puzzles_view);
         scroll.show ();
         puzzles_panel.pack_start (scroll, true, true, 0);
 
         var bbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var context = bbox.get_style_context ();
+        context.add_class ("linked");
+        bbox.margin_top = 12;
         bbox.show();
 
         prev_button = new Gtk.Button.with_label (_("Previous Puzzle"));
