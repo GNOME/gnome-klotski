@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Klotski], [3.13.3], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Klotski], [3.13.90], [https://bugzilla.gnome.org/],
         [gnome-klotski], [https://wiki.gnome.org/Apps/Klotski])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])

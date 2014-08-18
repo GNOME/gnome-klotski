@@ -1,3 +1,11 @@
+GNOME Klotski 3.13.90
+====================
+
+* Add --version command-line option.
+* Shrink the buttons
+* Link the buttons in the map selector
+* Updated translations
+
 GNOME Klotski 3.13.3
 ====================
 
