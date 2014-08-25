@@ -1,6 +1,6 @@
 @YELP_HELP_RULES@
 
-HELP_ID = tali
+HELP_ID = gnome-klotski
 HELP_MEDIA = \
   figures/logo32.png \
   figures/logo.png
