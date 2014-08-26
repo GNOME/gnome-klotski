@@ -1,8 +1,7 @@
 <page xmlns="http://projectmallard.org/1.0/"
   xmlns:its="http://www.w3.org/2005/11/its"
-  id="index"
-  type="guide"
-  style="2column">
+  type="guide" style="2column"
+  id="index">
 
   <info>
     <title type="link" role="trail"><media type="image" its:translate="no"
@@ -22,9 +21,9 @@
 
   <title><media type="image" its:translate="no" src="figures/logo32.png">
   Klotski logo</media> Klotski</title>
-  <p>Slide blocks to solve the puzzle. To know more about the game, visit
-  <link xref="introduction">Game introduction</link>. Other help topics
-  are grouped together into sections below.</p>
+  <p>Slide blocks to solve the puzzle. For a quick introduction into the most
+  basic features of <app>Klotski</app>, visit
+  <link xref="introduction">Game introduction</link>.</p>
 
   <section id="play" style="2column">
     <title>Playing Klotski</title>
