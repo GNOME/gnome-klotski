@@ -21,23 +21,20 @@
 
   <title>Game rules</title>
 
-  <p>These are the rules to follow when sliding blocks:</p>
+  <p>The aim of <app>Klotski</app> is to move the patterned block to a
+   specific location. You must follow some rules while moving the blocks:</p>
 
-  <section id="rules">
-    <title>Rules to move a block</title>
-      <list>
-        <item><p>The green blocks and the boundary blocks cannot be moved.</p>
-        </item>
-        <item><p>A block cannot be moved over the green blocks. However, it is
-        allowed to move a patterened block.</p></item>
-        <item><p>You can take more than one step in a single move.</p></item>
-      </list>
-  </section>
-
-  <section id="move-block">
-    <title>Move a block</title>
-    <p>Click and drag the desired block to a location of your choice on the
-    board.</p>
+  <section id="rules-block">
+  <title>Rules to move a block</title>
+    <list>
+      <item><p>Click and drag the desired block to a location of your choice on
+      the board.</p></item>
+      <item><p>The green blocks and the boundary blocks cannot be moved.</p>
+      </item>
+      <item><p>A block cannot be moved over the green blocks. However, it is
+      allowed to move a patterened block.</p></item>
+      <item><p>You can take more than one step in a single move.</p></item>
+    </list>
   </section>
 
 </page>
