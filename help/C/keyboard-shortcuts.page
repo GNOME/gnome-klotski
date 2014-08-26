@@ -13,12 +13,15 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-    <desc>Play the game through keyboard.</desc>
+    <desc>Play the game using keyboard.</desc>
 
   </info>
 
   <title>Keyboard shortcuts</title>
-  <p>To access the game through keyboard, use the following shortcuts:</p>
+
+  <p>Use <gui>shortcut keys</gui> to perform common tasks more quickly than
+  with the mouse and menus. The following tables list all of <app>klotski's</app>
+  shortcut keys.</p>
 
     <table frame="all" rules="cols" shade="rows">
       <tr>
