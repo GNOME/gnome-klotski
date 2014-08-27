@@ -15,22 +15,22 @@
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-    <desc>Check the number of moves you made.</desc>
+    <desc>A move is shifting the block to desired location, and you have to
+   move patterned block towards the goalpiece.</desc>
 
   </info>
 
   <title>Moves</title>
 
-  <p>You can view your number of moves at the top of the game screen. The
-  consecutive moves of a block are considered to be a single move. For example,
-  moving a block up one square then right two squares is considered one
+  <p>Consecutive moves of a block are considered to be a single move. For
+  example, moving a block up one square then right two squares is considered one
   move.</p>
 
   <section id="patterned-block-moves">
     <title>Goal piece moves</title>
       <p>The goal location may be positioned slightly off the board. The
-      goal piece, which is the patterned block, is always permitted to move to
-      it. However, no other blocks are permitted to move off the board.</p>
+      goal piece, which is the patterned block, can move to it. However, no
+      other blocks can move off the board.</p>
   </section>
  
 </page>
