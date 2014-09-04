@@ -10,13 +10,13 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 01:25+0100\n"
-"PO-Revision-Date: 2013-12-19 01:29+0200\n"
+"POT-Creation-Date: 2014-09-04 22:49+0200\n"
+"PO-Revision-Date: 2014-09-04 22:50+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -54,16 +54,16 @@ msgstr ""
 "só o tamaño dun dos bloques pode cambiar. As outras disposicións teñen máis "
 "variedade."
 
-#: ../data/gnotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
+#: ../src/gnome-klotski.vala:948
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "Desprace os bloques para resolver o quebracabezas"
 
-#: ../data/gnotski.desktop.in.h:3
+#: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "xogo;estratexia;lóxica;mover;"
 
@@ -87,188 +87,176 @@ msgstr "Altura da xanela en píxeles"
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a xanela está maximizada"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:6
-msgid "true if the window is fullscreen"
-msgstr "verdadeiro se a xanela está en en pantalla completa"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:63
+#: ../src/gnome-klotski.vala:61
 msgid "Only 18 Steps"
 msgstr "Só 18 pasos"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:76
+#: ../src/gnome-klotski.vala:74
 msgid "Daisy"
 msgstr "Margarida"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:89
+#: ../src/gnome-klotski.vala:87
 msgid "Violet"
 msgstr "Violeta"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:102
+#: ../src/gnome-klotski.vala:100
 msgid "Poppy"
 msgstr "Papoula"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:115
+#: ../src/gnome-klotski.vala:113
 msgid "Pansy"
 msgstr "Pensamento"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:128
+#: ../src/gnome-klotski.vala:126
 msgid "Snowdrop"
 msgstr "Campaíña"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:141
+#: ../src/gnome-klotski.vala:139
 msgid "Red Donkey"
 msgstr "Red Donkey"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:154
+#: ../src/gnome-klotski.vala:152
 msgid "Trail"
 msgstr "Rastro"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:167
+#: ../src/gnome-klotski.vala:165
 msgid "Ambush"
 msgstr "Emboscada"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:180
+#: ../src/gnome-klotski.vala:178
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:191
+#: ../src/gnome-klotski.vala:189
 msgid "Success"
 msgstr "Éxito"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:201
+#: ../src/gnome-klotski.vala:199
 msgid "Bone"
 msgstr "Óso"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:212
 msgid "Fortune"
 msgstr "Fortuna"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:228
+#: ../src/gnome-klotski.vala:226
 msgid "Fool"
 msgstr "Fool"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:238
+#: ../src/gnome-klotski.vala:236
 msgid "Solomon"
 msgstr "Salomón"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:251
+#: ../src/gnome-klotski.vala:249
 msgid "Cleopatra"
 msgstr "Cleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:263
+#: ../src/gnome-klotski.vala:261
 msgid "Shark"
 msgstr "Tiburón"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:275
+#: ../src/gnome-klotski.vala:273
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:287
+#: ../src/gnome-klotski.vala:285
 msgid "Pennant Puzzle"
 msgstr "Quebracabezas Pennant"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:300
+#: ../src/gnome-klotski.vala:298
 msgid "Ithaca"
 msgstr "Ítaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:323
+#: ../src/gnome-klotski.vala:321
 msgid "Pelopones"
 msgstr "Peloponeso"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:335
+#: ../src/gnome-klotski.vala:333
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:347
+#: ../src/gnome-klotski.vala:345
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:358
+#: ../src/gnome-klotski.vala:356
 msgid "Polonaise"
 msgstr "Polonesa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:369
+#: ../src/gnome-klotski.vala:367
 msgid "Baltic Sea"
 msgstr "Mar Báltico"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:381
+#: ../src/gnome-klotski.vala:379
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:397
+#: ../src/gnome-klotski.vala:395
 msgid "Traffic Jam"
 msgstr "Atasco"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:408
+#: ../src/gnome-klotski.vala:406
 msgid "Sunshine"
 msgstr "Sunshine"
 
-#: ../src/gnome-klotski.vala:565
-msgid "_New"
-msgstr "_Novo"
+#: ../src/gnome-klotski.vala:434
+msgid "Print release version and exit"
+msgstr "Mostrar o número de versión e sae"
 
-#: ../src/gnome-klotski.vala:575
-msgid "_Puzzles"
-msgstr "_Quebracabezas:"
-
-#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
-msgid "_Fullscreen"
-msgstr "_Pantalla completa"
-
-#: ../src/gnome-klotski.vala:664
+#: ../src/gnome-klotski.vala:632
 msgid "Previous Puzzle"
 msgstr "Quebracabezas anterior"
 
-#: ../src/gnome-klotski.vala:670
+#: ../src/gnome-klotski.vala:638
 msgid "Next Puzzle"
 msgstr "Quebracabezas seguinte"
 
-#: ../src/gnome-klotski.vala:727
-msgid "_Leave Fullscreen"
-msgstr "_Saír da pantalla completa"
+#: ../src/gnome-klotski.vala:660
+msgid "_Start Over"
+msgstr "_Iniciar de novo"
 
-#: ../src/gnome-klotski.vala:860
-msgid "Puzzle: "
-msgstr "Quebracabezas:"
+#: ../src/gnome-klotski.vala:669
+msgid "_View Puzzles"
+msgstr "_Ver quebracabezas"
 
-#: ../src/gnome-klotski.vala:874
+#: ../src/gnome-klotski.vala:853
 #, c-format
 msgid "Moves: %d"
 msgstr "Movementos: %d"
 
-#: ../src/gnome-klotski.vala:877
+#: ../src/gnome-klotski.vala:856
 msgid "Level completed."
 msgstr "Nivel rematado."
 
-#: ../src/gnome-klotski.vala:971
+#: ../src/gnome-klotski.vala:950
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -278,25 +266,18 @@ msgstr ""
 "\n"
 "Klotski forma parte do Xogos de GNOME."
 
-#: ../src/gnome-klotski.vala:977
+#: ../src/gnome-klotski.vala:956
 msgid "translator-credits"
 msgstr ""
-"Fran Diéguez <frandieguez@ubuntu.com>, 2009, 2010, 2011, 2012;\n"
+"Fran Diéguez <frandieguez@gnome.org>, 2009-2014;\n"
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
 "Antón Méixome <meixome@mancomun.org>, 2009.\n"
 "Suso Baleato <suso.baleato@xunta.es>, 2009.\n"
-"Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun."
-"org>, 2009.\n"
+"Mancomún - Centro de Referencia e Servizos de Software Libre "
+"<g11n@mancomun.org>, 2009.\n"
 "Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.\n"
 "Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.\n"
-"Jesús Bravo Álvarez <jba@pobox.com>, 2000.\n"
-"\n"
-"Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
-"colaborar connosco, podes atopar máis información en http://www.trasno.net"
-
-#: ../src/gnome-klotski.vala:980
-msgid "GNOME Games web site"
-msgstr "Sitio web do GNOME Games"
+"Jesús Bravo Álvarez <jba@pobox.com, 2000.>"
 
 #: ../src/score-dialog.vala:28
 msgid "_Close"
@@ -321,6 +302,24 @@ msgstr "Data"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Movementos"
+
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "verdadeiro se a xanela está en en pantalla completa"
+
+#~ msgid "_New"
+#~ msgstr "_Novo"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Pantalla completa"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Saír da pantalla completa"
+
+#~ msgid "Puzzle: "
+#~ msgstr "Quebracabezas:"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Sitio web do GNOME Games"
 
 #~ msgid "_Game"
 #~ msgstr "_Xogo"
@@ -931,9 +930,6 @@ msgstr "Movementos"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "Produciuse un erro ao cargar a partida: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Mostrar o número de versión"
 
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE]: xogar ao Xadrez"
@@ -5502,9 +5498,6 @@ msgstr "Movementos"
 
 #~ msgid "_Game name:"
 #~ msgstr "Nome do _xogo:"
-
-#~ msgid "_Start"
-#~ msgstr "_Iniciar"
 
 #~ msgid "_White:"
 #~ msgstr "B_rancas:"
