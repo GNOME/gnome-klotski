@@ -24,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-09-06 06:55+0000\n"
-"PO-Revision-Date: 2014-09-06 19:42+0900\n"
+"PO-Revision-Date: 2014-09-06 21:02+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: Korean\n"
@@ -245,7 +245,7 @@ msgstr "다음 퍼즐"
 
 #: ../src/gnome-klotski.vala:660
 msgid "_Start Over"
-msgstr ""
+msgstr "처음부터 시작(_S)"
 
 #: ../src/gnome-klotski.vala:669
 msgid "_View Puzzles"
