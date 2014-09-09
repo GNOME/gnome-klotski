@@ -485,11 +485,11 @@ public class Klotski : Gtk.Application
         prev_level_action = lookup_action ("prev-level") as SimpleAction;
         prev_level_action.set_enabled (current_level > 0);
 
-        add_accelerator ("<Primary>n", "app.new-game", null);
-        add_accelerator ("<Primary>q", "app.quit", null);
-        add_accelerator ("F1", "app.help", null);
-        add_accelerator ("Page_Up", "app.next-level", null);
-        add_accelerator ("Page_Down", "app.prev-level", null);
+        set_accels_for_action ("app.new-game", {"<Primary>n"});
+        set_accels_for_action ("app.quit", {"<Primary>q"});
+        set_accels_for_action ("app.help", {"F1"});
+        set_accels_for_action ("app.next-level", {"Page_Up"});
+        set_accels_for_action ("app.prev-level", {"Page_Down"});
 
         string histfile = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "history");
 
