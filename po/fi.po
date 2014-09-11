@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-16 19:52+0000\n"
-"PO-Revision-Date: 2014-03-16 23:19+0200\n"
+"POT-Creation-Date: 2014-09-10 06:55+0000\n"
+"PO-Revision-Date: 2014-09-10 21:12+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -29,10 +29,9 @@ msgstr ""
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#, fuzzy
 #| msgid "Klotski"
 msgid "GNOME Klotski"
-msgstr "Klotski"
+msgstr "Gnomen Klotski"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
 msgid ""
@@ -41,6 +40,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"Klotski on kokoelma pulmia, jotka koostuvat liukuvista palikoista. Tavoite "
+"on siirtää kuvioitu palikka vihreillä palikoilla merkityille alueelle. "
+"Onnistuaksesi sinun tulee siirtää muut palikat pois tieltä. Selvitä jokainen "
+"pulma mahdollisimman vähällä määrällä siirtoja!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
@@ -48,9 +51,11 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"Gnomen Klotski sisältää lähes 30 vaikeustasoiltaan ja asetteleluiltaan "
+"erilaista pulmaa."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
+#: ../src/gnome-klotski.vala:948
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -82,192 +87,179 @@ msgstr "Ikkunan korkeus kuvapisteinä"
 msgid "true if the window is maximized"
 msgstr "tosi jos ikkuna on suurennettu"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:6
-#, fuzzy
-#| msgid "true if the window is maximized"
-msgid "true if the window is fullscreen"
-msgstr "tosi jos ikkuna on suurennettu"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:63
+#: ../src/gnome-klotski.vala:61
 msgid "Only 18 Steps"
 msgstr "Vain 18 vaihetta"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:76
+#: ../src/gnome-klotski.vala:74
 msgid "Daisy"
 msgstr "Daisy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:89
+#: ../src/gnome-klotski.vala:87
 msgid "Violet"
 msgstr "Violetti"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:102
+#: ../src/gnome-klotski.vala:100
 msgid "Poppy"
 msgstr "Poppy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:115
+#: ../src/gnome-klotski.vala:113
 msgid "Pansy"
 msgstr "Pansy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:128
+#: ../src/gnome-klotski.vala:126
 msgid "Snowdrop"
 msgstr "Lumivyöry"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:141
+#: ../src/gnome-klotski.vala:139
 msgid "Red Donkey"
 msgstr "Punainen aasi"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:154
+#: ../src/gnome-klotski.vala:152
 msgid "Trail"
 msgstr "Jälki"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:167
+#: ../src/gnome-klotski.vala:165
 msgid "Ambush"
 msgstr "Väijytys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:180
+#: ../src/gnome-klotski.vala:178
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:191
+#: ../src/gnome-klotski.vala:189
 msgid "Success"
 msgstr "Onnistuminen"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:201
+#: ../src/gnome-klotski.vala:199
 msgid "Bone"
 msgstr "Luu"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:212
 msgid "Fortune"
 msgstr "Sananlasku"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:228
+#: ../src/gnome-klotski.vala:226
 msgid "Fool"
 msgstr "Typerys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:238
+#: ../src/gnome-klotski.vala:236
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:251
+#: ../src/gnome-klotski.vala:249
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:263
+#: ../src/gnome-klotski.vala:261
 msgid "Shark"
 msgstr "Hai"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:275
+#: ../src/gnome-klotski.vala:273
 msgid "Rome"
 msgstr "Rooma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:287
+#: ../src/gnome-klotski.vala:285
 msgid "Pennant Puzzle"
 msgstr "Viiripulma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:300
+#: ../src/gnome-klotski.vala:298
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:323
+#: ../src/gnome-klotski.vala:321
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:335
+#: ../src/gnome-klotski.vala:333
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:347
+#: ../src/gnome-klotski.vala:345
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:358
+#: ../src/gnome-klotski.vala:356
 msgid "Polonaise"
 msgstr "Polonaise"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:369
+#: ../src/gnome-klotski.vala:367
 msgid "Baltic Sea"
 msgstr "Itä-meri"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:381
+#: ../src/gnome-klotski.vala:379
 msgid "American Pie"
 msgstr "Amerikkalainen piiras"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:397
+#: ../src/gnome-klotski.vala:395
 msgid "Traffic Jam"
 msgstr "Liikennetukos"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:408
+#: ../src/gnome-klotski.vala:406
 msgid "Sunshine"
 msgstr "Auringonpaiste"
 
-#: ../src/gnome-klotski.vala:565
-msgid "_New"
-msgstr "_Uusi"
+#: ../src/gnome-klotski.vala:434
+#| msgid "Show release version"
+msgid "Print release version and exit"
+msgstr "Näytä julkaisuversio ja sulkeudu"
 
-#: ../src/gnome-klotski.vala:575
-#| msgid "Puzzle:"
-msgid "_Puzzles"
-msgstr "_Pulmat"
-
-#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
-msgid "_Fullscreen"
-msgstr "_Koko näyttö"
-
-#: ../src/gnome-klotski.vala:664
+#: ../src/gnome-klotski.vala:632
 msgid "Previous Puzzle"
 msgstr "Edellinen pulma"
 
-#: ../src/gnome-klotski.vala:670
+#: ../src/gnome-klotski.vala:638
 msgid "Next Puzzle"
 msgstr "Seuraava pulma"
 
-#: ../src/gnome-klotski.vala:727
-msgid "_Leave Fullscreen"
-msgstr "P_oistu koko näytön tilasta"
+#: ../src/gnome-klotski.vala:660
+#| msgid "_Starting level:"
+msgid "_Start Over"
+msgstr "_Aloita alusta"
 
-#: ../src/gnome-klotski.vala:860
-msgid "Puzzle: "
-msgstr "Pulma: "
+#: ../src/gnome-klotski.vala:669
+#| msgid "_Puzzles"
+msgid "_View Puzzles"
+msgstr "_Näytä pulmat"
 
-#: ../src/gnome-klotski.vala:874
+#: ../src/gnome-klotski.vala:853
 #, c-format
 msgid "Moves: %d"
 msgstr "Siirtoja: %d"
 
-#: ../src/gnome-klotski.vala:877
+#: ../src/gnome-klotski.vala:856
 msgid "Level completed."
 msgstr "Taso läpäisty."
 
-#: ../src/gnome-klotski.vala:971
-#, fuzzy
+#: ../src/gnome-klotski.vala:950
 #| msgid ""
 #| "Sliding Block Puzzles\n"
 #| "\n"
@@ -277,11 +269,11 @@ msgid ""
 "\n"
 "Klotski is a part of GNOME Games."
 msgstr ""
-"Palapeli liukuvilla palikoilla.\n"
+"Palapeli liukuvilla palikoilla\n"
 "\n"
-"Klotski on osa GNOMEn pelejä."
+"Klotski on osa Gnomen pelejä."
 
-#: ../src/gnome-klotski.vala:977
+#: ../src/gnome-klotski.vala:956
 msgid "translator-credits"
 msgstr ""
 "Jiri Grönroos, 2013-2014\n"
@@ -325,6 +317,23 @@ msgstr "Päiväys"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Siirtoja"
+
+#, fuzzy
+#~| msgid "true if the window is maximized"
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "tosi jos ikkuna on suurennettu"
+
+#~ msgid "_New"
+#~ msgstr "_Uusi"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Koko näyttö"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "P_oistu koko näytön tilasta"
+
+#~ msgid "Puzzle: "
+#~ msgstr "Pulma: "
 
 #~ msgid "_Game"
 #~ msgstr "_Peli"
@@ -941,9 +950,6 @@ msgstr "Siirtoja"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "Pelin avaus epäonnistui: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Näytä julkaisuversio"
 
 #~ msgid ""
 #~ "Run '%s --help' to see a full list of available command line options."
@@ -1638,9 +1644,6 @@ msgstr "Siirtoja"
 
 #~ msgid "_Enable fake bonuses"
 #~ msgstr "_Huijausbonukset päälle"
-
-#~ msgid "_Starting level:"
-#~ msgstr "_Aloitustaso:"
 
 #~ msgid "Number of _human players:"
 #~ msgstr "_Ihmispelaajien määrä:"
