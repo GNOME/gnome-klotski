@@ -92,7 +92,7 @@ public class PuzzleView : Gtk.DrawingArea
                                                 e.message);
             dialog.run ();*/
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
-            stderr.printf ( "%s %s\n", "image path:", image_filepath);
+            stderr.printf ("%s %s\n", "image path:", image_filepath);
             Posix.exit (Posix.EXIT_FAILURE);
         }
     }

@@ -560,7 +560,7 @@ public class Klotski : Gtk.Application
         catch (GLib.Error e)
         {
             stderr.printf ("%s\n", "Error in gnome-klotski.vala function startup() - builder.add_from_string failed");
-            GLib.error(e.message);
+            GLib.error (e.message);
         }
 
         set_app_menu (builder.get_object ("app-menu") as MenuModel);
@@ -627,7 +627,7 @@ public class Klotski : Gtk.Application
         var context = bbox.get_style_context ();
         context.add_class ("linked");
         bbox.margin_top = 12;
-        bbox.show();
+        bbox.show ();
 
         prev_button = new Gtk.Button.with_label (_("Previous Puzzle"));
         prev_button.clicked.connect (prev_level_cb);
