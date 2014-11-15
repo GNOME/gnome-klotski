@@ -1,5 +1,5 @@
 # gnome-games Finnish Translation
-# Suomennos: http://www.gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
 #
 #
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-10 06:55+0000\n"
+"POT-Creation-Date: 2014-11-07 07:49+0000\n"
 "PO-Revision-Date: 2014-09-10 21:12+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -29,7 +29,6 @@ msgstr ""
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "Gnomen Klotski"
 
@@ -228,7 +227,6 @@ msgid "Sunshine"
 msgstr "Auringonpaiste"
 
 #: ../src/gnome-klotski.vala:434
-#| msgid "Show release version"
 msgid "Print release version and exit"
 msgstr "Näytä julkaisuversio ja sulkeudu"
 
@@ -241,12 +239,10 @@ msgid "Next Puzzle"
 msgstr "Seuraava pulma"
 
 #: ../src/gnome-klotski.vala:660
-#| msgid "_Starting level:"
 msgid "_Start Over"
 msgstr "_Aloita alusta"
 
 #: ../src/gnome-klotski.vala:669
-#| msgid "_Puzzles"
 msgid "_View Puzzles"
 msgstr "_Näytä pulmat"
 
@@ -260,10 +256,6 @@ msgid "Level completed."
 msgstr "Taso läpäisty."
 
 #: ../src/gnome-klotski.vala:950
-#| msgid ""
-#| "Sliding Block Puzzles\n"
-#| "\n"
-#| "Klotski is a part of GNOME Games."
 msgid ""
 "Sliding block puzzles\n"
 "\n"
@@ -281,7 +273,7 @@ msgstr ""
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
 "\n"
-"http://www.gnome.fi/\n"
+"https://l10n.gnome.org/teams/fi/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Heikki Kulhia https://launchpad.net/~hessuk\n"
