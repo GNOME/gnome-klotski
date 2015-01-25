@@ -1,0 +1,135 @@
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="scores">
+
+  <info>
+    <link type="guide" xref="index#play"/>
+    <revision version="3.14" date="2015-01-25" status="candidate"/>
+
+    <credit type="author">
+      <name>Rashi Aswani</name>
+      <email>aswanirashi19@gmail.com</email>
+      <years>2014</years>
+    </credit>
+    <credit type="editor">
+      <name>Michael Catanzaro</name>
+      <email>mcatanzaro@gnome.org</email>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
+
+    <desc>How do I view my high scores?</desc>
+
+  </info>
+
+  <title>Scores</title>
+
+  <p>You can check your performance by looking at the number of moves you
+  have made in the previous games. To view your scores:</p>
+    <steps>
+      <item>
+        <p>Select <gui style="menuitem">Scores</gui> from the
+        menu.</p>
+      </item>
+      <item>
+        <p>The dialog displays scores of one puzzle you have completed at
+        a time. Select the puzzle whose scores you wish to see from the
+        menu.</p>
+      </item>
+    </steps>
+
+  <section id="minimum-number-of-moves">
+
+  <title>Minimum Number of Moves</title>
+
+  <p>The number of moves and the placement of blocks together make each game
+  unique. The minimum number of moves for the various puzzles are:</p>
+
+  <table frame="all" rules="rows cols">
+    <tr>
+      <th><p>Puzzle</p></th> <th><p>Minimum number of moves</p></th>
+    </tr>
+    <tr>
+      <td><p>Only 18 Steps</p></td> <td><p>18</p></td>
+    </tr>
+    <tr>
+      <td><p>Daisy</p></td> <td><p>28</p></td>
+    </tr>
+    <tr>
+      <td><p>Violet</p></td> <td><p>27</p></td>
+    </tr>
+    <tr>
+      <td><p>Poppy</p></td> <td><p>40</p></td>
+    </tr>
+    <tr>
+      <td><p>Pansy</p></td> <td><p>28</p></td>
+    </tr>
+    <tr>
+      <td><p>Snowdrop</p></td> <td><p>46</p></td>
+    </tr>
+    <tr>
+      <td><p>Red Donkey</p></td> <td><p>81</p></td>
+    </tr>
+    <tr>
+      <td><p>Trail</p></td> <td><p>102</p></td>
+    </tr>
+    <tr>
+      <td><p>Ambush</p></td> <td><p>120</p></td>
+    </tr>
+    <tr>
+      <td><p>Agatka</p></td> <td><p>30</p></td>
+    </tr>
+    <tr>
+      <td><p>Success</p></td> <td><p>25</p></td>
+    </tr>
+    <tr>
+      <td><p>Bone</p></td> <td><p>14</p></td>
+    </tr>
+    <tr>
+      <td><p>Fortune</p></td> <td><p>24</p></td>
+    </tr>
+    <tr>
+      <td><p>Fool</p></td> <td><p>29</p></td>
+    </tr>
+    <tr>
+      <td><p>Solomon</p></td> <td><p>29</p></td>
+    </tr>
+    <tr>
+      <td><p>Cleopatra</p></td> <td><p>31</p></td>
+    </tr>
+    <tr>
+      <td><p>Shark</p></td> <td><p>48</p></td>
+    </tr>
+    <tr>
+      <td><p>Rome</p></td> <td><p>38</p></td>
+    </tr>
+    <tr>
+      <td><p>Pennant Puzzle</p></td> <td><p>59</p></td>
+    </tr>
+    <tr>
+      <td><p>Ithaca</p></td> <td><p>?</p></td>
+    </tr>
+    <tr>
+      <td><p>Pelopones</p></td> <td><p>25</p></td>
+    </tr>
+    <tr>
+      <td><p>Lodzianka</p></td> <td><p>21</p></td>
+    </tr>
+    <tr>
+      <td><p>Polonaise</p></td> <td><p>23</p></td>
+    </tr>
+    <tr>
+      <td><p>Baltic Sea</p></td> <td><p>42</p></td>
+    </tr>
+    <tr>
+      <td><p>American Pie</p></td> <td><p>?</p></td>
+    </tr>
+    <tr>
+      <td><p>Traffic Jam</p></td> <td><p>132</p></td>
+    </tr>
+    <tr>
+      <td><p>Sunshine</p></td> <td><p>345</p></td>
+    </tr>
+  </table>
+
+  </section>
+
+</page>
