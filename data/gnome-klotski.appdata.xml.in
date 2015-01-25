@@ -3,13 +3,13 @@
 <application>
  <id type="desktop">gnome-klotski.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-2.0+ and GFDL-1.1</project_license>
+ <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
  <_name>GNOME Klotski</_name>
  <_summary>Slide blocks to solve the puzzle</_summary>
  <description>
   <_p>
    GNOME Klotski is a set of block sliding puzzles. The objective is to move the
-   patterned block to the area bordered by green markers. To do so, you'll need
+   patterned block to the area bordered by green markers. To do so, you’ll need
    to slide other blocks out of the way. Complete each puzzle in as few moves as
    possible!
   </_p>
