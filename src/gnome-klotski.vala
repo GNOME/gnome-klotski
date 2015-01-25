@@ -525,10 +525,6 @@ public class Klotski : Gtk.Application
                <menu id='app-menu'>
                   <section>
                    <item>
-                      <attribute name='label' translatable='yes'>_New Game</attribute>
-                      <attribute name='action'>app.new-game</attribute>
-                   </item>
-                   <item>
                       <attribute name='label' translatable='yes'>_Scores</attribute>
                       <attribute name='action'>app.scores</attribute>
                    </item>
