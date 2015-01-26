@@ -5,7 +5,7 @@
 
   <info>
     <title type="link" role="trail"><media type="image" its:translate="no"
-    src="figures/logo.png"/></title>
+    src="media/logo.png"/></title>
     <title type="link">Klotski</title>
     <title type="text">Klotski</title>
     <revision version="3.14" date="2014-05-22" status="draft"/>
@@ -19,7 +19,7 @@
     <desc>GNOME Klotski help.</desc>
   </info>
 
-  <title><media type="image" its:translate="no" src="figures/logo32.png">
+  <title><media type="image" its:translate="no" src="media/logo32.png">
   Klotski logo</media> Klotski</title>
   <p>Slide blocks to solve the puzzle. For a quick introduction into the most
   basic features of <app>Klotski</app>, visit
