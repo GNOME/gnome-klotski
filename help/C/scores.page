@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="scores">
 
@@ -8,7 +9,7 @@
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 
@@ -22,13 +23,20 @@
 
   <p>You can check your performance by looking at the number of moves you
   have made in the previous games. To view your scores:</p>
-    <steps>
-      <item><p>Select <guiseq><gui style="menu">Klotski</gui>
-      <gui style="menuitem">Scores</gui></guiseq>.</p></item>
-      <item><p>The dialog by default displays scores of the <gui>Only 18
-      Steps</gui> puzzle. To view others, select the puzzle from the
-      menu whose scores you wish to see.</p></item>
-      <item><p>Click on <gui style="button">OK</gui> to close
-      <gui>Scores</gui>.</p></item>
-    </steps>
+
+  <steps>
+    <item>
+      <p>Select <gui style="menu">Klotski</gui> in the top bar, then select
+      <gui style="menuitem">Scores</gui>.</p>
+    </item>
+    <item>
+      <p>The dialog by default displays scores of the <gui>Only 18 Steps</gui>
+      puzzle. To view others, select the puzzle from the menu whose scores you
+      wish to see.</p>
+    </item>
+    <item>
+      <p>Click on <gui style="button">OK</gui> to close <gui>Scores</gui>.</p>
+    </item>
+  </steps>
+
 </page>

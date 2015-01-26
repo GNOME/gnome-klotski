@@ -1,15 +1,16 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="introduction">
 
   <info>
     <link type="guide" xref="index"/>
-    <revision version="3.14" date="2014-06-02" status="review"/>
     <link type="seealso" xref="start-game"/>
+    <revision version="3.14" date="2014-06-02" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 

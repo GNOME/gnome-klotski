@@ -1,15 +1,16 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="rules">
 
   <info>
     <link type="guide" xref="index#play"/>
-    <revision version="3.14" date="2014-05-23" status="review"/>
     <link type="seealso" xref="keyboard-shortcuts"/>
+    <revision version="3.14" date="2014-05-23" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 
@@ -21,20 +22,29 @@
 
   <title>Game rules</title>
 
-  <p>The aim of <app>Klotski</app> is to move the patterned block to a
-   specific location. You must follow some rules while moving the blocks:</p>
+  <p>The aim of <app>Klotski</app> is to move the patterned block to a specific
+  location. You must follow some rules while moving the blocks:</p>
 
-  <section id="rules-block">
+<section id="rules-block">
   <title>Rules to move a block</title>
-    <list>
-      <item><p>Click and drag the desired block to a location of your choice on
-      the board.</p></item>
-      <item><p>The green blocks and the boundary blocks cannot be moved.</p>
-      </item>
-      <item><p>A block cannot be moved over the green blocks. However, it is
-      allowed to move a patterened block.</p></item>
-      <item><p>You can take more than one step in a single move.</p></item>
-    </list>
-  </section>
+
+  <list>
+    <item>
+      <p>Click and drag the desired block to a location of your choice on the
+      board.</p>
+    </item>
+    <item>
+      <p>The green blocks and the boundary blocks cannot be moved.</p>
+    </item>
+    <item>
+      <p>A block cannot be moved over the green blocks. However, it is
+      allowed to move a patterened block.</p>
+    </item>
+    <item>
+      <p>You can take more than one step in a single move.</p>
+    </item>
+  </list>
+
+</section>
 
 </page>

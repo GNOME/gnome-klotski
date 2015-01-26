@@ -1,17 +1,19 @@
 <page xmlns="http://projectmallard.org/1.0/"
-  xmlns:its="http://www.w3.org/2005/11/its"
-  type="guide" style="2column"
-  id="index">
+      xmlns:its="http://www.w3.org/2005/11/its"
+      type="guide" style="2column"
+      id="index">
 
   <info>
     <title type="link" role="trail"><media type="image" its:translate="no"
     src="media/logo.png"/></title>
     <title type="link">Klotski</title>
     <title type="text">Klotski</title>
+
     <revision version="3.14" date="2014-05-22" status="draft"/>
+
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
@@ -19,8 +21,11 @@
     <desc>GNOME Klotski help.</desc>
   </info>
 
-  <title><media type="image" its:translate="no" src="media/logo32.png">
-  Klotski logo</media> Klotski</title>
+  <title>
+    <media type="image" its:translate="no" src="media/logo32.png" />
+    Klotski
+  </title>
+
   <p>Slide blocks to solve the puzzle. For a quick introduction into the most
   basic features of <app>Klotski</app>, visit
   <link xref="introduction">Game introduction</link>.</p>

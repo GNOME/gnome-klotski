@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="moves">
 
@@ -9,7 +10,7 @@
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 
@@ -26,11 +27,13 @@
   example, moving a block up one square then right two squares is considered one
   move.</p>
 
-  <section id="patterned-block-moves">
-    <title>Goal piece moves</title>
-      <p>The goal location may be positioned slightly off the board. The
-      goal piece, which is the patterned block, can move to it. However, no
-      other blocks can move off the board.</p>
-  </section>
+<section id="patterned-block-moves">
+  <title>Goal piece moves</title>
+
+  <p>The goal location may be positioned slightly off the board. The
+  goal piece, which is the patterned block, can move to it. However, no
+  other blocks can move off the board.</p>
+
+</section>
  
 </page>

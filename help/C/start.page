@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic"
       id="start">
 
@@ -11,7 +12,7 @@
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
 
@@ -25,20 +26,29 @@
 
   <p><app>Klotski</app> offers a large collection of games, to play a new
   game:</p>
-  <steps>
-    <item><p>Select <guiseq><gui style="menu">Klotski</gui>
-    <gui style="menuitem">New Game</gui></guiseq>. Alternatively, you can
-    click on <gui style="button">Start Over</gui>. It will start a new game of
-    the default puzzle, <gui>Only 18 Steps</gui>.</p></item>
-  </steps>
 
-  <section id="play-different-puzzles">
-  <title>Play a different puzzle</title>
   <steps>
-    <item><p>To play a different puzzle, click on
-    <gui style="button">View Puzzles</gui>.</p></item>
-    <item><p>Choose a game category and double click to start playing.</p>
+    <item>
+      <p>Select <gui style="menu">Klotski</gui> in the top bar, then select
+      <gui style="menuitem">New Game</gui>. Alternatively, you can click on
+      <gui style="button">Start Over</gui>. It will start a new game of the
+      default puzzle, <gui>Only 18 Steps</gui>.</p>
     </item>
   </steps>
-  </section>
+
+<section id="play-different-puzzles">
+  <title>Play a different puzzle</title>
+
+  <steps>
+    <item>
+      <p>To play a different puzzle, click on <gui style="button">View
+      Puzzles</gui>.</p>
+    </item>
+    <item>
+      <p>Choose a game category and double click to start playing.</p>
+    </item>
+  </steps>
+
+</section>
+
 </page>
