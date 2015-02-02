@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <!-- <gresource prefix="/org/gnome/klotski/ui">
+    <file preprocess="xml-stripblanks" alias="klotski.ui">../data/klotski.ui</file>
+    <file alias="klotski.css">../data/klotski.css</file>
+  </gresource> -->
+  <gresource prefix="/org/gnome/klotski/gtk">
+    <file preprocess="xml-stripblanks" alias="menus.ui">../data/klotski-menus.ui</file>
+  </gresource>
+</gresources>

@@ -517,51 +517,6 @@ public class Klotski : Gtk.Application
         var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 25);
         window.add (hbox);
 
-        /* Create the menu */
-
-        var builder_str =
-               "<interface>" +
-                /* string for menu */
-               """
-               <menu id='app-menu'>
-                  <section>
-                   <item>
-                      <attribute name='label' translatable='yes'>_Scores</attribute>
-                      <attribute name='action'>app.scores</attribute>
-                   </item>
-                  </section>
-                  <section>
-                   <item>
-                      <attribute name='label' translatable='yes'>_Help</attribute>
-                      <attribute name='action'>app.help</attribute>
-                   </item>
-                   <item>
-                      <attribute name='label' translatable='yes'>_About</attribute>
-                      <attribute name='action'>app.about</attribute>
-                   </item>
-                   <item>
-                      <attribute name='label' translatable='yes'>_Quit</attribute>
-                      <attribute name='action'>app.quit</attribute>
-                   </item>
-                  </section>
-                </menu>
-               </interface>
-               """;
-
-        Gtk.Builder builder = new Gtk.Builder ();
-
-        try
-        {
-            builder.add_from_string (builder_str, -1);
-        }
-        catch (GLib.Error e)
-        {
-            stderr.printf ("%s\n", "Error in gnome-klotski.vala function startup() - builder.add_from_string failed");
-            GLib.error (e.message);
-        }
-
-        set_app_menu (builder.get_object ("app-menu") as MenuModel);
-
         puzzles = new Gtk.TreeStore (3, typeof (string), typeof (bool), typeof (int));
 
         Gtk.TreeIter huarong_item;
