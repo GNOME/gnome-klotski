@@ -5,12 +5,17 @@
 
   <info>
     <link type="guide" xref="index#play"/>
-    <revision version="3.14" date="2014-05-26" status="review"/>
+    <revision version="3.14" date="2015-01-2" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
       <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
+    </credit>
+    <credit type="editor">
+      <name>Shobha Tyagi</name>
+      <email its:translate="no">tyagishobha@gmail.com</email>
+      <years>2015</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />

@@ -7,13 +7,19 @@
     <link type="guide" xref="index#play"/>
     <link type="seealso" xref="moves"/>
     <link type="seealso" xref="scores"/>
-    <revision version="3.14" date="2014-05-24" status="review"/>
+    <revision version="3.14" date="2015-01-27" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
       <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
     </credit>
+    <credit type="editor">
+      <name>Shobha Tyagi</name>
+      <email its:translate="no">tyagishobha@gmail.com</email>
+      <years>2015</years>
+    </credit>
+
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
@@ -24,10 +30,11 @@
 
   <title>Puzzles</title>
 
-  <p>Puzzles are divided into three categories namely, <gui>HuaRong
-  Trail</gui>, <gui>Challenge Pack</gui> and <gui>Skill Pack</gui> based on the
-  difficulty level of the game. While the first and the last each contains nine
-  puzzles, the second one provides ten beautiful puzzles to the user.</p>
+  <p>Puzzles are divided into three categories namely, <gui>HuaRong Trail</gui>,
+  <gui>Challenge Pack</gui> and <gui>Skill Pack</gui> based on the difficulty
+  level of the game. <gui>HuaRong Trail</gui>  and <gui>Skill Pack</gui>
+  contains nine puzzles each and <gui>Challenge Pack</gui> consists of ten
+  beautiful puzzles.</p>
 
 <section id="navigate-puzzles">
   <title>Navigate among puzzles</title>
