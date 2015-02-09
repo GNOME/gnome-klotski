@@ -4,10 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-27 07:52+0000\n"
-"PO-Revision-Date: 2015-02-02 11:46+0100\n"
+"POT-Creation-Date: 2015-02-04 07:56+0000\n"
+"PO-Revision-Date: 2015-02-09 18:55+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -152,7 +153,7 @@ msgstr ""
 #. (itstool) path: license/p
 #: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
-msgstr ""
+msgstr "Este trabajo está licenciado bajo la <_:link-1/>."
 
 #. (itstool) path: info/desc
 #: C/moves.page:19
@@ -212,12 +213,12 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/puzzles.page:33
 msgid "Navigate among puzzles"
-msgstr ""
+msgstr "Navegar entre puzles"
 
 #. (itstool) path: section/p
 #: C/puzzles.page:35
 msgid "To navigate between the puzzles:"
-msgstr ""
+msgstr "Para navegar entre puzles:"
 
 #. (itstool) path: item/p
 #: C/puzzles.page:39
@@ -545,7 +546,7 @@ msgstr ""
 #. (itstool) path: info/desc
 #: C/scores.page:18
 msgid "Check your performance."
-msgstr ""
+msgstr "Compruebe su rendimiento."
 
 #. (itstool) path: page/title
 #: C/scores.page:22
