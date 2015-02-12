@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-04 07:56+0000\n"
-"PO-Revision-Date: 2015-02-09 18:55+0100\n"
+"POT-Creation-Date: 2015-02-12 07:55+0000\n"
+"PO-Revision-Date: 2015-02-12 18:37+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -56,6 +56,9 @@ msgid ""
 "basic features of <app>Klotski</app>, visit <link xref=\"introduction\">Game "
 "introduction</link>."
 msgstr ""
+"Deslice bloques para resolver el puzle. Para una rápida introducción en las "
+"características básicas de <app>Klotski</app>, visite la <link xref="
+"\"introduction\">introducción al juego</link>."
 
 #. (itstool) path: section/title
 #: C/index.page:34
@@ -96,6 +99,10 @@ msgid ""
 "minimum number of moves. You can achieve this by sliding the blocks "
 "horizontally or vertically."
 msgstr ""
+"<app>Klotski</app> es un juego de <app>GNOME</app>. EL objetivo del juego es "
+"mover el bloque marcado al área bordeada de verde con el menor número de "
+"movimientos. Puede conseguirlo deslizando los bloques horizontal o "
+"verticalmente."
 
 #. (itstool) path: info/desc
 #: C/keyboard-shortcuts.page:16
@@ -114,6 +121,9 @@ msgid ""
 "the mouse and menus. The following tables list all of <app>klotski's</app> "
 "shortcut keys."
 msgstr ""
+"Use las <gui>teclas rápidas</gui> para realizar tareas comunes más "
+"rápidamente que con el ratón y los menús. Las siguientes tablas listan todas "
+"las teclas rápidas de <application>klotski</application>."
 
 #. (itstool) path: td/p
 #: C/keyboard-shortcuts.page:28
@@ -148,353 +158,387 @@ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 #. (itstool) path: p/link
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr ""
+msgstr "Creative Commons de Atribución-Compartir Igual 3.0 sin soporte"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
 msgstr "Este trabajo está licenciado bajo la <_:link-1/>."
 
+#. (itstool) path: credit/name
+#: C/moves.page:17 C/puzzles.page:18 C/scores.page:16 C/start.page:19
+msgid "Shobha Tyagi"
+msgstr "Shobha Tyagi"
+
+#. (itstool) path: credit/years
+#: C/moves.page:19 C/puzzles.page:20 C/scores.page:18 C/start.page:21
+msgid "2015"
+msgstr "2015"
+
 #. (itstool) path: info/desc
-#: C/moves.page:19
+#: C/moves.page:24
 msgid ""
 "A move is shifting the block to desired location, and you have to move "
 "patterned block towards the goalpiece."
 msgstr ""
+"Un movimiento es colocar el bloque a la ubicación que quiere, y debe mover "
+"el bloque marcado hasta la pieza final."
 
 #. (itstool) path: page/title
-#: C/moves.page:24
+#: C/moves.page:29
 msgid "Moves"
 msgstr "Movimientos"
 
 #. (itstool) path: page/p
-#: C/moves.page:26
+#: C/moves.page:31
 msgid ""
 "Consecutive moves of a block are considered to be a single move. For "
 "example, moving a block up one square then right two squares is considered "
 "one move."
 msgstr ""
+"Los movimientos consecutivos de un bloque se consideran un único movimiento. "
+"Por ejemplo, mover un bloque una casilla hacia arriba y luego dos a la "
+"derecha se considera un movimiento."
 
 #. (itstool) path: section/title
-#: C/moves.page:31
+#: C/moves.page:36
 msgid "Goal piece moves"
-msgstr ""
+msgstr "Movimientos de la pieza final"
 
 #. (itstool) path: section/p
-#: C/moves.page:33
+#: C/moves.page:38
 msgid ""
-"The goal location may be positioned slightly off the board. The goal piece, "
-"which is the patterned block, can move to it. However, no other blocks can "
-"move off the board."
+"The goal piece which is a patterned block has to move to the goal location. "
+"The goal location may be positioned slightly off the board. However, no "
+"other blocks can move off the board."
 msgstr ""
+"La pieza final es un bloque marcado que se debe mover hasta la ubicación "
+"objetivo. La ubicación objetivo puede estar ligeramente fuera del tablero. "
+"Sin embargo, otros bloques no se pueden mover fuera del tablero."
 
 #. (itstool) path: info/desc
-#: C/puzzles.page:20
+#: C/puzzles.page:26
 msgid ""
 "Navigate among puzzles, look at the minimum number of moves to solve a "
 "puzzle."
 msgstr ""
+"Navegar entre puzles, buscando el número mínimo de movimientos para resolver "
+"un puzle."
 
 #. (itstool) path: page/title
 #. (itstool) path: td/p
-#: C/puzzles.page:25 C/puzzles.page:62
+#: C/puzzles.page:31 C/puzzles.page:69
 msgid "Puzzles"
 msgstr "Puzles"
 
 #. (itstool) path: page/p
-#: C/puzzles.page:27
+#: C/puzzles.page:33
 msgid ""
 "Puzzles are divided into three categories namely, <gui>HuaRong Trail</gui>, "
 "<gui>Challenge Pack</gui> and <gui>Skill Pack</gui> based on the difficulty "
-"level of the game. While the first and the last each contains nine puzzles, "
-"the second one provides ten beautiful puzzles to the user."
+"level of the game. <gui>HuaRong Trail</gui> and <gui>Skill Pack</gui> "
+"contains nine puzzles each and <gui>Challenge Pack</gui> consists of ten "
+"beautiful puzzles."
 msgstr ""
+"Los puzles se dividen en tres categorías, llamadas <gui>Senda a HuaRong</"
+"gui>, <gui>Paquete de desafío</gui> y <gui>Paquete de destreza</gui> basadas "
+"en la dificultad de cada nivel. <gui>Senda a HuaRong</gui> y <gui>Paquete de "
+"desafío</gui> contienen nueve puzles cada una, y <gui>Paquete de desafío</"
+"gui> consta de 10 bonitos puzles."
 
 #. (itstool) path: section/title
-#: C/puzzles.page:33
+#: C/puzzles.page:40
 msgid "Navigate among puzzles"
 msgstr "Navegar entre puzles"
 
 #. (itstool) path: section/p
-#: C/puzzles.page:35
+#: C/puzzles.page:42
 msgid "To navigate between the puzzles:"
 msgstr "Para navegar entre puzles:"
 
 #. (itstool) path: item/p
-#: C/puzzles.page:39
+#: C/puzzles.page:46
 msgid ""
 "Click on <gui style=\"button\">View Puzzles</gui> in the bottom right, "
 "choose a category. All the puzzles in the category will be displayed."
 msgstr ""
+"Pulse en <gui style=\"button\">Ver puzles</gui> en la parte inferior derecha "
+"y elija una categoría. Se mostrarán todos los puzles de la categoría."
 
 #. (itstool) path: item/p
-#: C/puzzles.page:44
+#: C/puzzles.page:51
 msgid ""
 "You can navigate sequentially among the puzzles with the <gui style=\"button"
 "\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>."
 msgstr ""
+"Puede navegar secuencialmente entre los puzles con <gui style=\"button"
+"\">Siguiente puzle</gui> y <gui style=\"button\">Puzle anterior</gui>."
 
 #. (itstool) path: section/title
 #. (itstool) path: td/p
-#: C/puzzles.page:52 C/puzzles.page:65
+#: C/puzzles.page:59 C/puzzles.page:72
 msgid "Minimum number of moves"
 msgstr "Número mínimo de movimientos"
 
 #. (itstool) path: section/p
-#: C/puzzles.page:54
+#: C/puzzles.page:61
 msgid ""
 "Each puzzle is different from the other in the manner of, the minimum number "
 "of moves to solve them and the various positions of the blocks in it. You "
 "can find the minimum number of moves for the various puzzles below."
 msgstr ""
+"Cada puzle es diferente a los demás en el sentido del numero mínimo de "
+"movimientos para resolverlos y las distintas posiciones de los bloques en "
+"él. Puede encontrar el número mínimo de movimientos para los diferentes "
+"puzles a continuación."
 
 #. (itstool) path: td/p
-#: C/puzzles.page:70
+#: C/puzzles.page:77
 msgid "Only 18 Steps"
 msgstr "Solamente 18 pasos"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:73
+#: C/puzzles.page:80
 msgid "18"
 msgstr "18"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:78
+#: C/puzzles.page:85
 msgid "Daisy"
 msgstr "Daisy"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:81 C/puzzles.page:105
+#: C/puzzles.page:88 C/puzzles.page:112
 msgid "28"
 msgstr "28"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:86
+#: C/puzzles.page:93
 msgid "Violet"
 msgstr "Violeta"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:89
+#: C/puzzles.page:96
 msgid "27"
 msgstr "27"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:94
+#: C/puzzles.page:101
 msgid "Poppy"
 msgstr "Poppy"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:97
+#: C/puzzles.page:104
 msgid "40"
 msgstr "40"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:102
+#: C/puzzles.page:109
 msgid "Pansy"
 msgstr "Mariquita"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:110
+#: C/puzzles.page:117
 msgid "Snowdrop"
 msgstr "Copo de nieve"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:113
+#: C/puzzles.page:120
 msgid "46"
 msgstr "46"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:118
+#: C/puzzles.page:125
 msgid "Red Donkey"
 msgstr "Burro rojo"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:121
+#: C/puzzles.page:128
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:126
+#: C/puzzles.page:133
 msgid "Trail"
 msgstr "Senda"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:129
+#: C/puzzles.page:136
 msgid "102"
 msgstr "102"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:134
+#: C/puzzles.page:141
 msgid "Ambush"
 msgstr "Emboscada"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:137
+#: C/puzzles.page:144
 msgid "120"
 msgstr "120"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:142
+#: C/puzzles.page:149
 msgid "Agatka"
 msgstr "Agatka"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:145
+#: C/puzzles.page:152
 msgid "30"
 msgstr "30"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:150
+#: C/puzzles.page:157
 msgid "Success"
 msgstr "Éxito"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:153 C/puzzles.page:233
+#: C/puzzles.page:160 C/puzzles.page:240
 msgid "25"
 msgstr "25"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:158
+#: C/puzzles.page:165
 msgid "Bone"
 msgstr "Hueso"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:161
+#: C/puzzles.page:168
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:166
+#: C/puzzles.page:173
 msgid "Fortune"
 msgstr "Fortuna"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:169
+#: C/puzzles.page:176
 msgid "24"
 msgstr "24"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:174
+#: C/puzzles.page:181
 msgid "Fool"
 msgstr "Tonto"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:177 C/puzzles.page:185
+#: C/puzzles.page:184 C/puzzles.page:192
 msgid "29"
 msgstr "29"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:182
+#: C/puzzles.page:189
 msgid "Solomon"
 msgstr "Salomón"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:190
+#: C/puzzles.page:197
 msgid "Cleopatra"
 msgstr "Cleopatra"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:193
+#: C/puzzles.page:200
 msgid "31"
 msgstr "31"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:198
+#: C/puzzles.page:205
 msgid "Shark"
 msgstr "Tiburón"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:201
+#: C/puzzles.page:208
 msgid "48"
 msgstr "48"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:206
+#: C/puzzles.page:213
 msgid "Rome"
 msgstr "Roma"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:209
+#: C/puzzles.page:216
 msgid "38"
 msgstr "38"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:214
+#: C/puzzles.page:221
 msgid "Pennant Puzzle"
 msgstr "Puzle Pennant"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:217
+#: C/puzzles.page:224
 msgid "59"
 msgstr "59"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:222
+#: C/puzzles.page:229
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:225 C/puzzles.page:265
+#: C/puzzles.page:232 C/puzzles.page:272
 msgid "?"
 msgstr "?"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:230
+#: C/puzzles.page:237
 msgid "Pelopones"
 msgstr "Peloponeso"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:238
+#: C/puzzles.page:245
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:241
+#: C/puzzles.page:248
 msgid "21"
 msgstr "21"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:246
+#: C/puzzles.page:253
 msgid "Polonaise"
 msgstr "Polonaise"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:249
+#: C/puzzles.page:256
 msgid "23"
 msgstr "23"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:254
+#: C/puzzles.page:261
 msgid "Baltic Sea"
 msgstr "Mar Báltico"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:257
+#: C/puzzles.page:264
 msgid "42"
 msgstr "42"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:262
+#: C/puzzles.page:269
 msgid "American Pie"
 msgstr "American Pie"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:270
+#: C/puzzles.page:277
 msgid "Traffic Jam"
 msgstr "Atasco"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:273
+#: C/puzzles.page:280
 msgid "132"
 msgstr "132"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:278
+#: C/puzzles.page:285
 msgid "Sunshine"
 msgstr "Luz del sol"
 
 #. (itstool) path: td/p
-#: C/puzzles.page:281
+#: C/puzzles.page:288
 msgid "345"
 msgstr "345"
 
@@ -514,6 +558,8 @@ msgid ""
 "The aim of <app>Klotski</app> is to move the patterned block to a specific "
 "location. You must follow some rules while moving the blocks:"
 msgstr ""
+"El objetivo de <app>Klotski</app> es mover el bloque marcado a una ubicación "
+"específica. Debe seguir algunas reglas al mover los bloques:"
 
 #. (itstool) path: section/title
 #: C/rules.page:29
@@ -525,11 +571,13 @@ msgstr "Reglas para mover un bloque"
 msgid ""
 "Click and drag the desired block to a location of your choice on the board."
 msgstr ""
+"Pulse y arrastre el bloque que quiere a una ubicación de su elección en el "
+"tablero."
 
 #. (itstool) path: item/p
 #: C/rules.page:37
 msgid "The green blocks and the boundary blocks cannot be moved."
-msgstr ""
+msgstr "Los bloques verdes y los de los bordes no se pueden mover."
 
 #. (itstool) path: item/p
 #: C/rules.page:40
@@ -537,87 +585,116 @@ msgid ""
 "A block cannot be moved over the green blocks. However, it is allowed to "
 "move a patterened block."
 msgstr ""
+"No se puede mover un bloque encima de uno verde. Sin embargo, sí se puede "
+"mover un bloque marcado."
 
 #. (itstool) path: item/p
 #: C/rules.page:44
 msgid "You can take more than one step in a single move."
-msgstr ""
+msgstr "Puede hacer más de un paso en un único movimiento."
 
 #. (itstool) path: info/desc
-#: C/scores.page:18
+#: C/scores.page:23
 msgid "Check your performance."
 msgstr "Compruebe su rendimiento."
 
 #. (itstool) path: page/title
-#: C/scores.page:22
+#: C/scores.page:27
 msgid "Scores"
 msgstr "Puntuación"
 
 #. (itstool) path: page/p
-#: C/scores.page:24
+#: C/scores.page:29
 msgid ""
 "You can check your performance by looking at the number of moves you have "
 "made in the previous games. To view your scores:"
 msgstr ""
+"Puede comprobar su rendimiento mirando el número de movimientos que ha hecho "
+"en partidas anteriores. Para ver su puntuación:"
 
 #. (itstool) path: item/p
-#: C/scores.page:29
+#: C/scores.page:34
 msgid ""
 "Select <gui style=\"menu\">Klotski</gui> in the top bar, then select <gui "
 "style=\"menuitem\">Scores</gui>."
 msgstr ""
+"Seleccione <gui style=\"menu\">Klotski</gui> en la barra superior y elija "
+"<gui style=\"menuitem\">Puntuación</gui>."
 
 #. (itstool) path: item/p
-#: C/scores.page:33
+#: C/scores.page:38
 msgid ""
 "The dialog by default displays scores of the <gui>Only 18 Steps</gui> "
 "puzzle. To view others, select the puzzle from the menu whose scores you "
 "wish to see."
 msgstr ""
+"El diálogo predeterminado muestra la puntuación para el puzle de <gui>Sólo "
+"18 pasos</gui>. Para ver otros, seleccione el puzle en el menú cuya "
+"puntuación quiere ver."
 
 #. (itstool) path: item/p
-#: C/scores.page:38
+#: C/scores.page:43
 msgid "Click on <gui style=\"button\">OK</gui> to close <gui>Scores</gui>."
 msgstr ""
+"Pulse en <gui style=\"button\">Aceptar</gui> para cerrar la <gui>Puntuación</"
+"gui>."
 
 #. (itstool) path: info/desc
-#: C/start.page:21
+#: C/start.page:26
 msgid "Play another game."
 msgstr "Jugar otra partida."
 
 #. (itstool) path: page/title
-#: C/start.page:25
+#: C/start.page:30
 msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
 #. (itstool) path: page/p
-#: C/start.page:27
-msgid ""
-"<app>Klotski</app> offers a large collection of games, to play a new game:"
-msgstr ""
+#: C/start.page:32
+msgid "<app>Klotski</app> offers a large collection of games."
+msgstr "<app>Klotski</app> ofrece una gran colección de juegos."
+
+#. (itstool) path: steps/title
+#: C/start.page:35
+msgid "<p>To play a new game:</p>"
+msgstr "<p>Para iniciar un juego nuevo:</p>"
 
 #. (itstool) path: item/p
-#: C/start.page:32
+#: C/start.page:37
+msgid "Select <gui style=\"menu\">Klotski</gui> in the top bar."
+msgstr "Seleccione <gui style=\"menu\">Klotski</gui> en la barra superior."
+
+#. (itstool) path: item/p
+#: C/start.page:40
+msgid "Select <gui style=\"menuitem\">New Game</gui>."
+msgstr "Seleccione <gui style=\"menuitem\">Nuevo juego</gui>."
+
+#. (itstool) path: page/p
+#: C/start.page:43
 msgid ""
-"Select <gui style=\"menu\">Klotski</gui> in the top bar, then select <gui "
-"style=\"menuitem\">New Game</gui>. Alternatively, you can click on <gui "
-"style=\"button\">Start Over</gui>. It will start a new game of the default "
-"puzzle, <gui>Only 18 Steps</gui>."
+"Click <gui type=\"button\">Start over</gui> to restart the current game."
 msgstr ""
+"Pulse <gui type=\"button\">Iniciar</gui> para reiniciar la partida actual."
 
 #. (itstool) path: section/title
-#: C/start.page:40
+#: C/start.page:46
 msgid "Play a different puzzle"
 msgstr "Jugar a un puzle diferente"
 
 #. (itstool) path: item/p
-#: C/start.page:44
+#: C/start.page:50
 msgid ""
 "To play a different puzzle, click on <gui style=\"button\">View Puzzles</"
 "gui>."
 msgstr ""
+"Para jugar a un puzle diferente, pulse en <gui style=\"button\">Ver puzles</"
+"gui>."
 
 #. (itstool) path: item/p
-#: C/start.page:48
-msgid "Choose a game category and double click to start playing."
+#: C/start.page:54
+msgid ""
+"Click on <gui type=\"button\">Next Puzzle</gui> or <gui type=\"button"
+"\">Previous Puzzle</gui>."
 msgstr ""
+"Pulse en <gui type=\"button\">Siguiente puzle</gui> o en <gui type=\"button"
+"\">Puzle anterior</gui>."
