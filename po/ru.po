@@ -11,41 +11,48 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010.
 # Valek Filippov <frob@df.ru> 2000-2002
 # Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-# Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2014.
+# Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
+# Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-09 06:55+0000\n"
-"PO-Revision-Date: 2014-09-09 13:26+0300\n"
-"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"POT-Creation-Date: 2015-02-12 19:58+0000\n"
+"PO-Revision-Date: 2015-02-14 11:05+0300\n"
+"Last-Translator: Yuri Myasoedov <ymyasoedov@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
 msgstr "Клоцки GNOME"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Сдвиньте блоки, чтобы решить головоломку"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
-"Клоцки GNOME — это набор головоломок. Цель игры — переместить блок на "
-"область с зелёными метками. Для этого необходимо убрать с пути другие блоки. "
-"На решение головоломки необходимо потратить минимальное количество ходов."
+"Клоцки GNOME — это набор головоломок на перемещение блоков. Цель игры — "
+"переместить блок на область с зелёными метками. Для этого необходимо убрать "
+"с пути другие блоки. На решение головоломки необходимо потратить минимальное "
+"количество ходов."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -55,18 +62,30 @@ msgstr ""
 "головоломки похожи друг на друга, различны только некоторые блоки. Некоторые "
 "головоломки сильно отличаются от остальных."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:948
+#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:462
+#: ../src/gnome-klotski.vala:900
 msgid "Klotski"
 msgstr "Клоцки"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Сдвиньте блоки, чтобы решить головоломку"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "игра;стратегия;логическая;пошаговая;"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Результаты"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_О приложении"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_Закончить"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -89,186 +108,179 @@ msgid "true if the window is maximized"
 msgstr "окно имеет максимальный размер"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:62
 msgid "Only 18 Steps"
 msgstr "Только 18 шагов"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:75
 msgid "Daisy"
 msgstr "Дэйзи"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:88
 msgid "Violet"
 msgstr "Вайолет"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:101
 msgid "Poppy"
 msgstr "Поппи"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:114
 msgid "Pansy"
 msgstr "Панси"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:127
 msgid "Snowdrop"
 msgstr "Снегопад"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:140
 msgid "Red Donkey"
 msgstr "Красный осёл"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:153
 msgid "Trail"
 msgstr "Грузовик"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:166
 msgid "Ambush"
 msgstr "Засада"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:179
 msgid "Agatka"
 msgstr "Агатка"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:190
 msgid "Success"
 msgstr "Успех"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:200
 msgid "Bone"
 msgstr "Кость"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:213
 msgid "Fortune"
 msgstr "Фортуна"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:227
 msgid "Fool"
 msgstr "Дурак"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:237
 msgid "Solomon"
 msgstr "Соломон"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:250
 msgid "Cleopatra"
 msgstr "Клеопатра"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:262
 msgid "Shark"
 msgstr "Акула"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:274
 msgid "Rome"
 msgstr "Рим"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:286
 msgid "Pennant Puzzle"
 msgstr "Головоломка Вымпел"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:299
 msgid "Ithaca"
 msgstr "Итхаца"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:322
 msgid "Pelopones"
 msgstr "Пелопонес"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:334
 msgid "Transeuropa"
 msgstr "Европа"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:346
 msgid "Lodzianka"
 msgstr "Лодзянка"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:357
 msgid "Polonaise"
 msgstr "Полонез"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:368
 msgid "Baltic Sea"
 msgstr "Балтийское море"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:380
 msgid "American Pie"
 msgstr "Американский пирог"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:396
 msgid "Traffic Jam"
 msgstr "Пробка"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:407
 msgid "Sunshine"
 msgstr "Солнечное сияние"
 
-#: ../src/gnome-klotski.vala:434
-#| msgid "Show release version"
+#: ../src/gnome-klotski.vala:435
 msgid "Print release version and exit"
 msgstr "Показать номер версии и выйти"
 
-#: ../src/gnome-klotski.vala:632
+#: ../src/gnome-klotski.vala:584
 msgid "Previous Puzzle"
 msgstr "Предыдущая головоломка"
 
-#: ../src/gnome-klotski.vala:638
+#: ../src/gnome-klotski.vala:590
 msgid "Next Puzzle"
 msgstr "Следующая головоломка"
 
-#: ../src/gnome-klotski.vala:660
+#: ../src/gnome-klotski.vala:612
 msgid "_Start Over"
 msgstr "_Начать сначала"
 
-#: ../src/gnome-klotski.vala:669
+#: ../src/gnome-klotski.vala:621
 msgid "_View Puzzles"
 msgstr "_Показать головоломки"
 
-#: ../src/gnome-klotski.vala:853
+#: ../src/gnome-klotski.vala:805
 #, c-format
 msgid "Moves: %d"
 msgstr "Ходов: %d"
 
-#: ../src/gnome-klotski.vala:856
+#: ../src/gnome-klotski.vala:808
 msgid "Level completed."
 msgstr "Уровень пройден."
 
-#: ../src/gnome-klotski.vala:950
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Головоломки про сдвигающиеся блоки\n"
-"\n"
-"Клоцки является частью пакета GNOME Games."
+#: ../src/gnome-klotski.vala:902
+msgid "Sliding block puzzles"
+msgstr "Головоломки на перемещение блоков"
 
-#: ../src/gnome-klotski.vala:956
+#: ../src/gnome-klotski.vala:908
 msgid "translator-credits"
 msgstr ""
 "Валек Филиппов aka frob\n"
@@ -300,3 +312,12 @@ msgstr "Дата"
 #: ../src/score-dialog.vala:72
 msgid "Moves"
 msgstr "Ходы"
+
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Головоломки про сдвигающиеся блоки\n"
+#~ "\n"
+#~ "Клоцки является частью пакета GNOME Games."
