@@ -1,33 +1,37 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="keyboard-shortcuts">
+
   <info>
     <link type="guide" xref="index#tips" />
     <revision version="3.14" date="2014-06-09" status="review"/>
+    <revision version="3.15.90" date="2015-02-16" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
-      <email>aswanirashi19@gmail.com</email>
+      <email its:translate="no">aswanirashi19@gmail.com</email>
       <years>2014</years>
+    </credit>
+    <credit type="editor">
+      <name>Michael Catanzaro</name>
+      <email its:translate="no">mcatanzaro@gnome.org</email>
+      <years>2015</years>
     </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-    <desc>Play the game using keyboard.</desc>
+    <desc>Play the game using the keyboard.</desc>
 
   </info>
 
   <title>Keyboard shortcuts</title>
 
-  <p>Use <gui>shortcut keys</gui> to perform common tasks more quickly than
-  with the mouse and menus. The following tables list all of <app>klotski's</app>
+  <p>Use keyboard shortcuts to perform common tasks more quickly than
+  with the mouse and menus. The following tables list all of <app>Klotski’s</app>
   shortcut keys.</p>
 
     <table frame="all" rules="cols" shade="rows">
-      <tr>
-        <td><p>New game</p></td>
-        <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
-      </tr>
       <tr>
         <td><p>Help</p></td>
         <td><p><key>F1</key></p></td>

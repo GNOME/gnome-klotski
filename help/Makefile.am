@@ -4,10 +4,8 @@ HELP_ID = gnome-klotski
 
 HELP_FILES = \
 	index.page \
-	introduction.page \
 	keyboard-shortcuts.page \
 	legal.xml \
-	moves.page \
 	puzzles.page \
 	rules.page \
 	scores.page \

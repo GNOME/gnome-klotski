@@ -10,15 +10,20 @@
     <title type="text">Klotski</title>
 
     <revision version="3.14" date="2014-05-22" status="draft"/>
+    <revision version="3.15.90" date="2015-02-16" status="draft"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
       <email its:translate="no">aswanirashi19@gmail.com</email>
     </credit>
+    <credit type="editor">
+      <name>Michael Catanzaro</name>
+      <email its:translate="no">mcatanzaro@gnome.org</email>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-    <desc>GNOME Klotski help.</desc>
+    <desc>GNOME Klotski help</desc>
   </info>
 
   <title>
@@ -26,9 +31,10 @@
     Klotski
   </title>
 
-  <p>Slide blocks to solve the puzzle. For a quick introduction into the most
-  basic features of <app>Klotski</app>, visit
-  <link xref="introduction">Game introduction</link>.</p>
+  <p><app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is to move the
+  patterned block to the area bordered by green markers. To do so, you will need
+  to slide other blocks out of the way. Complete each puzzle in as few moves as
+  possible!</p>
 
   <section id="play" style="2column">
     <title>Playing Klotski</title>
@@ -36,10 +42,6 @@
 
   <section id="tips" style="2column">
     <title>Useful tips</title>
-  </section>
-
-  <section id="advanced" style="2column">
-    <title>Advanced</title>
   </section>
 
 </page>

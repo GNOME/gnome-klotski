@@ -5,10 +5,9 @@
 
   <info>
     <link type="guide" xref="index"/>
-    <link type="seealso" xref="rules"/>
-    <link type="seealso" xref="keyboard-shortcuts"/>
     <link type="seealso" xref="puzzles"/>
     <revision version="3.14" date="2015-01-27" status="review"/>
+    <revision version="3.15.90" date="2015-02-16" status="review"/>
 
     <credit type="author">
       <name>Rashi Aswani</name>
@@ -20,42 +19,21 @@
       <email its:translate="no">tyagishobha@gmail.com</email>
       <years>2015</years>
     </credit>
+    <credit type="editor">
+      <name>Michael Catanzaro</name>
+      <email its:translate="no">mcatanzaro@gnome.org</email>
+    </credit>
 
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
 
-    <desc>Play another game.</desc>
+    <desc>How do I start playing?</desc>
 
   </info>
 
   <title>Start a new game</title>
 
-  <p><app>Klotski</app> offers a large collection of games.</p>
-
-  <steps>
-  <title><p>To play a new game:</p></title>
-    <item>
-      <p>Select <gui style="menu">Klotski</gui> in the top bar.</p>
-    </item>
-    <item>
-      <p>Select <gui style="menuitem">New Game</gui>.</p>
-    </item>
-  </steps>
-  <p>Click <gui type="button">Start over</gui> to restart the current game.</p>
-
-<section id="play-different-puzzles">
-  <title>Play a different puzzle</title>
-
-  <steps>
-    <item>
-      <p>To play a different puzzle, click on <gui style="button">View
-      Puzzles</gui>.</p>
-    </item>
-    <item>
-      <p>Click on <gui type="button">Next Puzzle</gui> or
-      <gui type="button">Previous Puzzle</gui>.</p>
-    </item>
-  </steps>
-
-</section>
-
+  <p>When you open <app>Klotski</app>, a new game begins automatically. After
+  your first move, you can select <gui style="button">Start Over</gui> to
+  restart the puzzle that you are currently playing. You can also
+  <link xref="puzzles">switch to a different puzzle.</link></p>
 </page>
