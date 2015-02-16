@@ -278,11 +278,13 @@ public class Puzzle : Object
             }
         }
 
+#if 0
         /* Paint changes */
         for (var y = 0; y < height; y++)
             for (var x = 0; x < width; x++)
                 if (get_piece_id (map, x, y) != get_piece_id (tmpmap, x, y) || get_piece_id (tmpmap, x, y) == id)
                     ; // FIXME: Just redraw the required space
+#endif
         changed ();
 
         map = tmpmap;
