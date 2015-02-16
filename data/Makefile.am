@@ -6,7 +6,10 @@ gsettings_SCHEMAS = org.gnome.klotski.gschema.xml
 man_MANS = gnome-klotski.6
 
 dist_noinst_DATA = \
-	klotski-menus.ui
+	klotski-menus.ui \
+	klotski-scores.ui \
+	klotski.ui \
+	klotski.css
 
 pixmapdir = $(datadir)/gnome-klotski
 pixmap_DATA = \

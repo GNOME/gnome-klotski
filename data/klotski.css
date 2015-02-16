@@ -1,0 +1,37 @@
+GtkPopover#puzzles-popover {
+  padding: 10px;
+}
+
+GtkStack#stack-packs > GtkLabel {
+  font-weight: bold;
+}
+
+.treeview-container GtkTreeView {
+  background-color: transparent;
+}
+.treeview-container GtkTreeView:backdrop {
+  color: @theme_unfocused_fg_color;
+}
+.treeview-container GtkTreeView:prelight {
+  background-color: @theme_bg_color;
+}
+.treeview-container GtkTreeView:prelight:backdrop {
+  background-color: @theme_unfocused_bg_color;
+}
+.treeview-container GtkTreeView:selected,
+.treeview-container GtkTreeView:selected:prelight {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+.treeview-container GtkTreeView:selected:backdrop,
+.treeview-container GtkTreeView:selected:backdrop:prelight {
+  background-color: @theme_unfocused_selected_bg_color;
+  color: @theme_unfocused_selected_fg_color;
+}
+
+GtkTreeView.toggle-like-pixbuf:insensitive {
+  -gtk-icon-source: none;
+}
+GtkTreeView.toggle-like-pixbuf:insensitive:checked {
+  -gtk-icon-source: -gtk-icontheme("gtk-yes");  /* TODO maybe deprecated */
+}

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkPopover" id="puzzles-popover">
+    <property name="visible">False</property>
+    <property name="name">puzzles-popover</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="orientation">horizontal</property>
+            <property name="halign">fill</property>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="action-name">win.prev-pack</property>
+                <style><class name="flat"/><class name="image-button"/></style>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">go-previous-symbolic</property>
+                    <property name="visible">True</property>
+                    <property name="icon-size">1</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStack" id="stack-packs">
+                <property name="name">stack-packs</property>
+                <property name="visible">True</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="name">pack-name</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Huarong Trail</property>
+                  </object>
+                  <packing>
+                    <property name="name">huarong</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="name">pack-name</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Challenge Pack</property>
+                  </object>
+                  <packing>
+                    <property name="name">challenge</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="name">pack-name</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Skill Pack</property>
+                  </object>
+                  <packing>
+                    <property name="name">skill</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="action-name">win.next-pack</property>
+                <style><class name="flat"/><class name="image-button"/></style>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">go-next-symbolic</property>
+                    <property name="visible">True</property>
+                    <property name="icon-size">1</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStack" id="stack-puzzles"> <!-- GtkScrolledWindow children are here for when big text -->
+            <property name="visible">True</property>
+            <property name="homogeneous">True</property>
+            <property name="height-request">270</property>
+            <property name="width-request">190</property>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <style><class name="treeview-container"/></style>
+                <child>
+                  <object class="GtkTreeView" id="treeview-huarong">
+                    <property name="visible">True</property>
+                    <property name="headers-visible">False</property>
+                    <property name="activate-on-single-click">True</property>
+                    <property name="can-focus">False</property> <!-- for up/down keybinding -->
+                    <!-- <property name="model">*store</property> TODO -->
+                    <style><class name="toggle-like-pixbuf"/></style>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Puzzle</property>
+                        <child>
+                          <object class="GtkCellRendererText"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Complete</property>
+                        <child>
+                          <object class="GtkCellRendererToggle"/>
+                          <attributes>
+                            <attribute name="active">1</attribute>
+                            <attribute name="sensitive">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">huarong</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <style><class name="treeview-container"/></style>
+                <child>
+                  <object class="GtkTreeView" id="treeview-challenge">
+                    <property name="visible">True</property>
+                    <property name="headers-visible">False</property>
+                    <property name="activate-on-single-click">True</property>
+                    <property name="can-focus">False</property> <!-- for up/down keybinding -->
+                    <!-- <property name="model">*store</property> TODO -->
+                    <style><class name="toggle-like-pixbuf"/></style>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Puzzle</property>
+                        <child>
+                          <object class="GtkCellRendererText"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Complete</property>
+                        <child>
+                          <object class="GtkCellRendererToggle"/>
+                          <attributes>
+                            <attribute name="active">1</attribute>
+                            <attribute name="sensitive">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">challenge</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="visible">True</property>
+                <property name="hscrollbar-policy">never</property>
+                <style><class name="treeview-container"/></style>
+                <child>
+                  <object class="GtkTreeView" id="treeview-skill">
+                    <property name="visible">True</property>
+                    <property name="headers-visible">False</property>
+                    <property name="activate-on-single-click">True</property>
+                    <property name="can-focus">False</property> <!-- for up/down keybinding -->
+                    <!-- <property name="model">*store</property> TODO -->
+                    <style><class name="toggle-like-pixbuf"/></style>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Puzzle</property>
+                        <child>
+                          <object class="GtkCellRendererText"/>
+                          <attributes>
+                            <attribute name="text">0</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkTreeViewColumn">
+                        <property name="title">Complete</property>
+                        <child>
+                          <object class="GtkCellRendererToggle"/>
+                          <attributes>
+                            <attribute name="active">1</attribute>
+                            <attribute name="sensitive">3</attribute>
+                          </attributes>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="name">skill</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="visible">True</property>
+            <property name="homogeneous">True</property>
+            <property name="halign">fill</property>
+            <style><class name="linked"/></style>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <!-- <property name="use-underline">True</property> TODO -->
+                <property name="label" translatable="yes">Previous</property>
+                <property name="action-name">win.prev-puzzle</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <!-- <property name="use-underline">True</property> TODO -->
+                <property name="label" translatable="yes">Next</property>
+                <property name="action-name">win.next-puzzle</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkApplicationWindow" id="window">
+    <!-- <initial-focus name=""/> -->
+    <property name="title" translatable="yes">Klotski</property>
+    <property name="width-request">600</property>
+    <property name="height-request">400</property>
+    <property name="border-width">25</property> <!-- TODO a view margin -->
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="visible">True</property>
+        <property name="show-close-button">True</property>
+        <property name="title" translatable="yes">Klotski</property>
+        <child>
+          <object class="GtkButton">
+            <property name="visible">True</property>
+            <property name="use-underline">True</property>
+            <property name="label" translatable="yes">_Start Over</property>
+            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
+            <property name="can-focus">True</property>
+            <property name="focus-on-click">False</property>
+            <property name="action-name">win.start-game</property>
+          </object>
+          <packing>
+            <property name="pack-type">start</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkMenuButton">
+            <property name="visible">True</property>
+            <property name="use-underline">True</property>
+            <property name="label" translatable="yes">_Change Puzzle</property>
+            <property name="tooltip-text" translatable="yes">Choose an other puzzle</property>
+            <property name="can-focus">True</property>
+            <property name="focus-on-click">False</property>
+            <property name="direction">down</property>
+            <property name="popover">puzzles-popover</property>
+          </object>
+          <packing>
+            <property name="pack-type">end</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+  </object>
+</interface>

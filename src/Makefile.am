@@ -22,7 +22,9 @@ gnome_klotski_CFLAGS = \
 gnome_klotski_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
-	--pkg librsvg-2.0
+	--pkg librsvg-2.0 \
+	--gresources $(builddir)/klotski.gresource.xml \
+	--target-glib $(GLIB_REQUIRED)
 
 gnome_klotski_LDADD = \
 	$(GNOME_KLOTSKI_LIBS)

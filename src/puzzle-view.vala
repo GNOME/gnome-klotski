@@ -70,6 +70,7 @@ public class PuzzleView : Gtk.DrawingArea
 
     public PuzzleView ()
     {
+        set_size_request (250, 250);    // TODO enough? Taquin is in 350^2
         set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
         load_image ();
     }
@@ -199,7 +200,7 @@ public class PuzzleView : Gtk.DrawingArea
 
     protected override bool button_press_event (Gdk.EventButton event)
     {
-        if (event.button == 1)
+        if (event.button == Gdk.BUTTON_PRIMARY)
         {
             if (puzzle.game_over ())
                 return false;
@@ -227,7 +228,7 @@ public class PuzzleView : Gtk.DrawingArea
 
     protected override bool button_release_event (Gdk.EventButton event)
     {
-        if (event.button == 1 && piece_id != '\0')
+        if (event.button == Gdk.BUTTON_PRIMARY && piece_id != '\0')
         {
             if (piece_unmoved)
                 return false;
