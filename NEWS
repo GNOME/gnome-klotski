@@ -1,3 +1,13 @@
+3.15.90 - February 16, 2015
+===========================
+
+* Removed New Game from app menu
+* Moved Start Over to header bar
+* Renamed View Puzzles to Change Puzzle and moved it to the header bar
+* Puzzle switching now uses a popover instead of a sidebar
+* Updated user help by Rashi Aswani
+* Updated translations
+
 3.14.0 - September 21, 2014
 ===========================
 
