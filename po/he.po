@@ -4,20 +4,22 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
+# Yosef Or Boczko <yoseforb@gnome.org>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-20 10:11+0300\n"
-"PO-Revision-Date: 2014-08-20 10:15+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
-"Language-Team: Gezer (Hebrew)\n"
+"POT-Creation-Date: 2015-02-17 00:34+0200\n"
+"PO-Revision-Date: 2015-02-17 00:36+0200\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.6.1\n"
+"Plural-Forms: nplurals=2; plural= (n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -27,32 +29,101 @@ msgid "GNOME Klotski"
 msgstr "בלוקים Klotski"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "יש להחליק בלוקים כדי לפתור את התצרף"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:948
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:667
 msgid "Klotski"
 msgstr "בלוקים Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "יש להחליק בלוקים כדי לפתור את התצרף"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "משחק;אסטרטגיה;הגיון;היגיון;תנועה;הזזה;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "מסלול הוארונג"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "חבילת אתגרים"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "חבילה למיומנים"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "הקודם"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "הבא"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "ה_תחלה מחדש"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "התחלה מחדש של התצרף הנוכחי"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "_שינוי תצרף"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "בחירת תצרף אחר"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_תוצאות"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "ע_זרה"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "על _אודות"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "י_ציאה"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "תוצאות"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "תצרף:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "תאריך"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "מהלכים"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -75,185 +146,154 @@ msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "רק 18 צעדים"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "חרצית"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "סיגלית"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "פרג"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "אמנון ותמר"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "פעמון השלג"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "חמור אדום"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "מסלול"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "מארב"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "אגתקה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "הצלחה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "עצם"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "מזל"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "כסיל"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "שלמה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "קליאופטרה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "כריש"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "רומא"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "תצרף הבוטנים"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "איתקה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "פלופונס"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "חוצה אירופה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "הפועל"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "פולונז"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "הים הבלטי"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "פאי אמריקאי"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "פקק תנועה"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "זריחה"
 
-#: ../src/gnome-klotski.vala:434
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: ../src/gnome-klotski.vala:632
-msgid "Previous Puzzle"
-msgstr "התצרף הקודם"
-
-#: ../src/gnome-klotski.vala:638
-msgid "Next Puzzle"
-msgstr "התצרף הבא"
-
-#: ../src/gnome-klotski.vala:660
-msgid "_Start Over"
-msgstr "ה_תחלה מחדש"
-
 #: ../src/gnome-klotski.vala:669
-msgid "_View Puzzles"
-msgstr "ה_צגת תצרפים"
+msgid "Sliding block puzzles"
+msgstr "החלקת בלוקים לפתרון התצרף"
 
-#: ../src/gnome-klotski.vala:853
-#, c-format
-msgid "Moves: %d"
-msgstr "מהלכים: %d"
-
-#: ../src/gnome-klotski.vala:856
-msgid "Level completed."
-msgstr "השלב הושלם."
-
-#: ../src/gnome-klotski.vala:950
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"תצרפים של לבנים זזות\n"
-"\n"
-"Klotski הנו חלק ממשחקי GNOME."
-
-#: ../src/gnome-klotski.vala:956
+#: ../src/gnome-klotski.vala:677
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -268,44 +308,42 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "_סגירה"
+#: ../src/gnome-klotski.vala:836
+#, c-format
+msgid "Moves: %d"
+msgstr "מהלכים: %d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "משחק חדש"
+#: ../src/gnome-klotski.vala:839
+msgid "Level completed."
+msgstr "השלב הושלם."
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_אישור"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "תצרף:"
+#~ msgid "Next Puzzle"
+#~ msgstr "התצרף הבא"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "תאריך"
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "תצרפים של לבנים זזות\n"
+#~ "\n"
+#~ "Klotski הנו חלק ממשחקי GNOME."
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "מהלכים"
+#~ msgid "_Close"
+#~ msgstr "_סגירה"
+
+#~ msgid "New Game"
+#~ msgstr "משחק חדש"
 
 #~ msgid "true if the window is fullscren"
 #~ msgstr "true if the window is fullscren"
 
 #~ msgid "_Game"
 #~ msgstr "_משחק"
-
-#~ msgid "HuaRong Trail"
-#~ msgstr "מסלול הוארונג"
-
-#~ msgid "Challenge Pack"
-#~ msgstr "חבילת אתגרים"
-
-#~ msgid "Skill Pack"
-#~ msgstr "חבילה למיומנים"
 
 #~ msgid "_Restart Puzzle"
 #~ msgstr "התחלת התצרף _מחדש"
@@ -342,9 +380,6 @@ msgstr "מהלכים"
 
 #~ msgid "_Settings"
 #~ msgstr "_אפשרויות"
-
-#~ msgid "_Help"
-#~ msgstr "ע_זרה"
 
 #~ msgid "_Contents"
 #~ msgstr "_תכנים"
@@ -961,12 +996,6 @@ msgstr "מהלכים"
 #~ msgid "Five or more"
 #~ msgstr "חמש או יותר"
 
-#~ msgid "Scores"
-#~ msgstr "תוצאות"
-
-#~ msgid "Next:"
-#~ msgstr "הבא:"
-
 #~ msgid "0"
 #~ msgstr "0"
 
@@ -1105,9 +1134,6 @@ msgstr "מהלכים"
 
 #~ msgid "Res_ume"
 #~ msgstr "המש_ך"
-
-#~ msgid "_Scores"
-#~ msgstr "_תוצאות"
 
 #~ msgid "_End Game"
 #~ msgstr "_סיום המשחק"
@@ -2005,12 +2031,6 @@ msgstr "מהלכים"
 #~ msgid "_Preferences"
 #~ msgstr "ה_עדפות"
 
-#~ msgid "_About"
-#~ msgstr "על _אודות"
-
-#~ msgid "_Quit"
-#~ msgstr "י_ציאה"
-
 #~ msgid "Hint"
 #~ msgstr "רמז"
 
@@ -2861,9 +2881,6 @@ msgstr "מהלכים"
 #~ msgid "5 of a Kind [50 + total]"
 #~ msgstr "5 מאותו סוג [50 + הסכום]"
 
-#~ msgid "Choose a score slot."
-#~ msgstr "בחר תיבת ניקוד."
-
 #~ msgid "5 of a Kind [total]"
 #~ msgstr "5 מאותו סוג [סך הכול]"
 
@@ -3301,9 +3318,6 @@ msgstr "מהלכים"
 
 #~ msgid "boo"
 #~ msgstr "boo"
-
-#~ msgid "Restart the current game"
-#~ msgstr "הפעל מחדש את המשחק הנוכחי"
 
 #~ msgid "Dark's move"
 #~ msgstr "תור הכהה"
