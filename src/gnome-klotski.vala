@@ -514,8 +514,6 @@ public class Klotski : Gtk.Application
         prev_puzzle = window.lookup_action ("prev-puzzle") as SimpleAction;
         next_puzzle = window.lookup_action ("next-puzzle") as SimpleAction;
         start_game = window.lookup_action ("start-game") as SimpleAction;
-        set_accels_for_action ("app.help", {"F1"});
-        set_accels_for_action ("app.quit", {"<Primary>q"});
         // set_accels_for_action ("win.start-game", {"<Primary>n"}); /* or <Primary>r ? or both ? */
         set_accels_for_action ("win.prev-puzzle", {"Up"});       // TODO
         set_accels_for_action ("win.next-puzzle", {"Down"});     // TODO a weird behaviour exists when you first change puzzle pack, then go to
