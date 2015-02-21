@@ -9,10 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-15 18:51+0000\n"
-"PO-Revision-Date: 2014-09-15 22:12+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-21 08:07+0000\n"
+"PO-Revision-Date: 2015-02-21 18:20+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,45 +19,109 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
 msgstr "Vyber debnu GNOME"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-msgid ""
-"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
-"need to slide other blocks out of the way. Complete each puzzle in as few "
-"moves as possible!"
-msgstr ""
-"Vyber debnu GNOME je druh hlavolamu s presúvaním blokov. Cieľom je presunúť "
-"označený blok do oblasti vyznačenej zelenými značkami. Preto musíte odsunúť "
-"ostatné bloky z cesty. Dokončite hlavolam čo s najmenším počtom ťahov."
+#: ../data/gnome-klotski.appdata.xml.in.h:2 ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Posúvaním blokov vyriešte hlavolam"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
-"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
-"difficulty. Some of the layouts are similar and only the size of one or more "
-"blocks differ. Other layouts have more variety."
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move the patterned block to the area bordered by green markers. To do "
+"so, you’ll need to slide other blocks out of the way. Complete each puzzle in as few moves as possible!"
 msgstr ""
-"Vyber debnu GNOME ponúka takmer tridsať rôznych variácií hlavolamov "
-"rozličnej obtiažnosti. Niektoré variácie sú podobné a líšia sa len jednou "
-"alebo viacerými blokmi. Iné variácie sú rôznorodejšie."
+"Vyber debnu GNOME je druh hlavolamu s presúvaním blokov. Cieľom je presunúť označený blok do oblasti vyznačenej zelenými značkami. Preto "
+"musíte odsunúť ostatné bloky z cesty. Dokončite hlavolam čo s najmenším počtom ťahov!"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:948
+#: ../data/gnome-klotski.appdata.xml.in.h:4
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying difficulty. Some of the layouts are similar and only the size of "
+"one or more blocks differ. Other layouts have more variety."
+msgstr ""
+"Vyber debnu GNOME ponúka takmer tridsať rôznych variácií hlavolamov rozličnej obtiažnosti. Niektoré variácie sú podobné a líšia sa len "
+"jednou alebo viacerými blokmi. Iné variácie sú rôznorodejšie."
+
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6 ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:667
 msgid "Klotski"
 msgstr "Vyber debnu"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Posúvaním blokov vyriešte hlavolam"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "hra;strategická;logická;stratégia;logika;presúvanie blokov;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "Cestička cez Huarong"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Súťažný balík"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Tréningový balík"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "Predchádzajúci"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "Ďalší"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "Začať _odznovu"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "Reštartuje aktuálny hlavolam"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "_Zmeniť hlavolam"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "Zvolí iný hlavolam"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_O programe"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_Ukončiť"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Skóre"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Hlavolam:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Dátum"
+
+# PK:  neurcitok?
+# PM: v oboch prípadoch je to položka menu v prvom prípade ide o presun kameňov a v druhom o presun robota (presun > teleport, nahodne, cakat)
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Presun"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -81,187 +144,155 @@ msgid "true if the window is maximized"
 msgstr "true, ak je okno maximalizované"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "Iba 18 ťahov"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "Sedmokráska"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "Fialka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "Vlčí mak"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "Sirôtka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "Snežienka"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "Červený somár"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "Cestička"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "Pasca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "Agátka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "Úspech"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "Kosť"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "Bohatstvo"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "Šašo"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "Šalamún"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "Žralok"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "Rím"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "Vlajkový hlavolam"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "Peloponéz"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "Polonéza"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "Baltické more"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "Americký koláč"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "Dopravná zápcha"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "Slnečný svit"
 
 # cmd desc
-#: ../src/gnome-klotski.vala:434
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Vypíše verziu vydania a skončí"
 
-#: ../src/gnome-klotski.vala:632
-msgid "Previous Puzzle"
-msgstr "Predchádzajúci hlavolam"
-
-#: ../src/gnome-klotski.vala:638
-msgid "Next Puzzle"
-msgstr "Nasledujúci hlavolam"
-
-#: ../src/gnome-klotski.vala:660
-msgid "_Start Over"
-msgstr "Začať _odznovu"
-
 #: ../src/gnome-klotski.vala:669
-#| msgid "_Puzzles"
-msgid "_View Puzzles"
-msgstr "_Zobraziť hlavolamy"
+msgid "Sliding block puzzles"
+msgstr "Hlavolamy s posúvaním blokov"
 
-#: ../src/gnome-klotski.vala:853
-#, c-format
-msgid "Moves: %d"
-msgstr "Počet ťahov: %d"
-
-#: ../src/gnome-klotski.vala:856
-msgid "Level completed."
-msgstr "Úroveň dokončená."
-
-#: ../src/gnome-klotski.vala:950
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Logická hra s posúvaním blokov\n"
-"\n"
-"Hra Vyber debnu je súčasťou Hier GNOME."
-
-#: ../src/gnome-klotski.vala:956
+#: ../src/gnome-klotski.vala:677
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -270,31 +301,36 @@ msgstr ""
 "Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "_Zavrieť"
+#: ../src/gnome-klotski.vala:836
+#, c-format
+msgid "Moves: %d"
+msgstr "Počet ťahov: %d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Nová hra"
+#: ../src/gnome-klotski.vala:839
+msgid "Level completed."
+msgstr "Úroveň dokončená."
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "Hlavolam:"
+#~ msgid "Next Puzzle"
+#~ msgstr "Nasledujúci hlavolam"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Dátum"
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Logická hra s posúvaním blokov\n"
+#~ "\n"
+#~ "Hra Vyber debnu je súčasťou Hier GNOME."
 
-# PK:  neurcitok?
-# PM: v oboch prípadoch je to položka menu v prvom prípade ide o presun kameňov a v druhom o presun robota (presun > teleport, nahodne, cakat)
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "Presun"
+#~ msgid "_Close"
+#~ msgstr "_Zavrieť"
+
+#~ msgid "New Game"
+#~ msgstr "Nová hra"
 
 #~ msgid "true if the window is fullscreen"
 #~ msgstr "true, ak je okno v celoobrazovkovom režime"
@@ -313,18 +349,6 @@ msgstr "Presun"
 
 #~ msgid "_Game"
 #~ msgstr "_Hra"
-
-#~ msgid "HuaRong Trail"
-#~ msgstr "Cestička cez HuaRong"
-
-#~ msgid "Challenge Pack"
-#~ msgstr "Súťažný balík"
-
-#~ msgid "Skill Pack"
-#~ msgstr "Tréningový balík"
-
-#~ msgid "_Restart Puzzle"
-#~ msgstr "_Reštartovať hlavolam"
 
 #~ msgid "GNOME Games web site"
 #~ msgstr "Webové stránky Hier GNOME"
@@ -346,9 +370,6 @@ msgstr "Presun"
 
 #~ msgid "_Settings"
 #~ msgstr "_Nastavenia"
-
-#~ msgid "_Help"
-#~ msgstr "_Pomocník"
 
 #~ msgid "_Contents"
 #~ msgstr "Ob_sah"
@@ -389,10 +410,8 @@ msgstr "Presun"
 #~ msgid "The piece to promote pawns to"
 #~ msgstr "Figúrka, na ktorú premieňať pešiakov"
 
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
-#~ msgstr ""
-#~ "Figúrka, na ktorú sa premení pešiak, keď ho hráč posunie na posledné pole"
+#~ msgid "The piece to promote to when a human player moves a pawn to the far rank"
+#~ msgstr "Figúrka, na ktorú sa premení pešiak, keď ho hráč posunie na posledné pole"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "Príznak povoľujúci 3D režim"
@@ -437,11 +456,10 @@ msgstr "Presun"
 #~ msgstr "Protihráč"
 
 #~ msgid ""
-#~ "Can be 'human' (play against another human player), '' (use the first "
-#~ "available chess engine) or the name of a specific engine to play against"
+#~ "Can be 'human' (play against another human player), '' (use the first available chess engine) or the name of a specific engine to play "
+#~ "against"
 #~ msgstr ""
-#~ "Môže byť 'human' (hra proti druhému človeku v úlohe protihráča), "
-#~ "'' (použije prvý dostupný šachový stroj) alebo názov konkrétneho "
+#~ "Môže byť 'human' (hra proti druhému človeku v úlohe protihráča), '' (použije prvý dostupný šachový stroj) alebo názov konkrétneho "
 #~ "šachového stroja, proti ktorému sa bude hrať"
 
 #~ msgid "Difficulty of the opponent chess engine"
