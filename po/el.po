@@ -29,72 +29,150 @@
 # Simos Xenitellis <simos.lists@googlemail.com>, 2010.
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
-# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-03 06:55+0000\n"
-"PO-Revision-Date: 2014-08-03 15:36+0200\n"
-"Last-Translator: Maria Mavridou <mavridou@gmail.com>\n"
-"Language-Team: www.gnome.gr\n"
+"POT-Creation-Date: 2015-02-20 07:55+0000\n"
+"PO-Revision-Date: 2015-02-21 06:13+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
-msgstr "Κλότσκι"
+msgstr "GNOME Κλότσκι"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Μετακινήστε τα κομμάτια για να λύσετε τον γρίφο."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+#| "the patterned block to the area bordered by green markers. To do so, "
+#| "you'll need to slide other blocks out of the way. Complete each puzzle in "
+#| "as few moves as possible!"
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
 "Το GNOME Κλότσκι είναι ένα σύνολο από κινητά κομμάτια. Ο σκοπός είναι η "
 "μετακίνηση της ομάδας με το μοτίβο στην περιοχή που συνορεύει με τους "
 "πράσινους σημειωτές. Για να γίνει αυτό, θα χρειαστείτε να μετακινήσετε άλλα "
-"κομμάτια από τον δρόμο. Συμπληρώστε κάθε παζλ με όσες πιο λίγες μετακινήσεις "
-"μπορείτε!"
+"κομμάτια έξω από τον δρόμο. Συμπληρώστε κάθε γρίφο με όσες πιο λίγες "
+"μετακινήσεις μπορείτε!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"Το GNOME Κλότσκι έρχεται με σχεδόν τριάντα διαφορετικές διατάξεις παζλ "
+"Το GNOME Κλότσκι έρχεται με σχεδόν τριάντα διαφορετικές διατάξεις γρίφου "
 "ποικίλης δυσκολίας. Μερικές από τις διατάξεις είναι παρόμοιες και μόνο το "
-"μέγεθος ενός ή περισσότερων διαφέρει. Άλλες διατάξεις έχουν περισσότερη "
-"ποικιλία. "
+"μέγεθος ενός ή περισσότερων κομματιών διαφέρει. Άλλες διατάξεις έχουν "
+"περισσότερη ποικιλία."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:930
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:667
 msgid "Klotski"
 msgstr "Κλότσκι"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Μετακινήστε τους κύβους για να λύσετε το παζλ."
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "παιχνίδι;στρατηγική;λογική;μετακίνηση;game;strategy;logic;move;"
 
+#: ../data/klotski.ui.h:1
+#| msgid "HuaRong Trail"
+msgid "Huarong Trail"
+msgstr "Διαδρομή HuaRong"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Πακέτο προκλήσεων"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Πακέτο δεξιοτήτων"
+
+#: ../data/klotski.ui.h:4
+#| msgid "Previous Puzzle"
+msgid "Previous"
+msgstr "Προηγούμενο"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "Επόμενο"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "Εκκίνη_ση από την αρχή"
+
+#: ../data/klotski.ui.h:8
+#| msgid "_Restart Puzzle"
+msgid "Restart the current puzzle"
+msgstr "Επανεκκίνηση του τρέχοντος γρίφου"
+
+#: ../data/klotski.ui.h:9
+#| msgid "_View Puzzles"
+msgid "_Change Puzzle"
+msgstr "Α_λλαγή γρίφου"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "Επιλέξτε έναν άλλο γρίφο"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "Απο_τελέσματα"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_Περί"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Αποτελέσματα"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Γρίφος:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Κινήσεις"
+
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "Το παζλ που είναι σε εξέλιξη"
+msgstr "Ο παιζόμενος γρίφος"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
-msgstr "Ο αριθμός του τρέχοντος παζλ."
+msgstr "Ο αριθμός του τρέχοντος γρίφου."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
@@ -109,185 +187,155 @@ msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "Μόνο 18 βήματα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "Μαργαρίτα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "Βιολέτα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "Παπαρούνα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "Πανσές"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "Γάλανθος"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "Κόκκινος γάιδαρος"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "Διαδρομή"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "Ενέδρα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "Επιτυχία"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "Κόκκαλο"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "Τύχη"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "Ανόητος"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "Σολωμόντας"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "Κλεοπάτρα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "Καρχαρίας"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "Ρώμη"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
-msgstr "Παζλ με σήμανση"
+msgstr "Γρίφος με λάβαρο"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "Ιθάκη"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "Πελοπόννησος"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "Πολωνέζ"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "Βαλτική θάλασσα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "Αμερικανική πίτα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "Μποτιλιάρισμα"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "Λιακάδα"
 
-#: ../src/gnome-klotski.vala:434
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Εκτύπωση της έκδοσης και έξοδος"
 
-#: ../src/gnome-klotski.vala:618
-msgid "Previous Puzzle"
-msgstr "Προηγούμενο παζλ"
+#: ../src/gnome-klotski.vala:669
+#| msgid "Slide blocks to solve the puzzle"
+msgid "Sliding block puzzles"
+msgstr "Μετακινήστε τα κομμάτια του γρίφου"
 
-#: ../src/gnome-klotski.vala:624
-msgid "Next Puzzle"
-msgstr "Επόμενο παζλ"
-
-#: ../src/gnome-klotski.vala:643
-msgid "_View Puzzles"
-msgstr "_Προβολή παζλ"
-
-#: ../src/gnome-klotski.vala:650
-msgid "_Start Over"
-msgstr "Εκκίνη_ση από την αρχή"
-
-#: ../src/gnome-klotski.vala:835
-#, c-format
-msgid "Moves: %d"
-msgstr "Κινήσεις: %d"
-
-#: ../src/gnome-klotski.vala:838
-msgid "Level completed."
-msgstr "Ολοκλήρωση επιπέδου."
-
-#: ../src/gnome-klotski.vala:932
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Παζλ μετακινούμενων κύβων\n"
-"\n"
-"Το Κλότσκι είναι μέρος των παιχνιδιών του GNOME."
-
-#: ../src/gnome-klotski.vala:938
+#: ../src/gnome-klotski.vala:677
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -301,29 +349,36 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "Κ_λείσιμο"
+#: ../src/gnome-klotski.vala:836
+#, c-format
+msgid "Moves: %d"
+msgstr "Κινήσεις: %d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Νέο Παιχνίδι"
+#: ../src/gnome-klotski.vala:839
+msgid "Level completed."
+msgstr "Ολοκλήρωση επιπέδου."
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "Ε_ντάξει"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "Παζλ:"
+#~ msgid "Next Puzzle"
+#~ msgstr "Επόμενο παζλ"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Ημερομηνία"
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Παζλ μετακινούμενων κύβων\n"
+#~ "\n"
+#~ "Το Κλότσκι είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "Κινήσεις"
+#~ msgid "_Close"
+#~ msgstr "Κ_λείσιμο"
+
+#~ msgid "New Game"
+#~ msgstr "Νέο Παιχνίδι"
 
 #~ msgid "true if the window is fullscreen"
 #~ msgstr "αληθής αν το παράθυρο είναι σε πλήρη οθόνη"
@@ -343,23 +398,8 @@ msgstr "Κινήσεις"
 #~ msgid "GNOME Games web site"
 #~ msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
 
-#~ msgid "_Quit"
-#~ msgstr "Έ_ξοδος"
-
 #~ msgid "_Game"
 #~ msgstr "_Παιχνίδι"
-
-#~ msgid "HuaRong Trail"
-#~ msgstr "Διαδρομή HuaRong"
-
-#~ msgid "Challenge Pack"
-#~ msgstr "Πακέτο προκλήσεων"
-
-#~ msgid "Skill Pack"
-#~ msgstr "Πακέτο δεξιοτήτων"
-
-#~ msgid "_Restart Puzzle"
-#~ msgstr "_Επανεκκίνηση παζλ"
 
 #~ msgid "Chess"
 #~ msgstr "Σκάκι"
@@ -378,9 +418,6 @@ msgstr "Κινήσεις"
 
 #~ msgid "_Settings"
 #~ msgstr "Ρυθμίσεις"
-
-#~ msgid "_Help"
-#~ msgstr "_Βοήθεια"
 
 #~ msgid "_Contents"
 #~ msgstr "_Περιεχόμενα"
