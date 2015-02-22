@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-21 08:07+0000\n"
-"PO-Revision-Date: 2015-02-21 18:20+0100\n"
+"POT-Creation-Date: 2015-02-22 07:54+0000\n"
+"PO-Revision-Date: 2015-02-22 16:28+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
-msgstr "Vyber debnu GNOME"
+msgstr "Klotski GNOME"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2 ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
@@ -34,20 +34,20 @@ msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move the patterned block to the area bordered by green markers. To do "
 "so, you’ll need to slide other blocks out of the way. Complete each puzzle in as few moves as possible!"
 msgstr ""
-"Vyber debnu GNOME je druh hlavolamu s presúvaním blokov. Cieľom je presunúť označený blok do oblasti vyznačenej zelenými značkami. Preto "
-"musíte odsunúť ostatné bloky z cesty. Dokončite hlavolam čo s najmenším počtom ťahov!"
+"Klotski GNOME je druh hlavolamu s presúvaním blokov. Cieľom je presunúť označený blok do oblasti vyznačenej zelenými značkami. Preto musíte "
+"odsunúť ostatné bloky z cesty. Dokončite hlavolam čo s najmenším počtom ťahov!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying difficulty. Some of the layouts are similar and only the size of "
 "one or more blocks differ. Other layouts have more variety."
 msgstr ""
-"Vyber debnu GNOME ponúka takmer tridsať rôznych variácií hlavolamov rozličnej obtiažnosti. Niektoré variácie sú podobné a líšia sa len "
-"jednou alebo viacerými blokmi. Iné variácie sú rôznorodejšie."
+"Klotski GNOME ponúka takmer tridsať rôznych variácií hlavolamov rozličnej obtiažnosti. Niektoré variácie sú podobné a líšia sa len jednou "
+"alebo viacerými blokmi. Iné variácie sú rôznorodejšie."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6 ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:667
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6 ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
 msgid "Klotski"
-msgstr "Vyber debnu"
+msgstr "Klotski"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
@@ -288,11 +288,11 @@ msgstr "Slnečný svit"
 msgid "Print release version and exit"
 msgstr "Vypíše verziu vydania a skončí"
 
-#: ../src/gnome-klotski.vala:669
+#: ../src/gnome-klotski.vala:667
 msgid "Sliding block puzzles"
 msgstr "Hlavolamy s posúvaním blokov"
 
-#: ../src/gnome-klotski.vala:677
+#: ../src/gnome-klotski.vala:675
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -301,12 +301,12 @@ msgstr ""
 "Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/gnome-klotski.vala:836
+#: ../src/gnome-klotski.vala:834
 #, c-format
 msgid "Moves: %d"
 msgstr "Počet ťahov: %d"
 
-#: ../src/gnome-klotski.vala:839
+#: ../src/gnome-klotski.vala:837
 msgid "Level completed."
 msgstr "Úroveň dokončená."
 
