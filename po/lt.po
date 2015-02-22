@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-26 18:55+0000\n"
-"PO-Revision-Date: 2014-07-27 00:21+0300\n"
+"POT-Creation-Date: 2015-02-22 19:57+0000\n"
+"PO-Revision-Date: 2015-02-23 00:07+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -32,9 +32,19 @@ msgid "GNOME Klotski"
 msgstr "GNOME Klotski"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Stumkite blokus norėdami išspręsti galvosūkį"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+#| "the patterned block to the area bordered by green markers. To do so, "
+#| "you'll need to slide other blocks out of the way. Complete each puzzle in "
+#| "as few moves as possible!"
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
@@ -43,7 +53,7 @@ msgstr ""
 "šalį kitus blokus. Užbaikite kiekvieną galvosūkį atlikdami kiek galima "
 "mažiau ėjimų!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -53,18 +63,84 @@ msgstr ""
 "galvosūkių išdėstymų. Kai kurie išdėstymai yra panašūs, skiriasi tik vieno "
 "ar daugiau blokų dydis. Kiti išdėstymai yra įvairesni."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:930
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
 msgid "Klotski"
 msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Stumkite blokus norėdami išspręsti galvosūkį"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "žaidimas;strategija;logika;ėjimas;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "Huarong Trail"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Challenge Pack"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Skill Pack"
+
+#: ../data/klotski.ui.h:4
+#| msgid "Previous Puzzle"
+msgid "Previous"
+msgstr "Ankstesnis"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "Kitas"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "_Pradėti iš naujo"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "Žaisti galvosūkį iš naujo"
+
+#: ../data/klotski.ui.h:9
+#| msgid "_View Puzzles"
+msgid "_Change Puzzle"
+msgstr "_Keisti galvosūkį"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "Pasirinkti kitą galvosūkį"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Rezultatai"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_Žinynas"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_Apie"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_Išeiti"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Rezultatai"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Dėlionė:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Data"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Ėjimai"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -87,215 +163,193 @@ msgid "true if the window is maximized"
 msgstr "teigiama, jei langas yra išdidintas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "Tik 18 žingsnių"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "Ramunė"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "Violeta"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "Aguona"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "Našlaitė"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "Snieguolė"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "Raudonas asilas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "Pėdsakas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "Pasala"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "Sėkmė"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "Kaulas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "Fortūna"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "Kvailys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "Saliamonas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "Ryklys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "Vėliavėlių galvosūkis"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "Polonezas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "Baltijos jūra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "Amerikietiškas pyragas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "Eismo kamštis"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "Saulės šviesa"
 
-#: ../src/gnome-klotski.vala:434
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Atspausdinti leidimo versiją ir išeiti"
 
-#: ../src/gnome-klotski.vala:618
-msgid "Previous Puzzle"
-msgstr "Ankstesnis galvosūkis"
+#: ../src/gnome-klotski.vala:667
+#| msgid "Slide blocks to solve the puzzle"
+msgid "Sliding block puzzles"
+msgstr "Blokų stumdymo galvosūkiai"
 
-#: ../src/gnome-klotski.vala:624
-msgid "Next Puzzle"
-msgstr "Kitas galvosūkis"
+#: ../src/gnome-klotski.vala:675
+msgid "translator-credits"
+msgstr ""
+"Paskutinis vertėjas:\n"
+"Aurimas Černius <aurisc4@gmail.com>\n"
+"\n"
+"Ankstesnieji vertėjai:\n"
+"Žygimantas Beručka <zygis@gnome.org>,\n"
+"Justina Klingaitė <justina.klingaite@gmail.com>\n"
+"Tomas Kuliavas <tokul@users.sf.net>,\n"
+"Gediminas Paulauskas <menesis@chatsubo.lt>"
 
-#: ../src/gnome-klotski.vala:643
-msgid "_View Puzzles"
-msgstr "_Rodyti galvosūkius"
-
-#: ../src/gnome-klotski.vala:650
-msgid "_Start Over"
-msgstr "_Pradėti iš naujo"
-
-#: ../src/gnome-klotski.vala:835
+#: ../src/gnome-klotski.vala:834
 #, c-format
 msgid "Moves: %d"
 msgstr "Ėjimai: %d"
 
-#: ../src/gnome-klotski.vala:838
+#: ../src/gnome-klotski.vala:837
 msgid "Level completed."
 msgstr "Lygis užbaigtas."
 
-#: ../src/gnome-klotski.vala:932
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Stumdomų blokų dėlionė\n"
-"\n"
-"Klotski yra GNOME žaidimų dalis."
-
-#: ../src/gnome-klotski.vala:938
-msgid "translator-credits"
-msgstr ""
-"Paskutinieji vertėjai:\n"
-"Žygimantas Beručka <zygis@gnome.org>,\n"
-"Justina Klingaitė <justina.klingaite@gmail.com>\n"
-"\n"
-"Ankstesnieji vertėjai:\n"
-"Tomas Kuliavas <tokul@users.sf.net>,\n"
-"Gediminas Paulauskas <menesis@chatsubo.lt>"
-
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "_Užverti"
-
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Naujas žaidimas"
-
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_Gerai"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "Dėlionė:"
+#~ msgid "Next Puzzle"
+#~ msgstr "Kitas galvosūkis"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Data"
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Stumdomų blokų dėlionė\n"
+#~ "\n"
+#~ "Klotski yra GNOME žaidimų dalis."
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "Ėjimai"
+#~ msgid "_Close"
+#~ msgstr "_Užverti"
+
+#~ msgid "New Game"
+#~ msgstr "Naujas žaidimas"
