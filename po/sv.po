@@ -1,19 +1,19 @@
 # Swedish messages for gnome-games.
-# Copyright © 1999-2014 Free Software Foundation, Inc.
+# Copyright © 1999-2015 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-24 18:55+0000\n"
-"PO-Revision-Date: 2014-07-28 23:22+0100\n"
+"POT-Creation-Date: 2015-02-21 23:38+0000\n"
+"PO-Revision-Date: 2015-02-24 16:28+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,46 +21,114 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
 msgstr "GNOME Klotski"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-msgid ""
-"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
-"need to slide other blocks out of the way. Complete each puzzle in as few "
-"moves as possible!"
-msgstr ""
-"GNOME Klotski är en uppsättning pussel där man flyttar på klossar. Målet är "
-"att flytta den mönstrade klossen till området som omges av gröna markörer. "
-"För att uppnå detta måste du flytta andra klossar ur vägen. Lös varje pussel "
-"på så få drag som möjligt!"
+#: ../data/gnome-klotski.appdata.xml.in.h:2 ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Flytta på klossar för att lösa pusslet"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
+"patterned block to the area bordered by green markers. To do so, you’ll need to "
+"slide other blocks out of the way. Complete each puzzle in as few moves as "
+"possible!"
+msgstr ""
+"GNOME Klotski är en uppsättning pussel där man flyttar på klossar. Målet är att "
+"flytta den mönstrade klossen till området som omges av gröna markörer. För att "
+"uppnå detta måste du flytta andra klossar ur vägen. Lös varje pussel på så få "
+"drag som möjligt!"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"GNOME Klotski innehåller nästan trettio olika pussel av varierande "
-"svårighet. Vissa av pusslen är lika varandra, där bara storleken på ett "
-"eller flera block skiljer dem åt. Andra pussel är mer varierade."
+"GNOME Klotski innehåller nästan trettio olika pussel av varierande svårighet. "
+"Vissa av pusslen är lika varandra, där bara storleken på en eller flera klossar "
+"skiljer dem åt. Andra pussel är mer varierade."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:930
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
 msgid "Klotski"
 msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Flytta på klossar för att lösa pusslet"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "spel;strategi;logik;förflyttning;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "Huarong-stigen"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Utmaningspaketet"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Skicklighetspaketet"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "Föregående"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "Nästa"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "_Börja om"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "Starta om aktuellt pussel"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "B_yt pussel"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "Välj ett annat pussel"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Poäng"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_Om"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "A_vsluta"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Poäng"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Pussel:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Datum"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Drag"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -85,36 +153,36 @@ msgstr "sant om fönstret är maximerat"
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "Endast 18 steg"
 
 # Blomnamn
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "Tusensköna"
 
 # Blomnamn
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "Viol"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "Vallmo"
 
 # Blomnamn
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "Pensé"
 
 # Blomnamn
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "Snödroppe"
 
@@ -125,7 +193,7 @@ msgstr "Snödroppe"
 # Osäker
 #
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "Röda åsnan"
 
@@ -143,7 +211,7 @@ msgstr "Röda åsnan"
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "Stig"
 
@@ -161,154 +229,122 @@ msgstr "Stig"
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "Bakhåll"
 
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "Agatka"
 
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "Framgång"
 
 # Osäker
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "Ben"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "Lyckan"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "Tok"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "Salomo"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "Haj"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "Rom"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "Vimpelpussel"
 
 # Grekisk ö.
 #
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "Ithaka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "Peloponnesos"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "Polonäs"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "Östersjön"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "Trafikstockning"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "Solsken"
 
-#: ../src/gnome-klotski.vala:434
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Skriv ut utgåvans version och avsluta"
 
-#: ../src/gnome-klotski.vala:618
-msgid "Previous Puzzle"
-msgstr "Föregående pussel"
+#: ../src/gnome-klotski.vala:667
+msgid "Sliding block puzzles"
+msgstr "Pussel med flyttbara klossar"
 
-#: ../src/gnome-klotski.vala:624
-msgid "Next Puzzle"
-msgstr "Nästa pussel"
-
-#: ../src/gnome-klotski.vala:643
-#| msgid "_Puzzles"
-msgid "_View Puzzles"
-msgstr "_Visa pussel"
-
-#: ../src/gnome-klotski.vala:650
-msgid "_Start Over"
-msgstr "_Börja om"
-
-#: ../src/gnome-klotski.vala:835
-#, c-format
-msgid "Moves: %d"
-msgstr "Drag: %d"
-
-#: ../src/gnome-klotski.vala:838
-msgid "Level completed."
-msgstr "Nivån färdig."
-
-#: ../src/gnome-klotski.vala:932
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Pusselspel där man flyttar på klossar\n"
-"\n"
-"Klotski är en del av GNOME Games."
-
-#: ../src/gnome-klotski.vala:938
+#: ../src/gnome-klotski.vala:675
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -321,41 +357,24 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "_Stäng"
+#: ../src/gnome-klotski.vala:834
+#, c-format
+msgid "Moves: %d"
+msgstr "Drag: %d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Nytt spel"
+#: ../src/gnome-klotski.vala:837
+msgid "Level completed."
+msgstr "Nivån färdig."
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "Pussel:"
+#~ msgid "Next Puzzle"
+#~ msgstr "Nästa pussel"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Datum"
+#~ msgid "_Close"
+#~ msgstr "_Stäng"
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "Drag"
-
-#~ msgid "true if the window is fullscreen"
-#~ msgstr "sant om fönstret är i helskärmsläge"
-
-#~ msgid "_New"
-#~ msgstr "_Nytt"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Helskärm"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Lämna helskärmsläge"
-
-#~ msgid "Puzzle: "
-#~ msgstr "Pussel:"
+#~ msgid "New Game"
+#~ msgstr "Nytt spel"
