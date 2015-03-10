@@ -16,6 +16,7 @@ HELP_MEDIA = \
 	media/logo.png
 
 HELP_LINGUAS = cs \
+	       de \
 	       es \
 	       fr
 

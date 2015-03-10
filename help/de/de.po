@@ -1,0 +1,608 @@
+# German translation for gnome-klotski.
+# Copyright (C) 2015 gnome-klotski's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-klotski package.
+# Christian Kirbach <Christian.Kirbach@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-klotski master\n"
+"POT-Creation-Date: 2015-03-10 19:59+0000\n"
+"PO-Revision-Date: 2015-03-10 21:22+0100\n"
+"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Christian Kirbach <Christian.Kirbach@gmail.com>, 2015\n"
+"Benjamin Steinwender <b@stbe.at>, 2015"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Klotski"
+msgstr "Klotski"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Klotski"
+msgstr "Klotski"
+
+#. (itstool) path: credit/name
+#: C/index.page:16 C/keyboard-shortcuts.page:12 C/puzzles.page:12
+#: C/rules.page:13 C/scores.page:12 C/start.page:13
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/name
+#: C/index.page:20 C/keyboard-shortcuts.page:17 C/puzzles.page:22
+#: C/rules.page:18 C/scores.page:22 C/start.page:23
+msgid "Michael Catanzaro"
+msgstr "Michael Catanzaro"
+
+#. (itstool) path: info/desc
+#: C/index.page:26
+msgid "GNOME Klotski help"
+msgstr "Hilfe zu GNOME Klotski"
+
+#. (itstool) path: page/title
+#: C/index.page:29
+msgid "<_:media-1/> Klotski"
+msgstr "<_:media-1/> Klotski"
+
+#. (itstool) path: page/p
+#: C/index.page:34
+msgid ""
+"<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
+"to move the patterned block to the area bordered by green markers. To do so, "
+"you will need to slide other blocks out of the way. Complete each puzzle in "
+"as few moves as possible!"
+msgstr ""
+"<app>GNOME Klotski</app> ist eine Sammlung von Blockschiebe-Puzzles. Das "
+"Ziel ist den markierten Block in den Bereich der grünen Markierung zu "
+"schieben. Dazu müssen Sie andere Blöcke aus dem Weg schieben. Beenden Sie "
+"jedes Puzzle mit so wenig Spielzügen wie möglich!"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Playing Klotski"
+msgstr "Klotski spielen"
+
+#. (itstool) path: section/title
+#: C/index.page:44
+msgid "Useful tips"
+msgstr "Nützliche Tipps"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:14 C/puzzles.page:14 C/rules.page:15
+#: C/scores.page:14 C/start.page:15
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:19 C/puzzles.page:19 C/puzzles.page:24
+#: C/rules.page:20 C/scores.page:19 C/scores.page:24 C/start.page:20
+msgid "2015"
+msgstr "2015"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:24
+msgid "Play the game using the keyboard."
+msgstr "Verwendung der Tastatur."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:28
+msgid "Keyboard shortcuts"
+msgstr "Tastenkombinationen"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:30
+msgid ""
+"Use keyboard shortcuts to perform common tasks more quickly than with the "
+"mouse and menus. The following tables list all of <app>Klotski’s</app> "
+"shortcut keys."
+msgstr ""
+"Verwenden Sie Tastenkürzel, um häufige Aufgaben schneller als mit der Maus "
+"und den Menüs zu erledigen. Die folgende Tabellen geben eine Übersicht über "
+"die Tastenkürzel von <app>Klotski</app>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:36
+msgid "Help"
+msgstr "Hilfe"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:40
+msgid "Quit"
+msgstr "Beenden"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Strg</key><key>Q</key></keyseq>"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr ""
+"Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 "
+"nicht angepasst"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Dieses Werk ist unter <_:link-1/> lizenziert."
+
+#. (itstool) path: credit/name
+#: C/puzzles.page:17 C/scores.page:17 C/start.page:18
+msgid "Shobha Tyagi"
+msgstr "Shobha Tyagi"
+
+#. (itstool) path: info/desc
+#: C/puzzles.page:30
+msgid "How do I switch puzzles?"
+msgstr "Wie können Puzzles gewechselt werden?"
+
+#. (itstool) path: page/title
+#: C/puzzles.page:34
+msgid "Puzzles"
+msgstr "Logikspiele"
+
+#. (itstool) path: page/p
+#: C/puzzles.page:36
+msgid ""
+"Puzzles are divided into three categories based on the difficulty level of "
+"the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
+"Pack</gui> and <gui>Skill Pack</gui> puzzles are more difficult."
+msgstr ""
+"Die Rätsel sind in drei Kategorien basierend auf der Schwierigkeitsstufe "
+"eingeteilt. <gui>HuaRong Trail</gui> sind die einfachsten. Die Rätsel zu "
+"<gui>Challenge Pack</gui> und <gui>Skill Pack</gui> sind schwieriger."
+
+#. (itstool) path: section/title
+#: C/puzzles.page:42
+msgid "Select a Puzzle"
+msgstr "Wählen Sie ein Puzzle"
+
+#. (itstool) path: section/p
+#: C/puzzles.page:44
+msgid "To browse the puzzles:"
+msgstr "So stöbern Sie Puzzles:"
+
+#. (itstool) path: item/p
+#: C/puzzles.page:47
+msgid ""
+"Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
+"Choose a category using the back and forward buttons on the top. All the "
+"puzzles in the current category will be displayed."
+msgstr ""
+"Klicken Sie auf den Knopf <gui style=\"button\">Rätsel wechseln</gui> in der "
+"Kopfleiste. Wählen Sie die Kategorie mit den Vorwärts und Rückwärts-Knöpfen. "
+"Alle Rätsel der aktuellen Kategorie werden angezeigt."
+
+#. (itstool) path: item/p
+#: C/puzzles.page:52
+msgid ""
+"You can navigate sequentially among the puzzles with the <gui style=\"button"
+"\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
+"double-click on the name of a puzzle to switch to it."
+msgstr ""
+"Sie können die Rätsel mit <gui style=\"button\">Nächstes Puzzle</gui> und "
+"<gui style=\"button\">Vorheriges Puzzle</gui> durchblättern. Alternativ "
+"können Sie auf den Namen des Puzzles klicken, um es auszuwählen."
+
+#. (itstool) path: info/desc
+#: C/rules.page:25
+msgid "What are the rules of <app>Klotski</app>?"
+msgstr "Was sind die Regeln von <app>Klotski</app>?"
+
+#. (itstool) path: page/title
+#: C/rules.page:29
+msgid "Game rules"
+msgstr "Spielregeln"
+
+#. (itstool) path: page/p
+#: C/rules.page:31
+msgid ""
+"The aim of <app>Klotski</app> is to move the patterned block to the area "
+"bordered by green markers. Click and drag a block to move it to a location "
+"of your choice on the board. Or, click once on the block to begin moving it, "
+"then click again on the position you wish to place it."
+msgstr ""
+"Das Ziel von <app>Klotski</app> ist den markierten Block in den Bereich der "
+"grünen Markierung zu schieben. Klicken und Ziehen Sie einen Block, um ihn "
+"auf den gewünschten Ort auf dem Brett zu verschieben. Alternativ klicken Sie "
+"einmal auf den zu verschiebenden Block und anschließend klicken Sie auf die "
+"gewünschte Position, um den Block zu platzieren."
+
+#. (itstool) path: section/title
+#: C/rules.page:37
+msgid "Rules for moving blocks"
+msgstr "Regeln zum Verschieben der Blöcke"
+
+#. (itstool) path: item/p
+#: C/rules.page:41
+msgid "The green blocks and the boundary blocks cannot be moved."
+msgstr "Die grünen Blöcke und die Umgrenzung kann nicht verschoben werden."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A block normally cannot be moved over any other block. However, you may move "
+"the patterened block over the green blocks."
+msgstr ""
+"Ein Block kann normalerweise nicht über einen anderen Block geschoben "
+"werden. Allerdings können Sie den markieren Block auf die grünen Blöcke "
+"ziehen."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "In a single move, you may move a block over any number of open spaces."
+msgstr ""
+"Sie können einen Block in einem einzelnen Zug über eine beliebige Anzahl an "
+"freien Feldern ziehen."
+
+#. (itstool) path: info/desc
+#: C/scores.page:29
+msgid "How do I view my high scores?"
+msgstr "Wie kann der Spielstand betrachtet werden?"
+
+#. (itstool) path: page/title
+#: C/scores.page:33
+msgid "Scores"
+msgstr "Punkte"
+
+#. (itstool) path: page/p
+#: C/scores.page:35
+msgid ""
+"You can check your performance by looking at the number of moves you have "
+"made in the previous games. To view your scores:"
+msgstr ""
+"Sie können Ihre Leistungen durch Betrachten der Anzahl der Spielzüge in "
+"vorherigen Spielen prüfen. So betrachten Sie Ihre Spielstände:"
+
+#. (itstool) path: item/p
+#: C/scores.page:39
+msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
+msgstr "Wählen Sie <gui style=\"menuitem\">Spielstände</gui> aus dem Menü."
+
+#. (itstool) path: item/p
+#: C/scores.page:43
+msgid ""
+"The dialog displays scores of one puzzle you have completed at a time. "
+"Select the puzzle whose scores you wish to see from the menu."
+msgstr ""
+"Der Dialog zeigt die Spielstand eines einzelnen Rätsels an. Wählen Sie das "
+"Rätsel, für das Sie den Spielstand betrachten möchten, aus dem Menü aus."
+
+#. (itstool) path: section/title
+#. (itstool) path: th/p
+#: C/scores.page:51 C/scores.page:58
+msgid "Minimum number of moves"
+msgstr "Minimale Anzahl an Spielzügen"
+
+#. (itstool) path: section/p
+#: C/scores.page:53
+msgid ""
+"The number of moves and the placement of blocks together make each game "
+"unique. The minimum number of moves for the various puzzles are:"
+msgstr ""
+"Sowohl die Anzahl der Spielzüge als auch die Anordnung der Blöcke sorgen für "
+"einzigartige Partien. Die minimale Anzahl der Spielzüge für die "
+"verschiedenen Rätsel sind:"
+
+#. (itstool) path: th/p
+#: C/scores.page:58
+msgid "Puzzle"
+msgstr "Puzzle"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "Only 18 Steps"
+msgstr "Nur 18 Züge"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:64
+msgid "Daisy"
+msgstr "Gänseblümchen"
+
+#. (itstool) path: td/p
+#: C/scores.page:64 C/scores.page:73
+msgid "28"
+msgstr "28"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "Violet"
+msgstr "Violett"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "27"
+msgstr "27"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "Poppy"
+msgstr "Mohnblume"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "40"
+msgstr "40"
+
+#. (itstool) path: td/p
+#: C/scores.page:73
+msgid "Pansy"
+msgstr "Stiefmütterchen"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "Snowdrop"
+msgstr "Schneeglöckchen"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "46"
+msgstr "46"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "Red Donkey"
+msgstr "Roter Esel"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "Trail"
+msgstr "Pfad"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "102"
+msgstr "102"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "Ambush"
+msgstr "Hinterhalt"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "120"
+msgstr "120"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "Agatka"
+msgstr "Agatka"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "30"
+msgstr "30"
+
+#. (itstool) path: td/p
+#: C/scores.page:91
+msgid "Success"
+msgstr "Erfolgreich"
+
+#. (itstool) path: td/p
+#: C/scores.page:91 C/scores.page:121
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "Bone"
+msgstr "Knochen"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "Fortune"
+msgstr "Glück"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "24"
+msgstr "24"
+
+#. (itstool) path: td/p
+#: C/scores.page:100
+msgid "Fool"
+msgstr "Narr"
+
+#. (itstool) path: td/p
+#: C/scores.page:100 C/scores.page:103
+msgid "29"
+msgstr "29"
+
+#. (itstool) path: td/p
+#: C/scores.page:103
+msgid "Solomon"
+msgstr "Salomon"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "Cleopatra"
+msgstr "Kleopatra"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "Shark"
+msgstr "Haifisch"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "48"
+msgstr "48"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "Rome"
+msgstr "Rome"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "38"
+msgstr "38"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "Pennant Puzzle"
+msgstr "Fähnchen-Puzzle"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "59"
+msgstr "59"
+
+#. (itstool) path: td/p
+#: C/scores.page:118
+msgid "Ithaca"
+msgstr "Ithaca"
+
+#. (itstool) path: td/p
+#: C/scores.page:118 C/scores.page:133
+msgid "?"
+msgstr "?"
+
+#. (itstool) path: td/p
+#: C/scores.page:121
+msgid "Pelopones"
+msgstr "Peloponnes"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "21"
+msgstr "21"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "Polonaise"
+msgstr "Polonaise"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "23"
+msgstr "23"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "Baltic Sea"
+msgstr "Ostsee"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "42"
+msgstr "42"
+
+#. (itstool) path: td/p
+#: C/scores.page:133
+msgid "American Pie"
+msgstr "Warmer Apfelkuchen"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "Traffic Jam"
+msgstr "Verkehrsstau"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "132"
+msgstr "132"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "Sunshine"
+msgstr "Sonnenschein"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "345"
+msgstr "345"
+
+#. (itstool) path: info/desc
+#: C/start.page:29
+msgid "How do I start playing?"
+msgstr "Wie beginnt man zu spielen?"
+
+#. (itstool) path: page/title
+#: C/start.page:33
+msgid "Start a new game"
+msgstr "Ein neues Spiel starten"
+
+#. (itstool) path: page/p
+#: C/start.page:35
+msgid ""
+"When you open <app>Klotski</app>, a new game begins automatically. After "
+"your first move, you can select <gui style=\"button\">Start Over</gui> to "
+"restart the puzzle that you are currently playing. You can also <link xref="
+"\"puzzles\">switch to a different puzzle.</link>"
+msgstr ""
+"Wenn Sie <app>Klotski</app> starten, beginnt automatisch ein neuen Spiel. "
+"Nach dem ersten Spielzug können Sie <gui style=\"button\">Neu beginnen</gui> "
+"wählen, um das aktuelle Rätsel neu zu starten. Sie können <link xref="
+"\"puzzles\">das Rätsel auch wechseln</link>."
+
+#~ msgid "Advanced"
+#~ msgstr "Fortgeschritten"
+
+#~ msgid "Introduction"
+#~ msgstr "Einführung"
+
+#~ msgid "New game"
+#~ msgstr "Neues Spiel"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+#~ msgstr "<keyseq><key>Strg</key><key>N</key></keyseq>"
+
+#~ msgid "Moves"
+#~ msgstr "Züge"
+
+#~ msgid "Play a different puzzle"
+#~ msgstr "Ein anderes Puzzle spielen"
+
+#~ msgid ""
+#~ "To play a different puzzle, click on <gui style=\"button\">View Puzzles</"
+#~ "gui>."
+#~ msgstr ""
+#~ "Klicken Sie auf <gui style=\"button\">Puzzle anzeigen</gui>, um ein "
+#~ "anderes Puzzle zu spielen."
