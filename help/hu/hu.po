@@ -1,0 +1,578 @@
+# Hungarian translation for gnome-klotski.
+# Copyright (C) 2015 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-klotski package.
+#
+# Balázs Úr <urbalazs at gmail dot com>, 2015.
+# Gabor Kelemen <kelemeng at ubuntu dot com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-klotski master\n"
+"POT-Creation-Date: 2015-03-01 08:04+0000\n"
+"PO-Revision-Date: 2015-03-13 13:44+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"Language-Team: Hungarian <openscope at gmail dot com>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Úr Balázs <urbalazs at gmail dot com>, 2015."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Klotski"
+msgstr "Klotski"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Klotski"
+msgstr "Klotski"
+
+#. (itstool) path: credit/name
+#: C/index.page:16 C/keyboard-shortcuts.page:12 C/puzzles.page:12
+#: C/rules.page:13 C/scores.page:12 C/start.page:13
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/name
+#: C/index.page:20 C/keyboard-shortcuts.page:17 C/puzzles.page:22
+#: C/rules.page:18 C/scores.page:22 C/start.page:23
+msgid "Michael Catanzaro"
+msgstr "Michael Catanzaro"
+
+#. (itstool) path: info/desc
+#: C/index.page:26
+msgid "GNOME Klotski help"
+msgstr "GNOME Klotski súgó"
+
+#. (itstool) path: page/title
+#: C/index.page:29
+msgid "<_:media-1/> Klotski"
+msgstr "<_:media-1/> Klotski"
+
+#. (itstool) path: page/p
+#: C/index.page:34
+msgid ""
+"<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
+"to move the patterned block to the area bordered by green markers. To do so, "
+"you will need to slide other blocks out of the way. Complete each puzzle in "
+"as few moves as possible!"
+msgstr ""
+"A <app>GNOME Klotski</app> blokktologatós logikai játékok halmaza. A cél a "
+"mintás blokk átvitele a zöld jelölőkkel határolt területre. Ehhez a többi "
+"blokkot félre kell tolni az útból. Teljesítse az egyes feladványokat a "
+"lehető legkevesebb lépéssel!"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Playing Klotski"
+msgstr "A Klotski játék"
+
+#. (itstool) path: section/title
+#: C/index.page:44
+msgid "Useful tips"
+msgstr "Hasznos tippek"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:14 C/puzzles.page:14 C/rules.page:15
+#: C/scores.page:14 C/start.page:15
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:19 C/puzzles.page:19 C/puzzles.page:24
+#: C/rules.page:20 C/scores.page:19 C/scores.page:24 C/start.page:20
+msgid "2015"
+msgstr "2015"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:24
+msgid "Play the game using the keyboard."
+msgstr "Játék a billentyűzet használatával."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:28
+msgid "Keyboard shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:30
+msgid ""
+"Use keyboard shortcuts to perform common tasks more quickly than with the "
+"mouse and menus. The following tables list all of <app>Klotski’s</app> "
+"shortcut keys."
+msgstr ""
+"A gyorsbillentyűk segítségével a gyakori feladatok az egér és menük "
+"használatánál gyorsabban végezhetők el. A következő táblázatok felsorolják a "
+"<app>Klotski</app> összes gyorsbillentyűjét."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:36
+msgid "Help"
+msgstr "Súgó"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:40
+msgid "Quit"
+msgstr "Kilépés"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Nevezd meg!-Így add tovább! 3.0 átíratlan licenc"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Ez a mű a <_:link-1/> feltételei szerint terjeszthető."
+
+#. (itstool) path: credit/name
+#: C/puzzles.page:17 C/scores.page:17 C/start.page:18
+msgid "Shobha Tyagi"
+msgstr "Shobha Tyagi"
+
+#. (itstool) path: info/desc
+#: C/puzzles.page:30
+msgid "How do I switch puzzles?"
+msgstr "Hogyan válthatok fejtörőt?"
+
+#. (itstool) path: page/title
+#: C/puzzles.page:34
+msgid "Puzzles"
+msgstr "Fejtörők"
+
+#. (itstool) path: page/p
+#: C/puzzles.page:36
+msgid ""
+"Puzzles are divided into three categories based on the difficulty level of "
+"the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
+"Pack</gui> and <gui>Skill Pack</gui> puzzles are more difficult."
+msgstr ""
+"A fejtörők három kategóriára vannak osztva a játék nehézségi szintje "
+"alapján. A <gui>HuaRong ösvény</gui> fejtörők a legkönnyebbek. A "
+"<gui>Kihíváscsomag</gui> és a <gui>Szakértői csomag</gui> fejtörők sokkal "
+"nehezebbek."
+
+#. (itstool) path: section/title
+#: C/puzzles.page:42
+msgid "Select a Puzzle"
+msgstr "Fejtörő kiválasztása"
+
+#. (itstool) path: section/p
+#: C/puzzles.page:44
+msgid "To browse the puzzles:"
+msgstr "A fejtörők tallózásához:"
+
+#. (itstool) path: item/p
+#: C/puzzles.page:47
+msgid ""
+"Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
+"Choose a category using the back and forward buttons on the top. All the "
+"puzzles in the current category will be displayed."
+msgstr ""
+"Kattintson a <gui style=\"button\">Fejtörő módosítása</gui> gombra a "
+"fejlécsávban. Válasszon egy kategóriát a fent lévő vissza és előre gombok "
+"használatával. Az aktuális kategóriában minden fejtörő meg lesz jelenítve."
+
+#. (itstool) path: item/p
+#: C/puzzles.page:52
+msgid ""
+"You can navigate sequentially among the puzzles with the <gui style=\"button"
+"\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
+"double-click on the name of a puzzle to switch to it."
+msgstr ""
+"Sorrendben is navigálhat a fejtörők között a <gui style=\"button\">Következő "
+"fejtörő</gui> és az <gui style=\"button\">Előző fejtörő</gui> gombokkal. "
+"Vagy kattintson duplán egy fejtörő nevére az arra történő átváltáshoz."
+
+#. (itstool) path: info/desc
+#: C/rules.page:25
+msgid "What are the rules of <app>Klotski</app>?"
+msgstr "Mik a <app>Klotski</app> szabályai?"
+
+#. (itstool) path: page/title
+#: C/rules.page:29
+msgid "Game rules"
+msgstr "Játékszabályok"
+
+#. (itstool) path: page/p
+#: C/rules.page:31
+msgid ""
+"The aim of <app>Klotski</app> is to move the patterned block to the area "
+"bordered by green markers. Click and drag a block to move it to a location "
+"of your choice on the board. Or, click once on the block to begin moving it, "
+"then click again on the position you wish to place it."
+msgstr ""
+"A <app>Klotski</app> célja a mintás doboz áthelyezése a zöld jelzések által "
+"határolt területre. Kattintson és húzza a dobozt a választott helyre történő "
+"mozgatáshoz a táblán. Vagy kattintson egyszer a dobozra a mozgatás "
+"elkezdéséhez, majd kattintson újra arra a pozícióra, ahova helyezni szeretné."
+
+#. (itstool) path: section/title
+#: C/rules.page:37
+msgid "Rules for moving blocks"
+msgstr "A dobozok mozgatásának szabályai"
+
+#. (itstool) path: item/p
+#: C/rules.page:41
+msgid "The green blocks and the boundary blocks cannot be moved."
+msgstr "A zöld dobozok és a határoló dobozok nem mozgathatók."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A block normally cannot be moved over any other block. However, you may move "
+"the patterened block over the green blocks."
+msgstr ""
+"Egy doboz általában nem mozgatható semmilyen másik dobozra. Azonban a mintás "
+"dobozt ráhelyezheti a zöld dobozokra."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "In a single move, you may move a block over any number of open spaces."
+msgstr "Egy lépéssel akárhány üres hely fölött átmozgathat egy dobozt."
+
+#. (itstool) path: info/desc
+#: C/scores.page:29
+msgid "How do I view my high scores?"
+msgstr "Hogyan nézhetem meg a legmagasabb pontjaimat?"
+
+#. (itstool) path: page/title
+#: C/scores.page:33
+msgid "Scores"
+msgstr "Pontszámok"
+
+#. (itstool) path: page/p
+#: C/scores.page:35
+msgid ""
+"You can check your performance by looking at the number of moves you have "
+"made in the previous games. To view your scores:"
+msgstr ""
+"Ellenőrizheti teljesítményét az előző játékokban tett lépések számának "
+"megtekintésével. A pontszámok megtekintéséhez:"
+
+#. (itstool) path: item/p
+#: C/scores.page:39
+msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
+msgstr "Válassza ki a <gui style=\"menuitem\">Pontszámokat</gui> a menüből."
+
+#. (itstool) path: item/p
+#: C/scores.page:43
+msgid ""
+"The dialog displays scores of one puzzle you have completed at a time. "
+"Select the puzzle whose scores you wish to see from the menu."
+msgstr ""
+"A párbeszédablak egy korábban megoldott fejtörő pontszámait jeleníti meg. "
+"Válassza ki azt a fejtörőt a menüből, amely pontszámait meg szeretné "
+"tekinteni."
+
+#. (itstool) path: section/title
+#. (itstool) path: th/p
+#: C/scores.page:51 C/scores.page:58
+msgid "Minimum number of moves"
+msgstr "A lépések legkisebb száma"
+
+#. (itstool) path: section/p
+#: C/scores.page:53
+msgid ""
+"The number of moves and the placement of blocks together make each game "
+"unique. The minimum number of moves for the various puzzles are:"
+msgstr ""
+"A lépések száma és a dobozok elhelyezése együttesen tesznek egyedivé minden "
+"játékot. A lépések legkisebb száma a különféle fejtörőknél a következő:"
+
+#. (itstool) path: th/p
+#: C/scores.page:58
+msgid "Puzzle"
+msgstr "Fejtörő"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "Only 18 Steps"
+msgstr "Csak 18 lépés"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:64
+msgid "Daisy"
+msgstr "Százszorszép"
+
+#. (itstool) path: td/p
+#: C/scores.page:64 C/scores.page:73
+msgid "28"
+msgstr "28"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "Violet"
+msgstr "Ibolya"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "27"
+msgstr "27"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "Poppy"
+msgstr "Pipacs"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "40"
+msgstr "40"
+
+#. (itstool) path: td/p
+#: C/scores.page:73
+msgid "Pansy"
+msgstr "Árvácska"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "Snowdrop"
+msgstr "Hóvirág"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "46"
+msgstr "46"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "Red Donkey"
+msgstr "Vörös csacsi"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "Trail"
+msgstr "Ösvény"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "102"
+msgstr "102"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "Ambush"
+msgstr "Csapda"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "120"
+msgstr "120"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "Agatka"
+msgstr "Agatka"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "30"
+msgstr "30"
+
+#. (itstool) path: td/p
+#: C/scores.page:91
+msgid "Success"
+msgstr "Siker"
+
+#. (itstool) path: td/p
+#: C/scores.page:91 C/scores.page:121
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "Bone"
+msgstr "Csont"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "Fortune"
+msgstr "Szerencse"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "24"
+msgstr "24"
+
+#. (itstool) path: td/p
+#: C/scores.page:100
+msgid "Fool"
+msgstr "Bolond"
+
+#. (itstool) path: td/p
+#: C/scores.page:100 C/scores.page:103
+msgid "29"
+msgstr "29"
+
+#. (itstool) path: td/p
+#: C/scores.page:103
+msgid "Solomon"
+msgstr "Salamon"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "Cleopatra"
+msgstr "Kleopátra"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "Shark"
+msgstr "Cápa"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "48"
+msgstr "48"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "Rome"
+msgstr "Róma"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "38"
+msgstr "38"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "Pennant Puzzle"
+msgstr "Zászló fejtörő"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "59"
+msgstr "59"
+
+#. (itstool) path: td/p
+#: C/scores.page:118
+msgid "Ithaca"
+msgstr "Itaka"
+
+#. (itstool) path: td/p
+#: C/scores.page:118 C/scores.page:133
+msgid "?"
+msgstr "?"
+
+#. (itstool) path: td/p
+#: C/scores.page:121
+msgid "Pelopones"
+msgstr "Peloponész"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "21"
+msgstr "21"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "Polonaise"
+msgstr "Polonéz"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "23"
+msgstr "23"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "Baltic Sea"
+msgstr "Balti tenger"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "42"
+msgstr "42"
+
+#. (itstool) path: td/p
+#: C/scores.page:133
+msgid "American Pie"
+msgstr "Amerikai pite"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "Traffic Jam"
+msgstr "Közlekedési dugó"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "132"
+msgstr "132"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "Sunshine"
+msgstr "Napfény"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "345"
+msgstr "345"
+
+#. (itstool) path: info/desc
+#: C/start.page:29
+msgid "How do I start playing?"
+msgstr "Hogyan kezdhetek játszani?"
+
+#. (itstool) path: page/title
+#: C/start.page:33
+msgid "Start a new game"
+msgstr "Új játék indítása"
+
+#. (itstool) path: page/p
+#: C/start.page:35
+msgid ""
+"When you open <app>Klotski</app>, a new game begins automatically. After "
+"your first move, you can select <gui style=\"button\">Start Over</gui> to "
+"restart the puzzle that you are currently playing. You can also <link xref="
+"\"puzzles\">switch to a different puzzle.</link>"
+msgstr ""
+"Amikor megnyitja a <app>Klotski</app> alkalmazást, akkor automatikusan új "
+"játék kezdődik. Az első lépés után választhatja az <gui style=\"button"
+"\">Újrakezdést</gui> az aktuálisan játszott fejtörő újraindításához. Továbbá "
+"<link xref=\"puzzles\">átválthat egy másik fejtörőre</link> is."
+
