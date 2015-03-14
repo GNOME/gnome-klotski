@@ -1,0 +1,316 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-26 19:59+0000\n"
+"PO-Revision-Date: 2015-03-02 09:02+0100\n"
+"Last-Translator: Dženana <dkapetanov1@etf.unsa.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Launchpad-Export-Date: 2015-02-15 06:15+0000\n"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:1
+msgid "GNOME Klotski"
+msgstr "GNOME Klotski"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Guraj blokove da bi riješio slagalicu"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"GNOME Klotski je skup blokova puzli (zagonetki) koji se mogu klizati.Cilj je "
+"da se premjestiti  blok sa uzorkom na području omeđenom zelenim oznakama. Da "
+"biste to učinili, morat ćete pomaći druge blokove s puta. Kompletiraj svaku "
+"zagonetku u što je manje poteza moguće!"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:4
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"GNOME Klotski dolazi s gotovo trideset različitih izgleda zagonetki "
+"različitih poteškoća. Neki od izgleda zagonetki su slični, a samo veličina "
+"jednog ili više blokova se razlikuju. Ostali izgledi imaju više raznolikosti."
+
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+msgid "Klotski"
+msgstr "Klotski"
+
+#: ../data/gnome-klotski.desktop.in.h:3
+msgid "game;strategy;logic;move;"
+msgstr "igra, strategija, logika, kretanje;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "Hua-Rong trag"
+
+# Više izazova = višezov
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Višezov"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Umeće"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "Prethodna"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "Sljedeća"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "_Započni Ispočetka"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "Pokreni slagalicu iz početka"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "_Promijeni zagonetku"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "Izaberi drugu zagonetku"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Rezultati"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "Po_moć"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "O_programu"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_Izlaz"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Rezultati"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Slagalica:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Datum"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Kretanja"
+
+#: ../data/org.gnome.klotski.gschema.xml.h:1
+msgid "The puzzle in play"
+msgstr "Slagalica koja se igra"
+
+#: ../data/org.gnome.klotski.gschema.xml.h:2
+msgid "The number of the puzzle being played."
+msgstr "Broj slagalice koja se igra."
+
+#: ../data/org.gnome.klotski.gschema.xml.h:3
+msgid "Width of the window in pixels"
+msgstr "Širina prozora u tačkama"
+
+#: ../data/org.gnome.klotski.gschema.xml.h:4
+msgid "Height of the window in pixels"
+msgstr "Visina prozora u tačkama"
+
+#: ../data/org.gnome.klotski.gschema.xml.h:5
+msgid "true if the window is maximized"
+msgstr "izabrano ako je prozor uvećan"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:65
+msgid "Only 18 Steps"
+msgstr "Samo 18 koraka"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:78
+msgid "Daisy"
+msgstr "Tratinčica"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:91
+msgid "Violet"
+msgstr "Ljubičica"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:104
+msgid "Poppy"
+msgstr "Mak"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:117
+msgid "Pansy"
+msgstr "Dan i noć"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:130
+msgid "Snowdrop"
+msgstr "Pahuljica"
+
+#. puzzle nami - sometimes called "Le'Ane Rouge"
+#: ../src/gnome-klotski.vala:143
+msgid "Red Donkey"
+msgstr "Crveno magare"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:156
+msgid "Trail"
+msgstr "Trag"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:169
+msgid "Ambush"
+msgstr "Zasjeda"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:182
+msgid "Agatka"
+msgstr "Agatka"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:193
+msgid "Success"
+msgstr "Uspjeh"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:203
+msgid "Bone"
+msgstr "Koska"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:216
+msgid "Fortune"
+msgstr "Sudbina"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:230
+msgid "Fool"
+msgstr "Budala"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:240
+msgid "Solomon"
+msgstr "Solomon"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:253
+msgid "Cleopatra"
+msgstr "Kleopatra"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:265
+msgid "Shark"
+msgstr "Ajkula"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:277
+msgid "Rome"
+msgstr "Rim"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:289
+msgid "Pennant Puzzle"
+msgstr "Penant slagalica"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:302
+msgid "Ithaca"
+msgstr "Itaka"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:325
+msgid "Pelopones"
+msgstr "Peloponez"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:337
+msgid "Transeuropa"
+msgstr "Transevropa"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:349
+msgid "Lodzianka"
+msgstr "Lođijanka"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:360
+msgid "Polonaise"
+msgstr "Poloneza"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:371
+msgid "Baltic Sea"
+msgstr "Baltičko more"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:383
+msgid "American Pie"
+msgstr "Američka pita"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:399
+msgid "Traffic Jam"
+msgstr "Gužva u saobraćaju"
+
+#. puzzle nami
+#: ../src/gnome-klotski.vala:410
+msgid "Sunshine"
+msgstr "Sunčev sjaj"
+
+#: ../src/gnome-klotski.vala:438
+msgid "Print release version and exit"
+msgstr "Ispiši verziju i izađi"
+
+#: ../src/gnome-klotski.vala:667
+msgid "Sliding block puzzles"
+msgstr "Slaganje kližućih blokova"
+
+#: ../src/gnome-klotski.vala:675
+msgid "translator-credits"
+msgstr ""
+"   Dženana https://launchpad.net/~dkapetanov1\n"
+"  Samir Ribić https://launchpad.net/~megaribi"
+
+#: ../src/gnome-klotski.vala:834
+#, c-format
+msgid "Moves: %d"
+msgstr "Potezi: %d"
+
+#: ../src/gnome-klotski.vala:837
+msgid "Level completed."
+msgstr "Nivo završen."
+
+#: ../src/score-dialog.vala:33
+msgid "_OK"
+msgstr "_U redu"
