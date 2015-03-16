@@ -1,0 +1,729 @@
+# Greek translation for gnome-klotski.
+# Copyright (C) 2015 gnome-klotski's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-klotski package.
+# Tom Tryfonidis <tomtryf@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-klotski master\n"
+"POT-Creation-Date: 2015-03-15 15:05+0000\n"
+"PO-Revision-Date: 2015-03-15 20:18+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"Language-Team: Greek <team@lists.gnome.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.4\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα GNOME <team@gnome.gr>, 2009-2015\n"
+"Φώτης Τσάμης <ftsamis@gmail.com>, 2009\n"
+"Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2015"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "Klotski"
+msgstr "Κλότσκι"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "Klotski"
+msgstr "Κλότσκι"
+
+#. (itstool) path: credit/name
+#: C/index.page:16 C/keyboard-shortcuts.page:12 C/puzzles.page:12
+#: C/rules.page:13 C/scores.page:12 C/start.page:13
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/name
+#: C/index.page:20 C/keyboard-shortcuts.page:17 C/puzzles.page:22
+#: C/rules.page:18 C/scores.page:22 C/start.page:23
+msgid "Michael Catanzaro"
+msgstr "Michael Catanzaro"
+
+#. (itstool) path: info/desc
+#: C/index.page:26
+msgid "GNOME Klotski help"
+msgstr "Βοήθεια GNOME Κλότσκι"
+
+#. (itstool) path: page/title
+#: C/index.page:29
+msgid "<_:media-1/> Klotski"
+msgstr "<_:media-1/> Κλότσκι"
+
+#. (itstool) path: page/p
+#: C/index.page:34
+msgid ""
+"<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
+"to move the patterned block to the area bordered by green markers. To do so, "
+"you will need to slide other blocks out of the way. Complete each puzzle in "
+"as few moves as possible!"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Playing Klotski"
+msgstr "Παίζοντας Κλότσκι"
+
+#. (itstool) path: section/title
+#: C/index.page:44
+msgid "Useful tips"
+msgstr "Χρήσιμες συμβουλές"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:14 C/puzzles.page:14 C/rules.page:15
+#: C/scores.page:14 C/start.page:15
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: credit/years
+#: C/keyboard-shortcuts.page:19 C/puzzles.page:19 C/puzzles.page:24
+#: C/rules.page:20 C/scores.page:19 C/scores.page:24 C/start.page:20
+msgid "2015"
+msgstr "2015"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:24
+msgid "Play the game using the keyboard."
+msgstr "Παίξτε το παιχνίδι χρησιμοποιώντας το πληκτρολόγιο."
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:28
+msgid "Keyboard shortcuts"
+msgstr "Συντομεύσεις πληκτρολογίου"
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:30
+msgid ""
+"Use keyboard shortcuts to perform common tasks more quickly than with the "
+"mouse and menus. The following tables list all of <app>Klotski’s</app> "
+"shortcut keys."
+msgstr ""
+"Χρησιμοποιήστε τις συντομεύσεις του πληκτρολογίου για να εκτελέσετε εργασίες "
+"γρηγορότερα από ότι με το ποντίκι και τα μενού. Ο ακόλουθος πίνακας περιέχει "
+"όλες τις συντομεύσεις του <app>Κλότσκι</app>."
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:36
+msgid "Help"
+msgstr "Βοήθεια"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:40
+msgid "Quit"
+msgstr "Έξοδος"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Άδεια Creative Commons Attribution-ShareAlike 3.0 Unported"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Αυτό το έργο έχει αδειοδοτηθεί υπό την <_:link-1/>."
+
+#. (itstool) path: credit/name
+#: C/puzzles.page:17 C/scores.page:17 C/start.page:18
+msgid "Shobha Tyagi"
+msgstr "Shobha Tyagi"
+
+#. (itstool) path: info/desc
+#: C/puzzles.page:30
+msgid "How do I switch puzzles?"
+msgstr "Πώς αλλάζω γρίφους;"
+
+#. (itstool) path: page/title
+#: C/puzzles.page:34
+msgid "Puzzles"
+msgstr "Γρίφοι"
+
+#. (itstool) path: page/p
+#: C/puzzles.page:36
+msgid ""
+"Puzzles are divided into three categories based on the difficulty level of "
+"the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
+"Pack</gui> and <gui>Skill Pack</gui> puzzles are more difficult."
+msgstr ""
+"Οι γρίφοι χωρίζονται σε τρεις κατηγορίες με βάση τον βαθμό δυσκολίας του "
+"παιχνιδιού.  Οι γρίφοι <gui>Διαδρομή HuaRong</gui> είναι οι ευκολότεροι. Οι "
+"γρίφοι <gui>Πακέτο προκλήσεων</gui> και <gui>Πακέτο δεξιοτήτων</gui> είναι "
+"δυσκολότεροι."
+
+#. (itstool) path: section/title
+#: C/puzzles.page:42
+msgid "Select a Puzzle"
+msgstr "Επιλογή γρίφου"
+
+#. (itstool) path: section/p
+#: C/puzzles.page:44
+msgid "To browse the puzzles:"
+msgstr "Για να περιηγηθείτε στους γρίφους:"
+
+#. (itstool) path: item/p
+#: C/puzzles.page:47
+msgid ""
+"Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
+"Choose a category using the back and forward buttons on the top. All the "
+"puzzles in the current category will be displayed."
+msgstr ""
+"Κάντε κλικ στο κουμπί <gui style=\"button\">Αλλαγή γρίφου</gui> πάνω στη "
+"γραμμή κεφαλίδας. Επιλέξτε μια κατηγορία χρησιμοποιώντας τα κουμπιά εμπρός "
+"και πίσω που βρίσκονται στο πάνω μέρος. Θα εμφανιστούν όλοι οι διαθέσιμοι "
+"γρίφοι στη τρέχουσα κατηγορία."
+
+#. (itstool) path: item/p
+#: C/puzzles.page:52
+msgid ""
+"You can navigate sequentially among the puzzles with the <gui style=\"button"
+"\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
+"double-click on the name of a puzzle to switch to it."
+msgstr ""
+"Μπορείτε να περιηγηθείτε διαδοχικά μεταξύ των γρίφων μέσω των κουμπιών <gui "
+"style=\"button\">Επόμενος γρίφος</gui> και <gui style=\"button"
+"\">Προηγούμενος γρίφος</gui>. Ή με διπλό κλικ στο όνομα του γρίφου για να "
+"μεταβείτε σε αυτόν."
+
+#. (itstool) path: info/desc
+#: C/rules.page:25
+msgid "What are the rules of <app>Klotski</app>?"
+msgstr "Ποιοι είναι οι κανόνες του <app>Κλότσκι</app>;"
+
+#. (itstool) path: page/title
+#: C/rules.page:29
+msgid "Game rules"
+msgstr "Κανόνες παιχνιδού"
+
+#. (itstool) path: page/p
+#: C/rules.page:31
+msgid ""
+"The aim of <app>Klotski</app> is to move the patterned block to the area "
+"bordered by green markers. Click and drag a block to move it to a location "
+"of your choice on the board. Or, click once on the block to begin moving it, "
+"then click again on the position you wish to place it."
+msgstr ""
+"Ο σκοπός του <app>Κλοτσκι</app> είναι να μετακινήσετε το κομμάτι με το "
+"μοτίβο στην περιοχή με τα πράσινα σημάδια. Κάντε κλικ και σύρετε ένα κομμάτι "
+"για να το μετακινήσετε στην επιθυμητή σας θέση στον πίνακα. Ή κάντε κλικ στο "
+"κομμάτι για να το μετακινήσετε, και έπειτε ξανά κλικ στη θέση που θέλετε να "
+"το τοποθετήσετε."
+
+#. (itstool) path: section/title
+#: C/rules.page:37
+msgid "Rules for moving blocks"
+msgstr "Κανόνες για τη μετακίνηση των κομματιών"
+
+#. (itstool) path: item/p
+#: C/rules.page:41
+msgid "The green blocks and the boundary blocks cannot be moved."
+msgstr "Τα πράσινα και τα ακραία κομμάτια δεν μπορούν να μετακινηθούν."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A block normally cannot be moved over any other block. However, you may move "
+"the patterened block over the green blocks."
+msgstr ""
+"Ένα κομμάτι κανονικά δεν μπορεί να μετακινηθεί πάνω από ένα άλλο. Ωστόσο, "
+"μπορείτε να μετακινήσετε το κομμάτι με το μοτίβο πάνω από τα πράσινα."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "In a single move, you may move a block over any number of open spaces."
+msgstr ""
+"Σε μια κίνηση, μπορείτε να μετακινήσετε ένα κομμάτι στις κενές θέσεις του "
+"πίνακα."
+
+#. (itstool) path: info/desc
+#: C/scores.page:29
+msgid "How do I view my high scores?"
+msgstr "Πώς βλέπω τις υψηλότερες βαθμολογίες μου;"
+
+#. (itstool) path: page/title
+#: C/scores.page:33
+msgid "Scores"
+msgstr "Βαθμολογία"
+
+#. (itstool) path: page/p
+#: C/scores.page:35
+msgid ""
+"You can check your performance by looking at the number of moves you have "
+"made in the previous games. To view your scores:"
+msgstr ""
+"Μπορείτε να δείτε τις επιδόσεις σας κοιτώντας τον αριθμό των κινήσεων που "
+"έχετε κάνει στα προηγούμενα παιχνίδια. Για να δείτε τις βαθμολογίες σας:"
+
+#. (itstool) path: item/p
+#: C/scores.page:39
+msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
+msgstr "Επιλέξτε <gui style=\"menuitem\">Βαθμολογίες</gui> από το μενού."
+
+#. (itstool) path: item/p
+#: C/scores.page:43
+msgid ""
+"The dialog displays scores of one puzzle you have completed at a time. "
+"Select the puzzle whose scores you wish to see from the menu."
+msgstr ""
+"Το παράθυρο εμφανίζει τις βαθμολογίες από κάθε γρίφο που έχετε ολοκληρώσει. "
+"Επιλέξτε από το μενού τον γρίφο που θέλετε να δείτε τη βαθμολογία του."
+
+#. (itstool) path: section/title
+#. (itstool) path: th/p
+#: C/scores.page:51 C/scores.page:58
+msgid "Minimum number of moves"
+msgstr "Ελάχιστος αριθμός κινήσεων"
+
+#. (itstool) path: section/p
+#: C/scores.page:53
+msgid ""
+"The number of moves and the placement of blocks together make each game "
+"unique. The minimum number of moves for the various puzzles are:"
+msgstr ""
+"Ο αριθμός των κινήσεων και η τοποθέτηση των κομματιών κάνουν μοναδικό το "
+"κάθε παιχνίδι. Ο ελάχιστος αριθμός κινήσεων για τους διάφορους γρίφους είναι:"
+
+#. (itstool) path: th/p
+#: C/scores.page:58
+msgid "Puzzle"
+msgstr "Γρίφος"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "Only 18 Steps"
+msgstr "Μόνο 18 βήματα"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:64
+msgid "Daisy"
+msgstr "Μαργαρίτα"
+
+#. (itstool) path: td/p
+#: C/scores.page:64 C/scores.page:73
+msgid "28"
+msgstr "28"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "Violet"
+msgstr "Βιολέτα"
+
+#. (itstool) path: td/p
+#: C/scores.page:67
+msgid "27"
+msgstr "27"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "Poppy"
+msgstr "Παπαρούνα"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "40"
+msgstr "40"
+
+#. (itstool) path: td/p
+#: C/scores.page:73
+msgid "Pansy"
+msgstr "Πανσές"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "Snowdrop"
+msgstr "Γάλανθος"
+
+#. (itstool) path: td/p
+#: C/scores.page:76
+msgid "46"
+msgstr "46"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "Red Donkey"
+msgstr "Κόκκινος γάιδαρος"
+
+#. (itstool) path: td/p
+#: C/scores.page:79
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "Trail"
+msgstr "Διαδρομή"
+
+#. (itstool) path: td/p
+#: C/scores.page:82
+msgid "102"
+msgstr "102"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "Ambush"
+msgstr "Ενέδρα"
+
+#. (itstool) path: td/p
+#: C/scores.page:85
+msgid "120"
+msgstr "120"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "Agatka"
+msgstr "Agatka"
+
+#. (itstool) path: td/p
+#: C/scores.page:88
+msgid "30"
+msgstr "30"
+
+#. (itstool) path: td/p
+#: C/scores.page:91
+msgid "Success"
+msgstr "Επιτυχία"
+
+#. (itstool) path: td/p
+#: C/scores.page:91 C/scores.page:121
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "Bone"
+msgstr "Κόκκαλο"
+
+#. (itstool) path: td/p
+#: C/scores.page:94
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "Fortune"
+msgstr "Τύχη"
+
+#. (itstool) path: td/p
+#: C/scores.page:97
+msgid "24"
+msgstr "24"
+
+#. (itstool) path: td/p
+#: C/scores.page:100
+msgid "Fool"
+msgstr "Ανόητος"
+
+#. (itstool) path: td/p
+#: C/scores.page:100 C/scores.page:103
+msgid "29"
+msgstr "29"
+
+#. (itstool) path: td/p
+#: C/scores.page:103
+msgid "Solomon"
+msgstr "Σολωμόντας"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "Cleopatra"
+msgstr "Κλεοπάτρα"
+
+#. (itstool) path: td/p
+#: C/scores.page:106
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "Shark"
+msgstr "Καρχαρίας"
+
+#. (itstool) path: td/p
+#: C/scores.page:109
+msgid "48"
+msgstr "48"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "Rome"
+msgstr "Ρώμη"
+
+#. (itstool) path: td/p
+#: C/scores.page:112
+msgid "38"
+msgstr "38"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "Pennant Puzzle"
+msgstr "Παζλ με σήμανση"
+
+#. (itstool) path: td/p
+#: C/scores.page:115
+msgid "59"
+msgstr "59"
+
+#. (itstool) path: td/p
+#: C/scores.page:118
+msgid "Ithaca"
+msgstr "Ιθάκη"
+
+#. (itstool) path: td/p
+#: C/scores.page:118 C/scores.page:133
+msgid "?"
+msgstr ";"
+
+#. (itstool) path: td/p
+#: C/scores.page:121
+msgid "Pelopones"
+msgstr "Πελοπόννησος"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. (itstool) path: td/p
+#: C/scores.page:124
+msgid "21"
+msgstr "21"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "Polonaise"
+msgstr "Πολωνέζ"
+
+#. (itstool) path: td/p
+#: C/scores.page:127
+msgid "23"
+msgstr "23"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "Baltic Sea"
+msgstr "Βαλτική θάλασσα"
+
+#. (itstool) path: td/p
+#: C/scores.page:130
+msgid "42"
+msgstr "42"
+
+#. (itstool) path: td/p
+#: C/scores.page:133
+msgid "American Pie"
+msgstr "Αμερικανική πίτα"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "Traffic Jam"
+msgstr "Μποτιλιάρισμα"
+
+#. (itstool) path: td/p
+#: C/scores.page:136
+msgid "132"
+msgstr "132"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "Sunshine"
+msgstr "Λιακάδα"
+
+#. (itstool) path: td/p
+#: C/scores.page:139
+msgid "345"
+msgstr "345"
+
+#. (itstool) path: info/desc
+#: C/start.page:29
+msgid "How do I start playing?"
+msgstr "Πώς ξεκινώ να παίζω;"
+
+#. (itstool) path: page/title
+#: C/start.page:33
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#. (itstool) path: page/p
+#: C/start.page:35
+msgid ""
+"When you open <app>Klotski</app>, a new game begins automatically. After "
+"your first move, you can select <gui style=\"button\">Start Over</gui> to "
+"restart the puzzle that you are currently playing. You can also <link xref="
+"\"puzzles\">switch to a different puzzle.</link>"
+msgstr ""
+"Όταν ανοίξετε το <app>Κλοτσκι</app>, θα ξεκινήσει αυτόματα ένα νέο παιχνίδι. "
+"Μετά την πρώτη σας κίνηση, μπορείτε να επιλέξετε <gui style=\"button"
+"\">Εκκίνηση από την αρχή</gui> για να επανεκκινήσετε τον γρίφο που παίζεται. "
+"Μπορείτε επίσης να <link xref=\"puzzles\">αλλάξετε σε διαφορετικό γρίφο.</"
+"link>"
+
+#~ msgid "GNOME Klotski help."
+#~ msgstr "Βοήθεια GNOME Κλότσκι."
+
+#~ msgid "Advanced"
+#~ msgstr "Προχωρημένα"
+
+#~ msgid "Know about <app>Klotski</app>."
+#~ msgstr "Περί <app>Κλότσκι</app>."
+
+#~ msgid "Introduction"
+#~ msgstr "Εισαγωγή"
+
+#~ msgid "Play the game using keyboard."
+#~ msgstr "Παίξτε το παιχνίδι χρησιμοποιώντας το πληκτρολόγιο."
+
+#~ msgid ""
+#~ "Use <gui>shortcut keys</gui> to perform common tasks more quickly than "
+#~ "with the mouse and menus. The following tables list all of "
+#~ "<app>klotski's</app> shortcut keys."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε <gui>πλήκτρα συντόμευσης</gui> για να πραγματοποιήσετε "
+#~ "συνήθεις εργασίες πιο γρήγορα σε σχέση με το ποντίκι και τα μενού. Οι "
+#~ "ακόλουθοι πίνακες απαριθμούν όλες τις συντομεύσεις πληκτρολογίου του "
+#~ "<app>κλότσκι</app>."
+
+#~ msgid "New game"
+#~ msgstr "Νέο παιχνίδι"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#~ msgid "Moves"
+#~ msgstr "Κινήσεις"
+
+#~ msgid "Goal piece moves"
+#~ msgstr "Κινητός στόχος"
+
+#~ msgid ""
+#~ "Navigate among puzzles, look at the minimum number of moves to solve a "
+#~ "puzzle."
+#~ msgstr ""
+#~ "Περιηγηθείτε μεταξύ των γρίφων, δείτε τον ελάχιστο αριθμό κινήσεων για να "
+#~ "λύσετε τον γρίφο."
+
+#~ msgid "Navigate among puzzles"
+#~ msgstr "Περιήγηση μεταξύ των γρίφων"
+
+#~ msgid "To navigate between the puzzles:"
+#~ msgstr "Για να περιηγηθείτε μεταξύ των γρίφων:"
+
+#~ msgid ""
+#~ "Click on <gui style=\"button\">View Puzzles</gui> in the bottom right, "
+#~ "choose a category. All the puzzles in the category will be displayed."
+#~ msgstr ""
+#~ "Κάντε κλικ κάτω δεξιά στο <gui style=\"button\">Προβολή γρίφων</gui>, για "
+#~ "να επιλέξετε μια κατηγορία. Θα εμφανιστούν όλοι οι διαθέσιμοι γρίφοι της "
+#~ "κατηγορίας."
+
+#~ msgid ""
+#~ "You can navigate sequentially among the puzzles with the <gui style="
+#~ "\"button\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</"
+#~ "gui>."
+#~ msgstr ""
+#~ "Μπορείτε να περιηγηθείτε διαδοχικά μεταξύ των γρίφων με τα κουμπιά <gui "
+#~ "style=\"button\">Επόμενος γρίφος</gui> και <gui style=\"button"
+#~ "\">Προηγούμενος γρίφος</gui>."
+
+#~ msgid "How to play <app>Klotski</app>?"
+#~ msgstr "Πώς να παίξω το <app>Κλότσκι</app>;"
+
+#~ msgid "Rules to move a block"
+#~ msgstr "Κανόνες για να μετακινήσετε ένα κομμάτι"
+
+#~ msgid ""
+#~ "Click and drag the desired block to a location of your choice on the "
+#~ "board."
+#~ msgstr ""
+#~ "Κάντε κλικ και σύρετε το επιθυμητό κομμάτι στην θέση της επιλογής σας "
+#~ "πάνω στον πίνακα."
+
+#~ msgid ""
+#~ "A block cannot be moved over the green blocks. However, it is allowed to "
+#~ "move a patterened block."
+#~ msgstr ""
+#~ "Ένα κομμάτι δεν μπορεί να μετακινηθεί πάνω από τα πράσινα κομμάτια. "
+#~ "Ωστώσο, επιτρέπεται να μετακινήσετε ένα κομμάτι με μοτίβο."
+
+#~ msgid "You can take more than one step in a single move."
+#~ msgstr "Μπορείτε να μετακινηθείτε περισσότερο από ένα βήματα σε μια κίνηση."
+
+#~ msgid "Check your performance."
+#~ msgstr "Δείτε την απόδοση σας."
+
+#~ msgid ""
+#~ "Select <gui style=\"menu\">Klotski</gui> in the top bar, then select <gui "
+#~ "style=\"menuitem\">Scores</gui>."
+#~ msgstr ""
+#~ "Επιλέξτε <gui style=\"menu\">Κλότσκι</gui> από την πάνω μπάρα, και έπειτα "
+#~ "πατήστε στις <gui style=\"menuitem\">Βαθμολογίες</gui>."
+
+#~ msgid ""
+#~ "The dialog by default displays scores of the <gui>Only 18 Steps</gui> "
+#~ "puzzle. To view others, select the puzzle from the menu whose scores you "
+#~ "wish to see."
+#~ msgstr ""
+#~ "Το προεπιλεγμένο παράθυρο εμφανίζει τις βαθμολογίες για τον γρίφο "
+#~ "<gui>Μόνο 18 βήματα</gui>. Για να δείτε τους υπόλοιπους, επιλέξτε τον "
+#~ "γρίφο από το μενού όπου θέλετε να δείτε τη βαθμολογία."
+
+#~ msgid "Click on <gui style=\"button\">OK</gui> to close <gui>Scores</gui>."
+#~ msgstr ""
+#~ "Κάντε κλικ στο <gui style=\"button\">Εντάξει</gui> για να κλείσετε τις "
+#~ "<gui>Βαθμολογίες</gui>."
+
+#~ msgid "Play another game."
+#~ msgstr "Παίξτε και άλλο παιχνίδι"
+
+#~ msgid ""
+#~ "<app>Klotski</app> offers a large collection of games, to play a new game:"
+#~ msgstr ""
+#~ "Το <app>Κλότσκι</app> παρέχει μια μεγάλη συλλογή από παιχνίδια. για να "
+#~ "παίξετε ένα νέο παιχνίδι:"
+
+#~ msgid ""
+#~ "Select <gui style=\"menu\">Klotski</gui> in the top bar, then select <gui "
+#~ "style=\"menuitem\">New Game</gui>. Alternatively, you can click on <gui "
+#~ "style=\"button\">Start Over</gui>. It will start a new game of the "
+#~ "default puzzle, <gui>Only 18 Steps</gui>."
+#~ msgstr ""
+#~ "Επιλέξτε <gui style=\"menu\">Κλότσκι</gui> από την πάνω μπάρα, έπειτα "
+#~ "επιλέξτε <gui style=\"menuitem\">Νέο παιχνίδι</gui>. Διαφορετικά, "
+#~ "μπορείτε να κάνετε κλικ στο <gui style=\"button\">Εκκίνηση από την αρχή</"
+#~ "gui>. Θα ξεκινήσει ένα νέο παιχνίδι με τον προεπιλεγμένο γρίφο, <gui>Μόνο "
+#~ "18 βήματα</gui>."
+
+#~ msgid "Play a different puzzle"
+#~ msgstr "Παίξτε ένα διαφορετικό γρίφο"
+
+#~ msgid ""
+#~ "To play a different puzzle, click on <gui style=\"button\">View Puzzles</"
+#~ "gui>."
+#~ msgstr ""
+#~ "Για να παίξετε ένα διαφορετικό γρίφο, κάντε κλικ στο <gui style=\"button"
+#~ "\">Προβολή γρίφων</gui>."
+
+#~ msgid "Choose a game category and double click to start playing."
+#~ msgstr ""
+#~ "Επιλέξτε μια κατηγορία παιχνιδιού και κάντε διπλό κλικ για να ξεκινήσετε."
