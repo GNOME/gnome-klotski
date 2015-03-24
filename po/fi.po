@@ -8,15 +8,15 @@
 # Sami Pesonen <sampeson@iki.fi>, 2002-2005.
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013, 2014.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-10 06:55+0000\n"
-"PO-Revision-Date: 2014-09-10 21:12+0300\n"
+"POT-Creation-Date: 2015-03-20 07:55+0000\n"
+"PO-Revision-Date: 2015-03-20 20:41+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -29,23 +29,32 @@ msgstr ""
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "Gnomen Klotski"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
+#: ../data/gnome-klotski.desktop.in.h:2
+msgid "Slide blocks to solve the puzzle"
+msgstr "Ratkaise pulmat siirtämällä palikoita"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+#| "the patterned block to the area bordered by green markers. To do so, "
+#| "you'll need to slide other blocks out of the way. Complete each puzzle in "
+#| "as few moves as possible!"
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
-"Klotski on kokoelma pulmia, jotka koostuvat liukuvista palikoista. Tavoite "
-"on siirtää kuvioitu palikka vihreillä palikoilla merkityille alueelle. "
-"Onnistuaksesi sinun tulee siirtää muut palikat pois tieltä. Selvitä jokainen "
-"pulma mahdollisimman vähällä määrällä siirtoja!"
+"Klotski on kokoelma pulmia, jotka koostuvat liikuteltavista palikoista. "
+"Tavoite on siirtää kuvioitu palikka vihreillä palikoilla merkityille "
+"alueelle. Onnistuaksesi sinun tulee siirtää muut palikat pois tieltä. "
+"Selvitä jokainen pulma mahdollisimman vähällä määrällä siirtoja!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -54,18 +63,88 @@ msgstr ""
 "Gnomen Klotski sisältää lähes 30 vaikeustasoiltaan ja asetteleluiltaan "
 "erilaista pulmaa."
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
-#: ../src/gnome-klotski.vala:948
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
 msgid "Klotski"
 msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "Ratkaise palapeli siirtämällä palikoita"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "game;strategy;logic;move;strategia;logiikka;siirto;peli;"
+
+#: ../data/klotski.ui.h:1
+#| msgid "HuaRong Trail"
+msgid "Huarong Trail"
+msgstr "Huarong-jälki"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "Haastepaketti"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "Taitopaketti"
+
+#: ../data/klotski.ui.h:4
+#| msgid "Previous Puzzle"
+msgid "Previous"
+msgstr "Edellinen"
+
+#: ../data/klotski.ui.h:5
+#| msgid "Next:"
+msgid "Next"
+msgstr "Seuraava"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "_Aloita alusta"
+
+#: ../data/klotski.ui.h:8
+#| msgid "Restart the current game"
+msgid "Restart the current puzzle"
+msgstr "Aloita nykyinen pulma uudestaan"
+
+#: ../data/klotski.ui.h:9
+#| msgid "_View Puzzles"
+msgid "_Change Puzzle"
+msgstr "_Vaihda pulmaa"
+
+#: ../data/klotski.ui.h:10
+#| msgid "Choose a score slot."
+msgid "Choose an other puzzle"
+msgstr "Valitse toinen pulma."
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "_Pisteet"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "O_hje"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "Pisteet"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "Pulma:"
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "Päiväys"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "Siirtoja"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -88,195 +167,158 @@ msgid "true if the window is maximized"
 msgstr "tosi jos ikkuna on suurennettu"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:61
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "Vain 18 vaihetta"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:74
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "Daisy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:87
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "Violetti"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:100
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "Poppy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:113
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "Pansy"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:126
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "Lumivyöry"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:139
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "Punainen aasi"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:152
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "Jälki"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:165
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "Väijytys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:178
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:189
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "Onnistuminen"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:199
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "Luu"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:212
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "Sananlasku"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:226
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "Typerys"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:236
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "Hai"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "Rooma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:285
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "Viiripulma"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:298
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:345
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:356
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "Polonaise"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "Itä-meri"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:379
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "Amerikkalainen piiras"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:395
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "Liikennetukos"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:406
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "Auringonpaiste"
 
-#: ../src/gnome-klotski.vala:434
-#| msgid "Show release version"
+#: ../src/gnome-klotski.vala:438
 msgid "Print release version and exit"
 msgstr "Näytä julkaisuversio ja sulkeudu"
 
-#: ../src/gnome-klotski.vala:632
-msgid "Previous Puzzle"
-msgstr "Edellinen pulma"
+#: ../src/gnome-klotski.vala:667
+#| msgid "Slide blocks to solve the puzzle"
+msgid "Sliding block puzzles"
+msgstr "Pulmapeli, jossa liu'utetaan palikoita"
 
-#: ../src/gnome-klotski.vala:638
-msgid "Next Puzzle"
-msgstr "Seuraava pulma"
-
-#: ../src/gnome-klotski.vala:660
-#| msgid "_Starting level:"
-msgid "_Start Over"
-msgstr "_Aloita alusta"
-
-#: ../src/gnome-klotski.vala:669
-#| msgid "_Puzzles"
-msgid "_View Puzzles"
-msgstr "_Näytä pulmat"
-
-#: ../src/gnome-klotski.vala:853
-#, c-format
-msgid "Moves: %d"
-msgstr "Siirtoja: %d"
-
-#: ../src/gnome-klotski.vala:856
-msgid "Level completed."
-msgstr "Taso läpäisty."
-
-#: ../src/gnome-klotski.vala:950
-#| msgid ""
-#| "Sliding Block Puzzles\n"
-#| "\n"
-#| "Klotski is a part of GNOME Games."
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"Palapeli liukuvilla palikoilla\n"
-"\n"
-"Klotski on osa Gnomen pelejä."
-
-#: ../src/gnome-klotski.vala:956
+#: ../src/gnome-klotski.vala:675
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2013-2014\n"
+"Jiri Grönroos, 2012-2015\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -294,29 +336,40 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "_Sulje"
+#: ../src/gnome-klotski.vala:834
+#, c-format
+msgid "Moves: %d"
+msgstr "Siirtoja: %d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "Uusi peli"
+#: ../src/gnome-klotski.vala:837
+msgid "Level completed."
+msgstr "Taso läpäisty."
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_OK"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "Pulma:"
+#~ msgid "Next Puzzle"
+#~ msgstr "Seuraava pulma"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "Päiväys"
+#~| msgid ""
+#~| "Sliding Block Puzzles\n"
+#~| "\n"
+#~| "Klotski is a part of GNOME Games."
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Palapeli liukuvilla palikoilla\n"
+#~ "\n"
+#~ "Klotski on osa Gnomen pelejä."
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "Siirtoja"
+#~ msgid "_Close"
+#~ msgstr "_Sulje"
+
+#~ msgid "New Game"
+#~ msgstr "Uusi peli"
 
 #, fuzzy
 #~| msgid "true if the window is maximized"
@@ -337,15 +390,6 @@ msgstr "Siirtoja"
 
 #~ msgid "_Game"
 #~ msgstr "_Peli"
-
-#~ msgid "HuaRong Trail"
-#~ msgstr "Huarong-jälki"
-
-#~ msgid "Challenge Pack"
-#~ msgstr "Haastepaketti"
-
-#~ msgid "Skill Pack"
-#~ msgstr "Taitopaketti"
 
 #~ msgid "_Restart Puzzle"
 #~ msgstr "_Aloita pulma uudestaan"
@@ -370,9 +414,6 @@ msgstr "Siirtoja"
 
 #~ msgid "_Settings"
 #~ msgstr "_Asetukset"
-
-#~ msgid "_Help"
-#~ msgstr "O_hje"
 
 #~ msgid "_Contents"
 #~ msgstr "_Sisältö"
@@ -994,12 +1035,6 @@ msgstr "Siirtoja"
 #~ msgid "Five or more"
 #~ msgstr "Viisi tai enemmän"
 
-#~ msgid "Scores"
-#~ msgstr "Pisteet"
-
-#~ msgid "Next:"
-#~ msgstr "Seuraava:"
-
 #~ msgid "0"
 #~ msgstr "0"
 
@@ -1138,9 +1173,6 @@ msgstr "Siirtoja"
 
 #~ msgid "Res_ume"
 #~ msgstr "_Jatka"
-
-#~ msgid "_Scores"
-#~ msgstr "_Pisteet"
 
 #~ msgid "_End Game"
 #~ msgstr "_Lopeta peli"
@@ -2057,12 +2089,6 @@ msgstr "Siirtoja"
 #~ msgid "_Preferences"
 #~ msgstr "_Asetukset"
 
-#~ msgid "_About"
-#~ msgstr "_Tietoja"
-
-#~ msgid "_Quit"
-#~ msgstr "_Lopeta"
-
 #~| msgid "_Hint"
 #~ msgid "Hint"
 #~ msgstr "Vinkki"
@@ -2873,9 +2899,6 @@ msgstr "Siirtoja"
 #~ msgid "5 of a Kind [50 + total]"
 #~ msgstr "Viisi samaa [50 + summa]"
 
-#~ msgid "Choose a score slot."
-#~ msgstr "Valitse pistelaatikko."
-
 #~ msgid "5 of a Kind [total]"
 #~ msgstr "Viisi samaa [yhteensä]"
 
@@ -3310,9 +3333,6 @@ msgstr "Siirtoja"
 
 #~ msgid "_Select map:"
 #~ msgstr "_Valitse kartta:"
-
-#~ msgid "Restart the current game"
-#~ msgstr "Aloita valittu peli uudestaan"
 
 #~ msgid "Redo the last move"
 #~ msgstr "Tee edellinen siirto uudestaan"
