@@ -264,7 +264,7 @@ msgstr "Vlaječkový hlavolam"
 #. puzzle name
 #: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
-msgstr "Ithaca"
+msgstr "Ithaka"
 
 #. puzzle name
 #: ../src/gnome-klotski.vala:325
@@ -343,12 +343,3 @@ msgstr "Úroveň dokončena."
 #: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "_Budiž"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Následující hlavolam"
-
-#~ msgid "_Close"
-#~ msgstr "_Zavřít"
-
-#~ msgid "New Game"
-#~ msgstr "Nová hra"
