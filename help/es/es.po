@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-02-17 07:54+0000\n"
-"PO-Revision-Date: 2015-02-17 18:19+0100\n"
+"Project-Id-Version: master\n"
+"POT-Creation-Date: 2015-05-28 19:10+0000\n"
+"PO-Revision-Date: 2015-05-29 \n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -46,7 +46,6 @@ msgstr "Michael Catanzaro"
 
 #. (itstool) path: info/desc
 #: C/index.page:26
-#| msgid "GNOME Klotski help."
 msgid "GNOME Klotski help"
 msgstr "Ayuda de GNOME Klotski."
 
@@ -57,11 +56,6 @@ msgstr "<_:media-1/> Klotski"
 
 #. (itstool) path: page/p
 #: C/index.page:34
-#| msgid ""
-#| "<app>Klotski</app> is a <app>GNOME</app> game. The objective of the game "
-#| "is to move the patterned block to the area bordered by the green markers "
-#| "in the minimum number of moves. You can achieve this by sliding the "
-#| "blocks horizontally or vertically."
 msgid ""
 "<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
 "to move the patterned block to the area bordered by green markers. To do so, "
@@ -97,7 +91,6 @@ msgstr "2015"
 
 #. (itstool) path: info/desc
 #: C/keyboard-shortcuts.page:24
-#| msgid "Play the game using keyboard."
 msgid "Play the game using the keyboard."
 msgstr "Jugar usando el teclado."
 
@@ -108,10 +101,6 @@ msgstr "Atajo de teclado"
 
 #. (itstool) path: page/p
 #: C/keyboard-shortcuts.page:30
-#| msgid ""
-#| "Use <gui>shortcut keys</gui> to perform common tasks more quickly than "
-#| "with the mouse and menus. The following tables list all of "
-#| "<app>klotski's</app> shortcut keys."
 msgid ""
 "Use keyboard shortcuts to perform common tasks more quickly than with the "
 "mouse and menus. The following tables list all of <app>Klotski’s</app> "
@@ -168,12 +157,6 @@ msgstr "Puzles"
 
 #. (itstool) path: page/p
 #: C/puzzles.page:36
-#| msgid ""
-#| "Puzzles are divided into three categories namely, <gui>HuaRong Trail</"
-#| "gui>, <gui>Challenge Pack</gui> and <gui>Skill Pack</gui> based on the "
-#| "difficulty level of the game. <gui>HuaRong Trail</gui> and <gui>Skill "
-#| "Pack</gui> contains nine puzzles each and <gui>Challenge Pack</gui> "
-#| "consists of ten beautiful puzzles."
 msgid ""
 "Puzzles are divided into three categories based on the difficulty level of "
 "the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
@@ -186,21 +169,16 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/puzzles.page:42
-#| msgid "Pennant Puzzle"
 msgid "Select a Puzzle"
 msgstr "Seleccionar un puzle"
 
 #. (itstool) path: section/p
 #: C/puzzles.page:44
-#| msgid "To navigate between the puzzles:"
 msgid "To browse the puzzles:"
 msgstr "Para examinar los puzles:"
 
 #. (itstool) path: item/p
 #: C/puzzles.page:47
-#| msgid ""
-#| "Click on <gui style=\"button\">View Puzzles</gui> in the bottom right, "
-#| "choose a category. All the puzzles in the category will be displayed."
 msgid ""
 "Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
 "Choose a category using the back and forward buttons on the top. All the "
@@ -212,10 +190,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/puzzles.page:52
-#| msgid ""
-#| "You can navigate sequentially among the puzzles with the <gui style="
-#| "\"button\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</"
-#| "gui>."
 msgid ""
 "You can navigate sequentially among the puzzles with the <gui style=\"button"
 "\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
@@ -227,7 +201,6 @@ msgstr ""
 
 #. (itstool) path: info/desc
 #: C/rules.page:25
-#| msgid "How to play <app>Klotski</app>?"
 msgid "What are the rules of <app>Klotski</app>?"
 msgstr "¿Cuáles son las reglas de <app>Klotski</app>?"
 
@@ -251,7 +224,6 @@ msgstr ""
 
 #. (itstool) path: section/title
 #: C/rules.page:37
-#| msgid "Rules to move a block"
 msgid "Rules for moving blocks"
 msgstr "Reglas para mover bloques"
 
@@ -263,11 +235,11 @@ msgstr "Los bloques verdes y los de los bordes no se pueden mover."
 #. (itstool) path: item/p
 #: C/rules.page:44
 #| msgid ""
-#| "A block cannot be moved over the green blocks. However, it is allowed to "
-#| "move a patterened block."
+#| "A block normally cannot be moved over any other block. However, you may "
+#| "move the patterened block over the green blocks."
 msgid ""
 "A block normally cannot be moved over any other block. However, you may move "
-"the patterened block over the green blocks."
+"the patterned block over the green blocks."
 msgstr ""
 "Normalmente no se puede mover un bloque encima de otro. Sin embargo, sí debe "
 "mover el bloque marcado sobre los bloques verdes."
@@ -300,16 +272,11 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/scores.page:39
-#| msgid "Select <gui style=\"menuitem\">New Game</gui>."
 msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
 msgstr "Seleccione <gui style=\"menuitem\">Puntuaciones</gui> en el menú."
 
 #. (itstool) path: item/p
 #: C/scores.page:43
-#| msgid ""
-#| "The dialog by default displays scores of the <gui>Only 18 Steps</gui> "
-#| "puzzle. To view others, select the puzzle from the menu whose scores you "
-#| "wish to see."
 msgid ""
 "The dialog displays scores of one puzzle you have completed at a time. "
 "Select the puzzle whose scores you wish to see from the menu."
@@ -335,7 +302,6 @@ msgstr ""
 
 #. (itstool) path: th/p
 #: C/scores.page:58
-#| msgid "Puzzles"
 msgid "Puzzle"
 msgstr "Puzle"
 
