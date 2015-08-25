@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-04 23:25+0100\n"
-"PO-Revision-Date: 2015-03-04 23:27+0100\n"
+"POT-Creation-Date: 2015-08-25 14:02+0200\n"
+"PO-Revision-Date: 2015-08-25 14:04+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -161,7 +161,7 @@ msgstr "Wysokość okna w pikselach"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
-msgstr "Wartość \"true\" oznacza, że okno jest zmaksymalizowane"
+msgstr "Wartość „true” oznacza, że okno jest zmaksymalizowane"
 
 #. puzzle name
 #: ../src/gnome-klotski.vala:65
