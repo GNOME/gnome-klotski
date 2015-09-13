@@ -1,20 +1,14 @@
 @YELP_HELP_RULES@
-
 HELP_ID = gnome-klotski
 
-HELP_FILES = \
-	index.page \
-	keyboard-shortcuts.page \
-	legal.xml \
-	puzzles.page \
-	rules.page \
-	scores.page \
-	start.page
-
 HELP_MEDIA = \
-	media/logo32.png \
-	media/logo.png
+	figures/gnotski_start_window.png \
+	figures/gnotski_win.png
 
-HELP_LINGUAS = cs de el es fr hu sv
+HELP_FILES = \
+	index.docbook \
+	legal.xml
+
+HELP_LINGUAS = ca cs da de el en_GB es eu fr hu it oc sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk

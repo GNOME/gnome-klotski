@@ -1,13 +1,14 @@
-# Czech translation for gnome-klotski.
-# Copyright (C) 2015 gnome-klotski's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-klotski package.
-# Marek Černocký <marek@manet.cz>, 2015.
+# Czech translation of gnotski help.
+# Copyright (C) 2009 the author(s) of gnome-games.
+# This file is distributed under the same license as the gnotski help.
+#
+# Marek Černocký <marek@manet.cz>, 2009, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-klotski master\n"
-"POT-Creation-Date: 2015-04-02 19:11+0000\n"
-"PO-Revision-Date: 2015-04-02 21:51+0200\n"
+"Project-Id-Version: gnome-games gnome-2-28\n"
+"POT-Creation-Date: 2012-12-02 21:49+0000\n"
+"PO-Revision-Date: 2013-07-12 10:52+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -15,561 +16,567 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Marek Černocký <marek@manet.cz>"
+msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
-#. (itstool) path: info/title
-#: C/index.page:9
-msgctxt "link"
-msgid "Klotski"
-msgstr "Klotski"
-
-#. (itstool) path: info/title
-#: C/index.page:10
-msgctxt "text"
-msgid "Klotski"
-msgstr "Klotski"
-
-#. (itstool) path: credit/name
-#: C/index.page:16 C/keyboard-shortcuts.page:12 C/puzzles.page:12
-#: C/rules.page:13 C/scores.page:12 C/start.page:13
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/name
-#: C/index.page:20 C/keyboard-shortcuts.page:17 C/puzzles.page:22
-#: C/rules.page:18 C/scores.page:22 C/start.page:23
-msgid "Michael Catanzaro"
-msgstr "Michael Catanzaro"
-
-#. (itstool) path: info/desc
-#: C/index.page:26
-msgid "GNOME Klotski help"
-msgstr "Nápověda ke hře Klotski GNOME"
-
-#. (itstool) path: page/title
-#: C/index.page:29
-msgid "<_:media-1/> Klotski"
-msgstr "<_:media-1/> Klotski"
-
-#. (itstool) path: page/p
-#: C/index.page:34
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204(imagedata)
+msgctxt "_"
 msgid ""
-"<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
-"to move the patterned block to the area bordered by green markers. To do so, "
-"you will need to slide other blocks out of the way. Complete each puzzle in "
-"as few moves as possible!"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 msgstr ""
-"<app>Klotski GNOME</app> je sada hlavolamů založených na přesouvání bloků. "
-"Cílem je přesunout blok se vzorkem na místo vyznačené zelenými značkami. "
-"Abyste tak mohli učinit, musíte odsunout ostatní bloky z cesty. Snažte se "
-"hlavolam vyřešit pomocí co nejméně tahů!"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Playing Klotski"
-msgstr "Hraní hry Klotski"
-
-#. (itstool) path: section/title
-#: C/index.page:44
-msgid "Useful tips"
-msgstr "Užitečné tipy"
-
-#. (itstool) path: credit/years
-#: C/keyboard-shortcuts.page:14 C/puzzles.page:14 C/rules.page:15
-#: C/scores.page:14 C/start.page:15
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: credit/years
-#: C/keyboard-shortcuts.page:19 C/puzzles.page:19 C/puzzles.page:24
-#: C/rules.page:20 C/scores.page:19 C/scores.page:24 C/start.page:20
-msgid "2015"
-msgstr "2015"
-
-#. (itstool) path: info/desc
-#: C/keyboard-shortcuts.page:24
-msgid "Play the game using the keyboard."
-msgstr "Jak hru hrát pomocí klávesnice."
-
-#. (itstool) path: page/title
-#: C/keyboard-shortcuts.page:28
-msgid "Keyboard shortcuts"
-msgstr "Klávesové zkratky"
-
-#. (itstool) path: page/p
-#: C/keyboard-shortcuts.page:30
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261(imagedata)
+msgctxt "_"
 msgid ""
-"Use keyboard shortcuts to perform common tasks more quickly than with the "
-"mouse and menus. The following tables list all of <app>Klotski’s</app> "
-"shortcut keys."
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
 msgstr ""
-"Klávesové zkratky sloužící k základním úkonům jsou mnohem rychlejší než myš "
-"a nabídky. Následující tabulka uvádí seznam všech klávesových zkratek hry "
-"<app>Klotski</app>."
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
 
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:36
-msgid "Help"
-msgstr "Nápověda"
+#: C/index.docbook:28(articleinfo/title)
+msgid "<application>Klotski</application> Manual"
+msgstr "Příručka ke hře <application>Klotski</application>"
 
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:37
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:40
-msgid "Quit"
-msgstr "Ukončit"
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:41
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
-#. (itstool) path: p/link
-#: C/legal.xml:3
-msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-
-#. (itstool) path: license/p
-#: C/legal.xml:3
-msgid "This work is licensed under a <_:link-1/>."
-msgstr "Toto dílo je licencováno pod <_:link-1/>"
-
-#. (itstool) path: credit/name
-#: C/puzzles.page:17 C/scores.page:17 C/start.page:18
-msgid "Shobha Tyagi"
-msgstr "Shobha Tyagi"
-
-#. (itstool) path: info/desc
-#: C/puzzles.page:30
-msgid "How do I switch puzzles?"
-msgstr "Jak se můžu přepnout na jiný hlavolam?"
-
-#. (itstool) path: page/title
-#: C/puzzles.page:34
-msgid "Puzzles"
-msgstr "Hlavolamy"
-
-#. (itstool) path: page/p
-#: C/puzzles.page:36
+#: C/index.docbook:31(abstract/para)
 msgid ""
-"Puzzles are divided into three categories based on the difficulty level of "
-"the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
-"Pack</gui> and <gui>Skill Pack</gui> puzzles are more difficult."
+"Klotski is a puzzle game of which the objective is to get the patterned "
+"block to the marker, which is done by moving the blocks in its way."
 msgstr ""
-"Hlavolamy jsou rozděleny do tří kategorií podle úrovně obtížnosti hraní. "
-"Hlavolamy v <gui>Huarongově cestě</gui> jsou nejlehčí. V <gui>Sadě s výzvou</"
-"gui> a v <gui>Sadě pro znalce</gui> jsou hlavolamy náročnější."
+"Klotski je logická hra, jejímž cílem je dostat vzorovaný blok na značky, což "
+"se dělá přesouváním bloků."
 
-#. (itstool) path: section/title
-#: C/puzzles.page:42
-msgid "Select a Puzzle"
-msgstr "Výběr hlavolamu"
+#: C/index.docbook:38(articleinfo/copyright)
+msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
+msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#. (itstool) path: section/p
-#: C/puzzles.page:44
-msgid "To browse the puzzles:"
-msgstr "Když si chcete vybrat hlavolam:"
+#: C/index.docbook:54(publisher/publishername)
+#: C/index.docbook:142(revdescription/para)
+msgid "GNOME Documentation Project"
+msgstr "Dokumentační projekt GNOME"
 
-#. (itstool) path: item/p
-#: C/puzzles.page:47
+#: C/index.docbook:2(legalnotice/para)
 msgid ""
-"Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
-"Choose a category using the back and forward buttons on the top. All the "
-"puzzles in the current category will be displayed."
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Klikněte na tlačítko <gui style=\"button\">Změnit hlavolam</gui> na "
-"hlavičkové liště. Pomocí tlačítek zpět a vpřed nahoře zvolte kategorii. "
-"Zobrazí se vám všechny hlavolamy v dané kategorii."
+"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"<ulink type=\"help\" url=\"help:fdl\">tímto odkazem</ulink> nebo v souboru "
+"COPYING-DOCS dodávaném s touto příručkou."
 
-#. (itstool) path: item/p
-#: C/puzzles.page:52
+#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
 msgid ""
-"You can navigate sequentially among the puzzles with the <gui style=\"button"
-"\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
-"double-click on the name of a puzzle to switch to it."
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
 msgstr ""
-"Mezi jednotlivými hlavolamy můžete postupně přecházet pomocí tlačítek <gui "
-"style=\"button\">Následující hlavolam</gui> a <gui style=\"button"
-"\">Předchozí hlavolam</gui>. Nebo se na hlavolam přepněte dvojitým kliknutím "
-"na jeho název."
+"Tato příručka je součástí sbírky příruček GNOME šířených za podmínek licence "
+"GNU FDL. Pokud chcete tento dokument šířit odděleně od sbírky, musíte "
+"přiložit kopii licence dle popisu v oddílu 6 dané licence."
 
-#. (itstool) path: info/desc
-#: C/rules.page:25
-msgid "What are the rules of <app>Klotski</app>?"
-msgstr "Jaká má hra <app>Klotski</app> pravidla?"
-
-#. (itstool) path: page/title
-#: C/rules.page:29
-msgid "Game rules"
-msgstr "Pravidla hry"
-
-#. (itstool) path: page/p
-#: C/rules.page:31
+#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
 msgid ""
-"The aim of <app>Klotski</app> is to move the patterned block to the area "
-"bordered by green markers. Click and drag a block to move it to a location "
-"of your choice on the board. Or, click once on the block to begin moving it, "
-"then click again on the position you wish to place it."
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
 msgstr ""
-"Cílem hry <app>Klotski</app> je přesunout blok se vzorem na místo označené "
-"zelenými značkami. Blok na požadované místo na herní desce přesunute tak, že "
-"na něj kliknete a budete táhnout. Nebo na něj jednou klikněte a následně "
-"klikněte na místo, kam jej chcete dostat."
+"Mnoho užívaných názvů určených k zviditelnění produktů nebo služeb jsou "
+"ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a "
+"členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se "
+"jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s "
+"velkým písmenem na začátku."
 
-#. (itstool) path: section/title
-#: C/rules.page:37
-msgid "Rules for moving blocks"
-msgstr "Pravidla pro přesun bloků"
-
-#. (itstool) path: item/p
-#: C/rules.page:41
-msgid "The green blocks and the boundary blocks cannot be moved."
-msgstr "Zelené bloky a bloky tvořící ohraničení nelze přesouvat."
-
-#. (itstool) path: item/p
-#: C/rules.page:44
+#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
 msgid ""
-"A block normally cannot be moved over any other block. However, you may move "
-"the patterned block over the green blocks."
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"Normálně nelze bloky přesouvat jeden přes druhý. Avšak blok se vzorem můžete "
-"přesunout přes zelené bloky."
+"DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“, BEZ ZÁRUKY JAKÉHOKOLIV DRUHU, "
+"NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ "
+"VERZE, JE BEZCHYBNÝ, NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL, "
+"NEBO NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ "
+"DOKUMENTU, NEBO JEHO UPRAVENÉ VERZE, NESETE VY. POKUD JE TENTO DOKUMENT NEBO "
+"JEHO UPRAVENÁ VERZE VADNÁ V JAKÉMKOLIV SMYSLU, VY (NIKOLIV PŮVODCE, AUTOR "
+"NEBO JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE ODPOVĚDNOST ZA JAKÉKOLIV NÁKLADY NA "
+"NUTNÉ ÚPRAVY, OPRAVY ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE "
+"ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ PODLE TÉTO DOHODY "
+"POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
 
-#. (itstool) path: item/p
-#: C/rules.page:48
-msgid "In a single move, you may move a block over any number of open spaces."
-msgstr "V jednom tahu můžete blok posunout o libovolný počet prázdných míst."
-
-#. (itstool) path: info/desc
-#: C/scores.page:29
-msgid "How do I view my high scores?"
-msgstr "Jak se můžu podívat ne má nejvyšší hodnocení?"
-
-#. (itstool) path: page/title
-#: C/scores.page:33
-msgid "Scores"
-msgstr "Skóre"
-
-#. (itstool) path: page/p
-#: C/scores.page:35
+#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
 msgid ""
-"You can check your performance by looking at the number of moves you have "
-"made in the previous games. To view your scores:"
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"Své výkony si můžete kontrolovat podle počtu tahů, které jste potřebovali v "
-"dřívějších hrách. Když se na ně chcete podívat:"
+"ZA ŽÁDNÝCH OKOLNOSTÍ A ŽÁDNÝCH PRÁVNÍCH PŘEDPOKLADŮ, AŤ SE JEDNÁ O PŘEČIN "
+"(VČETNĚ NEDBALOSTNÍCH), SMLOUVU NEBO JINÉ, NENÍ AUTOR, PŮVODNÍ PISATEL, "
+"KTERÝKOLIV PŘISPĚVATEL NEBO KTERÝKOLIV DISTRIBUTOR TOHOTO DOKUMENTU NEBO "
+"UPRAVENÉ VERZE DOKUMENTU NEBO KTERÝKOLIV DODAVATEL NĚKTERÉ Z TĚCHTO STRAN "
+"ODPOVĚDNÝ NĚJAKÉ OSOBĚ ZA PŘÍMÉ, NEPŘÍMÉ, SPECIÁLNÍ, NAHODILÉ NEBO NÁSLEDNÉ "
+"ŠKODY JAKÉHOKOLIV CHARAKTERU, VČETNĚ, ALE NEJEN, ZA POŠKOZENÍ ZE ZTRÁTY "
+"DOBRÉHO JMÉNA, PŘERUŠENÍ PRÁCE, PORUCHY NEBO NESPRÁVNÉ FUNKCE POČÍTAČE NEBO "
+"JINÉHO A VŠECH DALŠÍCH ŠKOD NEBO ZTRÁT VYVSTÁVAJÍCÍCH Z NEBO VZTAHUJÍCÍCH SE "
+"K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY "
+"TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ."
 
-#. (itstool) path: item/p
-#: C/scores.page:39
-msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
-msgstr "V nabídce vyberte <gui style=\"menuitem\">Skóre</gui>."
-
-#. (itstool) path: item/p
-#: C/scores.page:43
+#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
 msgid ""
-"The dialog displays scores of one puzzle you have completed at a time. "
-"Select the puzzle whose scores you wish to see from the menu."
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
 msgstr ""
-"Zobrazí se dialogové okno s hodnocením jednoho hlavolamu a jeho historií v "
-"čase. V nabídce si vyberte hlavolam, na jehož hodnocení se chcete podívat."
+"DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU "
+"FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <_:orderedlist-1/>"
 
-#. (itstool) path: section/title
-#. (itstool) path: th/p
-#: C/scores.page:51 C/scores.page:58
-msgid "Minimum number of moves"
-msgstr "Nejnižší možný počet tahů"
-
-#. (itstool) path: section/p
-#: C/scores.page:53
+#: C/index.docbook:63(authorgroup/author)
 msgid ""
-"The number of moves and the placement of blocks together make each game "
-"unique. The minimum number of moves for the various puzzles are:"
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
 msgstr ""
-"Počet tahů a vzájemné pospojování bloků jsou v každé hře jedinečné. Nejmenší "
-"možný počet tahů pro vyřešení je v jednotlivých hlavolamech následující:"
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>Dokumentační projekt GNOME</orgname> <address> <email>andrew@sobala."
+"net</email> </address> </affiliation>"
 
-#. (itstool) path: th/p
-#: C/scores.page:58
-msgid "Puzzle"
-msgstr "Hlavolam"
+#: C/index.docbook:72(authorgroup/othercredit)
+msgid ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>Projekt GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
 
-#. (itstool) path: td/p
-#: C/scores.page:61
-msgid "Only 18 Steps"
-msgstr "Jen 18 kroků"
+#: C/index.docbook:81(authorgroup/othercredit)
+msgid ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>Projekt GNOME</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
 
-#. (itstool) path: td/p
-#: C/scores.page:61
-msgid "18"
-msgstr "18"
+#: C/index.docbook:139(revdescription/para)
+msgid "Andrew Sobala <email>andrew@sobala.net</email>"
+msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#. (itstool) path: td/p
-#: C/scores.page:64
-msgid "Daisy"
-msgstr "Sedmikráska"
+#: C/index.docbook:135(revhistory/revision)
+msgid ""
+"<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>V2.0</revnumber> <date>13. srpna 2002</date> <_:revdescription-1/>"
 
-#. (itstool) path: td/p
-#: C/scores.page:64 C/scores.page:73
-msgid "28"
-msgstr "28"
+#: C/index.docbook:148(articleinfo/releaseinfo)
+msgid "This manual describes version 2.12 of GNOME Klotski."
+msgstr "Tato příručka popisuje GNOME Klotski ve verzi 2.12."
 
-#. (itstool) path: td/p
-#: C/scores.page:67
-msgid "Violet"
-msgstr "Fialka"
+#: C/index.docbook:151(legalnotice/title)
+msgid "Feedback"
+msgstr "Ohlasy"
 
-#. (itstool) path: td/p
-#: C/scores.page:67
-msgid "27"
-msgstr "27"
+#: C/index.docbook:152(legalnotice/para)
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Klotski</"
+"application> application or this manual, follow the directions in the <ulink "
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
+msgstr ""
+"Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci "
+"<application>Klotski</application> nebo této příručce, postupujte dle "
+"instrukcí na stránce <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
+"\"help\">Stránka s ohlasy na GNOME</ulink>."
 
-#. (itstool) path: td/p
-#: C/scores.page:70
-msgid "Poppy"
-msgstr "Vlčí mák"
+#: C/index.docbook:160(article/indexterm)
+msgid "<primary>GNOME Klotski</primary>"
+msgstr "<primary>GNOME Klotski</primary>"
 
-#. (itstool) path: td/p
-#: C/scores.page:70
-msgid "40"
-msgstr "40"
+#: C/index.docbook:167(sect1/title)
+msgid "Introduction"
+msgstr "Úvod"
 
-#. (itstool) path: td/p
-#: C/scores.page:73
-msgid "Pansy"
-msgstr "Maceška"
+#: C/index.docbook:168(sect1/para)
+msgid ""
+"The <application>Klotski</application> application is a clone of the Klotski "
+"game. The objective is to move the patterned block to the area bordered by "
+"green markers."
+msgstr ""
+"Aplikace <application>Klotski</application> je klonem hry Klotski. Podstatou "
+"hry je přesunout vzorovaný blok na místo určené zelenými značkami."
 
-#. (itstool) path: td/p
-#: C/scores.page:76
-msgid "Snowdrop"
-msgstr "Sněhová vločka"
+#: C/index.docbook:171(sect1/para)
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
+"Rydlinge@HIG.SE</email>)."
+msgstr ""
+"Hru <application>Klotski</application> napsal Lars Rydlinge (<email>Lars."
+"Rydlinge@HIG.SE</email>)."
 
-#. (itstool) path: td/p
-#: C/scores.page:76
-msgid "46"
-msgstr "46"
+#: C/index.docbook:174(sect1/para)
+msgid ""
+"<application>Klotski</application> is included in the gnome-games package, "
+"which is part of the GNOME desktop environment. This document describes "
+"version 2.12 of <application>Klotski</application>."
+msgstr ""
+"<application>Klotski</application> je součástí balíku <filename>gnome-games</"
+"filename>, který patří k pracovnímu prostředí GNOME. Tento dokument popisuje "
+"verzi 2.12 aplikace <application>Klotski</application>."
 
-#. (itstool) path: td/p
-#: C/scores.page:79
-msgid "Red Donkey"
-msgstr "Červený osel"
+#: C/index.docbook:177(sect1/para)
+msgid ""
+"This program is distributed under the terms of the GNU General Public "
+"license as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version. A copy of this license "
+"can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or "
+"in the file COPYING included with the source code of this program."
+msgstr ""
+"Tento program je šířen podle ustanovení GNU General Public License, vydávané "
+"Free Software Foundation; a to buď verze 2 této licence anebo (podle "
+"vlastního uvážení) kterékoliv pozdější verze. Kopii této licence naleznete "
+"pod tímto <ulink url=\"help:gpl\" type=\"help\">odkazek</ulink> nebo v "
+"souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. "
 
-#. (itstool) path: td/p
-#: C/scores.page:79
-msgid "81"
-msgstr "81"
+#: C/index.docbook:184(sect1/para)
+msgid ""
+"To report a bug or make a suggestion regarding this application or this "
+"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">document</ulink>."
+msgstr ""
+"Pokud chcete nahlásit chybu nebo podat návrh týkající se této aplikace nebo "
+"tohoto návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-"
+"guide?feedback-bugs\" type=\"help\">dokumentu</ulink>."
 
-#. (itstool) path: td/p
-#: C/scores.page:82
-msgid "Trail"
-msgstr "Stopa"
+#: C/index.docbook:193(sect1/title)
+msgid "Objective"
+msgstr "Cíl hry"
 
-#. (itstool) path: td/p
-#: C/scores.page:82
-msgid "102"
-msgstr "102"
+#: C/index.docbook:200(figure/title)
+msgid "The winning move"
+msgstr "Vítězný tah"
 
-#. (itstool) path: td/p
-#: C/scores.page:85
-msgid "Ambush"
-msgstr "Léčka"
+#: C/index.docbook:202(screenshot/mediaobject)
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>The patterned block should be moved to "
+"the space bordered by the green markers.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>Vzorovaný blok by měl být přesunut na "
+"místo ohraničené zelenými značkami.</phrase> </textobject>"
 
-#. (itstool) path: td/p
-#: C/scores.page:85
-msgid "120"
-msgstr "120"
+#: C/index.docbook:194(sect1/para)
+msgid ""
+"The objective of <application>Klotski</application> is to move the patterned "
+"block to the green markers in as few moves as possible. You do this by "
+"moving the blocks one at a time with the mouse until you can get the "
+"patterned block to the markers. <_:figure-1/>"
+msgstr ""
+"Podstatou hry <application>Klotski</application> je přesunout vzorovaný blok "
+"na zelené značky co nejméně tahy to jde. Toho dosáhnete přesouváním bloků po "
+"jednom pomocí myši, dokud nedostanete vzorovaný blok na značky. <_:figure-1/>"
 
-#. (itstool) path: td/p
-#: C/scores.page:88
-msgid "Agatka"
-msgstr "Agátka"
+#: C/index.docbook:219(sect1/title)
+msgid "Playing <application>Klotski</application>"
+msgstr "Jak hrát <application>Klotski</application>"
 
-#. (itstool) path: td/p
-#: C/scores.page:88
-msgid "30"
-msgstr "30"
+#: C/index.docbook:242(sect2/title)
+msgid "To Start <application>Klotski</application>"
+msgstr "Spuštění hry <application>Klotski</application>"
 
-#. (itstool) path: td/p
-#: C/scores.page:91
-msgid "Success"
-msgstr "Úspěch"
+#: C/index.docbook:243(sect2/para)
+msgid ""
+"You can start <application>Klotski</application> from the Applications menu "
+"by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
+"<guimenuitem>Gnotski</guimenuitem> </menuchoice>."
+msgstr ""
+"Hru <application>Klotski</application> můžete spustit z nabídky aplikací "
+"výběrem <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Gnotski</"
+"guimenuitem></menuchoice>."
 
-#. (itstool) path: td/p
-#: C/scores.page:91 C/scores.page:121
-msgid "25"
-msgstr "25"
+#: C/index.docbook:252(sect2/title)
+msgid "The main window"
+msgstr "Hlavní okno"
 
-#. (itstool) path: td/p
-#: C/scores.page:94
-msgid "Bone"
-msgstr "Kost"
+#: C/index.docbook:253(sect2/para)
+msgid ""
+"When you start <application><application>Klotski</application></"
+"application>, the following window is displayed."
+msgstr ""
+"Po spuštění hry <application>Klotski</application> se zobrazí následující "
+"okno."
 
-#. (itstool) path: td/p
-#: C/scores.page:94
-msgid "14"
-msgstr "14"
+#: C/index.docbook:257(figure/title)
+msgid "<application>Klotski</application> Start Up Window"
+msgstr "Okno hry <application>Klotski</application> po spuštění"
 
-#. (itstool) path: td/p
-#: C/scores.page:97
-msgid "Fortune"
-msgstr "Štěstí"
+#: C/index.docbook:259(screenshot/mediaobject)
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
+"application> main window. Contains titlebar, menubar, game area and "
+"statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject><phrase>Ukazuje hlavní okno hry "
+"<application>Klotski</application>. To obsahuje záhlaví, lištu nabídek, "
+"herní plochu a stavovou lištu. Lišta nabídek obsahuje nabídky Hra a Nápověda."
+"</phrase></textobject>"
 
-#. (itstool) path: td/p
-#: C/scores.page:97
-msgid "24"
-msgstr "24"
+#: C/index.docbook:275(varlistentry/term)
+msgid "Menubar"
+msgstr "Panel nabídek"
 
-#. (itstool) path: td/p
-#: C/scores.page:100
-msgid "Fool"
-msgstr "Hlupák"
+#: C/index.docbook:279(varlistentry/term)
+msgid "Game menu"
+msgstr "Nabídka Hra"
 
-#. (itstool) path: td/p
-#: C/scores.page:100 C/scores.page:103
-msgid "29"
-msgstr "29"
+#: C/index.docbook:281(listitem/para)
+msgid ""
+"The game menu allows you to start new games, view the highest scores and "
+"quit the program."
+msgstr ""
+"Nabídka Hra vám umožňuje spustit novou hru, zobrazit tabulku nejlepších "
+"výsledků a ukončit program."
 
-#. (itstool) path: td/p
-#: C/scores.page:103
-msgid "Solomon"
-msgstr "Šalamoun"
+#: C/index.docbook:286(varlistentry/term)
+msgid "Help menu"
+msgstr "Nabídka Nápověda"
 
-#. (itstool) path: td/p
-#: C/scores.page:106
-msgid "Cleopatra"
-msgstr "Kleopatra"
+#: C/index.docbook:288(listitem/para)
+msgid ""
+"The help menu allows you to view the documentation for <application>Klotski</"
+"application>"
+msgstr ""
+"Nabídka Nápověda vám umožňuje přístup k dokumentaci hry "
+"<application>Klotski</application>."
 
-#. (itstool) path: td/p
-#: C/scores.page:106
-msgid "31"
-msgstr "31"
+#: C/index.docbook:295(varlistentry/term)
+msgid "Game area"
+msgstr "Hrací plocha"
 
-#. (itstool) path: td/p
-#: C/scores.page:109
-msgid "Shark"
-msgstr "Žralok"
+#: C/index.docbook:297(listitem/para)
+msgid ""
+"The game area shows the blocks in the current game. You can drag the blocks "
+"around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
+msgstr ""
+"Na hrací ploše jsou zobrazené bloky současné hry. Můžete po ní přesouvat "
+"bloky pomocí myši, jak popisuje <xref linkend=\"gnotski-moving\"/>."
 
-#. (itstool) path: td/p
-#: C/scores.page:109
-msgid "48"
-msgstr "48"
+#: C/index.docbook:303(varlistentry/term)
+msgid "Statusbar"
+msgstr "Panel nástrojů"
 
-#. (itstool) path: td/p
-#: C/scores.page:112
-msgid "Rome"
-msgstr "Řím"
+#: C/index.docbook:305(listitem/para)
+msgid "The statusbar shows how many moves you have taken so far."
+msgstr "Stavový řádek vás informuje, kolik jste již provedli tahů."
 
-#. (itstool) path: td/p
-#: C/scores.page:112
-msgid "38"
-msgstr "38"
+#: C/index.docbook:272(sect2/para)
+msgid ""
+"The <application>Klotski</application> window contains the following "
+"elements: <_:variablelist-1/>"
+msgstr ""
+"Okno hry <application>Klotski</application> obsahuje následující prvky: <_:"
+"variablelist-1/>"
 
-#. (itstool) path: td/p
-#: C/scores.page:115
-msgid "Pennant Puzzle"
-msgstr "Vlaječkový hlavolam"
-
-#. (itstool) path: td/p
-#: C/scores.page:115
-msgid "59"
-msgstr "59"
-
-#. (itstool) path: td/p
-#: C/scores.page:118
-msgid "Ithaca"
-msgstr "Ithaka"
-
-#. (itstool) path: td/p
-#: C/scores.page:118 C/scores.page:133
-msgid "?"
-msgstr "?"
-
-#. (itstool) path: td/p
-#: C/scores.page:121
-msgid "Pelopones"
-msgstr "Peloponés"
-
-#. (itstool) path: td/p
-#: C/scores.page:124
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. (itstool) path: td/p
-#: C/scores.page:124
-msgid "21"
-msgstr "21"
-
-#. (itstool) path: td/p
-#: C/scores.page:127
-msgid "Polonaise"
-msgstr "Polonéza"
-
-#. (itstool) path: td/p
-#: C/scores.page:127
-msgid "23"
-msgstr "23"
-
-#. (itstool) path: td/p
-#: C/scores.page:130
-msgid "Baltic Sea"
-msgstr "Baltské moře"
-
-#. (itstool) path: td/p
-#: C/scores.page:130
-msgid "42"
-msgstr "42"
-
-#. (itstool) path: td/p
-#: C/scores.page:133
-msgid "American Pie"
-msgstr "Americký koláč"
-
-#. (itstool) path: td/p
-#: C/scores.page:136
-msgid "Traffic Jam"
-msgstr "Dopravní zácpa"
-
-#. (itstool) path: td/p
-#: C/scores.page:136
-msgid "132"
-msgstr "132"
-
-#. (itstool) path: td/p
-#: C/scores.page:139
-msgid "Sunshine"
-msgstr "Sluneční svit"
-
-#. (itstool) path: td/p
-#: C/scores.page:139
-msgid "345"
-msgstr "345"
-
-#. (itstool) path: info/desc
-#: C/start.page:29
-msgid "How do I start playing?"
-msgstr "Jak můžu hru začít hrát?"
-
-#. (itstool) path: page/title
-#: C/start.page:33
-msgid "Start a new game"
+#: C/index.docbook:314(sect2/title)
+msgid "Starting a new game"
 msgstr "Spuštění nové hry"
 
-#. (itstool) path: page/p
-#: C/start.page:35
+#: C/index.docbook:315(sect2/para)
 msgid ""
-"When you open <app>Klotski</app>, a new game begins automatically. After "
-"your first move, you can select <gui style=\"button\">Start Over</gui> to "
-"restart the puzzle that you are currently playing. You can also <link xref="
-"\"puzzles\">switch to a different puzzle.</link>"
+"Use the <guimenu>Game menu</guimenu> to start a new game. The items "
+"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
+"guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
+"belongs to one of the three categories found in the submenus named "
+"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
+"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
+"puzzle name refers to a game scenario."
 msgstr ""
-"Když otevřete aplikaci <app>Klotski</app>, začne nová hra automaticky. Hned "
-"po prvním tahu máte k dispozici volbu <gui style=\"button\">Začít znovu</"
-"gui>, kterou spustíte aktuální hru od začátku. Můžete se také <link xref="
-"\"puzzles\">přepnout na jiný hlavolam</link>."
+"Novou hru začnete použitím nabídky <guimenu>Hra</guimenu>. Pomocí položek "
+"<guimenuitem>Následující hádanka</guimenuitem> a <guimenuitem>Předchozí "
+"hádanka</guimenuitem> můžete procházek hlavolamy postupně. Hlavolamy jsou "
+"rozdělené do tří kategorií, které najdete v podnabídkách <guisubmenu>Stezka "
+"HuaRong</guisubmenu>, <guisubmenu>Sbírka výzev</guisubmenu> a "
+"<guisubmenu>Sbírka dovedností</guisubmenu>. V každé této podnabídce jsou "
+"názvy hlavolamů, které odkazují na daný scénář hry."
+
+#: C/index.docbook:323(example/title)
+msgid "Starting a game"
+msgstr "Spuštění hry"
+
+#: C/index.docbook:324(example/para)
+msgid ""
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> <guisubmenu>"
+"[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
+"menuchoice>"
+msgstr ""
+"Když chcete začít hru, vyberte <menuchoice><guimenu>Hra</guimenu><guisubmenu>"
+"[kategorie]</guisubmenu><guimenuitem>[scénář hry]</guimenuitem></menuchoice>."
+
+#: C/index.docbook:335(sect2/title)
+msgid "Moving blocks"
+msgstr "Přesouvání bloků"
+
+#: C/index.docbook:336(sect2/para)
+msgid ""
+"To move a block, click on it, hold down the mouse button and drag it to its "
+"new location. You cannot move the green blocks or the block that borders the "
+"game. You cannot move a block to a space already occupied by another block, "
+"with the exception that you may move the patterned block through the green "
+"blocks to win."
+msgstr ""
+"Blok přesunete tak, že na něj kliknete, držíte zmáčknuté tlačítko myši a "
+"přesunete jej na nové místo. Přesouvat nelze zelené bloky a bloky tvořící "
+"hranice hry. Blok nemůžete přesunout na místo, které je již obsazené jiným "
+"blokem, s výjimkou, že můžete přesunout vzorovaný blok skrz zelené bloky ve "
+"vítězném tahu."
+
+#: C/index.docbook:356(sect1/title)
+msgid "Authors"
+msgstr "Autoři"
+
+#: C/index.docbook:357(sect1/para)
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
+"rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
+"report a bug or make a suggestion regarding this application or this manual, "
+"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">document</ulink>."
+msgstr ""
+"Hru <application>Klotski</application> napsal Lars Rydlinge (<email>lars."
+"rydlinge@hig.se</email>). Tuto příručku napsal Andrew Sobala. Pokud chcete "
+"nahlásit chybu nebo podat návrh týkající se této aplikace nebo tohoto "
+"návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-guide?"
+"feedback-bugs\" type=\"help\">dokumentu</ulink>."
+
+#: C/index.docbook:377(sect1/title)
+msgid "License"
+msgstr "Licence"
+
+#: C/index.docbook:378(sect1/para)
+msgid ""
+"This program and tile artwork is free software; you can redistribute it and/"
+"or modify it under the terms of the <citetitle>GNU General Public License</"
+"citetitle> as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version."
+msgstr ""
+"Tento program, včetně grafických návrhů, je svobodný software. Můžete jej "
+"dále šířit a/nebo upravovat za dodržení podmínek <ulink type=\"help\" url="
+"\"help:gpl\"><citetitle>GNU General Public License</citetitle></ulink>, tak "
+"jak ji vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) "
+"novější."
+
+#: C/index.docbook:385(sect1/para)
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
+"License</citetitle> for more details."
+msgstr ""
+"Tento program je šířen s přesvědčením, že může být užitečný, ale BEZ "
+"JAKÝCHKOLIV ZÁRUK, bez předpokládané záruky na OBCHODOVATELNOST nebo "
+"VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
+"Public License</citetitle>."
+
+#: C/index.docbook:398(para/address)
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#: C/index.docbook:391(sect1/para)
+msgid ""
+"A copy of the <citetitle>GNU General Public License</citetitle> is included "
+"as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
+"obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
+msgstr ""
+"Kopie <citetitle>GNU General Public License</citetitle> je zahrnuta v "
+"dodatku <citetitle>Uživatelské přiručky GNOME</citetitle>. Kopii "
+"<citetitle>GNU General Public License</citetitle> můžete také získat od Free "
+"Software Foundation navštívením <ulink type=\"http\" url=\"http://www.fsf.org"
+"\">jejich webu</ulink> nebo zasláním žádosti na <_:address-1/>"
+
+#: C/legal.xml:9(para/ulink)
+msgid "link"
+msgstr "odkazem"
+
+#: C/legal.xml:2(legalnotice/para)
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
+"Free Documentation License (GFDL) ve verzi 1.1 nebo v jakékoli další verzi "
+"vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
+"předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
+"tímto <_:ulink-1/> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."
