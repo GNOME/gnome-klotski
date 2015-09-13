@@ -1,578 +1,639 @@
 # Hungarian translation for gnome-klotski.
-# Copyright (C) 2015 Free Software Foundation, Inc.
+# Copyright (C) 2014 gnome-klotski's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-klotski package.
 #
-# Balázs Úr <urbalazs at gmail dot com>, 2015.
-# Gabor Kelemen <kelemeng at ubuntu dot com>, 2015.
+# Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
-"POT-Creation-Date: 2015-03-01 08:04+0000\n"
-"PO-Revision-Date: 2015-03-13 13:44+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
-"Language-Team: Hungarian <openscope at gmail dot com>\n"
-"Language: hu\n"
+"POT-Creation-Date: 2014-05-22 06:49+0000\n"
+"PO-Revision-Date: 2014-05-22 19:32+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <gnome-hu-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 1.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <urbalazs at gmail dot com>, 2015."
+msgstr "Úr Balázs <urbalazs@gmail.com>, 2014."
 
-#. (itstool) path: info/title
-#: C/index.page:9
-msgctxt "link"
-msgid "Klotski"
-msgstr "Klotski"
-
-#. (itstool) path: info/title
-#: C/index.page:10
-msgctxt "text"
-msgid "Klotski"
-msgstr "Klotski"
-
-#. (itstool) path: credit/name
-#: C/index.page:16 C/keyboard-shortcuts.page:12 C/puzzles.page:12
-#: C/rules.page:13 C/scores.page:12 C/start.page:13
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/name
-#: C/index.page:20 C/keyboard-shortcuts.page:17 C/puzzles.page:22
-#: C/rules.page:18 C/scores.page:22 C/start.page:23
-msgid "Michael Catanzaro"
-msgstr "Michael Catanzaro"
-
-#. (itstool) path: info/desc
-#: C/index.page:26
-msgid "GNOME Klotski help"
-msgstr "GNOME Klotski súgó"
-
-#. (itstool) path: page/title
-#: C/index.page:29
-msgid "<_:media-1/> Klotski"
-msgstr "<_:media-1/> Klotski"
-
-#. (itstool) path: page/p
-#: C/index.page:34
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204
+msgctxt "_"
 msgid ""
-"<app>GNOME Klotski</app> is a set of block sliding puzzles. The objective is "
-"to move the patterned block to the area bordered by green markers. To do so, "
-"you will need to slide other blocks out of the way. Complete each puzzle in "
-"as few moves as possible!"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 msgstr ""
-"A <app>GNOME Klotski</app> blokktologatós logikai játékok halmaza. A cél a "
-"mintás blokk átvitele a zöld jelölőkkel határolt területre. Ehhez a többi "
-"blokkot félre kell tolni az útból. Teljesítse az egyes feladványokat a "
-"lehető legkevesebb lépéssel!"
+"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
 
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Playing Klotski"
-msgstr "A Klotski játék"
-
-#. (itstool) path: section/title
-#: C/index.page:44
-msgid "Useful tips"
-msgstr "Hasznos tippek"
-
-#. (itstool) path: credit/years
-#: C/keyboard-shortcuts.page:14 C/puzzles.page:14 C/rules.page:15
-#: C/scores.page:14 C/start.page:15
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: credit/years
-#: C/keyboard-shortcuts.page:19 C/puzzles.page:19 C/puzzles.page:24
-#: C/rules.page:20 C/scores.page:19 C/scores.page:24 C/start.page:20
-msgid "2015"
-msgstr "2015"
-
-#. (itstool) path: info/desc
-#: C/keyboard-shortcuts.page:24
-msgid "Play the game using the keyboard."
-msgstr "Játék a billentyűzet használatával."
-
-#. (itstool) path: page/title
-#: C/keyboard-shortcuts.page:28
-msgid "Keyboard shortcuts"
-msgstr "Gyorsbillentyűk"
-
-#. (itstool) path: page/p
-#: C/keyboard-shortcuts.page:30
+#. (itstool) path: imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261
+msgctxt "_"
 msgid ""
-"Use keyboard shortcuts to perform common tasks more quickly than with the "
-"mouse and menus. The following tables list all of <app>Klotski’s</app> "
-"shortcut keys."
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
 msgstr ""
-"A gyorsbillentyűk segítségével a gyakori feladatok az egér és menük "
-"használatánál gyorsabban végezhetők el. A következő táblázatok felsorolják a "
-"<app>Klotski</app> összes gyorsbillentyűjét."
+"external ref='figures/gnotski_start_window.png' "
+"md5='23e584de3f58e5baf5c9ca5098a7961e'"
 
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:36
-msgid "Help"
-msgstr "Súgó"
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:28
+msgid "<application>Klotski</application> Manual"
+msgstr "A <application>Klotski</application> kézikönyve"
 
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:37
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:40
-msgid "Quit"
-msgstr "Kilépés"
-
-#. (itstool) path: td/p
-#: C/keyboard-shortcuts.page:41
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
-#. (itstool) path: p/link
-#: C/legal.xml:3
-msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "Creative Commons Nevezd meg!-Így add tovább! 3.0 átíratlan licenc"
-
-#. (itstool) path: license/p
-#: C/legal.xml:3
-msgid "This work is licensed under a <_:link-1/>."
-msgstr "Ez a mű a <_:link-1/> feltételei szerint terjeszthető."
-
-#. (itstool) path: credit/name
-#: C/puzzles.page:17 C/scores.page:17 C/start.page:18
-msgid "Shobha Tyagi"
-msgstr "Shobha Tyagi"
-
-#. (itstool) path: info/desc
-#: C/puzzles.page:30
-msgid "How do I switch puzzles?"
-msgstr "Hogyan válthatok fejtörőt?"
-
-#. (itstool) path: page/title
-#: C/puzzles.page:34
-msgid "Puzzles"
-msgstr "Fejtörők"
-
-#. (itstool) path: page/p
-#: C/puzzles.page:36
+#. (itstool) path: abstract/para
+#: C/index.docbook:31
 msgid ""
-"Puzzles are divided into three categories based on the difficulty level of "
-"the game. <gui>HuaRong Trail</gui> puzzles are the easiest. <gui>Challenge "
-"Pack</gui> and <gui>Skill Pack</gui> puzzles are more difficult."
+"Klotski is a puzzle game of which the objective is to get the patterned "
+"block to the marker, which is done by moving the blocks in its way."
 msgstr ""
-"A fejtörők három kategóriára vannak osztva a játék nehézségi szintje "
-"alapján. A <gui>HuaRong ösvény</gui> fejtörők a legkönnyebbek. A "
-"<gui>Kihíváscsomag</gui> és a <gui>Szakértői csomag</gui> fejtörők sokkal "
-"nehezebbek."
+"A Klotski egy logikai játék. Célja a mintás doboz eljuttatása a jelzésre, "
+"amely az útjában lévő dobozok elmozdításával végezhető el."
 
-#. (itstool) path: section/title
-#: C/puzzles.page:42
-msgid "Select a Puzzle"
-msgstr "Fejtörő kiválasztása"
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:38
+msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
+msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#. (itstool) path: section/p
-#: C/puzzles.page:44
-msgid "To browse the puzzles:"
-msgstr "A fejtörők tallózásához:"
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:54 C/index.docbook:142
+msgid "GNOME Documentation Project"
+msgstr "GNOME dokumentációs projekt"
 
-#. (itstool) path: item/p
-#: C/puzzles.page:47
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
-"Click on <gui style=\"button\">Change Puzzle</gui> button in the header bar. "
-"Choose a category using the back and forward buttons on the top. All the "
-"puzzles in the current category will be displayed."
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
-"Kattintson a <gui style=\"button\">Fejtörő módosítása</gui> gombra a "
-"fejlécsávban. Válasszon egy kategóriát a fent lévő vissza és előre gombok "
-"használatával. Az aktuális kategóriában minden fejtörő meg lesz jelenítve."
+"Engedélyt adunk Önnek a jelen dokumentum sokszorosítására, terjesztésére és/"
+"vagy módosítására a Free Software Foundation által kiadott GNU Free "
+"Documentation License (GFDL) 1.1-es, vagy bármely azt követő verziójának "
+"feltételei alapján. Nincs Nem Változtatható szakasz, nincs Címlapszöveg, "
+"nincs Hátlapszöveg. A jelen licenc egy példányát <ulink type=\"help\" url="
+"\"help:fdl\">itt</ulink> vagy a kézikönyv COPYING-DOCS elnevezésű fájljában "
+"találhatja."
 
-#. (itstool) path: item/p
-#: C/puzzles.page:52
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
-"You can navigate sequentially among the puzzles with the <gui style=\"button"
-"\">Next Puzzle</gui> and <gui style=\"button\"> Previous Puzzle</gui>. Or, "
-"double-click on the name of a puzzle to switch to it."
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
 msgstr ""
-"Sorrendben is navigálhat a fejtörők között a <gui style=\"button\">Következő "
-"fejtörő</gui> és az <gui style=\"button\">Előző fejtörő</gui> gombokkal. "
-"Vagy kattintson duplán egy fejtörő nevére az arra történő átváltáshoz."
+"Ez a kézikönyv része a GFDL alatt megjelenő GNOME dokumentációk "
+"gyűjteményének. A kézikönyv a gyűjteménytől függetlenül szabadon "
+"terjeszthető, a licenc másolatát mellékelve a 6. fejezetben leírtaknak "
+"megfelelően."
 
-#. (itstool) path: info/desc
-#: C/rules.page:25
-msgid "What are the rules of <app>Klotski</app>?"
-msgstr "Mik a <app>Klotski</app> szabályai?"
-
-#. (itstool) path: page/title
-#: C/rules.page:29
-msgid "Game rules"
-msgstr "Játékszabályok"
-
-#. (itstool) path: page/p
-#: C/rules.page:31
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
-"The aim of <app>Klotski</app> is to move the patterned block to the area "
-"bordered by green markers. Click and drag a block to move it to a location "
-"of your choice on the board. Or, click once on the block to begin moving it, "
-"then click again on the position you wish to place it."
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
 msgstr ""
-"A <app>Klotski</app> célja a mintás doboz áthelyezése a zöld jelzések által "
-"határolt területre. Kattintson és húzza a dobozt a választott helyre történő "
-"mozgatáshoz a táblán. Vagy kattintson egyszer a dobozra a mozgatás "
-"elkezdéséhez, majd kattintson újra arra a pozícióra, ahova helyezni szeretné."
+"A cégek különböző, védjegy alá tartozó elnevezéseket használnak termékeik és "
+"szolgáltatásuk megkülönböztetéséhez. Ahol ezek a nevek megjelennek bármelyik "
+"GNOME dokumentációban és a GNOME dokumentációs projekt tagjainak tudomásuk "
+"van a védjegyről, abban az esetben ezek az elnevezések teljes egészében vagy "
+"kezdőbetűik nagybetűsek."
 
-#. (itstool) path: section/title
-#: C/rules.page:37
-msgid "Rules for moving blocks"
-msgstr "A dobozok mozgatásának szabályai"
-
-#. (itstool) path: item/p
-#: C/rules.page:41
-msgid "The green blocks and the boundary blocks cannot be moved."
-msgstr "A zöld dobozok és a határoló dobozok nem mozgathatók."
-
-#. (itstool) path: item/p
-#: C/rules.page:44
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
-"A block normally cannot be moved over any other block. However, you may move "
-"the patterened block over the green blocks."
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"Egy doboz általában nem mozgatható semmilyen másik dobozra. Azonban a mintás "
-"dobozt ráhelyezheti a zöld dobozokra."
+"A DOKUMENTUM A \"JELEN ÁLLAPOTÁBAN\" KERÜL KIADÁSRA, MINDENFÉLE "
+"GARANCIAVÁLLALÁS NÉLKÜL, LEGYEN AZ KIFEJEZETT VAGY BELEÉRTETT, BELEÉRTVE, DE "
+"NEM KIZÁRÓLAGOSAN A DOKUMENTUM VAGY ANNAK MÓDOSÍTOTT VÁLTOZATÁNAK "
+"HIBAMENTESSÉGÉRE, FORGALOMBA HOZHATÓSÁGRA VAGY ALKALMAZHATÓSÁGRA VONATKOZÓ "
+"GARANCIÁKAT. A DOKUMENTUM VAGY ANNAK MÓDOSÍTOTT VÁLTOZATÁNAK MINŐSÉGÉBŐL ÉS "
+"FELHASZNÁLHATÓSÁGÁBÓL FAKADÓ ÖSSZES KOCKÁZAT A FELHASZNÁLÓT TERHELI. HA A "
+"PROGRAM HIBÁSAN MŰKÖDIK, A FELHASZNÁLÓNAK MAGÁNAK (NEM AZ ÍRÓNAK, SZERZŐNEK "
+"VAGY BÁRMELY KÖZREMŰKÖDŐNEK) KELL VÁLLALNIA A JAVÍTÁSHOZ SZÜKSÉGES MINDEN "
+"KÖLTSÉGET. A GARANCIAVÁLLALÁS EZEN ELUTASÍTÁSA A LICENC ELVÁLASZTHATATLAN "
+"RÉSZÉT KÉPEZI. A DOKUMENTUMOT VAGY ANNAK BÁRMELY MÓDOSÍTOTT VÁLTOZATÁNAK "
+"HASZNÁLATA NEM ENGEDÉLYEZETT, AZ ALÁBBIAKBAN FELSOROLTAKON KÍVÜL; VALAMINT"
 
-#. (itstool) path: item/p
-#: C/rules.page:48
-msgid "In a single move, you may move a block over any number of open spaces."
-msgstr "Egy lépéssel akárhány üres hely fölött átmozgathat egy dobozt."
-
-#. (itstool) path: info/desc
-#: C/scores.page:29
-msgid "How do I view my high scores?"
-msgstr "Hogyan nézhetem meg a legmagasabb pontjaimat?"
-
-#. (itstool) path: page/title
-#: C/scores.page:33
-msgid "Scores"
-msgstr "Pontszámok"
-
-#. (itstool) path: page/p
-#: C/scores.page:35
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
-"You can check your performance by looking at the number of moves you have "
-"made in the previous games. To view your scores:"
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
-"Ellenőrizheti teljesítményét az előző játékokban tett lépések számának "
-"megtekintésével. A pontszámok megtekintéséhez:"
+"KÖRÜLMÉNYEKTŐL ÉS HATÁLYOS JOGSZABÁLYOKTÓL, A KÁRTÓL (BELEÉRTVE A "
+"GONDATLANSÁGOT), SZERZŐDÉS VAGY EGYEBEKTŐL FÜGGETLENÜL,A SZERZŐ, A "
+"DOKUMENTUM ÍRÓJA VAGY BÁRMELY FÉL BESZÁLLÍTÓJA NEM TEHETŐK FELELŐSSÉ A "
+"KÁROKÉRT, BELEÉRTVE MINDEN VÉLETLEN, VAGY KÖVETKEZMÉNYES KÁRT, AMELY A "
+"PROGRAM HASZNÁLATÁBÓL VAGY A HASZNÁLAT MEGAKADÁLYOZÁSÁBÓL SZÁRMAZIK "
+"(BELEÉRTVE, DE NEM KIZÁRÓLAGOSAN AZ ADATVESZTÉST ÉS A HELYTELEN "
+"ADATFELDOLGOZÁST, VALAMINT A MÁS PROGRAMOKKAL VALÓ HIBÁS EGYÜTTMŰKÖDÉST), "
+"MÉG AKKOR SEM, HA EZEN FELEK TUDATÁBAN VOLTAK, HOGY ILYEN KÁROK "
+"KELETKEZHETNEK."
 
-#. (itstool) path: item/p
-#: C/scores.page:39
-msgid "Select <gui style=\"menuitem\">Scores</gui> from the menu."
-msgstr "Válassza ki a <gui style=\"menuitem\">Pontszámokat</gui> a menüből."
-
-#. (itstool) path: item/p
-#: C/scores.page:43
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
-"The dialog displays scores of one puzzle you have completed at a time. "
-"Select the puzzle whose scores you wish to see from the menu."
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
 msgstr ""
-"A párbeszédablak egy korábban megoldott fejtörő pontszámait jeleníti meg. "
-"Válassza ki azt a fejtörőt a menüből, amely pontszámait meg szeretné "
-"tekinteni."
+"A DOKUMENTUM ÉS A DOKUMENTUM MÓDOSÍTOTT VERZIÓJA A GNU FREE DOCUMENTATION "
+"LICENSE (GFDL) ALATT JELENIK MEG AZ ALÁBBI ÉRTELMEZÉSSEL: <_:orderedlist-1/>"
 
-#. (itstool) path: section/title
-#. (itstool) path: th/p
-#: C/scores.page:51 C/scores.page:58
-msgid "Minimum number of moves"
-msgstr "A lépések legkisebb száma"
-
-#. (itstool) path: section/p
-#: C/scores.page:53
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:63
 msgid ""
-"The number of moves and the placement of blocks together make each game "
-"unique. The minimum number of moves for the various puzzles are:"
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
 msgstr ""
-"A lépések száma és a dobozok elhelyezése együttesen tesznek egyedivé minden "
-"játékot. A lépések legkisebb száma a különféle fejtörőknél a következő:"
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME dokumentációs projekt</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
 
-#. (itstool) path: th/p
-#: C/scores.page:58
-msgid "Puzzle"
-msgstr "Fejtörő"
-
-#. (itstool) path: td/p
-#: C/scores.page:61
-msgid "Only 18 Steps"
-msgstr "Csak 18 lépés"
-
-#. (itstool) path: td/p
-#: C/scores.page:61
-msgid "18"
-msgstr "18"
-
-#. (itstool) path: td/p
-#: C/scores.page:64
-msgid "Daisy"
-msgstr "Százszorszép"
-
-#. (itstool) path: td/p
-#: C/scores.page:64 C/scores.page:73
-msgid "28"
-msgstr "28"
-
-#. (itstool) path: td/p
-#: C/scores.page:67
-msgid "Violet"
-msgstr "Ibolya"
-
-#. (itstool) path: td/p
-#: C/scores.page:67
-msgid "27"
-msgstr "27"
-
-#. (itstool) path: td/p
-#: C/scores.page:70
-msgid "Poppy"
-msgstr "Pipacs"
-
-#. (itstool) path: td/p
-#: C/scores.page:70
-msgid "40"
-msgstr "40"
-
-#. (itstool) path: td/p
-#: C/scores.page:73
-msgid "Pansy"
-msgstr "Árvácska"
-
-#. (itstool) path: td/p
-#: C/scores.page:76
-msgid "Snowdrop"
-msgstr "Hóvirág"
-
-#. (itstool) path: td/p
-#: C/scores.page:76
-msgid "46"
-msgstr "46"
-
-#. (itstool) path: td/p
-#: C/scores.page:79
-msgid "Red Donkey"
-msgstr "Vörös csacsi"
-
-#. (itstool) path: td/p
-#: C/scores.page:79
-msgid "81"
-msgstr "81"
-
-#. (itstool) path: td/p
-#: C/scores.page:82
-msgid "Trail"
-msgstr "Ösvény"
-
-#. (itstool) path: td/p
-#: C/scores.page:82
-msgid "102"
-msgstr "102"
-
-#. (itstool) path: td/p
-#: C/scores.page:85
-msgid "Ambush"
-msgstr "Csapda"
-
-#. (itstool) path: td/p
-#: C/scores.page:85
-msgid "120"
-msgstr "120"
-
-#. (itstool) path: td/p
-#: C/scores.page:88
-msgid "Agatka"
-msgstr "Agatka"
-
-#. (itstool) path: td/p
-#: C/scores.page:88
-msgid "30"
-msgstr "30"
-
-#. (itstool) path: td/p
-#: C/scores.page:91
-msgid "Success"
-msgstr "Siker"
-
-#. (itstool) path: td/p
-#: C/scores.page:91 C/scores.page:121
-msgid "25"
-msgstr "25"
-
-#. (itstool) path: td/p
-#: C/scores.page:94
-msgid "Bone"
-msgstr "Csont"
-
-#. (itstool) path: td/p
-#: C/scores.page:94
-msgid "14"
-msgstr "14"
-
-#. (itstool) path: td/p
-#: C/scores.page:97
-msgid "Fortune"
-msgstr "Szerencse"
-
-#. (itstool) path: td/p
-#: C/scores.page:97
-msgid "24"
-msgstr "24"
-
-#. (itstool) path: td/p
-#: C/scores.page:100
-msgid "Fool"
-msgstr "Bolond"
-
-#. (itstool) path: td/p
-#: C/scores.page:100 C/scores.page:103
-msgid "29"
-msgstr "29"
-
-#. (itstool) path: td/p
-#: C/scores.page:103
-msgid "Solomon"
-msgstr "Salamon"
-
-#. (itstool) path: td/p
-#: C/scores.page:106
-msgid "Cleopatra"
-msgstr "Kleopátra"
-
-#. (itstool) path: td/p
-#: C/scores.page:106
-msgid "31"
-msgstr "31"
-
-#. (itstool) path: td/p
-#: C/scores.page:109
-msgid "Shark"
-msgstr "Cápa"
-
-#. (itstool) path: td/p
-#: C/scores.page:109
-msgid "48"
-msgstr "48"
-
-#. (itstool) path: td/p
-#: C/scores.page:112
-msgid "Rome"
-msgstr "Róma"
-
-#. (itstool) path: td/p
-#: C/scores.page:112
-msgid "38"
-msgstr "38"
-
-#. (itstool) path: td/p
-#: C/scores.page:115
-msgid "Pennant Puzzle"
-msgstr "Zászló fejtörő"
-
-#. (itstool) path: td/p
-#: C/scores.page:115
-msgid "59"
-msgstr "59"
-
-#. (itstool) path: td/p
-#: C/scores.page:118
-msgid "Ithaca"
-msgstr "Itaka"
-
-#. (itstool) path: td/p
-#: C/scores.page:118 C/scores.page:133
-msgid "?"
-msgstr "?"
-
-#. (itstool) path: td/p
-#: C/scores.page:121
-msgid "Pelopones"
-msgstr "Peloponész"
-
-#. (itstool) path: td/p
-#: C/scores.page:124
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. (itstool) path: td/p
-#: C/scores.page:124
-msgid "21"
-msgstr "21"
-
-#. (itstool) path: td/p
-#: C/scores.page:127
-msgid "Polonaise"
-msgstr "Polonéz"
-
-#. (itstool) path: td/p
-#: C/scores.page:127
-msgid "23"
-msgstr "23"
-
-#. (itstool) path: td/p
-#: C/scores.page:130
-msgid "Baltic Sea"
-msgstr "Balti tenger"
-
-#. (itstool) path: td/p
-#: C/scores.page:130
-msgid "42"
-msgstr "42"
-
-#. (itstool) path: td/p
-#: C/scores.page:133
-msgid "American Pie"
-msgstr "Amerikai pite"
-
-#. (itstool) path: td/p
-#: C/scores.page:136
-msgid "Traffic Jam"
-msgstr "Közlekedési dugó"
-
-#. (itstool) path: td/p
-#: C/scores.page:136
-msgid "132"
-msgstr "132"
-
-#. (itstool) path: td/p
-#: C/scores.page:139
-msgid "Sunshine"
-msgstr "Napfény"
-
-#. (itstool) path: td/p
-#: C/scores.page:139
-msgid "345"
-msgstr "345"
-
-#. (itstool) path: info/desc
-#: C/start.page:29
-msgid "How do I start playing?"
-msgstr "Hogyan kezdhetek játszani?"
-
-#. (itstool) path: page/title
-#: C/start.page:33
-msgid "Start a new game"
-msgstr "Új játék indítása"
-
-#. (itstool) path: page/p
-#: C/start.page:35
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:72
 msgid ""
-"When you open <app>Klotski</app>, a new game begins automatically. After "
-"your first move, you can select <gui style=\"button\">Start Over</gui> to "
-"restart the puzzle that you are currently playing. You can also <link xref="
-"\"puzzles\">switch to a different puzzle.</link>"
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
 msgstr ""
-"Amikor megnyitja a <app>Klotski</app> alkalmazást, akkor automatikusan új "
-"játék kezdődik. Az első lépés után választhatja az <gui style=\"button"
-"\">Újrakezdést</gui> az aktuálisan játszott fejtörő újraindításához. Továbbá "
-"<link xref=\"puzzles\">átválthat egy másik fejtörőre</link> is."
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME projekt</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:81
+msgid ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME projekt</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:139
+msgid "Andrew Sobala <email>andrew@sobala.net</email>"
+msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:135
+msgid ""
+"<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>V2.0</revnumber> <date>2002. augusztus 13.</date> <"
+"_:revdescription-1/>"
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:148
+msgid "This manual describes version 2.12 of GNOME Klotski."
+msgstr "Ez a kézikönyv a GNOME Klotski 2.12-es verziójához készült."
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:151
+msgid "Feedback"
+msgstr "Visszajelzés"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:152
+msgid ""
+"To report a bug or make a suggestion regarding the <application>Klotski</"
+"application> application or this manual, follow the directions in the <ulink "
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</"
+"ulink>."
+msgstr ""
+"A <application>Klotski</application> alkalmazás vagy dokumentáció hibáiról "
+"bejelentést, illetve javaslatokat a <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">GNOME visszajelzés oldal</ulink> leírása alapján tehet."
+
+#. (itstool) path: article/indexterm
+#: C/index.docbook:160
+msgid "<primary>GNOME Klotski</primary>"
+msgstr "<primary>GNOME Klotski</primary>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:167
+msgid "Introduction"
+msgstr "Bevezetés"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:168
+msgid ""
+"The <application>Klotski</application> application is a clone of the Klotski "
+"game. The objective is to move the patterned block to the area bordered by "
+"green markers."
+msgstr ""
+"A <application>Klotski</application> alkalmazás a Klotski játék klónja. A cél "
+"a mintás doboz áthelyezése a zöld jelzések által határolt területre."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:171
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
+"Rydlinge@HIG.SE</email>)."
+msgstr ""
+"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette (<"
+"email>Lars.Rydlinge@HIG.SE</email>)."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:174
+msgid ""
+"<application>Klotski</application> is included in the gnome-games package, "
+"which is part of the GNOME desktop environment. This document describes "
+"version 2.12 of <application>Klotski</application>."
+msgstr ""
+"A <application>Klotski</application> játékot a gnome-games csomag "
+"tartalmazza, amely a GNOME asztali környezet része. Ez a dokumentum a <"
+"application>Klotski</application> 2.12-es verziójához készült."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:177
+msgid ""
+"This program is distributed under the terms of the GNU General Public "
+"license as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version. A copy of this license "
+"can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or "
+"in the file COPYING included with the source code of this program."
+msgstr ""
+"Ez a program a Free Software Foundation által kiadott GNU Lesser General "
+"Public License dokumentumban leírtak, akár a licenc 2-es, akár (tetszőleges) "
+"későbbi  változata szerint kerül terjesztésre. Ennek a licencnek egy példánya "
+"megtalálható ezen a <ulink url=\"help:gpl\" type=\"help\">hivatkozáson</ulink>"
+", vagy a program forráskódjában mellékelt fájl tartalmazza annak MÁSOLATÁT."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:184
+msgid ""
+"To report a bug or make a suggestion regarding this application or this "
+"manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
+"bugs\" type=\"help\">document</ulink>."
+msgstr ""
+"Az alkalmazással, vagy ezen kézikönyvvel kapcsolatos megjegyzéseit és "
+"hibajelentéseit ezen <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">dokumentum</ulink> útmutatási alapján juttathatja el hozzánk."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:193
+msgid "Objective"
+msgstr "Cél"
+
+#. (itstool) path: figure/title
+#: C/index.docbook:200
+msgid "The winning move"
+msgstr "A nyerő lépés"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:202
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>The patterned block should be moved to "
+"the space bordered by the green markers.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/> "
+"</imageobject> <textobject> <phrase>A mintás dobozt a zöld jelzések által "
+"határolt területre kell mozgatni.</phrase> </textobject>"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:194
+msgid ""
+"The objective of <application>Klotski</application> is to move the patterned "
+"block to the green markers in as few moves as possible. You do this by "
+"moving the blocks one at a time with the mouse until you can get the "
+"patterned block to the markers. <_:figure-1/>"
+msgstr ""
+"A <application>Klotski</application> célja a mintás doboz áthelyezése a zöld "
+"jelzésekre a lehető legkevesebb lépésből. Ezt úgy teheti meg, hogy addig "
+"mozgatja a dobozokat egyesével az egérrel, amíg el nem juttatja a mintás "
+"dobozt a jelzésekre. <_:figure-1/>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:219
+msgid "Playing <application>Klotski</application>"
+msgstr "A <application>Klotski</application> játék"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:242
+msgid "To Start <application>Klotski</application>"
+msgstr "A <application>Klotski</application> indítása"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:243
+msgid ""
+"You can start <application>Klotski</application> from the Applications menu "
+"by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
+"<guimenuitem>Gnotski</guimenuitem> </menuchoice>."
+msgstr ""
+"A <application>Klotski</application> játékot a Alkalmazások menüből "
+"indíthatja a <menuchoice> <guisubmenu>Játékok</guisubmenu> "
+"<guimenuitem>Gnotski</guimenuitem> </menuchoice> menüponttal."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:252
+msgid "The main window"
+msgstr "A főablak"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:253
+msgid ""
+"When you start <application><application>Klotski</application></"
+"application>, the following window is displayed."
+msgstr ""
+"A <application><application>Klotski</application></application> indításakor a "
+"következő ablak jelenik meg."
+
+#. (itstool) path: figure/title
+#: C/index.docbook:257
+msgid "<application>Klotski</application> Start Up Window"
+msgstr "A <application>Klotski</application> indítóablaka"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:259
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
+"application> main window. Contains titlebar, menubar, game area and "
+"statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" "
+"format=\"PNG\"/> </imageobject> <textobject> <phrase>Megjeleníti a <"
+"application>Klotski</application> főablakát. A címsort, a menüsávot, a "
+"játékterületet és az állapotsort tartalmazza. A menüsáv tartalmazza a Játék "
+"és a Súgó menüket. </phrase> </textobject>"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:275
+msgid "Menubar"
+msgstr "Menüsáv"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:279
+msgid "Game menu"
+msgstr "Játékmenü"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:281
+msgid ""
+"The game menu allows you to start new games, view the highest scores and "
+"quit the program."
+msgstr ""
+"A játék menü lehetővé teszi új játékok indítását, a legmagasabb pontszámok "
+"megtekintését és a programból való kilépést."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:286
+msgid "Help menu"
+msgstr "Súgó menü"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:288
+msgid ""
+"The help menu allows you to view the documentation for <application>Klotski</"
+"application>"
+msgstr ""
+"A súgó menü lehetővé teszi a <application>Klotski</application> "
+"dokumentációjának megtekintését."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:295
+msgid "Game area"
+msgstr "Játékterület"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:297
+msgid ""
+"The game area shows the blocks in the current game. You can drag the blocks "
+"around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
+msgstr ""
+"A játékterület jeleníti meg az aktuális játék dobozait. Az egérrel foghatja "
+"meg a dobozokat az itt leírtak szerint: <xref linkend=\"gnotski-moving\"/>."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:303
+msgid "Statusbar"
+msgstr "Állapotsor"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:305
+msgid "The statusbar shows how many moves you have taken so far."
+msgstr "Az állapotsor azt jeleníti meg, hogy hány lépést tett meg eddig."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:272
+msgid ""
+"The <application>Klotski</application> window contains the following "
+"elements: <_:variablelist-1/>"
+msgstr ""
+"A <application>Klotski</application> ablak a következő elemeket tartalmazza: "
+"<_:variablelist-1/>"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
+msgid "Starting a new game"
+msgstr "Egy új játék indítása"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
+msgid ""
+"Use the <guimenu>Game menu</guimenu> to start a new game. The items "
+"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
+"guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
+"belongs to one of the three categories found in the submenus named "
+"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
+"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
+"puzzle name refers to a game scenario."
+msgstr ""
+"A <guimenu>Játék menü</guimenu> használatával indíthat új játékot. A <"
+"guimenuitem>Következő feladvány</guimenuitem> és az <guimenuitem>Előző "
+"feladvány</guimenuitem> lehetővé teszi a feladványok közötti egymás utáni "
+"navigációt. Minden feladvány az almenükben található három kategória "
+"egyikéhez tartozik, név szerint <guisubmenu>HuaRong ösvény</guisubmenu>, <"
+"guisubmenu>Kihíváscsomag</guisubmenu> és <guisubmenu>Szakértői csomag<"
+"/guisubmenu>. Ezekben az almenükben minden feladványnév egy "
+"játékforgatókönyvre utal."
+
+#. (itstool) path: example/title
+#: C/index.docbook:323
+msgid "Starting a game"
+msgstr "Egy játék indítása"
+
+#. (itstool) path: example/para
+#: C/index.docbook:324
+msgid ""
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
+"<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
+"guimenuitem> </menuchoice>"
+msgstr ""
+"Egy játék indításához válassza a <menuchoice> <guimenu>Játék</guimenu> "
+"<guisubmenu>[kategória]</guisubmenu> <guimenuitem>[játékforgatókönyv]</"
+"guimenuitem> </menuchoice> menüpontot."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:335
+msgid "Moving blocks"
+msgstr "A dobozok mozgatása"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:336
+msgid ""
+"To move a block, click on it, hold down the mouse button and drag it to its "
+"new location. You cannot move the green blocks or the block that borders the "
+"game. You cannot move a block to a space already occupied by another block, "
+"with the exception that you may move the patterned block through the green "
+"blocks to win."
+msgstr ""
+"Egy doboz mozgatásához kattintson rá, tartsa nyomva az egér gombját, és húzza "
+"az új helyére. Nem helyezheti át a zöld dobozokat, vagy a játékot határolókat."
+" Nem mozgathatja a dobozt olyan helyre, amelyet egy másik doboz már elfoglal, "
+"azzal a kivétellel, hogy a mintás dobozt áthúzhatja a zöld dobozokon ahhoz, "
+"hogy nyerjen."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:356
+msgid "Authors"
+msgstr "Szerzők"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:357
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
+"rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
+"report a bug or make a suggestion regarding this application or this manual, "
+"follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+"type=\"help\">document</ulink>."
+msgstr ""
+"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette (<"
+"email>lars.rydlinge@hig.se</email>). Ezt a kézikönyvet Andrew Sobala írta. "
+"Egy hiba jelentéséhez, vagy az alkalmazással, illetve a kézikönyvvel "
+"kapcsolatos javaslat tételéhez kövesse az ebben a <ulink "
+"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentumban</ulink> "
+"található útmutatást."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:377
+msgid "License"
+msgstr "Licenc"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:378
+msgid ""
+"This program and tile artwork is free software; you can redistribute it and/"
+"or modify it under the terms of the <citetitle>GNU General Public License</"
+"citetitle> as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version."
+msgstr ""
+"Ez a program és a csempék grafikája szabad szoftver, terjesztheti és/vagy "
+"módosíthatja a Free Software Foundation által kiadott <citetitle>GNU General "
+"Public License</citetitle> feltételi szerint; vagy a licenc 2. verziója, vagy "
+"(az önnek tetsző) bármely későbbi verziójában foglaltak alapján."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:385
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
+"License</citetitle> for more details."
+msgstr ""
+"A programot abban a reményben terjesztjük, hogy hasznos lesz, de nem "
+"vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program "
+"alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. További "
+"részletekért tanulmányozza a <citetitle>GNU GPL licencet</citetitle>."
+
+#. (itstool) path: para/address
+#: C/index.docbook:398
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:391
+msgid ""
+"A copy of the <citetitle>GNU General Public License</citetitle> is included "
+"as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
+"obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
+msgstr ""
+"A <citetitle>GNU General Public License</citetitle> egy példányát "
+"függelékként tartalmazza a <citetitle>GNOME felhasználói kézikönyv</citetitle>"
+". Beszerezheti a <citetitle>GNU General Public License</citetitle> egy "
+"példányát a Free Software Foundation <ulink type=\"http\" url=\"http://www."
+"fsf.org\">weboldalának</ulink> meglátogatásával, vagy írjon egy levelet az "
+"alábbi címre: <_:address-1/>"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "hivatkozás"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Jelen dokumentum szabadon másolható, terjeszthető és/vagy módosítható a GNU "
+"Free Documentation License (GFDL) 1.1-es verziója vagy a Free Software "
+"Foundation által kiadott ennél frissebb verziója alatt, a „Nem változtatható "
+"szakaszok”, „Címlapszövegek” és a „Hátlapszövegek” kivételével. A GFDL "
+"leírása ezen a <_:ulink-1/> érhető el, vagy a jelen dokumentációban "
+"található COPYING-DOCS fájlban."
 
