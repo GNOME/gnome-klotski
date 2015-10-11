@@ -478,7 +478,7 @@ public class Klotski : Gtk.Application
         if (options.contains ("version"))
         {
             /* NOTE: Is not translated so can be easily parsed */
-            stderr.printf ("%1$s %2$s\n", "gnome-klotski", VERSION);
+            stdout.printf ("%1$s %2$s\n", "gnome-klotski", VERSION);
             return Posix.EXIT_SUCCESS;
         }
 
