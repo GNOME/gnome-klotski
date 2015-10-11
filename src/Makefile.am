@@ -6,6 +6,7 @@ gnome_klotski_SOURCES = \
 	config.vapi \
 	gnome-klotski.vala \
 	history.vala \
+	klotski-window.vala \
 	puzzle.vala \
 	puzzle-view.vala \
 	score-dialog.vala \

@@ -138,7 +138,7 @@ public class ScoreDialog : Dialog
 
         if (!have_level_entry)
         {
-            var label = _(Klotski.level[entry.level].name);
+            var label = _(KlotskiWindow.level[entry.level].name);
             levels_liststore.append (out iter);
             levels_liststore.set (iter,
                                   0, label,
