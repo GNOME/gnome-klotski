@@ -1,5 +1,10 @@
+3.19.1 - October 25, 2015
+=========================
+
+* Significant code refactoring (Arnaud Bonatti)
+
 3.18.1 - October 15, 2015
-===========================
+=========================
 
 * New Friulian translation
 * Print --version to stdout
