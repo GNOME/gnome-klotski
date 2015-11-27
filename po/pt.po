@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: 3.8\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-10-06 18:59+0000\n"
+"POT-Creation-Date: 2015-10-18 19:48+0000\n"
 "PO-Revision-Date: 2014-10-08 08:55+0100\n"
 "Last-Translator: Pedro Albuquerque <palbuquerque73@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
@@ -42,9 +42,9 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"O GNOME Klotski vem com cerca de trinta disposições de jogos diferentes e de "
-"diferentes dificuldades. Algumas dessas disposições são semelhantes e só o "
-"tamanho de um ou mais blocos difere. Outras disposições apresentam maior "
+"O GNOME Klotski vem com cerca de trinta disposições de jogos e diferentes"
+"níveis de dificuldade. Algumas dessas disposições são semelhantes e só o "
+"tamanho de um ou mais blocos difere. Outras disposições têm maior "
 "variedade."
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:461
@@ -62,11 +62,11 @@ msgstr "jogo;estratégia;lógica;mover;"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "O puzzle em jogo"
+msgstr "O jogo em curso"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
-msgstr "O número do puzzle em jogo."
+msgstr "O número do jogo em curso."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
@@ -83,7 +83,7 @@ msgstr "verdadeiro se a janela estiver maximizada"
 #. puzzle name
 #: ../src/gnome-klotski.vala:61
 msgid "Only 18 Steps"
-msgstr "Apenas 18 Passos"
+msgstr "Só 18 passos"
 
 #. puzzle name
 #: ../src/gnome-klotski.vala:74
@@ -173,7 +173,7 @@ msgstr "Roma"
 #. puzzle name
 #: ../src/gnome-klotski.vala:285
 msgid "Pennant Puzzle"
-msgstr "Puzzle Pennant"
+msgstr "Jogo Pennant"
 
 #. puzzle name
 #: ../src/gnome-klotski.vala:298
@@ -221,25 +221,22 @@ msgid "Sunshine"
 msgstr "Brilho solar"
 
 #: ../src/gnome-klotski.vala:434
-#| msgid "Show release version"
 msgid "Print release version and exit"
 msgstr "Imprimir versão de lançamento e sair"
 
 #: ../src/gnome-klotski.vala:632
 msgid "Previous Puzzle"
-msgstr "Puzzle anterior"
+msgstr "Jogo anterior"
 
 #: ../src/gnome-klotski.vala:638
 msgid "Next Puzzle"
-msgstr "Puzzle seguinte"
+msgstr "Jogo seguinte"
 
 #: ../src/gnome-klotski.vala:660
-#| msgid "_Start"
 msgid "_Start Over"
-msgstr "C_omeçar de novo"
+msgstr "_Começar de novo"
 
 #: ../src/gnome-klotski.vala:669
-#| msgid "_Puzzles"
 msgid "_View Puzzles"
 msgstr "_Ver jogos"
 
@@ -264,7 +261,9 @@ msgstr ""
 
 #: ../src/gnome-klotski.vala:956
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #: ../src/score-dialog.vala:28
 msgid "_Close"
