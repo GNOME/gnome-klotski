@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<application>
- <id type="desktop">gnome-klotski.desktop</id>
- <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
- <_name>GNOME Klotski</_name>
- <_summary>Slide blocks to solve the puzzle</_summary>
- <description>
-  <_p>
-   GNOME Klotski is a set of block sliding puzzles. The objective is to move the
-   patterned block to the area bordered by green markers. To do so, you’ll need
-   to slide other blocks out of the way. Complete each puzzle in as few moves as
-   possible!
-  </_p>
-  <_p>
-   GNOME Klotski comes with nearly thirty different puzzle layouts of varying
-   difficulty. Some of the layouts are similar and only the size of one or more
-   blocks differ. Other layouts have more variety.
-  </_p>
- </description>
- <screenshots>
-  <screenshot type="default" width="748" height="398">https://people.gnome.org/~mcatanzaro/gnome-klotski.png</screenshot>
- </screenshots>
- <url type="homepage">https://wiki.gnome.org/Apps/Klotski</url>
- <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
- <project_group>GNOME</project_group>
- <kudos>
-   <kudo>AppMenu</kudo>
-   <kudo>HiDpiIcon</kudo>
-   <kudo>ModernToolkit</kudo>
-   <kudo>UserDocs</kudo>
- </kudos>
-</application>
+<component type="desktop">
+  <id>gnome-klotski.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <_name>GNOME Klotski</_name>
+  <_summary>Slide blocks to solve the puzzle</_summary>
+  <description>
+    <_p>
+      GNOME Klotski is a set of block sliding puzzles. The objective is to move the
+      patterned block to the area bordered by green markers. To do so, you’ll need
+      to slide other blocks out of the way. Complete each puzzle in as few moves as
+      possible!
+    </_p>
+    <_p>
+      GNOME Klotski comes with nearly thirty different puzzle layouts of varying
+      difficulty. Some of the layouts are similar and only the size of one or more
+      blocks differ. Other layouts have more variety.
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="748" height="398">
+      <image>https://people.gnome.org/~mcatanzaro/gnome-klotski.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/Klotski</url>
+  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <project_group>GNOME</project_group>
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
+  <translation type="gettext">gnome-klotski</translation>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="help">https://help.gnome.org/users/gnome-klotski/stable/</url>
+</component>
