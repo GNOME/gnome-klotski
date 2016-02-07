@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-15 16:08+0100\n"
-"PO-Revision-Date: 2015-03-15 15:42+0100\n"
+"POT-Creation-Date: 2016-02-07 16:43+0100\n"
+"PO-Revision-Date: 2016-02-04 19:10+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -58,7 +58,7 @@ msgstr ""
 "eller flere blokke varierer. Andre har større variation."
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -154,158 +154,16 @@ msgstr "Højden af vinduet i billedpunkter"
 msgid "true if the window is maximized"
 msgstr "sand hvis vinduet er maksimeret"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:65
-msgid "Only 18 Steps"
-msgstr "Kun 18 skridt"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:78
-msgid "Daisy"
-msgstr "Tusindfryd"
-
-# Da de fleste strenge her i området er navne på blomster, refereres der sikkert også til "viol" her fremfor violet
-#. puzzle name
-#: ../src/gnome-klotski.vala:91
-msgid "Violet"
-msgstr "Viol"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:104
-msgid "Poppy"
-msgstr "Valmue"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:117
-msgid "Pansy"
-msgstr "Stedmoderblomst"
-
-# Blomsternavn jf. de andre strenge i området
-#. puzzle name
-#: ../src/gnome-klotski.vala:130
-msgid "Snowdrop"
-msgstr "Vintergæk"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:143
-msgid "Red Donkey"
-msgstr "Det røde æsel"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:156
-msgid "Trail"
-msgstr "Kæde"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:169
-msgid "Ambush"
-msgstr "Bagholdsangreb"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:182
-msgid "Agatka"
-msgstr "Agatka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:193
-msgid "Success"
-msgstr "Succes"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:203
-msgid "Bone"
-msgstr "Knogle"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:216
-msgid "Fortune"
-msgstr "Lykke"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:230
-msgid "Fool"
-msgstr "Fjols"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:240
-msgid "Solomon"
-msgstr "Salomon"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:253
-msgid "Cleopatra"
-msgstr "Kleopatra"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:265
-msgid "Shark"
-msgstr "Haj"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:277
-msgid "Rome"
-msgstr "Rom"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:289
-msgid "Pennant Puzzle"
-msgstr "Vimpel"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:302
-msgid "Ithaca"
-msgstr "Ithaca"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:325
-msgid "Pelopones"
-msgstr "Pelopones"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:337
-msgid "Transeuropa"
-msgstr "Transeuropa"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:349
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:360
-msgid "Polonaise"
-msgstr "Polonaise"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:371
-msgid "Baltic Sea"
-msgstr "Det baltiske hav"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
-msgid "American Pie"
-msgstr "Amerikansk tærte"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:399
-msgid "Traffic Jam"
-msgstr "Trafikprop"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:410
-msgid "Sunshine"
-msgstr "Solskin"
-
-#: ../src/gnome-klotski.vala:438
+#: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Vis udgivelsesversion og afslut"
 
 # (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdelige ordspil bliver brugt)
-#: ../src/gnome-klotski.vala:667
+#: ../src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
 msgstr "\"Klodsede\" opgaver"
 
-#: ../src/gnome-klotski.vala:675
+#: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -318,18 +176,160 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/gnome-klotski.vala:834
+#. puzzle name
+#: ../src/klotski-window.vala:69
+msgid "Only 18 Steps"
+msgstr "Kun 18 skridt"
+
+#. puzzle name
+#: ../src/klotski-window.vala:82
+msgid "Daisy"
+msgstr "Tusindfryd"
+
+# Da de fleste strenge her i området er navne på blomster, refereres der sikkert også til "viol" her fremfor violet
+#. puzzle name
+#: ../src/klotski-window.vala:95
+msgid "Violet"
+msgstr "Viol"
+
+#. puzzle name
+#: ../src/klotski-window.vala:108
+msgid "Poppy"
+msgstr "Valmue"
+
+#. puzzle name
+#: ../src/klotski-window.vala:121
+msgid "Pansy"
+msgstr "Stedmoderblomst"
+
+# Blomsternavn jf. de andre strenge i området
+#. puzzle name
+#: ../src/klotski-window.vala:134
+msgid "Snowdrop"
+msgstr "Vintergæk"
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: ../src/klotski-window.vala:147
+msgid "Red Donkey"
+msgstr "Det røde æsel"
+
+#. puzzle name
+#: ../src/klotski-window.vala:160
+msgid "Trail"
+msgstr "Kæde"
+
+#. puzzle name
+#: ../src/klotski-window.vala:173
+msgid "Ambush"
+msgstr "Bagholdsangreb"
+
+#. puzzle name
+#: ../src/klotski-window.vala:186
+msgid "Agatka"
+msgstr "Agatka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:197
+msgid "Success"
+msgstr "Succes"
+
+#. puzzle name
+#: ../src/klotski-window.vala:207
+msgid "Bone"
+msgstr "Knogle"
+
+#. puzzle name
+#: ../src/klotski-window.vala:220
+msgid "Fortune"
+msgstr "Lykke"
+
+#. puzzle name
+#: ../src/klotski-window.vala:234
+msgid "Fool"
+msgstr "Fjols"
+
+#. puzzle name
+#: ../src/klotski-window.vala:244
+msgid "Solomon"
+msgstr "Salomon"
+
+#. puzzle name
+#: ../src/klotski-window.vala:257
+msgid "Cleopatra"
+msgstr "Kleopatra"
+
+#. puzzle name
+#: ../src/klotski-window.vala:269
+msgid "Shark"
+msgstr "Haj"
+
+#. puzzle name
+#: ../src/klotski-window.vala:281
+msgid "Rome"
+msgstr "Rom"
+
+#. puzzle name
+#: ../src/klotski-window.vala:293
+msgid "Pennant Puzzle"
+msgstr "Vimpel"
+
+#. puzzle name
+#: ../src/klotski-window.vala:306
+msgid "Ithaca"
+msgstr "Ithaca"
+
+#. puzzle name
+#: ../src/klotski-window.vala:329
+msgid "Pelopones"
+msgstr "Pelopones"
+
+#. puzzle name
+#: ../src/klotski-window.vala:341
+msgid "Transeuropa"
+msgstr "Transeuropa"
+
+#. puzzle name
+#: ../src/klotski-window.vala:353
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:364
+msgid "Polonaise"
+msgstr "Polonaise"
+
+#. puzzle name
+#: ../src/klotski-window.vala:375
+msgid "Baltic Sea"
+msgstr "Det baltiske hav"
+
+#. puzzle name
+#: ../src/klotski-window.vala:387
+msgid "American Pie"
+msgstr "Amerikansk tærte"
+
+#. puzzle name
+#: ../src/klotski-window.vala:403
+msgid "Traffic Jam"
+msgstr "Trafikprop"
+
+#. puzzle name
+#: ../src/klotski-window.vala:414
+msgid "Sunshine"
+msgstr "Solskin"
+
+#: ../src/klotski-window.vala:721
 #, c-format
 msgid "Moves: %d"
 msgstr "Træk: %d"
 
-#: ../src/gnome-klotski.vala:837
+#: ../src/klotski-window.vala:724
 msgid "Level completed."
 msgstr "Bane fuldført."
 
 #: ../src/score-dialog.vala:33
 msgid "_OK"
-msgstr "_O.k."
+msgstr "_OK"
 
 #~ msgid "Next Puzzle"
 #~ msgstr "Næste opgave"
