@@ -538,8 +538,7 @@ public class KlotskiWindow : ApplicationWindow
     {
         if (window_is_maximized || is_tiled)
             return;
-        window_width = allocation.width;
-        window_height = allocation.height;
+        get_size (out window_width, out window_height);
     }
 
     [GtkCallback]
