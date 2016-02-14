@@ -19,7 +19,7 @@ dnl Dependencies
 dnl ###########################################################################
 
 GLIB_REQUIRED=2.40.0
-GTK_REQUIRED=3.15.0
+GTK_REQUIRED=3.19.0
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(GNOME_KLOTSKI, [
