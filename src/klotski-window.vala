@@ -523,7 +523,7 @@ public class KlotskiWindow : ApplicationWindow
              _("Puzzle"),
              this,
              category_request,
-             Games.Scores.Style.PLAIN_ASCENDING,
+             Games.Scores.Style.POINTS_LESS_IS_BETTER,
              new Games.Scores.HistoryFileImporter (parse_old_score));
 
         // name, active, puzzle number (or -1), sensitive=false CSS hack
