@@ -66,6 +66,8 @@ public class KlotskiWindow : ApplicationWindow
     private Gtk.ListStore liststore_skill;
     private TreeIter[] puzzles_items;
     private Gee.List<Games.Scores.Category> score_categories;
+
+    /* Warning: reordering these will screw up import of old scores. */
     public const LevelInfo level[] =
     {
       /* puzzle name */
@@ -460,6 +462,33 @@ public class KlotskiWindow : ApplicationWindow
         return score_categories[i];
     }
 
+    private void parse_old_score (string line, out Games.Scores.Score? score, out Games.Scores.Category? category)
+    {
+        score = null;
+        category = null;
+
+        var tokens = line.split (" ");
+        if (tokens.length != 3)
+            return;
+
+        var date = Games.Scores.HistoryFileImporter.parse_date (tokens[0]);
+        if (date == null)
+            return;
+
+        var level = int.parse (tokens[1]);
+        if (level == 0 && tokens[1] != "0")
+            return;
+        if (level < 0 || level > score_categories.size)
+            return;
+
+        var moves = int.parse (tokens[2]);
+        if (moves <= 0)
+            return;
+
+        score = new Games.Scores.Score (moves, date.to_unix ());
+        category = score_categories[level];
+    }
+
     public KlotskiWindow ()
     {
         var css_provider = new CssProvider ();
@@ -481,15 +510,18 @@ public class KlotskiWindow : ApplicationWindow
         score_categories = new Gee.ArrayList<Games.Scores.Category> ();
         for (var i = 0; i < level.length; i++)
         {
-            score_categories.add (new Games.Scores.Category (i.to_string (), _(level[i].name)));
+            score_categories.add (new Games.Scores.Category (level[i].name.down ().replace (" ", "-"),
+                                                             _(level[i].name)));
         }
 
-        scores_context = new Games.Scores.Context ("gnome-klotski",
-                                                   // Label on the scores dialog, next to dropdown */
-                                                   _("Puzzle"),
-                                                   this,
-                                                   category_request,
-                                                   Games.Scores.Style.PLAIN_ASCENDING);
+        scores_context = new Games.Scores.Context.with_importer (
+            "gnome-klotski",
+             // Label on the scores dialog, next to dropdown */
+             _("Puzzle"),
+             this,
+             category_request,
+             Games.Scores.Style.PLAIN_ASCENDING,
+             new Games.Scores.HistoryFileImporter (parse_old_score));
 
         // name, active, puzzle number (or -1), sensitive=false CSS hack
         liststore_huarong = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
