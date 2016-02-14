@@ -37,6 +37,6 @@ treeview.toggle-like-pixbuf:disabled:checked {
 }
 
 /* https://bugzilla.gnome.org/show_bug.cgi?id=744531 */
-button.flat:insensitive {
+button.flat:disabled {
   color: @theme_unfocused_bg_color;
 }
