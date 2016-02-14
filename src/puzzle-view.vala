@@ -122,8 +122,11 @@ public class PuzzleView : Gtk.DrawingArea
         }
 
         var style = get_style_context ();
+        style.save ();
+        style.set_state (Gtk.StateFlags.NORMAL);
         var fg = style.get_color (Gtk.StateFlags.NORMAL);
         var bg = style.get_background_color (Gtk.StateFlags.NORMAL);
+        style.restore ();
 
         Gdk.cairo_set_source_rgba (cr, bg);
         cr.paint ();
@@ -167,7 +170,10 @@ public class PuzzleView : Gtk.DrawingArea
         rect.height = tile_size;
 
         var style = get_style_context ();
+        style.save ();
+        style.set_state (Gtk.StateFlags.NORMAL);
         var bg = style.get_background_color (Gtk.StateFlags.NORMAL);
+        style.restore ();
 
         Gdk.cairo_rectangle (cr, rect);
         Gdk.cairo_set_source_rgba (cr, bg);
