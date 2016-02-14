@@ -482,7 +482,7 @@ public class KlotskiWindow : ApplicationWindow
             return;
 
         var date = Games.Scores.HistoryFileImporter.parse_date (tokens[0]);
-        if (date == null)
+        if (date == 0)
             return;
 
         var level = int.parse (tokens[1]);
@@ -495,7 +495,7 @@ public class KlotskiWindow : ApplicationWindow
         if (moves <= 0)
             return;
 
-        score = new Games.Scores.Score (moves, date.to_unix ());
+        score = new Games.Scores.Score (moves, date);
         category = score_categories[level];
     }
 
