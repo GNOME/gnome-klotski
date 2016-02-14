@@ -23,8 +23,10 @@ GTK_REQUIRED=3.19.0
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(GNOME_KLOTSKI, [
+  gee-0.8
   glib-2.0 >= $GLIB_REQUIRED
   gtk+-3.0 >= $GTK_REQUIRED
+  libgames-support-1.0
   librsvg-2.0 >= $RSVG_REQUIRED
 ])
 

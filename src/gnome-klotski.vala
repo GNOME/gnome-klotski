@@ -88,7 +88,7 @@ public class Klotski : Gtk.Application
 
     private void scores_cb ()
     {
-        ((KlotskiWindow) get_active_window ()).show_scores (null);
+        ((KlotskiWindow) get_active_window ()).show_scores ();
     }
 
     private void help_cb ()

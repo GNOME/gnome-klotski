@@ -7,7 +7,6 @@ man_MANS = gnome-klotski.6
 
 dist_noinst_DATA = \
 	klotski-menus.ui \
-	klotski-scores.ui \
 	klotski.ui \
 	klotski.css
 

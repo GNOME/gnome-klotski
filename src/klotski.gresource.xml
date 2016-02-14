@@ -2,7 +2,6 @@
 <gresources>
   <gresource prefix="/org/gnome/klotski/ui">
     <file preprocess="xml-stripblanks" alias="klotski.ui">../data/klotski.ui</file>
-    <file preprocess="xml-stripblanks" alias="scores.ui">../data/klotski-scores.ui</file>
     <file alias="klotski.css">../data/klotski.css</file>
   </gresource>
   <gresource prefix="/org/gnome/klotski/gtk">

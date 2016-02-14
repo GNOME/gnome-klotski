@@ -5,11 +5,9 @@ BUILT_SOURCES = klotski-resources.c
 gnome_klotski_SOURCES = \
 	config.vapi \
 	gnome-klotski.vala \
-	history.vala \
 	klotski-window.vala \
 	puzzle.vala \
 	puzzle-view.vala \
-	score-dialog.vala \
 	$(BUILT_SOURCES)
 
 gnome_klotski_CFLAGS = \
@@ -22,7 +20,9 @@ gnome_klotski_CFLAGS = \
 
 gnome_klotski_VALAFLAGS = \
 	--pkg posix \
+	--pkg gee-0.8 \
 	--pkg gtk+-3.0 \
+	--pkg libgames-support-1.0 \
 	--pkg librsvg-2.0 \
 	--gresources $(builddir)/klotski.gresource.xml \
 	--target-glib $(GLIB_REQUIRED)

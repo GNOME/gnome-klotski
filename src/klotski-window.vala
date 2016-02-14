@@ -56,13 +56,16 @@ public class KlotskiWindow : ApplicationWindow
     private int current_pack = -1;
     private int current_level = -1;
 
-    private History history;
+    private Games.Scores.Context scores_context;
 
-    /* The "puzzle name" remarks provide context for translation. */
+    /* The "puzzle name" remarks provide context for translation. Add new
+     * puzzles at the end, or you'll mess up saved scores.
+     */
     private Gtk.ListStore liststore_huarong;
     private Gtk.ListStore liststore_challenge;
     private Gtk.ListStore liststore_skill;
     private TreeIter[] puzzles_items;
+    private Gee.List<Games.Scores.Category> score_categories;
     public const LevelInfo level[] =
     {
       /* puzzle name */
@@ -446,6 +449,17 @@ public class KlotskiWindow : ApplicationWindow
         {"start-game", start_puzzle_cb}
     };
 
+    private Games.Scores.Category? category_request (string key)
+    {
+        var i = int.parse (key);
+        // i will be 0 if parsing fails, but 0 is also a valid map key.
+        if (i == 0 && key != "0")
+            return null;
+        if (i < 0 || i > score_categories.size)
+            return null;
+        return score_categories[i];
+    }
+
     public KlotskiWindow ()
     {
         var css_provider = new CssProvider ();
@@ -464,10 +478,18 @@ public class KlotskiWindow : ApplicationWindow
         next_puzzle = lookup_action ("next-puzzle") as SimpleAction;
         start_game = lookup_action ("start-game") as SimpleAction;
 
-        string histfile = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "history");
+        score_categories = new Gee.ArrayList<Games.Scores.Category> ();
+        for (var i = 0; i < level.length; i++)
+        {
+            score_categories.add (new Games.Scores.Category (i.to_string (), _(level[i].name)));
+        }
 
-        history = new History (histfile);
-        history.load ();
+        scores_context = new Games.Scores.Context ("gnome-klotski",
+                                                   // Label on the scores dialog, next to dropdown */
+                                                   _("Puzzle"),
+                                                   this,
+                                                   category_request,
+                                                   Games.Scores.Style.PLAIN_ASCENDING);
 
         // name, active, puzzle number (or -1), sensitive=false CSS hack
         liststore_huarong = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
@@ -756,21 +778,24 @@ public class KlotskiWindow : ApplicationWindow
 
         puzzle_solved (puzzles_items[current_level], true);
 
-        var date = new DateTime.now_local ();
-        var entry = new HistoryEntry (date, current_level, puzzle.moves);
-        history.add (entry);
-        history.save ();
-
-        show_scores (entry);
+        scores_context.add_score.begin (puzzle.moves,
+                                        score_categories[current_level],
+                                        null,
+                                        (object, result) => {
+            try
+            {
+                scores_context.add_score.end (result);
+            }
+            catch (GLib.Error e)
+            {
+                warning ("Failed to add score: %s", e.message);
+            }
+        });
     }
 
-    public void show_scores (HistoryEntry? selected_entry = null)
+    public void show_scores ()
     {
-        var dialog = new ScoreDialog (history, selected_entry);
-        dialog.set_transient_for (this);
-
-        /* var result = */ dialog.run ();
-        dialog.destroy ();
+        scores_context.run_dialog ();
     }
 
     private string get_level_key (int level_number)
