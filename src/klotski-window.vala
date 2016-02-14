@@ -65,10 +65,10 @@ public class KlotskiWindow : ApplicationWindow
     private Gtk.ListStore liststore_challenge;
     private Gtk.ListStore liststore_skill;
     private TreeIter[] puzzles_items;
-    private Gee.List<Games.Scores.Category> score_categories;
 
+    private static Gee.List<Games.Scores.Category> score_categories;
     /* Warning: reordering these will screw up import of old scores. */
-    public const LevelInfo levels[] =
+    private static const LevelInfo levels[] =
     {
       /* puzzle name */
       {N_("Only 18 Steps"), 0,
@@ -451,6 +451,16 @@ public class KlotskiWindow : ApplicationWindow
         {"start-game", start_puzzle_cb}
     };
 
+    class construct
+    {
+        score_categories = new Gee.ArrayList<Games.Scores.Category> ();
+        for (var i = 0; i < levels.length; i++)
+        {
+            score_categories.add (new Games.Scores.Category (levels[i].name.down ().replace (" ", "-"),
+                                                             _(levels[i].name)));
+        }
+    }
+
     private Games.Scores.Category? category_request (string key)
     {
         var i = int.parse (key);
@@ -506,13 +516,6 @@ public class KlotskiWindow : ApplicationWindow
         prev_puzzle = lookup_action ("prev-puzzle") as SimpleAction;
         next_puzzle = lookup_action ("next-puzzle") as SimpleAction;
         start_game = lookup_action ("start-game") as SimpleAction;
-
-        score_categories = new Gee.ArrayList<Games.Scores.Category> ();
-        for (var i = 0; i < levels.length; i++)
-        {
-            score_categories.add (new Games.Scores.Category (levels[i].name.down ().replace (" ", "-"),
-                                                             _(levels[i].name)));
-        }
 
         scores_context = new Games.Scores.Context.with_importer (
             "gnome-klotski",
