@@ -35,3 +35,8 @@ treeview.toggle-like-pixbuf:disabled {
 treeview.toggle-like-pixbuf:disabled:checked {
   -gtk-icon-source: -gtk-icontheme("gtk-yes");  /* TODO maybe deprecated */
 }
+
+/* https://bugzilla.gnome.org/show_bug.cgi?id=744531 */
+button.flat:insensitive {
+  color: @theme_unfocused_bg_color;
+}
