@@ -451,25 +451,29 @@ public class KlotskiWindow : ApplicationWindow
         {"start-game", start_puzzle_cb}
     };
 
+    private static string normalize_map_name (string name)
+    {
+        return name.down ().replace (" ", "-");
+    }
+
     class construct
     {
         score_categories = new Gee.ArrayList<Games.Scores.Category> ();
         for (var i = 0; i < levels.length; i++)
         {
-            score_categories.add (new Games.Scores.Category (levels[i].name.down ().replace (" ", "-"),
+            score_categories.add (new Games.Scores.Category (normalize_map_name (levels[i].name),
                                                              _(levels[i].name)));
         }
     }
 
     private Games.Scores.Category? category_request (string key)
     {
-        var i = int.parse (key);
-        // i will be 0 if parsing fails, but 0 is also a valid map key.
-        if (i == 0 && key != "0")
-            return null;
-        if (i < 0 || i > score_categories.size)
-            return null;
-        return score_categories[i];
+        for (int i = 0; i < levels.length; i++)
+        {
+            if (key == normalize_map_name (levels[i].name))
+                return score_categories[i];
+        }
+        return null;
     }
 
     private void parse_old_score (string line, out Games.Scores.Score? score, out Games.Scores.Category? category)
