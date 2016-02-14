@@ -1,37 +1,37 @@
-GtkPopover#puzzles-popover {
+popover#puzzles-popover {
   padding: 10px;
 }
 
-GtkStack#stack-packs > GtkLabel {
+stack#stack-packs > label {
   font-weight: bold;
 }
 
-.treeview-container GtkTreeView {
+.treeview-container treeview {
   background-color: transparent;
 }
-.treeview-container GtkTreeView:backdrop {
+.treeview-container treeview:backdrop {
   color: @theme_unfocused_fg_color;
 }
-.treeview-container GtkTreeView:prelight {
+.treeview-container treeview:hover {
   background-color: @theme_bg_color;
 }
-.treeview-container GtkTreeView:prelight:backdrop {
+.treeview-container treeview:hover:backdrop {
   background-color: @theme_unfocused_bg_color;
 }
-.treeview-container GtkTreeView:selected,
-.treeview-container GtkTreeView:selected:prelight {
+.treeview-container treeview:selected,
+.treeview-container treeview:selected:hover {
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
 }
-.treeview-container GtkTreeView:selected:backdrop,
-.treeview-container GtkTreeView:selected:backdrop:prelight {
+.treeview-container treeview:selected:backdrop,
+.treeview-container treeview:selected:backdrop:hover {
   background-color: @theme_unfocused_selected_bg_color;
   color: @theme_unfocused_selected_fg_color;
 }
 
-GtkTreeView.toggle-like-pixbuf:insensitive {
+treeview.toggle-like-pixbuf:disabled {
   -gtk-icon-source: none;
 }
-GtkTreeView.toggle-like-pixbuf:insensitive:checked {
+treeview.toggle-like-pixbuf:disabled:checked {
   -gtk-icon-source: -gtk-icontheme("gtk-yes");  /* TODO maybe deprecated */
 }
