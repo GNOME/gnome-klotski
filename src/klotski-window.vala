@@ -68,7 +68,7 @@ public class KlotskiWindow : ApplicationWindow
     private Gee.List<Games.Scores.Category> score_categories;
 
     /* Warning: reordering these will screw up import of old scores. */
-    public const LevelInfo level[] =
+    public const LevelInfo levels[] =
     {
       /* puzzle name */
       {N_("Only 18 Steps"), 0,
@@ -508,10 +508,10 @@ public class KlotskiWindow : ApplicationWindow
         start_game = lookup_action ("start-game") as SimpleAction;
 
         score_categories = new Gee.ArrayList<Games.Scores.Category> ();
-        for (var i = 0; i < level.length; i++)
+        for (var i = 0; i < levels.length; i++)
         {
-            score_categories.add (new Games.Scores.Category (level[i].name.down ().replace (" ", "-"),
-                                                             _(level[i].name)));
+            score_categories.add (new Games.Scores.Category (levels[i].name.down ().replace (" ", "-"),
+                                                             _(levels[i].name)));
         }
 
         scores_context = new Games.Scores.Context.with_importer (
@@ -528,15 +528,15 @@ public class KlotskiWindow : ApplicationWindow
         liststore_challenge = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
         liststore_skill = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
 
-        puzzles_items = new TreeIter[level.length];
-        for (var i = 0; i < level.length; i++)
+        puzzles_items = new TreeIter[levels.length];
+        for (var i = 0; i < levels.length; i++)
         {
-            switch (level[i].group)
+            switch (levels[i].group)
             {
             case 0:
                 liststore_huarong.append (out puzzles_items[i]);
                 liststore_huarong.set (puzzles_items[i],
-                                       0, _(level[i].name),
+                                       0, _(levels[i].name),
                                        1, false,
                                        2, i,
                                        3, false);
@@ -544,7 +544,7 @@ public class KlotskiWindow : ApplicationWindow
             case 1:
                 liststore_challenge.append (out puzzles_items[i]);
                 liststore_challenge.set (puzzles_items[i],
-                                         0, _(level[i].name),
+                                         0, _(levels[i].name),
                                          1, false,
                                          2, i,
                                          3, false);
@@ -552,7 +552,7 @@ public class KlotskiWindow : ApplicationWindow
             case 2:
                 liststore_skill.append (out puzzles_items[i]);
                 liststore_skill.set (puzzles_items[i],
-                                     0, _(level[i].name),
+                                     0, _(levels[i].name),
                                      1, false,
                                      2, i,
                                      3, false);
@@ -576,7 +576,7 @@ public class KlotskiWindow : ApplicationWindow
 
         load_solved_state ();       // TODO use GSettings, or the history…
 
-        current_level = settings.get_int (KEY_LEVEL).clamp (0, level.length - 1);
+        current_level = settings.get_int (KEY_LEVEL).clamp (0, levels.length - 1);
         puzzles_popover.show.connect (() => { update_popover (true); });
         update_popover (true);      // or “Start Over” logically complains
 
@@ -707,7 +707,7 @@ public class KlotskiWindow : ApplicationWindow
         next_pack.set_enabled (current_pack < 2);
 
         prev_puzzle.set_enabled (current_level > 0);
-        next_puzzle.set_enabled (current_level < level.length - 1);
+        next_puzzle.set_enabled (current_level < levels.length - 1);
     }
 
     /*\
@@ -754,8 +754,8 @@ public class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle ()
     {
-        headerbar.set_title (_(level[current_level].name));
-        puzzle = new Puzzle (level[current_level].width, level[current_level].height, level[current_level].data);
+        headerbar.set_title (_(levels[current_level].name));
+        puzzle = new Puzzle (levels[current_level].width, levels[current_level].height, levels[current_level].data);
         puzzle.moved.connect (puzzle_moved_cb);     // TODO disconnect previous puzzle?
         view.puzzle = puzzle;
 
@@ -834,7 +834,7 @@ public class KlotskiWindow : ApplicationWindow
     {
         /* Calculate the CRC of the level data */
         uint32 result = 0xFFFFFFFFu;
-        var data = level[level_number].data;
+        var data = levels[level_number].data;
         for (var i = 0; data[i] != '\0'; i++)
         {
             var octet = data[i];
@@ -864,7 +864,7 @@ public class KlotskiWindow : ApplicationWindow
         {
         }
 
-        for (var i = 0; i < level.length; i++)
+        for (var i = 0; i < levels.length; i++)
         {
             var key = get_level_key (i);
             var value = false;
