@@ -1,3 +1,12 @@
+3.19.90 - February 15, 2016
+===========================
+
+*** License change: now licensed as GPLv3+ ***
+* New dependency: libgames-support
+* New scores dialog via libgames-support
+* Fixes for compatibility with GTK+ 3.20
+* Updated translations
+
 3.19.1 - October 25, 2015
 =========================
 
