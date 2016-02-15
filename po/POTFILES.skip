@@ -1,4 +1,3 @@
 src/gnome-klotski.c
 src/klotski-window.c
 src/puzzle-view.c
-src/score-dialog.c

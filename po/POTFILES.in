@@ -5,9 +5,7 @@ data/gnome-klotski.appdata.xml.in
 data/gnome-klotski.desktop.in
 [type: gettext/glade]data/klotski.ui
 [type: gettext/glade]data/klotski-menus.ui
-[type: gettext/glade]data/klotski-scores.ui
 data/org.gnome.klotski.gschema.xml
 src/gnome-klotski.vala
 src/klotski-window.vala
 src/puzzle-view.vala
-src/score-dialog.vala
