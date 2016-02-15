@@ -825,7 +825,7 @@ public class KlotskiWindow : ApplicationWindow
             {
                 scores_context.add_score.end (result);
             }
-            catch (GLib.Error e)
+            catch (Error e)
             {
                 warning ("Failed to add score: %s", e.message);
             }
