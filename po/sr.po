@@ -1,18 +1,18 @@
 # Serbian translation of gnome-klotski
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2015.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2016.
 # This file is distributed under the same license as the gnome-klotski package.
 # Душан Марјановић <madafaka@bsd.org.yu>
 # Игор Несторовић <igor@prevod.org> 2005.
 # Милош Поповић <gpopac@gmail.com>, 2010.
 # Бранко Кокановић <branko.kokanovic@gmail.com> 2010.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2015.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-04 08:00+0000\n"
-"PO-Revision-Date: 2015-03-05 20:46+0200\n"
+"POT-Creation-Date: 2016-02-17 09:18+0000\n"
+"PO-Revision-Date: 2016-02-17 21:13+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -33,11 +33,6 @@ msgid "Slide blocks to solve the puzzle"
 msgstr "Гурајте блокове да решите слагалицу"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
-#| msgid ""
-#| "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-#| "the patterned block to the area bordered by green markers. To do so, "
-#| "you'll need to slide other blocks out of the way. Complete each puzzle in "
-#| "as few moves as possible!"
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -60,7 +55,7 @@ msgstr ""
 "једног или неколико блокова. Други распореди имају више варијетета."
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "Клотски"
 
@@ -69,7 +64,6 @@ msgid "game;strategy;logic;move;"
 msgstr "клотски;игра;стратегија;логика;потез;"
 
 #: ../data/klotski.ui.h:1
-#| msgid "HuaRong Trail"
 msgid "Huarong Trail"
 msgstr "Хуаронг траг"
 
@@ -83,7 +77,6 @@ msgid "Skill Pack"
 msgstr "Умеће"
 
 #: ../data/klotski.ui.h:4
-#| msgid "Previous Puzzle"
 msgid "Previous"
 msgstr "Претходна"
 
@@ -96,12 +89,10 @@ msgid "_Start Over"
 msgstr "_Покрени"
 
 #: ../data/klotski.ui.h:8
-#| msgid "_Restart Puzzle"
 msgid "Restart the current puzzle"
 msgstr "Поново покрени текућу слагалицу"
 
 #: ../data/klotski.ui.h:9
-#| msgid "_View Puzzles"
 msgid "_Change Puzzle"
 msgstr "_Промени слагалицу"
 
@@ -125,22 +116,6 @@ msgstr "_О програму"
 msgid "_Quit"
 msgstr "_Изађи"
 
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Резултати"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Слагалица:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Датум"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "Потези"
-
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "Слагалица која се игра"
@@ -161,158 +136,15 @@ msgstr "Висина прозора у тачкама"
 msgid "true if the window is maximized"
 msgstr "изабрано ако је прозор увећан"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:65
-msgid "Only 18 Steps"
-msgstr "Само 18 корака"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:78
-msgid "Daisy"
-msgstr "Красуљак"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:91
-msgid "Violet"
-msgstr "Љубичица"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:104
-msgid "Poppy"
-msgstr "Мак"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:117
-msgid "Pansy"
-msgstr "Дан и ноћ"
-
-# не знам шта је ово, па нека буде овако ;)
-#. puzzle name
-#: ../src/gnome-klotski.vala:130
-msgid "Snowdrop"
-msgstr "Пахуљица"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:143
-msgid "Red Donkey"
-msgstr "Црвено магаре"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:156
-msgid "Trail"
-msgstr "Траг"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:169
-msgid "Ambush"
-msgstr "Заседа"
-
-# ???
-#. puzzle name
-#: ../src/gnome-klotski.vala:182
-msgid "Agatka"
-msgstr "Агатка"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:193
-msgid "Success"
-msgstr "Успешно"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:203
-msgid "Bone"
-msgstr "Коска"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:216
-msgid "Fortune"
-msgstr "Судбина"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:230
-msgid "Fool"
-msgstr "Будала"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:240
-msgid "Solomon"
-msgstr "Соломон"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:253
-msgid "Cleopatra"
-msgstr "Клеопатра"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:265
-msgid "Shark"
-msgstr "Ајкула"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:277
-msgid "Rome"
-msgstr "Рим"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:289
-msgid "Pennant Puzzle"
-msgstr "Пенант"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:302
-msgid "Ithaca"
-msgstr "Итака"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:325
-msgid "Pelopones"
-msgstr "Пелопонез"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:337
-msgid "Transeuropa"
-msgstr "Трансевропа"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:349
-msgid "Lodzianka"
-msgstr "Лођјанка"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:360
-msgid "Polonaise"
-msgstr "Полонеза"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:371
-msgid "Baltic Sea"
-msgstr "Балтичко море"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
-msgid "American Pie"
-msgstr "Америчка пита"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:399
-msgid "Traffic Jam"
-msgstr "Саобраћајна гужва"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:410
-msgid "Sunshine"
-msgstr "Сунчев сјај"
-
-#: ../src/gnome-klotski.vala:438
+#: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Исписује издање и излази"
 
-#: ../src/gnome-klotski.vala:667
-#| msgid "Slide blocks to solve the puzzle"
+#: ../src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
 msgstr "Слагалица са клизајућим блоковима"
 
-#: ../src/gnome-klotski.vala:675
+#: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
@@ -322,18 +154,174 @@ msgstr ""
 "\n"
 "http://prevod.org — превод на српски језик"
 
-#: ../src/gnome-klotski.vala:834
+#. puzzle name
+#: ../src/klotski-window.vala:74
+msgid "Only 18 Steps"
+msgstr "Само 18 корака"
+
+#. puzzle name
+#: ../src/klotski-window.vala:87
+msgid "Daisy"
+msgstr "Красуљак"
+
+#. puzzle name
+#: ../src/klotski-window.vala:100
+msgid "Violet"
+msgstr "Љубичица"
+
+#. puzzle name
+#: ../src/klotski-window.vala:113
+msgid "Poppy"
+msgstr "Мак"
+
+#. puzzle name
+#: ../src/klotski-window.vala:126
+msgid "Pansy"
+msgstr "Дан и ноћ"
+
+# не знам шта је ово, па нека буде овако ;)
+#. puzzle name
+#: ../src/klotski-window.vala:139
+msgid "Snowdrop"
+msgstr "Пахуљица"
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: ../src/klotski-window.vala:152
+msgid "Red Donkey"
+msgstr "Црвено магаре"
+
+#. puzzle name
+#: ../src/klotski-window.vala:165
+msgid "Trail"
+msgstr "Траг"
+
+#. puzzle name
+#: ../src/klotski-window.vala:178
+msgid "Ambush"
+msgstr "Заседа"
+
+# ???
+#. puzzle name
+#: ../src/klotski-window.vala:191
+msgid "Agatka"
+msgstr "Агатка"
+
+#. puzzle name
+#: ../src/klotski-window.vala:202
+msgid "Success"
+msgstr "Успешно"
+
+#. puzzle name
+#: ../src/klotski-window.vala:212
+msgid "Bone"
+msgstr "Коска"
+
+#. puzzle name
+#: ../src/klotski-window.vala:225
+msgid "Fortune"
+msgstr "Судбина"
+
+#. puzzle name
+#: ../src/klotski-window.vala:239
+msgid "Fool"
+msgstr "Будала"
+
+#. puzzle name
+#: ../src/klotski-window.vala:249
+msgid "Solomon"
+msgstr "Соломон"
+
+#. puzzle name
+#: ../src/klotski-window.vala:262
+msgid "Cleopatra"
+msgstr "Клеопатра"
+
+#. puzzle name
+#: ../src/klotski-window.vala:274
+msgid "Shark"
+msgstr "Ајкула"
+
+#. puzzle name
+#: ../src/klotski-window.vala:286
+msgid "Rome"
+msgstr "Рим"
+
+#. puzzle name
+#: ../src/klotski-window.vala:298
+msgid "Pennant Puzzle"
+msgstr "Пенант"
+
+#. puzzle name
+#: ../src/klotski-window.vala:311
+msgid "Ithaca"
+msgstr "Итака"
+
+#. puzzle name
+#: ../src/klotski-window.vala:334
+msgid "Pelopones"
+msgstr "Пелопонез"
+
+#. puzzle name
+#: ../src/klotski-window.vala:346
+msgid "Transeuropa"
+msgstr "Трансевропа"
+
+#. puzzle name
+#: ../src/klotski-window.vala:358
+msgid "Lodzianka"
+msgstr "Лођјанка"
+
+#. puzzle name
+#: ../src/klotski-window.vala:369
+msgid "Polonaise"
+msgstr "Полонеза"
+
+#. puzzle name
+#: ../src/klotski-window.vala:380
+msgid "Baltic Sea"
+msgstr "Балтичко море"
+
+#. puzzle name
+#: ../src/klotski-window.vala:392
+msgid "American Pie"
+msgstr "Америчка пита"
+
+#. puzzle name
+#: ../src/klotski-window.vala:408
+msgid "Traffic Jam"
+msgstr "Саобраћајна гужва"
+
+#. puzzle name
+#: ../src/klotski-window.vala:419
+msgid "Sunshine"
+msgstr "Сунчев сјај"
+
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+#| msgid "Puzzle:"
+msgid "Puzzle"
+msgstr "Слагалица"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Потези: %d"
 
-#: ../src/gnome-klotski.vala:837
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Ниво је завршен."
 
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "У _реду"
+#~ msgid "Scores"
+#~ msgstr "Резултати"
+
+#~ msgid "Date"
+#~ msgstr "Датум"
+
+#~ msgid "Moves"
+#~ msgstr "Потези"
+
+#~ msgid "_OK"
+#~ msgstr "У _реду"
 
 #~ msgid "Next Puzzle"
 #~ msgstr "Следећа слагалица"
