@@ -15,14 +15,14 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2015.
-# Aviary.pl <gnomepl@aviary.pl>, 2007-2015.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2016.
+# Aviary.pl <gnomepl@aviary.pl>, 2007-2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-25 14:02+0200\n"
-"PO-Revision-Date: 2015-08-25 14:04+0200\n"
+"POT-Creation-Date: 2016-02-17 22:32+0100\n"
+"PO-Revision-Date: 2016-02-17 22:33+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -65,7 +65,7 @@ msgstr ""
 "wielkością jednego lub więcej klocków, a inne są bardziej zróżnicowane."
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "Klocki"
 
@@ -127,22 +127,6 @@ msgstr "_O grze"
 msgid "_Quit"
 msgstr "Za_kończ"
 
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Wyniki"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Układanka:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Data"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "Ruchy"
-
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "Rozwiązywana układanka"
@@ -163,155 +147,15 @@ msgstr "Wysokość okna w pikselach"
 msgid "true if the window is maximized"
 msgstr "Wartość „true” oznacza, że okno jest zmaksymalizowane"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:65
-msgid "Only 18 Steps"
-msgstr "Tylko 18 kroków"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:78
-msgid "Daisy"
-msgstr "Stokrotka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:91
-msgid "Violet"
-msgstr "Fiołek"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:104
-msgid "Poppy"
-msgstr "Mak"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:117
-msgid "Pansy"
-msgstr "Bratek"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:130
-msgid "Snowdrop"
-msgstr "Przebiśnieg"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:143
-msgid "Red Donkey"
-msgstr "Czerwony osioł"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:156
-msgid "Trail"
-msgstr "Ścieżka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:169
-msgid "Ambush"
-msgstr "Zasadzka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:182
-msgid "Agatka"
-msgstr "Agatka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:193
-msgid "Success"
-msgstr "Zwycięstwo"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:203
-msgid "Bone"
-msgstr "Kość"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:216
-msgid "Fortune"
-msgstr "Fortuna"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:230
-msgid "Fool"
-msgstr "Głupek"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:240
-msgid "Solomon"
-msgstr "Salomon"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:253
-msgid "Cleopatra"
-msgstr "Kleopatra"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:265
-msgid "Shark"
-msgstr "Rekin"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:277
-msgid "Rome"
-msgstr "Rzym"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:289
-msgid "Pennant Puzzle"
-msgstr "Puzzle proporcowe"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:302
-msgid "Ithaca"
-msgstr "Itaka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:325
-msgid "Pelopones"
-msgstr "Peloponez"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:337
-msgid "Transeuropa"
-msgstr "Transeuropa"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:349
-msgid "Lodzianka"
-msgstr "Łodzianka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:360
-msgid "Polonaise"
-msgstr "Polonez"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:371
-msgid "Baltic Sea"
-msgstr "Morze Bałtyckie"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
-msgid "American Pie"
-msgstr "American Pie"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:399
-msgid "Traffic Jam"
-msgstr "Korek"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:410
-msgid "Sunshine"
-msgstr "Promyczek"
-
-#: ../src/gnome-klotski.vala:438
+#: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Wyświetla wersję wydania i kończy działanie"
 
-#: ../src/gnome-klotski.vala:667
+#: ../src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
 msgstr "Przesuwana układanka"
 
-#: ../src/gnome-klotski.vala:675
+#: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -325,18 +169,159 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2015\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2007-2015"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2016\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2007-2016"
 
-#: ../src/gnome-klotski.vala:834
+#. puzzle name
+#: ../src/klotski-window.vala:74
+msgid "Only 18 Steps"
+msgstr "Tylko 18 kroków"
+
+#. puzzle name
+#: ../src/klotski-window.vala:87
+msgid "Daisy"
+msgstr "Stokrotka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:100
+msgid "Violet"
+msgstr "Fiołek"
+
+#. puzzle name
+#: ../src/klotski-window.vala:113
+msgid "Poppy"
+msgstr "Mak"
+
+#. puzzle name
+#: ../src/klotski-window.vala:126
+msgid "Pansy"
+msgstr "Bratek"
+
+#. puzzle name
+#: ../src/klotski-window.vala:139
+msgid "Snowdrop"
+msgstr "Przebiśnieg"
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: ../src/klotski-window.vala:152
+msgid "Red Donkey"
+msgstr "Czerwony osioł"
+
+#. puzzle name
+#: ../src/klotski-window.vala:165
+msgid "Trail"
+msgstr "Ścieżka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:178
+msgid "Ambush"
+msgstr "Zasadzka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:191
+msgid "Agatka"
+msgstr "Agatka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:202
+msgid "Success"
+msgstr "Zwycięstwo"
+
+#. puzzle name
+#: ../src/klotski-window.vala:212
+msgid "Bone"
+msgstr "Kość"
+
+#. puzzle name
+#: ../src/klotski-window.vala:225
+msgid "Fortune"
+msgstr "Fortuna"
+
+#. puzzle name
+#: ../src/klotski-window.vala:239
+msgid "Fool"
+msgstr "Głupek"
+
+#. puzzle name
+#: ../src/klotski-window.vala:249
+msgid "Solomon"
+msgstr "Salomon"
+
+#. puzzle name
+#: ../src/klotski-window.vala:262
+msgid "Cleopatra"
+msgstr "Kleopatra"
+
+#. puzzle name
+#: ../src/klotski-window.vala:274
+msgid "Shark"
+msgstr "Rekin"
+
+#. puzzle name
+#: ../src/klotski-window.vala:286
+msgid "Rome"
+msgstr "Rzym"
+
+#. puzzle name
+#: ../src/klotski-window.vala:298
+msgid "Pennant Puzzle"
+msgstr "Puzzle proporcowe"
+
+#. puzzle name
+#: ../src/klotski-window.vala:311
+msgid "Ithaca"
+msgstr "Itaka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:334
+msgid "Pelopones"
+msgstr "Peloponez"
+
+#. puzzle name
+#: ../src/klotski-window.vala:346
+msgid "Transeuropa"
+msgstr "Transeuropa"
+
+#. puzzle name
+#: ../src/klotski-window.vala:358
+msgid "Lodzianka"
+msgstr "Łodzianka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:369
+msgid "Polonaise"
+msgstr "Polonez"
+
+#. puzzle name
+#: ../src/klotski-window.vala:380
+msgid "Baltic Sea"
+msgstr "Morze Bałtyckie"
+
+#. puzzle name
+#: ../src/klotski-window.vala:392
+msgid "American Pie"
+msgstr "American Pie"
+
+#. puzzle name
+#: ../src/klotski-window.vala:408
+msgid "Traffic Jam"
+msgstr "Korek"
+
+#. puzzle name
+#: ../src/klotski-window.vala:419
+msgid "Sunshine"
+msgstr "Promyczek"
+
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "Układanka"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Ruchy: %d"
 
-#: ../src/gnome-klotski.vala:837
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Poziom ukończony."
-
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "_OK"
