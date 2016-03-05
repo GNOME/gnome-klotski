@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-kl"
 "otski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-04 09:19+0000\n"
-"PO-Revision-Date: 2016-02-06 18:30+0200\n"
+"POT-Creation-Date: 2016-03-05 09:20+0000\n"
+"PO-Revision-Date: 2016-03-05 14:25+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -35,11 +35,6 @@ msgid "Slide blocks to solve the puzzle"
 msgstr "Slidiniet klucīšus, lai atrisinātu mīklu"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
-#| msgid ""
-#| "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-#| "the patterned block to the area bordered by green markers. To do so, "
-#| "you'll need to slide other blocks out of the way. Complete each puzzle in "
-#| "as few moves as possible!"
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -71,7 +66,6 @@ msgid "game;strategy;logic;move;"
 msgstr "spēle;stratēģija;loģika;gājiens;"
 
 #: ../data/klotski.ui.h:1
-#| msgid "HuaRong Trail"
 msgid "Huarong Trail"
 msgstr "Huarong taka"
 
@@ -84,12 +78,10 @@ msgid "Skill Pack"
 msgstr "Iemaņu paka"
 
 #: ../data/klotski.ui.h:4
-#| msgid "Previous Puzzle"
 msgid "Previous"
 msgstr "Iepriekšējā"
 
 #: ../data/klotski.ui.h:5
-#| msgid "Next:"
 msgid "Next"
 msgstr "Nākamā"
 
@@ -98,17 +90,14 @@ msgid "_Start Over"
 msgstr "_Sākt no jauna"
 
 #: ../data/klotski.ui.h:8
-#| msgid "Restart the current game"
 msgid "Restart the current puzzle"
 msgstr "Pārstartēt pašreizējo mīklu"
 
 #: ../data/klotski.ui.h:9
-#| msgid "_View Puzzles"
 msgid "_Change Puzzle"
 msgstr "_Mainīt mīklu"
 
 #: ../data/klotski.ui.h:10
-#| msgid "Choose a score slot."
 msgid "Choose an other puzzle"
 msgstr "Izvēlies citu mīklu"
 
@@ -127,22 +116,6 @@ msgstr "P_ar"
 #: ../data/klotski-menus.ui.h:4
 msgid "_Quit"
 msgstr "_Iziet"
-
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Rezultāti"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Mīkla:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Datums"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "Gājieni"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -169,7 +142,6 @@ msgid "Print release version and exit"
 msgstr "Parādīt informāciju par laidienu un iziet"
 
 #: ../src/gnome-klotski.vala:114
-#| msgid "Slide blocks to solve the puzzle"
 msgid "Sliding block puzzles"
 msgstr "Slīdošo bloku mīkla"
 
@@ -181,154 +153,156 @@ msgstr ""
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:69
+#: ../src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Tikai 18 soļi"
 
 #. puzzle name
-#: ../src/klotski-window.vala:82
+#: ../src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Pīpene"
 
 #. puzzle name
-#: ../src/klotski-window.vala:95
+#: ../src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Vijolīte"
 
 #. puzzle name
-#: ../src/klotski-window.vala:108
+#: ../src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Magone"
 
 #. puzzle name
-#: ../src/klotski-window.vala:121
+#: ../src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Atraitnīte"
 
 #. puzzle name
-#: ../src/klotski-window.vala:134
+#: ../src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Sniegpulkstenīte"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:147
+#: ../src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Sarkans ēzelis"
 
 #. puzzle name
-#: ../src/klotski-window.vala:160
+#: ../src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Pēdas"
 
 #. puzzle name
-#: ../src/klotski-window.vala:173
+#: ../src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Slēpnis"
 
 #. puzzle name
-#: ../src/klotski-window.vala:186
+#: ../src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:197
+#: ../src/klotski-window.vala:202
 msgid "Success"
 msgstr "Panākumi"
 
 #. puzzle name
-#: ../src/klotski-window.vala:207
+#: ../src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Kauls"
 
 #. puzzle name
-#: ../src/klotski-window.vala:220
+#: ../src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Veiksme"
 
 #. puzzle name
-#: ../src/klotski-window.vala:234
+#: ../src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Dumiķis"
 
 #. puzzle name
-#: ../src/klotski-window.vala:244
+#: ../src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Zālamans"
 
 #. puzzle name
-#: ../src/klotski-window.vala:257
+#: ../src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:269
+#: ../src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Haizivs"
 
 #. puzzle name
-#: ../src/klotski-window.vala:281
+#: ../src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/klotski-window.vala:293
+#: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "Karodziņa mīkla"
 
 #. puzzle name
-#: ../src/klotski-window.vala:306
+#: ../src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:329
+#: ../src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/klotski-window.vala:341
+#: ../src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Transeiropa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:353
+#: ../src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:364
+#: ../src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Polonēze"
 
 #. puzzle name
-#: ../src/klotski-window.vala:375
+#: ../src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Baltijas jūra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:387
+#: ../src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "Amerikāņu pīrāgs"
 
 #. puzzle name
-#: ../src/klotski-window.vala:403
+#: ../src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Sastrēgums"
 
 #. puzzle name
-#: ../src/klotski-window.vala:414
+#: ../src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Saules gaisma"
 
-#: ../src/klotski-window.vala:721
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+#| msgid "Puzzle:"
+msgid "Puzzle"
+msgstr "Mīkla"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Gājieni: %d"
 
-#: ../src/klotski-window.vala:724
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Līmenis pabeigts."
-
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "_Labi"
