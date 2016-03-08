@@ -29,7 +29,11 @@ stack#stack-packs > label {
   color: @theme_unfocused_selected_fg_color;
 }
 
+treeview.toggle-like-pixbuf {
+  margin-right:22px;      /* TODO hack 1/2 */
+}
 treeview.toggle-like-pixbuf check {
+  min-width:22px;         /* TODO hack 2/2 */
   background:transparent;
   border:none;
   -gtk-icon-source: none; /* TODO report bug about HighContrast, that shouldn’t set this */

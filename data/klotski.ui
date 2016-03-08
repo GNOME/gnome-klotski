@@ -109,6 +109,7 @@
                     <child>
                       <object class="GtkTreeViewColumn">
                         <property name="title">Puzzle</property>
+                        <property name="expand">True</property>
                         <child>
                           <object class="GtkCellRendererText"/>
                           <attributes>
@@ -153,6 +154,7 @@
                     <child>
                       <object class="GtkTreeViewColumn">
                         <property name="title">Puzzle</property>
+                        <property name="expand">True</property>
                         <child>
                           <object class="GtkCellRendererText"/>
                           <attributes>
@@ -197,6 +199,7 @@
                     <child>
                       <object class="GtkTreeViewColumn">
                         <property name="title">Puzzle</property>
+                        <property name="expand">True</property>
                         <child>
                           <object class="GtkCellRendererText"/>
                           <attributes>
