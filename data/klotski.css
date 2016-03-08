@@ -29,11 +29,13 @@ stack#stack-packs > label {
   color: @theme_unfocused_selected_fg_color;
 }
 
-treeview.toggle-like-pixbuf:disabled {
-  -gtk-icon-source: none;
+treeview.toggle-like-pixbuf check {
+  background:transparent;
+  border:none;
+  -gtk-icon-source: none; /* TODO report bug about HighContrast, that shouldn’t set this */
 }
-treeview.toggle-like-pixbuf:disabled:checked {
-  -gtk-icon-source: -gtk-icontheme("gtk-yes");  /* TODO maybe deprecated */
+treeview.toggle-like-pixbuf check:checked {
+  -gtk-icon-source: -gtk-icontheme("gtk-yes"); /* TODO maybe deprecated; replace with CSS? */
 }
 
 /* https://bugzilla.gnome.org/show_bug.cgi?id=744531 */
