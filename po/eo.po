@@ -70,7 +70,7 @@ msgstr "Klotski"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr "ludo;strategio;logiko;movo"
+msgstr "ludo;strategio;logiko;movo;"
 
 #: ../data/klotski.ui.h:1
 msgid "Huarong Trail"
