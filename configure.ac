@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Klotski], [3.19.92], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Klotski], [3.20.0], [https://bugzilla.gnome.org/],
         [gnome-klotski], [https://wiki.gnome.org/Apps/Klotski])
 AC_CONFIG_MACRO_DIR([m4])
 
