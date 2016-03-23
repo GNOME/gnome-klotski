@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-27 21:12+0000\n"
-"PO-Revision-Date: 2015-10-12 17:07+0200\n"
+"POT-Creation-Date: 2016-03-23 09:34+0000\n"
+"PO-Revision-Date: 2016-03-23 12:56+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -50,7 +50,7 @@ msgstr ""
 "cualchi bloc, altris a puedin jessi diviers dal dut."
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -110,22 +110,6 @@ msgstr "_Informazions"
 msgid "_Quit"
 msgstr "_Jes"
 
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Risultâts"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Berdei:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Date"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "Mossis"
-
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "Il berdei in zûc"
@@ -146,167 +130,180 @@ msgstr "Altece dal barcon in pixel"
 msgid "true if the window is maximized"
 msgstr "VÊR se il barcon al è slargjât"
 
+#: ../src/gnome-klotski.vala:17
+msgid "Print release version and exit"
+msgstr "Stampe la version e jes"
+
+#: ../src/gnome-klotski.vala:114
+msgid "Sliding block puzzles"
+msgstr "Berdei cun blocs che a scorin"
+
+#: ../src/gnome-klotski.vala:122
+msgid "translator-credits"
+msgstr "Fabio Tomat <f.t.public@gmail.com>"
+
 #. puzzle name
-#: ../src/gnome-klotski.vala:65
+#: ../src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Nome 18 pas"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:78
+#: ../src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Margarite"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:91
+#: ../src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Viole"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:104
+#: ../src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Papavar"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:117
+#: ../src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Pansè"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:130
+#: ../src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Campanele di invier"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:143
+#: ../src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Red Donkey"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:156
+#: ../src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Olme"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:169
+#: ../src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Vuaite"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:182
+#: ../src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:193
+#: ../src/klotski-window.vala:202
 msgid "Success"
 msgstr "Sucès"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:203
+#: ../src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Vues"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:216
+#: ../src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Furtune"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:230
+#: ../src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Stupit"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:240
+#: ../src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:253
+#: ../src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Cleopatre"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:265
+#: ../src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Scuâl"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:277
+#: ../src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Rome"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:289
+#: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "Berdei standart"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:302
+#: ../src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "Itache"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:325
+#: ../src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Peloponnês"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:337
+#: ../src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Transeuropean"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:349
+#: ../src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:360
+#: ../src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Polache"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:371
+#: ../src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Mâr baltic"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:383
+#: ../src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "Torte merecane"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:399
+#: ../src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Ingorc stradâl"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:410
+#: ../src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Lûs dal soreli"
 
-#: ../src/gnome-klotski.vala:438
-msgid "Print release version and exit"
-msgstr "Stampe la version e jes"
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "Berdei"
 
-#: ../src/gnome-klotski.vala:667
-msgid "Sliding block puzzles"
-msgstr "Berdei cun blocs che a scorin"
-
-#: ../src/gnome-klotski.vala:675
-msgid "translator-credits"
-msgstr "Fabio Tomat <f.t.public@gmail.com>"
-
-#: ../src/gnome-klotski.vala:834
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Mossis: %d"
 
-#: ../src/gnome-klotski.vala:837
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Nivel completât."
 
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "_OK"
+#~ msgid "Scores"
+#~ msgstr "Risultâts"
+
+#~ msgid "Date"
+#~ msgstr "Date"
+
+#~ msgid "Moves"
+#~ msgstr "Mossis"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
