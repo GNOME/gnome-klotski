@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "GNOME Klotski es un conjunto de puzles de bloques deslizantes. El objetivo "
 "es mover el bloque con dibujos al área con marcas verdes en el borde. Para "
-"hacerlo, deberá apartar los otros bloques. Complete cada puzle con el meno "
+"hacerlo, deberá apartar los otros bloques. Complete cada puzle con el menor "
 "número de movimientos posible."
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
