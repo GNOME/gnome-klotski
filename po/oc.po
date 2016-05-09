@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-15 00:13+0000\n"
+"POT-Creation-Date: 2016-03-21 21:32+0000\n"
 "PO-Revision-Date: 2016-03-04 15:59+0200\n"
 "Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot En Òc\n"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#| msgid "Klotski"
 msgid "GNOME Klotski"
 msgstr "GNOME Klotski"
 
@@ -77,12 +76,10 @@ msgid "Previous"
 msgstr "Precedent"
 
 #: ../data/klotski.ui.h:5
-#| msgid "Next:"
 msgid "Next"
 msgstr "Seguent"
 
 #: ../data/klotski.ui.h:7
-#| msgid "Game Over"
 msgid "_Start Over"
 msgstr "_Recomençar"
 
@@ -91,7 +88,6 @@ msgid "Restart the current puzzle"
 msgstr "Recomença la gasilha actuala"
 
 #: ../data/klotski.ui.h:9
-#| msgid "Change"
 msgid "_Change Puzzle"
 msgstr "_Cambiar de gasilha"
 
@@ -112,7 +108,6 @@ msgid "_About"
 msgstr "_A prepaus"
 
 #: ../data/klotski-menus.ui.h:4
-#| msgid "Quit"
 msgid "_Quit"
 msgstr "_Quitar"
 
@@ -125,12 +120,10 @@ msgid "The number of the puzzle being played."
 msgstr "Lo nombre de puzzles ja jogats."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
-#| msgid "The width of the window"
 msgid "Width of the window in pixels"
 msgstr "Largor de la fenèstra en pixèls"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:4
-#| msgid "The width of the window"
 msgid "Height of the window in pixels"
 msgstr "Nautor de la fenèstra en pixèls"
 
@@ -319,8 +312,7 @@ msgstr "Nivèl acabat."
 #~ msgid ""
 #~ "Select whether to drag the cards or to click on the source then the "
 #~ "destination."
-#~ msgstr ""
-#~ "Causir se volètz rossegar las cartas o clicar la font puèi la tòca."
+#~ msgstr "Causir se volètz retalhar las cartas o clicar la font puèi la tòca."
 
 #~ msgid "Sound"
 #~ msgstr "Son"
@@ -359,7 +351,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "NOM"
 
 #~ msgid "NUMBER"
-#~ msgstr "NUMERÒ"
+#~ msgstr "NUMÈRO"
 
 #~ msgid "AisleRiot"
 #~ msgstr "AisleRiot"
@@ -386,7 +378,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "caires"
 
 #~ msgid "eight"
-#~ msgstr "uèch"
+#~ msgstr "uèit"
 
 #~ msgid "five"
 #~ msgstr "cinc"
@@ -437,16 +429,16 @@ msgstr "Nivèl acabat."
 #~ msgstr "l'as de picas"
 
 #~ msgid "the eight of clubs"
-#~ msgstr "l'uèch de flor"
+#~ msgstr "l'uèit de flor"
 
 #~ msgid "the eight of diamonds"
-#~ msgstr "l'uèch de caire"
+#~ msgstr "l'uèit de caire"
 
 #~ msgid "the eight of hearts"
-#~ msgstr "l'uèch de còr"
+#~ msgstr "l'uèit de còr"
 
 #~ msgid "the eight of spades"
-#~ msgstr "l'uèch de picas"
+#~ msgstr "l'uèit de picas"
 
 #~ msgid "the five of clubs"
 #~ msgstr "lo cinc de flor"
@@ -626,7 +618,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Anhès"
 
 #~ msgid "Athena"
-#~ msgstr "Atenà"
+#~ msgstr "Atèna"
 
 #~ msgid "Auld Lang Syne"
 #~ msgstr "Auld Lang Syne"
@@ -860,7 +852,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Victòria"
 
 #~ msgid "Lose"
-#~ msgstr "Desfacha"
+#~ msgstr "Desfaita"
 
 #~ msgid "Hit"
 #~ msgstr "Tocat"
@@ -869,7 +861,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Doble"
 
 #~ msgid "Split"
-#~ msgstr "Dividir"
+#~ msgstr "Devesir"
 
 #~ msgid "New password"
 #~ msgstr "Senhal novèl"
@@ -1031,7 +1023,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Visualizacion"
 
 #~ msgid "Player List"
-#~ msgstr "Tièra de jogaires"
+#~ msgstr "Lista de jogaires"
 
 #~ msgid "Help"
 #~ msgstr "Ajuda"
@@ -1280,7 +1272,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Desplaçar cap a esquèrra"
 
 #~ msgid "Move right"
-#~ msgstr "Desplaçar cap a drecha"
+#~ msgstr "Desplaçar cap a dreita"
 
 #~ msgid ""
 #~ "Unable to load image:\n"
@@ -1532,7 +1524,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Jòc novèl"
 
 #~ msgid "_Tools"
-#~ msgstr "_Espleches"
+#~ msgstr "_Aisinas"
 
 #~ msgid "_Hint"
 #~ msgstr "_Astúcia"
@@ -1707,7 +1699,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Iagno"
 
 #~ msgid "_Player list"
-#~ msgstr "Tièra de _jogaires"
+#~ msgstr "Lista de _jogaires"
 
 #~ msgid "Dark:"
 #~ msgstr "Negres :"
@@ -1782,7 +1774,7 @@ msgstr "Nivèl acabat."
 #~ msgstr "Ecran complet"
 
 #~ msgid "Player _List"
-#~ msgstr "_Tièra de jogaires"
+#~ msgstr "_Lista de jogaires"
 
 #~ msgid "Res_ume"
 #~ msgstr "_Contunhar"
