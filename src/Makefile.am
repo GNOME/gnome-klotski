@@ -30,8 +30,8 @@ gnome_klotski_VALAFLAGS = \
 gnome_klotski_LDADD = \
 	$(GNOME_KLOTSKI_LIBS)
 
-klotski-resources.c: $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies klotski.gresource.xml)
-	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source klotski.gresource.xml
+klotski-resources.c: klotski.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies klotski.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir) --generate-source $<
 
 CLEANFILES = \
 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
