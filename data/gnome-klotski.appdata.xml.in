@@ -3,7 +3,7 @@
 <component type="desktop">
   <id>gnome-klotski.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+ and CC-BY-SA-3.0</project_license>
+  <project_license>GPL-3.0+</project_license>
   <_name>GNOME Klotski</_name>
   <_summary>Slide blocks to solve the puzzle</_summary>
   <description>
@@ -20,7 +20,7 @@
     </_p>
   </description>
   <screenshots>
-    <screenshot type="default" width="748" height="398">
+    <screenshot height="398" width="748" type="default">
       <image>https://people.gnome.org/~mcatanzaro/gnome-klotski.png</image>
     </screenshot>
   </screenshots>
@@ -37,4 +37,6 @@
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-klotski/stable/</url>
+  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+  <_developer_name>The GNOME Project</_developer_name>
 </component>
