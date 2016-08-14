@@ -4,22 +4,22 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
-# Yosef Or Boczko <yoseforb@gnome.org>, 2015.
+# Yosef Or Boczko <yoseforb@gnome.org>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-03 14:55+0200\n"
-"PO-Revision-Date: 2016-03-03 15:05+0200\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2016-08-14 16:08+0300\n"
+"PO-Revision-Date: 2016-08-14 16:19+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural= (n!=1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 "X-Poedit-Language: Hebrew\n"
 
@@ -39,6 +39,9 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"‏GNOME בלוקים Klotski הוא אוסף של תצרפי הזזת בלוקים. המטרה היא להזיז את הבלוק "
+"המיועד לאזור הגובל בסמנים הירוקים. על מנת לעשות זאת, עליך להזיז בלוקים אחרים "
+"מהדרך. יש להשלים כל תצרף במספר תזוזות קטן ככל האפשר!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
@@ -46,6 +49,13 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"‏GNOME בלוקים Klotski מגיע עם כמעט שלושים פריסות תצרפים שונים ברמות קושי "
+"שונות. כמה מהפריסות דומות אך רק הגודל של בלוק אחד או יותר שונה. לפריסות "
+"אחרות מגוון גדול יותר."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "מיזם GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
