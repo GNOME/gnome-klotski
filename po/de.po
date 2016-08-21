@@ -22,9 +22,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-15 09:17+0000\n"
-"PO-Revision-Date: 2016-02-15 20:10+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-08-14 13:20+0000\n"
+"PO-Revision-Date: 2016-08-21 11:55+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -32,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
@@ -44,12 +45,30 @@ msgid "Slide blocks to solve the puzzle"
 msgstr "Verschieben Sie Blöcke, um das Puzzle zu lösen"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
-msgid "GNOME Klotski is a set of block sliding puzzles. The objective is to move the patterned block to the area bordered by green markers. To do so, you’ll need to slide other blocks out of the way. Complete each puzzle in as few moves as possible!"
-msgstr "GNOME Klotski ist eine Zusammenstellung von Blockschiebe-Puzzles. Das Ziel ist es, den Block mit dem Muster zum grün markierten Bereich zu bringen. Dafür müssen andere Blöcke aus dem Weg geschafft werden. Versuchen Sie jedes Puzzle mit so wenig wie möglich Zügen zu beenden!"
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"GNOME Klotski ist eine Zusammenstellung von Blockschiebe-Puzzles. Das Ziel "
+"ist es, den Block mit dem Muster zum grün markierten Bereich zu bringen. "
+"Dafür müssen andere Blöcke aus dem Weg geschafft werden. Versuchen Sie jedes "
+"Puzzle mit so wenig wie möglich Zügen zu beenden!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
-msgid "GNOME Klotski comes with nearly thirty different puzzle layouts of varying difficulty. Some of the layouts are similar and only the size of one or more blocks differ. Other layouts have more variety."
-msgstr "Klotski enthält nahezu 30 verschiedene Puzzle-Anordnungen unterschiedlicher Schwierigkeitsgrade. Einige davon sind ähnlich und nur die Größe eines oder mehrerer Blöcke variiert. Andere unterscheiden sich deutlicher."
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"Klotski enthält nahezu 30 verschiedene Puzzle-Anordnungen unterschiedlicher "
+"Schwierigkeitsgrade. Einige davon sind ähnlich und nur die Größe eines oder "
+"mehrerer Blöcke variiert. Andere unterscheiden sich deutlicher."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Das GNOME-Projekt"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
