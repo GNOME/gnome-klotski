@@ -22,7 +22,7 @@ gnome_klotski_VALAFLAGS = \
 	--pkg posix \
 	--pkg gee-0.8 \
 	--pkg gtk+-3.0 \
-	--pkg libgnome-games-support-1.0 \
+	--pkg libgnome-games-support-1 \
 	--pkg librsvg-2.0 \
 	--gresources $(builddir)/klotski.gresource.xml \
 	--target-glib $(GLIB_REQUIRED)
