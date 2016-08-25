@@ -12,18 +12,18 @@ msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-05 21:13+0100\n"
-"PO-Revision-Date: 2016-03-05 21:13+0100\n"
+"POT-Creation-Date: 2016-08-21 21:38+0200\n"
+"PO-Revision-Date: 2016-08-21 21:38+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: sl\n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
@@ -54,6 +54,10 @@ msgstr ""
 "Igra Gnome Klotski podpira skoraj trideset različnih postavitev igre na "
 "različnih zahtevnostnih ravneh. Nekatere postavitve se razlikujejo le v "
 "številu blokov, druge so povsem različne."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
