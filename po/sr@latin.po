@@ -11,11 +11,11 @@ msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-17 09:18+0000\n"
-"PO-Revision-Date: 2016-02-17 21:13+0200\n"
+"POT-Creation-Date: 2016-08-14 13:20+0000\n"
+"PO-Revision-Date: 2016-08-28 07:28+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
-"Language: sr@latin\n"
+"Language-Team: srpski <gnome-sr@googlegroups.org>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,6 +53,10 @@ msgstr ""
 "Gnom Klotski dolazi sa skoro trideset drugačijih rasporeda slagalice "
 "različitih težina. Neki rasporedi su slični a razlikuju se samo u veličini "
 "jednog ili nekoliko blokova. Drugi rasporedi imaju više varijeteta."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Gnomov projekat"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -298,7 +302,6 @@ msgstr "Sunčev sjaj"
 
 #. Label on the scores dialog, next to dropdown */
 #: ../src/klotski-window.vala:527
-#| msgid "Puzzle:"
 msgid "Puzzle"
 msgstr "Slagalica"
 
