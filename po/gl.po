@@ -15,10 +15,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-23 20:26+0100\n"
-"PO-Revision-Date: 2016-02-23 20:26+0200\n"
+"POT-Creation-Date: 2016-09-05 00:05+0200\n"
+"PO-Revision-Date: 2016-09-05 00:06+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,6 +58,10 @@ msgstr ""
 "diferentes que varían na dificultade. Algunhas disposicións son similares e "
 "só o tamaño dun dos bloques pode cambiar. As outras disposicións teñen máis "
 "variedade."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "O Proxecto GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
