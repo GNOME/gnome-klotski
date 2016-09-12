@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-20 23:34+0100\n"
+"POT-Creation-Date: 2016-09-12 02:07+0200\n"
 "PO-Revision-Date: 2016-03-20 03:30+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -56,6 +56,10 @@ msgstr ""
 "GNOME Klotski indeholder næsten tredive forskellige opgaver af varierende "
 "sværhedsgrad. Nogle minder meget om hinanden, idet kun størrelsen af en "
 "eller flere blokke varierer. Andre har større variation."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
