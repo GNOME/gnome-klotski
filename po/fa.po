@@ -6,15 +6,15 @@
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
 # Danial Behzadi <dani.behzi@gmail.com>, 2012.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-03-23 11:26+0330\n"
+"POT-Creation-Date: 2016-08-14 13:20+0000\n"
+"PO-Revision-Date: 2016-09-18 21:20+0430\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -23,278 +23,330 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/gnome-klotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
-msgid "Klotski"
-msgstr "کی‌لاتسکی"
+#: ../data/gnome-klotski.appdata.xml.in.h:1
+msgid "GNOME Klotski"
+msgstr "گنوم کی‌لاتسکی"
 
-#: ../data/gnome-klotski.desktop.in.in.h:2
+#: ../data/gnome-klotski.appdata.xml.in.h:2 ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "بلوک‌ها را بلغزانید تا پازل را حل کنید"
 
-#: ../data/gnome-klotski.desktop.in.in.h:3
-msgid "game;strategy;logic;move;"
-msgstr "بازی;استراتژی;منطق;حرکت;"
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
+"patterned block to the area bordered by green markers. To do so, you’ll need to "
+"slide other blocks out of the way. Complete each puzzle in as few moves as "
+"possible!"
+msgstr ""
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+#: ../data/gnome-klotski.appdata.xml.in.h:4
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "پروژه گنوم"
+
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
+msgid "Klotski"
+msgstr "کی‌لاتسکی"
+
+#: ../data/gnome-klotski.desktop.in.h:3
+msgid "game;strategy;logic;move;"
+msgstr "game;strategy;logic;move;بازی;استراتژی;منطق;حرکت;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "ردپای اوئارانگ"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "بسته‌ی چالش"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "بسته‌یی مهارت"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "قبلی"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "بعدی"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "_شروع دوباره"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "شروع دوباره بازی فعلی"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "_تغییر پازل"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "یک پازل دیگر انتخاب کنید"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "امتیا_زها"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "_راهنما"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "_درباره"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "_خروج"
+
+#: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "پازل در حال بازی"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+#: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
 msgstr "تعداد پازل‌های بازی شده."
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:3
+#: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
 msgstr "عرض پنجره به پیکسل"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:4
+#: ../data/org.gnome.klotski.gschema.xml.h:4
 msgid "Height of the window in pixels"
 msgstr "ارتفاع پنجره به پیکسل"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:5
+#: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:6
-msgid "true if the window is fullscren"
-msgstr "درست اگر پنجره تمام‌صفحه باشد"
+#: ../src/gnome-klotski.vala:17
+msgid "Print release version and exit"
+msgstr "نمایش نسخه‌ی انتشار و خروج"
+
+#: ../src/gnome-klotski.vala:114
+msgid "Sliding block puzzles"
+msgstr "پازل بلوک‌های لغزنده"
+
+#: ../src/gnome-klotski.vala:122
+msgid "translator-credits"
+msgstr ""
+"آرش موسوی <mousavi.arash@gmail.com>\n"
+"دانیال بهزادی <dani.behzi@gmail.com>"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:49
+#: ../src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "فقط ۱۸ پله"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:62
+#: ../src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "مینا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:75
+#: ../src/klotski-window.vala:100
 msgid "Violet"
 msgstr "بنفشه"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:88
+#: ../src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "توله سگ"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:101
+#: ../src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "بنفشه‌ی فرنگی"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:114
+#: ../src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "دانه‌ی برف"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:127
+#: ../src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "خر قرمز"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:140
+#: ../src/klotski-window.vala:165
 msgid "Trail"
 msgstr "کوره‌راه"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:153
+#: ../src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "کمین"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:166
+#: ../src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "آگاتکا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:177
+#: ../src/klotski-window.vala:202
 msgid "Success"
 msgstr "موفقیت"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:187
+#: ../src/klotski-window.vala:212
 msgid "Bone"
 msgstr "استخوان"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:200
+#: ../src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "بخت"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/klotski-window.vala:239
 msgid "Fool"
 msgstr "احمق"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:224
+#: ../src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "سلیمان"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:237
+#: ../src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "کلئوپاترا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:249
+#: ../src/klotski-window.vala:274
 msgid "Shark"
 msgstr "کوسه"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:261
+#: ../src/klotski-window.vala:286
 msgid "Rome"
 msgstr "رم"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:273
+#: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "پازل پِنَنت"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:286
+#: ../src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "ایتاکا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:309
+#: ../src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "پلوپونس"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:321
+#: ../src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "ترانس‌اروپا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:333
+#: ../src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "لوتسیانکا"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:344
+#: ../src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "پولونز"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:355
+#: ../src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "دریای بالتیک"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:367
+#: ../src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "پای امریکایی"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:383
+#: ../src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "ترافیک"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:394
+#: ../src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "آفتاب"
 
-#: ../src/gnome-klotski.vala:439
-msgid "_Game"
-msgstr "_بازی"
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "پازل"
 
-#. set of puzzles
-#: ../src/gnome-klotski.vala:441
-msgid "HuaRong Trail"
-msgstr "ردپای اوئارانگ"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:443
-msgid "Challenge Pack"
-msgstr "بسته‌ی چالش"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:445
-msgid "Skill Pack"
-msgstr "بسته‌یی مهارت"
-
-#: ../src/gnome-klotski.vala:446
-msgid "_Restart Puzzle"
-msgstr "_راه‌اندازی مجدد جورچین"
-
-#: ../src/gnome-klotski.vala:447
-msgid "Next Puzzle"
-msgstr "جورچین بعدی"
-
-#: ../src/gnome-klotski.vala:448
-msgid "Previous Puzzle"
-msgstr "جورچین قبلی"
-
-#: ../src/gnome-klotski.vala:606
-msgid "_New"
-msgstr "_جدید"
-
-#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
-msgid "_Fullscreen"
-msgstr "تمام _صفحه"
-
-#: ../src/gnome-klotski.vala:667
-msgid "_Leave Fullscreen"
-msgstr "تر_ک حالت تمام‌صفحه"
-
-#: ../src/gnome-klotski.vala:859
-#| msgid "Puzzle:"
-msgid "Puzzle: "
-msgstr "پازل: "
-
-#: ../src/gnome-klotski.vala:873
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "جابه‌جایی‌ها: %Id"
 
-#: ../src/gnome-klotski.vala:876
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "مرحله تمام شد."
 
-#: ../src/gnome-klotski.vala:957
-msgid ""
-"Sliding Block Puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"پازل بلوک‌های لغزان\n"
-"\n"
-"کی‌لاتسکی جزیی از بازی‌های گنوم است."
+#~ msgid "true if the window is fullscren"
+#~ msgstr "درست اگر پنجره تمام‌صفحه باشد"
 
-#: ../src/gnome-klotski.vala:964
-msgid "translator-credits"
-msgstr ""
-"دانیال بهزادی <dani.behzi@gmail.com>\n"
-"آرش موسوی <mousavi.arash@gmail.com>"
+#~ msgid "_Game"
+#~ msgstr "_بازی"
 
-#: ../src/gnome-klotski.vala:967
-msgid "GNOME Games web site"
-msgstr "وب‌سایت بازی‌های گنوم"
+#~ msgid "_Restart Puzzle"
+#~ msgstr "_راه‌اندازی مجدد جورچین"
 
-#: ../src/gnome-klotski.vala:1017
-msgid "New Game"
-msgstr "بازی جدید"
+#~ msgid "Next Puzzle"
+#~ msgstr "جورچین بعدی"
 
-#: ../src/gnome-klotski.vala:1032
-msgid "Puzzle:"
-msgstr "پازل:"
+#~ msgid "_New"
+#~ msgstr "_جدید"
 
-#: ../src/gnome-klotski.vala:1057
-msgid "Date"
-msgstr "تاریخ"
+#~ msgid "_Fullscreen"
+#~ msgstr "تمام _صفحه"
 
-#: ../src/gnome-klotski.vala:1060
-#| msgid "_Move"
-msgid "Moves"
-msgstr "جابه‌جایی‌ها"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "تر_ک حالت تمام‌صفحه"
+
+#~| msgid "Puzzle:"
+#~ msgid "Puzzle: "
+#~ msgstr "پازل: "
+
+#~ msgid ""
+#~ "Sliding Block Puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "پازل بلوک‌های لغزان\n"
+#~ "\n"
+#~ "کی‌لاتسکی جزیی از بازی‌های گنوم است."
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "وب‌سایت بازی‌های گنوم"
+
+#~ msgid "New Game"
+#~ msgstr "بازی جدید"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
+
+#~| msgid "_Move"
+#~ msgid "Moves"
+#~ msgstr "جابه‌جایی‌ها"
 
 #~ msgid "Chess"
 #~ msgstr "شطرنج"
@@ -313,9 +365,6 @@ msgstr "جابه‌جایی‌ها"
 
 #~ msgid "_Settings"
 #~ msgstr "_تنظیمات"
-
-#~ msgid "_Help"
-#~ msgstr "_راهنما"
 
 #~ msgid "_Contents"
 #~ msgstr "م_حتویات"
@@ -362,11 +411,9 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "The piece to promote pawns to"
 #~ msgstr "ارتقای سربازان به مهره"
 
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
+#~ msgid "The piece to promote to when a human player moves a pawn to the far rank"
 #~ msgstr ""
-#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا "
-#~ "می‌کند"
+#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا می‌کند"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "پرچمی برای فعال کردن حالت سه‌بعدی"
@@ -817,8 +864,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Opponent has run out of time"
 #~ msgstr "زمان رقیب تمام شد"
 
-#~ msgid ""
-#~ "The same board state has occurred three times (three fold repetition)"
+#~ msgid "The same board state has occurred three times (three fold repetition)"
 #~ msgstr "وضعیت مشابه صفحه سه بار اتفاق افتاد"
 
 #~ msgid "Neither player can cause checkmate (insufficient material)"
@@ -887,16 +933,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Failed to open game: %s"
 #~ msgstr "باز کردن بازی شکست خورد: %s"
 
-#~ msgid "Show release version"
-#~ msgstr "نمایش نسخه‌ی انتشار"
-
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE] - بازی شطرنج"
 
-#~ msgid ""
-#~ "Run '%s --help' to see a full list of available command line options."
-#~ msgstr ""
-#~ "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
+#~ msgid "Run '%s --help' to see a full list of available command line options."
+#~ msgstr "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
 
 #~ msgid "Five or More"
 #~ msgstr "پنج یا بیش‌تر"
@@ -940,9 +981,6 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Scores"
 #~ msgstr "امتیازها"
 
-#~ msgid "Next:"
-#~ msgstr "بعدی:"
-
 #~ msgid "0"
 #~ msgstr "۰"
 
@@ -953,10 +991,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "اندازه زمین بازی"
 
 #~ msgid ""
-#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
-#~ "invalid."
-#~ msgstr ""
-#~ "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
+#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+#~ msgstr "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
 
 #~ msgid "Ball style"
 #~ msgstr "طرح توپ"
@@ -1081,49 +1117,44 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Res_ume"
 #~ msgstr "_از سر گیری"
 
-#~ msgid "_Scores"
-#~ msgstr "امتیا_زها"
-
 #~ msgid "_End Game"
 #~ msgstr "_تمام کردن بازی"
 
 #~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
+#~ "%s is free software; you can redistribute it and/or modify it under the terms "
+#~ "of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any later "
+#~ "version."
 #~ msgstr ""
-#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت "
-#~ "شرایط اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده "
-#~ "تغییر دهید؛ چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
+#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت شرایط "
+#~ "اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده تغییر دهید؛ "
+#~ "چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
 
 #~ msgid ""
 #~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR "
+#~ "A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
 #~ msgstr ""
-#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون "
-#~ "ضمانت ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه "
-#~ "عمومی همگانی گنو را ببینید."
+#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون ضمانت "
+#~ "ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه عمومی "
+#~ "همگانی گنو را ببینید."
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+#~ "Fifth Floor, Boston, MA  02110-1301  USA"
 #~ msgstr ""
 #~ "شما باید به همراه %s رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
 #~ "می‌کردید، اگر این‌گونه نیست، به بنیاد نرم‌افزار آزاد به آدرس Free Software "
-#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  "
-#~ "02110-1301  USA نامه بفرستید "
+#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  "
+#~ "USA نامه بفرستید "
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "this program.  If not, see <http://www.gnu.org/licenses/>."
 #~ msgstr ""
-#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را "
-#~ "دریافت می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را "
-#~ "ببینید."
+#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
+#~ "می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را ببینید."
 
 #~ msgctxt "board size"
 #~ msgid "Small"
@@ -1648,32 +1679,30 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "استفاده از حرکت‌های امن"
 
 #~ msgid ""
-#~ "Use safe moves. The safe moves option will help you to avoid being killed "
-#~ "due to a mistake. If you try to make a move that would lead to your death "
-#~ "when there is a safe move available you will not be allowed to proceed."
+#~ "Use safe moves. The safe moves option will help you to avoid being killed due "
+#~ "to a mistake. If you try to make a move that would lead to your death when "
+#~ "there is a safe move available you will not be allowed to proceed."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته "
-#~ "شدن به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی "
-#~ "کنید جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به "
-#~ "شما داده نخواهد شد."
+#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته شدن "
+#~ "به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی کنید "
+#~ "جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به شما داده "
+#~ "نخواهد شد."
 
 #~ msgid "Use super safe moves"
 #~ msgstr "استفاده از حرکت‌های کاملاً امن"
 
 #~ msgid ""
-#~ "Use super safe moves. The player is alerted when there is no safe move "
-#~ "and the only option is to teleport out."
+#~ "Use super safe moves. The player is alerted when there is no safe move and "
+#~ "the only option is to teleport out."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و "
-#~ "تنها گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
+#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و تنها "
+#~ "گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
 
 #~ msgid "Enable game sounds"
 #~ msgstr "به کار انداختن صداهای بازی"
 
-#~ msgid ""
-#~ "Enable game sounds. Play sounds for various events throughout the game."
-#~ msgstr ""
-#~ "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
+#~ msgid "Enable game sounds. Play sounds for various events throughout the game."
+#~ msgstr "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
 
 #~ msgid "Key to move NW"
 #~ msgstr "کلید جابه‌جایی به شمال غربی"
@@ -1842,8 +1871,8 @@ msgstr "جابه‌جایی‌ها"
 #~ "The program Robots was unable to find any valid game configuration files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً "
-#~ "بررسی کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً بررسی "
+#~ "کنید که برنامه درست نصب شده باشد."
 
 #~ msgid "Some graphics files are missing or corrupt."
 #~ msgstr "بعضی از پرونده‌های گرافیکی گم‌شده‌اند یا مخدوشند."
@@ -1852,8 +1881,8 @@ msgstr "جابه‌جایی‌ها"
 #~ "The program Robots was unable to load all the necessary graphics files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی "
-#~ "کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی کنید "
+#~ "که برنامه درست نصب شده باشد."
 
 #~ msgid "Could not find '%s' pixmap file\n"
 #~ msgstr "پرونده‌ی pixmap «%s» پیدا نشد\n"
@@ -1987,12 +2016,6 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "_Preferences"
 #~ msgstr "_ترجیحات"
 
-#~ msgid "_About"
-#~ msgstr "_درباره"
-
-#~ msgid "_Quit"
-#~ msgstr "_خروج"
-
 #~| msgid "_Hint"
 #~ msgid "Hint"
 #~ msgstr "راهنمایی"
@@ -2025,13 +2048,12 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "دیگر نمی‌شود حرکتی کرد."
 
 #~ msgid ""
-#~ "Each puzzle has at least one solution.  You can undo your moves and try "
-#~ "and find the solution for a time penalty, restart this game or start an "
-#~ "new one."
+#~ "Each puzzle has at least one solution.  You can undo your moves and try and "
+#~ "find the solution for a time penalty, restart this game or start an new one."
 #~ msgstr ""
 #~ "هر پازل حداقل یک راه‌حل دارد. شما می‌توانید حرکاتتان را برگردانی کنید و سعی "
-#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده "
-#~ "یا یک بازی جدید را آغاز کنید."
+#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده یا "
+#~ "یک بازی جدید را آغاز کنید."
 
 #~ msgid "_New game"
 #~ msgstr "_بازی جدید"
@@ -2129,13 +2151,13 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "سودوکوی گنوم"
 
 #~ msgid ""
-#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a "
-#~ "Japanese logic puzzle.\n"
+#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a Japanese "
+#~ "logic puzzle.\n"
 #~ "\n"
 #~ "GNOME Sudoku is a part of GNOME Games."
 #~ msgstr ""
-#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی "
-#~ "ژاپنی است.\n"
+#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی ژاپنی "
+#~ "است.\n"
 #~ "\n"
 #~ "سودوکوی گنوم جزیی از بازی‌های گنوم است."
 
@@ -2257,10 +2279,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "_Track Additions"
 #~ msgstr "ردگیری ا_ضافات"
 
-#~ msgid ""
-#~ "Mark new additions in a separate color so you can keep track of them."
-#~ msgstr ""
-#~ "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
+#~ msgid "Mark new additions in a separate color so you can keep track of them."
+#~ msgstr "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
 
 #~ msgid "_Highlighter"
 #~ msgstr "بر_جسته‌ساز"
@@ -2408,18 +2428,18 @@ msgstr "جابه‌جایی‌ها"
 
 #~ msgid "Set to true to enable warning icons when too many flags are placed."
 #~ msgstr ""
-#~ "برای فعال کردن اخطار هنگامی که پرچم‌های خیلی زیادی قرار داده شده است روی "
-#~ "درست تنظیم شود."
+#~ "برای فعال کردن اخطار هنگامی که پرچم‌های خیلی زیادی قرار داده شده است روی درست "
+#~ "تنظیم شود."
 
 #~ msgid "Enable automatic placing of flags"
 #~ msgstr "قعال سازی جا گذاری خودکار پرچم‌ها"
 
 #~ msgid ""
-#~ "Set to true to have gnomine automatically flag squares as mined when "
-#~ "enough squares are revealed"
+#~ "Set to true to have gnomine automatically flag squares as mined when enough "
+#~ "squares are revealed"
 #~ msgstr ""
-#~ "برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع "
-#~ "فاش شد روی درست تنظیم شود"
+#~ "برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع فاش "
+#~ "شد روی درست تنظیم شود"
 
 #~ msgid "Number of columns in a custom game"
 #~ msgstr "تعداد ستون‌ها در یک بازی سفارشی"
@@ -2499,13 +2519,13 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "گرافیک‌ها:"
 
 #~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
+#~ "The popular logic puzzle minesweeper. Clear mines from a board using hints "
+#~ "from squares you have already uncovered.\n"
 #~ "\n"
 #~ "Mines is a part of GNOME Games."
 #~ msgstr ""
-#~ "پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که "
-#~ "پیش‌تر کشف کردید، پاک‌سازی کنید.\n"
+#~ "پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که پیش‌تر "
+#~ "کشف کردید، پاک‌سازی کنید.\n"
 #~ "\n"
 #~ "مین‌ها جزیی از بازی‌ها گنوم است."
 
@@ -2561,8 +2581,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "The size of the playing grid"
 #~ msgstr "اندازه‌ی شبکه‌ی بازی"
 
-#~ msgid ""
-#~ "The value of this key is used to decide the size of the playing grid."
+#~ msgid "The value of this key is used to decide the size of the playing grid."
 #~ msgstr "مقدار این کلید برای تعیین اندازه‌ی شبکه‌ی بازی به کار می‌رود."
 
 #~ msgid "2×2"
@@ -2587,13 +2606,13 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "امتیازات تِتراوِکس"
 
 #~ msgid ""
-#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that "
-#~ "the same numbers are touching each other.\n"
+#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that the "
+#~ "same numbers are touching each other.\n"
 #~ "\n"
 #~ "Tetravex is a part of GNOME Games."
 #~ msgstr ""
-#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند "
-#~ "که اعداد یکسان هم‌دیگر را لمس کنند.\n"
+#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند که "
+#~ "اعداد یکسان هم‌دیگر را لمس کنند.\n"
 #~ "\n"
 #~ "تتراوکس جزیی از بازی‌های گنوم است."
 
@@ -2645,21 +2664,20 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "تأخیر بین تاس ریختن‌ها"
 
 #~ msgid ""
-#~ "Choose whether or not to insert a delay between the computer's dice rolls "
-#~ "so the player can follow what it is doing."
+#~ "Choose whether or not to insert a delay between the computer's dice rolls so "
+#~ "the player can follow what it is doing."
 #~ msgstr ""
-#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن "
-#~ "بتواند کار آن را دنبال کند."
+#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن بتواند "
+#~ "کار آن را دنبال کند."
 
 #~ msgid "Display the computer's thoughts"
 #~ msgstr "نشان دادن افکار کامپیوتر"
 
 #~ msgid ""
-#~ "If set to true, a dump of the AI's working will be done to standard "
-#~ "output."
+#~ "If set to true, a dump of the AI's working will be done to standard output."
 #~ msgstr ""
-#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد "
-#~ "قرار می‌گیرد."
+#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد قرار "
+#~ "می‌گیرد."
 
 #~ msgid "Already used! Where do you want to put that?"
 #~ msgstr "قبلاً استفاده شده! کجا می‌خواهید قرار بگیرد؟"
@@ -2729,8 +2747,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "‏%s! -- شما جلویید."
 
 #~ msgid "Select dice to roll or choose a score slot."
-#~ msgstr ""
-#~ "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
+#~ msgstr "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
 
 #~ msgid "Roll"
 #~ msgstr "ریختن"
@@ -2856,9 +2873,6 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "5 of a Kind [50 + total]"
 #~ msgstr "۵ تا از یک خال [مجموع + ۲۵]"
 
-#~ msgid "Choose a score slot."
-#~ msgstr "امتیاز اسلاتی را انتخاب کنید."
-
 #~ msgid "5 of a Kind [total]"
 #~ msgstr "۵ تا از یک خال [مجموع]"
 
@@ -2972,8 +2986,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "The theme used for rendering the blocks"
 #~ msgstr "تم مورد استفاده برای ترسیم بلوک‌ها"
 
-#~ msgid ""
-#~ "The name of the theme used for rendering the blocks and the background."
+#~ msgid "The name of the theme used for rendering the blocks and the background."
 #~ msgstr "نام تم مورد استفاده برای ترسیم بلوک‌ها و پس‌زمینه"
 
 #~ msgid "Level to start with"
@@ -3018,11 +3031,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "فشردگی سطر‌های پر شده"
 
 #~ msgid ""
-#~ "The density of blocks in rows filled at the start of the game. The value "
-#~ "is between 0 (for no blocks) and 10 (for a completely filled row)."
+#~ "The density of blocks in rows filled at the start of the game. The value is "
+#~ "between 0 (for no blocks) and 10 (for a completely filled row)."
 #~ msgstr ""
-#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون "
-#~ "بلوک) و ۱۰ (برای سطرهای کاملاً پر شده) است."
+#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون بلوک) و "
+#~ "۱۰ (برای سطرهای کاملاً پر شده) است."
 
 #~ msgid "Whether to play sounds"
 #~ msgstr "این که صداها پخش شوند یا نه"
@@ -3193,13 +3206,13 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "امتیازات سوئل‌فوپ"
 
 #~ msgid ""
-#~ "I want to play that game! You know, they all light-up and you click on "
-#~ "them and they vanish!\n"
+#~ "I want to play that game! You know, they all light-up and you click on them "
+#~ "and they vanish!\n"
 #~ "\n"
 #~ "Swell Foop is a part of GNOME Games."
 #~ msgstr ""
-#~ "من می‌خوام آن بازی را انجام دهم! می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان "
-#~ "کلیک می‌کنی و آن‌ها ناپدید می‌شوند!\n"
+#~ "من می‌خوام آن بازی را انجام دهم! می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان کلیک "
+#~ "می‌کنی و آن‌ها ناپدید می‌شوند!\n"
 #~ "\n"
 #~ "سوئل‌فوپ جزیی از بازی‌های گنوم است."
 
@@ -3281,9 +3294,6 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "_Select map:"
 #~ msgstr "_انتخاب نقشه:"
 
-#~ msgid "Restart the current game"
-#~ msgstr "شروع مجدد بازی جاری"
-
 #~ msgid "Redo the last move"
 #~ msgstr "برگرداندن آخرین حرکت"
 
@@ -3302,8 +3312,8 @@ msgstr "جابه‌جایی‌ها"
 #~ "Unplayed games do not need to be represented."
 #~ msgstr ""
 #~ "فهرستی از رشته‌ها که به شکل پنج‌تایی هستند: نام، بردها، ‌مجموع بازی‌های انجام "
-#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی "
-#~ "نشده نمایش داده نمی‌شوند."
+#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی نشده "
+#~ "نمایش داده نمی‌شوند."
 
 #, fuzzy
 #~ msgid "Recently Played Games"
@@ -3316,8 +3326,8 @@ msgstr "جابه‌جایی‌ها"
 #~ "Select whether to drag the cards or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
 #~ msgid "Statistics of games played"
 #~ msgstr "آمار بازی‌های انجام شده"
@@ -3379,14 +3389,13 @@ msgstr "جابه‌جایی‌ها"
 
 #~ msgid ""
 #~ "This game uses a deprecated hint method (case 3).\n"
-#~ "Please file a bug at http://bugzilla.gnome.org including this message "
-#~ "and\n"
+#~ "Please file a bug at http://bugzilla.gnome.org including this message and\n"
 #~ "the name of the game you where playing (look in the title bar if you \n"
 #~ "aren't sure)."
 #~ msgstr ""
 #~ "این بازی از روش راهنمایی منسوخ شده‌ای استفاده می‌کند (حالت ۳).\n"
-#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و "
-#~ "نام بازی‌ای \n"
+#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و نام "
+#~ "بازی‌ای \n"
 #~ "که در حال انجامش بودید باشد. (اگر مطمئن نیستید به نوار عنوان نگاه کنید)."
 
 #~ msgid "You are searching for a %s."
@@ -3416,8 +3425,8 @@ msgstr "جابه‌جایی‌ها"
 #~ "card engine that allows many different\n"
 #~ "games to be played."
 #~ msgstr ""
-#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام "
-#~ "بازی‌های متفاوتی را ممکن می‌سازد."
+#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام بازی‌های "
+#~ "متفاوتی را ممکن می‌سازد."
 
 #~ msgid "_Control"
 #~ msgstr "_کنترل"
@@ -3689,8 +3698,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid ""
 #~ "Aim to place the suits in the order which fits the current layout most "
 #~ "naturally."
-#~ msgstr ""
-#~ "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
+#~ msgstr "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
 
 #~ msgid "Deal new cards from the deck"
 #~ msgstr "گرفتن کارت‌های جدید از دسته‌ی ورق"
@@ -4258,8 +4266,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "نمایش احتمالات"
 
 #~ msgid ""
-#~ "Display the probabilities of each dealer hand outcome and the expected "
-#~ "value of your hand."
+#~ "Display the probabilities of each dealer hand outcome and the expected value "
+#~ "of your hand."
 #~ msgstr "نمایش احتمالات هر دست داده شده و مقدار مورد انتظار از دست شما."
 
 #~ msgid "The amount of money in your bank"
@@ -4324,12 +4332,10 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "دوست دارید بیمه شوید؟"
 
 #~ msgid "Set your wager and click in the white outline to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
+#~ msgstr "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
 
 #~ msgid "Set your wager or click on the cards to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
+#~ msgstr "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
 
 #~ msgid "Blackjack Preferences"
 #~ msgstr "ترجیحات بازی بلک‌جک"
@@ -4374,8 +4380,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "دوبار کلیک برای کاهش شرط به %I.2f"
 
 #~ msgid "Click to deal another card; drag card to split pair"
-#~ msgstr ""
-#~ "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
+#~ msgstr "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
 
 #~ msgid "Click to deal another card"
 #~ msgstr "کلیک برای گرفتن یک کارت دیگر"
@@ -4396,8 +4401,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "بهترین گزینه ایستادن است"
 
 #~ msgid ""
-#~ "To stand means to stop adding cards to your hand.  Do this by clicking on "
-#~ "the dealer's cards or by selecting the option from the Control menu."
+#~ "To stand means to stop adding cards to your hand.  Do this by clicking on the "
+#~ "dealer's cards or by selecting the option from the Control menu."
 #~ msgstr ""
 #~ "ایستادن به معنای توقف اضافه کردن کارت‌ها به دست‌تان است. برای این کار رو "
 #~ "کارت‌های توزیع‌کننده کلیک کنید با گزینه را از منوی کنترل انتخاب کنید."
@@ -4406,11 +4411,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "بهترین گزینه تسلیم است"
 
 #~ msgid ""
-#~ "To surrender means to give up half your wager and not complete the hand.  "
-#~ "Do this by selecting the option from the Control menu."
+#~ "To surrender means to give up half your wager and not complete the hand.  Do "
+#~ "this by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش "
-#~ "را از منوی کنترل انتخاب کنید."
+#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش را "
+#~ "از منوی کنترل انتخاب کنید."
 
 #, fuzzy
 #~ msgid "Blackjack is a casino-style card game."
@@ -4904,10 +4909,6 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "نام"
 
 #, fuzzy
-#~ msgid "_Start"
-#~ msgstr "_شروع مجدد"
-
-#, fuzzy
 #~ msgid "_Type:"
 #~ msgstr "زمان:"
 
@@ -4960,8 +4961,7 @@ msgstr "جابه‌جایی‌ها"
 #~ "Height of the GNibbles window, used to restore the window size between "
 #~ "sessions."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می "
-#~ "شود."
+#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می شود."
 
 #~ msgid "Width of the GNibbles window"
 #~ msgstr "عرض پنجره‌ی جی‌نیبلز"
@@ -5005,64 +5005,59 @@ msgstr "جابه‌جایی‌ها"
 
 #~ msgid ""
 #~ "The name of the key used to hold still. The name is a standard X key name."
-#~ msgstr ""
-#~ "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
+#~ msgstr "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move east. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move west. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
-#~ "The name of the key used to teleport randomly. The name is a standard X "
-#~ "key name."
+#~ "The name of the key used to teleport randomly. The name is a standard X key "
+#~ "name."
 #~ msgstr ""
 #~ "نام کلید مورد استفاده برای دوربری تصادفی. نام یک نام کلید X استاندارد است."
 
@@ -5119,8 +5114,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "رنگ پس‌زمینه، در قالبی که gdk_color_parse می‌فهمد."
 
 #~ msgid ""
-#~ "This selects whether or not to draw the background image over the "
-#~ "background color."
+#~ "This selects whether or not to draw the background image over the background "
+#~ "color."
 #~ msgstr "این انتخاب می‌کند که تصویر پس‌زمینه روی رنگ پس‌زمینه ترسیم شود یا نه."
 
 #, fuzzy
@@ -5419,15 +5414,13 @@ msgstr "جابه‌جایی‌ها"
 #~ "Select whether to drag the tiles or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
-#~ msgid ""
-#~ "The height of the playing window in pixels. At minimum it should be 240."
+#~ msgid "The height of the playing window in pixels. At minimum it should be 240."
 #~ msgstr "ارتفاع پنجره‌ی بازی برحسب نقطه. حداقل باید ۲۴۰ باشد."
 
-#~ msgid ""
-#~ "The width of the playing window in pixels. At minimum it should be 320."
+#~ msgid "The width of the playing window in pixels. At minimum it should be 320."
 #~ msgstr "عرض پنجره‌ی بازی بر حسب نقطه. حداقل باید ۳۲۰ باشد."
 
 #~ msgid "Block 10"
@@ -5460,19 +5453,16 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Minoru Climb"
 #~ msgstr "سربالایی مینورو"
 
-#~ msgid "Sliding Block Puzzles"
-#~ msgstr "جورچین‌های بلوک لغزنده"
-
 #~ msgid ""
-#~ "The requested height of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested height of the main window in pixels. If this isn't big enough "
+#~ "it will be ignored."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در "
-#~ "نظر گرفته نخواهد شد."
+#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
+#~ "گرفته نخواهد شد."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested width of the main window in pixels. If this isn't big enough it "
+#~ "will be ignored."
 #~ msgstr ""
 #~ "عرض پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
 #~ "گرفته نخواهد شد."
@@ -5580,8 +5570,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid ""
 #~ "Please check your GConf configuration, specifically that the schemas have "
 #~ "been installed correctly."
-#~ msgstr ""
-#~ "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
+#~ msgstr "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
 
 #~ msgid "X Padding"
 #~ msgstr "لایی‌گذاری X"
@@ -5619,8 +5608,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "لقب بازیکن."
 
 #~ msgid ""
-#~ "This string identifies the default game to connect to or create "
-#~ "(depending on mode)."
+#~ "This string identifies the default game to connect to or create (depending on "
+#~ "mode)."
 #~ msgstr ""
 #~ "این رشته بازی پیش‌فرض برای اتصال یا ایجاد (بسته به حالت) را شناسایی می‌کند."
 
@@ -5674,8 +5663,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid ""
 #~ "Do you want to finish the current game or start playing with the new map "
 #~ "immediately?"
-#~ msgstr ""
-#~ "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
+#~ msgstr "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
 
 #~ msgid "_Finish"
 #~ msgstr "_پایان"
@@ -5696,18 +5684,18 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "حذف جفت کاشی‌های جور شده"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 200 pixels high."
+#~ "The requested height of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 200 pixels high."
 #~ msgstr ""
-#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
+#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 320 pixels wide."
+#~ "The requested width of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 320 pixels wide."
 #~ msgstr ""
-#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۳۲۰ نقطه عرض دارند."
+#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۳۲۰ نقطه عرض دارند."
 
 #~ msgid "mahjongg|Easy"
 #~ msgstr "ماهجونگ|آسان"
@@ -5731,11 +5719,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی"
 
 #~ msgid ""
-#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A "
-#~ "setting of TRUE causes the pieces to fall quickly and jerkily."
+#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A setting "
+#~ "of TRUE causes the pieces to fall quickly and jerkily."
 #~ msgstr ""
-#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم "
-#~ "درست باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
+#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم درست "
+#~ "باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
 
 #~ msgid "The board size"
 #~ msgstr "اندازه‌ی صفحه"
@@ -5744,10 +5732,8 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی، ۳ &gt; ارتفاع &gt;."
 
 #~ msgid ""
-#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = "
-#~ "Large."
-#~ msgstr ""
-#~ "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
+#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = Large."
+#~ msgstr "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
 
 #~ msgid "The window height"
 #~ msgstr "ارتفاع پنجره"
@@ -5850,11 +5836,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "این که از حرکت‌های سریع استفاده شود یا نه."
 
 #~ msgid ""
-#~ "Zero corresponds to no animations, one is partial animations, two is "
-#~ "complete animations."
+#~ "Zero corresponds to no animations, one is partial animations, two is complete "
+#~ "animations."
 #~ msgstr ""
-#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی "
-#~ "کامل است."
+#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی کامل "
+#~ "است."
 
 #~ msgid "Ataxx Preferences"
 #~ msgstr "ترجیحات اتکس"
@@ -5981,11 +5967,11 @@ msgstr "جابه‌جایی‌ها"
 #~ msgstr "این که نتایج نهایی چرخانده شود یا نه"
 
 #~ msgid ""
-#~ "Put all the white pieces at the bottom and all the black pieces on the "
-#~ "top of the board when a game is over"
+#~ "Put all the white pieces at the bottom and all the black pieces on the top of "
+#~ "the board when a game is over"
 #~ msgstr ""
-#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه "
-#~ "وقتی بازی تمام می‌شود."
+#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه وقتی "
+#~ "بازی تمام می‌شود."
 
 #~ msgid "Collect all diamonds and find exit"
 #~ msgstr "همه‌ی الماس‌ها را جمع کنید و خروج را پیدا کنید"
@@ -6094,8 +6080,7 @@ msgstr "جابه‌جایی‌ها"
 #~ msgid "Please make sure that GNOME Stones is correctly installed."
 #~ msgstr "لطفاً مطمئن شوید که سنگ‌های گنوم درست نصب شده است."
 
-#~ msgid ""
-#~ "You may be able to select a different game from the preferences dialog."
+#~ msgid "You may be able to select a different game from the preferences dialog."
 #~ msgstr "شاید بتوانید بازی دیگری از محاوره‌ی ترجیحات انتخاب کنید."
 
 #~ msgid "GNOME Stones Preferences"
