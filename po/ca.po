@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-23 22:52+0100\n"
+"POT-Creation-Date: 2016-11-06 19:53+0100\n"
 "PO-Revision-Date: 2016-03-23 23:20+0200\n"
 "Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -54,6 +54,10 @@ msgstr ""
 "El GNOME Klotski conté una trentena de disposicions de trencaclosques "
 "diferents de diversa dificultat. Algunes disposicions són semblants i només "
 "canvia la mida d'algun bloc. Altres disposicions són més variades."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -163,22 +167,22 @@ msgstr "Només 18 moviments"
 #. puzzle name
 #: ../src/klotski-window.vala:87
 msgid "Daisy"
-msgstr "Daisy"
+msgstr "Margarida"
 
 #. puzzle name
 #: ../src/klotski-window.vala:100
 msgid "Violet"
-msgstr "Violet"
+msgstr "Violeta"
 
 #. puzzle name
 #: ../src/klotski-window.vala:113
 msgid "Poppy"
-msgstr "Poppy"
+msgstr "Rosella"
 
 #. puzzle name
 #: ../src/klotski-window.vala:126
 msgid "Pansy"
-msgstr "Pansy"
+msgstr "Pensament"
 
 #. puzzle name
 #: ../src/klotski-window.vala:139
@@ -198,7 +202,7 @@ msgstr "Senda"
 #. puzzle name
 #: ../src/klotski-window.vala:178
 msgid "Ambush"
-msgstr "Complot"
+msgstr "Emboscada"
 
 #. puzzle name
 #: ../src/klotski-window.vala:191
@@ -223,7 +227,7 @@ msgstr "Sort"
 #. puzzle name
 #: ../src/klotski-window.vala:239
 msgid "Fool"
-msgstr "Boig"
+msgstr "Ximple"
 
 #. puzzle name
 #: ../src/klotski-window.vala:249
