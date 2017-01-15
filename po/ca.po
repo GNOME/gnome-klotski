@@ -74,7 +74,7 @@ msgstr "Senda a Huarong"
 
 #: ../data/klotski.ui.h:2
 msgid "Challenge Pack"
-msgstr "Paquet de desfiament"
+msgstr "Paquet de desafiament"
 
 #: ../data/klotski.ui.h:3
 msgid "Skill Pack"
@@ -94,15 +94,15 @@ msgstr "To_rna a començar"
 
 #: ../data/klotski.ui.h:8
 msgid "Restart the current puzzle"
-msgstr "Reiniciar el trencacloques actual"
+msgstr "Reiniciar el trencaclosques actual"
 
 #: ../data/klotski.ui.h:9
 msgid "_Change Puzzle"
-msgstr "_Canvia el trencacloques"
+msgstr "_Canvia el trencaclosques"
 
 #: ../data/klotski.ui.h:10
 msgid "Choose an other puzzle"
-msgstr "Seleccioneu un altre trencacloques"
+msgstr "Seleccioneu un altre trencaclosques"
 
 #: ../data/klotski-menus.ui.h:1
 msgid "_Scores"
