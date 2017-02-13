@@ -2,54 +2,132 @@
 # Copyright 2011 Free Software Foundation, Inc.
 # Aron Xu <aronxu@gnome.org>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
+# Yang Zhang <zyangmath@gmail.com>, 2007.
+# Ping Z <zpsigma@gmail.com>, 2007.
+# Xhacker Liu <liu.dongyuan@gmail.com>, 2010.
+# Zixing Liu <liushuyu@aosc.xyz>, 2015.
+# Jeff Bai <jeffbai@aosc.xyz>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-08 07:53+0000\n"
-"PO-Revision-Date: 2012-03-23 17:59+0800\n"
-"Last-Translator: tuhaihe <wangdianjin@linuxdeepin.com>\n"
+"POT-Creation-Date: 2016-06-20 19:36+0000\n"
+"PO-Revision-Date: 2017-02-13 17:05+0800\n"
+"Last-Translator: Tong Hui <tonghuix@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
 msgstr "GNOME 华容道"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
-msgid ""
-"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you'll "
-"need to slide other blocks out of the way. Complete each puzzle in as few "
-"moves as possible!"
-msgstr "GNOME Klotski(华容道)是一套滑块谜题。游戏的目标是将带图案的块移动到绿色标记围起来的区域。"
-"这个过程中，您需要移开挡路的其他块。挑战用最少的步数完成移动！"
-
-#: ../data/gnome-klotski.appdata.xml.in.h:3
-msgid ""
-"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
-"difficulty. Some of the layouts are similar and only the size of one or more "
-"blocks differ. Other layouts have more variety."
-msgstr "GNOME Klotski(华容道)有近 30 种难度不一的谜局。有些布局相似，只有一两个块的大小不同。有些布局就很不一样。"
-
-#: ../data/gnome-klotski.desktop.in.h:1 ../src/gnome-klotski.vala:456
-#: ../src/gnome-klotski.vala:481 ../src/gnome-klotski.vala:969
-msgid "Klotski"
-msgstr "华容道"
-
 #: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
 msgstr "滑动方块以解开布局"
 
+#: ../data/gnome-klotski.appdata.xml.in.h:3
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"GNOME Klotski(华容道)是一套滑块谜题。游戏的目标是将带图案的块移动到绿色标记围"
+"起来的区域。这个过程中，您需要移开挡路的其他块。挑战用最少的步数完成移动！"
+
+#: ../data/gnome-klotski.appdata.xml.in.h:4
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"GNOME Klotski(华容道)有近 30 种难度不一的谜局。有些布局相似，只有一两个块的大"
+"小不同。有些布局就很不一样。"
+
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+msgid "Klotski"
+msgstr "华容道"
+
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
 msgstr "game;strategy;logic;move;游戏;策略;逻辑;移动;"
+
+#: ../data/klotski.ui.h:1
+msgid "Huarong Trail"
+msgstr "华容道"
+
+#: ../data/klotski.ui.h:2
+msgid "Challenge Pack"
+msgstr "挑战包"
+
+#: ../data/klotski.ui.h:3
+msgid "Skill Pack"
+msgstr "技巧包"
+
+#: ../data/klotski.ui.h:4
+msgid "Previous"
+msgstr "上个"
+
+#: ../data/klotski.ui.h:5
+msgid "Next"
+msgstr "下个"
+
+#: ../data/klotski.ui.h:7
+msgid "_Start Over"
+msgstr "重新开始(_S)"
+
+#: ../data/klotski.ui.h:8
+msgid "Restart the current puzzle"
+msgstr "重新开始当前游戏"
+
+#: ../data/klotski.ui.h:9
+msgid "_Change Puzzle"
+msgstr "改变谜题(_C)"
+
+#: ../data/klotski.ui.h:10
+msgid "Choose an other puzzle"
+msgstr "选择其他谜题"
+
+#: ../data/klotski-menus.ui.h:1
+msgid "_Scores"
+msgstr "得分(_S)"
+
+#: ../data/klotski-menus.ui.h:2
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../data/klotski-menus.ui.h:3
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../data/klotski-menus.ui.h:4
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: ../data/klotski-scores.ui.h:1
+msgid "Scores"
+msgstr "得分"
+
+#: ../data/klotski-scores.ui.h:2
+msgid "Puzzle:"
+msgstr "谜："
+
+#: ../data/klotski-scores.ui.h:3
+msgid "Date"
+msgstr "日期"
+
+#: ../data/klotski-scores.ui.h:4
+msgid "Moves"
+msgstr "移动"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -71,239 +149,216 @@ msgstr "主窗口的高度(像素)"
 msgid "true if the window is maximized"
 msgstr "若窗口已最大化则为 true"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:6
-msgid "true if the window is fullscreen"
-msgstr "若窗口已全屏则为 true"
-
 #. puzzle name
-#: ../src/gnome-klotski.vala:63
+#: ../src/gnome-klotski.vala:65
 msgid "Only 18 Steps"
 msgstr "十八步"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:76
+#: ../src/gnome-klotski.vala:78
 msgid "Daisy"
 msgstr "雏菊"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:89
+#: ../src/gnome-klotski.vala:91
 msgid "Violet"
 msgstr "紫罗兰"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:102
+#: ../src/gnome-klotski.vala:104
 msgid "Poppy"
 msgstr "罂粟"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:115
+#: ../src/gnome-klotski.vala:117
 msgid "Pansy"
 msgstr "三色堇"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:128
+#: ../src/gnome-klotski.vala:130
 msgid "Snowdrop"
 msgstr "雪花莲"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:141
+#: ../src/gnome-klotski.vala:143
 msgid "Red Donkey"
 msgstr "横刀立马"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:154
+#: ../src/gnome-klotski.vala:156
 msgid "Trail"
 msgstr "小径"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:167
+#: ../src/gnome-klotski.vala:169
 msgid "Ambush"
 msgstr "埋伏"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:180
+#: ../src/gnome-klotski.vala:182
 msgid "Agatka"
 msgstr "龙舌兰"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:191
+#: ../src/gnome-klotski.vala:193
 msgid "Success"
 msgstr "成功"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:201
+#: ../src/gnome-klotski.vala:203
 msgid "Bone"
 msgstr "骨头"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:214
+#: ../src/gnome-klotski.vala:216
 msgid "Fortune"
 msgstr "财宝"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:228
+#: ../src/gnome-klotski.vala:230
 msgid "Fool"
 msgstr "傻瓜"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:238
+#: ../src/gnome-klotski.vala:240
 msgid "Solomon"
 msgstr "所罗门"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:251
+#: ../src/gnome-klotski.vala:253
 msgid "Cleopatra"
 msgstr "美人"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:263
+#: ../src/gnome-klotski.vala:265
 msgid "Shark"
 msgstr "鲨鱼"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:275
+#: ../src/gnome-klotski.vala:277
 msgid "Rome"
 msgstr "罗马"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:287
+#: ../src/gnome-klotski.vala:289
 msgid "Pennant Puzzle"
 msgstr "信号旗"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:300
+#: ../src/gnome-klotski.vala:302
 msgid "Ithaca"
 msgstr "伊萨卡"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:323
+#: ../src/gnome-klotski.vala:325
 msgid "Pelopones"
 msgstr "伯罗奔尼"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:335
+#: ../src/gnome-klotski.vala:337
 msgid "Transeuropa"
 msgstr "跨越欧罗巴"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:347
+#: ../src/gnome-klotski.vala:349
 msgid "Lodzianka"
 msgstr "洛德兹卡"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:358
+#: ../src/gnome-klotski.vala:360
 msgid "Polonaise"
 msgstr "波洛涅兹"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:369
+#: ../src/gnome-klotski.vala:371
 msgid "Baltic Sea"
 msgstr "波罗的海"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:381
+#: ../src/gnome-klotski.vala:383
 msgid "American Pie"
 msgstr "美国派"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:397
+#: ../src/gnome-klotski.vala:399
 msgid "Traffic Jam"
 msgstr "交通堵塞"
 
 #. puzzle name
-#: ../src/gnome-klotski.vala:408
+#: ../src/gnome-klotski.vala:410
 msgid "Sunshine"
 msgstr "阳光"
 
-#: ../src/gnome-klotski.vala:565
-msgid "_New"
-msgstr "新建(_N)"
+#: ../src/gnome-klotski.vala:438
+msgid "Print release version and exit"
+msgstr "打印发布版本并退出"
 
-#: ../src/gnome-klotski.vala:575
-msgid "_Puzzles"
-msgstr "谜题(_P)"
+#: ../src/gnome-klotski.vala:667
+msgid "Sliding block puzzles"
+msgstr "滑块迷宫"
 
-#: ../src/gnome-klotski.vala:581 ../src/gnome-klotski.vala:732
-msgid "_Fullscreen"
-msgstr "全屏(_F)"
-
-#: ../src/gnome-klotski.vala:664
-msgid "Previous Puzzle"
-msgstr "上一布局"
-
-#: ../src/gnome-klotski.vala:670
-msgid "Next Puzzle"
-msgstr "下一布局"
-
-#: ../src/gnome-klotski.vala:727
-msgid "_Leave Fullscreen"
-msgstr "离开全屏(_L)"
-
-#: ../src/gnome-klotski.vala:860
-msgid "Puzzle: "
-msgstr "谜："
-
-#: ../src/gnome-klotski.vala:874
-#, c-format
-msgid "Moves: %d"
-msgstr "步数：%d"
-
-#: ../src/gnome-klotski.vala:877
-msgid "Level completed."
-msgstr "本级完成。"
-
-#: ../src/gnome-klotski.vala:971
-msgid ""
-"Sliding block puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"滑块类益智游戏\n"
-"\n"
-"华容道是 GNOME 游戏的一部分。"
-
-#: ../src/gnome-klotski.vala:977
+#: ../src/gnome-klotski.vala:675
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
 "Ping Z <zpsigma@gmail.com>, 2007\n"
-"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
+"Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
+"Tong Hui <tonghuix@gmail.com>, 2014, 2016\n"
+"Zixing Liu <liushuyu@aosc.xyz>, 2015\n"
+"Jeff Bai <jeffbai@aosc.xyz>, 2016\n"
+"Mandy Wang <wangmychn@gmail.com>, 2016."
 
-#: ../src/score-dialog.vala:28
-msgid "_Close"
-msgstr "关闭(_C)"
+#: ../src/gnome-klotski.vala:834
+#, c-format
+msgid "Moves: %d"
+msgstr "步数：%d"
 
-#: ../src/score-dialog.vala:29
-msgid "New Game"
-msgstr "新游戏"
+#: ../src/gnome-klotski.vala:837
+msgid "Level completed."
+msgstr "本级完成。"
 
-#: ../src/score-dialog.vala:32
+#: ../src/score-dialog.vala:33
 msgid "_OK"
 msgstr "确认(_O)"
 
-#: ../src/score-dialog.vala:44
-msgid "Puzzle:"
-msgstr "布局："
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME 项目"
 
-#: ../src/score-dialog.vala:69
-msgid "Date"
-msgstr "日期"
+#~ msgid "Puzzle"
+#~ msgstr "迷局"
 
-#: ../src/score-dialog.vala:72
-msgid "Moves"
-msgstr "移动"
+#~ msgid "Next Puzzle"
+#~ msgstr "下一布局"
+
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "滑块类益智游戏\n"
+#~ "\n"
+#~ "华容道是 GNOME 游戏的一部分。"
+
+#~ msgid "_Close"
+#~ msgstr "关闭(_C)"
+
+#~ msgid "New Game"
+#~ msgstr "新游戏"
+
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "若窗口已全屏则为 true"
+
+#~ msgid "_New"
+#~ msgstr "新建(_N)"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "全屏(_F)"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "离开全屏(_L)"
 
 #~ msgid "_Game"
 #~ msgstr "游戏(_G)"
-
-#~ msgid "HuaRong Trail"
-#~ msgstr "华容道"
-
-#~ msgid "Challenge Pack"
-#~ msgstr "挑战包"
-
-#~ msgid "Skill Pack"
-#~ msgstr "技巧包"
 
 #~ msgid "_Restart Puzzle"
 #~ msgstr "重新开始(_R)"
@@ -328,9 +383,6 @@ msgstr "移动"
 
 #~ msgid "_Settings"
 #~ msgstr "设置(_S)"
-
-#~ msgid "_Help"
-#~ msgstr "帮助(_H)"
 
 #~ msgid "_Contents"
 #~ msgstr "目录(_C)"
@@ -891,9 +943,6 @@ msgstr "移动"
 #~ msgid "Failed to open game: %s"
 #~ msgstr "无法打开游戏：%s"
 
-#~ msgid "Show release version"
-#~ msgstr "显示发行版本"
-
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[文件] - 玩国际象棋"
 
@@ -939,9 +988,6 @@ msgstr "移动"
 
 #~ msgid "Five or more"
 #~ msgstr "五或更多"
-
-#~ msgid "Next:"
-#~ msgstr "下个球："
 
 #~ msgid "0"
 #~ msgstr "0"
@@ -1143,9 +1189,6 @@ msgstr "移动"
 
 #~ msgid "Me:"
 #~ msgstr "我："
-
-#~ msgid "Scores"
-#~ msgstr "得分"
 
 #~ msgid "Drawn:"
 #~ msgstr "平局："
@@ -2144,17 +2187,8 @@ msgstr "移动"
 #~ msgid "_Pause"
 #~ msgstr "暂停(_P)"
 
-#~ msgid "_Scores"
-#~ msgstr "得分(_S)"
-
 #~ msgid "_Preferences"
 #~ msgstr "首选项(_P)"
-
-#~ msgid "_About"
-#~ msgstr "关于(_A)"
-
-#~ msgid "_Quit"
-#~ msgstr "退出(_Q)"
 
 #~ msgid "Use the unknown flag"
 #~ msgstr "使用未知旗标"
@@ -2614,9 +2648,6 @@ msgstr "移动"
 #~ msgid "5 of a Kind [50 + total]"
 #~ msgstr "5个相同 [合计 + 50]"
 
-#~ msgid "Choose a score slot."
-#~ msgstr "选择一个分数槽。"
-
 #~ msgid "5 of a Kind [total]"
 #~ msgstr "5个相同 [合计]"
 
@@ -2941,9 +2972,6 @@ msgstr "移动"
 
 #~ msgid "Mahjongg - %s"
 #~ msgstr "对对碰 - %s"
-
-#~ msgid "Restart the current game"
-#~ msgstr "重新开始当前游戏"
 
 #~ msgid "Redo the last move"
 #~ msgstr "重做最后一着"
@@ -5257,9 +5285,6 @@ msgstr "移动"
 
 #~ msgid "_Game name:"
 #~ msgstr "游戏名称(_G)："
-
-#~ msgid "_Start"
-#~ msgstr "开始(_S)"
 
 #~ msgid "_White:"
 #~ msgstr "白方(_W)："
@@ -7750,9 +7775,6 @@ msgstr "移动"
 #~ msgid ""
 #~ "The width of the playing window in pixels. At minimum it should be 320."
 #~ msgstr "游戏窗口的以像素为单位的宽度值。最小应为320。"
-
-#~ msgid "Sliding Block Puzzles"
-#~ msgstr "滑块迷宫"
 
 #~ msgid ""
 #~ "The requested height of the main window in pixels. If this isn't big "
