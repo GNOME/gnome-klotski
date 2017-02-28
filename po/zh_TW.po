@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-07-21 19:16+0000\n"
-"PO-Revision-Date: 2015-02-21 15:56+0800\n"
+"POT-Creation-Date: 2016-08-14 13:20+0000\n"
+"PO-Revision-Date: 2017-02-28 13:50+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
@@ -50,8 +50,12 @@ msgstr ""
 "GNOME 華容道內含近三十種不同難度的謎題配置。其中部分配置是類似的，差別只有一"
 "或多個方塊不同。其他配置會有更多的變化。"
 
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME 計畫"
+
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:665
+#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "華容道"
 
@@ -111,22 +115,6 @@ msgstr "關於(_A)"
 msgid "_Quit"
 msgstr "結束(_Q)"
 
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "分數"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "題目:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "日期"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "移動"
-
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "正在玩的版圖"
@@ -147,156 +135,15 @@ msgstr "視窗的高度 (像素)"
 msgid "true if the window is maximized"
 msgstr "如果視窗為最大化則設定為‘TRUE’"
 
-# (Abel) 中國沒有將華容道發揚光大，所以找這些 game board 的譯名機會很渺茫
-#. puzzle name
-#: ../src/gnome-klotski.vala:65
-msgid "Only 18 Steps"
-msgstr "18 步"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:78
-msgid "Daisy"
-msgstr "Daisy"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:91
-msgid "Violet"
-msgstr "Violet"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:104
-msgid "Poppy"
-msgstr "Poppy"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:117
-msgid "Pansy"
-msgstr "Pansy"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:130
-msgid "Snowdrop"
-msgstr "Snowdrop"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:143
-msgid "Red Donkey"
-msgstr "橫刀立馬式"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:156
-msgid "Trail"
-msgstr "層層設防之一"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:169
-msgid "Ambush"
-msgstr "層層設防之二"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:182
-msgid "Agatka"
-msgstr "Agatka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:193
-msgid "Success"
-msgstr "Success"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:203
-msgid "Bone"
-msgstr "Bone"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:216
-msgid "Fortune"
-msgstr "Fortune"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:230
-msgid "Fool"
-msgstr "Fool"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:240
-msgid "Solomon"
-msgstr "Solomon"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:253
-msgid "Cleopatra"
-msgstr "Cleopatra"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:265
-msgid "Shark"
-msgstr "Shark"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:277
-msgid "Rome"
-msgstr "Rome"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:289
-msgid "Pennant Puzzle"
-msgstr "Pennant Puzzle"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:302
-msgid "Ithaca"
-msgstr "Ithaca"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:325
-msgid "Pelopones"
-msgstr "Pelopones"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:337
-msgid "Transeuropa"
-msgstr "Transeuropa"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:349
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:360
-msgid "Polonaise"
-msgstr "Polonaise"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:371
-msgid "Baltic Sea"
-msgstr "Baltic Sea"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
-msgid "American Pie"
-msgstr "American Pie"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:399
-msgid "Traffic Jam"
-msgstr "Traffic Jam"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:410
-msgid "Sunshine"
-msgstr "Sunshine"
-
-#: ../src/gnome-klotski.vala:438
+#: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "顯示釋出版本並離開"
 
-#: ../src/gnome-klotski.vala:667
+#: ../src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
 msgstr "移動方塊解謎"
 
-#: ../src/gnome-klotski.vala:675
+#: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -306,18 +153,172 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/gnome-klotski.vala:834
+# (Abel) 中國沒有將華容道發揚光大，所以找這些 game board 的譯名機會很渺茫
+#. puzzle name
+#: ../src/klotski-window.vala:74
+msgid "Only 18 Steps"
+msgstr "18 步"
+
+#. puzzle name
+#: ../src/klotski-window.vala:87
+msgid "Daisy"
+msgstr "Daisy"
+
+#. puzzle name
+#: ../src/klotski-window.vala:100
+msgid "Violet"
+msgstr "Violet"
+
+#. puzzle name
+#: ../src/klotski-window.vala:113
+msgid "Poppy"
+msgstr "Poppy"
+
+#. puzzle name
+#: ../src/klotski-window.vala:126
+msgid "Pansy"
+msgstr "Pansy"
+
+#. puzzle name
+#: ../src/klotski-window.vala:139
+msgid "Snowdrop"
+msgstr "Snowdrop"
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: ../src/klotski-window.vala:152
+msgid "Red Donkey"
+msgstr "橫刀立馬式"
+
+#. puzzle name
+#: ../src/klotski-window.vala:165
+msgid "Trail"
+msgstr "層層設防之一"
+
+#. puzzle name
+#: ../src/klotski-window.vala:178
+msgid "Ambush"
+msgstr "層層設防之二"
+
+#. puzzle name
+#: ../src/klotski-window.vala:191
+msgid "Agatka"
+msgstr "Agatka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:202
+msgid "Success"
+msgstr "Success"
+
+#. puzzle name
+#: ../src/klotski-window.vala:212
+msgid "Bone"
+msgstr "Bone"
+
+#. puzzle name
+#: ../src/klotski-window.vala:225
+msgid "Fortune"
+msgstr "Fortune"
+
+#. puzzle name
+#: ../src/klotski-window.vala:239
+msgid "Fool"
+msgstr "Fool"
+
+#. puzzle name
+#: ../src/klotski-window.vala:249
+msgid "Solomon"
+msgstr "Solomon"
+
+#. puzzle name
+#: ../src/klotski-window.vala:262
+msgid "Cleopatra"
+msgstr "Cleopatra"
+
+#. puzzle name
+#: ../src/klotski-window.vala:274
+msgid "Shark"
+msgstr "Shark"
+
+#. puzzle name
+#: ../src/klotski-window.vala:286
+msgid "Rome"
+msgstr "Rome"
+
+#. puzzle name
+#: ../src/klotski-window.vala:298
+msgid "Pennant Puzzle"
+msgstr "Pennant Puzzle"
+
+#. puzzle name
+#: ../src/klotski-window.vala:311
+msgid "Ithaca"
+msgstr "Ithaca"
+
+#. puzzle name
+#: ../src/klotski-window.vala:334
+msgid "Pelopones"
+msgstr "Pelopones"
+
+#. puzzle name
+#: ../src/klotski-window.vala:346
+msgid "Transeuropa"
+msgstr "Transeuropa"
+
+#. puzzle name
+#: ../src/klotski-window.vala:358
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. puzzle name
+#: ../src/klotski-window.vala:369
+msgid "Polonaise"
+msgstr "Polonaise"
+
+#. puzzle name
+#: ../src/klotski-window.vala:380
+msgid "Baltic Sea"
+msgstr "Baltic Sea"
+
+#. puzzle name
+#: ../src/klotski-window.vala:392
+msgid "American Pie"
+msgstr "American Pie"
+
+#. puzzle name
+#: ../src/klotski-window.vala:408
+msgid "Traffic Jam"
+msgstr "Traffic Jam"
+
+#. puzzle name
+#: ../src/klotski-window.vala:419
+msgid "Sunshine"
+msgstr "Sunshine"
+
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "題目"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "步數：%d"
 
-#: ../src/gnome-klotski.vala:837
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "順利過關。"
 
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "確定(_O)"
+#~ msgid "Scores"
+#~ msgstr "分數"
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Moves"
+#~ msgstr "移動"
+
+#~ msgid "_OK"
+#~ msgstr "確定(_O)"
 
 #~ msgid "Next Puzzle"
 #~ msgstr "下個版圖"
