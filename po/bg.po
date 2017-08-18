@@ -1,10 +1,10 @@
 # Bulgarian translation of gnome-klotski po-file.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
-# Copyright (C) 2009, 2010, 2012, 2013, 2016 Free Software Foundation, Inc.
+# Copyright (C) 2009, 2010, 2012, 2013, 2016, 2017 Free Software Foundation, Inc.
 # Copyright (C) 2010, 2012 Krasimir Chonov <mk2616@abv.bg>.
 # Evgeni Boevski <linkej@yahoo.com>, 2002, 2003.
 # Rostislav "zbrox" Raykov <zbrox@i-space.org>, 2004, 2005, 2006.
-# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2013, 2016.
+# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2010, 2012, 2013, 2016, 2017.
 # Yavor Doganov <yavor@gnu.org>, 2008.
 # Krasimir Chonov <mk2616@abv.bg>, 2010, 2012.
 #
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-14 20:09+0200\n"
-"PO-Revision-Date: 2016-01-14 10:20+0200\n"
+"POT-Creation-Date: 2017-09-02 08:58+0300\n"
+"PO-Revision-Date: 2017-08-18 10:10+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -52,6 +52,10 @@ msgstr ""
 "В „Клоцки“ има тридесетина различни главоблъсканици с различна трудност. "
 "Някои от вариантите си приличат — разликата може да е само размерът на някое "
 "от блокчетата. Други от вариантите са по-различни."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Проектът GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -114,22 +118,6 @@ msgstr "_Относно"
 msgid "_Quit"
 msgstr "_Спиране на програмата"
 
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Резултати"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Главоблъсканица:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Дата"
-
-#: ../data/klotski-scores.ui.h:4
-msgid "Moves"
-msgstr "Ходове"
-
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
 msgstr "Текущата главоблъсканица"
@@ -173,154 +161,155 @@ msgstr ""
 "cult.bg/bugs</a>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:69
+#: ../src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Само 18 стъпки"
 
 #. puzzle name
-#: ../src/klotski-window.vala:82
+#: ../src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Маргаритка"
 
 #. puzzle name
-#: ../src/klotski-window.vala:95
+#: ../src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Виолетка"
 
 #. puzzle name
-#: ../src/klotski-window.vala:108
+#: ../src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Мак"
 
 #. puzzle name
-#: ../src/klotski-window.vala:121
+#: ../src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Теменуга"
 
 #. puzzle name
-#: ../src/klotski-window.vala:134
+#: ../src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Снежинка"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:147
+#: ../src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Червено магаре"
 
 #. puzzle name
-#: ../src/klotski-window.vala:160
+#: ../src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Път"
 
 #. puzzle name
-#: ../src/klotski-window.vala:173
+#: ../src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Засада"
 
 #. puzzle name
-#: ../src/klotski-window.vala:186
+#: ../src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Агатка"
 
 #. puzzle name
-#: ../src/klotski-window.vala:197
+#: ../src/klotski-window.vala:202
 msgid "Success"
 msgstr "Успех"
 
 #. puzzle name
-#: ../src/klotski-window.vala:207
+#: ../src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Кокал"
 
 #. puzzle name
-#: ../src/klotski-window.vala:220
+#: ../src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Фортуна"
 
 #. puzzle name
-#: ../src/klotski-window.vala:234
+#: ../src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Шут"
 
 #. puzzle name
-#: ../src/klotski-window.vala:244
+#: ../src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Соломон"
 
 #. puzzle name
-#: ../src/klotski-window.vala:257
+#: ../src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Клеопатра"
 
 #. puzzle name
-#: ../src/klotski-window.vala:269
+#: ../src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Акула"
 
 #. puzzle name
-#: ../src/klotski-window.vala:281
+#: ../src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Рим"
 
 #. puzzle name
-#: ../src/klotski-window.vala:293
+#: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "Вимпел"
 
 #. puzzle name
-#: ../src/klotski-window.vala:306
+#: ../src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "Итака"
 
 #. puzzle name
-#: ../src/klotski-window.vala:329
+#: ../src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Пелопонес"
 
 #. puzzle name
-#: ../src/klotski-window.vala:341
+#: ../src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Трансевропа"
 
 #. puzzle name
-#: ../src/klotski-window.vala:353
+#: ../src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Лодзианка"
 
 #. puzzle name
-#: ../src/klotski-window.vala:364
+#: ../src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Полонеза"
 
 #. puzzle name
-#: ../src/klotski-window.vala:375
+#: ../src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Балтийско море"
 
 #. puzzle name
-#: ../src/klotski-window.vala:387
+#: ../src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "Американски пай"
 
 #. puzzle name
-#: ../src/klotski-window.vala:403
+#: ../src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Задръстване"
 
 #. puzzle name
-#: ../src/klotski-window.vala:414
+#: ../src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Слънце"
 
-#: ../src/klotski-window.vala:721
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "Главоблъсканица"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Ходове: %d"
 
-#: ../src/klotski-window.vala:724
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Нивото е решено."
-
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "_Добре"
