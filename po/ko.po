@@ -1,5 +1,3 @@
-# -*- compile-command: "ko-po-check ko.po" -*-
-#
 # gnome-klotski Korean translation
 # This file is distributed under the same license as the gnome-klotski package.
 #
@@ -10,7 +8,8 @@
 #
 # Updated for gnome-klotski:
 #
-# Changwoo Ryu <cwryu@debian.org>, 2013-2016.
+# ChiHyeon Kim <pipi910327@gmail.com>, 2017.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2017.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -21,10 +20,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-16 09:20+0000\n"
-"PO-Revision-Date: 2016-03-17 05:19+0900\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-03-20 12:24+0000\n"
+"PO-Revision-Date: 2017-09-01 19:15+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -32,6 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
@@ -63,6 +62,10 @@ msgstr ""
 "그놈 클로츠키에는 여러가지 난이도의 약 30개의 퍼즐이 들어 있습니다. 비슷한 퍼"
 "즐도 있고 블럭 크기만 조금 다른 것도 있습니다. 완전히 다른 퍼즐도 있습니다."
 
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
+
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
@@ -70,7 +73,7 @@ msgstr "클로츠키"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr "game;게임;strategy;전략;logic;논리;로직;move;움직이기;"
+msgstr "game;게임;strategy;전략;logic;논리;로직;move;움직이기;이동;"
 
 # hwarong 화영, 수호지 캐릭터
 #: ../data/klotski.ui.h:1
@@ -135,11 +138,11 @@ msgstr "플레이하는 퍼즐의 크기."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
 msgid "Width of the window in pixels"
-msgstr "창의 너비, 픽셀 단위."
+msgstr "창의 너비, 픽셀 단위"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:4
 msgid "Height of the window in pixels"
-msgstr "창의 높이, 픽셀 단위."
+msgstr "창의 높이, 픽셀 단위"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
