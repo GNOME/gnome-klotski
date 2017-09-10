@@ -11,15 +11,17 @@
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
+# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-12-31 09:21+0000\n"
-"PO-Revision-Date: 2015-12-31 21:31+0200\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2017-09-10 06:46+0000\n"
+"PO-Revision-Date: 2017-09-10 15:35+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +37,7 @@ msgstr "GNOME Klotski"
 #: ../data/gnome-klotski.appdata.xml.in.h:2
 #: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
-msgstr "Bulmacayı çözmek için blokları kaydır"
+msgstr "Yapbozu çözmek için blokları kaydır"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
@@ -44,6 +46,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"GNOME Klotski bir yapboz oyunları takımıdır. Amaç, desenli bloğu yeşil "
+"işaretlerle sınırlandırılan bölgeye taşımaktır. Bunu yapmak için, diğer "
+"blokları aradan çıkarmalısınız. Her yapbozu olabildiğince az hareketle "
+"tamamlayın!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
@@ -51,6 +57,13 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"GNOME Klotski, neredeyse otuz farklı yapboz düzeninde değişik zorluklarla "
+"birlikte gelir. Düzenlerden bazıları benzerdir ve yalnızca bir veya daha çok "
+"bloğun boyutu farklıdır. Diğer düzenlerin çeşitliliği daha çoktur."
+
+#: ../data/gnome-klotski.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME Projesi"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -62,10 +75,8 @@ msgid "game;strategy;logic;move;"
 msgstr "oyun;strateji;mantık;hamle;"
 
 #: ../data/klotski.ui.h:1
-#, fuzzy
-#| msgid "HuaRong Trail"
 msgid "Huarong Trail"
-msgstr "HuaRong Vadisi"
+msgstr "Huarong Trail"
 
 #: ../data/klotski.ui.h:2
 msgid "Challenge Pack"
@@ -76,37 +87,28 @@ msgid "Skill Pack"
 msgstr "Yetenek Paketi"
 
 #: ../data/klotski.ui.h:4
-#| msgid "Previous Puzzle"
 msgid "Previous"
 msgstr "Önceki"
 
 #: ../data/klotski.ui.h:5
-#| msgid "Next:"
 msgid "Next"
 msgstr "Sonraki"
 
 #: ../data/klotski.ui.h:7
-#| msgid "_Start"
 msgid "_Start Over"
 msgstr "_Baştan Başla"
 
 #: ../data/klotski.ui.h:8
-#, fuzzy
-#| msgid "Restart the current game"
 msgid "Restart the current puzzle"
-msgstr "Oyunu yeniden başlat"
+msgstr "Geçerli yapbozu yeniden başlat"
 
 #: ../data/klotski.ui.h:9
-#, fuzzy
-#| msgid "Next Puzzle"
 msgid "_Change Puzzle"
-msgstr "Sonraki Bulmaca"
+msgstr "Yapbozu _değiştir"
 
 #: ../data/klotski.ui.h:10
-#, fuzzy
-#| msgid "Choose a score slot."
 msgid "Choose an other puzzle"
-msgstr "Bir puan yuvası seçin."
+msgstr "Başka bir yapboz seç"
 
 #: ../data/klotski-menus.ui.h:1
 msgid "_Scores"
@@ -121,62 +123,36 @@ msgid "_About"
 msgstr "H_akkında"
 
 #: ../data/klotski-menus.ui.h:4
-#, fuzzy
-#| msgid "Quit"
 msgid "_Quit"
-msgstr "Çık"
-
-#: ../data/klotski-scores.ui.h:1
-msgid "Scores"
-msgstr "Puanlar"
-
-#: ../data/klotski-scores.ui.h:2
-msgid "Puzzle:"
-msgstr "Bulmaca:"
-
-#: ../data/klotski-scores.ui.h:3
-msgid "Date"
-msgstr "Tarih"
-
-#: ../data/klotski-scores.ui.h:4
-#, fuzzy
-#| msgid "_Move"
-msgid "Moves"
-msgstr "_Taşı"
+msgstr "_Çık"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "Oynanmakta olan bulmaca"
+msgstr "Oynanmakta olan yapboz"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
-msgstr "Oynanan bulmaca sayısı."
+msgstr "Oynanan yapboz sayısı."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
-#, fuzzy
-#| msgid "The width of the main window in pixels."
 msgid "Width of the window in pixels"
-msgstr "Benek olarak ana pencerenin genişliği."
+msgstr "Piksel olarak pencerenin genişliği."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:4
-#, fuzzy
-#| msgid "The height of the main window in pixels."
 msgid "Height of the window in pixels"
-msgstr "Ana pencerenin benek olarak yüksekliği."
+msgstr "Ana pencerenin piksel olarak yüksekliği."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "eğer pencere en büyük boyuta getirilmişse işaretle"
 
 #: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Yayım sürümünü yazdır ve çık"
 
 #: ../src/gnome-klotski.vala:114
-#, fuzzy
-#| msgid "Slide blocks to solve the puzzle"
 msgid "Sliding block puzzles"
-msgstr "Bulmacayı çözmek için blokları kaydır"
+msgstr "Kayan blok yapbozları"
 
 #: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
@@ -185,157 +161,172 @@ msgstr ""
 "Muhammet Kara <muhammetk@gmail.com>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:69
+#: ../src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Sadece 18 adım"
 
 #. puzzle name
-#: ../src/klotski-window.vala:82
+#: ../src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Papatya"
 
 #. puzzle name
-#: ../src/klotski-window.vala:95
+#: ../src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Keman"
 
 #. puzzle name
-#: ../src/klotski-window.vala:108
+#: ../src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Gelincik"
 
 #. puzzle name
-#: ../src/klotski-window.vala:121
+#: ../src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Menekşe"
 
 #. puzzle name
-#: ../src/klotski-window.vala:134
+#: ../src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Kardelen"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:147
+#: ../src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Kırmızı Eşek"
 
 #. puzzle name
-#: ../src/klotski-window.vala:160
+#: ../src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Vadi"
 
 #. puzzle name
-#: ../src/klotski-window.vala:173
+#: ../src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Pusu"
 
 #. puzzle name
-#: ../src/klotski-window.vala:186
+#: ../src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:197
+#: ../src/klotski-window.vala:202
 msgid "Success"
 msgstr "Başarı"
 
 #. puzzle name
-#: ../src/klotski-window.vala:207
+#: ../src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Kemik"
 
 #. puzzle name
-#: ../src/klotski-window.vala:220
+#: ../src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Hazine"
 
 #. puzzle name
-#: ../src/klotski-window.vala:234
+#: ../src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Aptal"
 
 #. puzzle name
-#: ../src/klotski-window.vala:244
+#: ../src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Solomon"
 
 #. puzzle name
-#: ../src/klotski-window.vala:257
+#: ../src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:269
+#: ../src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Köpek Balığı"
 
 #. puzzle name
-#: ../src/klotski-window.vala:281
+#: ../src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Roma"
 
 #. puzzle name
-#: ../src/klotski-window.vala:293
+#: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
-msgstr "Flama Bulmacası"
+msgstr "Flama Yapbozu"
 
 #. puzzle name
-#: ../src/klotski-window.vala:306
+#: ../src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "Ithaka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:329
+#: ../src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/klotski-window.vala:341
+#: ../src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:353
+#: ../src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:364
+#: ../src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Polonez"
 
 #. puzzle name
-#: ../src/klotski-window.vala:375
+#: ../src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Baltık Denizi"
 
 #. puzzle name
-#: ../src/klotski-window.vala:387
+#: ../src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: ../src/klotski-window.vala:403
+#: ../src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Trafik Karmaşası"
 
 #. puzzle name
-#: ../src/klotski-window.vala:414
+#: ../src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Gün Işığı"
 
-#: ../src/klotski-window.vala:721
+#. Label on the scores dialog, next to dropdown */
+#: ../src/klotski-window.vala:527
+msgid "Puzzle"
+msgstr "Yapboz"
+
+#: ../src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Hareketler: %d"
 
-#: ../src/klotski-window.vala:724
+#: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Seviye tamamlandı."
 
-#: ../src/score-dialog.vala:33
-msgid "_OK"
-msgstr "_Tamam"
+#~ msgid "Scores"
+#~ msgstr "Puanlar"
+
+#~ msgid "Date"
+#~ msgstr "Tarih"
+
+#, fuzzy
+#~| msgid "_Move"
+#~ msgid "Moves"
+#~ msgstr "_Taşı"
+
+#~ msgid "_OK"
+#~ msgstr "_Tamam"
 
 #~ msgid "Next Puzzle"
 #~ msgstr "Sonraki Bulmaca"
