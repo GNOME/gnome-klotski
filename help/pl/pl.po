@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski-help\n"
-"POT-Creation-Date: 2017-08-26 17:11+0000\n"
-"PO-Revision-Date: 2017-09-02 02:42+0200\n"
+"POT-Creation-Date: 2017-09-02 00:44+0000\n"
+"PO-Revision-Date: 2017-09-15 00:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -348,7 +348,7 @@ msgstr "Gra w <application>Klocki</application>"
 #. (itstool) path: sect2/title
 #: C/index.docbook:242
 msgid "To Start <application>Klotski</application>"
-msgstr "Aby uruchomić <application>Klocki</application>"
+msgstr "Uruchamianie gry <application>Klocki</application>"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:243
