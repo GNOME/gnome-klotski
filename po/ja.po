@@ -13,7 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-08-17 17:13+0000\n"
 "PO-Revision-Date: 2013-09-16 10:12+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
@@ -35,7 +36,9 @@ msgstr "ブロックをずらしながらパズルを解いてください"
 
 #: ../data/gnotski.desktop.in.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr "game;strategy;logic;move;ゲーム;ストラテジー;ロジック;論理;思考;puzzle;パズル;"
+msgstr ""
+"game;strategy;logic;move;ゲーム;ストラテジー;ロジック;論理;思考;puzzle;パズ"
+"ル;"
 
 #: ../data/org.gnome.klotski.gschema.xml.in.h:1
 msgid "The puzzle in play"

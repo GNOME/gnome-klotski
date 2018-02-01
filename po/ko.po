@@ -20,7 +20,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2017-03-20 12:24+0000\n"
 "PO-Revision-Date: 2017-09-01 19:15+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
@@ -313,15 +314,3 @@ msgstr "이동: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "단계 마침."
-
-#~ msgid "Scores"
-#~ msgstr "점수"
-
-#~ msgid "Date"
-#~ msgstr "시각"
-
-#~ msgid "Moves"
-#~ msgstr "움직임"
-
-#~ msgid "_OK"
-#~ msgstr "닫기(_O)"

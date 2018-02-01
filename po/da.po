@@ -14,8 +14,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: "
-"https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski&keywords=I18N+L10N&component=general\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2017-02-28 06:57+0000\n"
 "PO-Revision-Date: 2016-03-20 03:30+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
@@ -320,35 +320,3 @@ msgstr "Træk: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Bane fuldført."
-
-#~ msgid "Scores"
-#~ msgstr "Resultater"
-
-#~ msgid "Date"
-#~ msgstr "Dato"
-
-#~ msgid "Moves"
-#~ msgstr "Træk"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Næste opgave"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "“Klodsede” opgaver\n"
-#~ "\n"
-#~ "Klotski er en del af GNOME Games."
-
-#~ msgid "_Close"
-#~ msgstr "_Luk"
-
-#~ msgid "New Game"
-#~ msgstr "Nyt spil"
-
-

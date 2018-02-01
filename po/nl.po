@@ -371,15 +371,3 @@ msgstr "Zetten: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Niveau voltooid."
-
-#~ msgid "Scores"
-#~ msgstr "Scores"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Moves"
-#~ msgstr "Zetten"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"

@@ -314,31 +314,3 @@ msgstr "Moviments: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "S'ha completat el nivell."
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Trencaclosques següent"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "Trencaclosques de moure blocs\n"
-#~ "\n"
-#~ "El Klotski forma part dels jocs del GNOME."
-
-#~ msgid "_Close"
-#~ msgstr "_Tanca"
-
-#~ msgid "New Game"
-#~ msgstr "Partida nova"
-
-#~ msgid "_OK"
-#~ msgstr "_D'acord"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#
-#~ msgid "Moves"
-#~ msgstr "Moviments"

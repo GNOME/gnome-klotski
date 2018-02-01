@@ -316,33 +316,3 @@ msgstr "Ėjimai: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Lygis užbaigtas."
-
-#~ msgid "Scores"
-#~ msgstr "Rezultatai"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Moves"
-#~ msgstr "Ėjimai"
-
-#~ msgid "_OK"
-#~ msgstr "_Gerai"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Kitas galvosūkis"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "Stumdomų blokų dėlionė\n"
-#~ "\n"
-#~ "Klotski yra GNOME žaidimų dalis."
-
-#~ msgid "_Close"
-#~ msgstr "_Užverti"
-
-#~ msgid "New Game"
-#~ msgstr "Naujas žaidimas"

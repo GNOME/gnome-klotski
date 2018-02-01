@@ -359,24 +359,3 @@ msgstr "Drag: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Nivån färdig."
-
-#~ msgid "Scores"
-#~ msgstr "Poäng"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Moves"
-#~ msgstr "Drag"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Nästa pussel"
-
-#~ msgid "_Close"
-#~ msgstr "_Stäng"
-
-#~ msgid "New Game"
-#~ msgstr "Nytt spel"

@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
@@ -313,55 +313,3 @@ msgstr "Potezi: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Nivo je završen."
-
-#~ msgid "Scores"
-#~ msgstr "Rezultati"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Moves"
-#~ msgstr "Potezi"
-
-#~ msgid "_OK"
-#~ msgstr "U _redu"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Sledeća slagalica"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "Slagalica klizajućih blokova\n"
-#~ "\n"
-#~ "Klotski je deo Gnomovih igara."
-
-#~ msgid "_Close"
-#~ msgstr "_Zatvori"
-
-#~ msgid "New Game"
-#~ msgstr "Nova igra"
-
-#~| msgid "true if the window is fullscren"
-#~ msgid "true if the window is fullscreen"
-#~ msgstr "izabrano ako je prozor preko celog ekrana"
-
-#~ msgid "_New"
-#~ msgstr "_Nova"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Preko celog ekrana"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Napusti ceo ekran"
-
-#~ msgid "Puzzle: "
-#~ msgstr "Slagalica: "
-
-#~ msgid "_Game"
-#~ msgstr "_Igra"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Veb sajt Gnomovih igara"

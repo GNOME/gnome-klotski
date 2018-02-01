@@ -308,33 +308,3 @@ msgstr "Jogadas: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Nível terminado."
-
-#~ msgid "Scores"
-#~ msgstr "Pontuações"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Moves"
-#~ msgstr "Jogadas"
-
-#~ msgid "_OK"
-#~ msgstr "_Aceitar"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Puzzle seguinte"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "Jogo de deslizar blocos\n"
-#~ "\n"
-#~ "GNOME Klotski faz parte dos Jogos GNOME."
-
-#~ msgid "_Close"
-#~ msgstr "_Fechar"
-
-#~ msgid "New Game"
-#~ msgstr "Novo jogo"

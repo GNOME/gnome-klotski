@@ -310,33 +310,3 @@ msgstr "Langkah: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Tingkat diselesaikan."
-
-#~ msgid "Scores"
-#~ msgstr "Skor"
-
-#~ msgid "Date"
-#~ msgstr "Tanggal"
-
-#~ msgid "Moves"
-#~ msgstr "Langkah"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Next Puzzle"
-#~ msgstr "Teka-teki Berikutnya"
-
-#~ msgid ""
-#~ "Sliding block puzzles\n"
-#~ "\n"
-#~ "Klotski is a part of GNOME Games."
-#~ msgstr ""
-#~ "Teka-teki menggeser balok\n"
-#~ "\n"
-#~ "Klotski merupakan bagian dari GNOME Permainan."
-
-#~ msgid "_Close"
-#~ msgstr "_Tutup"
-
-#~ msgid "New Game"
-#~ msgstr "Permainan Baru"

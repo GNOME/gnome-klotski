@@ -299,15 +299,3 @@ msgstr "Mossis: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Nivel completât."
-
-#~ msgid "Scores"
-#~ msgstr "Risultâts"
-
-#~ msgid "Date"
-#~ msgstr "Date"
-
-#~ msgid "Moves"
-#~ msgstr "Mossis"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"

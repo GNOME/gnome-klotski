@@ -55,7 +55,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
-"Klotski de GNOME est un ensemble de casse-têtes de blocs coulissants. Le but est de déplacer le carré à motifs sur l’espace entouré de marques vertes. Pour ce faire vous devrez déplacer les autres blocs hors du chemin. Finissez chaque casse-tête en aussi peu de coups que possible !"
+"Klotski de GNOME est un ensemble de casse-têtes de blocs coulissants. Le but "
+"est de déplacer le carré à motifs sur l’espace entouré de marques vertes. "
+"Pour ce faire vous devrez déplacer les autres blocs hors du chemin. Finissez "
+"chaque casse-tête en aussi peu de coups que possible !"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
@@ -63,7 +66,9 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"Klotski de GNOME propose une trentaine de dispositions initiales différentes et de difficulté variée. Certaines dispositions sont similaires et seuls un ou deux blocs diffèrent. D’autres sont plus variées."
+"Klotski de GNOME propose une trentaine de dispositions initiales différentes "
+"et de difficulté variée. Certaines dispositions sont similaires et seuls un "
+"ou deux blocs diffèrent. D’autres sont plus variées."
 
 #: ../data/gnome-klotski.appdata.xml.in.h:5
 msgid "The GNOME Project"
@@ -328,9 +333,3 @@ msgstr "Déplacements : %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Niveau terminé."
-
-#~ msgid "Moves"
-#~ msgstr "Déplacements"
-
-#~ msgid "_OK"
-#~ msgstr "_Valider"
