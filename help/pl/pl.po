@@ -1,13 +1,13 @@
 # Polish translation for gnome-klotski help.
 # Copyright © 2017 the gnome-klotski authors.
-# This file is distributed under the same license as the gnome-klotski package.
+# This file is distributed under the same license as the gnome-klotski help.
 # Piotr Drąg <piotrdrag@gmail.com>, 2017.
 # Aviary.pl <community-poland@mozilla.org>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski-help\n"
-"POT-Creation-Date: 2017-09-02 00:44+0000\n"
+"POT-Creation-Date: 2017-09-14 22:08+0000\n"
 "PO-Revision-Date: 2017-09-15 00:05+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
