@@ -4,9 +4,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 23:40+0100\n"
-"PO-Revision-Date: 2008-04-16 07:32+0000\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2018-02-01 23:04+0000\n"
+"PO-Revision-Date: 2018-03-07 16:53+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -17,17 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#, fuzzy
 msgid "GNOME Klotski"
-msgstr "Klotski"
+msgstr "GNOME Klotski"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
 #: ../data/gnome-klotski.desktop.in.h:2
 msgid "Slide blocks to solve the puzzle"
-msgstr ""
+msgstr "Pomaknite blokove kako bi riješili problem"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:3
 msgid ""
@@ -36,6 +36,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"GNOME Klotski je skup slagalica klizećih blokova. Cilj je premjestiti blok s "
+"uzorkom na područje obrubljeno zelenim oznakama. Kako biste to učinili, "
+"morat ćete skloniti druge blokove sa puta. Završite svaku slagalicu u što "
+"manje poteza!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
@@ -43,10 +47,13 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"GNOME Klotski dolazi sa blizu trideset različitih rasporeda puzli raznih "
+"razina teškoće. Neki od rasporeda su slični a razlika je u samo nekoliko "
+"blokova. Ostali rasporedi imaju više razina."
 
 #: ../data/gnome-klotski.appdata.xml.in.h:5
 msgid "The GNOME Project"
-msgstr ""
+msgstr "GNOME projekt"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -55,12 +62,11 @@ msgstr "Klotski"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr ""
+msgstr "igra;strategija;logika;potez;"
 
 #: ../data/klotski.ui.h:1
-#, fuzzy
 msgid "Huarong Trail"
-msgstr "HuaRong put"
+msgstr "Huarong staza"
 
 #: ../data/klotski.ui.h:2
 msgid "Challenge Pack"
@@ -71,34 +77,28 @@ msgid "Skill Pack"
 msgstr "Paket vještina"
 
 #: ../data/klotski.ui.h:4
-#, fuzzy
 msgid "Previous"
-msgstr "Prethodni puzzle"
+msgstr "Prijašnje"
 
 #: ../data/klotski.ui.h:5
-#, fuzzy
 msgid "Next"
-msgstr "Slijedeće:"
+msgstr "Sljedeće"
 
 #: ../data/klotski.ui.h:7
-#, fuzzy
 msgid "_Start Over"
-msgstr "Pokreni ponovo"
+msgstr "Pokreni ispočetka"
 
 #: ../data/klotski.ui.h:8
-#, fuzzy
 msgid "Restart the current puzzle"
-msgstr "Ponovo pokreni igru"
+msgstr "Ponovo pokreni slagalicu"
 
 #: ../data/klotski.ui.h:9
-#, fuzzy
 msgid "_Change Puzzle"
-msgstr "Zagonetka zastavice"
+msgstr "_Promijeni slagalicu"
 
 #: ../data/klotski.ui.h:10
-#, fuzzy
 msgid "Choose an other puzzle"
-msgstr "Odaberite polje za upis."
+msgstr "Odaberi drugu slagalicu"
 
 #: ../data/klotski-menus.ui.h:1
 msgid "_Scores"
@@ -106,45 +106,43 @@ msgstr "_Rezultati"
 
 #: ../data/klotski-menus.ui.h:2
 msgid "_Help"
-msgstr "_Pomoć"
+msgstr "_Priručnik"
 
 #: ../data/klotski-menus.ui.h:3
 msgid "_About"
-msgstr ""
+msgstr "_O programu"
 
 #: ../data/klotski-menus.ui.h:4
 msgid "_Quit"
-msgstr ""
+msgstr "_Zatvori"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "Zagonetka u igri"
+msgstr "Slagalica u igri"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
-msgstr "Broj puzzlea koji se igra."
+msgstr "Broj odigranih slagalica."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
-#, fuzzy
 msgid "Width of the window in pixels"
-msgstr "Širina prozora"
+msgstr "Širina prozora u pikselima"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:4
-#, fuzzy
 msgid "Height of the window in pixels"
-msgstr "Visina prozora"
+msgstr "Visina prozora u pikselima"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "ako je odabrano prozor je uvećan"
 
 #: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
-msgstr ""
+msgstr "Prikaži inačicu izdanja i zatvori"
 
 #: ../src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
-msgstr ""
+msgstr "Slagalice od klizećih blokova"
 
 #: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
@@ -181,9 +179,7 @@ msgstr "Samo 18 koraka"
 #. puzzle name
 #: ../src/klotski-window.vala:87
 msgid "Daisy"
-msgstr ""
-"Tratinčica\n"
-"Tratinčica"
+msgstr "Tratinčica"
 
 #. puzzle name
 #: ../src/klotski-window.vala:100
@@ -193,7 +189,7 @@ msgstr "Ljubičasta"
 #. puzzle name
 #: ../src/klotski-window.vala:113
 msgid "Poppy"
-msgstr "Poppy"
+msgstr "Mak"
 
 #. puzzle name
 #: ../src/klotski-window.vala:126
@@ -203,7 +199,7 @@ msgstr "Pansy"
 #. puzzle name
 #: ../src/klotski-window.vala:139
 msgid "Snowdrop"
-msgstr "Snowdrop"
+msgstr "Visibaba"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
 #: ../src/klotski-window.vala:152
@@ -238,7 +234,7 @@ msgstr "Kost"
 #. puzzle name
 #: ../src/klotski-window.vala:225
 msgid "Fortune"
-msgstr "Sreća"
+msgstr "Bogatstvo"
 
 #. puzzle name
 #: ../src/klotski-window.vala:239
@@ -268,7 +264,7 @@ msgstr "Rim"
 #. puzzle name
 #: ../src/klotski-window.vala:298
 msgid "Pennant Puzzle"
-msgstr "Zagonetka zastavice"
+msgstr "Slagalica zastavica"
 
 #. puzzle name
 #: ../src/klotski-window.vala:311
@@ -317,9 +313,8 @@ msgstr "Sunčeve zrake"
 
 #. Label on the scores dialog, next to dropdown */
 #: ../src/klotski-window.vala:527
-#, fuzzy
 msgid "Puzzle"
-msgstr "Slijedeći puzzle"
+msgstr "Slagalica"
 
 #: ../src/klotski-window.vala:781
 #, c-format
