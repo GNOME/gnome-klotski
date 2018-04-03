@@ -10,10 +10,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 23:41+0100\n"
-"PO-Revision-Date: 2011-03-16 17:36+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"klotski&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2018-02-01 23:04+0000\n"
+"PO-Revision-Date: 2018-04-01 22:30+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -21,13 +22,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
-#, fuzzy
 msgid "GNOME Klotski"
-msgstr "Klotski"
+msgstr "Klotski GNOME"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:2
 #: ../data/gnome-klotski.desktop.in.h:2
@@ -41,6 +41,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"Klotski GNOME este un set de puzzle-uri cu bloc glisant. Obiectivul este să "
+"mutați blocul cu model în zona încadrată de marcaje verzi. Pentru a realiza "
+"acest lucru, va trebui să glisați alte blocuri din cale. Completați fiecare "
+"puzzle în cât mai puține mutări posibile!"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:4
 msgid ""
@@ -48,10 +52,14 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"Klotski GNOME vine cu aproape treizeci de aranjamente de puzzle diferite cu "
+"dificultate variată. Unele dintre aranjamente sunt similare și doar "
+"dimensiunea unuia sau mai multor blocuri diferă. Alte aranjamente au mai "
+"multă varietate."
 
 #: ../data/gnome-klotski.appdata.xml.in.h:5
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Proiectul GNOME"
 
 #: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
@@ -60,12 +68,11 @@ msgstr "Klotski"
 
 #: ../data/gnome-klotski.desktop.in.h:3
 msgid "game;strategy;logic;move;"
-msgstr ""
+msgstr "game;strategy;logic;move;joc;strategie;logică;mutare;"
 
 #: ../data/klotski.ui.h:1
-#, fuzzy
 msgid "Huarong Trail"
-msgstr "Poteca HuaRong"
+msgstr "Traseul Huarong"
 
 #: ../data/klotski.ui.h:2
 msgid "Challenge Pack"
@@ -76,34 +83,28 @@ msgid "Skill Pack"
 msgstr "Pachetul pentru îndemnare"
 
 #: ../data/klotski.ui.h:4
-#, fuzzy
 msgid "Previous"
-msgstr "Jocul precedent"
+msgstr "Precedent"
 
 #: ../data/klotski.ui.h:5
-#, fuzzy
 msgid "Next"
-msgstr "Următoarele:"
+msgstr "Următor"
 
 #: ../data/klotski.ui.h:7
-#, fuzzy
 msgid "_Start Over"
-msgstr "_Start"
+msgstr "_Start din nou"
 
 #: ../data/klotski.ui.h:8
-#, fuzzy
 msgid "Restart the current puzzle"
-msgstr "Repornește jocul curent"
+msgstr "Repornește puzzle-ul curent"
 
 #: ../data/klotski.ui.h:9
-#, fuzzy
 msgid "_Change Puzzle"
-msgstr "Puzzle steag"
+msgstr "Modifi_că puzzle"
 
 #: ../data/klotski.ui.h:10
-#, fuzzy
 msgid "Choose an other puzzle"
-msgstr "Alegeți un slot pentru scor."
+msgstr "Alegeți alt puzzle"
 
 #: ../data/klotski-menus.ui.h:1
 msgid "_Scores"
@@ -118,46 +119,43 @@ msgid "_About"
 msgstr "_Despre"
 
 #: ../data/klotski-menus.ui.h:4
-#, fuzzy
 msgid "_Quit"
-msgstr "Ieșire"
+msgstr "_Ieșire"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
-msgstr "Jocul jucat acum"
+msgstr "Puzzle-ul jucat acum"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:2
 msgid "The number of the puzzle being played."
 msgstr "Numărul jocului ce este jucat."
 
 #: ../data/org.gnome.klotski.gschema.xml.h:3
-#, fuzzy
 msgid "Width of the window in pixels"
-msgstr "Mărimea în pixeli a ferestrei principale."
+msgstr "Lățimea ferestrei în pixeli"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:4
-#, fuzzy
 msgid "Height of the window in pixels"
-msgstr "Înălțimea în pixeli a ferestrei principale."
+msgstr "Înălțimea ferestrei în pixeli"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:5
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "adevărat dacă fereastra este maximizată"
 
 #: ../src/gnome-klotski.vala:17
 msgid "Print release version and exit"
-msgstr ""
+msgstr "Tipărește versiunea de lansare și ieși"
 
 #: ../src/gnome-klotski.vala:114
-#, fuzzy
 msgid "Sliding block puzzles"
-msgstr "Glisați blocurile pentru a rezolva jocul"
+msgstr "Puzzle-uri cu bloc glisant"
 
 #: ../src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Adi Roiban https://launchpad.net/~adiroiban\n"
@@ -317,9 +315,8 @@ msgstr "Răsărit de soare"
 
 #. Label on the scores dialog, next to dropdown */
 #: ../src/klotski-window.vala:527
-#, fuzzy
 msgid "Puzzle"
-msgstr "Joc:"
+msgstr "Puzzle"
 
 #: ../src/klotski-window.vala:781
 #, c-format
