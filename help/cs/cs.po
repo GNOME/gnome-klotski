@@ -2,13 +2,13 @@
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnotski help.
 #
-# Marek Černocký <marek@manet.cz>, 2009, 2013.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2012-12-02 21:49+0000\n"
-"PO-Revision-Date: 2013-07-12 10:52+0200\n"
+"POT-Creation-Date: 2018-09-02 16:53+0000\n"
+"PO-Revision-Date: 2018-09-05 10:38+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,45 +26,13 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:204(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-msgstr ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:261(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
-msgstr ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
-
-#: C/index.docbook:28(articleinfo/title)
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:28
 msgid "<application>Klotski</application> Manual"
 msgstr "Příručka ke hře <application>Klotski</application>"
 
-#: C/index.docbook:31(abstract/para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:31
 msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
@@ -72,16 +40,19 @@ msgstr ""
 "Klotski je logická hra, jejímž cílem je dostat vzorovaný blok na značky, což "
 "se dělá přesouváním bloků."
 
-#: C/index.docbook:38(articleinfo/copyright)
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:38
 msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
 msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#: C/index.docbook:54(publisher/publishername)
-#: C/index.docbook:142(revdescription/para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:54 C/index.docbook:142
 msgid "GNOME Documentation Project"
 msgstr "Dokumentační projekt GNOME"
 
-#: C/index.docbook:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -97,7 +68,8 @@ msgstr ""
 "<ulink type=\"help\" url=\"help:fdl\">tímto odkazem</ulink> nebo v souboru "
 "COPYING-DOCS dodávaném s touto příručkou."
 
-#: C/index.docbook:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -108,7 +80,8 @@ msgstr ""
 "GNU FDL. Pokud chcete tento dokument šířit odděleně od sbírky, musíte "
 "přiložit kopii licence dle popisu v oddílu 6 dané licence."
 
-#: C/index.docbook:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -122,7 +95,8 @@ msgstr ""
 "jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s "
 "velkým písmenem na začátku."
 
-#: C/index.docbook:35(listitem/para) C/legal.xml:35(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -147,7 +121,8 @@ msgstr ""
 "ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ PODLE TÉTO DOHODY "
 "POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
 
-#: C/index.docbook:55(listitem/para) C/legal.xml:55(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -171,7 +146,8 @@ msgstr ""
 "K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY "
 "TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ."
 
-#: C/index.docbook:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -180,7 +156,8 @@ msgstr ""
 "DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU "
 "FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <_:orderedlist-1/>"
 
-#: C/index.docbook:63(authorgroup/author)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:63
 msgid ""
 "<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -190,7 +167,8 @@ msgstr ""
 "<orgname>Dokumentační projekt GNOME</orgname> <address> <email>andrew@sobala."
 "net</email> </address> </affiliation>"
 
-#: C/index.docbook:72(authorgroup/othercredit)
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:72
 msgid ""
 "<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
@@ -200,7 +178,8 @@ msgstr ""
 "<orgname>Projekt GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
 "email> </address> </affiliation>"
 
-#: C/index.docbook:81(authorgroup/othercredit)
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:81
 msgid ""
 "<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
@@ -210,25 +189,30 @@ msgstr ""
 "<orgname>Projekt GNOME</orgname> <address> <email> ross@burtonini.com </"
 "email> </address> </affiliation>"
 
-#: C/index.docbook:139(revdescription/para)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:139
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: C/index.docbook:135(revhistory/revision)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:135
 msgid ""
 "<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
 msgstr ""
 "<revnumber>V2.0</revnumber> <date>13. srpna 2002</date> <_:revdescription-1/>"
 
-#: C/index.docbook:148(articleinfo/releaseinfo)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:148
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Tato příručka popisuje GNOME Klotski ve verzi 2.12."
 
-#: C/index.docbook:151(legalnotice/title)
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:151
 msgid "Feedback"
 msgstr "Ohlasy"
 
-#: C/index.docbook:152(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:152
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -240,15 +224,18 @@ msgstr ""
 "instrukcí na stránce <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
 "\"help\">Stránka s ohlasy na GNOME</ulink>."
 
-#: C/index.docbook:160(article/indexterm)
+#. (itstool) path: article/indexterm
+#: C/index.docbook:160
 msgid "<primary>GNOME Klotski</primary>"
 msgstr "<primary>GNOME Klotski</primary>"
 
-#: C/index.docbook:167(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:167
 msgid "Introduction"
 msgstr "Úvod"
 
-#: C/index.docbook:168(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:168
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
@@ -257,7 +244,8 @@ msgstr ""
 "Aplikace <application>Klotski</application> je klonem hry Klotski. Podstatou "
 "hry je přesunout vzorovaný blok na místo určené zelenými značkami."
 
-#: C/index.docbook:171(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:171
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -265,7 +253,8 @@ msgstr ""
 "Hru <application>Klotski</application> napsal Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
 
-#: C/index.docbook:174(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:174
 msgid ""
 "<application>Klotski</application> is included in the gnome-games package, "
 "which is part of the GNOME desktop environment. This document describes "
@@ -275,7 +264,8 @@ msgstr ""
 "filename>, který patří k pracovnímu prostředí GNOME. Tento dokument popisuje "
 "verzi 2.12 aplikace <application>Klotski</application>."
 
-#: C/index.docbook:177(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:177
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -289,7 +279,8 @@ msgstr ""
 "pod tímto <ulink url=\"help:gpl\" type=\"help\">odkazek</ulink> nebo v "
 "souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. "
 
-#: C/index.docbook:184(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:184
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
@@ -299,15 +290,30 @@ msgstr ""
 "tohoto návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-"
 "guide?feedback-bugs\" type=\"help\">dokumentu</ulink>."
 
-#: C/index.docbook:193(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:193
 msgid "Objective"
 msgstr "Cíl hry"
 
-#: C/index.docbook:200(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:200
 msgid "The winning move"
 msgstr "Vítězný tah"
 
-#: C/index.docbook:202(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+msgstr ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:202
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>The patterned block should be moved to "
@@ -317,7 +323,8 @@ msgstr ""
 "> </imageobject> <textobject> <phrase>Vzorovaný blok by měl být přesunut na "
 "místo ohraničené zelenými značkami.</phrase> </textobject>"
 
-#: C/index.docbook:194(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:194
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
@@ -328,15 +335,18 @@ msgstr ""
 "na zelené značky co nejméně tahy to jde. Toho dosáhnete přesouváním bloků po "
 "jednom pomocí myši, dokud nedostanete vzorovaný blok na značky. <_:figure-1/>"
 
-#: C/index.docbook:219(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:219
 msgid "Playing <application>Klotski</application>"
 msgstr "Jak hrát <application>Klotski</application>"
 
-#: C/index.docbook:242(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:242
 msgid "To Start <application>Klotski</application>"
 msgstr "Spuštění hry <application>Klotski</application>"
 
-#: C/index.docbook:243(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:243
 msgid ""
 "You can start <application>Klotski</application> from the Applications menu "
 "by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
@@ -346,11 +356,13 @@ msgstr ""
 "výběrem <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Gnotski</"
 "guimenuitem></menuchoice>."
 
-#: C/index.docbook:252(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:252
 msgid "The main window"
 msgstr "Hlavní okno"
 
-#: C/index.docbook:253(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:253
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -358,11 +370,27 @@ msgstr ""
 "Po spuštění hry <application>Klotski</application> se zobrazí následující "
 "okno."
 
-#: C/index.docbook:257(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:257
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Okno hry <application>Klotski</application> po spuštění"
 
-#: C/index.docbook:259(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:259
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
 "\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
@@ -375,15 +403,18 @@ msgstr ""
 "herní plochu a stavovou lištu. Lišta nabídek obsahuje nabídky Hra a Nápověda."
 "</phrase></textobject>"
 
-#: C/index.docbook:275(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:275
 msgid "Menubar"
 msgstr "Panel nabídek"
 
-#: C/index.docbook:279(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:279
 msgid "Game menu"
 msgstr "Nabídka Hra"
 
-#: C/index.docbook:281(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:281
 msgid ""
 "The game menu allows you to start new games, view the highest scores and "
 "quit the program."
@@ -391,11 +422,13 @@ msgstr ""
 "Nabídka Hra vám umožňuje spustit novou hru, zobrazit tabulku nejlepších "
 "výsledků a ukončit program."
 
-#: C/index.docbook:286(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:286
 msgid "Help menu"
 msgstr "Nabídka Nápověda"
 
-#: C/index.docbook:288(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:288
 msgid ""
 "The help menu allows you to view the documentation for <application>Klotski</"
 "application>"
@@ -403,11 +436,13 @@ msgstr ""
 "Nabídka Nápověda vám umožňuje přístup k dokumentaci hry "
 "<application>Klotski</application>."
 
-#: C/index.docbook:295(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:295
 msgid "Game area"
 msgstr "Hrací plocha"
 
-#: C/index.docbook:297(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:297
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -415,15 +450,18 @@ msgstr ""
 "Na hrací ploše jsou zobrazené bloky současné hry. Můžete po ní přesouvat "
 "bloky pomocí myši, jak popisuje <xref linkend=\"gnotski-moving\"/>."
 
-#: C/index.docbook:303(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:303
 msgid "Statusbar"
 msgstr "Panel nástrojů"
 
-#: C/index.docbook:305(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:305
 msgid "The statusbar shows how many moves you have taken so far."
 msgstr "Stavový řádek vás informuje, kolik jste již provedli tahů."
 
-#: C/index.docbook:272(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:272
 msgid ""
 "The <application>Klotski</application> window contains the following "
 "elements: <_:variablelist-1/>"
@@ -431,11 +469,13 @@ msgstr ""
 "Okno hry <application>Klotski</application> obsahuje následující prvky: <_:"
 "variablelist-1/>"
 
-#: C/index.docbook:314(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "Starting a new game"
 msgstr "Spuštění nové hry"
 
-#: C/index.docbook:315(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
 msgid ""
 "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
 "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
@@ -453,24 +493,29 @@ msgstr ""
 "<guisubmenu>Sbírka dovedností</guisubmenu>. V každé této podnabídce jsou "
 "názvy hlavolamů, které odkazují na daný scénář hry."
 
-#: C/index.docbook:323(example/title)
+#. (itstool) path: example/title
+#: C/index.docbook:323
 msgid "Starting a game"
 msgstr "Spuštění hry"
 
-#: C/index.docbook:324(example/para)
+#. (itstool) path: example/para
+#: C/index.docbook:324
 msgid ""
-"To start a game, choose <menuchoice> <guimenu>Game</guimenu> <guisubmenu>"
-"[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
-"menuchoice>"
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
+"<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
+"guimenuitem> </menuchoice>"
 msgstr ""
-"Když chcete začít hru, vyberte <menuchoice><guimenu>Hra</guimenu><guisubmenu>"
-"[kategorie]</guisubmenu><guimenuitem>[scénář hry]</guimenuitem></menuchoice>."
+"Když chcete začít hru, vyberte <menuchoice><guimenu>Hra</"
+"guimenu><guisubmenu>[kategorie]</guisubmenu><guimenuitem>[scénář hry]</"
+"guimenuitem></menuchoice>."
 
-#: C/index.docbook:335(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:335
 msgid "Moving blocks"
 msgstr "Přesouvání bloků"
 
-#: C/index.docbook:336(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:336
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -484,11 +529,13 @@ msgstr ""
 "blokem, s výjimkou, že můžete přesunout vzorovaný blok skrz zelené bloky ve "
 "vítězném tahu."
 
-#: C/index.docbook:356(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:356
 msgid "Authors"
 msgstr "Autoři"
 
-#: C/index.docbook:357(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:357
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
@@ -502,11 +549,13 @@ msgstr ""
 "návodu, tak se řiďte instrukcemi v tomto <ulink url=\"ghelp:user-guide?"
 "feedback-bugs\" type=\"help\">dokumentu</ulink>."
 
-#: C/index.docbook:377(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:377
 msgid "License"
 msgstr "Licence"
 
-#: C/index.docbook:378(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:378
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -519,7 +568,8 @@ msgstr ""
 "jak ji vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) "
 "novější."
 
-#: C/index.docbook:385(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:385
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -531,7 +581,8 @@ msgstr ""
 "VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
 "Public License</citetitle>."
 
-#: C/index.docbook:398(para/address)
+#. (itstool) path: para/address
+#: C/index.docbook:398
 #, no-wrap
 msgid ""
 "\n"
@@ -548,7 +599,8 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/index.docbook:391(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:391
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -562,11 +614,13 @@ msgstr ""
 "Software Foundation navštívením <ulink type=\"http\" url=\"http://www.fsf.org"
 "\">jejich webu</ulink> nebo zasláním žádosti na <_:address-1/>"
 
-#: C/legal.xml:9(para/ulink)
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
 msgid "link"
 msgstr "odkazem"
 
-#: C/legal.xml:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
