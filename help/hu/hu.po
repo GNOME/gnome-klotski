@@ -2,51 +2,25 @@
 # Copyright (C) 2014 gnome-klotski's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-klotski package.
 #
-# Balázs Úr <urbalazs@gmail.com>, 2014.
+# Balázs Úr <urbalazs@gmail.com>, 2014, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
-"POT-Creation-Date: 2014-05-22 06:49+0000\n"
-"PO-Revision-Date: 2014-05-22 19:32+0200\n"
+"POT-Creation-Date: 2018-09-02 16:53+0000\n"
+"PO-Revision-Date: 2018-09-13 22:35+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome-hu-list@gnome.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <urbalazs@gmail.com>, 2014."
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:204
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-msgstr ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-
-#. (itstool) path: imagedata
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:261
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
-msgstr ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
+msgstr "Úr Balázs <urbalazs@gmail.com>, 2014, 2018."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:28
@@ -223,8 +197,8 @@ msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 msgid ""
 "<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>V2.0</revnumber> <date>2002. augusztus 13.</date> <"
-"_:revdescription-1/>"
+"<revnumber>V2.0</revnumber> <date>2002. augusztus 13.</date> <_:"
+"revdescription-1/>"
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:148
@@ -265,8 +239,8 @@ msgid ""
 "game. The objective is to move the patterned block to the area bordered by "
 "green markers."
 msgstr ""
-"A <application>Klotski</application> alkalmazás a Klotski játék klónja. A cél "
-"a mintás doboz áthelyezése a zöld jelzések által határolt területre."
+"A <application>Klotski</application> alkalmazás a Klotski játék klónja. A "
+"cél a mintás doboz áthelyezése a zöld jelzések által határolt területre."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
@@ -274,8 +248,8 @@ msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
 msgstr ""
-"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette (<"
-"email>Lars.Rydlinge@HIG.SE</email>)."
+"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette "
+"(<email>Lars.Rydlinge@HIG.SE</email>)."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:174
@@ -285,8 +259,8 @@ msgid ""
 "version 2.12 of <application>Klotski</application>."
 msgstr ""
 "A <application>Klotski</application> játékot a gnome-games csomag "
-"tartalmazza, amely a GNOME asztali környezet része. Ez a dokumentum a <"
-"application>Klotski</application> 2.12-es verziójához készült."
+"tartalmazza, amely a GNOME asztali környezet része. Ez a dokumentum a "
+"<application>Klotski</application> 2.12-es verziójához készült."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:177
@@ -299,9 +273,10 @@ msgid ""
 msgstr ""
 "Ez a program a Free Software Foundation által kiadott GNU Lesser General "
 "Public License dokumentumban leírtak, akár a licenc 2-es, akár (tetszőleges) "
-"későbbi  változata szerint kerül terjesztésre. Ennek a licencnek egy példánya "
-"megtalálható ezen a <ulink url=\"help:gpl\" type=\"help\">hivatkozáson</ulink>"
-", vagy a program forráskódjában mellékelt fájl tartalmazza annak MÁSOLATÁT."
+"későbbi  változata szerint kerül terjesztésre. Ennek a licencnek egy "
+"példánya megtalálható ezen a <ulink url=\"help:gpl\" type=\"help"
+"\">hivatkozáson</ulink>, vagy a program forráskódjában mellékelt fájl "
+"tartalmazza annak MÁSOLATÁT."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:184
@@ -311,8 +286,8 @@ msgid ""
 "bugs\" type=\"help\">document</ulink>."
 msgstr ""
 "Az alkalmazással, vagy ezen kézikönyvvel kapcsolatos megjegyzéseit és "
-"hibajelentéseit ezen <ulink url=\"ghelp:user-guide?feedback-bugs\" "
-"type=\"help\">dokumentum</ulink> útmutatási alapján juttathatja el hozzánk."
+"hibajelentéseit ezen <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
+"\"help\">dokumentum</ulink> útmutatási alapján juttathatja el hozzánk."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:193
@@ -324,6 +299,22 @@ msgstr "Cél"
 msgid "The winning move"
 msgstr "A nyerő lépés"
 
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_win.png' "
+#| "md5='5ed32942a09f8becfc784d804f70ea3e'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+msgstr ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:202
 msgid ""
@@ -331,8 +322,8 @@ msgid ""
 "> </imageobject> <textobject> <phrase>The patterned block should be moved to "
 "the space bordered by the green markers.</phrase> </textobject>"
 msgstr ""
-"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/> "
-"</imageobject> <textobject> <phrase>A mintás dobozt a zöld jelzések által "
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>A mintás dobozt a zöld jelzések által "
 "határolt területre kell mozgatni.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
@@ -380,13 +371,31 @@ msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
 msgstr ""
-"A <application><application>Klotski</application></application> indításakor a "
-"következő ablak jelenik meg."
+"A <application><application>Klotski</application></application> indításakor "
+"a következő ablak jelenik meg."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:257
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "A <application>Klotski</application> indítóablaka"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_start_window.png' "
+#| "md5='23e584de3f58e5baf5c9ca5098a7961e'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:259
@@ -396,9 +405,9 @@ msgid ""
 "application> main window. Contains titlebar, menubar, game area and "
 "statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
 msgstr ""
-"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" "
-"format=\"PNG\"/> </imageobject> <textobject> <phrase>Megjeleníti a <"
-"application>Klotski</application> főablakát. A címsort, a menüsávot, a "
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Megjeleníti a "
+"<application>Klotski</application> főablakát. A címsort, a menüsávot, a "
 "játékterületet és az állapotsort tartalmazza. A menüsáv tartalmazza a Játék "
 "és a Súgó menüket. </phrase> </textobject>"
 
@@ -484,13 +493,13 @@ msgid ""
 "guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
 "puzzle name refers to a game scenario."
 msgstr ""
-"A <guimenu>Játék menü</guimenu> használatával indíthat új játékot. A <"
-"guimenuitem>Következő feladvány</guimenuitem> és az <guimenuitem>Előző "
+"A <guimenu>Játék menü</guimenu> használatával indíthat új játékot. A "
+"<guimenuitem>Következő feladvány</guimenuitem> és az <guimenuitem>Előző "
 "feladvány</guimenuitem> lehetővé teszi a feladványok közötti egymás utáni "
 "navigációt. Minden feladvány az almenükben található három kategória "
-"egyikéhez tartozik, név szerint <guisubmenu>HuaRong ösvény</guisubmenu>, <"
-"guisubmenu>Kihíváscsomag</guisubmenu> és <guisubmenu>Szakértői csomag<"
-"/guisubmenu>. Ezekben az almenükben minden feladványnév egy "
+"egyikéhez tartozik, név szerint <guisubmenu>HuaRong ösvény</guisubmenu>, "
+"<guisubmenu>Kihíváscsomag</guisubmenu> és <guisubmenu>Szakértői csomag</"
+"guisubmenu>. Ezekben az almenükben minden feladványnév egy "
 "játékforgatókönyvre utal."
 
 #. (itstool) path: example/title
@@ -523,11 +532,11 @@ msgid ""
 "with the exception that you may move the patterned block through the green "
 "blocks to win."
 msgstr ""
-"Egy doboz mozgatásához kattintson rá, tartsa nyomva az egér gombját, és húzza "
-"az új helyére. Nem helyezheti át a zöld dobozokat, vagy a játékot határolókat."
-" Nem mozgathatja a dobozt olyan helyre, amelyet egy másik doboz már elfoglal, "
-"azzal a kivétellel, hogy a mintás dobozt áthúzhatja a zöld dobozokon ahhoz, "
-"hogy nyerjen."
+"Egy doboz mozgatásához kattintson rá, tartsa nyomva az egér gombját, és "
+"húzza az új helyére. Nem helyezheti át a zöld dobozokat, vagy a játékot "
+"határolókat. Nem mozgathatja a dobozt olyan helyre, amelyet egy másik doboz "
+"már elfoglal, azzal a kivétellel, hogy a mintás dobozt áthúzhatja a zöld "
+"dobozokon ahhoz, hogy nyerjen."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:356
@@ -543,12 +552,12 @@ msgid ""
 "follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
 "type=\"help\">document</ulink>."
 msgstr ""
-"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette (<"
-"email>lars.rydlinge@hig.se</email>). Ezt a kézikönyvet Andrew Sobala írta. "
+"A <application>Klotski</application> alkalmazást Lars Rydlinge készítette "
+"(<email>lars.rydlinge@hig.se</email>). Ezt a kézikönyvet Andrew Sobala írta. "
 "Egy hiba jelentéséhez, vagy az alkalmazással, illetve a kézikönyvvel "
-"kapcsolatos javaslat tételéhez kövesse az ebben a <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentumban</ulink> "
-"található útmutatást."
+"kapcsolatos javaslat tételéhez kövesse az ebben a <ulink url=\"ghelp:user-"
+"guide?feedback-bugs\" type=\"help\">dokumentumban</ulink> található "
+"útmutatást."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:377
@@ -565,8 +574,8 @@ msgid ""
 msgstr ""
 "Ez a program és a csempék grafikája szabad szoftver, terjesztheti és/vagy "
 "módosíthatja a Free Software Foundation által kiadott <citetitle>GNU General "
-"Public License</citetitle> feltételi szerint; vagy a licenc 2. verziója, vagy "
-"(az önnek tetsző) bármely későbbi verziójában foglaltak alapján."
+"Public License</citetitle> feltételi szerint; vagy a licenc 2. verziója, "
+"vagy (az önnek tetsző) bármely későbbi verziójában foglaltak alapján."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:385
@@ -609,11 +618,11 @@ msgid ""
 "www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
 msgstr ""
 "A <citetitle>GNU General Public License</citetitle> egy példányát "
-"függelékként tartalmazza a <citetitle>GNOME felhasználói kézikönyv</citetitle>"
-". Beszerezheti a <citetitle>GNU General Public License</citetitle> egy "
-"példányát a Free Software Foundation <ulink type=\"http\" url=\"http://www."
-"fsf.org\">weboldalának</ulink> meglátogatásával, vagy írjon egy levelet az "
-"alábbi címre: <_:address-1/>"
+"függelékként tartalmazza a <citetitle>GNOME felhasználói kézikönyv</"
+"citetitle>. Beszerezheti a <citetitle>GNU General Public License</citetitle> "
+"egy példányát a Free Software Foundation <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">weboldalának</ulink> meglátogatásával, vagy írjon egy levelet "
+"az alábbi címre: <_:address-1/>"
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
