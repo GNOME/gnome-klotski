@@ -4,16 +4,15 @@
 #
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
-# Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2016.
+# Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007–2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-21 21:38+0200\n"
-"PO-Revision-Date: 2016-08-21 21:38+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2018-12-06 19:03+0000\n"
+"PO-Revision-Date: 2018-12-09 21:42+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -23,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../data/gnome-klotski.appdata.xml.in.h:1
 msgid "GNOME Klotski"
@@ -59,7 +58,7 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
+#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:9
 #: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
 msgid "Klotski"
 msgstr "Klotski"
@@ -69,56 +68,52 @@ msgid "game;strategy;logic;move;"
 msgstr "igra;strategija;logika;premiki;"
 
 #: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "Steza HuaRong"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Paket izziva"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Paket veščine"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Nazaj"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Naprej"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_Začni znova"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Ponovno zaženi trenutno igro"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Zamenjaj sestavljanko"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Izbor druge sestavljanke"
-
-#: ../data/klotski-menus.ui.h:1
 msgid "_Scores"
 msgstr "_Točke"
 
-#: ../data/klotski-menus.ui.h:2
+#: ../data/klotski.ui.h:2
 msgid "_Help"
 msgstr "Pomo_č"
 
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "_O programu"
+#: ../data/klotski.ui.h:3
+msgid "_About Klotski"
+msgstr "_O igri"
 
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_Končaj"
+#: ../data/klotski.ui.h:4
+msgid "Huarong Trail"
+msgstr "Steza HuaRong"
+
+#: ../data/klotski.ui.h:5
+msgid "Challenge Pack"
+msgstr "Paket izziva"
+
+#: ../data/klotski.ui.h:6
+msgid "Skill Pack"
+msgstr "Paket veščine"
+
+#: ../data/klotski.ui.h:7
+msgid "Previous"
+msgstr "Nazaj"
+
+#: ../data/klotski.ui.h:8
+msgid "Next"
+msgstr "Naprej"
+
+#: ../data/klotski.ui.h:10
+msgid "_Start Over"
+msgstr "_Začni znova"
+
+#: ../data/klotski.ui.h:11
+msgid "Restart the current puzzle"
+msgstr "Ponovno zaženi trenutno igro"
+
+#: ../data/klotski.ui.h:12
+msgid "_Change Puzzle"
+msgstr "_Zamenjaj sestavljanko"
+
+#: ../data/klotski.ui.h:13
+msgid "Choose an other puzzle"
+msgstr "Izbor druge sestavljanke"
 
 #: ../data/org.gnome.klotski.gschema.xml.h:1
 msgid "The puzzle in play"
@@ -309,3 +304,63 @@ msgstr "Premiki: %d"
 #: ../src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Raven je končana."
+
+#~ msgid "_About"
+#~ msgstr "_O programu"
+
+#~ msgid "_Quit"
+#~ msgstr "_Končaj"
+
+#~ msgid "Scores"
+#~ msgstr "Rezultati"
+
+#~ msgid "Puzzle:"
+#~ msgstr "Sestavljanka:"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Moves"
+#~ msgstr "Premiki"
+
+#~ msgid "_OK"
+#~ msgstr "_V redu"
+
+#~ msgid "Next Puzzle"
+#~ msgstr "Naslednja sestavljanka"
+
+#~ msgid ""
+#~ "Sliding block puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "Sestavljanje drsečih ploščic\n"
+#~ "\n"
+#~ "Igra Klotski je del iger GNOME."
+
+#~ msgid "_Close"
+#~ msgstr "_Zapri"
+
+#~ msgid "New Game"
+#~ msgstr "Nova igra"
+
+#~ msgid "true if the window is fullscreen"
+#~ msgstr "prav, če je okno razpeto"
+
+#~ msgid "_New"
+#~ msgstr "_Nova"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Celozaslonski način"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Zapusti celozaslonski način"
+
+#~ msgid "Puzzle: "
+#~ msgstr "Sestavljanka:"
+
+#~ msgid "_Game"
+#~ msgstr "_Igra"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Spletna stran iger GNOME"
