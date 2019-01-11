@@ -1,8 +1,10 @@
 [Desktop Entry]
-_Name=Klotski
-_Comment=Slide blocks to solve the puzzle
-_Keywords=game;strategy;logic;move;
+Name=Klotski
+Comment=Slide blocks to solve the puzzle
+# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+Keywords=game;strategy;logic;move;
 Exec=gnome-klotski
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=gnome-klotski
 Terminal=false
 Type=Application
