@@ -30,6 +30,7 @@ configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
 subdir('data')
+subdir('help')
 subdir('po')
 subdir('src')
 
