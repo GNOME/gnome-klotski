@@ -34,4 +34,4 @@ subdir('po')
 subdir('src')
 
 meson.add_install_script(python3.find_python().path(),
-                         join_paths(meson.source_root(), 'build-aux', meson_post_install.py'))
+                         join_paths(meson.source_root(), 'build-aux', 'meson_post_install.py'))
