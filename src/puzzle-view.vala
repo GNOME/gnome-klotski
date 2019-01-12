@@ -36,7 +36,7 @@ public class PuzzleView : Gtk.DrawingArea
     private double ky = 0;
 
     private Rsvg.Handle tiles_handle = null;
-    private string image_filepath = "";
+    private File image_filepath = null;
     private Cairo.Surface surface = null;
 
     private Puzzle? _puzzle = null;
@@ -77,11 +77,11 @@ public class PuzzleView : Gtk.DrawingArea
 
     private void load_image ()
     {
-        image_filepath = Path.build_filename (DATA_DIRECTORY, "gnome-klotski.svg", null);
+        image_filepath = File.new_for_uri("resource:///org/gnome/klotski/ui/assets.svg");
 
         try
         {
-            tiles_handle = new Rsvg.Handle.from_file (image_filepath);
+            tiles_handle = new Rsvg.Handle.from_gfile_sync (image_filepath, FLAGS_NONE);
         }
         catch (Error e)
         {
@@ -93,7 +93,6 @@ public class PuzzleView : Gtk.DrawingArea
                                                 e.message);
             dialog.run ();*/
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
-            stderr.printf ("%s %s\n", "image path:", image_filepath);
             Posix.exit (Posix.EXIT_FAILURE);
         }
     }

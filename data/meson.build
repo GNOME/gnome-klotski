@@ -18,12 +18,6 @@ install_data(
   install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps')
 )
 
-# Install extra icon
-install_data(
-  '@0@.svg'.format(meson.project_name()),
-  install_dir : datadir
-)
-
 # Install gschema
 install_data(
   '@0@.gschema.xml'.format(project_id),
