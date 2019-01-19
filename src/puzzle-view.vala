@@ -77,7 +77,7 @@ public class PuzzleView : Gtk.DrawingArea
 
     private void load_image ()
     {
-        image_file = File.new_for_uri("resource:///org/gnome/klotski/ui/assets.svg");
+        image_file = File.new_for_uri("resource:///org/gnome/Klotski/ui/assets.svg");
 
         try
         {

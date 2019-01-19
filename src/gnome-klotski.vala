@@ -43,7 +43,7 @@ public class Klotski : Gtk.Application
 
     public Klotski ()
     {
-        Object (application_id: "org.gnome.klotski", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.Klotski", flags: ApplicationFlags.FLAGS_NONE);
 
         add_main_option_entries (option_entries);
     }
@@ -64,7 +64,7 @@ public class Klotski : Gtk.Application
         base.startup ();
 
         Environment.set_application_name (_("Klotski"));
-        Window.set_default_icon_name ("gnome-klotski");
+        Window.set_default_icon_name ("org.gnome.Klotski");
 
         add_action_entries (action_entries, this);
 
@@ -120,7 +120,7 @@ public class Klotski : Gtk.Application
                            "authors", authors,
                            "documenters", documenters,
                            "translator-credits", _("translator-credits"),
-                           "logo-icon-name", "gnome-klotski",
+                           "logo-icon-name", "org.gnome.Klotski",
                            "website", "https://wiki.gnome.org/Apps/Klotski",
                            null);
     }

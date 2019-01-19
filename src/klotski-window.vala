@@ -20,7 +20,7 @@ private struct LevelInfo
     string data;
 }
 
-[GtkTemplate (ui = "/org/gnome/klotski/ui/klotski.ui")]
+[GtkTemplate (ui = "/org/gnome/Klotski/ui/klotski.ui")]
 public class KlotskiWindow : ApplicationWindow
 {
     /* Settings */
@@ -506,10 +506,10 @@ public class KlotskiWindow : ApplicationWindow
     public KlotskiWindow ()
     {
         var css_provider = new CssProvider ();
-        css_provider.load_from_resource ("/org/gnome/klotski/ui/klotski.css");
+        css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
         StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        settings = new GLib.Settings ("org.gnome.klotski");
+        settings = new GLib.Settings ("org.gnome.Klotski");
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
             maximize ();

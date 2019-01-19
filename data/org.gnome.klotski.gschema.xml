@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.klotski" path="/org/gnome/klotski/" gettext-domain="gnome-klotski">
+  <schema id="org.gnome.Klotski" path="/org/gnome/Klotski/" gettext-domain="gnome-klotski">
     <key name="level" type="i">
       <default>0</default>
       <summary>The puzzle in play</summary>

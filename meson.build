@@ -1,7 +1,7 @@
 project('gnome-klotski', 'vala', 'c',
         version: '3.31.3')
 
-project_id = 'org.gnome.klotski'
+project_id = 'org.gnome.Klotski'
 i18n = import('i18n')
 gnome = import('gnome')
 # used to run post install script

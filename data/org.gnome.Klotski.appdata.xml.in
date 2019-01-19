@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<component type="desktop">
-  <id>gnome-klotski.desktop</id>
+<component type="desktop-application">
+  <id>org.gnome.Klotski</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>GNOME Klotski</name>
@@ -28,13 +28,16 @@
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
     <kudo>UserDocs</kudo>
   </kudos>
+  <provides>
+    <id>gnome-klotski.desktop</id>
+  </provides>
+  <launchable type="desktop-id">org.gnome.Klotski</launchable>
   <translation type="gettext">gnome-klotski</translation>
-  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-klotski</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-klotski/issues/</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-klotski/stable/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
