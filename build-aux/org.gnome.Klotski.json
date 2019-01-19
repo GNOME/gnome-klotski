@@ -1,0 +1,42 @@
+{
+    "app-id": "org.gnome.Klotski",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-klotski",
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        /* X11 + XShm access */
+        "--share=ipc", "--socket=x11",
+        /* Wayland access */
+        "--socket=wayland",
+        /* dconf */
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "modules": [{
+            "name": "libgee",
+            "config-opts": ["--enable-introspection=no"],
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/libgee.git"
+            }]
+        },
+        {
+            "name": "libgnome-games-support",
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
+            }]
+        },
+        {
+            "name": "gnome-klotski",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gnome-klotski.git"
+            }]
+        }
+    ]
+}
