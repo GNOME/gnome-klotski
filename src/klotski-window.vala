@@ -840,7 +840,7 @@ public class KlotskiWindow : ApplicationWindow
     private string get_level_key (int level_number)
     {
         /* Calculate the CRC of the level data */
-        uint32 result = 0xFFFFFFFFu;
+        int64 result = 0xFFFFFFFFu;
         var data = levels[level_number].data;
         for (var i = 0; data[i] != '\0'; i++)
         {
@@ -856,7 +856,7 @@ public class KlotskiWindow : ApplicationWindow
             }
         }
 
-        return "%08X".printf (~result);
+        return "%08X".printf (~(uint)result);
     }
 
     private void load_solved_state ()
