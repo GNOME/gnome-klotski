@@ -1,4 +1,4 @@
-gnome.yelp ('meson.project_name()',
+gnome.yelp (meson.project_name(),
             sources: [ 'index.docbook',
                        'legal.xml'],
             media: [ 'figures/gnotski_start-window.png',
