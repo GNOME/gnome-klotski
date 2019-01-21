@@ -3,7 +3,7 @@
 data/klotski.ui
 data/org.gnome.Klotski.appdata.xml.in
 data/org.gnome.Klotski.desktop.in
-data/org.gnome.klotski.gschema.xml
+data/org.gnome.Klotski.gschema.xml
 src/gnome-klotski.vala
 src/klotski-window.vala
 src/puzzle-view.vala
