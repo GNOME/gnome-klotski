@@ -1,72 +1,35 @@
 # translation of gnotski.HEAD.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnotski.HEAD\n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-01-23 14:24+0100\n"
+"POT-Creation-Date: 2018-09-02 16:53+0000\n"
+"PO-Revision-Date: 2019-01-22 15:36+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: es <gnome-es-list@gnome.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 3.31.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2012\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnotski.xml:204(imagedata)
-#| msgid ""
-#| "@@image: 'figures/gnotski_win.png'; md5=5ed32942a09f8becfc784d804f70ea3e"
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-msgstr ""
-"external ref='figures/gnotski_win.png' md5='5ed32942a09f8becfc784d804f70ea3e'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnotski.xml:261(imagedata)
-#| msgid ""
-#| "@@image: 'figures/gnotski_start_window.png'; "
-#| "md5=23e584de3f58e5baf5c9ca5098a7961e"
-msgctxt "_"
-msgid ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
-msgstr ""
-"external ref='figures/gnotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
-
-#: C/gnotski.xml:28(articleinfo/title)
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:28
 msgid "<application>Klotski</application> Manual"
 msgstr "Manual de <application>Klotski</application>"
 
-#: C/gnotski.xml:31(abstract/para)
+#. (itstool) path: abstract/para
+#: C/index.docbook:31
 msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
@@ -75,33 +38,37 @@ msgstr ""
 "patrón al marcador, lo que se consigue moviendo los bloques que están en su "
 "camino."
 
-#: C/gnotski.xml:38(articleinfo/copyright)
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:38
 msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
 msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
-#: C/gnotski.xml:54(publisher/publishername)
-#: C/gnotski.xml:142(revdescription/para)
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:54 C/index.docbook:142
 msgid "GNOME Documentation Project"
 msgstr "Proyecto de documentación de GNOME"
 
-#: C/gnotski.xml:2(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
 "later version published by the Free Software Foundation with no Invariant "
 "Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
 msgstr ""
 "Se otorga permiso para copiar, distribuir y/o modificar este documento bajo "
 "los términos de la Licencia de Documentación Libre de GNU, Versión 1.1 o "
 "cualquier otra versión posterior publicada por la Free Software Foundation; "
 "sin Secciones Invariantes ni Textos de Cubierta Delantera ni Textos de "
 "Cubierta Trasera. Puede encontrar una copia de la licencia GFDL en este "
-"<ulink type=\"help\" url=\"help:fdl\">enlace</ulink> o en el archivo "
-"COPYING-DOCS distribuido con este manual."
+"<ulink type=\"help\" url=\"help:fdl\">enlace</ulink> o en el archivo COPYING-"
+"DOCS distribuido con este manual."
 
-#: C/gnotski.xml:12(legalnotice/para) C/legal.xml:12(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -113,7 +80,8 @@ msgstr ""
 "puede hacerlo añadiendo una copia de la licencia al manual, tal como se "
 "describe en la sección 6 de la licencia."
 
-#: C/gnotski.xml:19(legalnotice/para) C/legal.xml:19(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -128,7 +96,8 @@ msgstr ""
 "comerciales, los nombres aparecerán en mayúsculas o con las iniciales en "
 "mayúsculas."
 
-#: C/gnotski.xml:35(listitem/para) C/legal.xml:35(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -155,7 +124,8 @@ msgstr ""
 "NI VERSIÓN MODIFICADA DE ÉSTE POR EL PRESENTE, SALVO DENTRO DEL CUMPLIMIENTO "
 "DE LA RENUNCIA;Y"
 
-#: C/gnotski.xml:55(listitem/para) C/legal.xml:55(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -181,11 +151,8 @@ msgstr ""
 "ELLO, INCLUSO SI SE HABÍA COMUNICADO A AQUELLA PARTE LA POSIBILIDAD DE TALES "
 "DAÑOS."
 
-#: C/gnotski.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
-#| msgid ""
-#| "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
-#| "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
-#| "UNDERSTANDING THAT: <placeholder-1/>"
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -195,7 +162,8 @@ msgstr ""
 "LICENCIA LIBRE DE DOCUMENTACIÓN DE GNU Y TENIENDO EN CUENTA QUE: <_:"
 "orderedlist-1/>"
 
-#: C/gnotski.xml:63(authorgroup/author)
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:63
 msgid ""
 "<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -205,7 +173,8 @@ msgstr ""
 "<orgname>Proyecto de documentación de GNOME</orgname> <address> "
 "<email>andrew@sobala.net</email> </address> </affiliation>"
 
-#: C/gnotski.xml:72(authorgroup/othercredit)
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:72
 msgid ""
 "<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
@@ -215,7 +184,8 @@ msgstr ""
 "<orgname>Proyecto GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
 "email> </address> </affiliation>"
 
-#: C/gnotski.xml:81(authorgroup/othercredit)
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:81
 msgid ""
 "<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
@@ -225,26 +195,31 @@ msgstr ""
 "<orgname>Proyecto GNOME</orgname> <address> <email> ross@burtonini.com </"
 "email> </address> </affiliation>"
 
-#: C/gnotski.xml:139(revdescription/para)
+#. (itstool) path: revdescription/para
+#: C/index.docbook:139
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
-#: C/gnotski.xml:135(revhistory/revision)
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:135
 msgid ""
 "<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
 msgstr ""
-"<revnumber>v2.0</revnumber> <date>13 de agosto 2002</date> <_:revdescription-"
-"1/>"
+"<revnumber>v2.0</revnumber> <date>13 de agosto 2002</date> <_:"
+"revdescription-1/>"
 
-#: C/gnotski.xml:148(articleinfo/releaseinfo)
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:148
 msgid "This manual describes version 2.12 of GNOME Klotski."
 msgstr "Este manual describe la versión 2.12 de Klotski."
 
-#: C/gnotski.xml:151(legalnotice/title)
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:151
 msgid "Feedback"
 msgstr "Comentarios"
 
-#: C/gnotski.xml:152(legalnotice/para)
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:152
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Klotski</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -256,15 +231,18 @@ msgstr ""
 "indicaciones en la <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
 "\">Página de comentarios de GNOME</ulink>."
 
-#: C/gnotski.xml:160(article/indexterm)
+#. (itstool) path: article/indexterm
+#: C/index.docbook:160
 msgid "<primary>GNOME Klotski</primary>"
 msgstr "<primary>GNOME Klotski</primary>"
 
-#: C/gnotski.xml:167(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:167
 msgid "Introduction"
 msgstr "Introducción"
 
-#: C/gnotski.xml:168(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:168
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
@@ -274,7 +252,8 @@ msgstr ""
 "Klotski. El objetivo es mover el bloque patrón al área rodeada por "
 "marcadores verdes."
 
-#: C/gnotski.xml:171(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:171
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -282,7 +261,8 @@ msgstr ""
 "Lars Rydlinge (<email>Lars.Rydlinge@HIG.SE</email>) escribió "
 "<application>Klotski</application>."
 
-#: C/gnotski.xml:174(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:174
 msgid ""
 "<application>Klotski</application> is included in the gnome-games package, "
 "which is part of the GNOME desktop environment. This document describes "
@@ -292,7 +272,8 @@ msgstr ""
 "que es parte del entorno de escritorio GNOME. Este documento describe la "
 "versión 2.12 de <application>Klotski</application>."
 
-#: C/gnotski.xml:177(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:177
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 2 of "
@@ -307,7 +288,8 @@ msgstr ""
 "type=\"help\">enlace</ulink>, o en el archivo COPYING incluido con el código "
 "fuente de este programa."
 
-#: C/gnotski.xml:184(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:184
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-"
@@ -317,15 +299,34 @@ msgstr ""
 "aplicación o este manual, siga las indicaciones en este <ulink url=\"ghelp:"
 "GNOME-feedback\" type=\"help\">documento</ulink>."
 
-#: C/gnotski.xml:193(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:193
 msgid "Objective"
 msgstr "Objetivo"
 
-#: C/gnotski.xml:200(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:200
 msgid "The winning move"
 msgstr "El movimiento ganador"
 
-#: C/gnotski.xml:202(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:204
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_win.png' "
+#| "md5='5ed32942a09f8becfc784d804f70ea3e'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+msgstr ""
+"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:202
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>The patterned block should be moved to "
@@ -335,12 +336,8 @@ msgstr ""
 "> </imageobject> <textobject> <phrase>El bloque patrón se debe mover al "
 "espacio rodeado por marcadores verdes.</phrase> </textobject>"
 
-#: C/gnotski.xml:194(sect1/para)
-#| msgid ""
-#| "The objective of <application>Klotski</application> is to move the "
-#| "patterned block to the green markers in as few moves as possible. You do "
-#| "this by moving the blocks one at a time with the mouse until you can get "
-#| "the patterned block to the markers. <placeholder-1/>"
+#. (itstool) path: sect1/para
+#: C/index.docbook:194
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
@@ -352,19 +349,18 @@ msgstr ""
 "consigue moviendo un bloque cada vez con el ratón hasta que mueva el bloque "
 "patrón a los marcadores. <_:figure-1/>"
 
-#: C/gnotski.xml:219(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:219
 msgid "Playing <application>Klotski</application>"
 msgstr "Jugar a <application>Klotski</application>"
 
-#: C/gnotski.xml:242(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:242
 msgid "To Start <application>Klotski</application>"
 msgstr "Para iniciar <application>Klotski</application>"
 
-#: C/gnotski.xml:243(sect2/para)
-#| msgid ""
-#| "You can start <application>Klotski</application> from the Applications "
-#| "menu by choosing <menuchoice><guisubmenu>Games</"
-#| "guisubmenu><guimenuitem>Gnotski</guimenuitem></menuchoice>."
+#. (itstool) path: sect2/para
+#: C/index.docbook:243
 msgid ""
 "You can start <application>Klotski</application> from the Applications menu "
 "by choosing <menuchoice> <guisubmenu>Games</guisubmenu> "
@@ -374,11 +370,13 @@ msgstr ""
 "eligiendo <menuchoice><guisubmenu>Juegos</guisubmenu><guimenuitem>Gnotski</"
 "guimenuitem></menuchoice>."
 
-#: C/gnotski.xml:252(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:252
 msgid "The main window"
 msgstr "La ventana principal"
 
-#: C/gnotski.xml:253(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:253
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -386,11 +384,31 @@ msgstr ""
 "Se mostrará la siguiente ventana cuando inicie "
 "<application><application>Klotski</application></application>."
 
-#: C/gnotski.xml:257(figure/title)
+#. (itstool) path: figure/title
+#: C/index.docbook:257
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Ventana de inicio de <application>Klotski</application>"
 
-#: C/gnotski.xml:259(screenshot/mediaobject)
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:261
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_start_window.png' "
+#| "md5='23e584de3f58e5baf5c9ca5098a7961e'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='a50a9e6d3879951358e8c945aed3941e'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:259
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
 "\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
@@ -403,15 +421,18 @@ msgstr ""
 "área de juego y la barra de estado. La barra de menú contiene los menús "
 "«Juego» y «Ayuda». </phrase> </textobject>"
 
-#: C/gnotski.xml:275(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:275
 msgid "Menubar"
 msgstr "Barra de menú"
 
-#: C/gnotski.xml:279(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:279
 msgid "Game menu"
 msgstr "Menú de Juego"
 
-#: C/gnotski.xml:281(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:281
 msgid ""
 "The game menu allows you to start new games, view the highest scores and "
 "quit the program."
@@ -419,11 +440,13 @@ msgstr ""
 "El menú de juego le permite iniciar nuevos juegos, ver las máximas "
 "puntuaciones y salir del programa."
 
-#: C/gnotski.xml:286(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:286
 msgid "Help menu"
 msgstr "Menú de Ayuda"
 
-#: C/gnotski.xml:288(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:288
 msgid ""
 "The help menu allows you to view the documentation for <application>Klotski</"
 "application>"
@@ -431,11 +454,13 @@ msgstr ""
 "El menú de ayuda le permite ver la documentación de <application>Klotski</"
 "application>"
 
-#: C/gnotski.xml:295(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:295
 msgid "Game area"
 msgstr "Área de juego"
 
-#: C/gnotski.xml:297(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:297
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -444,19 +469,19 @@ msgstr ""
 "bloques alrededor con el ratón tal y como se describe en <xref linkend="
 "\"gnotski-moving\"/>."
 
-#: C/gnotski.xml:303(varlistentry/term)
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:303
 msgid "Statusbar"
 msgstr "Barra de estado"
 
-#: C/gnotski.xml:305(listitem/para)
+#. (itstool) path: listitem/para
+#: C/index.docbook:305
 msgid "The statusbar shows how many moves you have taken so far."
 msgstr ""
 "La barra de estado muestra cuántos movimientos ha realizado hasta el momento."
 
-#: C/gnotski.xml:272(sect2/para)
-#| msgid ""
-#| "The <application>Klotski</application> window contains the following "
-#| "elements: <placeholder-1/>"
+#. (itstool) path: sect2/para
+#: C/index.docbook:272
 msgid ""
 "The <application>Klotski</application> window contains the following "
 "elements: <_:variablelist-1/>"
@@ -464,11 +489,13 @@ msgstr ""
 "La ventana de <application>Klotski</application> contiene los siguientes "
 "elementos: <_:variablelist-1/>"
 
-#: C/gnotski.xml:314(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:314
 msgid "Starting a new game"
 msgstr "Iniciar un nuevo juego"
 
-#: C/gnotski.xml:315(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:315
 msgid ""
 "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
 "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
@@ -486,28 +513,29 @@ msgstr ""
 "guisubmenu> y <guisubmenu>Skill Pack</guisubmenu>. En estos submenús, el "
 "nombre de cada puzle se refiere al escenario de un juego."
 
-#: C/gnotski.xml:323(example/title)
+#. (itstool) path: example/title
+#: C/index.docbook:323
 msgid "Starting a game"
 msgstr "Iniciar un juego"
 
-#: C/gnotski.xml:324(example/para)
-#| msgid ""
-#| "To start a game, choose <menuchoice><guimenu>Game</guimenu><guisubmenu>"
-#| "[category]</guisubmenu><guimenuitem>[game scenario]</guimenuitem></"
-#| "menuchoice>"
+#. (itstool) path: example/para
+#: C/index.docbook:324
 msgid ""
-"To start a game, choose <menuchoice> <guimenu>Game</guimenu> <guisubmenu>"
-"[category]</guisubmenu> <guimenuitem>[game scenario]</guimenuitem> </"
-"menuchoice>"
+"To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
+"<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
+"guimenuitem> </menuchoice>"
 msgstr ""
-"Para iniciar un juego, elija <menuchoice><guimenu>Game</guimenu><guisubmenu>"
-"[categoría]</guisubmenu><guimenuitem>[escenario]</guimenuitem></menuchoice>"
+"Para iniciar un juego, elija <menuchoice><guimenu>Game</"
+"guimenu><guisubmenu>[categoría]</guisubmenu><guimenuitem>[escenario]</"
+"guimenuitem></menuchoice>"
 
-#: C/gnotski.xml:335(sect2/title)
+#. (itstool) path: sect2/title
+#: C/index.docbook:335
 msgid "Moving blocks"
 msgstr "Mover los bloques"
 
-#: C/gnotski.xml:336(sect2/para)
+#. (itstool) path: sect2/para
+#: C/index.docbook:336
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -521,11 +549,13 @@ msgstr ""
 "ocupado por otro bloque, a excepción del bloque patrón que puede pasar a "
 "través de los bloques verdes para así ganar."
 
-#: C/gnotski.xml:356(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:356
 msgid "Authors"
 msgstr "Autores"
 
-#: C/gnotski.xml:357(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:357
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala. To "
@@ -539,11 +569,13 @@ msgstr ""
 "o este manual, siga las indicaciones en este <ulink url=\"ghelp:gnome-"
 "feedback\" type=\"help\">documento</ulink>."
 
-#: C/gnotski.xml:377(sect1/title)
+#. (itstool) path: sect1/title
+#: C/index.docbook:377
 msgid "License"
 msgstr "Licencia"
 
-#: C/gnotski.xml:378(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:378
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -555,7 +587,8 @@ msgstr ""
 "GNU</citetitle> como se publicó por la Free Software Foundation, en la "
 "versión 2 de la licencia, o (a su elección) cualquier versión posterior."
 
-#: C/gnotski.xml:385(sect1/para)
+#. (itstool) path: sect1/para
+#: C/index.docbook:385
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -567,7 +600,8 @@ msgstr ""
 "IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la <citetitle>Licencia Pública "
 "General GNU</citetitle> para más detalles."
 
-#: C/gnotski.xml:398(para/address)
+#. (itstool) path: para/address
+#: C/index.docbook:398
 #, no-wrap
 msgid ""
 "\n"
@@ -584,16 +618,8 @@ msgstr ""
 "    <country>USA</country>\n"
 "   "
 
-#: C/gnotski.xml:391(sect1/para)
-#| msgid ""
-#| "A copy of the <citetitle>GNU General Public License</citetitle> is "
-#| "included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. "
-#| "You may also obtain a copy of the <citetitle>GNU General Public License</"
-#| "citetitle> from the Free Software Foundation by visiting <ulink type="
-#| "\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing "
-#| "to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-#| "street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-#| "1307</postcode><country>USA</country></address>"
+#. (itstool) path: sect1/para
+#: C/index.docbook:391
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -608,18 +634,13 @@ msgstr ""
 "<ulink url=\"http://www.fsf.org\" type=\"http\">su página web</ulink> o "
 "escribiendo a <_:address-1/>"
 
-#: C/legal.xml:9(para/ulink)
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
 msgid "link"
 msgstr "enlace"
 
-#: C/legal.xml:2(legalnotice/para)
-#| msgid ""
-#| "Permission is granted to copy, distribute and/or modify this document "
-#| "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
-#| "or any later version published by the Free Software Foundation with no "
-#| "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#| "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
-#| "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
