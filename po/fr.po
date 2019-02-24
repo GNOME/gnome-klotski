@@ -24,31 +24,89 @@
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
 # Bruno Cauet <brunocauet@gmail.com>, 2014.
 # Julien Hardelin <jhardlin@orange.fr>, 2015.
+# Charles Monzat <charles.monzat@free.fr>, 2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-28 06:57+0000\n"
-"PO-Revision-Date: 2017-09-08 19:23+0200\n"
-"Last-Translator: Julien Hardelin <jhardlin@orange.fr>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-01-20 11:10+0000\n"
+"PO-Revision-Date: 2019-02-20 19:03+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.30.1\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr "_Scores"
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr "Aid_e"
+
+#: data/klotski.ui:18
+#| msgid "Klotski"
+msgid "_About Klotski"
+msgstr "À _propos de Klotski"
+
+#: data/klotski.ui:59
+msgid "Huarong Trail"
+msgstr "La piste de Huarong"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "Paquet Défi"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "Paquet Compétence"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+msgid "Previous"
+msgstr "Précédent"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr "Suivant"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:112
+msgid "Klotski"
+msgstr "Klotski"
+
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr "_Recommencer"
+
+#: data/klotski.ui:307
+msgid "Restart the current puzzle"
+msgstr "Recommence la grille actuelle"
+
+#: data/klotski.ui:320
+msgid "_Change Puzzle"
+msgstr "_Changer de grille"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr "Choisir une autre grille"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "Klotski de GNOME"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "Glisser des blocs pour résoudre un puzzle"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -60,7 +118,7 @@ msgstr ""
 "Pour ce faire vous devrez déplacer les autres blocs hors du chemin. Finissez "
 "chaque casse-tête en aussi peu de coups que possible !"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -70,100 +128,49 @@ msgstr ""
 "et de difficulté variée. Certaines dispositions sont similaires et seuls un "
 "ou deux blocs diffèrent. D’autres sont plus variées."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Le projet GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "jeu;stratégie;logique;déplacement;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "La piste de Huarong"
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.Klotski.desktop.in:9
+msgid "org.gnome.Klotski"
+msgstr "org.gnome.Klotski"
 
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Paquet Défi"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Paquet Compétence"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Précédent"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Suivant"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_Recommencer"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Recommence la grille actuelle"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Changer de grille"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Choisir une autre grille"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "_Scores"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "Aid_e"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "À _propos"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_Quitter"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Le puzzle en cours"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Le nombre de puzzles déjà joués."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Largeur de la fenêtre en pixels"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Hauteur de la fenêtre en pixels"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "vrai si la fenêtre est maximisée"
 
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Afficher la version et quitter"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:114
 msgid "Sliding block puzzles"
 msgstr "Casse-têtes de blocs coulissants"
 
-#: ../src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:122
 msgid "translator-credits"
 msgstr ""
 "Christophe Merlet <redfox@redfoxcenter.org>\n"
@@ -181,155 +188,161 @@ msgstr ""
 "Julien Hardelin <jhardlin@orange.fr>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Seulement 18 coups"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Pâquerette"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Violette"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
+#: src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Coquelicot"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
+#: src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Pensée"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Perce-neige"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Frustration"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
+#: src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Course"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
+#: src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Embuscade"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
+#: src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
+#: src/klotski-window.vala:202
 msgid "Success"
 msgstr "Succès"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
+#: src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Os"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
+#: src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Fortune"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Idiot"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
+#: src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Cléopâtre"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
+#: src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Requin"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
+#: src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Rome"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "Fanion"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "Ithaque"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Peloponnèse"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Transeurope"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Polonaise"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Mer Baltique"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Embouteillage"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
+#: src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Rayon de soleil"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#: src/klotski-window.vala:527
 msgid "Puzzle"
 msgstr "Grille"
 
-#: ../src/klotski-window.vala:781
+#: src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Déplacements : %d"
 
-#: ../src/klotski-window.vala:784
+#: src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Niveau terminé."
+
+#~ msgid "_About"
+#~ msgstr "À _propos"
+
+#~ msgid "_Quit"
+#~ msgstr "_Quitter"
