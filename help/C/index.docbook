@@ -171,8 +171,7 @@
 	<para> &app; was written by Lars Rydlinge
 	(<email>Lars.Rydlinge@HIG.SE</email>).</para>
 
-	<para>&app; is included in the gnome-games package, which is part of the GNOME desktop environment. 
-	This document describes version &appversion; of &app;. </para>
+	<para>This document describes version &appversion; of &app;. </para>
 
 	<para> This program is distributed under the terms of the GNU
 	General Public license as published by the Free Software
