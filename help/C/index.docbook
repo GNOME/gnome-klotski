@@ -220,10 +220,6 @@
 	<itemizedlist> 
 	<listitem> 
 		<para> 
-		<xref linkend="gnotski-start"/></para> 
-	</listitem>
-	<listitem> 
-		<para> 
 		<xref linkend="gnotski-ui"/></para> 
 	</listitem> 
 	<listitem> 
@@ -235,16 +231,6 @@
 		<xref linkend="gnotski-moving"/></para> 
 	</listitem>
 	</itemizedlist> </para>
-
-	<!-- =========== To start gnotski ============================== -->
-	<sect2 id="gnotski-start">
-		<title>To Start &app;</title>
-		<para>You can start &app; from the Applications menu by choosing
-		<menuchoice>
-			<guisubmenu>Games</guisubmenu>
-		    	<guimenuitem>Gnotski</guimenuitem>
-		</menuchoice>.</para>
-	</sect2>
 
 	<!-- =========== The main window ============================== -->
 	<sect2 id="gnotski-ui">
