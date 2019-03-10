@@ -75,6 +75,8 @@ public class Klotski : Gtk.Application
         set_accels_for_action ("win.next-puzzle", {"Down"});     // TODO a weird behaviour exists when you first change puzzle pack, then go to
         set_accels_for_action ("win.prev-pack", {"Page_Up"});    // TODO the first/last one, click on a puzzle, and immediatly hit Up or Down arrows.
         set_accels_for_action ("win.next-pack", {"Page_Down"});  // TODO that makes these keybindings sometimes act strangely, but they’re good.
+
+        set_accels_for_action ("app.quit", {"<Primary>q"});
     }
 
     protected override void activate ()
