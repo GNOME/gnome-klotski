@@ -1,5 +1,5 @@
 project('gnome-klotski', 'vala', 'c',
-        version: '3.31.92')
+        version: '3.32.0')
 
 project_id = 'org.gnome.Klotski'
 i18n = import('i18n')
