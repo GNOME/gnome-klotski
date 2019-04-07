@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2019-01-20 11:10+0000\n"
+"POT-Creation-Date: 2019-03-26 17:46+0000\n"
 "PO-Revision-Date: 2019-02-13 00:10+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -61,7 +61,7 @@ msgstr "Næste"
 
 #. <initial-focus name=""/>
 #: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:112
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
 msgid "Klotski"
 msgstr "Klotski"
 
@@ -121,28 +121,23 @@ msgstr "GNOME-projektet"
 msgid "game;strategy;logic;move;"
 msgstr "spil;strategi;logik;flyt;træk;flytte;trække;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Klotski.desktop.in:9
-msgid "org.gnome.Klotski"
-msgstr "org.gnome.Klotski"
-
-#: data/org.gnome.klotski.gschema.xml:5
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Det igangværende spil"
 
-#: data/org.gnome.klotski.gschema.xml:6
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Spillets nummer."
 
-#: data/org.gnome.klotski.gschema.xml:10
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Bredden af vinduet i billedpunkter"
 
-#: data/org.gnome.klotski.gschema.xml:14
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Højden af vinduet i billedpunkter"
 
-#: data/org.gnome.klotski.gschema.xml:18
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "sand hvis vinduet er maksimeret"
 
@@ -151,11 +146,11 @@ msgid "Print release version and exit"
 msgstr "Vis udgivelsesversion og afslut"
 
 # (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdelige ordspil bliver brugt)
-#: src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:116
 msgid "Sliding block puzzles"
 msgstr "“Klodsede” opgaver"
 
-#: src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -165,8 +160,9 @@ msgstr ""
 "Ole Laursen\n"
 "Ask Hjorth Larsen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #. puzzle name
 #: src/klotski-window.vala:74
@@ -324,8 +320,12 @@ msgstr "Træk: %d"
 msgid "Level completed."
 msgstr "Bane fuldført."
 
+#~ msgid "org.gnome.Klotski"
+#~ msgstr "org.gnome.Klotski"
+
 #~ msgid "_About"
 #~ msgstr "_Om"
 
 #~ msgid "_Quit"
 #~ msgstr "_Afslut"
+
