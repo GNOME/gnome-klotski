@@ -2,8 +2,11 @@ project('gnome-klotski', 'vala', 'c',
         version: '3.32.0')
 
 project_id = 'org.gnome.Klotski'
-i18n = import('i18n')
+
+# used to install help
 gnome = import('gnome')
+# used for internationalization
+i18n = import('i18n')
 # used to run post install script
 python3 = import('python3')
 
@@ -13,6 +16,10 @@ gnome_games_support_dependency = dependency('libgnome-games-support-1')
 gtk_dependency = dependency('gtk+-3.0', version: '>= 3.12.0')
 rsvg_dependency = dependency('librsvg-2.0', version: '>= 2.32.0')
 posix_dependency = meson.get_compiler('vala').find_library('posix')
+
+appstream_util          = find_program('appstream-util',        required: false)
+desktop_file_validate   = find_program('desktop-file-validate', required: false)
+glib_compile_schema     = find_program('glib-compile-schemas',  required: true) # useful?
 
 # Set gettext package name
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language: 'c')
