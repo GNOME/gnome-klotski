@@ -2,304 +2,299 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-#
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2014, 2015, 2016.
+# Asier Sarasua Garmendia  <asier.sarasua@gmail.com>, 2013, 2019.
+#
 msgid ""
-msgstr ""
-"Project-Id-Version: gnome-klotski master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-14 13:20+0000\n"
-"PO-Revision-Date: 2016-09-20 12:12+0100\n"
-"Last-Translator: dooteo <dooteo@zundan.com>\n"
-"Language-Team: Basque <librezale@librezale.org>\n"
+msgstr "Project-Id-Version: gnome-klotski master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-03-26 17:46+0000\n"
+"PO-Revision-Date: 2019-08-11 10:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
-"X-Generator: Lokalize 2.0\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr "_Puntuazioak"
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: data/klotski.ui:18
+msgid "_About Klotski"
+msgstr "Klotski jokoari _buruz"
+
+#: data/klotski.ui:59
+msgid "Huarong Trail"
+msgstr "Huarong bidea"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "Erronka paketea"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "Trebetasuna paketea"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+msgid "Previous"
+msgstr "Aurrekoa"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr "Hurrengoa"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
+msgid "Klotski"
+msgstr "Klotski"
+
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr "_Hasi hasieratik"
+
+#: data/klotski.ui:307
+msgid "Restart the current puzzle"
+msgstr "Berrabiarazi uneko jokoa"
+
+#: data/klotski.ui:320
+msgid "_Change Puzzle"
+msgstr "_Aldatu jokoa"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr "Aukeratu beste puzzlea"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "GNOME Klotski"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "Arrastatu blokeak buru-hausgarria ebazteko"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
-msgstr ""
-"GNOME Klotski blokeak korritzeko puzzle multzo bat da. Markak dituen blokea "
-"berde koloreko markatzaileak dauden lekura eramatea da helburua. Hori "
-"lortzeko beste blokeak trabatik kendu beharko dituzu. Osatu puzzle bakoitza "
-"ahalik eta mugimendu gutxienekin."
+msgstr "GNOME Klotski blokeak korritzeko puzzle multzo bat da. Markak dituen blokea berde koloreko markatzaileak dauden lekura eramatea da helburua. Hori lortzeko beste blokeak trabatik kendu beharko dituzu. Osatu puzzle bakoitza ahalik eta mugimendu gutxienekin."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
-msgstr ""
-"GNOME Klotski hogeita hamar diseinu eta zailtasun desberdineko puzzle inguru "
-"ditu. Diseinu batzuk antzekoak dira eta bloke baten edo gehiagoren tamainak "
-"aldatzen dira. Beste diseinu batzuk aldaera gehiago dituzte."
+msgstr "GNOME Klotski hogeita hamar diseinu eta zailtasun desberdineko puzzle inguru ditu. Diseinu batzuk antzekoak dira eta bloke baten edo gehiagoren tamainak aldatzen dira. Beste diseinu batzuk aldaera gehiago dituzte."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "jokoa;estrategia;logika;mugimendua;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "Huarong bidea"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Erronka paketea"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Trebetasuna paketea"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Aurrekoa"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Hurrengoa"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_Hasi berriro"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Berrabiarazi uneko jokoa"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Aldatu jokoa"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Aukeratu beste puzzlea"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "_Puntuazioak"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "La_guntza"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "Honi _buruz"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_Irten"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Jokoan dagoen buru-hausgarria"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Jokoan dauden buru-hausgarri kopurua."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Leihoaren zabalera (pixeletan)"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Leihoaren altuera (pixeletan)"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "egia leihoa maximizatuta badago"
 
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "Erakutsi bertsioaren informazioa eta irten"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:116
 msgid "Sliding block puzzles"
 msgstr "Puzzle blokea desplazatzea"
 
-#: ../src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
-msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
+msgstr "Asier Sarasua Garmendia <asier.sarasua@gmail.com>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "Soilik 18 urrats"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "Bitxilorea"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Bioleta"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
+#: src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "Mitxoleta"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
+#: src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "Pentsamendua"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "Negu-txilintxa"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "Asto gorria"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
+#: src/klotski-window.vala:165
 msgid "Trail"
 msgstr "Aztarna"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
+#: src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "Segada"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
+#: src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
+#: src/klotski-window.vala:202
 msgid "Success"
-msgstr "Arrakasta"
+msgstr "Ongi burutu da"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
+#: src/klotski-window.vala:212
 msgid "Bone"
 msgstr "Hezurra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
+#: src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "Zortea"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:239
 msgid "Fool"
 msgstr "Eroa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
+#: src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
+#: src/klotski-window.vala:274
 msgid "Shark"
 msgstr "Marrazoa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
+#: src/klotski-window.vala:286
 msgid "Rome"
 msgstr "Erroma"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "Pennant buru-hausgarria"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:311
 msgid "Ithaca"
-msgstr "Ithaka"
+msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "Peloponeso"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "Polonesa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "Itsaso Baltikoa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "Pastel amerikarra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "Buxadura"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
+#: src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "Eguzki-izpia"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#: src/klotski-window.vala:527
 msgid "Puzzle"
 msgstr "Puzzlea"
 
-#: ../src/klotski-window.vala:781
+#: src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "Mugimenduak: %d"
 
-#: ../src/klotski-window.vala:784
+#: src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "Maila osatu da."
+
+#~ msgid "_About"
+#~ msgstr "Honi _buruz"
+
+#~ msgid "_Quit"
+#~ msgstr "_Irten"
