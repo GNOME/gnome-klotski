@@ -11,11 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-18 16:51+0000\n"
-"PO-Revision-Date: 2016-09-18 21:28+0430\n"
-"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-03-26 17:46+0000\n"
+"PO-Revision-Date: 2019-08-13 15:15+0430\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -23,287 +22,292 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr "امتیا_زها"
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr "_راهنما"
+
+#: data/klotski.ui:18
+msgid "_About Klotski"
+msgstr "دربارهٔ کی‌لاتسکی"
+
+#: data/klotski.ui:59
+msgid "Huarong Trail"
+msgstr "ردپای اوئارانگ"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "بستهٔ چالش"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "بستهٔ مهارت"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+msgid "Previous"
+msgstr "پیشین"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr "بعدی"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
+msgid "Klotski"
+msgstr "کی‌لاتسکی"
+
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr "_شروع دوباره"
+
+#: data/klotski.ui:307
+msgid "Restart the current puzzle"
+msgstr "شروع دوباره بازی فعلی"
+
+#: data/klotski.ui:320
+msgid "_Change Puzzle"
+msgstr "_تغییر پازل"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr "یک پازل دیگر انتخاب کنید"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "گنوم کی‌لاتسکی"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "بلوک‌ها را بلغزانید تا پازل را حل کنید"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
-"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you’ll "
-"need to slide other blocks out of the way. Complete each puzzle in as few "
-"moves as possible!"
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
+"patterned block to the area bordered by green markers. To do so, you’ll need "
+"to slide other blocks out of the way. Complete each puzzle in as few moves as "
+"possible!"
 msgstr ""
 "«گنوم کی‌لاتسکی» یک مجموعه از پازلِ بلوک‌های لغزنده است. هدف این است که الگوی "
 "بلوکه‌ها را به ناحیه مشخص شده سبز منتقل کرد. برای اینکار، شما باید بلوک‌های "
 "دیگر را از سر راه بردارید. هر پازل را در کمترین حرکت ممکن حل کنید!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
 "«گنوم کی‌لاتسکی» با نزدیک به ۳۰ چیدمان با سختی متفاوت ارائه شده است. بعضی از "
-"چیدمان‌ها مشابه هستند و فقط اندازه یک یا چند بلوک آن متفاوت است. بقیه "
-"چیدمان‌ها انواع بیشتری دارند."
+"چیدمان‌ها مشابه هستند و فقط اندازه یک یا چند بلوک آن متفاوت است. بقیه چیدمان‌ها "
+"انواع بیشتری دارند."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
-msgstr "پروژه گنوم"
+msgstr "پروژهٔ گنوم"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "کی‌لاتسکی"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "game;strategy;logic;move;بازی;استراتژی;منطق;حرکت;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "ردپای اوئارانگ"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "بسته‌ی چالش"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "بسته‌یی مهارت"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "قبلی"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "بعدی"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_شروع دوباره"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "شروع دوباره بازی فعلی"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_تغییر پازل"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "یک پازل دیگر انتخاب کنید"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "امتیا_زها"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "_راهنما"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "_درباره"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_خروج"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "پازل در حال بازی"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "تعداد پازل‌های بازی شده."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "عرض پنجره به پیکسل"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "ارتفاع پنجره به پیکسل"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:17
 msgid "Print release version and exit"
-msgstr "نمایش نسخه‌ی انتشار و خروج"
+msgstr "نمایش نگارش انتشار و خروج"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:116
 msgid "Sliding block puzzles"
 msgstr "پازل بلوک‌های لغزنده"
 
-#: ../src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "فقط ۱۸ پله"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "مینا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:100
 msgid "Violet"
 msgstr "بنفشه"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
+#: src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "توله سگ"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
+#: src/klotski-window.vala:126
 msgid "Pansy"
-msgstr "بنفشه‌ی فرنگی"
+msgstr "بنفشهٔ فرنگی"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:139
 msgid "Snowdrop"
-msgstr "دانه‌ی برف"
+msgstr "دانهٔ برف"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "خر قرمز"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
+#: src/klotski-window.vala:165
 msgid "Trail"
 msgstr "کوره‌راه"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
+#: src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "کمین"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
+#: src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "آگاتکا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
+#: src/klotski-window.vala:202
 msgid "Success"
 msgstr "موفقیت"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
+#: src/klotski-window.vala:212
 msgid "Bone"
 msgstr "استخوان"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
+#: src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "بخت"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:239
 msgid "Fool"
-msgstr "احمق"
+msgstr "فریب"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
+#: src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "سلیمان"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "کلئوپاترا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
+#: src/klotski-window.vala:274
 msgid "Shark"
 msgstr "کوسه"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
+#: src/klotski-window.vala:286
 msgid "Rome"
 msgstr "رم"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "پازل پِنَنت"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "ایتاکا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "پلوپونس"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "ترانس‌اروپا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "لوتسیانکا"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "پولونز"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "دریای بالتیک"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "پای امریکایی"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "ترافیک"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
+#: src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "آفتاب"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#: src/klotski-window.vala:527
 msgid "Puzzle"
 msgstr "پازل"
 
-#: ../src/klotski-window.vala:781
+#: src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "جابه‌جایی‌ها: %Id"
 
-#: ../src/klotski-window.vala:784
+#: src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "مرحله تمام شد."
+
+#~ msgid "_About"
+#~ msgstr "_درباره"
+
+#~ msgid "_Quit"
+#~ msgstr "_خروج"
