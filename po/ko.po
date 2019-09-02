@@ -9,7 +9,7 @@
 # Updated for gnome-klotski:
 #
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017.
-# Changwoo Ryu <cwryu@debian.org>, 2013-2017.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2017, 2019.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -20,10 +20,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-03-20 12:24+0000\n"
-"PO-Revision-Date: 2017-09-01 19:15+0900\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-03-26 17:46+0000\n"
+"PO-Revision-Date: 2019-09-02 14:06+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -33,16 +32,72 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.3\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr "점수(_S)"
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: data/klotski.ui:18
+msgid "_About Klotski"
+msgstr "클로츠키 정보(_A)"
+
+# hwarong 화영, 수호지 캐릭터
+#: data/klotski.ui:59
+msgid "Huarong Trail"
+msgstr "화영 자취"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "도전 모음"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "기술 모음"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+msgid "Previous"
+msgstr "이전"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr "다음"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
+msgid "Klotski"
+msgstr "클로츠키"
+
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr "처음부터 시작(_S)"
+
+#: data/klotski.ui:307
+msgid "Restart the current puzzle"
+msgstr "현재 퍼즐 다시 시작"
+
+#: data/klotski.ui:320
+msgid "_Change Puzzle"
+msgstr "퍼즐 바꾸기(_C)"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr "다른 퍼즐 선택"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "그놈 클로츠키"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "블록을 밀어서 퍼즐을 풉니다"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -54,7 +109,7 @@ msgstr ""
 "른 블럭을 먼저 움직여서 길을 만들어야 합니다. 가능한 적게 움직여 퍼즐을 푸십"
 "시오!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -63,254 +118,203 @@ msgstr ""
 "그놈 클로츠키에는 여러가지 난이도의 약 30개의 퍼즐이 들어 있습니다. 비슷한 퍼"
 "즐도 있고 블럭 크기만 조금 다른 것도 있습니다. 완전히 다른 퍼즐도 있습니다."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "클로츠키"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "game;게임;strategy;전략;logic;논리;로직;move;움직이기;이동;"
 
-# hwarong 화영, 수호지 캐릭터
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "화영 자취"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "도전 모음"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "기술 모음"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "이전"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "다음"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "처음부터 시작(_S)"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "현재 퍼즐 다시 시작"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "퍼즐 바꾸기(_C)"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "다른 퍼즐 선택"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "점수(_S)"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "도움말(_H)"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "정보(_A)"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "끝내기(_Q)"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "플레이할 퍼즐"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "플레이하는 퍼즐의 크기."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "창의 너비, 픽셀 단위"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "창의 높이, 픽셀 단위"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "참이면 창을 최대화"
 
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:17
 msgid "Print release version and exit"
 msgstr "릴리스 버전을 표시하고 끝납니다"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:116
 msgid "Sliding block puzzles"
 msgstr "블록 밀기 퍼즐"
 
-#: ../src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
 msgstr "류창우 <cwryu@debian.org>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:74
 msgid "Only 18 Steps"
 msgstr "겨우 18 단계"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:87
 msgid "Daisy"
 msgstr "데이지"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:100
 msgid "Violet"
 msgstr "바이올렛"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
+#: src/klotski-window.vala:113
 msgid "Poppy"
 msgstr "퍼피"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
+#: src/klotski-window.vala:126
 msgid "Pansy"
 msgstr "펜지"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:139
 msgid "Snowdrop"
 msgstr "스노드롭"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:152
 msgid "Red Donkey"
 msgstr "붉은 당나귀"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
+#: src/klotski-window.vala:165
 msgid "Trail"
 msgstr "추적"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
+#: src/klotski-window.vala:178
 msgid "Ambush"
 msgstr "잠복"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
+#: src/klotski-window.vala:191
 msgid "Agatka"
 msgstr "아가트카"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
+#: src/klotski-window.vala:202
 msgid "Success"
 msgstr "성공"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
+#: src/klotski-window.vala:212
 msgid "Bone"
 msgstr "뼈"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
+#: src/klotski-window.vala:225
 msgid "Fortune"
 msgstr "포츈"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:239
 msgid "Fool"
 msgstr "바보"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
+#: src/klotski-window.vala:249
 msgid "Solomon"
 msgstr "솔로몬"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:262
 msgid "Cleopatra"
 msgstr "클레오파트라"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
+#: src/klotski-window.vala:274
 msgid "Shark"
 msgstr "상어"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
+#: src/klotski-window.vala:286
 msgid "Rome"
 msgstr "로마"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:298
 msgid "Pennant Puzzle"
 msgstr "페넌트 퍼즐"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:311
 msgid "Ithaca"
 msgstr "이타카"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:334
 msgid "Pelopones"
 msgstr "펠로포네스"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:346
 msgid "Transeuropa"
 msgstr "트랜스유로파"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:358
 msgid "Lodzianka"
 msgstr "로쟌카"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:369
 msgid "Polonaise"
 msgstr "폴로네즈"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:380
 msgid "Baltic Sea"
 msgstr "발트해"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:392
 msgid "American Pie"
 msgstr "아메리칸파이"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:408
 msgid "Traffic Jam"
 msgstr "교통체증"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
+#: src/klotski-window.vala:419
 msgid "Sunshine"
 msgstr "햇볕"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#: src/klotski-window.vala:527
 msgid "Puzzle"
 msgstr "퍼즐"
 
-#: ../src/klotski-window.vala:781
+#: src/klotski-window.vala:781
 #, c-format
 msgid "Moves: %d"
 msgstr "이동: %d"
 
-#: ../src/klotski-window.vala:784
+#: src/klotski-window.vala:784
 msgid "Level completed."
 msgstr "단계 마침."
+
+#~ msgid "_About"
+#~ msgstr "정보(_A)"
+
+#~ msgid "_Quit"
+#~ msgstr "끝내기(_Q)"
