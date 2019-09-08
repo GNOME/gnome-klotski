@@ -13,9 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-17 17:13+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-03-26 17:46+0000\n"
 "PO-Revision-Date: 2013-09-16 10:12+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -25,252 +24,139 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr ""
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr ""
+
+#: data/klotski.ui:18
+#, fuzzy
+#| msgid "Klotski"
+msgid "_About Klotski"
+msgstr "Klotski"
+
+#: data/klotski.ui:59
+#, fuzzy
+#| msgid "HuaRong Trail"
+msgid "Huarong Trail"
+msgstr "HuaRong Trail"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "チャレンジパック"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "スキルパック"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+#, fuzzy
+#| msgid "Previous Puzzle"
+msgid "Previous"
+msgstr "前のパズル"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr ""
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
 msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnotski.desktop.in.in.h:2
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr ""
+
+#: data/klotski.ui:307
+#, fuzzy
+#| msgid "_Restart Puzzle"
+msgid "Restart the current puzzle"
+msgstr "パズルをやり直す(_R)"
+
+#: data/klotski.ui:320
+#, fuzzy
+#| msgid "Pennant Puzzle"
+msgid "_Change Puzzle"
+msgstr "パズル大会"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr ""
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
+#, fuzzy
+#| msgid "Klotski"
+msgid "GNOME Klotski"
+msgstr "Klotski"
+
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "ブロックをずらしながらパズルを解いてください"
 
-#: ../data/gnotski.desktop.in.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+
+#: data/org.gnome.Klotski.appdata.xml.in:16
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+
+#: data/org.gnome.Klotski.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr ""
 "game;strategy;logic;move;ゲーム;ストラテジー;ロジック;論理;思考;puzzle;パズ"
 "ル;"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "プレイするパズル"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "プレイするパズルの数です。"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "ウィンドウの幅 (ピクセル単位) です。"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "ウィンドウの高さ (ピクセル単位) です。"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "ウィンドウが最小化されている場合は TRUE"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:6
-msgid "true if the window is fullscren"
-msgstr "ウィンドウがフルスクリーンの場合は TRUE"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:49
-msgid "Only 18 Steps"
-msgstr "18ステップ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:62
-msgid "Daisy"
-msgstr "ヒナギク"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:75
-msgid "Violet"
-msgstr "スミレ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:88
-msgid "Poppy"
-msgstr "ケシ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:101
-msgid "Pansy"
-msgstr "三色スミレ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:114
-msgid "Snowdrop"
-msgstr "Snowdrop"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:127
-msgid "Red Donkey"
-msgstr "赤いロバ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:140
-msgid "Trail"
-msgstr "トレイル"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:153
-msgid "Ambush"
-msgstr "待ち伏せ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:166
-msgid "Agatka"
-msgstr "Agatka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:177
-msgid "Success"
-msgstr "大当たり"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:187
-msgid "Bone"
-msgstr "骨"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:200
-msgid "Fortune"
-msgstr "運命"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:214
-msgid "Fool"
-msgstr "道化師"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:224
-msgid "Solomon"
-msgstr "ソロモン"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:237
-msgid "Cleopatra"
-msgstr "クレオパトラ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:249
-msgid "Shark"
-msgstr "サメ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:261
-msgid "Rome"
-msgstr "ローマ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:273
-msgid "Pennant Puzzle"
-msgstr "パズル大会"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:286
-msgid "Ithaca"
-msgstr "イサカ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:309
-msgid "Pelopones"
-msgstr "Pelopones"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:321
-msgid "Transeuropa"
-msgstr "Transeuropa"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:333
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:344
-msgid "Polonaise"
-msgstr "ポロネーズ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:355
-msgid "Baltic Sea"
-msgstr "バルト海"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:367
-msgid "American Pie"
-msgstr "アメリカンパイ"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
-msgid "Traffic Jam"
-msgstr "渋滞"
-
-#. puzzle name
-#: ../src/gnome-klotski.vala:394
-msgid "Sunshine"
-msgstr "日の輝き"
-
-#: ../src/gnome-klotski.vala:439
-msgid "_Game"
-msgstr "ゲーム(_G)"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:441
-msgid "HuaRong Trail"
-msgstr "HuaRong Trail"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:443
-msgid "Challenge Pack"
-msgstr "チャレンジパック"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:445
-msgid "Skill Pack"
-msgstr "スキルパック"
-
-#: ../src/gnome-klotski.vala:446
-msgid "_Restart Puzzle"
-msgstr "パズルをやり直す(_R)"
-
-#: ../src/gnome-klotski.vala:447
-msgid "Next Puzzle"
-msgstr "次のパズル"
-
-#: ../src/gnome-klotski.vala:448
-msgid "Previous Puzzle"
-msgstr "前のパズル"
-
-#: ../src/gnome-klotski.vala:606
-msgid "_New"
-msgstr "新しいゲーム(_N)"
-
-#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
-msgid "_Fullscreen"
-msgstr "フルスクリーン(_F)"
-
-#: ../src/gnome-klotski.vala:667
-msgid "_Leave Fullscreen"
-msgstr "フルスクリーンの解除(_L)"
-
-#: ../src/gnome-klotski.vala:859
-msgid "Puzzle: "
-msgstr "パズル: "
-
-#: ../src/gnome-klotski.vala:873
-#, c-format
-msgid "Moves: %d"
-msgstr "移動数: %d"
-
-#: ../src/gnome-klotski.vala:876
-msgid "Level completed."
-msgstr "レベルを制覇しました"
-
-#: ../src/gnome-klotski.vala:957
-msgid ""
-"Sliding Block Puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
+#: src/gnome-klotski.vala:17
+msgid "Print release version and exit"
 msgstr ""
-"ブロックをずらしてしくパズルです。\n"
-"\n"
-"Klotski は GNOME ゲーム集の一部です。"
 
-#: ../src/gnome-klotski.vala:964
+#: src/gnome-klotski.vala:116
+#, fuzzy
+#| msgid "Slide blocks to solve the puzzle"
+msgid "Sliding block puzzles"
+msgstr "ブロックをずらしながらパズルを解いてください"
+
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -283,22 +169,200 @@ msgstr ""
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
-#: ../src/gnome-klotski.vala:967
-msgid "GNOME Games web site"
-msgstr "GNOME ゲーム集のウェブサイト"
+#. puzzle name
+#: src/klotski-window.vala:74
+msgid "Only 18 Steps"
+msgstr "18ステップ"
 
-#: ../src/gnome-klotski.vala:1020
-msgid "New Game"
-msgstr "新しいゲーム"
+#. puzzle name
+#: src/klotski-window.vala:87
+msgid "Daisy"
+msgstr "ヒナギク"
 
-#: ../src/gnome-klotski.vala:1035
-msgid "Puzzle:"
+#. puzzle name
+#: src/klotski-window.vala:100
+msgid "Violet"
+msgstr "スミレ"
+
+#. puzzle name
+#: src/klotski-window.vala:113
+msgid "Poppy"
+msgstr "ケシ"
+
+#. puzzle name
+#: src/klotski-window.vala:126
+msgid "Pansy"
+msgstr "三色スミレ"
+
+#. puzzle name
+#: src/klotski-window.vala:139
+msgid "Snowdrop"
+msgstr "Snowdrop"
+
+#. puzzle name - sometimes called "Le'Ane Rouge"
+#: src/klotski-window.vala:152
+msgid "Red Donkey"
+msgstr "赤いロバ"
+
+#. puzzle name
+#: src/klotski-window.vala:165
+msgid "Trail"
+msgstr "トレイル"
+
+#. puzzle name
+#: src/klotski-window.vala:178
+msgid "Ambush"
+msgstr "待ち伏せ"
+
+#. puzzle name
+#: src/klotski-window.vala:191
+msgid "Agatka"
+msgstr "Agatka"
+
+#. puzzle name
+#: src/klotski-window.vala:202
+msgid "Success"
+msgstr "大当たり"
+
+#. puzzle name
+#: src/klotski-window.vala:212
+msgid "Bone"
+msgstr "骨"
+
+#. puzzle name
+#: src/klotski-window.vala:225
+msgid "Fortune"
+msgstr "運命"
+
+#. puzzle name
+#: src/klotski-window.vala:239
+msgid "Fool"
+msgstr "道化師"
+
+#. puzzle name
+#: src/klotski-window.vala:249
+msgid "Solomon"
+msgstr "ソロモン"
+
+#. puzzle name
+#: src/klotski-window.vala:262
+msgid "Cleopatra"
+msgstr "クレオパトラ"
+
+#. puzzle name
+#: src/klotski-window.vala:274
+msgid "Shark"
+msgstr "サメ"
+
+#. puzzle name
+#: src/klotski-window.vala:286
+msgid "Rome"
+msgstr "ローマ"
+
+#. puzzle name
+#: src/klotski-window.vala:298
+msgid "Pennant Puzzle"
+msgstr "パズル大会"
+
+#. puzzle name
+#: src/klotski-window.vala:311
+msgid "Ithaca"
+msgstr "イサカ"
+
+#. puzzle name
+#: src/klotski-window.vala:334
+msgid "Pelopones"
+msgstr "Pelopones"
+
+#. puzzle name
+#: src/klotski-window.vala:346
+msgid "Transeuropa"
+msgstr "Transeuropa"
+
+#. puzzle name
+#: src/klotski-window.vala:358
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. puzzle name
+#: src/klotski-window.vala:369
+msgid "Polonaise"
+msgstr "ポロネーズ"
+
+#. puzzle name
+#: src/klotski-window.vala:380
+msgid "Baltic Sea"
+msgstr "バルト海"
+
+#. puzzle name
+#: src/klotski-window.vala:392
+msgid "American Pie"
+msgstr "アメリカンパイ"
+
+#. puzzle name
+#: src/klotski-window.vala:408
+msgid "Traffic Jam"
+msgstr "渋滞"
+
+#. puzzle name
+#: src/klotski-window.vala:419
+msgid "Sunshine"
+msgstr "日の輝き"
+
+#. Label on the scores dialog, next to dropdown */
+#: src/klotski-window.vala:527
+#, fuzzy
+#| msgid "Puzzle:"
+msgid "Puzzle"
 msgstr "パズル:"
 
-#: ../src/gnome-klotski.vala:1060
-msgid "Date"
-msgstr "日付"
+#: src/klotski-window.vala:781
+#, c-format
+msgid "Moves: %d"
+msgstr "移動数: %d"
 
-#: ../src/gnome-klotski.vala:1063
-msgid "Moves"
-msgstr "移動数"
+#: src/klotski-window.vala:784
+msgid "Level completed."
+msgstr "レベルを制覇しました"
+
+#~ msgid "true if the window is fullscren"
+#~ msgstr "ウィンドウがフルスクリーンの場合は TRUE"
+
+#~ msgid "_Game"
+#~ msgstr "ゲーム(_G)"
+
+#~ msgid "Next Puzzle"
+#~ msgstr "次のパズル"
+
+#~ msgid "_New"
+#~ msgstr "新しいゲーム(_N)"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "フルスクリーン(_F)"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "フルスクリーンの解除(_L)"
+
+#~ msgid "Puzzle: "
+#~ msgstr "パズル: "
+
+#~ msgid ""
+#~ "Sliding Block Puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "ブロックをずらしてしくパズルです。\n"
+#~ "\n"
+#~ "Klotski は GNOME ゲーム集の一部です。"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME ゲーム集のウェブサイト"
+
+#~ msgid "New Game"
+#~ msgstr "新しいゲーム"
+
+#~ msgid "Date"
+#~ msgstr "日付"
+
+#~ msgid "Moves"
+#~ msgstr "移動数"
