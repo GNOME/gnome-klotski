@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
 "POT-Creation-Date: 2019-03-26 17:46+0000\n"
-"PO-Revision-Date: 2019-09-08 18:00+0900\n"
+"PO-Revision-Date: 2019-09-09 18:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -67,11 +67,11 @@ msgstr "Klotski"
 
 #: data/klotski.ui:306
 msgid "_Start Over"
-msgstr "再度やり直す(_S)"
+msgstr "最初からやり直す(_S)"
 
 #: data/klotski.ui:307
 msgid "Restart the current puzzle"
-msgstr "今のパズルををやり直す"
+msgstr "今のパズルをやり直す"
 
 #: data/klotski.ui:320
 msgid "_Change Puzzle"
