@@ -68,7 +68,7 @@ public class KlotskiWindow : ApplicationWindow
 
     private static Gee.List<Games.Scores.Category> score_categories;
     /* Warning: reordering these will screw up import of old scores. */
-    private static const LevelInfo levels[] =
+    private const LevelInfo levels[] =
     {
       /* puzzle name */
       {N_("Only 18 Steps"), 0,

@@ -14,8 +14,8 @@ public class Klotski : Gtk.Application
 {
     private const OptionEntry [] option_entries =
     {
-        { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
-        { null }
+        { "version", 'v', OptionFlags.NONE, OptionArg.NONE, null, N_("Print release version and exit"), null },
+        {}
     };
 
     private const GLib.ActionEntry action_entries [] =
