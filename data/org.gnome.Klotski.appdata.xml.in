@@ -38,7 +38,7 @@
   <launchable type="desktop-id">org.gnome.Klotski.desktop</launchable>
   <translation type="gettext">gnome-klotski</translation>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-klotski/issues/</url>
-  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="donation">https://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-klotski/stable/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
   <developer_name>The GNOME Project</developer_name>
