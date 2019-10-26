@@ -24,8 +24,9 @@ glib_compile_schema     = find_program('glib-compile-schemas',  required: true) 
 # Set gettext package name
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language: 'c')
 
-localedir = join_paths(get_option('prefix'), get_option('localedir'))
-datadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+localedir   = join_paths(get_option('prefix'), get_option('localedir'))
+datadir     = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
+bindir      = join_paths(get_option('prefix'), get_option('bindir'))
 
 conf = configuration_data ()
 conf.set_quoted ('VERSION', meson.project_version())
