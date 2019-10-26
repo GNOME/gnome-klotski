@@ -3,19 +3,19 @@ icon_sizes = ['16', '22', '24', '32', '48']
 foreach size : icon_sizes
   install_data(
     join_paths('icons', 'hicolor', '@0@x@0@'.format(size), '@0@.png'.format(project_id)),
-    install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', '@0@x@0@'.format(size), 'apps')
+    install_dir: join_paths(icondir, '@0@x@0@'.format(size), 'apps')
   )
 endforeach
 # Install scalable icon
 install_data(
   join_paths('icons', 'hicolor', 'scalable', '@0@.svg'.format(project_id)),
-  install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'scalable', 'apps')
+  install_dir: join_paths(icondir, 'scalable', 'apps')
 )
 
 # Install symbolic icon
 install_data(
   join_paths('icons', 'hicolor', 'scalable', '@0@-symbolic.svg'.format(project_id)),
-  install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', 'symbolic', 'apps')
+  install_dir: join_paths(icondir, 'symbolic', 'apps')
 )
 
 # Install gschema
