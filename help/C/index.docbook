@@ -2,9 +2,9 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.12">
-  <!ENTITY manrevision "2.10">
-  <!ENTITY date "March 2004">
+  <!ENTITY appversion "3.34">
+  <!ENTITY manrevision "3.34">
+  <!ENTITY date "October 2019">
   <!ENTITY app "<application>Klotski</application>">
   <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file. 
@@ -16,9 +16,6 @@
 
 <!-- 
   Maintained by the GNOME Documentation Project
-  http://developer.gnome.org/projects/gdp
-  Template version: 2.0 beta
-  Template last modified Apr 11, 2002
 -->
 <!-- =============Document Header ============================= -->
 <article id="index" lang="en">
@@ -257,23 +254,11 @@
 		<para>The &app; window contains the following elements:
 		<variablelist>
 		<varlistentry>
-			<term>Menubar</term>
+			<term>Header bar</term>
 			<listitem>
-			<variablelist>
-			<varlistentry>
-				<term>Game menu</term>
-				<listitem>
-				<para>The game menu allows you to start new games, view the highest scores and
-				quit the program.</para>
-				</listitem>
-			</varlistentry>
-			<varlistentry>
-				<term>Help menu</term>
-				<listitem>
-				<para>The help menu allows you to view the documentation for &app;</para>
-				</listitem>
-			</varlistentry>
-			</variablelist>
+			<para>The header bar allows you to start new games, shows how many moves you have taken so far,
+			and allows you to change the puzzle. Press the menu button in the top-right corner to view the
+			highest scores and the documentation for &app;.</para>
 			</listitem>
 		</varlistentry>
 		<varlistentry>
@@ -284,12 +269,6 @@
 			</para>
 			</listitem>
 		</varlistentry>
-		<varlistentry>
-			<term>Statusbar</term>
-			<listitem>
-			<para>The statusbar shows how many moves you have taken so far.</para>
-			</listitem>
-		</varlistentry>
 		</variablelist></para>
 
 	</sect2>
@@ -297,22 +276,12 @@
 	<!-- =========== Starting a new game ============================== -->
 	<sect2 id="gnotski-new-game">
 		<title>Starting a new game</title>
-		<para>Use the <guimenu>Game menu</guimenu> to start a new game. The items 
-		<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</guimenuitem> allows you to
+		<para>Use <guibutton>Start Over</guibutton> to start a new game.
+		<guibutton>Change Puzzle</guibutton> allows you to
 		navigate the puzzles sequentially. Each puzzle belongs to one of the three categories found in the 
 		submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and
-		<guisubmenu>Skill Pack</guisubmenu>.In these submenus, 
-		each puzzle name refers to a game scenario.
+		<guisubmenu>Skill Pack</guisubmenu>. In these submenus, each puzzle name refers to a game scenario.
 		</para>
-		<example>
-		<title>Starting a game</title>
-		<para>To start a game, choose
-		<menuchoice>
-			<guimenu>Game</guimenu>
-			<guisubmenu>[category]</guisubmenu>
-			<guimenuitem>[game scenario]</guimenuitem>
-		</menuchoice>
-		</para></example>
 	</sect2>
 
 	<!-- ===========Moving blocks ============================== -->
