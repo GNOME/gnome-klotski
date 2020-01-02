@@ -124,9 +124,16 @@ public class Klotski : Gtk.Application
                            "version", VERSION,
                            "comments", _("Sliding block puzzles"),
                            "copyright",
-                             "Copyright © 1999–2008 Lars Rydlinge\n"+
-                             "Copyright © 2014–2016 Michael Catanzaro\n"+
-                             "Copyright © 2015 Arnaud Bonatti\n",
+                             /* Translators: text crediting a maintainer, seen in the About dialog */
+                             _("Copyright \xc2\xa9 1999-2008 – Lars Rydlinge") + "\n"+
+
+
+                             /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
+                             _("Copyright \xc2\xa9 %u-%u – Michael Catanzaro").printf (2014, 2016) + "\n"+
+
+
+                             /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
+                             _("Copyright \xc2\xa9 %u-%u – Arnaud Bonatti").printf (2015, 2020),
                            "license-type", License.GPL_3_0,
                            "authors", authors,
                            "documenters", documenters,
