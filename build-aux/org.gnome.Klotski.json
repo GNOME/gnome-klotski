@@ -25,6 +25,7 @@
         },
         {
             "name": "libgnome-games-support",
+            "branch":"gnome-3-34",
             "sources": [{
                 "type": "git",
                 "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
@@ -32,6 +33,7 @@
         },
         {
             "name": "gnome-klotski",
+            "branch":"gnome-3-34",
             "buildsystem": "meson",
             "sources": [{
                 "type": "git",
