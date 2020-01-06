@@ -1,5 +1,5 @@
 project('gnome-klotski', 'vala', 'c',
-        version: '3.34.0')
+        version: '3.34.3')
 
 project_id = 'org.gnome.Klotski'
 
