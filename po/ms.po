@@ -4,314 +4,297 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-Games 2.0.x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-01 23:42+0100\n"
-"PO-Revision-Date: 2003-11-24 01:54+0800\n"
-"Last-Translator: Hasbullah Bin Pit <sebol@ikhlas.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2019-09-18 16:03+0000\n"
+"PO-Revision-Date: 2019-12-29 01:29+0800\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Projek Gabai <gabai-penyumbang@lists.sourceforge.org>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
-#, fuzzy
-msgid "GNOME Klotski"
+#: data/klotski.ui:7
+msgid "_Scores"
+msgstr "_Skor"
+
+#: data/klotski.ui:13
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: data/klotski.ui:18
+msgid "_About Klotski"
+msgstr "Perih_al Klotski"
+
+#: data/klotski.ui:59
+msgid "Huarong Trail"
+msgstr "Laluan Huarong"
+
+#: data/klotski.ui:70
+msgid "Challenge Pack"
+msgstr "Pek Cabaran"
+
+#: data/klotski.ui:81
+msgid "Skill Pack"
+msgstr "Pek Mahir"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:263
+msgid "Previous"
+msgstr "Terdahulu"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:275
+msgid "Next"
+msgstr "Berikutnya"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
+msgid "Klotski"
 msgstr "Klotski"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr ""
+#: data/klotski.ui:306
+msgid "_Start Over"
+msgstr "_Mula Balik"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/klotski.ui:307
+msgid "Restart the current puzzle"
+msgstr "Mula semula teka-teki semasa"
+
+#: data/klotski.ui:320
+msgid "_Change Puzzle"
+msgstr "_Ubah Teka-teki"
+
+#: data/klotski.ui:321
+msgid "Choose an other puzzle"
+msgstr "Pilih satu teka-teki lain"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
+msgid "GNOME Klotski"
+msgstr "Klotski GNOME"
+
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
+msgid "Slide blocks to solve the puzzle"
+msgstr "Tolak blok-blok untuk menyelesaikan teka-teki"
+
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"Klotski GNOME ialah satu set teka-teki menolak blok. Objektif adalah untuk "
+"menggerakkan blok khusus ke kawasan bersempadan hijau. Untuk membuatnya, "
+"anda perlu menolak blok keluar. Selesaikan setiap teka-teki dengan sedikit "
+"langkah yang mungkin!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"Klotski GNOME disertakan hampir tiga puluh bentangan teka-teki dengan "
+"kesukaran berbeza. Sesetengah bentangan adalah serupa tetapi saiz satu atau "
+"lebih bloknya berlainan. Lain-lain bentangan adalah berbeza."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Projek GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
-msgstr ""
+msgstr "permainan;strategi;logik;gerak;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr ""
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr ""
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr ""
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr ""
-
-#: ../data/klotski.ui.h:5
-#, fuzzy
-msgid "Next"
-msgstr "Bola Berikutnya:"
-
-#: ../data/klotski.ui.h:7
-#, fuzzy
-msgid "_Start Over"
-msgstr "Mula semula permainan"
-
-#: ../data/klotski.ui.h:8
-#, fuzzy
-msgid "Restart the current puzzle"
-msgstr "Mula semula permainan"
-
-#: ../data/klotski.ui.h:9
-#, fuzzy
-msgid "_Change Puzzle"
-msgstr "Peringkat mula _semula"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr ""
-
-#: ../data/klotski-menus.ui.h:1
-#, fuzzy
-msgid "_Scores"
-msgstr "Markah."
-
-#: ../data/klotski-menus.ui.h:2
-#, fuzzy
-msgid "_Help"
-msgstr "Bantuan"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr ""
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr ""
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
-msgstr ""
+msgstr "Masih bermain teka-teki"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
-#, fuzzy
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
-msgstr "Saiz bagi grid permainan"
+msgstr "Bilangan teka-teki yang dimainkan."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
-#, fuzzy
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
-msgstr "Lebar bagi tetingkap utama, dalam piksel, pada permulaan"
+msgstr "Lebar tetingkap dalam piksel"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
-#, fuzzy
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
-msgstr "Tinggi bagi tetingkap utama, dalam piksel, pada permulaan"
+msgstr "Tinggi tetingkap dalam piksel"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "benar jika tetingkap dimaksimumkan"
 
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:17
 msgid "Print release version and exit"
-msgstr ""
+msgstr "Cetak versi keluaran dan keluar"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:116
 msgid "Sliding block puzzles"
-msgstr ""
+msgstr "Teka-teki menolak blok"
 
-#: ../src/gnome-klotski.vala:122
+#: src/gnome-klotski.vala:124
 msgid "translator-credits"
 msgstr ""
-"\"kenang daku semasa bermain..ahaks...'\n"
-"Noor Azurah Anuar <gbumla@yahoo.com>, Bandar Hilir."
+"abuyop\n"
+"'kenang daku semasa bermain..ahaks...'\n"
+"Noor Azurah Anuar <gbumla@yahoo.com>, Bandar Hilir"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:74
 msgid "Only 18 Steps"
-msgstr ""
+msgstr "Hanya 18 Langkah"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:87
 msgid "Daisy"
-msgstr ""
+msgstr "Bunga Daisy"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:100
 msgid "Violet"
 msgstr "Ungu"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
-#, fuzzy
+#: src/klotski-window.vala:113
 msgid "Poppy"
-msgstr "Ciri-ciri"
+msgstr "Popi"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
-#, fuzzy
+#: src/klotski-window.vala:126
 msgid "Pansy"
-msgstr "Kaku"
+msgstr "Pansy"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:139
 msgid "Snowdrop"
-msgstr ""
+msgstr "Titisan Salji"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
-#, fuzzy
+#: src/klotski-window.vala:152
 msgid "Red Donkey"
-msgstr "Badut merah"
+msgstr "Keldai Merah"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
-#, fuzzy
+#: src/klotski-window.vala:165
 msgid "Trail"
-msgstr "Tali"
+msgstr "Jejak"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
-#, fuzzy
+#: src/klotski-window.vala:178
 msgid "Ambush"
-msgstr "Tekan"
+msgstr "Serang Hendap"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
-#, fuzzy
+#: src/klotski-window.vala:191
 msgid "Agatka"
-msgstr "gataxx"
+msgstr "Agatka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
-#, fuzzy
+#: src/klotski-window.vala:202
 msgid "Success"
-msgstr "Markah."
+msgstr "Berjaya"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
-#, fuzzy
+#: src/klotski-window.vala:212
 msgid "Bone"
-msgstr "Tiada"
+msgstr "Tulang"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
-#, fuzzy
+#: src/klotski-window.vala:225
 msgid "Fortune"
-msgstr "Fortunes"
+msgstr "Tuah"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:239
 msgid "Fool"
-msgstr ""
+msgstr "Bodoh"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
-#, fuzzy
+#: src/klotski-window.vala:249
 msgid "Solomon"
-msgstr "Sol"
+msgstr "Sulaiman"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:262
 msgid "Cleopatra"
-msgstr ""
+msgstr "Cleopatra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
-#, fuzzy
+#: src/klotski-window.vala:274
 msgid "Shark"
-msgstr "Gelap"
+msgstr "Jerung"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
-#, fuzzy
+#: src/klotski-window.vala:286
 msgid "Rome"
-msgstr "Kilas"
+msgstr "Rom"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:298
 msgid "Pennant Puzzle"
-msgstr ""
+msgstr "Teka-teki Darjah"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:311
 msgid "Ithaca"
-msgstr ""
+msgstr "Ithaca"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:334
 msgid "Pelopones"
-msgstr ""
+msgstr "Pelopones"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:346
 msgid "Transeuropa"
-msgstr ""
+msgstr "Transeropah"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:358
 msgid "Lodzianka"
-msgstr ""
+msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:369
 msgid "Polonaise"
-msgstr ""
+msgstr "Polonaise"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:380
 msgid "Baltic Sea"
-msgstr ""
+msgstr "Laut Baltic"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:392
 msgid "American Pie"
-msgstr ""
+msgstr "Pai Amerika"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:408
 msgid "Traffic Jam"
-msgstr ""
+msgstr "Sesak Jalan"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
-#, fuzzy
+#: src/klotski-window.vala:419
 msgid "Sunshine"
-msgstr "sembilan"
+msgstr "Matahari"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
-#, fuzzy
+#: src/klotski-window.vala:527
 msgid "Puzzle"
-msgstr "Ungu"
+msgstr "Teka-teki"
 
-#: ../src/klotski-window.vala:781
-#, fuzzy, c-format
+#: src/klotski-window.vala:781
+#, c-format
 msgid "Moves: %d"
-msgstr "Pergerakkan:"
+msgstr "Gerakan: %d"
 
-#: ../src/klotski-window.vala:784
-#, fuzzy
+#: src/klotski-window.vala:784
 msgid "Level completed."
-msgstr "Peringkat Selesai"
+msgstr "Aras selesai."
