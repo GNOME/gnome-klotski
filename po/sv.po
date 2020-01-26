@@ -1,18 +1,18 @@
-# Swedish messages for gnome-games.
-# Copyright © 1999-2019 Free Software Foundation, Inc.
+# Swedish messages for gnome-klotski.
+# Copyright © 1999-2020 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018, 2019.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018, 2019, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2019-01-20 11:10+0000\n"
-"PO-Revision-Date: 2019-01-25 13:30+0100\n"
+"POT-Creation-Date: 2020-01-02 12:30+0000\n"
+"PO-Revision-Date: 2020-01-26 02:10+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -20,61 +20,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.4\n"
 
-#: data/klotski.ui:7
+#: data/klotski.ui:23
 msgid "_Scores"
 msgstr "_Poäng"
 
-#: data/klotski.ui:13
+#: data/klotski.ui:29
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: data/klotski.ui:18
+#: data/klotski.ui:34
 msgid "_About Klotski"
 msgstr "_Om Klotski"
 
-#: data/klotski.ui:59
+#: data/klotski.ui:75
 msgid "Huarong Trail"
 msgstr "Huarong-stigen"
 
-#: data/klotski.ui:70
+#: data/klotski.ui:86
 msgid "Challenge Pack"
 msgstr "Utmaningspaketet"
 
-#: data/klotski.ui:81
+#: data/klotski.ui:97
 msgid "Skill Pack"
 msgstr "Skicklighetspaketet"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:263
+#: data/klotski.ui:279
 msgid "Previous"
 msgstr "Föregående"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:275
+#: data/klotski.ui:291
 msgid "Next"
 msgstr "Nästa"
 
 #. <initial-focus name=""/>
-#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:112
+#: data/klotski.ui:306 data/klotski.ui:317 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:123
 msgid "Klotski"
 msgstr "Klotski"
 
-#: data/klotski.ui:306
+#: data/klotski.ui:322
 msgid "_Start Over"
 msgstr "_Börja om"
 
-#: data/klotski.ui:307
+#: data/klotski.ui:323
 msgid "Restart the current puzzle"
 msgstr "Starta om aktuellt pussel"
 
-#: data/klotski.ui:320
+#: data/klotski.ui:336
 msgid "_Change Puzzle"
 msgstr "B_yt pussel"
 
-#: data/klotski.ui:321
+#: data/klotski.ui:337
 msgid "Choose an other puzzle"
 msgstr "Välj ett annat pussel"
 
@@ -117,40 +117,52 @@ msgstr "GNOME-projektet"
 msgid "game;strategy;logic;move;"
 msgstr "spel;strategi;logik;förflyttning;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Klotski.desktop.in:9
-msgid "org.gnome.Klotski"
-msgstr "org.gnome.Klotski"
-
-#: data/org.gnome.klotski.gschema.xml:5
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Pusslet som spelas"
 
-#: data/org.gnome.klotski.gschema.xml:6
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Numret på det pussel som spelas."
 
-#: data/org.gnome.klotski.gschema.xml:10
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Bredden på fönstret i bildpunkter"
 
-#: data/org.gnome.klotski.gschema.xml:14
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Höjden på fönstret i bildpunkter"
 
-#: data/org.gnome.klotski.gschema.xml:18
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "sant om fönstret är maximerat"
 
-#: src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:26
 msgid "Print release version and exit"
 msgstr "Skriv ut utgåvans version och avsluta"
 
-#: src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:125
 msgid "Sliding block puzzles"
 msgstr "Pussel med flyttbara klossar"
 
-#: src/gnome-klotski.vala:122
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/gnome-klotski.vala:128
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "Copyright © 1999-2008 – Lars Rydlinge"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:132
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "Copyright © %u-%u – Michael Catanzaro"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:136
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "Copyright © %u-%u – Arnaud Bonatti"
+
+#: src/gnome-klotski.vala:140
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -166,36 +178,36 @@ msgstr ""
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:74
+#: src/klotski-window.vala:83
 msgid "Only 18 Steps"
 msgstr "Endast 18 steg"
 
 # Blomnamn
 #. puzzle name
-#: src/klotski-window.vala:87
+#: src/klotski-window.vala:96
 msgid "Daisy"
 msgstr "Tusensköna"
 
 # Blomnamn
 #. puzzle name
-#: src/klotski-window.vala:100
+#: src/klotski-window.vala:109
 msgid "Violet"
 msgstr "Viol"
 
 #. puzzle name
-#: src/klotski-window.vala:113
+#: src/klotski-window.vala:122
 msgid "Poppy"
 msgstr "Vallmo"
 
 # Blomnamn
 #. puzzle name
-#: src/klotski-window.vala:126
+#: src/klotski-window.vala:135
 msgid "Pansy"
 msgstr "Pensé"
 
 # Blomnamn
 #. puzzle name
-#: src/klotski-window.vala:139
+#: src/klotski-window.vala:148
 msgid "Snowdrop"
 msgstr "Snödroppe"
 
@@ -206,7 +218,7 @@ msgstr "Snödroppe"
 # Osäker
 #
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: src/klotski-window.vala:152
+#: src/klotski-window.vala:161
 msgid "Red Donkey"
 msgstr "Röda åsnan"
 
@@ -224,7 +236,7 @@ msgstr "Röda åsnan"
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:165
+#: src/klotski-window.vala:174
 msgid "Trail"
 msgstr "Stig"
 
@@ -242,126 +254,129 @@ msgstr "Stig"
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:178
+#: src/klotski-window.vala:187
 msgid "Ambush"
 msgstr "Bakhåll"
 
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:191
+#: src/klotski-window.vala:200
 msgid "Agatka"
 msgstr "Agatka"
 
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:202
+#: src/klotski-window.vala:211
 msgid "Success"
 msgstr "Framgång"
 
 # Osäker
 #
 #. puzzle name
-#: src/klotski-window.vala:212
+#: src/klotski-window.vala:221
 msgid "Bone"
 msgstr "Ben"
 
 #. puzzle name
-#: src/klotski-window.vala:225
+#: src/klotski-window.vala:234
 msgid "Fortune"
 msgstr "Lyckan"
 
 #. puzzle name
-#: src/klotski-window.vala:239
+#: src/klotski-window.vala:248
 msgid "Fool"
 msgstr "Tok"
 
 #. puzzle name
-#: src/klotski-window.vala:249
+#: src/klotski-window.vala:258
 msgid "Solomon"
 msgstr "Salomo"
 
 #. puzzle name
-#: src/klotski-window.vala:262
+#: src/klotski-window.vala:271
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: src/klotski-window.vala:274
+#: src/klotski-window.vala:283
 msgid "Shark"
 msgstr "Haj"
 
 #. puzzle name
-#: src/klotski-window.vala:286
+#: src/klotski-window.vala:295
 msgid "Rome"
 msgstr "Rom"
 
 #. puzzle name
-#: src/klotski-window.vala:298
+#: src/klotski-window.vala:307
 msgid "Pennant Puzzle"
 msgstr "Vimpelpussel"
 
 # Grekisk ö.
 #
 #. puzzle name
-#: src/klotski-window.vala:311
+#: src/klotski-window.vala:320
 msgid "Ithaca"
 msgstr "Ithaka"
 
 #. puzzle name
-#: src/klotski-window.vala:334
+#: src/klotski-window.vala:343
 msgid "Pelopones"
 msgstr "Peloponnesos"
 
 #. puzzle name
-#: src/klotski-window.vala:346
+#: src/klotski-window.vala:355
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: src/klotski-window.vala:358
+#: src/klotski-window.vala:367
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: src/klotski-window.vala:369
+#: src/klotski-window.vala:378
 msgid "Polonaise"
 msgstr "Polonäs"
 
 #. puzzle name
-#: src/klotski-window.vala:380
+#: src/klotski-window.vala:389
 msgid "Baltic Sea"
 msgstr "Östersjön"
 
 #. puzzle name
-#: src/klotski-window.vala:392
+#: src/klotski-window.vala:401
 msgid "American Pie"
 msgstr "American Pie"
 
 #. puzzle name
-#: src/klotski-window.vala:408
+#: src/klotski-window.vala:417
 msgid "Traffic Jam"
 msgstr "Trafikstockning"
 
 #. puzzle name
-#: src/klotski-window.vala:419
+#: src/klotski-window.vala:428
 msgid "Sunshine"
 msgstr "Solsken"
 
 #. Label on the scores dialog, next to dropdown */
-#: src/klotski-window.vala:527
+#: src/klotski-window.vala:536
 msgid "Puzzle"
 msgstr "Pussel"
 
-#: src/klotski-window.vala:781
+#: src/klotski-window.vala:790
 #, c-format
 msgid "Moves: %d"
 msgstr "Drag: %d"
 
-#: src/klotski-window.vala:784
+#: src/klotski-window.vala:793
 msgid "Level completed."
 msgstr "Nivån färdig."
+
+#~ msgid "org.gnome.Klotski"
+#~ msgstr "org.gnome.Klotski"
 
 #~ msgid "_About"
 #~ msgstr "_Om"
