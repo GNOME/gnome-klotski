@@ -9,10 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-11 20:14+0000\n"
-"PO-Revision-Date: 2016-08-12 13:15+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2020-01-02 12:30+0000\n"
+"PO-Revision-Date: 2020-01-27 13:54+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,18 +19,73 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.2.4\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#: data/klotski.ui:23
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: data/klotski.ui:29
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: data/klotski.ui:34
+msgid "_About Klotski"
+msgstr "_O aplikácii Klotski"
+
+#: data/klotski.ui:75
+msgid "Huarong Trail"
+msgstr "Cestička cez Huarong"
+
+#: data/klotski.ui:86
+msgid "Challenge Pack"
+msgstr "Súťažný balík"
+
+#: data/klotski.ui:97
+msgid "Skill Pack"
+msgstr "Tréningový balík"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:279
+msgid "Previous"
+msgstr "Predchádzajúci"
+
+#. <property name="use-underline">True</property> TODO
+#: data/klotski.ui:291
+msgid "Next"
+msgstr "Ďalší"
+
+#. <initial-focus name=""/>
+#: data/klotski.ui:306 data/klotski.ui:317 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:123
+msgid "Klotski"
+msgstr "Klotski"
+
+#: data/klotski.ui:322
+msgid "_Start Over"
+msgstr "Začať _odznovu"
+
+#: data/klotski.ui:323
+msgid "Restart the current puzzle"
+msgstr "Reštartuje aktuálny hlavolam"
+
+#: data/klotski.ui:336
+msgid "_Change Puzzle"
+msgstr "_Zmeniť hlavolam"
+
+#: data/klotski.ui:337
+msgid "Choose an other puzzle"
+msgstr "Zvolí iný hlavolam"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "Klotski GNOME"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "Posúvaním blokov vyriešte hlavolam"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -42,7 +96,7 @@ msgstr ""
 "označený blok do oblasti vyznačenej zelenými značkami. Preto musíte odsunúť "
 "ostatné bloky z cesty. Dokončite hlavolam čo s najmenším počtom ťahov!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -52,101 +106,62 @@ msgstr ""
 "obtiažnosti. Niektoré variácie sú podobné a líšia sa len jednou alebo "
 "viacerými blokmi. Iné variácie sú rôznorodejšie."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Klotski"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "hra;strategická;logická;stratégia;logika;presúvanie blokov;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "Cestička cez Huarong"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Súťažný balík"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Tréningový balík"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Predchádzajúci"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Ďalší"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "Začať _odznovu"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Reštartuje aktuálny hlavolam"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Zmeniť hlavolam"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Zvolí iný hlavolam"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "_Skóre"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "_Pomocník"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "_O programe"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_Ukončiť"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Hraný hlavolam"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Počet hraných hlavolamov."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Šírka okna v pixeloch."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Výška okna v pixeloch."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "true, ak je okno maximalizované"
 
 # cmd desc
-#: ../src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:26
 msgid "Print release version and exit"
 msgstr "Vypíše verziu vydania a skončí"
 
-#: ../src/gnome-klotski.vala:114
+#: src/gnome-klotski.vala:125
 msgid "Sliding block puzzles"
 msgstr "Hlavolamy s posúvaním blokov"
 
-#: ../src/gnome-klotski.vala:122
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/gnome-klotski.vala:128
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "Autorské práva © 1999-2008 – Lars Rydlinge"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:132
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "Autorské práva © %u-%u – Michael Catanzaro"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:136
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "Autorské práva © %u-%u – Arnaud Bonatti"
+
+#: src/gnome-klotski.vala:140
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -156,155 +171,161 @@ msgstr ""
 "Dušan Kazik <prescott66@gmail.com>"
 
 #. puzzle name
-#: ../src/klotski-window.vala:74
+#: src/klotski-window.vala:83
 msgid "Only 18 Steps"
 msgstr "Iba 18 ťahov"
 
 #. puzzle name
-#: ../src/klotski-window.vala:87
+#: src/klotski-window.vala:96
 msgid "Daisy"
 msgstr "Sedmokráska"
 
 #. puzzle name
-#: ../src/klotski-window.vala:100
+#: src/klotski-window.vala:109
 msgid "Violet"
 msgstr "Fialka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:113
+#: src/klotski-window.vala:122
 msgid "Poppy"
 msgstr "Vlčí mak"
 
 #. puzzle name
-#: ../src/klotski-window.vala:126
+#: src/klotski-window.vala:135
 msgid "Pansy"
 msgstr "Sirôtka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:139
+#: src/klotski-window.vala:148
 msgid "Snowdrop"
 msgstr "Snežienka"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:161
 msgid "Red Donkey"
 msgstr "Červený somár"
 
 #. puzzle name
-#: ../src/klotski-window.vala:165
+#: src/klotski-window.vala:174
 msgid "Trail"
 msgstr "Cestička"
 
 #. puzzle name
-#: ../src/klotski-window.vala:178
+#: src/klotski-window.vala:187
 msgid "Ambush"
 msgstr "Pasca"
 
 #. puzzle name
-#: ../src/klotski-window.vala:191
+#: src/klotski-window.vala:200
 msgid "Agatka"
 msgstr "Agátka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:202
+#: src/klotski-window.vala:211
 msgid "Success"
 msgstr "Úspech"
 
 #. puzzle name
-#: ../src/klotski-window.vala:212
+#: src/klotski-window.vala:221
 msgid "Bone"
 msgstr "Kosť"
 
 #. puzzle name
-#: ../src/klotski-window.vala:225
+#: src/klotski-window.vala:234
 msgid "Fortune"
 msgstr "Bohatstvo"
 
 #. puzzle name
-#: ../src/klotski-window.vala:239
+#: src/klotski-window.vala:248
 msgid "Fool"
 msgstr "Šašo"
 
 #. puzzle name
-#: ../src/klotski-window.vala:249
+#: src/klotski-window.vala:258
 msgid "Solomon"
 msgstr "Šalamún"
 
 #. puzzle name
-#: ../src/klotski-window.vala:262
+#: src/klotski-window.vala:271
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: ../src/klotski-window.vala:274
+#: src/klotski-window.vala:283
 msgid "Shark"
 msgstr "Žralok"
 
 #. puzzle name
-#: ../src/klotski-window.vala:286
+#: src/klotski-window.vala:295
 msgid "Rome"
 msgstr "Rím"
 
 #. puzzle name
-#: ../src/klotski-window.vala:298
+#: src/klotski-window.vala:307
 msgid "Pennant Puzzle"
 msgstr "Vlajkový hlavolam"
 
 #. puzzle name
-#: ../src/klotski-window.vala:311
+#: src/klotski-window.vala:320
 msgid "Ithaca"
 msgstr "Itaka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:334
+#: src/klotski-window.vala:343
 msgid "Pelopones"
 msgstr "Peloponéz"
 
 #. puzzle name
-#: ../src/klotski-window.vala:346
+#: src/klotski-window.vala:355
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: ../src/klotski-window.vala:358
+#: src/klotski-window.vala:367
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: ../src/klotski-window.vala:369
+#: src/klotski-window.vala:378
 msgid "Polonaise"
 msgstr "Polonéza"
 
 #. puzzle name
-#: ../src/klotski-window.vala:380
+#: src/klotski-window.vala:389
 msgid "Baltic Sea"
 msgstr "Baltické more"
 
 #. puzzle name
-#: ../src/klotski-window.vala:392
+#: src/klotski-window.vala:401
 msgid "American Pie"
 msgstr "Americký koláč"
 
 #. puzzle name
-#: ../src/klotski-window.vala:408
+#: src/klotski-window.vala:417
 msgid "Traffic Jam"
 msgstr "Dopravná zápcha"
 
 #. puzzle name
-#: ../src/klotski-window.vala:419
+#: src/klotski-window.vala:428
 msgid "Sunshine"
 msgstr "Slnečný svit"
 
 #. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#: src/klotski-window.vala:536
 msgid "Puzzle"
 msgstr "Hlavolam"
 
-#: ../src/klotski-window.vala:781
+#: src/klotski-window.vala:790
 #, c-format
 msgid "Moves: %d"
 msgstr "Počet ťahov: %d"
 
-#: ../src/klotski-window.vala:784
+#: src/klotski-window.vala:793
 msgid "Level completed."
 msgstr "Úroveň dokončená."
+
+#~ msgid "_About"
+#~ msgstr "_O programe"
+
+#~ msgid "_Quit"
+#~ msgstr "_Ukončiť"
