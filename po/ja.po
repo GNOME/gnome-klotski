@@ -1,5 +1,5 @@
 # gnome-klotski ja.po.
-# Copyright (C) 1998-2019 Free Software Foundation, Inc.
+# Copyright (C) 1998-2013, 2019-2020 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
 "POT-Creation-Date: 2020-01-02 12:30+0000\n"
-"PO-Revision-Date: 2019-09-09 18:00+0900\n"
+"PO-Revision-Date: 2020-01-29 21:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -125,11 +125,11 @@ msgstr "プレイするパズルの数です。"
 
 #: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
-msgstr "ウィンドウの幅 (ピクセル単位) です。"
+msgstr "ウィンドウの幅 (ピクセル単位) です"
 
 #: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
-msgstr "ウィンドウの高さ (ピクセル単位) です。"
+msgstr "ウィンドウの高さ (ピクセル単位) です"
 
 #: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
@@ -137,7 +137,7 @@ msgstr "ウィンドウが最小化されている場合は TRUE"
 
 #: src/gnome-klotski.vala:26
 msgid "Print release version and exit"
-msgstr "バージョンを表示して終了する"
+msgstr "リリースバージョンを表示して終了する"
 
 #: src/gnome-klotski.vala:125
 msgid "Sliding block puzzles"
@@ -146,19 +146,19 @@ msgstr ""
 #. Translators: text crediting a maintainer, seen in the About dialog
 #: src/gnome-klotski.vala:128
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
-msgstr ""
+msgstr "Copyright © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
 #: src/gnome-klotski.vala:132
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
-msgstr ""
+msgstr "Copyright © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
 #: src/gnome-klotski.vala:136
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
-msgstr ""
+msgstr "Copyright © %u-%u – Arnaud Bonatti"
 
 #: src/gnome-klotski.vala:140
 msgid "translator-credits"
