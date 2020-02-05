@@ -28,8 +28,8 @@ private class PuzzleView : Gtk.DrawingArea
 
     private int render_size = 0;
 
-    private int piece_x = 0;
-    private int piece_y = 0;
+    private uint8 piece_x = 0;
+    private uint8 piece_y = 0;
     private bool piece_unmoved = false;
 
     private char _piece_id = '\0';
@@ -153,8 +153,8 @@ private class PuzzleView : Gtk.DrawingArea
         cr.rectangle (kx, ky, kwidth, kheight);
         cr.stroke ();
 
-        for (var y = 0; y < puzzle.height; y++)
-            for (var x = 0; x < puzzle.width; x++)
+        for (uint8 y = 0; y < puzzle.height; y++)
+            for (uint8 x = 0; x < puzzle.width; x++)
             {
                 draw_square (cr, x, y, kx, ky);
 
@@ -169,7 +169,7 @@ private class PuzzleView : Gtk.DrawingArea
         return false;
     }
 
-    private void draw_square (Cairo.Context cr, int x, int y, double kx, double ky)
+    private void draw_square (Cairo.Context cr, uint8 x, uint8 y, double kx, double ky)
     {
         var rect = Gdk.Rectangle ();
         rect.x = x * tile_size + SPACE_OFFSET + (int)kx - 1;
@@ -219,8 +219,13 @@ private class PuzzleView : Gtk.DrawingArea
             if (puzzle.game_over ())
                 return false;
 
-            piece_x = (int) (event.x - kx) / tile_size;
-            piece_y = (int) (event.y - ky) / tile_size;
+            int new_piece_x = (int) (event.x - kx) / tile_size;
+            int new_piece_y = (int) (event.y - ky) / tile_size;
+            if (new_piece_x < 0 || new_piece_x >= (int) puzzle.width
+             || new_piece_y < 0 || new_piece_y >= (int) puzzle.height)
+                return false;
+            piece_x = (uint8) new_piece_x;
+            piece_y = (uint8) new_piece_y;
             char new_piece_id = puzzle.get_piece_id (puzzle.map, piece_x, piece_y);
 
             if (piece_id != '\0' && piece_unmoved)
@@ -276,19 +281,18 @@ private class PuzzleView : Gtk.DrawingArea
 
     protected override bool motion_notify_event (Gdk.EventMotion event)
     {
-        int new_piece_x, new_piece_y;
-
         if (piece_id != '\0')
         {
-            new_piece_x = (int) (event.x - kx) / tile_size;
-            new_piece_y = (int) (event.y - ky) / tile_size;
-            if (new_piece_x >= puzzle.width || event.x < 0 || new_piece_y >= puzzle.height || event.y < 0)
+            int new_piece_x = (int) (event.x - kx) / tile_size;
+            int new_piece_y = (int) (event.y - ky) / tile_size;
+            if (event.x < 0 || new_piece_x > (int) puzzle.width
+             || event.y < 0 || new_piece_y > (int) puzzle.height)
                 return false;
-            if (puzzle.move_piece (piece_id, piece_x, piece_y, new_piece_x, new_piece_y))
+            if (puzzle.move_piece (piece_id, piece_x, piece_y, (uint8) new_piece_x, (uint8) new_piece_y))
             {
                 piece_unmoved = false;
-                piece_x = new_piece_x;
-                piece_y = new_piece_y;
+                piece_x = (uint8) new_piece_x;
+                piece_y = (uint8) new_piece_y;
             }
             return true;
         }

@@ -102,8 +102,8 @@ private class Puzzle : Object
         -1,  -1
     };
 
-    [CCode (notify = false)] internal int width     { internal get; private set; }
-    [CCode (notify = false)] internal int height    { internal get; private set; }
+    [CCode (notify = false)] internal uint8 width   { internal get; private set; }
+    [CCode (notify = false)] internal uint8 height  { internal get; private set; }
 
     // Type `char []' can not be used for a GLib.Object property
     internal char [] map;
@@ -117,7 +117,7 @@ private class Puzzle : Object
     internal signal void changed ();
     internal signal void moved ();
 
-    internal Puzzle (int width, int height, string? data)
+    internal Puzzle (uint8 width, uint8 height, string? data)
     {
         this.width = width;
         this.height = height;
@@ -126,12 +126,12 @@ private class Puzzle : Object
         undomove_map = map;
         if (data != null)
         {
-            var i = 0;
-            for (var y = 0; y < height; y++)
+            uint16 i = 0;
+            for (uint8 y = 0; y < height; y++)
             {
-                for (var x = 0; x < width; x++)
+                for (uint8 x = 0; x < width; x++)
                 {
-                    set_piece_id (map, x, y, data[i]);
+                    set_piece_id (map, x, y, data [i]);
                     i++;
                 }
             }
@@ -140,22 +140,22 @@ private class Puzzle : Object
         lastmove_map = map;
     }
 
-    internal char get_piece_id (char[] src, int x, int y)
+    internal char get_piece_id (char [] src, uint8 x, uint8 y)
     {
-        return src[x + 1 + (y + 1) * (width + 2)];
+        return src [(uint16) x + 1 + ((uint16) y + 1) * ((uint16) width + 2)];
     }
 
-    private void set_piece_id (char[] src, int x, int y, char id)
+    private void set_piece_id (char [] src, uint8 x, uint8 y, char id)
     {
-        src[x + 1 + (y + 1) * (width + 2)] = id;
+        src [(uint16) x + 1 + ((uint16) y + 1) * ((uint16) width + 2)] = id;
     }
 
-    internal int get_piece_nr (int x, int y)
+    internal int get_piece_nr (uint8 x, uint8 y)
     {
         x++;
         y++;
 
-        var c = map[x + y * (width + 2)];
+        var c = map [(uint16) x + (uint16) y * ((uint16) width + 2)];
         if (c == '-')
             return 23;
         if (c == ' ')
@@ -163,45 +163,45 @@ private class Puzzle : Object
         if (c == '.')
             return 20;
 
-        var nr = 0;
-        if (map[(x - 1) + (y - 1) * (width + 2)] == c)
+        uint8 nr = 0;
+        if (map [((uint16) x - 1) + ((uint16) y - 1) * ((uint16) width + 2)] == c)
             nr += 1;
-        if (map[(x - 0) + (y - 1) * (width + 2)] == c)
+        if (map [((uint16) x    ) + ((uint16) y - 1) * ((uint16) width + 2)] == c)
             nr += 2;
-        if (map[(x + 1) + (y - 1) * (width + 2)] == c)
+        if (map [((uint16) x + 1) + ((uint16) y - 1) * ((uint16) width + 2)] == c)
             nr += 4;
-        if (map[(x - 1) + (y - 0) * (width + 2)] == c)
+        if (map [((uint16) x - 1) + ((uint16) y    ) * ((uint16) width + 2)] == c)
             nr += 8;
-        if (map[(x + 1) + (y - 0) * (width + 2)] == c)
+        if (map [((uint16) x + 1) + ((uint16) y    ) * ((uint16) width + 2)] == c)
             nr += 16;
-        if (map[(x - 1) + (y + 1) * (width + 2)] == c)
+        if (map [((uint16) x - 1) + ((uint16) y + 1) * ((uint16) width + 2)] == c)
             nr += 32;
-        if (map[(x - 0) + (y + 1) * (width + 2)] == c)
+        if (map [((uint16) x    ) + ((uint16) y + 1) * ((uint16) width + 2)] == c)
             nr += 64;
-        if (map[(x + 1) + (y + 1) * (width + 2)] == c)
+        if (map [((uint16) x + 1) + ((uint16) y + 1) * ((uint16) width + 2)] == c)
             nr += 128;
 
-        var i = 0;
-        while (nr != image_map[i] && image_map[i] != -1)
+        uint8 i = 0;
+        while (nr != image_map [i] && image_map [i] != -1)
             i += 2;
 
-        return image_map[i + 1];
+        return image_map [i + 1];
     }
 
     internal bool game_over ()
     {
-        var over = true;
-        for (var y = 0; y < height; y++)
-            for (var x = 0; x < width; x++)
+        bool over = true;
+        for (uint8 y = 0; y < height; y++)
+            for (uint8 x = 0; x < width; x++)
                 if (get_piece_id (map, x, y) == '*' && get_piece_id (orig_map, x, y) != '.')
-                    over = false;
+                    over = false;   // TODO return false?
         return over;
     }
 
-    internal bool mapcmp (char[] m1, char[] m2)
+    internal bool mapcmp (char [] m1, char [] m2)
     {
-        for (var y = 0; y < height; y++)
-            for (var x = 0; x < width; x++)
+        for (uint8 y = 0; y < height; y++)
+            for (uint8 x = 0; x < width; x++)
                 if (get_piece_id (m1, x, y) != get_piece_id (m2, x, y))
                     return true;
         return false;
@@ -214,7 +214,7 @@ private class Puzzle : Object
         return true;
     }
 
-    internal bool move_piece (char id, int x1, int y1, int x2, int y2)
+    internal bool move_piece (char id, uint8 x1, uint8 y1, uint8 x2, uint8 y2)
     {
         var return_value = false;
 
@@ -224,27 +224,35 @@ private class Puzzle : Object
         if (get_piece_id (map, x2, y2) == id)
             return_value = true;
 
-        if (!((y1 == y2 && (x1 - x2).abs () == 1) || (x1 == x2 && (y1 - y2).abs () == 1)))
+        if (!((y1 == y2 && ((int) x1 - (int) x2).abs () == 1) || (x1 == x2 && ((int) y1 - (int) y2).abs () == 1)))
             return false;
 
-        if ((y1 - y2).abs () == 1)
+        if (((int) y1 - (int) y2).abs () == 1)
         {
-            if (y1 - y2 < 0)
+            if (y1 < y2)
+            {
                 if (check_valid_move (id, 0, 1))
                     return do_move_piece (id, 0, 1);
-            if (y1 - y2 > 0)
+            }
+            else if (y1 > y2)
+            {
                 if (check_valid_move (id, 0, -1))
                     return do_move_piece (id, 0, -1);
+            }
         }
 
-        if ((x1 - x2).abs () == 1)
+        if (((int) x1 - (int) x2).abs () == 1)
         {
-            if (x1 - x2 < 0)
+            if (x1 < x2)
+            {
                 if (check_valid_move (id, 1, 0))
                     return do_move_piece (id, 1, 0);
-            if (x1 - x2 > 0)
+            }
+            else if (x1 > x2)
+            {
                 if (check_valid_move (id, -1, 0))
                     return do_move_piece (id, -1, 0);
+            }
         }
 
         return return_value;

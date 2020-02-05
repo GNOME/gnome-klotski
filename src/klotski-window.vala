@@ -19,19 +19,19 @@
 
 using Gtk;
 
-/* Puzzle Info */
-private struct LevelInfo
-{
-    string name;
-    int group;
-    int width;
-    int height;
-    string data;
-}
-
 [GtkTemplate (ui = "/org/gnome/Klotski/ui/klotski.ui")]
 private class KlotskiWindow : ApplicationWindow
 {
+    /* Puzzle Info */
+    private struct LevelInfo
+    {
+        string  name;
+        uint8   group;
+        uint8   width;
+        uint8   height;
+        string  data;
+    }
+
     /* Settings */
     private GLib.Settings settings;
     private bool is_tiled;
@@ -468,7 +468,7 @@ private class KlotskiWindow : ApplicationWindow
     class construct
     {
         score_categories = new Gee.ArrayList<Games.Scores.Category> ();
-        for (var i = 0; i < levels.length; i++)
+        for (uint8 i = 0; i < levels.length; i++)
         {
             score_categories.add (new Games.Scores.Category (normalize_map_name (levels[i].name),
                                                              _(levels[i].name)));
@@ -477,7 +477,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private Games.Scores.Category? category_request (string key)
     {
-        for (int i = 0; i < levels.length; i++)
+        for (uint8 i = 0; i < levels.length; i++)
         {
             if (key == normalize_map_name (levels[i].name))
                 return score_categories[i];
@@ -490,21 +490,21 @@ private class KlotskiWindow : ApplicationWindow
         score = null;
         category = null;
 
-        var tokens = line.split (" ");
+        string [] tokens = line.split (" ");
         if (tokens.length != 3)
             return;
 
-        var date = Games.Scores.HistoryFileImporter.parse_date (tokens[0]);
+        int64 date = Games.Scores.HistoryFileImporter.parse_date (tokens [0]);
         if (date == 0)
             return;
 
-        var level = int.parse (tokens[1]);
-        if (level == 0 && tokens[1] != "0")
+        int level = int.parse (tokens [1]);
+        if (level == 0 && tokens [1] != "0")
             return;
         if (level < 0 || level > score_categories.size)
             return;
 
-        var moves = int.parse (tokens[2]);
+        int moves = int.parse (tokens [2]);
         if (moves <= 0)
             return;
 
@@ -514,7 +514,7 @@ private class KlotskiWindow : ApplicationWindow
 
     internal KlotskiWindow ()
     {
-        var css_provider = new CssProvider ();
+        CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
         StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
@@ -540,12 +540,12 @@ private class KlotskiWindow : ApplicationWindow
              new Games.Scores.HistoryFileImporter (parse_old_score));
 
         // name, active, puzzle number (or -1), sensitive=false CSS hack
-        liststore_huarong = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
+        liststore_huarong   = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
         liststore_challenge = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
-        liststore_skill = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
+        liststore_skill     = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
 
         puzzles_items = new TreeIter[levels.length];
-        for (var i = 0; i < levels.length; i++)
+        for (uint8 i = 0; i < levels.length; i++)
         {
             switch (levels[i].group)
             {
@@ -573,6 +573,7 @@ private class KlotskiWindow : ApplicationWindow
                                      2, i,
                                      3, false);
                 break;
+            default: assert_not_reached ();
             }
         }
 
@@ -802,9 +803,9 @@ private class KlotskiWindow : ApplicationWindow
     private void game_score ()
     {
         /* Level is complete */
-        var key = get_level_key (current_level);
-        var keyfile = new KeyFile ();
-        var filename = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "levels");  // filename:~/.local/share/gnome-klotski/levels
+        string key = get_level_key (current_level);
+        KeyFile keyfile = new KeyFile ();
+        string filename = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "levels");  // filename:~/.local/share/gnome-klotski/levels
 
         try
         {
@@ -850,11 +851,11 @@ private class KlotskiWindow : ApplicationWindow
     {
         /* Calculate the CRC of the level data */
         uint32 result = 0xFFFFFFFFu;
-        var data = levels[level_number].data;
-        for (var i = 0; data[i] != '\0'; i++)
+        string data = levels [level_number].data;
+        for (uint i = 0; data [i] != '\0'; i++)
         {
-            var octet = data[i];
-            for (var j = 0; j < 8; j++)
+            char octet = data [i];
+            for (uint8 j = 0; j < 8; j++)
             {
                 if (((octet >> 7) ^ (result >> 31)) != 0)
                     result = (result << 1) ^ 0x04c11db7;
@@ -870,8 +871,8 @@ private class KlotskiWindow : ApplicationWindow
 
     private void load_solved_state ()
     {
-        var keyfile = new KeyFile ();
-        var filename = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "levels");
+        KeyFile keyfile = new KeyFile ();
+        string filename = Path.build_filename (Environment.get_user_data_dir (), "gnome-klotski", "levels");
         try
         {
             keyfile.load_from_file (filename, KeyFileFlags.NONE);
@@ -880,19 +881,19 @@ private class KlotskiWindow : ApplicationWindow
         {
         }
 
-        for (var i = 0; i < levels.length; i++)
+        for (uint8 i = 0; i < levels.length; i++)
         {
-            var key = get_level_key (i);
-            var value = false;
+            string key = get_level_key (i);
+            bool is_solved = false;
             try
             {
-                value = keyfile.get_boolean (key, "solved");
+                is_solved = keyfile.get_boolean (key, "solved");
             }
             catch (Error e)
             {
             }
 
-            puzzle_solved (puzzles_items[i], value);
+            puzzle_solved (puzzles_items [i], is_solved);
         }
     }
 
