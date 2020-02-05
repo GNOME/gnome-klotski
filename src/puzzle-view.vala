@@ -65,11 +65,17 @@ private class PuzzleView : Gtk.DrawingArea
         }
     }
 
+    Gtk.StyleContext style_context;
+    construct
+    {
+        style_context = get_style_context ();
+    }
+
     private int tile_size
     {
         get
         {
-            var s = int.min ((get_allocated_width () - SPACE_PADDING) / puzzle.width, (get_allocated_height () - SPACE_PADDING) / puzzle.height);
+            int s = int.min ((get_allocated_width () - SPACE_PADDING) / puzzle.width, (get_allocated_height () - SPACE_PADDING) / puzzle.height);
             /* SVG theme renders best when tile size is multiple of 2 */
             if (s % 2 != 0)
                 s--;
@@ -94,13 +100,13 @@ private class PuzzleView : Gtk.DrawingArea
         }
         catch (Error e)
         {
-            /*var dialog = new Gtk.MessageDialog (window,
-                                                Gtk.DialogFlags.MODAL,
-                                                Gtk.MessageType.ERROR,
-                                                Gtk.ButtonsType.OK,
-                                                _("Could not find the image:\n%s\n\nPlease check that Klotski is installed correctly."),
-                                                e.message);
-            dialog.run ();*/
+         /* Gtk.MessageDialog dialog = new Gtk.MessageDialog (window,
+                                                              Gtk.DialogFlags.MODAL,
+                                                              Gtk.MessageType.ERROR,
+                                                              Gtk.ButtonsType.OK,
+                                                              _("Could not find the image:\n%s\n\nPlease check that Klotski is installed correctly."),
+                                                              e.message);
+            dialog.run (); */
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
             Posix.exit (Posix.EXIT_FAILURE);
         }
@@ -116,11 +122,11 @@ private class PuzzleView : Gtk.DrawingArea
                 int width = tile_size * THEME_TILE_SEGMENTS;
 
                 surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
-                var c = new Cairo.Context (surface);
+                Cairo.Context c = new Cairo.Context (surface);
 
                 /* calc scale factor */
-                double sfw = (double) width / 918;
-                double sfh = (double) height / 68;
+                double sfw = (double) width / 918.0;
+                double sfh = (double) height / 68.0;
 
                 c.scale (sfw, sfh);
 
@@ -129,12 +135,11 @@ private class PuzzleView : Gtk.DrawingArea
             render_size = tile_size;
         }
 
-        var style = get_style_context ();
-        style.save ();
-        style.set_state (Gtk.StateFlags.NORMAL);
-        var fg = style.get_color (Gtk.StateFlags.NORMAL);
-        var bg = style.get_background_color (Gtk.StateFlags.NORMAL);
-        style.restore ();
+        style_context.save ();
+        style_context.set_state (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA fg = style_context.get_color (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
+        style_context.restore ();
 
         Gdk.cairo_set_source_rgba (cr, bg);
         cr.paint ();
@@ -171,17 +176,16 @@ private class PuzzleView : Gtk.DrawingArea
 
     private void draw_square (Cairo.Context cr, uint8 x, uint8 y, double kx, double ky)
     {
-        var rect = Gdk.Rectangle ();
+        Gdk.Rectangle rect = Gdk.Rectangle ();
         rect.x = x * tile_size + SPACE_OFFSET + (int)kx - 1;
         rect.y = y * tile_size + SPACE_OFFSET + (int)ky - 1;
         rect.width = tile_size;
         rect.height = tile_size;
 
-        var style = get_style_context ();
-        style.save ();
-        style.set_state (Gtk.StateFlags.NORMAL);
-        var bg = style.get_background_color (Gtk.StateFlags.NORMAL);
-        style.restore ();
+        style_context.save ();
+        style_context.set_state (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
+        style_context.restore ();
 
         Gdk.cairo_rectangle (cr, rect);
         Gdk.cairo_set_source_rgba (cr, bg);
@@ -197,17 +201,17 @@ private class PuzzleView : Gtk.DrawingArea
 
         if (puzzle.get_piece_id (puzzle.map, x, y) == '*')
         {
-            var value = 22;
+            uint8 tile_value = 22;
             if (puzzle.get_piece_id (puzzle.orig_map, x, y) == '.')
-                value = 20;
+                tile_value = 20;
 
-            var overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
-            var overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
+            int overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
+            int overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
 
             cr.rectangle (rect.x + overlay_offset, rect.y + overlay_offset,
                           overlay_size, overlay_size);
 
-            cr.set_source_surface (surface, rect.x - value * tile_size, rect.y - tile_size / 2);
+            cr.set_source_surface (surface, rect.x - tile_value * tile_size, rect.y - tile_size / 2);
             cr.fill ();
         }
     }
@@ -257,7 +261,7 @@ private class PuzzleView : Gtk.DrawingArea
                 if (last_piece_id == '\0' || last_piece_id != piece_id)
                 {
                     puzzle.undomove_map = puzzle.lastmove_map;
-                    if (puzzle.moves < 999)
+                    if (puzzle.moves < 10000 /* or up to uint16.MAX */)
                         puzzle.moves++;
                 }
 

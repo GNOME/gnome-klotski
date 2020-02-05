@@ -112,7 +112,7 @@ private class Puzzle : Object
     internal char [] lastmove_map;
     internal char [] undomove_map;
 
-    [CCode (notify = false)] internal int moves     { internal get; internal set; default = 0; }
+    [CCode (notify = false)] internal uint16 moves  { internal get; internal set; default = 0; }
 
     internal signal void changed ();
     internal signal void moved ();
