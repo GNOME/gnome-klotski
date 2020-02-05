@@ -17,7 +17,7 @@
    with GNOME Klotski.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class PuzzleView : Gtk.DrawingArea
+private class PuzzleView : Gtk.DrawingArea
 {
     private const int SPACE_OFFSET = 4;
     private const int SPACE_PADDING = 5;
@@ -49,10 +49,10 @@ public class PuzzleView : Gtk.DrawingArea
     private Cairo.Surface surface = null;
 
     private Puzzle? _puzzle = null;
-    public Puzzle? puzzle
+    internal Puzzle? puzzle
     {
-        get { return _puzzle; }
-        set
+        private  get { return _puzzle; }
+        internal set
         {
             if (_puzzle != null)
                 SignalHandler.disconnect_by_func (_puzzle, null, this);
@@ -77,7 +77,7 @@ public class PuzzleView : Gtk.DrawingArea
         }
     }
 
-    public PuzzleView ()
+    internal PuzzleView ()
     {
         set_size_request (250, 250);    // TODO enough? Taquin is in 350^2
         set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);

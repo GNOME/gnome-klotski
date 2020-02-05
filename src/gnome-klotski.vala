@@ -19,7 +19,7 @@
 
 using Gtk;
 
-public class Klotski : Gtk.Application
+private class Klotski : Gtk.Application
 {
     private const OptionEntry [] option_entries =
     {
@@ -39,7 +39,7 @@ public class Klotski : Gtk.Application
     * * Application init
     \*/
 
-    public static int main (string [] args)
+    private static int main (string [] args)
     {
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -50,7 +50,7 @@ public class Klotski : Gtk.Application
         return app.run (args);
     }
 
-    public Klotski ()
+    private Klotski ()
     {
         Object (application_id: "org.gnome.Klotski", flags: ApplicationFlags.FLAGS_NONE);
 

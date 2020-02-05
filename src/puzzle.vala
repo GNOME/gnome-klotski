@@ -17,7 +17,7 @@
    with GNOME Klotski.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-public class Puzzle : Object
+private class Puzzle : Object
 {
     /*
       1   2   4
@@ -102,21 +102,22 @@ public class Puzzle : Object
         -1,  -1
     };
 
-    public int width;
-    public int height;
+    [CCode (notify = false)] internal int width     { internal get; private set; }
+    [CCode (notify = false)] internal int height    { internal get; private set; }
 
-    public char[] map;
-    public char[] move_map;
-    public char[] orig_map;
-    public char[] lastmove_map;
-    public char[] undomove_map;
+    // Type `char []' can not be used for a GLib.Object property
+    internal char [] map;
+    internal char [] move_map;
+    internal char [] orig_map;
+    internal char [] lastmove_map;
+    internal char [] undomove_map;
 
-    public int moves = 0;
+    [CCode (notify = false)] internal int moves     { internal get; internal set; default = 0; }
 
-    public signal void changed ();
-    public signal void moved ();
+    internal signal void changed ();
+    internal signal void moved ();
 
-    public Puzzle (int width, int height, string? data)
+    internal Puzzle (int width, int height, string? data)
     {
         this.width = width;
         this.height = height;
@@ -139,7 +140,7 @@ public class Puzzle : Object
         lastmove_map = map;
     }
 
-    public char get_piece_id (char[] src, int x, int y)
+    internal char get_piece_id (char[] src, int x, int y)
     {
         return src[x + 1 + (y + 1) * (width + 2)];
     }
@@ -149,7 +150,7 @@ public class Puzzle : Object
         src[x + 1 + (y + 1) * (width + 2)] = id;
     }
 
-    public int get_piece_nr (int x, int y)
+    internal int get_piece_nr (int x, int y)
     {
         x++;
         y++;
@@ -187,7 +188,7 @@ public class Puzzle : Object
         return image_map[i + 1];
     }
 
-    public bool game_over ()
+    internal bool game_over ()
     {
         var over = true;
         for (var y = 0; y < height; y++)
@@ -197,7 +198,7 @@ public class Puzzle : Object
         return over;
     }
 
-    public bool mapcmp (char[] m1, char[] m2)
+    internal bool mapcmp (char[] m1, char[] m2)
     {
         for (var y = 0; y < height; y++)
             for (var x = 0; x < width; x++)
@@ -206,14 +207,14 @@ public class Puzzle : Object
         return false;
     }
 
-    public bool movable (int id)
+    internal bool movable (int id)
     {
         if (id == '#' || id == '.' || id == ' ' || id == '-')
             return false;
         return true;
     }
 
-    public bool move_piece (char id, int x1, int y1, int x2, int y2)
+    internal bool move_piece (char id, int x1, int y1, int x2, int y2)
     {
         var return_value = false;
 

@@ -30,7 +30,7 @@ private struct LevelInfo
 }
 
 [GtkTemplate (ui = "/org/gnome/Klotski/ui/klotski.ui")]
-public class KlotskiWindow : ApplicationWindow
+private class KlotskiWindow : ApplicationWindow
 {
     /* Settings */
     private GLib.Settings settings;
@@ -512,7 +512,7 @@ public class KlotskiWindow : ApplicationWindow
         category = score_categories[level];
     }
 
-    public KlotskiWindow ()
+    internal KlotskiWindow ()
     {
         var css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
@@ -841,7 +841,7 @@ public class KlotskiWindow : ApplicationWindow
         });
     }
 
-    public void show_scores ()
+    internal void show_scores ()
     {
         scores_context.run_dialog ();
     }
