@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
 "POT-Creation-Date: 2020-01-02 12:30+0000\n"
-"PO-Revision-Date: 2020-02-07 14:22+0000\n"
+"PO-Revision-Date: 2020-02-07 14:44+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -91,13 +91,13 @@ msgstr "بلوک‌ها را بلغزانید تا پازل را حل کنید"
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
-"patterned block to the area bordered by green markers. To do so, you’ll need "
-"to slide other blocks out of the way. Complete each puzzle in as few moves as "
+"patterned block to the area bordered by green markers. To do so, you’ll need to "
+"slide other blocks out of the way. Complete each puzzle in as few moves as "
 "possible!"
 msgstr ""
 "«گنوم کی‌لاتسکی» یک مجموعه از پازلِ بلوک‌های لغزنده است. هدف این است که الگوی "
-"بلوکه‌ها را به ناحیه مشخص شده سبز منتقل کرد. برای اینکار، شما باید بلوک‌های "
-"دیگر را از سر راه بردارید. هر پازل را در کمترین حرکت ممکن حل کنید!"
+"بلوکه‌ها را به ناحیه مشخص شده سبز منتقل کرد. برای اینکار، شما باید بلوک‌های دیگر "
+"را از سر راه بردارید. هر پازل را در کمترین حرکت ممکن حل کنید!"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -155,13 +155,13 @@ msgstr "حق رونوشت © ۱۹۹۹-۲۰۰۸ – لارس ریدلینگ"
 #: src/gnome-klotski.vala:132
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
-msgstr "حق رونوشت © %u-%u – مایکل کاتانزارو"
+msgstr "حق رونوشت © %Iu-%Iu – مایکل کاتانزارو"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
 #: src/gnome-klotski.vala:136
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
-msgstr "حق رونوشت © %u-%u – آرناد بوناتی"
+msgstr "حق رونوشت © %Iu-%Iu – آرناد بوناتی"
 
 #: src/gnome-klotski.vala:140
 msgid "translator-credits"
