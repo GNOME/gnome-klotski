@@ -123,13 +123,30 @@ private class Klotski : Gtk.Application
 
     private void about_cb ()
     {
-        const string authors [] = { "Lars Rydlinge (original author)", "Robert Ancell (port to vala)", "John Cheetham (port to vala)", null };
-        const string documenters [] = { "Andrew Sobala", null };
+        string [] authors = {
+        /* Translators: text crediting an author, in the about dialog */
+            _("Lars Rydlinge (original author)"),
+
+
+        /* Translators: text crediting an author, in the about dialog */
+            _("Robert Ancell (port to vala)"),
+
+
+        /* Translators: text crediting an author, in the about dialog */
+            _("John Cheetham (port to vala)")
+        };
+
+        /* Translators: text crediting a documenter, in the about dialog */
+        string [] documenters = { _("Andrew Sobala") };
 
         show_about_dialog (get_active_window (),
+                           /* Translators: name of the program, seen in the About dialog */
                            "program-name", _("Klotski"),
+
                            "version", VERSION,
+                           /* Translators: small description of the game, seen in the About dialog */
                            "comments", _("Sliding block puzzles"),
+
                            "copyright",
                              /* Translators: text crediting a maintainer, seen in the About dialog */
                              _("Copyright \xc2\xa9 1999-2008 – Lars Rydlinge") + "\n"+
@@ -144,10 +161,10 @@ private class Klotski : Gtk.Application
                            "license-type", License.GPL_3_0,
                            "authors", authors,
                            "documenters", documenters,
+                           /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                            "translator-credits", _("translator-credits"),
                            "logo-icon-name", "org.gnome.Klotski",
-                           "website", "https://wiki.gnome.org/Apps/Klotski",
-                           null);
+                           "website", "https://wiki.gnome.org/Apps/Klotski");
     }
 
     private void quit_cb ()
