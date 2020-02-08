@@ -60,6 +60,7 @@ private class KlotskiWindow : ApplicationWindow
     private SimpleAction start_game;
 
     /* The game being played */
+    private bool puzzle_init_done = false;
     private Puzzle puzzle;
 
     private int current_pack = -1;
@@ -772,7 +773,10 @@ private class KlotskiWindow : ApplicationWindow
     private void start_puzzle ()
     {
         headerbar.set_title (_(levels[current_level].name));
+        if (puzzle_init_done)
+            SignalHandler.disconnect_by_func (puzzle, null, this);
         puzzle = new Puzzle (levels[current_level].width, levels[current_level].height, levels[current_level].data);
+        puzzle_init_done = true;
         puzzle.moved.connect (puzzle_moved_cb);     // TODO disconnect previous puzzle?
         view.puzzle = puzzle;
 
