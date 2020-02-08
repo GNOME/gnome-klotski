@@ -125,7 +125,7 @@ private class Puzzle : Object
 
     construct
     {
-        map = new char[(width + 2) * (height + 2)];
+        map = new char [(width + 2) * (height + 2)];
         move_map = map;
         undomove_map = map;
 

@@ -74,391 +74,391 @@ private class KlotskiWindow : ApplicationWindow
     private Gtk.ListStore liststore_huarong;
     private Gtk.ListStore liststore_challenge;
     private Gtk.ListStore liststore_skill;
-    private TreeIter[] puzzles_items;
+    private TreeIter [] puzzles_items;
 
     private static Gee.List<Games.Scores.Category> score_categories;
     /* Warning: reordering these will screw up import of old scores. */
-    private const LevelInfo levels[] =
+    private const LevelInfo levels [] =
     {
-      /* puzzle name */
-      {N_("Only 18 Steps"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#m**n#" +
-       "#cdef#" +
-       "#ghij#" +
-       "#k  l#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Only 18 Steps"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#m**n#" +
+            "#cdef#" +
+            "#ghij#" +
+            "#k  l#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Daisy"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdef#" +
-       "#zghi#" +
-       "#j  k#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Daisy"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdef#" +
+            "#zghi#" +
+            "#j  k#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Violet"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdef#" +
-       "#cghi#" +
-       "#j  k#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Violet"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdef#" +
+            "#cghi#" +
+            "#j  k#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Poppy"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdde#" +
-       "#fghi#" +
-       "#j  k#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Poppy"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdde#" +
+            "#fghi#" +
+            "#j  k#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Pansy"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdef#" +
-       "#cghf#" +
-       "#i  j#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Pansy"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdef#" +
+            "#cghf#" +
+            "#i  j#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Snowdrop"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdde#" +
-       "#cfgh#" +
-       "#i  j#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Snowdrop"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdde#" +
+            "#cfgh#" +
+            "#i  j#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name - sometimes called "Le'Ane Rouge" */
-      {N_("Red Donkey"), 0,
-       6, 9,
-       "######" +
-       "#a**b#" +
-       "#a**b#" +
-       "#cdde#" +
-       "#cfge#" +
-       "#h  i#" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* puzzle name - sometimes called "Le'Ane Rouge" */
+        {   N_("Red Donkey"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**b#" +
+            "#a**b#" +
+            "#cdde#" +
+            "#cfge#" +
+            "#h  i#" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Trail"), 0,
-       6, 9,
-       "######" +
-       "#a**c#" +
-       "#a**c#" +
-       "#eddg#" +
-       "#hffj#" +
-       "# ii #" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Trail"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**c#" +
+            "#a**c#" +
+            "#eddg#" +
+            "#hffj#" +
+            "# ii #" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Ambush"), 0,
-       6, 9,
-       "######" +
-       "#a**c#" +
-       "#d**e#" +
-       "#dffe#" +
-       "#ghhi#" +
-       "# jj #" +
-       "##--##" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Ambush"), /* group */ 0,
+            /* width and height */ 6, 9,
+            "######" +
+            "#a**c#" +
+            "#d**e#" +
+            "#dffe#" +
+            "#ghhi#" +
+            "# jj #" +
+            "##--##" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Agatka"), 1,
-       7, 7,
-       "..     " +
-       ".      " +
-       "#####--" +
-       "#**aab-" +
-       "#*ccde#" +
-       "#fgh  #" +
-       "#######"},
+        /* Translators: puzzle name */
+        {   N_("Agatka"), /* group */ 1,
+            /* width and height */ 7, 7,
+            "..     " +
+            ".      " +
+            "#####--" +
+            "#**aab-" +
+            "#*ccde#" +
+            "#fgh  #" +
+            "#######" },
 
-      /* puzzle name */
-      {N_("Success"), 1,
-       9, 6,
-       "#######  " +
-       "#**bbc#  " +
-       "#defgh#  " +
-       "#ijkgh-  " +
-       "#llk  #  " +
-       "#######.."},
+        /* Translators: puzzle name */
+        {   N_("Success"), /* group */ 1,
+            /* width and height */ 9, 6,
+            "#######  " +
+            "#**bbc#  " +
+            "#defgh#  " +
+            "#ijkgh-  " +
+            "#llk  #  " +
+            "#######.." },
 
-      /* puzzle name */
-      {N_("Bone"), 1,
-       6, 9,
-       "######" +
-       "#abc*#" +
-       "# dd*#" +
-       "# ee*#" +
-       "# fgh#" +
-       "##-###" +
-       "     ." +
-       "     ." +
-       "     ."},
+        /* Translators: puzzle name */
+        {   N_("Bone"), /* group */ 1,
+            /* width and height */ 6, 9,
+            "######" +
+            "#abc*#" +
+            "# dd*#" +
+            "# ee*#" +
+            "# fgh#" +
+            "##-###" +
+            "     ." +
+            "     ." +
+            "     ." },
 
-      /* puzzle name */
-      {N_("Fortune"), 1,
-       7, 10,
-       "     .." +
-       "     . " +
-       "####-. " +
-       "#ab  - " +
-       "#ccd # " +
-       "#ccd # " +
-       "#**ee# " +
-       "#*fgh# " +
-       "#*iih# " +
-       "###### "},
+        /* Translators: puzzle name */
+        {   N_("Fortune"), /* group */ 1,
+            /* width and height */ 7, 10,
+            "     .." +
+            "     . " +
+            "####-. " +
+            "#ab  - " +
+            "#ccd # " +
+            "#ccd # " +
+            "#**ee# " +
+            "#*fgh# " +
+            "#*iih# " +
+            "###### " },
 
-      /* puzzle name */
-      {N_("Fool"), 1,
-       10, 6,
-       "  ########" +
-       "  -aabc  #" +
-       "  #aabdef#" +
-       "  #ijggef#" +
-       "  #klhh**#" +
-       "..########"},
+        /* Translators: puzzle name */
+        {   N_("Fool"), /* group */ 1,
+            /* width and height */ 10, 6,
+            "  ########" +
+            "  -aabc  #" +
+            "  #aabdef#" +
+            "  #ijggef#" +
+            "  #klhh**#" +
+            "..########" },
 
-      /* puzzle name */
-      {N_("Solomon"), 1,
-       7, 9,
-       " .     " +
-       "..     " +
-       "#--####" +
-       "#  aab#" +
-       "# cdfb#" +
-       "#hcefg#" +
-       "#hijk*#" +
-       "#hll**#" +
-       "#######"},
+        /* Translators: puzzle name */
+        {   N_("Solomon"), /* group */ 1,
+            /* width and height */ 7, 9,
+            " .     " +
+            "..     " +
+            "#--####" +
+            "#  aab#" +
+            "# cdfb#" +
+            "#hcefg#" +
+            "#hijk*#" +
+            "#hll**#" +
+            "#######" },
 
-      /* puzzle name */
-      {N_("Cleopatra"), 1,
-       6, 8,
-       "######" +
-       "#abcd#" +
-       "#**ee#" +
-       "#f*g #" +
-       "#fh i-" +
-       "####--" +
-       "    .." +
-       "     ."},
+        /* Translators: puzzle name */
+        {   N_("Cleopatra"), /* group */ 1,
+            /* width and height */ 6, 8,
+            "######" +
+            "#abcd#" +
+            "#**ee#" +
+            "#f*g #" +
+            "#fh i-" +
+            "####--" +
+            "    .." +
+            "     ." },
 
-      /* puzzle name */
-      {N_("Shark"), 1,
-       11, 8,
-       "########   " +
-       "#nrr s #   " +
-       "#n*op q#   " +
-       "#***jml#   " +
-       "#hhijkl#   " +
-       "#ffcddg-   " +
-       "#abcdde- . " +
-       "########..."},
+        /* Translators: puzzle name */
+        {   N_("Shark"), /* group */ 1,
+            /* width and height */ 11, 8,
+            "########   " +
+            "#nrr s #   " +
+            "#n*op q#   " +
+            "#***jml#   " +
+            "#hhijkl#   " +
+            "#ffcddg-   " +
+            "#abcdde- . " +
+            "########..." },
 
-      /* puzzle name */
-      {N_("Rome"), 1,
-       8, 8,
-       "########" +
-       "#abcc**#" +
-       "#ddeef*#" +
-       "#ddghfi#" +
-       "#   jki#" +
-       "#--#####" +
-       " ..     " +
-       "  .     "},
+        /* Translators: puzzle name */
+        {   N_("Rome"), /* group */ 1,
+            /* width and height */ 8, 8,
+            "########" +
+            "#abcc**#" +
+            "#ddeef*#" +
+            "#ddghfi#" +
+            "#   jki#" +
+            "#--#####" +
+            " ..     " +
+            "  .     " },
 
-      /* puzzle name */
-      {N_("Pennant Puzzle"), 1,
-       6, 9,
-       "######" +
-       "#**aa#" +
-       "#**bb#" +
-       "#de  #" +
-       "#fghh#" +
-       "#fgii#" +
-       "#--###" +
-       "    .." +
-       "    .."},
+        /* Translators: puzzle name */
+        {   N_("Pennant Puzzle"), /* group */ 1,
+            /* width and height */ 6, 9,
+            "######" +
+            "#**aa#" +
+            "#**bb#" +
+            "#de  #" +
+            "#fghh#" +
+            "#fgii#" +
+            "#--###" +
+            "    .." +
+            "    .." },
 
-      /* puzzle name */
-      {N_("Ithaca"), 2,
-       19, 19,
-       ".aaaaaaaaaaaaaaaaab" +
-       "..  cddeffffffffffb" +
-       " .. cddeffffffffffb" +
-       "  . cddeffffffffffb" +
-       "ggg-############hhb" +
-       "ggg-  ABCDEFFGH#hhb" +
-       "ggg-       FFIJ#hhb" +
-       "ggg#       KLMJ#hhb" +
-       "ggg#NNNNOOOPQMJ#hhb" +
-       "ggg#NNNNOOOP*RS#hhb" +
-       "ggg#TTTTTUVW**X#hhb" +
-       "ggg#YZ12222W3**#hhb" +
-       "ggg#YZ12222W34*#iib" +
-       "jjj#YZ155555367#klb" +
-       "jjj#############mmb" +
-       "jjjnooooooooooppppb" +
-       "jjjqooooooooooppppb" +
-       "       rrrssssppppb" +
-       "ttttttuvvvvvvvwwwwx"},
+        /* Translators: puzzle name */
+        {   N_("Ithaca"), /* group */ 2,
+            /* width and height */ 19, 19,
+            ".aaaaaaaaaaaaaaaaab" +
+            "..  cddeffffffffffb" +
+            " .. cddeffffffffffb" +
+            "  . cddeffffffffffb" +
+            "ggg-############hhb" +
+            "ggg-  ABCDEFFGH#hhb" +
+            "ggg-       FFIJ#hhb" +
+            "ggg#       KLMJ#hhb" +
+            "ggg#NNNNOOOPQMJ#hhb" +
+            "ggg#NNNNOOOP*RS#hhb" +
+            "ggg#TTTTTUVW**X#hhb" +
+            "ggg#YZ12222W3**#hhb" +
+            "ggg#YZ12222W34*#iib" +
+            "jjj#YZ155555367#klb" +
+            "jjj#############mmb" +
+            "jjjnooooooooooppppb" +
+            "jjjqooooooooooppppb" +
+            "       rrrssssppppb" +
+            "ttttttuvvvvvvvwwwwx" },
 
-      /* puzzle name */
-      {N_("Pelopones"), 2,
-       9, 8,
-       "#########" +
-       "#abbb***#" +
-       "#abbb*c*#" +
-       "#adeefgg#" +
-       "#  eefhh#" +
-       "#... ihh#" +
-       "#. . ihh#" +
-       "#########"},
+        /* Translators: puzzle name */
+        {   N_("Pelopones"), /* group */ 2,
+            /* width and height */ 9, 8,
+            "#########" +
+            "#abbb***#" +
+            "#abbb*c*#" +
+            "#adeefgg#" +
+            "#  eefhh#" +
+            "#... ihh#" +
+            "#. . ihh#" +
+            "#########" },
 
-      /* puzzle name */
-      {N_("Transeuropa"), 2,
-       15, 8,
-       "    ###########" +
-       "    -AAAAABBCC#" +
-       "    -   DEFGHI#" +
-       "    #   DEFGJI#" +
-       "    #   KEFGLI#" +
-       "    #   KEFG*I#" +
-       "  . #   MM****#" +
-       "....###########"},
+        /* Translators: puzzle name */
+        {   N_("Transeuropa"), /* group */ 2,
+            /* width and height */ 15, 8,
+            "    ###########" +
+            "    -AAAAABBCC#" +
+            "    -   DEFGHI#" +
+            "    #   DEFGJI#" +
+            "    #   KEFGLI#" +
+            "    #   KEFG*I#" +
+            "  . #   MM****#" +
+            "....###########" },
 
-      /* puzzle name */
-      {N_("Lodzianka"), 2,
-       9, 7,
-       "#########" +
-       "#**abbcc#" +
-       "#**abbdd#" +
-       "#eefgh  #" +
-       "#iiijk..#" +
-       "#iiijk..#" +
-       "#########"},
+        /* Translators: puzzle name */
+        {   N_("Lodzianka"), /* group */ 2,
+            /* width and height */ 9, 7,
+            "#########" +
+            "#**abbcc#" +
+            "#**abbdd#" +
+            "#eefgh  #" +
+            "#iiijk..#" +
+            "#iiijk..#" +
+            "#########" },
 
-      /* puzzle name */
-      {N_("Polonaise"), 2,
-       7, 7,
-       "#######" +
-       "#aab**#" +
-       "#aabc*#" +
-       "#defgg#" +
-       "#..fhh#" +
-       "# .ihh#" +
-       "#######"},
+        /* Translators: puzzle name */
+        {   N_("Polonaise"), /* group */ 2,
+            /* width and height */ 7, 7,
+            "#######" +
+            "#aab**#" +
+            "#aabc*#" +
+            "#defgg#" +
+            "#..fhh#" +
+            "# .ihh#" +
+            "#######" },
 
-      /* puzzle name */
-      {N_("Baltic Sea"), 2,
-       6, 8,
-       "######" +
-       "#.abc#" +
-       "#.dec#" +
-       "#fggc#" +
-       "#fhhi#" +
-       "#fjk*#" +
-       "#flk*#" +
-       "######"},
+        /* Translators: puzzle name */
+        {   N_("Baltic Sea"), /* group */ 2,
+            /* width and height */ 6, 8,
+            "######" +
+            "#.abc#" +
+            "#.dec#" +
+            "#fggc#" +
+            "#fhhi#" +
+            "#fjk*#" +
+            "#flk*#" +
+            "######" },
 
-      /* puzzle name */
-      {N_("American Pie"), 2,
-       10, 12,
-       "##########" +
-       "#a*bcdefg#" +
-       "#**bhhhhg#" +
-       "#*iijjkkg#" +
-       "#liimnoop#" +
-       "#qiirrr  #" +
-       "#qstuvv  #" +
-       "#qwwxvv  #" +
-       "######--##" +
-       "         ." +
-       "        .." +
-       "        . "},
+        /* Translators: puzzle name */
+        {   N_("American Pie"), /* group */ 2,
+            /* width and height */ 10, 12,
+            "##########" +
+            "#a*bcdefg#" +
+            "#**bhhhhg#" +
+            "#*iijjkkg#" +
+            "#liimnoop#" +
+            "#qiirrr  #" +
+            "#qstuvv  #" +
+            "#qwwxvv  #" +
+            "######--##" +
+            "         ." +
+            "        .." +
+            "        . " },
 
-      /* puzzle name */
-      {N_("Traffic Jam"), 2,
-       10, 7,
-       "########  " +
-       "#** ffi#  " +
-       "#** fgh#  " +
-       "#aacehh#  " +
-       "#bbdjlm-  " +
-       "#bddklm-.." +
-       "########.."},
+        /* Translators: puzzle name */
+        {   N_("Traffic Jam"), /* group */ 2,
+            /* width and height */ 10, 7,
+            "########  " +
+            "#** ffi#  " +
+            "#** fgh#  " +
+            "#aacehh#  " +
+            "#bbdjlm-  " +
+            "#bddklm-.." +
+            "########.." },
 
-      /* puzzle name */
-      {N_("Sunshine"), 2,
-       17, 22,
-       "       ...       " +
-       "      .. ..      " +
-       "      .   .      " +
-       "      .. ..      " +
-       "       ...       " +
-       "######-----######" +
-       "#hh0iilltmmpp;qq#" +
-       "#hh,iill mmpp:qq#" +
-       "#2y{45v s w89x/z#" +
-       "#jj6kkaa nnoo<rr#" +
-       "#jj7kkaaunnoo>rr#" +
-       "#33333TTJWW11111#" +
-       "#33333TTJWW11111#" +
-       "#33333GG HH11111#" +
-       "#33333YYIgg11111#" +
-       "#33333YYIgg11111#" +
-       "#ddFeeA***BffOZZ#" +
-       "#ddFee** **ffOZZ#" +
-       "#MMKQQ*   *PPS^^#" +
-       "#VVLXX** **bbRcc#" +
-       "#VVLXXD***EbbRcc#" +
-       "#################"}
+        /* Translators: puzzle name */
+        {   N_("Sunshine"), /* group */ 2,
+            /* width and height */ 17, 22,
+            "       ...       " +
+            "      .. ..      " +
+            "      .   .      " +
+            "      .. ..      " +
+            "       ...       " +
+            "######-----######" +
+            "#hh0iilltmmpp;qq#" +
+            "#hh,iill mmpp:qq#" +
+            "#2y{45v s w89x/z#" +
+            "#jj6kkaa nnoo<rr#" +
+            "#jj7kkaaunnoo>rr#" +
+            "#33333TTJWW11111#" +
+            "#33333TTJWW11111#" +
+            "#33333GG HH11111#" +
+            "#33333YYIgg11111#" +
+            "#33333YYIgg11111#" +
+            "#ddFeeA***BffOZZ#" +
+            "#ddFee** **ffOZZ#" +
+            "#MMKQQ*   *PPS^^#" +
+            "#VVLXX** **bbRcc#" +
+            "#VVLXXD***EbbRcc#" +
+            "#################" }
     };
 
-    private const GLib.ActionEntry win_actions[] =
+    private const GLib.ActionEntry win_actions [] =
     {
-        {"prev-pack", prev_pack_cb},
-        {"next-pack", next_pack_cb},
-        {"prev-puzzle", prev_puzzle_cb},
-        {"next-puzzle", next_puzzle_cb},
-        {"start-game", start_puzzle_cb}
+        { "prev-pack",   prev_pack_cb    },
+        { "next-pack",   next_pack_cb    },
+        { "prev-puzzle", prev_puzzle_cb  },
+        { "next-puzzle", next_puzzle_cb  },
+        { "start-game",  start_puzzle_cb }
     };
 
     private static string normalize_map_name (string name)
@@ -471,8 +471,8 @@ private class KlotskiWindow : ApplicationWindow
         score_categories = new Gee.ArrayList<Games.Scores.Category> ();
         for (uint8 i = 0; i < levels.length; i++)
         {
-            score_categories.add (new Games.Scores.Category (normalize_map_name (levels[i].name),
-                                                             _(levels[i].name)));
+            score_categories.add (new Games.Scores.Category (normalize_map_name (levels [i].name),
+                                                             _(levels [i].name)));
         }
     }
 
@@ -480,8 +480,8 @@ private class KlotskiWindow : ApplicationWindow
     {
         for (uint8 i = 0; i < levels.length; i++)
         {
-            if (key == normalize_map_name (levels[i].name))
-                return score_categories[i];
+            if (key == normalize_map_name (levels [i].name))
+                return score_categories [i];
         }
         return null;
     }
@@ -510,7 +510,7 @@ private class KlotskiWindow : ApplicationWindow
             return;
 
         score = new Games.Scores.Score (moves, date);
-        category = score_categories[level];
+        category = score_categories [level];
     }
 
     construct
@@ -545,36 +545,36 @@ private class KlotskiWindow : ApplicationWindow
         liststore_challenge = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
         liststore_skill     = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
 
-        puzzles_items = new TreeIter[levels.length];
+        puzzles_items = new TreeIter [levels.length];
         for (uint8 i = 0; i < levels.length; i++)
         {
-            switch (levels[i].group)
+            switch (levels [i].group)
             {
-            case 0:
-                liststore_huarong.append (out puzzles_items[i]);
-                liststore_huarong.set (puzzles_items[i],
-                                       0, _(levels[i].name),
-                                       1, false,
-                                       2, i,
-                                       3, false);
-                break;
-            case 1:
-                liststore_challenge.append (out puzzles_items[i]);
-                liststore_challenge.set (puzzles_items[i],
-                                         0, _(levels[i].name),
+                case 0:
+                    liststore_huarong.append (out puzzles_items [i]);
+                    liststore_huarong.set (puzzles_items [i],
+                                           0, _(levels [i].name),
+                                           1, false,
+                                           2, i,
+                                           3, false);
+                    break;
+                case 1:
+                    liststore_challenge.append (out puzzles_items [i]);
+                    liststore_challenge.set (puzzles_items [i],
+                                             0, _(levels [i].name),
+                                             1, false,
+                                             2, i,
+                                             3, false);
+                    break;
+                case 2:
+                    liststore_skill.append (out puzzles_items [i]);
+                    liststore_skill.set (puzzles_items [i],
+                                         0, _(levels [i].name),
                                          1, false,
                                          2, i,
                                          3, false);
-                break;
-            case 2:
-                liststore_skill.append (out puzzles_items[i]);
-                liststore_skill.set (puzzles_items[i],
-                                     0, _(levels[i].name),
-                                     1, false,
-                                     2, i,
-                                     3, false);
-                break;
-            default: assert_not_reached ();
+                    break;
+                default: assert_not_reached ();
             }
         }
 
@@ -595,7 +595,7 @@ private class KlotskiWindow : ApplicationWindow
         load_solved_state ();       // TODO use GSettings, or the history…
 
         current_level = settings.get_int (KEY_LEVEL).clamp (0, levels.length - 1);
-        puzzles_popover.show.connect (() => { update_popover (true); });
+        puzzles_popover.show.connect (() => update_popover (true));
         update_popover (true);      // or “Start Over” logically complains
 
         start_puzzle ();
@@ -694,7 +694,7 @@ private class KlotskiWindow : ApplicationWindow
     private void update_popover (bool make_current)
     {
         int current_level_pack;
-        TreeIter iter = puzzles_items[current_level];
+        TreeIter iter = puzzles_items [current_level];
         if (liststore_huarong.iter_is_valid (iter))          // "slow"
             current_level_pack = 0;
         else if (liststore_challenge.iter_is_valid (iter))   // same here
@@ -772,10 +772,10 @@ private class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle ()
     {
-        headerbar.set_title (_(levels[current_level].name));
+        headerbar.set_title (_(levels [current_level].name));
         if (puzzle_init_done)
             SignalHandler.disconnect_by_func (puzzle, null, this);
-        puzzle = new Puzzle (levels[current_level].width, levels[current_level].height, levels[current_level].data);
+        puzzle = new Puzzle (levels [current_level].width, levels [current_level].height, levels [current_level].data);
         puzzle_init_done = true;
         puzzle.moved.connect (puzzle_moved_cb);     // TODO disconnect previous puzzle?
         view.puzzle = puzzle;
@@ -829,21 +829,21 @@ private class KlotskiWindow : ApplicationWindow
         {
         }
 
-        puzzle_solved (puzzles_items[current_level], true);
+        puzzle_solved (puzzles_items [current_level], true);
 
         scores_context.add_score.begin (puzzle.moves,
-                                        score_categories[current_level],
+                                        score_categories [current_level],
                                         null,
                                         (object, result) => {
-            try
-            {
-                scores_context.add_score.end (result);
-            }
-            catch (Error e)
-            {
-                warning ("Failed to add score: %s", e.message);
-            }
-        });
+                try
+                {
+                    scores_context.add_score.end (result);
+                }
+                catch (Error e)
+                {
+                    warning ("Failed to add score: %s", e.message);
+                }
+            });
     }
 
     internal void show_scores ()
