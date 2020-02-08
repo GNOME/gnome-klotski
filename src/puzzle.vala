@@ -102,13 +102,14 @@ private class Puzzle : Object
         -1,  -1
     };
 
-    [CCode (notify = false)] internal uint8 width   { internal get; private set; }
-    [CCode (notify = false)] internal uint8 height  { internal get; private set; }
+    [CCode (notify = false)] public uint8   width       { internal get; protected construct; }
+    [CCode (notify = false)] public uint8   height      { internal get; protected construct; }
+    [CCode (notify = false)] public string  initial_map { private  get; protected construct; }
 
     // Type `char []' can not be used for a GLib.Object property
     internal char [] map;
     internal char [] move_map;
-    internal char [] orig_map;
+    internal char [] orig_map;      // TODO unduplicate with initial_map
     internal char [] lastmove_map;
     internal char [] undomove_map;
 
@@ -117,25 +118,25 @@ private class Puzzle : Object
     internal signal void changed ();
     internal signal void moved ();
 
-    internal Puzzle (uint8 width, uint8 height, string? data)
+    internal Puzzle (uint8 width, uint8 height, string initial_map)
     {
-        this.width = width;
-        this.height = height;
+        Object (width: width, height: height, initial_map: initial_map);
+    }
+
+    construct
+    {
         map = new char[(width + 2) * (height + 2)];
         move_map = map;
         undomove_map = map;
-        if (data != null)
-        {
-            uint16 i = 0;
-            for (uint8 y = 0; y < height; y++)
+
+        uint16 i = 0;
+        for (uint8 y = 0; y < height; y++)
+            for (uint8 x = 0; x < width; x++)
             {
-                for (uint8 x = 0; x < width; x++)
-                {
-                    set_piece_id (map, x, y, data [i]);
-                    i++;
-                }
+                set_piece_id (map, x, y, initial_map [i]);
+                i++;
             }
-        }
+
         orig_map = map;
         lastmove_map = map;
     }

@@ -513,7 +513,7 @@ private class KlotskiWindow : ApplicationWindow
         category = score_categories[level];
     }
 
-    internal KlotskiWindow ()
+    construct
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
