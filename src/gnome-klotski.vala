@@ -50,6 +50,9 @@ private class Klotski : Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
+        Environment.set_application_name (PROGRAM_NAME);
+        Window.set_default_icon_name ("org.gnome.Klotski");
+
         Klotski app = new Klotski ();
         return app.run (args);
     }
@@ -75,9 +78,6 @@ private class Klotski : Gtk.Application
     protected override void startup ()
     {
         base.startup ();
-
-        Environment.set_application_name (PROGRAM_NAME);
-        Window.set_default_icon_name ("org.gnome.Klotski");
 
         add_action_entries (action_entries, this);
 
@@ -162,12 +162,12 @@ private class Klotski : Gtk.Application
 
                              /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
                              _("Copyright \xc2\xa9 %u-%u – Arnaud Bonatti").printf (2015, 2020),
-                           "license-type", License.GPL_3_0,
+                           "license-type", License.GPL_3_0, // means "GNU General Public License, version 3.0 or later"
                            "authors", authors,
                            "documenters", documenters,
+                           "logo-icon-name", "org.gnome.Klotski",
                            /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                            "translator-credits", _("translator-credits"),
-                           "logo-icon-name", "org.gnome.Klotski",
                            "website", "https://wiki.gnome.org/Apps/Klotski");
     }
 

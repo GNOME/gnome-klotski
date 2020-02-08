@@ -95,7 +95,7 @@ private class PuzzleView : Gtk.DrawingArea
 
     private void load_image ()
     {
-        image_file = File.new_for_uri("resource:///org/gnome/Klotski/ui/assets.svg");
+        image_file = File.new_for_uri ("resource:///org/gnome/Klotski/ui/assets.svg");
 
         try
         {
@@ -180,8 +180,8 @@ private class PuzzleView : Gtk.DrawingArea
     private void draw_square (Cairo.Context cr, uint8 x, uint8 y, double kx, double ky)
     {
         Gdk.Rectangle rect = Gdk.Rectangle ();
-        rect.x = x * tile_size + SPACE_OFFSET + (int)kx - 1;
-        rect.y = y * tile_size + SPACE_OFFSET + (int)ky - 1;
+        rect.x = x * tile_size + SPACE_OFFSET + (int) kx - 1;
+        rect.y = y * tile_size + SPACE_OFFSET + (int) ky - 1;
         rect.width = tile_size;
         rect.height = tile_size;
 
