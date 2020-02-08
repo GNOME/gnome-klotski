@@ -21,8 +21,12 @@ using Gtk;
 
 private class Klotski : Gtk.Application
 {
+    /* Translators: application name, as used in the window manager, the window title, the about dialog... */
+    internal const string PROGRAM_NAME = _("Klotski");
+
     private const OptionEntry [] option_entries =
     {
+        /* Translators: command-line option description, see 'gnome-klotski --help' */
         { "version", 'v', OptionFlags.NONE, OptionArg.NONE, null, N_("Print release version and exit"), null },
         {}
     };
@@ -72,7 +76,7 @@ private class Klotski : Gtk.Application
     {
         base.startup ();
 
-        Environment.set_application_name (_("Klotski"));
+        Environment.set_application_name (PROGRAM_NAME);
         Window.set_default_icon_name ("org.gnome.Klotski");
 
         add_action_entries (action_entries, this);
@@ -141,7 +145,7 @@ private class Klotski : Gtk.Application
 
         show_about_dialog (get_active_window (),
                            /* Translators: name of the program, seen in the About dialog */
-                           "program-name", _("Klotski"),
+                           "program-name", PROGRAM_NAME,
 
                            "version", VERSION,
                            /* Translators: small description of the game, seen in the About dialog */

@@ -533,7 +533,7 @@ private class KlotskiWindow : ApplicationWindow
 
         scores_context = new Games.Scores.Context.with_importer (
             "gnome-klotski",
-             // Label on the scores dialog, next to dropdown */
+             /* Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed */
              _("Puzzle"),
              this,
              category_request,
@@ -792,10 +792,12 @@ private class KlotskiWindow : ApplicationWindow
     private void update_moves_label ()
     {
         start_game.set_enabled (true);
+        /* Translators: headerbar subtitle; the %d is replaced by the number of moves already done in the current game */
         headerbar.set_subtitle (_("Moves: %d").printf (puzzle.moves));
         if (puzzle.game_over ())
         {
-            headerbar.set_title (_("Level completed."));
+            /* Translators: headerbar title, when the puzzle is solved */
+            headerbar.set_title (_("Level completed."));    // FIXME remove the dot
             game_score ();
         }
     }

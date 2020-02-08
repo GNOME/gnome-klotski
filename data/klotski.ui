@@ -20,16 +20,19 @@
   <menu id="app-menu">
     <section>
       <item>
+        <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog -->
         <attribute name="label" translatable="yes">_Scores</attribute>
         <attribute name="action">app.scores</attribute>
       </item>
     </section>
     <section>
       <item>
+        <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application -->
         <attribute name="label" translatable="yes">_Help</attribute>
         <attribute name="action">app.help</attribute>
       </item>
       <item>
+        <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog -->
         <attribute name="label" translatable="yes">_About Klotski</attribute>
         <attribute name="action">app.about</attribute>
       </item>
@@ -71,6 +74,7 @@
                   <object class="GtkLabel">
                     <property name="name">pack-name</property>
                     <property name="visible">True</property>
+                    <!-- Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels -->
                     <property name="label" translatable="yes">Huarong Trail</property>
                   </object>
                   <packing>
@@ -82,6 +86,7 @@
                   <object class="GtkLabel">
                     <property name="name">pack-name</property>
                     <property name="visible">True</property>
+                    <!-- Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels -->
                     <property name="label" translatable="yes">Challenge Pack</property>
                   </object>
                   <packing>
@@ -93,6 +98,7 @@
                   <object class="GtkLabel">
                     <property name="name">pack-name</property>
                     <property name="visible">True</property>
+                    <!-- Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels -->
                     <property name="label" translatable="yes">Skill Pack</property>
                   </object>
                   <packing>
@@ -274,8 +280,9 @@
             <child>
               <object class="GtkButton">
                 <property name="visible">True</property>
-                <!-- <property name="use-underline">True</property> TODO -->
+                <!-- Translators: in the Change Puzzle popover, label of the button for playing the previous level -->
                 <property name="label" translatable="yes">Previous</property>
+                <!-- <property name="use-underline">True</property> TODO -->
                 <property name="action-name">win.prev-puzzle</property>
               </object>
               <packing>
@@ -286,8 +293,9 @@
             <child>
               <object class="GtkButton">
                 <property name="visible">True</property>
-                <!-- <property name="use-underline">True</property> TODO -->
+                <!-- Translators: in the Change Puzzle popover, label of the button for playing the next level -->
                 <property name="label" translatable="yes">Next</property>
+                <!-- <property name="use-underline">True</property> TODO -->
                 <property name="action-name">win.next-puzzle</property>
               </object>
               <packing>
@@ -301,8 +309,8 @@
     </child>
   </object>
   <template class="KlotskiWindow" parent="GtkApplicationWindow">
-    <!-- <initial-focus name=""/> -->
     <property name="title" translatable="yes">Klotski</property>
+    <!-- <initial-focus name=""/> -->
     <property name="width-request">600</property>
     <property name="height-request">400</property>
     <property name="border-width">25</property> <!-- TODO a view margin -->
@@ -318,10 +326,12 @@
           <object class="GtkButton">
             <property name="visible">True</property>
             <property name="use-underline">True</property>
+            <!-- Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt) -->
             <property name="label" translatable="yes">_Start Over</property>
-            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
             <property name="can-focus">True</property>
             <property name="focus-on-click">False</property>
+            <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
+            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
             <property name="action-name">win.start-game</property>
           </object>
           <packing>
@@ -332,10 +342,12 @@
           <object class="GtkMenuButton">
             <property name="visible">True</property>
             <property name="use-underline">True</property>
+            <!-- Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt) -->
             <property name="label" translatable="yes">_Change Puzzle</property>
-            <property name="tooltip-text" translatable="yes">Choose an other puzzle</property>
             <property name="can-focus">True</property>
             <property name="focus-on-click">False</property>
+            <!-- Translators: tooltip text of the Change Puzzle menubutton, in the headerbar -->
+            <property name="tooltip-text" translatable="yes">Choose an other puzzle</property>
             <property name="direction">down</property>
             <property name="popover">puzzles_popover</property>
           </object>
