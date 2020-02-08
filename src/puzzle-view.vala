@@ -60,7 +60,9 @@ private class PuzzleView : Gtk.DrawingArea
             _puzzle.changed.connect (puzzle_changed_cb);
             piece_x = 0;
             piece_y = 0;
+            piece_unmoved = false;
             piece_id = '\0';
+            last_piece_id = '\0';
             queue_draw ();
         }
     }
