@@ -243,6 +243,9 @@ private class PuzzleView : Gtk.DrawingArea
                 || new_piece_id == '#' || new_piece_id == piece_id)
                 return false;
 
+            if (piece_id != '\0')
+                validate_move ();
+
             piece_unmoved = true;
             piece_id = new_piece_id;
             puzzle.move_map = puzzle.map;
@@ -254,35 +257,37 @@ private class PuzzleView : Gtk.DrawingArea
     protected override bool button_release_event (Gdk.EventButton event)
     {
         if (event.button == Gdk.BUTTON_PRIMARY && piece_id != '\0')
-        {
-            if (piece_unmoved)
-                return false;
-
-            if (puzzle.movable (piece_id) && puzzle.mapcmp (puzzle.move_map, puzzle.map))
-            {
-                if (last_piece_id == '\0' || last_piece_id != piece_id)
-                {
-                    puzzle.undomove_map = puzzle.lastmove_map;
-                    if (puzzle.moves < 10000 /* or up to uint16.MAX */)
-                        puzzle.moves++;
-                }
-
-                if (puzzle.moves > 0 && !puzzle.mapcmp (puzzle.undomove_map, puzzle.map))
-                {
-                    puzzle.moves--;
-                    last_piece_id = '\0';
-                }
-                else
-                    last_piece_id = piece_id;
-
-                puzzle.lastmove_map = puzzle.map;
-
-                puzzle.moved ();
-            }
-            piece_id = '\0';
-        }
+            validate_move ();
 
         return false;
+    }
+    private void validate_move ()
+    {
+        if (piece_unmoved)
+            return;
+
+        if (puzzle.movable (piece_id) && puzzle.mapcmp (puzzle.move_map, puzzle.map))
+        {
+            if (last_piece_id == '\0' || last_piece_id != piece_id)
+            {
+                puzzle.undomove_map = puzzle.lastmove_map;
+                if (puzzle.moves < 10000 /* or up to uint16.MAX */)
+                    puzzle.moves++;
+            }
+
+            if (puzzle.moves > 0 && !puzzle.mapcmp (puzzle.undomove_map, puzzle.map))
+            {
+                puzzle.moves--;
+                last_piece_id = '\0';
+            }
+            else
+                last_piece_id = piece_id;
+
+            puzzle.lastmove_map = puzzle.map;
+
+            puzzle.moved ();
+        }
+        piece_id = '\0';
     }
 
     protected override bool motion_notify_event (Gdk.EventMotion event)
