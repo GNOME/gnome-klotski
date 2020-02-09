@@ -287,6 +287,17 @@ private class Puzzle : Object
         return return_value;
     }
 
+    internal bool can_be_moved (int id)
+    {
+        if (is_static_tile (id))
+            return false;
+
+        return check_valid_move (id,  0,  1)
+            || check_valid_move (id,  0, -1)
+            || check_valid_move (id,  1,  0)
+            || check_valid_move (id, -1,  0);
+    }
+
     private bool check_valid_move (int id, int dx, int dy)
     {
         for (var y = 0; y < height; y++)

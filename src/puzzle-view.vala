@@ -248,8 +248,12 @@ private class PuzzleView : Gtk.DrawingArea
             if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == piece_id)
                 return false;
 
-            if (already_moving) // TODO skip the new piece selection if it cannot be moved
+            if (already_moving)
+            {
                 validate_move ();
+                if (!puzzle.can_be_moved (new_piece_id))
+                    return false;
+            }
 
             piece_unmoved = true;
             piece_id = new_piece_id;
