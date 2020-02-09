@@ -20,11 +20,11 @@
 private class Puzzle : Object
 {
     /*
-      1   2   4
+        1   2   4
 
-      8   *   16
+        8   *  16
 
-      32  64  128
+        32 64 128
     */
     private const int [] image_map =
     {
@@ -56,49 +56,76 @@ private class Puzzle : Object
         72,  19, // ┓
 
         /* Follows in the file */
-        // small dot for creating the target
-        // empty
-        // dots for marking the red donkey, but not at scale? fixed thing?
-        // square for exit door
-        // black square (?)
-        // ??
+        // 20 = small dot for creating the target; direct return from get_piece_nr()
+        // 21 = empty; direct return from get_piece_nr()
+        // 22 = pyramid; its center (only!) is used for making the dots on the red donkey; used from puzzle-view.vala
+        // 23 = square for exit door, direct return from get_piece_nr()
+        //      black square (?)
+        //      ??
 
-        /* Misc */
-        56,   5,
-        152,  5,
-        70,   2,
-        67,   2,
-        194,  2,
-        98,   2,
-        9,    6,
-        20,   4,
-        144,  4,
-        3,    3,
-        40,   6,
-        25,   5,
-        28,   5,
-        96,   1,
-        19,  16,
-        201, 19,
-        146, 16,
-        198,  2,
-        84,  18,
-        46,  17,
-        112, 18,
-        6,    3,
-        184,  5,
-        192,  1,
-        147, 16,
-        73,  19,
-        42,  17,
-        200, 19,
-        99,   2,
-        116, 18,
-        29,   5,
-        14,  17,
-        26,  25,
-        224,  1,
+        /* left and right and */
+        25,   5, // top-left
+        28,   5, // top-right
+        56,   5, // bottom-left
+        152,  5, // bottom-right
+        184,  5, // bottom-left and bottom-right; used in Sunshine and Pelopones
+        29,   5, // top-left and top-right; used in Sunshine
+        // nine more doable
 
+        /* top and bottom and */
+        67,   2, // top-left
+        70,   2, // top-right
+        98,   2, // bottom-left
+        194,  2, // bottom-right
+        99,   2, // top-left and bottom-left; used in Sunshine
+        198,  2, // top-right and bottom-right; used in Sunshine
+        // nine more doable
+
+        /* left and */
+        9,    6, // top-left
+        40,   6, // bottom-left
+        // one more doable
+
+        /* right and */
+        20,   4, // top-right
+        144,  4, // bottom-right
+        // one more doable
+
+        /* top and */
+        3,    3, // top-left
+        6,    3, // top-right
+        // one more doable
+
+        /* bottom and */
+        96,   1, // bottom-left
+        192,  1, // bottom-right
+        224,  1, // bottom-left and bottom-right; used in Shark and Transeuropa (1/2)
+
+        /* top and left and */
+        14,  17, // top-right
+        42,  17, // bottom-left
+        46,  17, // top-right and bottom-left
+
+        /* top and right and */
+        19,  16, // top-left
+        146, 16, // bottom-right
+        147, 16, // top-left and bottom-right
+
+        /* bottom and left and */
+        73,  19, // top-left
+        200, 19, // bottom-right
+        201, 19, // top-left and bottom-right
+
+        /* bottom and right and */
+        84,  18, // top-right
+        112, 18, // bottom-left
+        116, 18, // top-right and bottom-left
+
+        /* top and left and right */
+        26,  25, // used in Shark and Transeuropa (2/2)
+        // many more of this kind doable
+
+        /* end of array */
         -1,  -1
     };
 

@@ -208,9 +208,9 @@ private class PuzzleView : Gtk.DrawingArea
 
         if (puzzle.get_piece_id (puzzle.map, x, y) == '*')
         {
-            uint8 tile_value = 22;
+            uint8 tile_value = 22;  // pyramid; only the center will be used, for marking the red donkey
             if (puzzle.get_piece_id (puzzle.orig_map, x, y) == '.')
-                tile_value = 20;
+                tile_value = 20;    // if at the final place, just use the green dots as usual
 
             int overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
             int overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
