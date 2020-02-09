@@ -525,11 +525,11 @@ private class KlotskiWindow : ApplicationWindow
             maximize ();
 
         add_action_entries (win_actions, this);
-        prev_pack = lookup_action ("prev-pack") as SimpleAction;
-        next_pack = lookup_action ("next-pack") as SimpleAction;
-        prev_puzzle = lookup_action ("prev-puzzle") as SimpleAction;
-        next_puzzle = lookup_action ("next-puzzle") as SimpleAction;
-        start_game = lookup_action ("start-game") as SimpleAction;
+        lookup_non_nullable_action ("prev-pack",    out prev_pack);
+        lookup_non_nullable_action ("next-pack",    out next_pack);
+        lookup_non_nullable_action ("prev-puzzle",  out prev_puzzle);
+        lookup_non_nullable_action ("next-puzzle",  out next_puzzle);
+        lookup_non_nullable_action ("start-game",   out start_game);
 
         scores_context = new Games.Scores.Context.with_importer (
             "gnome-klotski",
@@ -599,6 +599,14 @@ private class KlotskiWindow : ApplicationWindow
         update_popover (true);      // or “Start Over” logically complains
 
         start_puzzle ();
+    }
+
+    private void lookup_non_nullable_action (string name, out SimpleAction action)
+    {
+        GLib.Action? nullable_action = lookup_action (name);
+        if (nullable_action == null)
+            assert_not_reached ();
+        action = (SimpleAction) (!) nullable_action;
     }
 
     /*\
