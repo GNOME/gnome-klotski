@@ -24,6 +24,8 @@ private class Klotski : Gtk.Application
     /* Translators: application name, as used in the window manager, the window title, the about dialog... */
     internal const string PROGRAM_NAME = _("Klotski");
 
+    private KlotskiWindow window;
+
     private const OptionEntry [] option_entries =
     {
         /* Translators: command-line option description, see 'gnome-klotski --help' */
@@ -81,7 +83,8 @@ private class Klotski : Gtk.Application
 
         add_action_entries (action_entries, this);
 
-        add_window (new KlotskiWindow ());
+        window = new KlotskiWindow ();
+        add_window (window);
 
         set_accels_for_action ("win.prev-puzzle",   {"Up"});        // TODO
         set_accels_for_action ("win.next-puzzle",   {"Down"});      // TODO a weird behaviour exists when you first change puzzle pack, then go to
@@ -101,7 +104,7 @@ private class Klotski : Gtk.Application
 
     protected override void activate ()
     {
-        get_active_window ().present ();
+        window.present ();
     }
 
     /*\
@@ -110,14 +113,14 @@ private class Klotski : Gtk.Application
 
     private void scores_cb ()
     {
-        ((KlotskiWindow) get_active_window ()).show_scores ();
+        window.show_scores ();
     }
 
     private void help_cb ()
     {
         try
         {
-            show_uri (get_active_window ().get_screen (), "help:gnome-klotski", get_current_event_time ());
+            show_uri (window.get_screen (), "help:gnome-klotski", get_current_event_time ());
         }
         catch (Error e)
         {
@@ -143,7 +146,7 @@ private class Klotski : Gtk.Application
         /* Translators: text crediting a documenter, in the about dialog */
         string [] documenters = { _("Andrew Sobala") };
 
-        show_about_dialog (get_active_window (),
+        show_about_dialog (window,
                            /* Translators: name of the program, seen in the About dialog */
                            "program-name", PROGRAM_NAME,
 
@@ -173,6 +176,6 @@ private class Klotski : Gtk.Application
 
     private void quit_cb ()
     {
-        get_active_window ().destroy ();
+        window.destroy ();
     }
 }

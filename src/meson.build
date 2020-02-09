@@ -15,6 +15,7 @@ executable(meson.project_name(),[
     vala_args: [
         '--gresources', resource_files,
         '--target-glib', '2.44',
+        '--enable-experimental-non-null',
         '--vapidir', join_paths(meson.current_source_dir(), 'vapi')
     ],
     dependencies: [

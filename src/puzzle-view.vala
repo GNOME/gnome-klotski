@@ -44,19 +44,22 @@ private class PuzzleView : Gtk.DrawingArea
     private double kx = 0;
     private double ky = 0;
 
-    private Rsvg.Handle tiles_handle = null;
-    private File image_file = null;
-    private Cairo.Surface surface = null;
+    private bool tiles_handle_init_done = false;
+    private Rsvg.Handle tiles_handle;
+    private File image_file;
+    private Cairo.Surface surface;
 
-    private Puzzle? _puzzle = null;
-    internal Puzzle? puzzle
+    private bool puzzle_init_done = false;
+    private Puzzle _puzzle;
+    internal Puzzle puzzle
     {
-        private  get { return _puzzle; }
+        private  get { if (!puzzle_init_done) assert_not_reached (); return _puzzle; }
         internal set
         {
-            if (_puzzle != null)
+            if (puzzle_init_done)
                 SignalHandler.disconnect_by_func (_puzzle, null, this);
             _puzzle = value;
+            puzzle_init_done = true;
             _puzzle.changed.connect (puzzle_changed_cb);
             piece_x = 0;
             piece_y = 0;
@@ -113,13 +116,14 @@ private class PuzzleView : Gtk.DrawingArea
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
             Posix.exit (Posix.EXIT_FAILURE);
         }
+        tiles_handle_init_done = true;
     }
 
     protected override bool draw (Cairo.Context cr)
     {
         if (tile_size != render_size)
         {
-            if (tiles_handle != null)
+            if (tiles_handle_init_done)
             {
                 int height = tile_size * 2;
                 int width = tile_size * THEME_TILE_SEGMENTS;
