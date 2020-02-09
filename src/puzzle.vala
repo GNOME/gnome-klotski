@@ -26,7 +26,7 @@ private class Puzzle : Object
 
         32 64 128
     */
-    private const int [] image_map =
+    private const uint8 [] image_map =
     {
         0,    0, // 🞍
 
@@ -122,12 +122,10 @@ private class Puzzle : Object
         116, 18, // top-right and bottom-left
 
         /* top and left and right */
-        26,  25, // used in Shark and Transeuropa (2/2)
+        26,  25  // used in Shark and Transeuropa (2/2)
         // many more of this kind doable
-
-        /* end of array */
-        -1,  -1
     };
+    private uint8 image_map_length = 54;
 
     [CCode (notify = false)] public uint8   width       { internal get; protected construct; }
     [CCode (notify = false)] public uint8   height      { internal get; protected construct; }
@@ -209,11 +207,12 @@ private class Puzzle : Object
         if (map [((uint16) x + 1) + ((uint16) y + 1) * ((uint16) width + 2)] == c)
             nr += 128;
 
-        uint8 i = 0;
-        while (nr != image_map [i] && image_map [i] != -1)
-            i += 2;
-
-        return image_map [i + 1];
+        for (uint8 i = 0; i < image_map_length * 2; i += 2)
+        {
+            if (nr == image_map [i])
+                return image_map [i + 1];
+        }
+        assert_not_reached ();
     }
 
     internal bool game_over ()
