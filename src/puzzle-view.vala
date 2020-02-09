@@ -59,8 +59,8 @@ private class PuzzleView : Gtk.DrawingArea
             if (puzzle_init_done)
                 SignalHandler.disconnect_by_func (_puzzle, null, this);
             _puzzle = value;
+            _puzzle.changed.connect (queue_draw);
             puzzle_init_done = true;
-            _puzzle.changed.connect (puzzle_changed_cb);
             piece_x = 0;
             piece_y = 0;
             piece_unmoved = false;
@@ -318,10 +318,5 @@ private class PuzzleView : Gtk.DrawingArea
         }
 
         return false;
-    }
-
-    private void puzzle_changed_cb ()
-    {
-        queue_draw ();
     }
 }
