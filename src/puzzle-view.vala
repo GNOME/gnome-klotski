@@ -239,16 +239,16 @@ private class PuzzleView : Gtk.DrawingArea
             piece_y = (uint8) new_piece_y;
             char new_piece_id = puzzle.get_piece_id (puzzle.map, piece_x, piece_y);
 
-            if (piece_id != '\0' && piece_unmoved)
+            bool already_moving = piece_id != '\0';
+            if (already_moving && piece_unmoved)
             {
                 piece_id = '\0';
                 return false;
             }
-            if (new_piece_id == ' ' || new_piece_id == '.' || new_piece_id == '-'
-                || new_piece_id == '#' || new_piece_id == piece_id)
+            if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == piece_id)
                 return false;
 
-            if (piece_id != '\0')
+            if (already_moving) // TODO skip the new piece selection if it cannot be moved
                 validate_move ();
 
             piece_unmoved = true;
@@ -271,7 +271,7 @@ private class PuzzleView : Gtk.DrawingArea
         if (piece_unmoved)
             return;
 
-        if (puzzle.movable (piece_id) && puzzle.mapcmp (puzzle.move_map, puzzle.map))
+        if (!Puzzle.is_static_tile (piece_id) && puzzle.mapcmp (puzzle.move_map, puzzle.map))
         {
             if (last_piece_id == '\0' || last_piece_id != piece_id)
             {

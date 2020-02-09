@@ -235,18 +235,19 @@ private class Puzzle : Object
         return false;
     }
 
-    internal bool movable (int id)
+    internal static inline bool is_static_tile (int id)
     {
         if (id == '#' || id == '.' || id == ' ' || id == '-')
+            return true;
+        else
             return false;
-        return true;
     }
 
     internal bool move_piece (char id, uint8 x1, uint8 y1, uint8 x2, uint8 y2)
     {
         var return_value = false;
 
-        if (!movable (id))
+        if (is_static_tile (id))
             return false;
 
         if (get_piece_id (map, x2, y2) == id)
