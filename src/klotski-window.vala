@@ -34,10 +34,12 @@ private class KlotskiWindow : ApplicationWindow
 
     /* Settings */
     private GLib.Settings settings;
-    private bool is_tiled;
-    private bool window_is_maximized;
-    private int window_width;
-    private int window_height;
+
+    private int window_width = 0;
+    private int window_height = 0;
+    private bool window_is_fullscreen = false;
+    private bool window_is_maximized = false;
+    private bool window_is_tiled = false;
 
     private const string KEY_LEVEL = "level";
 
@@ -619,9 +621,7 @@ private class KlotskiWindow : ApplicationWindow
     [GtkCallback]
     private void on_size_allocate (Allocation allocation)
     {
-        if (window_is_maximized || is_tiled)
-            return;
-        get_size (out window_width, out window_height);
+        update_window_state ();
     }
 
     [GtkCallback]
@@ -629,25 +629,60 @@ private class KlotskiWindow : ApplicationWindow
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             window_is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        /* We don’t save this state, but track it for saving size allocation */
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            is_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+
+        /* fullscreen: saved as maximized */
+ //     bool window_was_fullscreen = window_is_fullscreen;
+        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
+            window_is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
+ //     if (window_was_fullscreen && !window_is_fullscreen)
+ //         on_unfullscreen ();
+ //     else if (!window_was_fullscreen && window_is_fullscreen)
+ //         on_fullscreen ();
+
+        /* tiled: not saved, but should not change saved window size */
+        Gdk.WindowState tiled_state = Gdk.WindowState.TILED;
+ //                                 | Gdk.WindowState.TOP_TILED     // TODO requires Gtk 3.22.23
+ //                                 | Gdk.WindowState.BOTTOM_TILED
+ //                                 | Gdk.WindowState.LEFT_TILED
+ //                                 | Gdk.WindowState.RIGHT_TILED;
+        if ((event.changed_mask & tiled_state) != 0)
+            window_is_tiled = (event.new_window_state & tiled_state) != 0;
+
         return false;
     }
+ // protected void on_fullscreen   () {}
+ // protected void on_unfullscreen () {}
 
     [GtkCallback]
     private void on_destroy ()
     {
-        settings.delay ();
-
-        /* Save game state */
         settings.set_int (KEY_LEVEL, current_level);
+        save_window_state ();
+    }
 
-        /* Save window state */
+    /*\
+    * * manage window state
+    \*/
+
+    private void update_window_state () // called on size-allocate
+    {
+        if (window_is_maximized || window_is_tiled || window_is_fullscreen)
+            return;
+        int? _window_width = null;
+        int? _window_height = null;
+        get_size (out _window_width, out _window_height);
+        if (_window_width == null || _window_height == null)
+            return;
+        window_width = (!) _window_width;
+        window_height = (!) _window_height;
+    }
+
+    private void save_window_state ()   // called on destroy
+    {
+        settings.delay ();
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
-        settings.set_boolean ("window-is-maximized", window_is_maximized);
-
+        settings.set_boolean ("window-is-maximized", window_is_maximized || window_is_fullscreen);
         settings.apply ();
     }
 
