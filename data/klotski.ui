@@ -324,6 +324,7 @@
         <child>
           <object class="GtkButton">
             <property name="visible">True</property>
+            <property name="valign">center</property>
             <property name="use-underline">True</property>
             <!-- Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt) -->
             <property name="label" translatable="yes">_Start Over</property>
@@ -340,6 +341,7 @@
         <child>
           <object class="GtkMenuButton">
             <property name="visible">True</property>
+            <property name="valign">center</property>
             <property name="use-underline">True</property>
             <!-- Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt) -->
             <property name="label" translatable="yes">_Change Puzzle</property>
@@ -357,6 +359,7 @@
         <child>
           <object class="GtkMenuButton" id="menu_button">
             <property name="visible">True</property>
+            <property name="valign">center</property>
             <property name="can_focus">True</property>
             <property name="menu-model">app-menu</property>
             <child>
