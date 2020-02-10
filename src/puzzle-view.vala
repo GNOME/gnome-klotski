@@ -157,9 +157,9 @@ private class PuzzleView : Gtk.DrawingArea
         Gdk.cairo_set_source_rgba (cr, fg);
         cr.set_line_width (1.0);
 
-        double kwidth = puzzle.width * tile_size + SPACE_PADDING - 2.0;
+        double kwidth  = puzzle.width  * tile_size + SPACE_PADDING - 2.0;
         double kheight = puzzle.height * tile_size + SPACE_PADDING - 2.0;
-        kx = (width - kwidth) / 2.0;
+        kx = (width  - kwidth)  / 2.0;
         ky = (height - kheight) / 2.0;
 
         cr.rectangle (kx, ky, kwidth, kheight);

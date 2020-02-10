@@ -181,7 +181,7 @@ private class Puzzle : Object
         x++;
         y++;
 
-        var c = map [(uint16) x + (uint16) y * ((uint16) width + 2)];
+        char c = map [(uint16) x + (uint16) y * ((uint16) width + 2)];
         if (c == '-')
             return 23;
         if (c == ' ')
@@ -234,7 +234,7 @@ private class Puzzle : Object
         return false;
     }
 
-    internal static inline bool is_static_tile (int id)
+    internal static inline bool is_static_tile (char id)
     {
         if (id == '#' || id == '.' || id == ' ' || id == '-')
             return true;
@@ -244,7 +244,7 @@ private class Puzzle : Object
 
     internal bool move_piece (char id, uint8 x1, uint8 y1, uint8 x2, uint8 y2)
     {
-        var return_value = false;
+        bool return_value = false;
 
         if (is_static_tile (id))
             return false;
@@ -259,13 +259,13 @@ private class Puzzle : Object
         {
             if (y1 < y2)
             {
-                if (check_valid_move (id, 0, 1))
-                    return do_move_piece (id, 0, 1);
+                if (check_valid_move     (id,  0,  1))
+                    return do_move_piece (id,  0,  1);
             }
             else if (y1 > y2)
             {
-                if (check_valid_move (id, 0, -1))
-                    return do_move_piece (id, 0, -1);
+                if (check_valid_move     (id,  0, -1))
+                    return do_move_piece (id,  0, -1);
             }
         }
 
@@ -273,20 +273,20 @@ private class Puzzle : Object
         {
             if (x1 < x2)
             {
-                if (check_valid_move (id, 1, 0))
-                    return do_move_piece (id, 1, 0);
+                if (check_valid_move     (id,  1,  0))
+                    return do_move_piece (id,  1,  0);
             }
             else if (x1 > x2)
             {
-                if (check_valid_move (id, -1, 0))
-                    return do_move_piece (id, -1, 0);
+                if (check_valid_move     (id, -1,  0))
+                    return do_move_piece (id, -1,  0);
             }
         }
 
         return return_value;
     }
 
-    internal bool can_be_moved (int id)
+    internal bool can_be_moved (char id)
     {
         if (is_static_tile (id))
             return false;
@@ -297,15 +297,15 @@ private class Puzzle : Object
             || check_valid_move (id, -1,  0);
     }
 
-    private bool check_valid_move (int id, int dx, int dy)
+    private bool check_valid_move (char id, int8 dx, int8 dy)
     {
-        for (var y = 0; y < height; y++)
+        for (int8 y = 0; y < height; y++)
         {
-            for (var x = 0; x < width; x++)
+            for (int8 x = 0; x < width; x++)
             {
                 if (get_piece_id (map, x, y) == id)
                 {
-                    var z = get_piece_id (map, x + dx, y + dy);
+                    char z = get_piece_id (map, x + dx, y + dy);
                     if (!(z == ' ' || z == '.' || z == id || (id == '*' && z == '-')))
                         return false;
                 }
@@ -315,25 +315,25 @@ private class Puzzle : Object
         return true;
     }
 
-    private bool do_move_piece (char id, int dx, int dy)
+    private bool do_move_piece (char id, int8 dx, int8 dy)
     {
-        var tmpmap = map;
+        char [] tmpmap = map;
 
         /* Move pieces */
-        for (var y = 0; y < height; y++)
-            for (var x = 0; x < width; x++)
+        for (uint8 y = 0; y < height; y++)
+            for (uint8 x = 0; x < width; x++)
                 if (get_piece_id (tmpmap, x, y) == id)
                     set_piece_id (tmpmap, x, y, ' ');
 
-        for (var y = 0; y < height; y++)
-            for (var x = 0; x < width; x++)
+        for (int8 y = 0; y < height; y++)
+            for (int8 x = 0; x < width; x++)
                 if (get_piece_id (map, x, y) == id)
-                    set_piece_id (tmpmap, (x + dx), (y + dy), id);
+                    set_piece_id (tmpmap, x + dx, y + dy, id);
 
         /* Preserve some from original map */
-        for (var y = 0; y < height; y++)
+        for (uint8 y = 0; y < height; y++)
         {
-            for (var x = 0; x < width; x++)
+            for (uint8 x = 0; x < width; x++)
             {
                 if (get_piece_id (tmpmap, x, y) == ' ' && get_piece_id (orig_map, x, y) == '.')
                     set_piece_id (tmpmap, x, y, '.');
@@ -344,8 +344,8 @@ private class Puzzle : Object
 
 #if 0
         /* Paint changes */
-        for (var y = 0; y < height; y++)
-            for (var x = 0; x < width; x++)
+        for (uint8 y = 0; y < height; y++)
+            for (uint8 x = 0; x < width; x++)
                 if (get_piece_id (map, x, y) != get_piece_id (tmpmap, x, y) || get_piece_id (tmpmap, x, y) == id)
                     ; // FIXME: Just redraw the required space
 #endif
