@@ -637,6 +637,8 @@ private class KlotskiWindow : ApplicationWindow
     [GtkCallback]
     private void on_destroy ()
     {
+        settings.delay ();
+
         /* Save game state */
         settings.set_int (KEY_LEVEL, current_level);
 
@@ -644,6 +646,8 @@ private class KlotskiWindow : ApplicationWindow
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", window_is_maximized);
+
+        settings.apply ();
     }
 
     /*\
