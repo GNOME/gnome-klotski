@@ -22,7 +22,7 @@
       <item>
         <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog -->
         <attribute name="label" translatable="yes">_Scores</attribute>
-        <attribute name="action">app.scores</attribute>
+        <attribute name="action">win.show-scores</attribute>
       </item>
     </section>
     <section>

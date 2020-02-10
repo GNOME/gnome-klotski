@@ -454,6 +454,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private const GLib.ActionEntry win_actions [] =
     {
+        { "show-scores", show_scores     },
         { "prev-pack",   prev_pack_cb    },
         { "next-pack",   next_pack_cb    },
         { "prev-puzzle", prev_puzzle_cb  },
@@ -864,7 +865,7 @@ private class KlotskiWindow : ApplicationWindow
             });
     }
 
-    internal void show_scores ()
+    private void show_scores ()
     {
         scores_context.run_dialog ();
     }

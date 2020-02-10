@@ -35,7 +35,6 @@ private class Klotski : Gtk.Application
 
     private const GLib.ActionEntry action_entries [] =
     {
-        {"scores", scores_cb},
         {"help", help_cb},
         {"about", about_cb},
         {"quit", quit_cb}
@@ -94,7 +93,7 @@ private class Klotski : Gtk.Application
         set_accels_for_action ("win.start-game",    { "<Shift><Primary>n",
                                                       "<Shift><Primary>r"   }); // TODO just <Primary>n/r?
 
-        set_accels_for_action ("app.scores",        {        "<Primary>s",      // TODO that's a weird shortcut
+        set_accels_for_action ("win.show-scores",   {        "<Primary>s",      // TODO that's a weird shortcut
                                                       "<Shift><Primary>s"   });
         set_accels_for_action ("app.help",          {                 "F1"  });
         set_accels_for_action ("app.about",         {          "<Shift>F1"  });
@@ -110,11 +109,6 @@ private class Klotski : Gtk.Application
     /*\
     * * App-menu callbacks
     \*/
-
-    private void scores_cb ()
-    {
-        window.show_scores ();
-    }
 
     private void help_cb ()
     {
