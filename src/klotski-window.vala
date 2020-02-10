@@ -54,6 +54,9 @@ private class KlotskiWindow : ApplicationWindow
     [GtkChild] private TreeView treeview_challenge;
     [GtkChild] private TreeView treeview_skill;
 
+    [GtkChild] private Grid main_grid;
+    [GtkChild] private Button unfullscreen_button;
+
     /* Actions, to disable or enable */
     private SimpleAction prev_pack;
     private SimpleAction next_pack;
@@ -456,12 +459,13 @@ private class KlotskiWindow : ApplicationWindow
 
     private const GLib.ActionEntry win_actions [] =
     {
-        { "show-scores", show_scores     },
-        { "prev-pack",   prev_pack_cb    },
-        { "next-pack",   next_pack_cb    },
-        { "prev-puzzle", prev_puzzle_cb  },
-        { "next-puzzle", next_puzzle_cb  },
-        { "start-game",  start_puzzle_cb }
+        { "show-scores",    show_scores         },
+        { "prev-pack",      prev_pack_cb        },
+        { "next-pack",      next_pack_cb        },
+        { "prev-puzzle",    prev_puzzle_cb      },
+        { "next-puzzle",    next_puzzle_cb      },
+        { "start-game",     start_puzzle_cb     },
+        { "unfullscreen",   unfullscreen        }
     };
 
     private static string normalize_map_name (string name)
@@ -595,7 +599,9 @@ private class KlotskiWindow : ApplicationWindow
         view.halign = Align.FILL;
         view.can_focus = true;
         view.show ();
-        add (view);
+        view.hexpand = true;
+        view.vexpand = true;
+        main_grid.add (view);
 
         load_solved_state ();       // TODO use GSettings, or the history…
 
@@ -631,13 +637,13 @@ private class KlotskiWindow : ApplicationWindow
             window_is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
 
         /* fullscreen: saved as maximized */
- //     bool window_was_fullscreen = window_is_fullscreen;
+        bool window_was_fullscreen = window_is_fullscreen;
         if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
             window_is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
- //     if (window_was_fullscreen && !window_is_fullscreen)
- //         on_unfullscreen ();
- //     else if (!window_was_fullscreen && window_is_fullscreen)
- //         on_fullscreen ();
+        if (window_was_fullscreen && !window_is_fullscreen)
+            on_unfullscreen ();
+        else if (!window_was_fullscreen && window_is_fullscreen)
+            on_fullscreen ();
 
         /* tiled: not saved, but should not change saved window size */
         Gdk.WindowState tiled_state = Gdk.WindowState.TILED;
@@ -650,8 +656,14 @@ private class KlotskiWindow : ApplicationWindow
 
         return false;
     }
- // protected void on_fullscreen   () {}
- // protected void on_unfullscreen () {}
+    protected void on_fullscreen ()
+    {
+        unfullscreen_button.show ();
+    }
+    protected void on_unfullscreen ()
+    {
+        unfullscreen_button.hide ();
+    }
 
     [GtkCallback]
     private void on_destroy ()

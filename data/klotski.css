@@ -15,6 +15,10 @@
    with GNOME Klotski.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+button.unfullscreen-button {
+  margin:6px;
+}
+
 popover#puzzles-popover {
   padding: 10px;
 }

@@ -313,7 +313,6 @@
     <!-- <initial-focus name=""/> -->
     <property name="width-request">600</property>
     <property name="height-request">400</property>
-    <property name="border-width">25</property> <!-- TODO a view margin -->
     <signal name="size_allocate" handler="on_size_allocate"/>
     <signal name="window_state_event" handler="on_window_state_event"/>
     <signal name="destroy" handler="on_destroy"/>
@@ -376,7 +375,36 @@
       </object>
     </child>
     <child>
-      <placeholder/>
+      <object class="GtkOverlay" id="main_overlay">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkGrid" id="main_grid">
+            <property name="visible">True</property>
+            <property name="orientation">vertical</property>
+            <property name="margin">25</property> <!-- TODO use CSS -->
+          </object>
+        </child>
+        <child type="overlay">
+          <object class="GtkButton" id="unfullscreen_button">
+            <property name="visible">False</property>
+            <property name="halign">end</property>
+            <property name="valign">start</property>
+            <property name="action-name">win.unfullscreen</property>
+            <style>
+              <class name="image-button"/>
+              <class name="unfullscreen-button"/>
+              <class name="flat"/>
+            </style>
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">view-restore-symbolic</property>
+                <property name="visible">True</property>
+                <property name="icon-size">1</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
     </child>
   </template>
 </interface>
