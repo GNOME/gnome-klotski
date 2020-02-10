@@ -35,13 +35,13 @@ private class Klotski : Gtk.Application
 
     private const GLib.ActionEntry action_entries [] =
     {
-        {"help", help_cb},
-        {"about", about_cb},
-        {"quit", quit_cb}
+        { "help",   help_cb  },
+        { "about",  about_cb },
+        { "quit",   quit     }
     };
 
     /*\
-    * * Application init
+    * * application life
     \*/
 
     private static int main (string [] args)
@@ -106,8 +106,14 @@ private class Klotski : Gtk.Application
         window.present ();
     }
 
+    protected override void shutdown ()
+    {
+        window.destroy ();
+        base.shutdown ();
+    }
+
     /*\
-    * * App-menu callbacks
+    * * help and about
     \*/
 
     private void help_cb ()
@@ -166,10 +172,5 @@ private class Klotski : Gtk.Application
                            /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                            "translator-credits", _("translator-credits"),
                            "website", "https://wiki.gnome.org/Apps/Klotski");
-    }
-
-    private void quit_cb ()
-    {
-        window.destroy ();
     }
 }
