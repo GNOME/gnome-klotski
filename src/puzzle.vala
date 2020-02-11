@@ -61,7 +61,7 @@ private class Puzzle : Object
         // 22 = pyramid; its center (only!) is used for making the dots on the red donkey; used from puzzle-view.vala
         // 23 = square for exit door, direct return from get_piece_nr()
         //      black square (?)
-        //      ??
+        // 25 = left-top-right linked square; used in Shark and Transeuropa (1/3)
 
         /* left and right and */
         25,   5, // top-left
@@ -99,7 +99,7 @@ private class Puzzle : Object
         /* bottom and */
         96,   1, // bottom-left
         192,  1, // bottom-right
-        224,  1, // bottom-left and bottom-right; used in Shark and Transeuropa (1/2)
+        224,  1, // bottom-left and bottom-right; used in Shark and Transeuropa (2/3)
 
         /* top and left and */
         14,  17, // top-right
@@ -122,8 +122,8 @@ private class Puzzle : Object
         116, 18, // top-right and bottom-left
 
         /* top and left and right */
-        26,  25  // used in Shark and Transeuropa (2/2)
-        // many more of this kind doable
+        26,  25  // used in Shark and Transeuropa (3/3)
+        // many more (180?) of this kind and others doable
     };
     private uint8 image_map_length = 54;
 
