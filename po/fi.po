@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-01-02 12:30+0000\n"
-"PO-Revision-Date: 2020-01-26 20:14+0200\n"
+"POT-Creation-Date: 2020-02-07 18:55+0000\n"
+"PO-Revision-Date: 2020-02-12 22:26+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2010-09-13 15:09+0000\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: data/klotski.ui:23
@@ -35,51 +35,52 @@ msgstr "_Pisteet"
 msgid "_Help"
 msgstr "O_hje"
 
-#: data/klotski.ui:34
+#: data/klotski.ui:33
 msgid "_About Klotski"
 msgstr "_Tietoja - Klotski"
 
-#: data/klotski.ui:75
+#: data/klotski.ui:74
 msgid "Huarong Trail"
 msgstr "Huarong-jälki"
 
-#: data/klotski.ui:86
+#: data/klotski.ui:85
 msgid "Challenge Pack"
 msgstr "Haastepaketti"
 
-#: data/klotski.ui:97
+#: data/klotski.ui:96
 msgid "Skill Pack"
 msgstr "Taitopaketti"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:279
+#: data/klotski.ui:278
 msgid "Previous"
 msgstr "Edellinen"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:291
+#: data/klotski.ui:290
 msgid "Next"
 msgstr "Seuraava"
 
 #. <initial-focus name=""/>
-#: data/klotski.ui:306 data/klotski.ui:317 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:123
+#. Translators: name of the program, seen in the About dialog
+#: data/klotski.ui:305 data/klotski.ui:316 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:144
 msgid "Klotski"
 msgstr "Klotski"
 
-#: data/klotski.ui:322
+#: data/klotski.ui:321
 msgid "_Start Over"
 msgstr "_Aloita alusta"
 
-#: data/klotski.ui:323
+#: data/klotski.ui:322
 msgid "Restart the current puzzle"
 msgstr "Aloita nykyinen pulma uudestaan"
 
-#: data/klotski.ui:336
+#: data/klotski.ui:335
 msgid "_Change Puzzle"
 msgstr "_Vaihda pulmaa"
 
-#: data/klotski.ui:337
+#: data/klotski.ui:336
 msgid "Choose an other puzzle"
 msgstr "Valitse toinen pulma"
 
@@ -145,28 +146,50 @@ msgstr "tosi jos ikkuna on suurennettu"
 msgid "Print release version and exit"
 msgstr "Näytä julkaisuversio ja sulkeudu"
 
-#: src/gnome-klotski.vala:125
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:128
+msgid "Lars Rydlinge (original author)"
+msgstr "Lars Rydlinge (alkuperäinen tekijä)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:132
+msgid "Robert Ancell (port to vala)"
+msgstr "Robert Ancell (vala-sovitus)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:136
+msgid "John Cheetham (port to vala)"
+msgstr "John Cheetham (vala-sovitus)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/gnome-klotski.vala:140
+msgid "Andrew Sobala"
+msgstr "Andrew Sobala"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/gnome-klotski.vala:148
 msgid "Sliding block puzzles"
 msgstr "Pulmapeli, jossa liu'utetaan palikoita"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/gnome-klotski.vala:128
+#: src/gnome-klotski.vala:152
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Tekijänoikeus © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:132
+#: src/gnome-klotski.vala:156
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Tekijänoikeus © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:136
+#: src/gnome-klotski.vala:160
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Tekijänoikeus © %u-%u – Arnaud Bonatti"
 
-#: src/gnome-klotski.vala:140
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/gnome-klotski.vala:165
 msgid "translator-credits"
 msgstr ""
 "Jiri Grönroos, 2012-2020\n"
@@ -332,12 +355,12 @@ msgstr "Auringonpaiste"
 msgid "Puzzle"
 msgstr "Pulma"
 
-#: src/klotski-window.vala:790
+#: src/klotski-window.vala:791
 #, c-format
 msgid "Moves: %d"
 msgstr "Siirtoja: %d"
 
-#: src/klotski-window.vala:793
+#: src/klotski-window.vala:794
 msgid "Level completed."
 msgstr "Taso läpäisty."
 
