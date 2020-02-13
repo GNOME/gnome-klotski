@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-01-02 12:30+0000\n"
-"PO-Revision-Date: 2020-02-07 14:44+0000\n"
+"POT-Creation-Date: 2020-02-07 18:55+0000\n"
+"PO-Revision-Date: 2020-02-13 01:20+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/klotski.ui:23
 msgid "_Scores"
@@ -32,51 +32,52 @@ msgstr "_امتیازها"
 msgid "_Help"
 msgstr "_راهنما"
 
-#: data/klotski.ui:34
+#: data/klotski.ui:33
 msgid "_About Klotski"
 msgstr "_دربارهٔ کی‌لاتسکی"
 
-#: data/klotski.ui:75
+#: data/klotski.ui:74
 msgid "Huarong Trail"
 msgstr "ردپای اوئارانگ"
 
-#: data/klotski.ui:86
+#: data/klotski.ui:85
 msgid "Challenge Pack"
 msgstr "بستهٔ چالش"
 
-#: data/klotski.ui:97
+#: data/klotski.ui:96
 msgid "Skill Pack"
 msgstr "بستهٔ مهارت"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:279
+#: data/klotski.ui:278
 msgid "Previous"
 msgstr "پیشین"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:291
+#: data/klotski.ui:290
 msgid "Next"
 msgstr "بعدی"
 
 #. <initial-focus name=""/>
-#: data/klotski.ui:306 data/klotski.ui:317 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:123
+#. Translators: name of the program, seen in the About dialog
+#: data/klotski.ui:305 data/klotski.ui:316 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:144
 msgid "Klotski"
 msgstr "کی‌لاتسکی"
 
-#: data/klotski.ui:322
+#: data/klotski.ui:321
 msgid "_Start Over"
 msgstr "_شروع دوباره"
 
-#: data/klotski.ui:323
+#: data/klotski.ui:322
 msgid "Restart the current puzzle"
 msgstr "شروع دوباره بازی فعلی"
 
-#: data/klotski.ui:336
+#: data/klotski.ui:335
 msgid "_Change Puzzle"
 msgstr "_تغییر پازل"
 
-#: data/klotski.ui:337
+#: data/klotski.ui:336
 msgid "Choose an other puzzle"
 msgstr "یک پازل دیگر انتخاب کنید"
 
@@ -91,13 +92,13 @@ msgstr "بلوک‌ها را بلغزانید تا پازل را حل کنید"
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
-"patterned block to the area bordered by green markers. To do so, you’ll need to "
-"slide other blocks out of the way. Complete each puzzle in as few moves as "
+"patterned block to the area bordered by green markers. To do so, you’ll need "
+"to slide other blocks out of the way. Complete each puzzle in as few moves as "
 "possible!"
 msgstr ""
 "«گنوم کی‌لاتسکی» یک مجموعه از پازلِ بلوک‌های لغزنده است. هدف این است که الگوی "
-"بلوکه‌ها را به ناحیه مشخص شده سبز منتقل کرد. برای اینکار، شما باید بلوک‌های دیگر "
-"را از سر راه بردارید. هر پازل را در کمترین حرکت ممکن حل کنید!"
+"بلوکه‌ها را به ناحیه مشخص شده سبز منتقل کرد. برای اینکار، شما باید بلوک‌های "
+"دیگر را از سر راه بردارید. هر پازل را در کمترین حرکت ممکن حل کنید!"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -142,28 +143,50 @@ msgstr "درست اگر پنجره بیشینه باشد"
 msgid "Print release version and exit"
 msgstr "نمایش نگارش انتشار و خروج"
 
-#: src/gnome-klotski.vala:125
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:128
+msgid "Lars Rydlinge (original author)"
+msgstr "لارس ریدلینگ (نگارندهٔ اصلی)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:132
+msgid "Robert Ancell (port to vala)"
+msgstr "رابرت انسل (پورت به والا)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:136
+msgid "John Cheetham (port to vala)"
+msgstr "جان چیت‌هام (پورت به والا)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/gnome-klotski.vala:140
+msgid "Andrew Sobala"
+msgstr "اندرو سوبالا"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/gnome-klotski.vala:148
 msgid "Sliding block puzzles"
 msgstr "پازل بلوک‌های لغزنده"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/gnome-klotski.vala:128
+#: src/gnome-klotski.vala:152
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "حق رونوشت © ۱۹۹۹-۲۰۰۸ – لارس ریدلینگ"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:132
+#: src/gnome-klotski.vala:156
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "حق رونوشت © %Iu-%Iu – مایکل کاتانزارو"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:136
+#: src/gnome-klotski.vala:160
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "حق رونوشت © %Iu-%Iu – آرناد بوناتی"
 
-#: src/gnome-klotski.vala:140
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/gnome-klotski.vala:165
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
@@ -314,12 +337,12 @@ msgstr "آفتاب"
 msgid "Puzzle"
 msgstr "پازل"
 
-#: src/klotski-window.vala:790
+#: src/klotski-window.vala:791
 #, c-format
 msgid "Moves: %d"
 msgstr "جابه‌جایی‌ها: %Id"
 
-#: src/klotski-window.vala:793
+#: src/klotski-window.vala:794
 msgid "Level completed."
 msgstr "مرحله تمام شد."
 
