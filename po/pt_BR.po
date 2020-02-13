@@ -30,8 +30,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-01-02 12:30+0000\n"
-"PO-Revision-Date: 2020-01-29 06:55-0300\n"
+"POT-Creation-Date: 2020-02-07 18:55+0000\n"
+"PO-Revision-Date: 2020-02-13 11:28-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -50,51 +50,52 @@ msgstr "_Pontuações"
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: data/klotski.ui:34
+#: data/klotski.ui:33
 msgid "_About Klotski"
 msgstr "_Sobre o Klotski"
 
-#: data/klotski.ui:75
+#: data/klotski.ui:74
 msgid "Huarong Trail"
 msgstr "Trilha Huarong"
 
-#: data/klotski.ui:86
+#: data/klotski.ui:85
 msgid "Challenge Pack"
 msgstr "Pacote desafio"
 
-#: data/klotski.ui:97
+#: data/klotski.ui:96
 msgid "Skill Pack"
 msgstr "Pacote habilidade"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:279
+#: data/klotski.ui:278
 msgid "Previous"
 msgstr "Anterior"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:291
+#: data/klotski.ui:290
 msgid "Next"
 msgstr "Próximo"
 
 #. <initial-focus name=""/>
-#: data/klotski.ui:306 data/klotski.ui:317 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:123
+#. Translators: name of the program, seen in the About dialog
+#: data/klotski.ui:305 data/klotski.ui:316 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:144
 msgid "Klotski"
 msgstr "Klotski"
 
-#: data/klotski.ui:322
+#: data/klotski.ui:321
 msgid "_Start Over"
 msgstr "Reco_meçar"
 
-#: data/klotski.ui:323
+#: data/klotski.ui:322
 msgid "Restart the current puzzle"
 msgstr "Reiniciar o quebra-cabeça atual"
 
-#: data/klotski.ui:336
+#: data/klotski.ui:335
 msgid "_Change Puzzle"
 msgstr "Mu_dar quebra-cabeça"
 
-#: data/klotski.ui:337
+#: data/klotski.ui:336
 msgid "Choose an other puzzle"
 msgstr "Escolher um outro quebra-cabeça"
 
@@ -162,28 +163,50 @@ msgstr "verdadeiro se a janela estiver maximizada"
 msgid "Print release version and exit"
 msgstr "Imprime a versão de lançamento e sai"
 
-#: src/gnome-klotski.vala:125
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:128
+msgid "Lars Rydlinge (original author)"
+msgstr "Lars Rydlinge (autor original)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:132
+msgid "Robert Ancell (port to vala)"
+msgstr "Robert Ancell (porte para vala)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:136
+msgid "John Cheetham (port to vala)"
+msgstr "John Cheetham (porte para vala)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/gnome-klotski.vala:140
+msgid "Andrew Sobala"
+msgstr "Andrew Sobala"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/gnome-klotski.vala:148
 msgid "Sliding block puzzles"
 msgstr "Quebra-cabeça de blocos deslizantes"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/gnome-klotski.vala:128
+#: src/gnome-klotski.vala:152
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Copyright © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:132
+#: src/gnome-klotski.vala:156
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Copyright © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:136
+#: src/gnome-klotski.vala:160
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Copyright © %u-%u – Arnaud Bonatti"
 
-#: src/gnome-klotski.vala:140
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/gnome-klotski.vala:165
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -348,12 +371,12 @@ msgstr "Raio de Sol"
 msgid "Puzzle"
 msgstr "Quebra-cabeça"
 
-#: src/klotski-window.vala:790
+#: src/klotski-window.vala:791
 #, c-format
 msgid "Moves: %d"
 msgstr "Movimentos: %d"
 
-#: src/klotski-window.vala:793
+#: src/klotski-window.vala:794
 msgid "Level completed."
 msgstr "Nível concluído."
 
