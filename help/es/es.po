@@ -1,12 +1,12 @@
 # translation of gnotski.HEAD.po to Español
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnotski.HEAD\n"
-"POT-Creation-Date: 2019-10-28 10:18+0000\n"
-"PO-Revision-Date: 2019-11-25 15:14+0100\n"
+"POT-Creation-Date: 2020-02-14 05:28+0000\n"
+"PO-Revision-Date: 2020-02-14 08:57+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2012 - 2019\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2012 - 2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
 #. (itstool) path: articleinfo/title
@@ -210,7 +210,6 @@ msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:145
-#| msgid "This manual describes version 2.12 of GNOME Klotski."
 msgid "This manual describes version 3.34 of GNOME Klotski."
 msgstr "Este manual describe la versión 3.34 de Klotski."
 
@@ -221,7 +220,7 @@ msgstr "Comentarios"
 
 #. (itstool) path: legalnotice/para
 #. (itstool) path: sect1/para
-#: C/index.docbook:149 C/index.docbook:180
+#: C/index.docbook:149 C/index.docbook:179
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, please visit <ulink type=\"http\" url=\"https://gitlab.gnome.org/"
@@ -264,9 +263,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
-#| msgid ""
-#| "This document describes version 2.12 of <application>Klotski</"
-#| "application>."
 msgid ""
 "This document describes version 3.34 of <application>Klotski</application>."
 msgstr ""
@@ -275,27 +271,33 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:173
+#| msgid ""
+#| "This program is distributed under the terms of the GNU General Public "
+#| "license as published by the Free Software Foundation; either version 2 of "
+#| "the License, or (at your option) any later version. A copy of this "
+#| "license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</"
+#| "ulink>, or in the file COPYING included with the source code of this "
+#| "program."
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
-"license as published by the Free Software Foundation; either version 2 of "
+"license as published by the Free Software Foundation; either version 3 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found in the file COPYING included with the source code of this "
+"program."
 msgstr ""
 "Este programa se distribuye bajo los términos de la Licencia Pública General "
 "GNU tal como la publica la Free Software Foundation; en cualquiera de las "
-"versiones 2 de la Licencia o (a su elección) cualquier versión posterior. "
-"Puede encontrar una copia de esta licencia en este <ulink url=\"help:gpl\" "
-"type=\"help\">enlace</ulink>, o en el archivo COPYING incluido con el código "
-"fuente de este programa."
+"versiones 3 de la Licencia o (a su elección) cualquier versión posterior. "
+"Puede encontrar una copia de esta licencia en el archivo COPYING incluido "
+"con el código fuente de este programa."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:189
+#: C/index.docbook:188
 msgid "Objective"
 msgstr "Objetivo"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:196
+#: C/index.docbook:195
 msgid "The winning move"
 msgstr "El movimiento ganador"
 
@@ -304,7 +306,7 @@ msgstr "El movimiento ganador"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:200
+#: C/index.docbook:199
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
@@ -312,7 +314,7 @@ msgstr ""
 "external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:198
+#: C/index.docbook:197
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>The patterned block should be moved to "
@@ -323,7 +325,7 @@ msgstr ""
 "espacio rodeado por marcadores verdes.</phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:190
+#: C/index.docbook:189
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
@@ -336,17 +338,17 @@ msgstr ""
 "patrón a los marcadores. <_:figure-1/>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:215
+#: C/index.docbook:214
 msgid "Playing <application>Klotski</application>"
 msgstr "Jugar a <application>Klotski</application>"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:234
+#: C/index.docbook:233
 msgid "The main window"
 msgstr "La ventana principal"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:235
+#: C/index.docbook:234
 msgid ""
 "When you start <application><application>Klotski</application></"
 "application>, the following window is displayed."
@@ -355,7 +357,7 @@ msgstr ""
 "<application><application>Klotski</application></application>."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:239
+#: C/index.docbook:238
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "Ventana de inicio de <application>Klotski</application>"
 
@@ -364,7 +366,7 @@ msgstr "Ventana de inicio de <application>Klotski</application>"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:243
+#: C/index.docbook:242
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
@@ -374,7 +376,7 @@ msgstr ""
 "md5='d074091210621806bee31a938c5d1286'"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:241
+#: C/index.docbook:240
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
 "\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
@@ -388,12 +390,12 @@ msgstr ""
 "«Juego» y «Ayuda». </phrase> </textobject>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:257
+#: C/index.docbook:256
 msgid "Header bar"
 msgstr "Barra de cabecera"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:259
+#: C/index.docbook:258
 msgid ""
 "The header bar allows you to start new games, shows how many moves you have "
 "taken so far, and allows you to change the puzzle. Press the menu button in "
@@ -406,12 +408,12 @@ msgstr ""
 "documentación de <application>Klotski</application>."
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:265
+#: C/index.docbook:264
 msgid "Game area"
 msgstr "Área de juego"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:267
+#: C/index.docbook:266
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -421,7 +423,7 @@ msgstr ""
 "\"gnotski-moving\"/>."
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:254
+#: C/index.docbook:253
 msgid ""
 "The <application>Klotski</application> window contains the following "
 "elements: <_:variablelist-1/>"
@@ -430,20 +432,12 @@ msgstr ""
 "elementos: <_:variablelist-1/>"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:278
+#: C/index.docbook:277
 msgid "Starting a new game"
 msgstr "Iniciar un nuevo juego"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:279
-#| msgid ""
-#| "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-#| "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
-#| "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-#| "belongs to one of the three categories found in the submenus named "
-#| "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-#| "guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, "
-#| "each puzzle name refers to a game scenario."
+#: C/index.docbook:278
 msgid ""
 "Use <guibutton>Start Over</guibutton> to start a new game. <guibutton>Change "
 "Puzzle</guibutton> allows you to navigate the puzzles sequentially. Each "
@@ -461,12 +455,12 @@ msgstr ""
 "escenario de juego."
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:289
+#: C/index.docbook:288
 msgid "Moving blocks"
 msgstr "Mover los bloques"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:290
+#: C/index.docbook:289
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -481,12 +475,12 @@ msgstr ""
 "través de los bloques verdes para así ganar."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:310
+#: C/index.docbook:309
 msgid "Authors"
 msgstr "Autores"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:311
+#: C/index.docbook:310
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala."
@@ -495,12 +489,12 @@ msgstr ""
 "<application>Klotski</application>. Este manual lo ha escrito Andrew Sobala."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:328
+#: C/index.docbook:327
 msgid "License"
 msgstr "Licencia"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:329
+#: C/index.docbook:328
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -513,7 +507,7 @@ msgstr ""
 "versión 2 de la licencia, o (a su elección) cualquier versión posterior."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:336
+#: C/index.docbook:335
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -526,7 +520,7 @@ msgstr ""
 "General GNU</citetitle> para más detalles."
 
 #. (itstool) path: para/address
-#: C/index.docbook:349
+#: C/index.docbook:348
 #, no-wrap
 msgid ""
 "\n"
@@ -544,7 +538,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:342
+#: C/index.docbook:341
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
