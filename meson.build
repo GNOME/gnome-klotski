@@ -13,7 +13,7 @@ python3 = import('python3')
 gee_dependency = dependency('gee-0.8')
 glib_dependency = dependency('glib-2.0', version: '>= 2.42.0')
 gnome_games_support_dependency = dependency('libgnome-games-support-1')
-gtk_dependency = dependency('gtk+-3.0', version: '>= 3.12.0')
+gtk_dependency = dependency('gtk+-3.0', version: '>= 3.22.0')
 rsvg_dependency = dependency('librsvg-2.0', version: '>= 2.32.0')
 posix_dependency = meson.get_compiler('vala').find_library('posix')
 
