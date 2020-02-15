@@ -1,3 +1,26 @@
+3.35.91 - February 15, 2020
+============================
+
+Many code improvements and cleanings, so please test.
+Two bugs have been fixed in the moves counting; also,
+unmovable tiles will not be selected anymore when the
+player is dropping a tile, and it should feel better.
+
+Translations updated:
+  Basque: Asier Sarasua Garmendia
+  Croatian: Goran Vidović
+  Czech: Marek Černocký
+  Finnish: Jiri Grönroos
+  Galician: Fran Dieguez
+  Hungarian: Balázs Úr
+  Lithuanian: Aurimas Černius
+  Persian: Danial Behzadi
+  Brazilian Portuguese: Rafael Fontenelle
+  Serbian: Марко Костић
+  Spanish: Daniel Mustieles
+  Swedish: Anders Jonsson
+  Turkish: Sabri Ünal
+
 3.35.90 - February 1st, 2020
 ============================
 
