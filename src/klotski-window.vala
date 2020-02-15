@@ -646,11 +646,11 @@ private class KlotskiWindow : ApplicationWindow
             on_fullscreen ();
 
         /* tiled: not saved, but should not change saved window size */
-        Gdk.WindowState tiled_state = Gdk.WindowState.TILED;
- //                                 | Gdk.WindowState.TOP_TILED     // TODO requires Gtk 3.22.23
- //                                 | Gdk.WindowState.BOTTOM_TILED
- //                                 | Gdk.WindowState.LEFT_TILED
- //                                 | Gdk.WindowState.RIGHT_TILED;
+        Gdk.WindowState tiled_state = Gdk.WindowState.TILED
+                                    | Gdk.WindowState.TOP_TILED
+                                    | Gdk.WindowState.BOTTOM_TILED
+                                    | Gdk.WindowState.LEFT_TILED
+                                    | Gdk.WindowState.RIGHT_TILED;
         if ((event.changed_mask & tiled_state) != 0)
             window_is_tiled = (event.new_window_state & tiled_state) != 0;
 
