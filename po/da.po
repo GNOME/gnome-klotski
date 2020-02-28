@@ -15,69 +15,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2019-03-26 17:46+0000\n"
-"PO-Revision-Date: 2019-02-13 00:10+0100\n"
-"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"POT-Creation-Date: 2020-02-07 18:55+0000\n"
+"PO-Revision-Date: 2020-02-27 18:54+0100\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/klotski.ui:7
+#: data/klotski.ui:23
 msgid "_Scores"
 msgstr "_Resultater"
 
-#: data/klotski.ui:13
+#: data/klotski.ui:29
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: data/klotski.ui:18
+#: data/klotski.ui:33
 msgid "_About Klotski"
 msgstr "_Om Klotski"
 
-#: data/klotski.ui:59
+#: data/klotski.ui:74
 msgid "Huarong Trail"
 msgstr "Huarong-sporet"
 
-#: data/klotski.ui:70
+#: data/klotski.ui:85
 msgid "Challenge Pack"
 msgstr "Udfordringspakken"
 
-#: data/klotski.ui:81
+#: data/klotski.ui:96
 msgid "Skill Pack"
 msgstr "Færdighedspakken"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:263
+#: data/klotski.ui:278
 msgid "Previous"
 msgstr "Forrige"
 
 #. <property name="use-underline">True</property> TODO
-#: data/klotski.ui:275
+#: data/klotski.ui:290
 msgid "Next"
 msgstr "Næste"
 
 #. <initial-focus name=""/>
-#: data/klotski.ui:290 data/klotski.ui:301 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:66 src/gnome-klotski.vala:114
+#. Translators: name of the program, seen in the About dialog
+#: data/klotski.ui:305 data/klotski.ui:316 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:75 src/gnome-klotski.vala:144
 msgid "Klotski"
 msgstr "Klotski"
 
-#: data/klotski.ui:306
+#: data/klotski.ui:321
 msgid "_Start Over"
 msgstr "_Begynd forfra"
 
-#: data/klotski.ui:307
+#: data/klotski.ui:322
 msgid "Restart the current puzzle"
 msgstr "Genstart nuværende opgave"
 
-#: data/klotski.ui:320
+#: data/klotski.ui:335
 msgid "_Change Puzzle"
 msgstr "_Skift opgave"
 
-#: data/klotski.ui:321
+#: data/klotski.ui:336
 msgid "Choose an other puzzle"
 msgstr "Vælg en anden opgave"
 
@@ -141,16 +143,55 @@ msgstr "Højden af vinduet i billedpunkter"
 msgid "true if the window is maximized"
 msgstr "sand hvis vinduet er maksimeret"
 
-#: src/gnome-klotski.vala:17
+#: src/gnome-klotski.vala:26
 msgid "Print release version and exit"
 msgstr "Vis udgivelsesversion og afslut"
 
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:128
+msgid "Lars Rydlinge (original author)"
+msgstr "Lars Rydlinge (oprindelig forfatter)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:132
+msgid "Robert Ancell (port to vala)"
+msgstr "Robert Ancell (portering til vala)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:136
+msgid "John Cheetham (port to vala)"
+msgstr "John Cheetham (portering til vala)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/gnome-klotski.vala:140
+msgid "Andrew Sobala"
+msgstr "Andrew Sobala"
+
 # (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdelige ordspil bliver brugt)
-#: src/gnome-klotski.vala:116
+#. Translators: small description of the game, seen in the About dialog
+#: src/gnome-klotski.vala:148
 msgid "Sliding block puzzles"
 msgstr "“Klodsede” opgaver"
 
-#: src/gnome-klotski.vala:124
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/gnome-klotski.vala:152
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "Ophavsret © 1999–2008 – Lars Rydlinge"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:156
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "Ophavsret © %u–%u – Michael Catanzaro"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:160
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "Ophavsret © %u–%u – Arnaud Bonatti"
+
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/gnome-klotski.vala:165
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -165,158 +206,158 @@ msgstr ""
 "E-mail <dansk@dansk-gruppen.dk>"
 
 #. puzzle name
-#: src/klotski-window.vala:74
+#: src/klotski-window.vala:83
 msgid "Only 18 Steps"
 msgstr "Kun 18 skridt"
 
 #. puzzle name
-#: src/klotski-window.vala:87
+#: src/klotski-window.vala:96
 msgid "Daisy"
 msgstr "Tusindfryd"
 
 # Da de fleste strenge her i området er navne på blomster, refereres der sikkert også til "viol" her fremfor violet
 #. puzzle name
-#: src/klotski-window.vala:100
+#: src/klotski-window.vala:109
 msgid "Violet"
 msgstr "Viol"
 
 #. puzzle name
-#: src/klotski-window.vala:113
+#: src/klotski-window.vala:122
 msgid "Poppy"
 msgstr "Valmue"
 
 #. puzzle name
-#: src/klotski-window.vala:126
+#: src/klotski-window.vala:135
 msgid "Pansy"
 msgstr "Stedmoderblomst"
 
 # Blomsternavn jf. de andre strenge i området
 #. puzzle name
-#: src/klotski-window.vala:139
+#: src/klotski-window.vala:148
 msgid "Snowdrop"
 msgstr "Vintergæk"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: src/klotski-window.vala:152
+#: src/klotski-window.vala:161
 msgid "Red Donkey"
 msgstr "Det røde æsel"
 
 #. puzzle name
-#: src/klotski-window.vala:165
+#: src/klotski-window.vala:174
 msgid "Trail"
 msgstr "Kæde"
 
 #. puzzle name
-#: src/klotski-window.vala:178
+#: src/klotski-window.vala:187
 msgid "Ambush"
 msgstr "Bagholdsangreb"
 
 #. puzzle name
-#: src/klotski-window.vala:191
+#: src/klotski-window.vala:200
 msgid "Agatka"
 msgstr "Agatka"
 
 #. puzzle name
-#: src/klotski-window.vala:202
+#: src/klotski-window.vala:211
 msgid "Success"
 msgstr "Succes"
 
 #. puzzle name
-#: src/klotski-window.vala:212
+#: src/klotski-window.vala:221
 msgid "Bone"
 msgstr "Knogle"
 
 #. puzzle name
-#: src/klotski-window.vala:225
+#: src/klotski-window.vala:234
 msgid "Fortune"
 msgstr "Lykke"
 
 #. puzzle name
-#: src/klotski-window.vala:239
+#: src/klotski-window.vala:248
 msgid "Fool"
 msgstr "Fjols"
 
 #. puzzle name
-#: src/klotski-window.vala:249
+#: src/klotski-window.vala:258
 msgid "Solomon"
 msgstr "Salomon"
 
 #. puzzle name
-#: src/klotski-window.vala:262
+#: src/klotski-window.vala:271
 msgid "Cleopatra"
 msgstr "Kleopatra"
 
 #. puzzle name
-#: src/klotski-window.vala:274
+#: src/klotski-window.vala:283
 msgid "Shark"
 msgstr "Haj"
 
 #. puzzle name
-#: src/klotski-window.vala:286
+#: src/klotski-window.vala:295
 msgid "Rome"
 msgstr "Rom"
 
 #. puzzle name
-#: src/klotski-window.vala:298
+#: src/klotski-window.vala:307
 msgid "Pennant Puzzle"
 msgstr "Vimpel"
 
 #. puzzle name
-#: src/klotski-window.vala:311
+#: src/klotski-window.vala:320
 msgid "Ithaca"
 msgstr "Ithaca"
 
 #. puzzle name
-#: src/klotski-window.vala:334
+#: src/klotski-window.vala:343
 msgid "Pelopones"
 msgstr "Pelopones"
 
 #. puzzle name
-#: src/klotski-window.vala:346
+#: src/klotski-window.vala:355
 msgid "Transeuropa"
 msgstr "Transeuropa"
 
 #. puzzle name
-#: src/klotski-window.vala:358
+#: src/klotski-window.vala:367
 msgid "Lodzianka"
 msgstr "Lodzianka"
 
 #. puzzle name
-#: src/klotski-window.vala:369
+#: src/klotski-window.vala:378
 msgid "Polonaise"
 msgstr "Polonaise"
 
 #. puzzle name
-#: src/klotski-window.vala:380
+#: src/klotski-window.vala:389
 msgid "Baltic Sea"
 msgstr "Det baltiske hav"
 
 #. puzzle name
-#: src/klotski-window.vala:392
+#: src/klotski-window.vala:401
 msgid "American Pie"
 msgstr "Amerikansk tærte"
 
 #. puzzle name
-#: src/klotski-window.vala:408
+#: src/klotski-window.vala:417
 msgid "Traffic Jam"
 msgstr "Trafikprop"
 
 #. puzzle name
-#: src/klotski-window.vala:419
+#: src/klotski-window.vala:428
 msgid "Sunshine"
 msgstr "Solskin"
 
 #. Label on the scores dialog, next to dropdown */
-#: src/klotski-window.vala:527
+#: src/klotski-window.vala:536
 msgid "Puzzle"
 msgstr "Opgave"
 
-#: src/klotski-window.vala:781
+#: src/klotski-window.vala:791
 #, c-format
 msgid "Moves: %d"
 msgstr "Træk: %d"
 
-#: src/klotski-window.vala:784
+#: src/klotski-window.vala:794
 msgid "Level completed."
 msgstr "Bane fuldført."
 
@@ -328,4 +369,3 @@ msgstr "Bane fuldført."
 
 #~ msgid "_Quit"
 #~ msgstr "_Afslut"
-
