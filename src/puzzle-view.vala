@@ -229,10 +229,14 @@ private class PuzzleView : Gtk.DrawingArea
     * * mouse user actions
     \*/
 
+    private Gtk.EventControllerMotion motion_controller;    // for keeping in memory
     private Gtk.GestureMultiPress click_controller;         // for keeping in memory
 
     private void init_mouse ()  // called on construct
     {
+        motion_controller = new Gtk.EventControllerMotion (this);
+        motion_controller.motion.connect (on_motion);
+
         click_controller = new Gtk.GestureMultiPress (this);
         click_controller.pressed.connect (on_click);
         click_controller.released.connect (on_release);
@@ -315,24 +319,22 @@ private class PuzzleView : Gtk.DrawingArea
         piece_id = '\0';
     }
 
-    protected override bool motion_notify_event (Gdk.EventMotion event)
+    private static inline void on_motion (Gtk.EventControllerMotion _motion_controller, double event_x, double event_y)
     {
-        if (piece_id != '\0')
+        PuzzleView _this = (PuzzleView) _motion_controller.get_widget ();
+        if (_this.piece_id != '\0')
         {
-            int new_piece_x = (int) (event.x - kx) / tile_size;
-            int new_piece_y = (int) (event.y - ky) / tile_size;
-            if (event.x < 0 || new_piece_x > (int) puzzle.width
-             || event.y < 0 || new_piece_y > (int) puzzle.height)
-                return false;
-            if (puzzle.move_piece (piece_id, piece_x, piece_y, (uint8) new_piece_x, (uint8) new_piece_y))
+            int new_piece_x = (int) (event_x - _this.kx) / _this.tile_size;
+            int new_piece_y = (int) (event_y - _this.ky) / _this.tile_size;
+            if (event_x < 0 || new_piece_x > (int) _this.puzzle.width
+             || event_y < 0 || new_piece_y > (int) _this.puzzle.height)
+                return;
+            if (_this.puzzle.move_piece (_this.piece_id, _this.piece_x, _this.piece_y, (uint8) new_piece_x, (uint8) new_piece_y))
             {
-                piece_unmoved = false;
-                piece_x = (uint8) new_piece_x;
-                piece_y = (uint8) new_piece_y;
+                _this.piece_unmoved = false;
+                _this.piece_x = (uint8) new_piece_x;
+                _this.piece_y = (uint8) new_piece_y;
             }
-            return true;
         }
-
-        return false;
     }
 }
