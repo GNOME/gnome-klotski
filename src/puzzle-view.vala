@@ -230,19 +230,21 @@ private class PuzzleView : Gtk.DrawingArea
     \*/
 
     private Gtk.EventControllerMotion motion_controller;    // for keeping in memory
-    private Gtk.GestureMultiPress click_controller;         // for keeping in memory
+    private Gtk.GestureClick click_controller;              // for keeping in memory
 
     private void init_mouse ()  // called on construct
     {
-        motion_controller = new Gtk.EventControllerMotion (this);
+        motion_controller = new Gtk.EventControllerMotion ();
         motion_controller.motion.connect (on_motion);
+        add_controller (motion_controller);
 
-        click_controller = new Gtk.GestureMultiPress (this);    // only targets Gdk.BUTTON_PRIMARY
+        click_controller = new Gtk.GestureClick ();         // only targets Gdk.BUTTON_PRIMARY
         click_controller.pressed.connect (on_click);
         click_controller.released.connect (on_release);
+        add_controller (click_controller);
     }
 
-    private static inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private static inline void on_click (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
         if (_this.puzzle.game_over ())
@@ -278,7 +280,7 @@ private class PuzzleView : Gtk.DrawingArea
         _this.puzzle.move_map = _this.puzzle.map;
     }
 
-    private static inline void on_release (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private static inline void on_release (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
         if (_this.piece_id != '\0')

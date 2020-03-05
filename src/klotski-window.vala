@@ -1053,9 +1053,10 @@ private class KlotskiWindow : ApplicationWindow
 
     private inline void init_keyboard ()
     {
-        key_controller = new EventControllerKey (this);
+        key_controller = new EventControllerKey ();
         key_controller.propagation_phase = PropagationPhase.CAPTURE;
         key_controller.key_pressed.connect (on_key_pressed);
+        ((Widget) this).add_controller (key_controller);
     }
 
     private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
