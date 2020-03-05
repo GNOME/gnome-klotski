@@ -73,6 +73,8 @@ private class PuzzleView : Gtk.DrawingArea
     Gtk.StyleContext style_context;
     construct
     {
+        init_mouse ();
+
         style_context = get_style_context ();
 
         set_size_request (250, 250);    // probably too small, but window requests 600x400 anyway
@@ -223,53 +225,67 @@ private class PuzzleView : Gtk.DrawingArea
         }
     }
 
-    protected override bool button_press_event (Gdk.EventButton event)
+    /*\
+    * * mouse user actions
+    \*/
+
+    private Gtk.GestureMultiPress click_controller;         // for keeping in memory
+
+    private void init_mouse ()  // called on construct
     {
-        if (event.button == Gdk.BUTTON_PRIMARY)
+        click_controller = new Gtk.GestureMultiPress (this);
+        click_controller.pressed.connect (on_click);
+        click_controller.released.connect (on_release);
+    }
+
+    private static inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    {
+        uint button = _click_controller.get_button ();
+        if (button == Gdk.BUTTON_PRIMARY)
         {
-            if (puzzle.game_over ())
-                return false;
+            PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
+            if (_this.puzzle.game_over ())
+                return;
 
-            int new_piece_x = (int) (event.x - kx) / tile_size;
-            int new_piece_y = (int) (event.y - ky) / tile_size;
-            if (new_piece_x < 0 || new_piece_x >= (int) puzzle.width
-             || new_piece_y < 0 || new_piece_y >= (int) puzzle.height)
-                return false;
-            piece_x = (uint8) new_piece_x;
-            piece_y = (uint8) new_piece_y;
-            char new_piece_id = puzzle.get_piece_id (puzzle.map, piece_x, piece_y);
+            int new_piece_x = (int) (event_x - _this.kx) / _this.tile_size;
+            int new_piece_y = (int) (event_y - _this.ky) / _this.tile_size;
+            if (new_piece_x < 0 || new_piece_x >= (int) _this.puzzle.width
+             || new_piece_y < 0 || new_piece_y >= (int) _this.puzzle.height)
+                return;
+            _this.piece_x = (uint8) new_piece_x;
+            _this.piece_y = (uint8) new_piece_y;
+            char new_piece_id = _this.puzzle.get_piece_id (_this.puzzle.map, _this.piece_x, _this.piece_y);
 
-            bool already_moving = piece_id != '\0';
-            if (already_moving && piece_unmoved)
+            bool already_moving = _this.piece_id != '\0';
+            if (already_moving && _this.piece_unmoved)
             {
-                piece_id = '\0';
-                return false;
+                _this.piece_id = '\0';
+                return;
             }
-            if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == piece_id)
-                return false;
+            if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == _this.piece_id)
+                return;
 
             if (already_moving)
             {
-                validate_move ();
-                if (!puzzle.can_be_moved (new_piece_id))
-                    return false;
+                _this.validate_move ();
+                if (!_this.puzzle.can_be_moved (new_piece_id))
+                    return;
             }
 
-            piece_unmoved = true;
-            piece_id = new_piece_id;
-            puzzle.move_map = puzzle.map;
+            _this.piece_unmoved = true;
+            _this.piece_id = new_piece_id;
+            _this.puzzle.move_map = _this.puzzle.map;
         }
-
-        return false;
     }
 
-    protected override bool button_release_event (Gdk.EventButton event)
+    private static inline void on_release (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
-        if (event.button == Gdk.BUTTON_PRIMARY && piece_id != '\0')
-            validate_move ();
-
-        return false;
+        PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
+        uint button = _click_controller.get_button ();
+        if (button == Gdk.BUTTON_PRIMARY && _this.piece_id != '\0')
+            _this.validate_move ();
     }
+
     private void validate_move ()
     {
         if (piece_unmoved)
