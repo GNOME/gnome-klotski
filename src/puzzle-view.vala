@@ -78,10 +78,6 @@ private class PuzzleView : Gtk.DrawingArea
         style_context = get_style_context ();
 
         set_size_request (250, 250);    // probably too small, but window requests 600x400 anyway
-        set_events (Gdk.EventMask.EXPOSURE_MASK         |
-                    Gdk.EventMask.BUTTON_PRESS_MASK     |
-                    Gdk.EventMask.POINTER_MOTION_MASK   |
-                    Gdk.EventMask.BUTTON_RELEASE_MASK   );
 
         load_image ();
     }
