@@ -174,7 +174,7 @@ private class PuzzleView : Gtk.DrawingArea
 
                 if (piece_id == puzzle.get_piece_id (puzzle.map, x, y))
                 {
-                    Gdk.cairo_set_source_rgba (cr, {1.0, 1.0, 1.0, 0.2});
+                    Gdk.cairo_set_source_rgba (cr, { 1.0f, 1.0f, 1.0f, 0.2f });
                     cr.rectangle (x*tile_size + kx, y*tile_size + ky, tile_size, tile_size);
                     cr.fill ();
                 }
