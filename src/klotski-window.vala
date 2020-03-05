@@ -529,9 +529,9 @@ private class KlotskiWindow : ApplicationWindow
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
-        Gdk.Screen? gdk_screen = Gdk.Screen.get_default ();
-        if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_screen ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+        Gdk.Display? gdk_display = Gdk.Display.get_default ();
+        if (gdk_display != null) // else..?
+            StyleContext.add_provider_for_display ((!) gdk_display, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         settings = new GLib.Settings ("org.gnome.Klotski");
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
