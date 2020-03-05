@@ -74,6 +74,7 @@ private class PuzzleView : Gtk.DrawingArea
     construct
     {
         init_mouse ();
+        set_draw_func (draw);
 
         style_context = get_style_context ();
 
@@ -117,7 +118,7 @@ private class PuzzleView : Gtk.DrawingArea
         tiles_handle_init_done = true;
     }
 
-    protected override bool draw (Cairo.Context cr)
+    private void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (tile_size != render_size)
         {
@@ -175,8 +176,6 @@ private class PuzzleView : Gtk.DrawingArea
                     cr.fill ();
                 }
             }
-
-        return false;
     }
 
     private void draw_square (Cairo.Context cr, uint8 x, uint8 y, double kx, double ky)
