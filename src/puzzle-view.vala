@@ -143,8 +143,10 @@ private class PuzzleView : Gtk.DrawingArea
 
         style_context.save ();
         style_context.set_state (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA fg = style_context.get_color (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA fg = style_context.get_color ();
+        Gdk.RGBA bg;
+        if (!style_context.lookup_color ("theme_bg_color", out bg))
+            bg = { /* 246 */ 0.9647f, /* 245 */ 0.9608f, /* 244 */ 0.9569f, 1.0f }; // #f6f5f4 is Adwaita-light bg_color
         style_context.restore ();
 
         Gdk.cairo_set_source_rgba (cr, bg);
@@ -188,7 +190,9 @@ private class PuzzleView : Gtk.DrawingArea
 
         style_context.save ();
         style_context.set_state (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA bg;
+        if (!style_context.lookup_color ("theme_bg_color", out bg))
+            bg = { /* 246 */ 0.9647f, /* 245 */ 0.9608f, /* 244 */ 0.9569f, 1.0f }; // #f6f5f4 is Adwaita-light bg_color
         style_context.restore ();
 
         Gdk.cairo_rectangle (cr, rect);
