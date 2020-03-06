@@ -50,17 +50,12 @@ window:not(.hc-theme) .treeview-container treeview:selected:backdrop:hover {
   color: @theme_unfocused_selected_fg_color;
 }
 
-treeview.toggle-like-pixbuf {
-  margin-right:22px;      /* TODO hack 1/2 */
-}
 treeview.toggle-like-pixbuf check {
-  min-width:22px;         /* TODO hack 2/2 */
   background:transparent;
   border:none;
-  -gtk-icon-source: none; /* TODO report bug about HighContrast, that shouldn’t set this */
 }
 treeview.toggle-like-pixbuf check:checked {
-  -gtk-icon-source: -gtk-icontheme("gtk-yes"); /* TODO maybe deprecated; replace with CSS? */
+  -gtk-icon-source: -gtk-icontheme("starred"); /* FIXME hard to see in HighContrast */
 }
 
 /*\
