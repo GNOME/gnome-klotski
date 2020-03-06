@@ -19,9 +19,9 @@ button.unfullscreen-button {
   margin:6px;
 }
 
-popover#puzzles-popover {
-  padding: 10px;
-}
+/* hackish, but does the job */
+popover#puzzles-popover > contents          { padding: 4px; }
+popover#puzzles-popover > contents > box    { padding: 0 6px; }
 
 stack#stack-packs > label {
   font-weight: bold;
