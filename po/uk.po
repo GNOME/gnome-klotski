@@ -1,36 +1,103 @@
 # Ukranian translation of the gnome-games module.
 # Copyright (C) 1999,2000 Free Software Foundation, Inc.
 # Yuri Syrota <rasta@renome.rovno.ua>, 1999-2000.
-# Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010.
 # Wanderlust <wanderlust@ukr.net>, 2009.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2015, 2016, 2017.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-20 14:25+0200\n"
-"PO-Revision-Date: 2017-03-20 14:26+0300\n"
-"Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
-"Language-Team: linux.org.ua\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2020-03-10 08:19+0000\n"
+"PO-Revision-Date: 2020-03-16 21:46+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.03.70\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
+#: data/klotski.ui:24
+msgid "_Scores"
+msgstr "_Результати"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
+#: data/klotski.ui:31
+msgid "_Help"
+msgstr "_Довідка"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog
+#: data/klotski.ui:36
+#| msgid "Klotski"
+msgid "_About Klotski"
+msgstr "_Про «Кльоцки»"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels
+#: data/klotski.ui:78
+msgid "Huarong Trail"
+msgstr "Поїзд HuaRong"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels
+#: data/klotski.ui:90
+msgid "Challenge Pack"
+msgstr "Набір відкриттів"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels
+#: data/klotski.ui:102
+msgid "Skill Pack"
+msgstr "Важкий набір"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the previous level
+#: data/klotski.ui:284
+msgid "Previous"
+msgstr "Назад"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the next level
+#: data/klotski.ui:297
+msgid "Next"
+msgstr "Далі"
+
+#. Translators: application name, as used in the window manager, the window title, the about dialog...
+#: data/klotski.ui:312 data/klotski.ui:323 data/org.gnome.Klotski.desktop.in:3
+#: src/gnome-klotski.vala:25
+msgid "Klotski"
+msgstr "Кльоцки"
+
+#. Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt)
+#: data/klotski.ui:330
+msgid "_Start Over"
+msgstr "_Почати знову"
+
+#. Translators: tooltip text of the Start Over button, in the headerbar
+#: data/klotski.ui:334
+msgid "Restart the current puzzle"
+msgstr "Перезапустити головоломку заново"
+
+#. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
+#: data/klotski.ui:347
+msgid "_Change Puzzle"
+msgstr "_Змінити головоломку"
+
+#. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
+#: data/klotski.ui:351
+msgid "Choose an other puzzle"
+msgstr "Вибрати іншу головоломку"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "Кльоцки GNOME"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "Ковзати блоки для вирішення головоломки"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -42,7 +109,7 @@ msgstr ""
 "розсунути інші блоки в сторони. Виконайте кожну головоломку в якнайменше "
 "ходів!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -52,100 +119,84 @@ msgstr ""
 "Деякі схожі й відрізняються тільки розміром декількох блоків. Інші мають "
 "більше різноманіття."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Кльоцки"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
 msgstr "гра;стратегія;логіка;хід;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "Поїзд HuaRong"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Набір відкриттів"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Важкий набір"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Назад"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Далі"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_Почати знову"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Перезапустити головоломку заново"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Змінити головоломку"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Вибрати іншу головоломку"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "_Результати"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "_Довідка"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "_Про програму"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "Ви_йти"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
 msgstr "Поточна головоломка"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
 msgstr "Номер поточної головоломки."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
 msgstr "Ширина вікна у точках"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#: data/org.gnome.Klotski.gschema.xml:14
 msgid "Height of the window in pixels"
 msgstr "Висота вікна у точках"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
+#: data/org.gnome.Klotski.gschema.xml:18
 msgid "true if the window is maximized"
 msgstr "вказано, коли вікно розгорнуто"
 
-#: ../src/gnome-klotski.vala:17
+#. Translators: command-line option description, see 'gnome-klotski --help'
+#: src/gnome-klotski.vala:32
 msgid "Print release version and exit"
 msgstr "Показати версію випуску та вийти"
 
-#: ../src/gnome-klotski.vala:114
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:135
+msgid "Lars Rydlinge (original author)"
+msgstr "Lars Rydlinge (автор початкової версії)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:139
+msgid "Robert Ancell (port to vala)"
+msgstr "Robert Ancell (портування на vala)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/gnome-klotski.vala:143
+msgid "John Cheetham (port to vala)"
+msgstr "John Cheetham (портування на vala)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/gnome-klotski.vala:147
+msgid "Andrew Sobala"
+msgstr "Andrew Sobala"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/gnome-klotski.vala:155
 msgid "Sliding block puzzles"
 msgstr "Головоломки з розсуванням блоків"
 
-#: ../src/gnome-klotski.vala:122
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/gnome-klotski.vala:159
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "© Lars Rydlinge, 1999–2008"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:163
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "© Michael Catanzaro, %u–%u"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/gnome-klotski.vala:167
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "© Arnaud Bonatti, %u–%u"
+
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/gnome-klotski.vala:173
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -153,156 +204,158 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
-#. puzzle name
-#: ../src/klotski-window.vala:74
+#. Translators: puzzle name
+#: src/klotski-window.vala:89
 msgid "Only 18 Steps"
 msgstr "Лише 18 кроків"
 
-#. puzzle name
-#: ../src/klotski-window.vala:87
+#. Translators: puzzle name
+#: src/klotski-window.vala:102
 msgid "Daisy"
 msgstr "Дейзі"
 
-#. puzzle name
-#: ../src/klotski-window.vala:100
+#. Translators: puzzle name
+#: src/klotski-window.vala:115
 msgid "Violet"
 msgstr "Вайолет"
 
-#. puzzle name
-#: ../src/klotski-window.vala:113
+#. Translators: puzzle name
+#: src/klotski-window.vala:128
 msgid "Poppy"
 msgstr "Мак"
 
-#. puzzle name
-#: ../src/klotski-window.vala:126
+#. Translators: puzzle name
+#: src/klotski-window.vala:141
 msgid "Pansy"
 msgstr "Анютині очі"
 
-#. puzzle name
-#: ../src/klotski-window.vala:139
+#. Translators: puzzle name
+#: src/klotski-window.vala:154
 msgid "Snowdrop"
 msgstr "Снігопад"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#: src/klotski-window.vala:167
 msgid "Red Donkey"
 msgstr "Червоний віслюк"
 
-#. puzzle name
-#: ../src/klotski-window.vala:165
+#. Translators: puzzle name
+#: src/klotski-window.vala:180
 msgid "Trail"
 msgstr "Вантажівка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:178
+#. Translators: puzzle name
+#: src/klotski-window.vala:193
 msgid "Ambush"
 msgstr "Засідка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:191
+#. Translators: puzzle name
+#: src/klotski-window.vala:206
 msgid "Agatka"
 msgstr "Агатка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:202
+#. Translators: puzzle name
+#: src/klotski-window.vala:217
 msgid "Success"
 msgstr "Успіх"
 
-#. puzzle name
-#: ../src/klotski-window.vala:212
+#. Translators: puzzle name
+#: src/klotski-window.vala:227
 msgid "Bone"
 msgstr "Кість"
 
-#. puzzle name
-#: ../src/klotski-window.vala:225
+#. Translators: puzzle name
+#: src/klotski-window.vala:240
 msgid "Fortune"
 msgstr "Фортуна"
 
-#. puzzle name
-#: ../src/klotski-window.vala:239
+#. Translators: puzzle name
+#: src/klotski-window.vala:254
 msgid "Fool"
 msgstr "Дурень"
 
-#. puzzle name
-#: ../src/klotski-window.vala:249
+#. Translators: puzzle name
+#: src/klotski-window.vala:264
 msgid "Solomon"
 msgstr "Соломон"
 
-#. puzzle name
-#: ../src/klotski-window.vala:262
+#. Translators: puzzle name
+#: src/klotski-window.vala:277
 msgid "Cleopatra"
 msgstr "Клеопатра"
 
-#. puzzle name
-#: ../src/klotski-window.vala:274
+#. Translators: puzzle name
+#: src/klotski-window.vala:289
 msgid "Shark"
 msgstr "Акула"
 
-#. puzzle name
-#: ../src/klotski-window.vala:286
+#. Translators: puzzle name
+#: src/klotski-window.vala:301
 msgid "Rome"
 msgstr "Рим"
 
-#. puzzle name
-#: ../src/klotski-window.vala:298
+#. Translators: puzzle name
+#: src/klotski-window.vala:313
 msgid "Pennant Puzzle"
 msgstr "Загадка Вимпел"
 
-#. puzzle name
-#: ../src/klotski-window.vala:311
+#. Translators: puzzle name
+#: src/klotski-window.vala:326
 msgid "Ithaca"
 msgstr "Ітака"
 
-#. puzzle name
-#: ../src/klotski-window.vala:334
+#. Translators: puzzle name
+#: src/klotski-window.vala:349
 msgid "Pelopones"
 msgstr "Пелопонес"
 
-#. puzzle name
-#: ../src/klotski-window.vala:346
+#. Translators: puzzle name
+#: src/klotski-window.vala:361
 msgid "Transeuropa"
 msgstr "Європа"
 
-#. puzzle name
-#: ../src/klotski-window.vala:358
+#. Translators: puzzle name
+#: src/klotski-window.vala:373
 msgid "Lodzianka"
 msgstr "Лодзянка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:369
+#. Translators: puzzle name
+#: src/klotski-window.vala:384
 msgid "Polonaise"
 msgstr "Полонез"
 
-#. puzzle name
-#: ../src/klotski-window.vala:380
+#. Translators: puzzle name
+#: src/klotski-window.vala:395
 msgid "Baltic Sea"
 msgstr "Балтійське море"
 
-#. puzzle name
-#: ../src/klotski-window.vala:392
+#. Translators: puzzle name
+#: src/klotski-window.vala:407
 msgid "American Pie"
 msgstr "Американський пиріг"
 
-#. puzzle name
-#: ../src/klotski-window.vala:408
+#. Translators: puzzle name
+#: src/klotski-window.vala:423
 msgid "Traffic Jam"
 msgstr "Пробка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:419
+#. Translators: puzzle name
+#: src/klotski-window.vala:434
 msgid "Sunshine"
 msgstr "Сонячне сяйво"
 
-#. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
+#: src/klotski-window.vala:546
 msgid "Puzzle"
 msgstr "Головоломка"
 
-#: ../src/klotski-window.vala:781
+#. Translators: headerbar subtitle; the %d is replaced by the number of moves already done in the current game
+#: src/klotski-window.vala:860
 #, c-format
 msgid "Moves: %d"
 msgstr "Ходи: %d"
 
-#: ../src/klotski-window.vala:784
+#. Translators: headerbar title, when the puzzle is solved
+#: src/klotski-window.vala:864
 msgid "Level completed."
 msgstr "Рівень пройдено"
