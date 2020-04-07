@@ -88,15 +88,15 @@ private class Klotski : Gtk.Application
         set_accels_for_action ("win.prev-pack",     {"Page_Up"});   // TODO the first/last one, click on a puzzle, and immediately hit Up or Down arrows.
         set_accels_for_action ("win.next-pack",     {"Page_Down"}); // TODO that makes these keybindings sometimes act strangely, but they’re good.
 
-        set_accels_for_action ("win.start-game",    { "<Shift><Primary>n",
-                                                      "<Shift><Primary>r"   }); // TODO just <Primary>n/r?
+        set_accels_for_action ("win.start-game",    { "<Shift><Control>n",
+                                                      "<Shift><Control>r"   }); // TODO just <Control>n/r?
 
-        set_accels_for_action ("win.show-scores",   {        "<Primary>s",      // TODO that's a weird shortcut
-                                                      "<Shift><Primary>s"   });
+        set_accels_for_action ("win.show-scores",   {        "<Control>s",      // TODO that's a weird shortcut
+                                                      "<Shift><Control>s"   });
      // set_accels_for_action ("win.help",          {                 "F1"  }); // TODO fix dance with
      // set_accels_for_action ("win.about",         {          "<Shift>F1"  }); // the shortcuts dialog
-        set_accels_for_action ("app.quit",          {        "<Primary>q",
-                                                      "<Shift><Primary>q"   });
+        set_accels_for_action ("app.quit",          {        "<Control>q",
+                                                      "<Shift><Control>q"   });
     }
 
     protected override void activate ()

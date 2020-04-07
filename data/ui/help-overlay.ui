@@ -32,14 +32,14 @@
                 <property name="visible">False</property>
                 <!-- Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu -->
                 <property name="title" translatable="yes" context="shortcut window">Toggle game menu</property>
-                <property name="accelerator">&lt;Primary&gt;F10</property> <!-- show if there is more than one thing in it -->
+                <property name="accelerator">&lt;Control&gt;F10</property> <!-- show if there is more than one thing in it -->
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle -->
                 <property name="title" translatable="yes" context="shortcut window">Restart</property>
-                <property name="accelerator">&lt;Primary&gt;&lt;Shift&gt;N</property>
+                <property name="accelerator">&lt;Control&gt;&lt;Shift&gt;N</property>
               </object>
             </child>
           </object>
@@ -52,7 +52,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu -->
                 <property name="title" translatable="yes" context="shortcut window">Select new puzzle</property>
-                <property name="accelerator">&lt;Primary&gt;N</property>
+                <property name="accelerator">&lt;Control&gt;N</property>
               </object>
             </child>
             <child>
@@ -93,7 +93,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores" -->
                 <property name="title" translatable="yes" context="shortcut window">Scores dialog</property>
-                <property name="accelerator">&lt;Primary&gt;S</property>
+                <property name="accelerator">&lt;Control&gt;S</property>
               </object>
             </child>
           </object>
@@ -113,7 +113,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog -->
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;question &lt;Primary&gt;F1</property>
+                <property name="accelerator">&lt;Control&gt;question &lt;Control&gt;F1</property>
               </object>
             </child>
             <child>
@@ -134,7 +134,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application -->
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
-                <property name="accelerator">&lt;Primary&gt;q</property>
+                <property name="accelerator">&lt;Control&gt;q</property>
               </object>
             </child>
           </object>
