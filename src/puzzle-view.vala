@@ -237,56 +237,51 @@ private class PuzzleView : Gtk.DrawingArea
         motion_controller = new Gtk.EventControllerMotion (this);
         motion_controller.motion.connect (on_motion);
 
-        click_controller = new Gtk.GestureMultiPress (this);
+        click_controller = new Gtk.GestureMultiPress (this);    // only targets Gdk.BUTTON_PRIMARY
         click_controller.pressed.connect (on_click);
         click_controller.released.connect (on_release);
     }
 
     private static inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
-        uint button = _click_controller.get_button ();
-        if (button == Gdk.BUTTON_PRIMARY)
+        PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
+        if (_this.puzzle.game_over ())
+            return;
+
+        int new_piece_x = (int) (event_x - _this.kx) / _this.tile_size;
+        int new_piece_y = (int) (event_y - _this.ky) / _this.tile_size;
+        if (new_piece_x < 0 || new_piece_x >= (int) _this.puzzle.width
+         || new_piece_y < 0 || new_piece_y >= (int) _this.puzzle.height)
+            return;
+        _this.piece_x = (uint8) new_piece_x;
+        _this.piece_y = (uint8) new_piece_y;
+        char new_piece_id = _this.puzzle.get_piece_id (_this.puzzle.map, _this.piece_x, _this.piece_y);
+
+        bool already_moving = _this.piece_id != '\0';
+        if (already_moving && _this.piece_unmoved)
         {
-            PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
-            if (_this.puzzle.game_over ())
-                return;
-
-            int new_piece_x = (int) (event_x - _this.kx) / _this.tile_size;
-            int new_piece_y = (int) (event_y - _this.ky) / _this.tile_size;
-            if (new_piece_x < 0 || new_piece_x >= (int) _this.puzzle.width
-             || new_piece_y < 0 || new_piece_y >= (int) _this.puzzle.height)
-                return;
-            _this.piece_x = (uint8) new_piece_x;
-            _this.piece_y = (uint8) new_piece_y;
-            char new_piece_id = _this.puzzle.get_piece_id (_this.puzzle.map, _this.piece_x, _this.piece_y);
-
-            bool already_moving = _this.piece_id != '\0';
-            if (already_moving && _this.piece_unmoved)
-            {
-                _this.piece_id = '\0';
-                return;
-            }
-            if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == _this.piece_id)
-                return;
-
-            if (already_moving)
-            {
-                _this.validate_move ();
-                if (!_this.puzzle.can_be_moved (new_piece_id))
-                    return;
-            }
-
-            _this.piece_unmoved = true;
-            _this.piece_id = new_piece_id;
-            _this.puzzle.move_map = _this.puzzle.map;
+            _this.piece_id = '\0';
+            return;
         }
+        if (Puzzle.is_static_tile (new_piece_id) || new_piece_id == _this.piece_id)
+            return;
+
+        if (already_moving)
+        {
+            _this.validate_move ();
+            if (!_this.puzzle.can_be_moved (new_piece_id))
+                return;
+        }
+
+        _this.piece_unmoved = true;
+        _this.piece_id = new_piece_id;
+        _this.puzzle.move_map = _this.puzzle.map;
     }
 
     private static inline void on_release (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
         PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
-        uint button = _click_controller.get_button ();
-        if (button == Gdk.BUTTON_PRIMARY && _this.piece_id != '\0')
+        if (_this.piece_id != '\0')
             _this.validate_move ();
     }
 
