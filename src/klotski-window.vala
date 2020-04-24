@@ -533,6 +533,8 @@ private class KlotskiWindow : ApplicationWindow
         if (settings.get_boolean ("window-is-maximized"))
             maximize ();
 
+        manage_high_contrast ();
+
         add_action_entries (win_actions, this);
         lookup_non_nullable_action ("prev-pack",    out prev_pack);
         lookup_non_nullable_action ("next-pack",    out next_pack);
@@ -975,5 +977,43 @@ private class KlotskiWindow : ApplicationWindow
             liststore_challenge.set (iter, 1, solved);
         else
             liststore_skill.set (iter, 1, solved);
+    }
+
+    /*\
+    * * manage high-constrast
+    \*/
+
+    private StyleContext window_style_context;
+
+    private inline void manage_high_contrast ()
+    {
+        Gtk.Settings? nullable_gtk_settings = Gtk.Settings.get_default ();
+        if (nullable_gtk_settings == null)
+            return;
+
+        window_style_context = get_style_context ();
+
+        Gtk.Settings gtk_settings = (!) nullable_gtk_settings;
+        gtk_settings.notify ["gtk-theme-name"].connect (update_highcontrast_state);
+        _update_highcontrast_state (gtk_settings.gtk_theme_name);
+    }
+
+    private void update_highcontrast_state (Object gtk_settings, ParamSpec unused)
+    {
+        _update_highcontrast_state (((Gtk.Settings) gtk_settings).gtk_theme_name);
+    }
+
+    private bool highcontrast_state = false;
+    private void _update_highcontrast_state (string theme_name)
+    {
+        bool highcontrast_new_state = "HighContrast" in theme_name;
+        if (highcontrast_new_state == highcontrast_state)
+            return;
+        highcontrast_state = highcontrast_new_state;
+
+        if (highcontrast_new_state)
+            window_style_context.add_class ("hc-theme");
+        else
+            window_style_context.remove_class ("hc-theme");
     }
 }

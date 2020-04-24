@@ -27,25 +27,25 @@ stack#stack-packs > label {
   font-weight: bold;
 }
 
-.treeview-container treeview {
+window:not(.hc-theme) .treeview-container treeview {
   background-color: transparent;
 }
-.treeview-container treeview:backdrop {
+window:not(.hc-theme) .treeview-container treeview:backdrop {
   color: @theme_unfocused_fg_color;
 }
-.treeview-container treeview:hover {
+window:not(.hc-theme) .treeview-container treeview:hover {
   background-color: @theme_bg_color;
 }
-.treeview-container treeview:hover:backdrop {
+window:not(.hc-theme) .treeview-container treeview:hover:backdrop {
   background-color: @theme_unfocused_bg_color;
 }
-.treeview-container treeview:selected,
-.treeview-container treeview:selected:hover {
+window:not(.hc-theme) .treeview-container treeview:selected,
+window:not(.hc-theme) .treeview-container treeview:selected:hover {
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
 }
-.treeview-container treeview:selected:backdrop,
-.treeview-container treeview:selected:backdrop:hover {
+window:not(.hc-theme) .treeview-container treeview:selected:backdrop,
+window:not(.hc-theme) .treeview-container treeview:selected:backdrop:hover {
   background-color: @theme_unfocused_selected_bg_color;
   color: @theme_unfocused_selected_fg_color;
 }
@@ -61,11 +61,6 @@ treeview.toggle-like-pixbuf check {
 }
 treeview.toggle-like-pixbuf check:checked {
   -gtk-icon-source: -gtk-icontheme("gtk-yes"); /* TODO maybe deprecated; replace with CSS? */
-}
-
-/* https://bugzilla.gnome.org/show_bug.cgi?id=744531 */
-button.flat:disabled {
-  color: @theme_unfocused_bg_color;
 }
 
 /*\
