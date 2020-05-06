@@ -1102,14 +1102,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private inline void help_cb ()
     {
-        try
-        {
-            show_uri_on_window (this, "help:gnome-klotski", get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        show_uri (this, "help:gnome-klotski", Gdk.CURRENT_TIME);
     }
 
     private inline void about_cb ()
