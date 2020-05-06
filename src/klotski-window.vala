@@ -467,7 +467,10 @@ private class KlotskiWindow : ApplicationWindow
         { "prev-puzzle",    prev_puzzle_cb      },
         { "next-puzzle",    next_puzzle_cb      },
         { "start-game",     start_puzzle_cb     },
-        { "unfullscreen",   unfullscreen        }
+        { "unfullscreen",   unfullscreen        },
+
+        { "help",           help_cb             },
+        { "about",          about_cb            }
     };
 
     private static string normalize_map_name (string name)
@@ -1058,6 +1061,22 @@ private class KlotskiWindow : ApplicationWindow
     {
         string name = (!) (Gdk.keyval_name (keyval) ?? "");
 
+        if (name == "F1")   // Gtk handles badly having F1 or Shift-F1 as action shortcut while using Ctrl-F1 automatically
+        {
+            if ((state & Gdk.ModifierType.CONTROL_MASK) != 0)
+                return false;   // help overlay
+            if ((state & Gdk.ModifierType.SHIFT_MASK) == 0)
+            {
+                help_cb ();
+                return true;
+            }
+            else
+            {
+                about_cb ();
+                return true;
+            }
+            return false;
+        }
         if (name == "F10")  // Gtk handles badly having F10 and Ctrl-F10 as actions shortcuts
         {
             if (state == 0)
@@ -1074,5 +1093,67 @@ private class KlotskiWindow : ApplicationWindow
             return false;
         }
         return false;
+    }
+
+    /*\
+    * * help and about
+    \*/
+
+    private inline void help_cb ()
+    {
+        try
+        {
+            show_uri_on_window (this, "help:gnome-klotski", get_current_event_time ());
+        }
+        catch (Error e)
+        {
+            warning ("Failed to show help: %s", e.message);
+        }
+    }
+
+    private inline void about_cb ()
+    {
+        string [] authors = {
+        /* Translators: text crediting an author, in the about dialog */
+            _("Lars Rydlinge (original author)"),
+
+
+        /* Translators: text crediting an author, in the about dialog */
+            _("Robert Ancell (port to vala)"),
+
+
+        /* Translators: text crediting an author, in the about dialog */
+            _("John Cheetham (port to vala)")
+        };
+
+        /* Translators: text crediting a documenter, in the about dialog */
+        string [] documenters = { _("Andrew Sobala") };
+
+        show_about_dialog (this,
+                           /* Translators: name of the program, seen in the About dialog */
+                           "program-name", Klotski.PROGRAM_NAME,
+
+                           "version", VERSION,
+                           /* Translators: small description of the game, seen in the About dialog */
+                           "comments", _("Sliding block puzzles"),
+
+                           "copyright",
+                             /* Translators: text crediting a maintainer, seen in the About dialog */
+                             _("Copyright \xc2\xa9 1999-2008 – Lars Rydlinge") + "\n"+
+
+
+                             /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
+                             _("Copyright \xc2\xa9 %u-%u – Michael Catanzaro").printf (2014, 2016) + "\n"+
+
+
+                             /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
+                             _("Copyright \xc2\xa9 %u-%u – Arnaud Bonatti").printf (2015, 2020),
+                           "license-type", License.GPL_3_0, // means "GNU General Public License, version 3.0 or later"
+                           "authors", authors,
+                           "documenters", documenters,
+                           "logo-icon-name", "org.gnome.Klotski",
+                           /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
+                           "translator-credits", _("translator-credits"),
+                           "website", "https://wiki.gnome.org/Apps/Klotski");
     }
 }

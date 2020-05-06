@@ -27,14 +27,19 @@
     </section>
     <section>
       <item>
+        <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog -->
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
         <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application -->
         <attribute name="label" translatable="yes">_Help</attribute>
-        <attribute name="action">app.help</attribute>
+        <attribute name="action">win.help</attribute>
       </item>
       <item>
         <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog -->
         <attribute name="label" translatable="yes">_About Klotski</attribute>
-        <attribute name="action">app.about</attribute>
+        <attribute name="action">win.about</attribute>
       </item>
     </section>
   </menu>
