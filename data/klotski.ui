@@ -17,7 +17,7 @@
 -->
 <interface>
   <requires lib="gtk+" version="3.12"/>
-  <menu id="app-menu">
+  <menu id="main-menu">
     <section>
       <item>
         <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog -->
@@ -35,6 +35,17 @@
         <!-- Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog -->
         <attribute name="label" translatable="yes">_About Klotski</attribute>
         <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="game-menu">
+    <section>
+      <item>
+        <!-- Translators: label of an entry in the game menu (with a mnemonic that appears pressing Alt); allows to directly restart the current puzzle -->
+        <attribute name="label" translatable="yes">_Start Over</attribute>
+        <attribute name="action">win.start-game</attribute>
+        <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
+<!--        <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>-->
       </item>
     </section>
   </menu>
@@ -337,17 +348,15 @@
           </object>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkMenuButton" id="game_menubutton">
             <property name="visible">True</property>
             <property name="valign">center</property>
-            <property name="use-underline">True</property>
-            <!-- Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt) -->
-            <property name="label" translatable="yes">_Start Over</property>
+            <property name="label">0</property>
             <property name="can-focus">True</property>
             <property name="focus-on-click">False</property>
             <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
-            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
-            <property name="action-name">win.start-game</property>
+            <property name="tooltip-text" translatable="yes">Moves counter</property>
+            <property name="menu-model">game-menu</property>
           </object>
           <packing>
             <property name="pack-type">end</property>
@@ -358,7 +367,7 @@
             <property name="visible">True</property>
             <property name="valign">center</property>
             <property name="can_focus">True</property>
-            <property name="menu-model">app-menu</property>
+            <property name="menu-model">main-menu</property>
             <child>
               <object class="GtkImage">
                 <property name="visible">True</property>

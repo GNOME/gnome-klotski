@@ -48,6 +48,7 @@ private class KlotskiWindow : ApplicationWindow
     [GtkChild] private Stack stack_packs;
     [GtkChild] private Stack stack_puzzles;
     [GtkChild] private Popover puzzles_popover;
+    [GtkChild] private MenuButton game_menubutton;
     private PuzzleView view;
 
     [GtkChild] private TreeView treeview_huarong;
@@ -847,7 +848,9 @@ private class KlotskiWindow : ApplicationWindow
         view.puzzle = puzzle;
 
         update_moves_label ();
+        game_menubutton.active = false;
         start_game.set_enabled (false);
+        game_menubutton.sensitive = false;
     }
 
     private void puzzle_moved_cb ()
@@ -858,8 +861,9 @@ private class KlotskiWindow : ApplicationWindow
     private void update_moves_label ()
     {
         start_game.set_enabled (true);
+        game_menubutton.sensitive = true;
         /* Translators: headerbar subtitle; the %d is replaced by the number of moves already done in the current game */
-        headerbar.set_subtitle (_("Moves: %d").printf (puzzle.moves));
+        game_menubutton.set_label (puzzle.moves.to_string ());
         if (puzzle.game_over ())
         {
             /* Translators: headerbar title, when the puzzle is solved */
