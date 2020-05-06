@@ -322,23 +322,6 @@
         <property name="show-close-button">True</property>
         <property name="title" translatable="yes">Klotski</property>
         <child>
-          <object class="GtkButton">
-            <property name="visible">True</property>
-            <property name="valign">center</property>
-            <property name="use-underline">True</property>
-            <!-- Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt) -->
-            <property name="label" translatable="yes">_Start Over</property>
-            <property name="can-focus">True</property>
-            <property name="focus-on-click">False</property>
-            <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
-            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
-            <property name="action-name">win.start-game</property>
-          </object>
-          <packing>
-            <property name="pack-type">start</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkMenuButton">
             <property name="visible">True</property>
             <property name="valign">center</property>
@@ -351,6 +334,20 @@
             <property name="tooltip-text" translatable="yes">Choose an other puzzle</property>
             <property name="direction">down</property>
             <property name="popover">puzzles_popover</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="visible">True</property>
+            <property name="valign">center</property>
+            <property name="use-underline">True</property>
+            <!-- Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt) -->
+            <property name="label" translatable="yes">_Start Over</property>
+            <property name="can-focus">True</property>
+            <property name="focus-on-click">False</property>
+            <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
+            <property name="tooltip-text" translatable="yes">Restart the current puzzle</property>
+            <property name="action-name">win.start-game</property>
           </object>
           <packing>
             <property name="pack-type">end</property>
