@@ -727,7 +727,16 @@ private class KlotskiWindow : ApplicationWindow
     {
         if (!puzzles_popover.visible)
             return;
-        current_level--;
+        if (levels [current_level].group == current_pack)
+            current_level--;
+        else
+        {
+            int tmp_level;
+            for (tmp_level = levels.length - 1; tmp_level >= 0; tmp_level--)
+                if (levels [tmp_level].group == current_pack)
+                    break;
+            current_level = tmp_level;
+        }
         update_popover (true);
         start_puzzle ();
     }
@@ -736,7 +745,16 @@ private class KlotskiWindow : ApplicationWindow
     {
         if (!puzzles_popover.visible)
             return;
-        current_level++;
+        if (levels [current_level].group == current_pack)
+            current_level++;
+        else
+        {
+            int tmp_level;
+            for (tmp_level = 0; tmp_level < levels.length; tmp_level++)
+                if (levels [tmp_level].group == current_pack)
+                    break;
+            current_level = tmp_level;
+        }
         update_popover (true);
         start_puzzle ();
     }
