@@ -862,7 +862,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle ()
     {
-        headerbar.set_title (_(levels [current_level].name));
+        set_title (_(levels [current_level].name));
         if (puzzle_init_done)
             SignalHandler.disconnect_by_func (puzzle, null, this);
         puzzle = new Puzzle (levels [current_level].width, levels [current_level].height, levels [current_level].data);
@@ -890,7 +890,7 @@ private class KlotskiWindow : ApplicationWindow
         if (puzzle.game_over ())
         {
             /* Translators: headerbar title, when the puzzle is solved */
-            headerbar.set_title (_("Level completed."));    // FIXME remove the dot
+            set_title (_("Level completed."));    // FIXME remove the dot
             game_score ();
         }
     }
