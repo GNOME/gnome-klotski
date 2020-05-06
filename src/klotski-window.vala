@@ -49,6 +49,7 @@ private class KlotskiWindow : ApplicationWindow
     [GtkChild] private Stack stack_puzzles;
     [GtkChild] private Popover puzzles_popover;
     [GtkChild] private MenuButton game_menubutton;
+    [GtkChild] private MenuButton main_menubutton;
     private PuzzleView view;
 
     [GtkChild] private TreeView treeview_huarong;
@@ -534,6 +535,7 @@ private class KlotskiWindow : ApplicationWindow
         if (settings.get_boolean ("window-is-maximized"))
             maximize ();
 
+        init_keyboard ();
         manage_high_contrast ();
 
         add_action_entries (win_actions, this);
@@ -1019,5 +1021,40 @@ private class KlotskiWindow : ApplicationWindow
             window_style_context.add_class ("hc-theme");
         else
             window_style_context.remove_class ("hc-theme");
+    }
+
+    /*\
+    * * keyboard shortcuts
+    \*/
+
+    private EventControllerKey key_controller;          // for keeping in memory
+
+    private inline void init_keyboard ()
+    {
+        key_controller = new EventControllerKey (this);
+        key_controller.propagation_phase = PropagationPhase.CAPTURE;
+        key_controller.key_pressed.connect (on_key_pressed);
+    }
+
+    private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    {
+        string name = (!) (Gdk.keyval_name (keyval) ?? "");
+
+        if (name == "F10")  // Gtk handles badly having F10 and Ctrl-F10 as actions shortcuts
+        {
+            if (state == 0)
+            {
+                main_menubutton.active = !main_menubutton.active;
+                return true;
+            }
+            if (game_menubutton.sensitive
+             && (state & Gdk.ModifierType.CONTROL_MASK) != 0)
+            {
+                game_menubutton.active = !game_menubutton.active;
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 }

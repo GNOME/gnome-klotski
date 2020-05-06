@@ -339,6 +339,7 @@
             <property name="use-underline">True</property>
             <!-- Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt) -->
             <property name="label" translatable="yes">_Change Puzzle</property>
+            <accelerator key="N" signal="activate" modifiers="GDK_CONTROL_MASK"/>
             <property name="can-focus">True</property>
             <property name="focus-on-click">False</property>
             <!-- Translators: tooltip text of the Change Puzzle menubutton, in the headerbar -->
@@ -363,7 +364,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkMenuButton" id="menu_button">
+          <object class="GtkMenuButton" id="main_menubutton">
             <property name="visible">True</property>
             <property name="valign">center</property>
             <property name="can_focus">True</property>
