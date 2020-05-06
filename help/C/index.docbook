@@ -2,9 +2,9 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "3.34">
-  <!ENTITY manrevision "3.34">
-  <!ENTITY date "October 2019">
+  <!ENTITY appversion "3.38">
+  <!ENTITY manrevision "3.38">
+  <!ENTITY date "May 2020">
   <!ENTITY app "<application>Klotski</application>">
   <!-- Information about the entities
        The legal.xml file contains legal information, there is no need to edit the file. 
@@ -275,7 +275,7 @@
 	<!-- =========== Starting a new game ============================== -->
 	<sect2 id="gnotski-new-game">
 		<title>Starting a new game</title>
-		<para>Use <guibutton>Start Over</guibutton> to start a new game.
+		<para>Click on the moves counter button and use <guibutton>Start Over</guibutton> to start a new game.
 		<guibutton>Change Puzzle</guibutton> allows you to
 		navigate the puzzles sequentially. Each puzzle belongs to one of the three categories found in the 
 		submenus named <guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and
