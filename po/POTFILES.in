@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-data/klotski.ui
+data/ui/klotski.ui
 data/org.gnome.Klotski.appdata.xml.in
 data/org.gnome.Klotski.desktop.in
 data/org.gnome.Klotski.gschema.xml
