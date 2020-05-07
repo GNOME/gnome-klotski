@@ -873,7 +873,7 @@ private class KlotskiWindow : ApplicationWindow
         view.puzzle = puzzle;
 
         update_moves_label ();
-        game_menubutton.active = false;
+        game_menubutton.popdown ();
         start_game.set_enabled (false);
         game_menubutton.sensitive = false;
     }
@@ -1084,13 +1084,15 @@ private class KlotskiWindow : ApplicationWindow
         {
             if (state == 0)
             {
-                main_menubutton.active = !main_menubutton.active;
+                main_menubutton.popup ();   // https://gitlab.gnome.org/GNOME/gtk/-/issues/2634 2/3
+             // main_menubutton.active = !main_menubutton.active;
                 return true;
             }
             if (game_menubutton.sensitive
              && (state & Gdk.ModifierType.CONTROL_MASK) != 0)
             {
-                game_menubutton.active = !game_menubutton.active;
+                game_menubutton.popup ();   // https://gitlab.gnome.org/GNOME/gtk/-/issues/2634 3/3
+             // game_menubutton.active = !game_menubutton.active;
                 return true;
             }
             return false;
