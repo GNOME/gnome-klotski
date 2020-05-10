@@ -1075,7 +1075,7 @@ private class KlotskiWindow : ApplicationWindow
                 about_cb ();
                 return true;
             }
-            return false;
+         // return false;
         }
         if (name == "F10")  // Gtk handles badly having F10 and Ctrl-F10 as actions shortcuts
         {
