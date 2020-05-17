@@ -1,0 +1,586 @@
+# Ukrainian translation for gnome-klotski.
+# Copyright (C) 2020 gnome-klotski's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-klotski package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-klotski gnome-3-36\n"
+"POT-Creation-Date: 2020-05-14 14:09+0000\n"
+"PO-Revision-Date: 2020-05-17 10:32+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.07.70\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2020"
+
+#. (itstool) path: articleinfo/title
+#: C/index.docbook:25
+msgid "<application>Klotski</application> Manual"
+msgstr "Підручник з <application>Кльоцок</application>"
+
+#. (itstool) path: abstract/para
+#: C/index.docbook:28
+msgid ""
+"Klotski is a puzzle game of which the objective is to get the patterned "
+"block to the marker, which is done by moving the blocks in its way."
+msgstr ""
+"«Кльоцки» — гра-головоломка, метою якої є пересування блоку із візерунком до "
+"маркера шляхом пересування інших блоків на його шляху."
+
+#. (itstool) path: articleinfo/copyright
+#: C/index.docbook:35
+msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
+msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
+
+#. (itstool) path: publisher/publishername
+#. (itstool) path: revdescription/para
+#: C/index.docbook:51 C/index.docbook:139
+msgid "GNOME Documentation Project"
+msgstr "Проєкт з документування GNOME"
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in "
+"the file COPYING-DOCS distributed with this manual."
+msgstr ""
+"Дозволяється копіювати, розповсюджувати та/або змінювати цей документ на "
+"умовах ліцензії GNU Free Documentation License (GFDL), версії 1.1 або будь-"
+"якої старшої версії, що опублікована Free Software Foundation без "
+"інваріантних розділів, тексту титульної сторінки, та тексту фінальної "
+"сторінки. Копію GFDL можна знайти <ulink type=\"help\" url=\"help:fdl\">за "
+"адресою</ulink> або у файлі COPYING-DOCS, що постачається з цією довідкою."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:12 C/legal.xml:12
+msgid ""
+"This manual is part of a collection of GNOME manuals distributed under the "
+"GFDL. If you want to distribute this manual separately from the collection, "
+"you can do so by adding a copy of the license to the manual, as described in "
+"section 6 of the license."
+msgstr ""
+"Цей посібник є частиною документації GNOME яка поширюється під ліцензією "
+"GFDL. Якщо Ви бажаєте розповсюджувати цей посібник окремо від іншої "
+"документації, можете це зробити додавши до нього копію ліцензії, як описано "
+"в пункті 6 ліцензії."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:19 C/legal.xml:19
+msgid ""
+"Many of the names used by companies to distinguish their products and "
+"services are claimed as trademarks. Where those names appear in any GNOME "
+"documentation, and the members of the GNOME Documentation Project are made "
+"aware of those trademarks, then the names are in capital letters or initial "
+"capital letters."
+msgstr ""
+"Багато назв, які використовуються компаніями для позначення своїх продуктів "
+"та послуг, заявлені в якості товарних знаків. Якщо такі назви зустрічаються "
+"в будь-якій документації GNOME, і члени проєкту документування GNOME знають "
+"про них, то назви пишуться великими літерами, або з великої літери."
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:35 C/legal.xml:35
+msgid ""
+"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
+"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
+"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
+"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
+msgstr ""
+"ДОКУМЕНТ НАДАЄТЬСЯ \"ЯК Є\", БЕЗ БУДЬ-ЯКИХ ГАРАНТІЇ, ЯВНИХ ЧИ НЕЯВНИХ, "
+"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ГАРАНТІЙ ЩО ЦЕЙ ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ "
+"ДОКУМЕНТА ВІЛЬНІ ВІД ДЕФЕКТІВ, ПРИДАТНІ ДО ПРОДАЖУ, ВІДПОВІДАЮТЬ ПЕВНІЙ МЕТІ "
+"АБО НЕ ПОРУШУЮТЬ ЧИЇСЬ ПРАВА. ВЕСЬ РИЗИК ЗА ЯКІСТЬ, ТОЧНІСТЬ, ТА ЧИННІСТЬ "
+"ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНИХ ВЕРСІЙ ЛЕЖИТЬ НА ВАС.  ЯКЩО БУДЬ-ЯКИЙ "
+"ДОКУМЕНТ ЧИ ЗМІНЕНА ВЕРСІЯ БУДУТЬ ВИЗНАНІ ДЕФЕКТНИМИ У БУДЬ-ЯКОМУ "
+"ВІДНОШЕННІ, ВИ (НЕ ПОЧАТКОВИЙ УКЛАДАЧ, АВТОР АБО БУДЬ-ЯКИЙ СПІВАВТОР) БЕРЕТЕ "
+"НА СЕБЕ ВИТРАТИ ЗА БУДЬ-ЯКЕ НЕОБХІДНЕ ОБСЛУГОВУВАННЯ, РЕМОНТ ЧИ ВИПРАВЛЕННЯ. "
+"ЦЯ ВІДМОВА ВІД ГАРАНТІЙ СКЛАДАЄ ВАЖЛИВУ ЧАСТИНУ ЦІЄЇ ЛІЦЕНЗІЇ. НЕ "
+"ДОПУСКАЄТЬСЯ ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ АБО ЙОГО ЗМІНЕНОЇ ВЕРСІЇ БЕЗ "
+"ПРИЙНЯТТЯ ЦІЄЇ ВІДМОВИ; ТА"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:55 C/legal.xml:55
+msgid ""
+"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
+"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
+"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
+"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
+"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
+"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
+"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
+"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
+"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
+"POSSIBILITY OF SUCH DAMAGES."
+msgstr ""
+"НІ ЗА ЯКИХ ОБСТАВИН ТА ЗА БУДЬ-ЯКОГО ЗАКОНОДАВСТВА, ЧИ ТО ГРОМАДЯНСЬКОЇ "
+"ВІДПОВІДАЛЬНОСТІ (ВКЛЮЧАЮЧИ ХАЛАТНІСТЬ), ДОГОВОРУ, ЧИ ЧОГОСЬ ІНШОГО, АВТОР, "
+"ПОЧАТКОВИЙ УКЛАДАЧ, БУДЬ-ЯКИЙ СПІВАВТОР, АБО ДИСТРИБ'ЮТОР ДОКУМЕНТУ ЧИ "
+"ЗМІНЕНОЇ ВЕРСІЇ ДОКУМЕНТУ, АБО БУДЬ-ЯКИЙ ПОСТАЧАЛЬНИК БУДЬ-ЯКОЇ З ЦИХ "
+"СТОРІН, НЕ НЕСЕ ВІДПОВІДАЛЬНІСТЬ ПЕРЕД БУДЬ-ЯКОЮ ОСОБОЮ ЗА БУДЬ-ЯКІ ПРЯМІ, "
+"НЕПРЯМІ, ОСОБЛИВІ, ВИПАДКОВІ, АБО ІСТОТНІ ЗБИТКИ БУДЬ-ЯКОГО ХАРАКТЕРУ "
+"ВКЛЮЧАЮЧИ, АЛЕ НЕ ОБМЕЖУЮЧИСЬ, ЗБИТКАМИ ВІД ВТРАТИ ПРЕСТИЖУ, ЗУПИНКИ РОБОТИ, "
+"ЗБОЇВ АБО НЕСПРАВНОСТЕЙ КОМП'ЮТЕРА, АБО БУДЬ-ЯКІ ІНШІ ЗБИТКИ АБО ВТРАТИ ЩО "
+"ВИНИКЛИ БЕЗВІДНОСНО АБО ВНАСЛІДОК ВИКОРИСТАННЯ ЦЬОГО ДОКУМЕНТУ ТА ЗМІНЕНИХ "
+"ВЕРСІЙ ЦЬОГО ДОКУМЕНТУ, НАВІТЬ ЯКЩО ЦІ СТОРОНИ, МОЖЛИВО, БУЛИ ПРОІНФОРМОВАНІ "
+"ПРО МОЖЛИВІСТЬ ТАКИХ ЗБИТКІВ."
+
+#. (itstool) path: legalnotice/para
+#: C/index.docbook:28 C/legal.xml:28
+msgid ""
+"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
+"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
+"<_:orderedlist-1/>"
+msgstr ""
+"ДОКУМЕНТ ТА ЗМІНЕНІ ВЕРСІЇ ДОКУМЕНТУ НАДАЮТЬСЯ КОРИСТУВАЧУ ЗА УМОВАМИ "
+"ЛІЦЕНЗІЇ GNU FREE DOCUMENTATION LICENSE З ПОДАЛЬШИМ РОЗУМІННЯМ ПРО ТЕ, ЩО: "
+"<_:orderedlist-1/>"
+
+#. (itstool) path: authorgroup/author
+#: C/index.docbook:60
+msgid ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>GNOME Documentation Project</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
+"<orgname>Проєкт з документування GNOME</orgname> <address> "
+"<email>andrew@sobala.net</email> </address> </affiliation>"
+
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:69
+msgid ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
+"<orgname>Проєкт GNOME</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
+"email> </address> </affiliation>"
+
+#. (itstool) path: authorgroup/othercredit
+#: C/index.docbook:78
+msgid ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+msgstr ""
+"<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
+"<orgname>Проєкт GNOME</orgname> <address> <email> ross@burtonini.com </"
+"email> </address> </affiliation>"
+
+#. (itstool) path: revdescription/para
+#: C/index.docbook:136
+msgid "Andrew Sobala <email>andrew@sobala.net</email>"
+msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
+
+#. (itstool) path: revhistory/revision
+#: C/index.docbook:132
+msgid ""
+"<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
+msgstr ""
+"<revnumber>Версія 2.0</revnumber> <date>13 серпня 2002 року</date> <_:"
+"revdescription-1/>"
+
+#. (itstool) path: articleinfo/releaseinfo
+#: C/index.docbook:145
+#| msgid "This manual describes version 3.34 of GNOME Klotski."
+msgid "This manual describes version 3.38 of GNOME Klotski."
+msgstr "В цьому посібнику описано версію 3.38 гри «Кльоцки GNOME»."
+
+#. (itstool) path: legalnotice/title
+#: C/index.docbook:148
+msgid "Feedback"
+msgstr "Відгуки"
+
+#. (itstool) path: legalnotice/para
+#. (itstool) path: sect1/para
+#: C/index.docbook:149 C/index.docbook:179
+msgid ""
+"To report a bug or make a suggestion regarding this application or this "
+"manual, please visit <ulink type=\"http\" url=\"https://gitlab.gnome.org/"
+"GNOME/gnome-klotski/issues\">the GNOME issue tracker</ulink>."
+msgstr ""
+"Щоб повідомити про помилку або внести пропозицію щодо цієї програми або "
+"цього підручника, скористайтеся <ulink type=\"http\" url=\"https://gitlab."
+"gnome.org/GNOME/gnome-klotski/issues\">системою стеження за вадами у GNOME</"
+"ulink>."
+
+#. (itstool) path: article/indexterm
+#: C/index.docbook:157
+msgid "<primary>GNOME Klotski</primary>"
+msgstr "<primary>Кльоцки GNOME</primary>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:164
+msgid "Introduction"
+msgstr "Вступ"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:165
+msgid ""
+"The <application>Klotski</application> application is a clone of the Klotski "
+"game. The objective is to move the patterned block to the area bordered by "
+"green markers."
+msgstr ""
+"Програма <application>Кльоцки</application> є клоном гри «Кльоцки». Метою "
+"гри є пересування блоку із візерунком до області, яку обмежено зеленими "
+"маркерами."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:168
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
+"Rydlinge@HIG.SE</email>)."
+msgstr ""
+"<application>Кльоцки</application> було написано Lars Rydlinge (<email>Lars."
+"Rydlinge@HIG.SE</email>)."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:171
+#| msgid ""
+#| "This document describes version 3.34 of <application>Klotski</"
+#| "application>."
+msgid ""
+"This document describes version 3.38 of <application>Klotski</application>."
+msgstr ""
+"У цьому документі описано версію 3.38 <application>Кльоцок</application>."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:173
+msgid ""
+"This program is distributed under the terms of the GNU General Public "
+"license as published by the Free Software Foundation; either version 3 of "
+"the License, or (at your option) any later version. A copy of this license "
+"can be found in the file COPYING included with the source code of this "
+"program."
+msgstr ""
+"Ця програма розповсюджується на умовах GNU General Public License, яка "
+"опублікована Free Software Foundation, або версією 3 Ліцензії, чи (на Ваш "
+"розсуд) будь-якої більш пізньої версії. Копію цієї ліцензії можна знайти у "
+"файлі COPYING включеному у вихідний код цієї програми."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:188
+msgid "Objective"
+msgstr "Мета"
+
+#. (itstool) path: figure/title
+#: C/index.docbook:195
+msgid "The winning move"
+msgstr "Виграшний хід"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:199
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_win.png' "
+#| "md5='1b128968a565e5e4bb930f0f2b581623'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
+msgstr ""
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:197
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>The patterned block should be moved to "
+"the space bordered by the green markers.</phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
+"> </imageobject> <textobject> <phrase>Блок із візерунком слід пересунути на "
+"місце, яке позначено зеленими маркерами.</phrase> </textobject>"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:189
+msgid ""
+"The objective of <application>Klotski</application> is to move the patterned "
+"block to the green markers in as few moves as possible. You do this by "
+"moving the blocks one at a time with the mouse until you can get the "
+"patterned block to the markers. <_:figure-1/>"
+msgstr ""
+"Метою <application>Кльоцок</application> є пересування блоку з візерунком до "
+"зелених маркерів за якомога меншу кількість ходів. Зробити це можна "
+"пересуванням блоків по одному за хід за допомогою миші, аж доки блок із "
+"візерунком буде пересунуто до маркерів. <_:figure-1/>"
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:214
+msgid "Playing <application>Klotski</application>"
+msgstr "Гра у <application>Кльоцки</application>"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:233
+msgid "The main window"
+msgstr "Головне вікно"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:234
+#| msgid ""
+#| "When you start <application><application>Klotski</application></"
+#| "application>, the following window is displayed."
+msgid ""
+"When you start <application>Klotski</application>, the following window is "
+"displayed."
+msgstr ""
+"Після запуску <application>Кльоцок</application> буде показано наведене нижче"
+" вікно."
+
+#. (itstool) path: figure/title
+#: C/index.docbook:238
+msgid "<application>Klotski</application> Start Up Window"
+msgstr "Вікно запуску <application>Кльоцок</application>"
+
+#. (itstool) path: imageobject/imagedata
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.docbook:242
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_start_window.png' "
+#| "md5='d074091210621806bee31a938c5d1286'"
+msgctxt "_"
+msgid ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
+msgstr ""
+"external ref='figures/gnotski_start_window.png' "
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
+
+#. (itstool) path: screenshot/mediaobject
+#: C/index.docbook:240
+msgid ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
+"application> main window. Contains titlebar, menubar, game area and "
+"statusbar. Menubar contains Game and Help menus. </phrase> </textobject>"
+msgstr ""
+"<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
+"\"PNG\"/> </imageobject> <textobject> <phrase>Показано головне вікно "
+"<application>Кльоцок</application>. У вікні міститься смужка заголовка, "
+"смужку меню, область гри та смужку стану. На смужці меню містяться пункти "
+"меню «Гра» та «Довідка». </phrase> </textobject>"
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:256
+msgid "Header bar"
+msgstr "Панель заголовка"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:258
+msgid ""
+"The header bar allows you to start new games, shows how many moves you have "
+"taken so far, and allows you to change the puzzle. Press the menu button in "
+"the top-right corner to view the highest scores and the documentation for "
+"<application>Klotski</application>."
+msgstr ""
+"За допомогою смужки заголовка ви можете запустити нову гру, там показано "
+"скільки ходів було зроблено, звідти ви можете змінити параметри головоломки. "
+"Натисніть кнопку меню у верхньому правому куті вікна програми, щоб "
+"переглянути список найкращих результатів та документацію до "
+"<application>Кльоцок</application>."
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:264
+msgid "Game area"
+msgstr "Ігрова область"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:266
+msgid ""
+"The game area shows the blocks in the current game. You can drag the blocks "
+"around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
+msgstr ""
+"У ігровій області буде показано блоки поточної гри. ви можете перетягувати "
+"блоки за допомогою вказівника миші, як це описано у розділі <xref linkend="
+"\"gnotski-moving\"/>."
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:253
+msgid ""
+"The <application>Klotski</application> window contains the following "
+"elements: <_:variablelist-1/>"
+msgstr ""
+"Вікно <application>Кльоцок</application> містить такі елементи: <_:"
+"variablelist-1/>"
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:277
+msgid "Starting a new game"
+msgstr "Запуск нової гри"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:278
+#| msgid ""
+#| "Use <guibutton>Start Over</guibutton> to start a new game. "
+#| "<guibutton>Change Puzzle</guibutton> allows you to navigate the puzzles "
+#| "sequentially. Each puzzle belongs to one of the three categories found in "
+#| "the submenus named <guisubmenu>HuaRong Trail</guisubmenu>, "
+#| "<guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill Pack</"
+#| "guisubmenu>. In these submenus, each puzzle name refers to a game "
+#| "scenario."
+msgid ""
+"Click on the moves counter button and use <guibutton>Start Over</guibutton> "
+"to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
+"navigate the puzzles sequentially. Each puzzle belongs to one of the three "
+"categories found in the submenus named <guisubmenu>HuaRong Trail</"
+"guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill "
+"Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
+"scenario."
+msgstr ""
+"Натисніть кнопку лічильника ходів і скористайтеся кнопкою <guibutton>Почати"
+" знову</guibutton>, щоб розпочати "
+"нову гру. За допомогою кнопки <guibutton>Змінити головоломку</guibutton> ви "
+"можете здійснювати послідовну навігацію варіантами головоломки. Кожна з "
+"головоломок належить до однієї з трьох категорій, які поділено на підменю із "
+"назвами <guisubmenu>Поїзд HuaRong</guisubmenu>, <guisubmenu>Набір "
+"відкриттів</guisubmenu> і <guisubmenu>Важкий набір</guisubmenu>. У цих "
+"підменю кожна назва гри відповідає певному сценарію."
+
+#. (itstool) path: sect2/title
+#: C/index.docbook:288
+msgid "Moving blocks"
+msgstr "Пересування блоків"
+
+#. (itstool) path: sect2/para
+#: C/index.docbook:289
+msgid ""
+"To move a block, click on it, hold down the mouse button and drag it to its "
+"new location. You cannot move the green blocks or the block that borders the "
+"game. You cannot move a block to a space already occupied by another block, "
+"with the exception that you may move the patterned block through the green "
+"blocks to win."
+msgstr ""
+"Щоб пересунути блок, наведіть на нього вказівник миші, натисніть і утримуйте "
+"ліву кнопку миші і перетягніть його до нового місця. Ви не можете "
+"перетягувати зелені блоки або блоки, які обмежують ігрове поле. Не можна "
+"пересувати блок на місце, яке вже зайнято іншим блоком, за винятком випадку, "
+"коли ви пересуваєте блок із візерунком крізь зелені блоки для виграшу."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:309
+msgid "Authors"
+msgstr "Автори"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:310
+msgid ""
+"<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
+"rydlinge@hig.se</email>). This manual was written by Andrew Sobala."
+msgstr ""
+"<application>Кльоцки</application> було написано Lars Rydlinge (<email>lars."
+"rydlinge@hig.se</email>). Автором цього підручника є Andrew Sobala."
+
+#. (itstool) path: sect1/title
+#: C/index.docbook:327
+msgid "License"
+msgstr "Ліцензування"
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:328
+msgid ""
+"This program and tile artwork is free software; you can redistribute it and/"
+"or modify it under the terms of the <citetitle>GNU General Public License</"
+"citetitle> as published by the Free Software Foundation; either version 2 of "
+"the License, or (at your option) any later version."
+msgstr ""
+"Ця програма і художні роботи для плиток є вільною. Ви можете поширювати та "
+"змінювати її на умовах, викладених у <citetitle>GNU General Public License</"
+"citetitle>, що видана Free Software Foundation; або версії 2 ліцензії, або "
+"(на ваше розсуд довільної старшої версії."
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:335
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public "
+"License</citetitle> for more details."
+msgstr ""
+"Ця програма поширюється з надією, що буде корисною, але БЕЗ БУДЬ_ЯКИХ "
+"ГАРАНТІЙ; навіть без неявної гарантії ПРИДАТНОСТІ ДО ПРОДАЖУ або "
+"ВІДПОВІДНОСТІ ПЕВНІЙ МЕТІ. Докладніше про це дивіться у <citetitle>GNU "
+"General Public License</citetitle>."
+
+#. (itstool) path: para/address
+#: C/index.docbook:348
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#. (itstool) path: sect1/para
+#: C/index.docbook:341
+msgid ""
+"A copy of the <citetitle>GNU General Public License</citetitle> is included "
+"as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
+"obtain a copy of the <citetitle>GNU General Public License</citetitle> from "
+"the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://"
+"www.fsf.org\">their Web site</ulink> or by writing to <_:address-1/>"
+msgstr ""
+"Копію <citetitle>GNU General Public License</citetitle> включено як додаток "
+"до <citetitle>Підручника користувача GNOME</citetitle>. Крім того, ви можете "
+"отримати копію <citetitle>GNU General Public License</citetitle> від Free "
+"Software Foundation, відвідавши <ulink type=\"http\" url=\"http://www.fsf.org"
+"\">їхній вебсайт</ulink> або написавши до <_:address-1/>"
+
+#. (itstool) path: para/ulink
+#: C/legal.xml:9
+msgid "link"
+msgstr "посиланням"
+
+#. (itstool) path: legalnotice/para
+#: C/legal.xml:2
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Дозволяється копіювати, розповсюджувати та/або змінювати цей документ за "
+"умовами ліцензії GNU Free Documentation License (GFDL), версії 1.1 або будь-"
+"якої старішої версії, опублікованої Фондом вільного програмного забезпечення "
+"(Free Software Foundation), без змінених частин та без текстів на "
+"обкладинках. Ви можете знайти копію ліцензії GFDL за цим <_:ulink-1/> або в "
+"файлі COPYING-DOCS, який поширюється разом з цим посібником."
