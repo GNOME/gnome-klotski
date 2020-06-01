@@ -319,7 +319,6 @@
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar">
         <property name="show-title-buttons">True</property>
-        <property name="title" translatable="yes">Klotski</property>
         <child type="start">
           <object class="GtkMenuButton">
             <property name="valign">center</property>
