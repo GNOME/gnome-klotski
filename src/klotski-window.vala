@@ -70,6 +70,7 @@ private class KlotskiWindow : ApplicationWindow
     private bool puzzle_init_done = false;
     private Puzzle puzzle;
 
+    private const string [] level_packs = { "huarong", "challenge", "skill" };
     private int current_pack = -1;
     private int current_level = -1;
 
@@ -610,7 +611,7 @@ private class KlotskiWindow : ApplicationWindow
         view.show ();
         view.hexpand = true;
         view.vexpand = true;
-        main_grid.add (view);
+        view.insert_before (main_grid, /* insert last */ null);
 
         load_solved_state ();       // TODO use GSettings, or the history…
 
@@ -764,7 +765,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle_cb ()
     {
-        TreeView tree = ((TreeView) (((ScrolledWindow) (stack_puzzles.get_children ().nth_data (current_pack))).get_child ()));
+        TreeView tree = (TreeView) (((ScrolledWindow) (stack_puzzles.get_child_by_name (level_packs [current_pack]))).get_child ());
         TreeModel? model = tree.get_model ();
         if (model == null)
             assert_not_reached ();
@@ -796,7 +797,7 @@ private class KlotskiWindow : ApplicationWindow
             current_pack = current_level_pack;
 
         /* select or not a level */
-        TreeSelection selection = ((TreeView) (((ScrolledWindow) (stack_puzzles.get_children ().nth_data (current_pack))).get_child ())).get_selection ();
+        TreeSelection selection = ((TreeView) (((ScrolledWindow) (stack_puzzles.get_child_by_name (level_packs [current_pack]))).get_child ())).get_selection ();
         if (current_pack == current_level_pack)
             selection.select_iter (iter);
         else
@@ -805,8 +806,8 @@ private class KlotskiWindow : ApplicationWindow
         update_buttons_state ();
 
         /* update stacks */
-        stack_packs.set_visible_child (stack_packs.get_children ().nth_data (current_pack));
-        stack_puzzles.set_visible_child (stack_puzzles.get_children ().nth_data (current_pack));
+        stack_packs.set_visible_child_name (level_packs [current_pack]);
+        stack_puzzles.set_visible_child_name (level_packs [current_pack]);
     }
 
     private void update_buttons_state ()
