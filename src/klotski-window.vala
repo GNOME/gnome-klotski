@@ -680,10 +680,11 @@ private class KlotskiWindow : ApplicationWindow
     }
 
     [GtkCallback]
-    private void on_destroy ()
+    private bool on_destroy ()
     {
         settings.set_int (KEY_LEVEL, current_level);
         save_window_state ();
+        return false;
     }
 
     /*\

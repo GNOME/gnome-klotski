@@ -315,7 +315,7 @@
     <property name="width-request">600</property>
     <property name="height-request">400</property>
     <signal name="map" handler="init_state_watcher"/>
-    <signal name="destroy" handler="on_destroy"/>
+    <signal name="close-request" handler="on_destroy"/>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar">
         <property name="show-title-buttons">True</property>
