@@ -335,6 +335,14 @@
           </object>
         </child>
         <child type="end">
+          <object class="GtkMenuButton" id="main_menubutton">
+            <property name="valign">center</property>
+            <property name="can-focus">True</property>
+            <property name="menu-model">main-menu</property>
+            <property name="icon-name">open-menu-symbolic</property>
+          </object>
+        </child>
+        <child type="end">
           <object class="GtkMenuButton" id="game_menubutton">
             <property name="valign">center</property>
             <property name="label">0</property>
@@ -343,14 +351,6 @@
             <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
             <property name="tooltip-text" translatable="yes">Moves counter</property>
             <property name="menu-model">game-menu</property>
-          </object>
-        </child>
-        <child type="end">
-          <object class="GtkMenuButton" id="main_menubutton">
-            <property name="valign">center</property>
-            <property name="can-focus">True</property>
-            <property name="menu-model">main-menu</property>
-            <property name="icon-name">open-menu-symbolic</property>
           </object>
         </child>
       </object>
