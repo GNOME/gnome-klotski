@@ -165,7 +165,7 @@ private class KlotskiWindow : ApplicationWindow
             "    .." +
             "    .." },
 
-        /* puzzle name - sometimes called "Le'Ane Rouge" */
+        /* Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning) */
         {   N_("Red Donkey"), /* group */ 0,
             /* width and height */ 6, 9,
             "######" +
