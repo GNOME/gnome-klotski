@@ -548,14 +548,15 @@ private class KlotskiWindow : ApplicationWindow
         lookup_non_nullable_action ("next-puzzle",  out next_puzzle);
         lookup_non_nullable_action ("start-game",   out start_game);
 
-        scores_context = new Games.Scores.Context.with_importer (
+        scores_context = new Games.Scores.Context.with_importer_and_icon_name (
             "gnome-klotski",
              /* Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed */
              _("Puzzle"),
              this,
              category_request,
              Games.Scores.Style.POINTS_LESS_IS_BETTER,
-             new Games.Scores.HistoryFileImporter (parse_old_score));
+             new Games.Scores.HistoryFileImporter (parse_old_score),
+             "org.gnome.Klotski");
 
         // name, active, puzzle number (or -1), sensitive=false CSS hack
         liststore_huarong   = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
