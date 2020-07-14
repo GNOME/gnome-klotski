@@ -1,14 +1,14 @@
 # Kazakh translation for gnome-games.
 # Copyright (C) 2010 gnome-games's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-games package.
-# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-05-30 10:13+0000\n"
-"PO-Revision-Date: 2020-06-26 13:59+0500\n"
+"POT-Creation-Date: 2020-06-26 09:00+0000\n"
+"PO-Revision-Date: 2020-07-14 08:24+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -36,17 +36,17 @@ msgstr "Klotski тур_алы"
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels
 #: data/klotski.ui:78
 msgid "Huarong Trail"
-msgstr ""
+msgstr "Хуаронг ізі"
 
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels
 #: data/klotski.ui:90
 msgid "Challenge Pack"
-msgstr ""
+msgstr "Сынау жиынтығы"
 
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels
 #: data/klotski.ui:102
 msgid "Skill Pack"
-msgstr ""
+msgstr "Шеберлік жиынтығы"
 
 #. Translators: in the Change Puzzle popover, label of the button for playing the previous level
 #: data/klotski.ui:284
@@ -72,17 +72,17 @@ msgstr "Басынан ба_стау"
 #. Translators: tooltip text of the Start Over button, in the headerbar
 #: data/klotski.ui:334
 msgid "Restart the current puzzle"
-msgstr ""
+msgstr "Ағымдағы жұмбақты қайта іске қосу"
 
 #. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
 #: data/klotski.ui:347
 msgid "_Change Puzzle"
-msgstr ""
+msgstr "Жұмбақты ауы_стыру"
 
 #. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
 #: data/klotski.ui:351
 msgid "Choose an other puzzle"
-msgstr ""
+msgstr "Басқа жұмбақты таңдау"
 
 #: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
@@ -90,7 +90,7 @@ msgstr "GNOME Klotski"
 
 #: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
-msgstr ""
+msgstr "Жұмбақты шешу үшін блоктарды жылжытыңыз"
 
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
@@ -99,6 +99,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
+"GNOME Klotski — блокты сырғымалы жұмбақтар жиынтығы. Оның мақсаты – жасыл "
+"маркерлермен шекаралас аймаққа әшекейленген блокты көшіру. Ол үшін басқа "
+"блоктарды жолдан тыс ығыстыру қажет. Әр жұмбақты мүмкіндігінше аз жылжумен "
+"аяқтаңыз!"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -106,6 +110,9 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
+"GNOME Klotski қиындығы әр түрлі болатын отызға жуық түрлі жұмбақ жаймалардан "
+"тұрады. Кейбір жаймалар өзара ұқсас және айырмашылығы тек бір немесе бірнеше "
+"блокта болады. Басқа жаймалар өзгеше болады."
 
 #: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
@@ -118,11 +125,11 @@ msgstr "ойын;стратегия;логика;жылжыту;"
 
 #: data/org.gnome.Klotski.gschema.xml:5
 msgid "The puzzle in play"
-msgstr ""
+msgstr "Ойнаудағы жұмбақ"
 
 #: data/org.gnome.Klotski.gschema.xml:6
 msgid "The number of the puzzle being played."
-msgstr ""
+msgstr "Ойналып тұрған жұмбақтың нөмірі."
 
 #: data/org.gnome.Klotski.gschema.xml:10
 msgid "Width of the window in pixels"
@@ -144,27 +151,27 @@ msgstr "Нұсқа ақпаратын шығару және шығу"
 #. Translators: text crediting an author, in the about dialog
 #: src/gnome-klotski.vala:135
 msgid "Lars Rydlinge (original author)"
-msgstr ""
+msgstr "Lars Rydlinge (бастапқы авторы)"
 
 #. Translators: text crediting an author, in the about dialog
 #: src/gnome-klotski.vala:139
 msgid "Robert Ancell (port to vala)"
-msgstr ""
+msgstr "Robert Ancell (vala порты)"
 
 #. Translators: text crediting an author, in the about dialog
 #: src/gnome-klotski.vala:143
 msgid "John Cheetham (port to vala)"
-msgstr ""
+msgstr "John Cheetham (vala порты)"
 
 #. Translators: text crediting a documenter, in the about dialog
 #: src/gnome-klotski.vala:147
 msgid "Andrew Sobala"
-msgstr ""
+msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
 #: src/gnome-klotski.vala:155
 msgid "Sliding block puzzles"
-msgstr ""
+msgstr "Сырғанау блоктық жұмбақтары"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
 #: src/gnome-klotski.vala:159
@@ -196,47 +203,47 @@ msgstr "Тек 18 қадам"
 #. Translators: puzzle name
 #: src/klotski-window.vala:102
 msgid "Daisy"
-msgstr ""
+msgstr "Дәстүргүл"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:115
 msgid "Violet"
-msgstr ""
+msgstr "Күлгін"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:128
 msgid "Poppy"
-msgstr ""
+msgstr "Көкнәр"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:141
 msgid "Pansy"
-msgstr ""
+msgstr "Бақ фиалкасы"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:154
 msgid "Snowdrop"
-msgstr ""
+msgstr "Бәйшешек"
 
 #. puzzle name - sometimes called "Le'Ane Rouge"
 #: src/klotski-window.vala:167
 msgid "Red Donkey"
-msgstr ""
+msgstr "Қызыл есек"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:180
 msgid "Trail"
-msgstr ""
+msgstr "Соқпақ"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:193
 msgid "Ambush"
-msgstr ""
+msgstr "Торуыл"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:206
 msgid "Agatka"
-msgstr ""
+msgstr "Агатка"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:217
@@ -246,32 +253,32 @@ msgstr "Сәтті"
 #. Translators: puzzle name
 #: src/klotski-window.vala:227
 msgid "Bone"
-msgstr ""
+msgstr "Сүйек"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:240
 msgid "Fortune"
-msgstr ""
+msgstr "Бақыт"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:254
 msgid "Fool"
-msgstr ""
+msgstr "Ақымақ"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:264
 msgid "Solomon"
-msgstr ""
+msgstr "Соломон"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:277
 msgid "Cleopatra"
-msgstr ""
+msgstr "Клеопатра"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:289
 msgid "Shark"
-msgstr ""
+msgstr "Акула"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:301
@@ -281,7 +288,7 @@ msgstr "Рим"
 #. Translators: puzzle name
 #: src/klotski-window.vala:313
 msgid "Pennant Puzzle"
-msgstr ""
+msgstr "Пенант жұмбағы"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:326
@@ -291,42 +298,42 @@ msgstr "Итака"
 #. Translators: puzzle name
 #: src/klotski-window.vala:349
 msgid "Pelopones"
-msgstr ""
+msgstr "Пелопоннес"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:361
 msgid "Transeuropa"
-msgstr ""
+msgstr "Трансевропа"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:373
 msgid "Lodzianka"
-msgstr ""
+msgstr "Лодзянка"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:384
 msgid "Polonaise"
-msgstr ""
+msgstr "Полонез"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:395
 msgid "Baltic Sea"
-msgstr ""
+msgstr "Балтық теңізі"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:407
 msgid "American Pie"
-msgstr ""
+msgstr "Американдық бәліш"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:423
 msgid "Traffic Jam"
-msgstr ""
+msgstr "Көлік кептелісі"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:434
 msgid "Sunshine"
-msgstr ""
+msgstr "Күн сәулесі"
 
 #. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
 #: src/klotski-window.vala:548
