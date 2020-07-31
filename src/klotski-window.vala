@@ -634,12 +634,6 @@ private class KlotskiWindow : ApplicationWindow
     \*/
 
     [GtkCallback]
-    private void on_size_allocate (Allocation allocation)
-    {
-        update_window_state ();
-    }
-
-    [GtkCallback]
     private inline void init_state_watcher ()
     {
         Gdk.Surface? nullable_surface = get_surface ();     // TODO report bug, get_surface() returns a nullable Surface
@@ -647,6 +641,7 @@ private class KlotskiWindow : ApplicationWindow
             assert_not_reached ();
         surface = (Gdk.Toplevel) (!) nullable_surface;
         surface.notify ["state"].connect (on_window_state_event);
+        surface.size_changed.connect (on_size_changed);
     }
 
     private Gdk.Toplevel surface;
@@ -694,17 +689,12 @@ private class KlotskiWindow : ApplicationWindow
     * * manage window state
     \*/
 
-    private void update_window_state () // called on size-allocate
+    private inline void on_size_changed (Gdk.Surface _surface, int width, int height)
     {
         if (window_is_maximized || window_is_tiled || window_is_fullscreen)
             return;
-        int? _window_width = null;
-        int? _window_height = null;
-        get_size (out _window_width, out _window_height);
-        if (_window_width == null || _window_height == null)
-            return;
-        window_width = (!) _window_width;
-        window_height = (!) _window_height;
+        window_width  = width;
+        window_height = height;
     }
 
     private void save_window_state ()   // called on destroy

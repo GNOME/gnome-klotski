@@ -314,7 +314,6 @@
     <!-- <initial-focus name=""/> -->
     <property name="width-request">600</property>
     <property name="height-request">400</property>
-    <signal name="size-allocate" handler="on_size_allocate"/>
     <signal name="map" handler="init_state_watcher"/>
     <signal name="destroy" handler="on_destroy"/>
     <child type="titlebar">
