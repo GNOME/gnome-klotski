@@ -9,8 +9,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-05-30 11:19+0000\n"
-"PO-Revision-Date: 2020-06-06 10:00+0100\n"
+"POT-Creation-Date: 2020-07-29 12:49+0000\n"
+"PO-Revision-Date: 2020-08-10 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -206,14 +206,14 @@ msgid ""
 "the patterned block to the area bordered by green markers. To do so, you’ll "
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
-msgstr "GNOME Klotski blokeak korritzeko puzzle multzo bat da. Markak dituen blokea berde koloreko markatzaileak dauden lekura eramatea da helburua. Hori lortzeko, beste blokeak trabatik kendu behar dituzu. Osatu puzzle bakoitza ahalik eta mugimendu gutxienekin."
+msgstr "GNOME Klotski blokeak korritzeko puzzle multzo bat da. Markak dituen blokea berde koloreko markatzaileak dauden lekura eramatea da helburua. Hori lortzeko beste blokeak trabatik kendu beharko dituzu. Osatu puzzle bakoitza ahalik eta mugimendu gutxienekin."
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
-msgstr "GNOME Klotskik hogeita hamar diseinu eta zailtasun desberdineko puzzle inguru ditu. Diseinu batzuk antzekoak dira eta bloke baten edo gehiagoren tamainak besterik ez dira aldatzen. Beste diseinu batzuek aldaera gehiago dituzte."
+msgstr "GNOME Klotski hogeita hamar diseinu eta zailtasun desberdineko puzzle inguru ditu. Diseinu batzuk antzekoak dira eta bloke baten edo gehiagoren tamainak aldatzen dira. Beste diseinu batzuk aldaera gehiago dituzte."
 
 #: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
@@ -224,25 +224,45 @@ msgstr "GNOME proiektua"
 msgid "game;strategy;logic;move;"
 msgstr "jokoa;estrategia;logika;mugimendua;"
 
-#: data/org.gnome.Klotski.gschema.xml:5
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The puzzle in play"
 msgstr "Jokoan dagoen buru-hausgarria"
 
-#: data/org.gnome.Klotski.gschema.xml:6
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:8
 msgid "The number of the puzzle being played."
 msgstr "Jokoan dauden buru-hausgarri kopurua."
 
-#: data/org.gnome.Klotski.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:13
+msgid "The width of the window"
+msgstr "Leihoaren zabalera"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
 msgstr "Leihoaren zabalera (pixeletan)"
 
-#: data/org.gnome.Klotski.gschema.xml:14
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:20
+msgid "The height of the window"
+msgstr "Leihoaren altuera"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
 msgstr "Leihoaren altuera (pixeletan)"
 
-#: data/org.gnome.Klotski.gschema.xml:18
-msgid "true if the window is maximized"
-msgstr "egia leihoa maximizatuta badago"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "Modu maximizatua gaitzeko bandera"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:29
+msgid "If “true”, the main window starts in maximized mode."
+msgstr "Egia bada, leiho nagusia modu maximizatuan abiaraziko da."
 
 #. Translators: command-line option description, see 'gnome-klotski --help'
 #: src/gnome-klotski.vala:32
@@ -279,7 +299,7 @@ msgstr "Pentsamendua"
 msgid "Snowdrop"
 msgstr "Negu-txilintxa"
 
-#. puzzle name - sometimes called "Le'Ane Rouge"
+#. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
 #: src/klotski-window.vala:169
 msgid "Red Donkey"
 msgstr "Asto gorria"
@@ -395,54 +415,54 @@ msgid "Puzzle"
 msgstr "Puzzlea"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "Maila osatu da."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (jatorrizko egilea)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (vala lengoaiara eramatea)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (vala lengoaiara eramatea)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
 msgstr "Puzzle blokea desplazatzea"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Copyright © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Copyright © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Copyright © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr "translator-credits"
 
