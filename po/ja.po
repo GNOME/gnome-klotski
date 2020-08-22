@@ -1,5 +1,5 @@
 # gnome-klotski ja.po.
-# Copyright (C) 1998-2013, 2019-2020 Free Software Foundation, Inc.
+# Copyright (C) 1998-2010, 2012-2013, 2019-2020 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -9,14 +9,14 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
-# sicklylife <translation@sicklylife.jp>, 2019.
+# sicklylife <translation@sicklylife.jp>, 2019-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
 "POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2020-01-29 21:00+0900\n"
+"PO-Revision-Date: 2020-08-23 00:16+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -27,121 +27,105 @@ msgstr ""
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
-#, fuzzy
-#| msgid "Puzzle"
 msgctxt "shortcut window"
 msgid "Puzzle-related"
-msgstr "パズル"
+msgstr "パズル関連"
 
 #. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Toggle game menu"
-msgstr ""
+msgstr "ゲームメニューの表示を切り替える"
 
 #. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle
 #: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Restart"
-msgstr ""
+msgstr "やり直す"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
 #: data/ui/help-overlay.ui:54
-#, fuzzy
-#| msgid "_Change Puzzle"
 msgctxt "shortcut window"
 msgid "Change Puzzle popover"
-msgstr "パズルを変更(_C)"
+msgstr "パズルのポップオーバーの変更"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu
 #: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Select new puzzle"
-msgstr ""
+msgstr "新しいパズルを選択する"
 
 #. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
 #: data/ui/help-overlay.ui:67
-#, fuzzy
-#| msgid "Previous"
 msgctxt "shortcut window"
 msgid "Previous puzzle"
-msgstr "前へ"
+msgstr "前のパズルに切り替える"
 
 #. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
 #: data/ui/help-overlay.ui:75
-#, fuzzy
-#| msgid "Next Puzzle"
 msgctxt "shortcut window"
 msgid "Next puzzle"
-msgstr "次のパズル"
+msgstr "次のパズルに切り替える"
 
 #. Translators: Page_Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzles group
 #: data/ui/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Previous puzzles group"
-msgstr ""
+msgstr "前のパズルのグループに切り替える"
 
 #. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
 #: data/ui/help-overlay.ui:91
-#, fuzzy
-#| msgid "Next Puzzle"
 msgctxt "shortcut window"
 msgid "Next puzzles group"
-msgstr "次のパズル"
+msgstr "次のパズルのグループに切り替える"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
-#, fuzzy
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores"
-msgstr "得点(_S)"
+msgstr "得点"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
 #: data/ui/help-overlay.ui:106
-#, fuzzy
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores dialog"
-msgstr "得点(_S)"
+msgstr "得点ダイアログを表示する"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
 #: data/ui/help-overlay.ui:116
 msgctxt "shortcut window"
 msgid "Generic"
-msgstr ""
+msgstr "全般"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
 #: data/ui/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Toggle main menu"
-msgstr ""
+msgstr "メインメニューの表示を切り替える"
 
 #. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
 #: data/ui/help-overlay.ui:129
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "キーボードショートカットを表示する"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:137
-#, fuzzy
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
-msgstr "ヘルプ(_H)"
+msgstr "ヘルプを表示する"
 
 #. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:145
 msgctxt "shortcut window"
 msgid "About"
-msgstr ""
+msgstr "“Klotski について”を表示する"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "終了する"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
 #: data/ui/klotski.ui:24
@@ -151,7 +135,7 @@ msgstr "得点(_S)"
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
 #: data/ui/klotski.ui:31
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
 #: data/ui/klotski.ui:36
@@ -207,12 +191,12 @@ msgstr "パズルを変更(_C)"
 #. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
 #: data/ui/klotski.ui:351
 msgid "Choose an other puzzle"
-msgstr "別のパズルを選択する"
+msgstr "別のパズルを選択します"
 
 #. Translators: tooltip text of the Start Over button, in the headerbar
 #: data/ui/klotski.ui:364
 msgid "Moves counter"
-msgstr ""
+msgstr "移動したものを元に戻します"
 
 #: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
@@ -260,10 +244,8 @@ msgstr "プレイするパズルの数です。"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:13
-#, fuzzy
-#| msgid "Width of the window in pixels"
 msgid "The width of the window"
-msgstr "ウィンドウの幅 (ピクセル単位) です"
+msgstr "ウィンドウの幅"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:15
@@ -272,10 +254,8 @@ msgstr "ウィンドウの幅 (ピクセル単位) です"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:20
-#, fuzzy
-#| msgid "Height of the window in pixels"
 msgid "The height of the window"
-msgstr "ウィンドウの高さ (ピクセル単位) です"
+msgstr "ウィンドウの高さ"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:22
@@ -285,14 +265,12 @@ msgstr "ウィンドウの高さ (ピクセル単位) です"
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:27
 msgid "A flag to enable maximized mode"
-msgstr ""
+msgstr "最小化モードの有効化フラグ"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:29
-#, fuzzy
-#| msgid "true if the window is maximized"
 msgid "If “true”, the main window starts in maximized mode."
-msgstr "ウィンドウが最小化されている場合は TRUE"
+msgstr "“true”にすると、メインウィンドウを最小化した状態で起動します。"
 
 #. Translators: command-line option description, see 'gnome-klotski --help'
 #: src/gnome-klotski.vala:32
@@ -302,7 +280,7 @@ msgstr "リリースバージョンを表示して終了する"
 #. Translators: puzzle name
 #: src/klotski-window.vala:91
 msgid "Only 18 Steps"
-msgstr "18ステップ"
+msgstr "18 ステップ"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:104
@@ -327,7 +305,7 @@ msgstr "三色スミレ"
 #. Translators: puzzle name
 #: src/klotski-window.vala:156
 msgid "Snowdrop"
-msgstr "Snowdrop"
+msgstr "ユキノハナ"
 
 #. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
 #: src/klotski-window.vala:169
@@ -452,27 +430,27 @@ msgstr "レベルを制覇しました"
 #. Translators: text crediting an author, in the about dialog
 #: src/klotski-window.vala:1118
 msgid "Lars Rydlinge (original author)"
-msgstr ""
+msgstr "Lars Rydlinge (オリジナルの作者)"
 
 #. Translators: text crediting an author, in the about dialog
 #: src/klotski-window.vala:1122
 msgid "Robert Ancell (port to vala)"
-msgstr ""
+msgstr "Robert Ancell (Vala への移植)"
 
 #. Translators: text crediting an author, in the about dialog
 #: src/klotski-window.vala:1126
 msgid "John Cheetham (port to vala)"
-msgstr ""
+msgstr "John Cheetham (Vala への移植)"
 
 #. Translators: text crediting a documenter, in the about dialog
 #: src/klotski-window.vala:1130
 msgid "Andrew Sobala"
-msgstr ""
+msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
 #: src/klotski-window.vala:1138
 msgid "Sliding block puzzles"
-msgstr ""
+msgstr "ブロックをずらすパズルです"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
 #: src/klotski-window.vala:1142
