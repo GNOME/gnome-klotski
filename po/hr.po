@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-02-14 05:28+0000\n"
-"PO-Revision-Date: 2020-03-01 12:57+0100\n"
+"POT-Creation-Date: 2020-06-13 19:36+0000\n"
+"PO-Revision-Date: 2020-08-23 20:41+0200\n"
 "Last-Translator: gogo <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -16,73 +16,180 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Puzzle-related"
+msgstr "Slagalica"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Toggle game menu"
+msgstr "Uklj/Isklj izbornik igre"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "Ponovno pokreni"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Change Puzzle popover"
+msgstr "_Promijeni slagalicu"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Select new puzzle"
+msgstr "Odaberi novu slagalicu"
+
+#. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Previous puzzle"
+msgstr "Prijašnja slagalica"
+
+#. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Next puzzle"
+msgstr "Sljedeća slagalica"
+
+#. Translators: Page_Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzles group
+#: data/ui/help-overlay.ui:83
+msgctxt "shortcut window"
+msgid "Previous puzzles group"
+msgstr "Prijašnja grupa slagalica"
+
+#. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Next puzzles group"
+msgstr "Sljedeća grupa slagalica"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
+#: data/ui/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Scores"
+msgstr "Rezultati"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Scores dialog"
+msgstr "Dijalog rezultata"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:116
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Izvorno"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Uklj/Isklj glavni izbornik"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:129
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Prečaci tipkovnice"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Priručnik"
+
+#. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:145
+msgctxt "shortcut window"
+msgid "About"
+msgstr "O programu"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Zatvori"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
-#: data/klotski.ui:24
+#: data/ui/klotski.ui:24
 msgid "_Scores"
 msgstr "_Rezultati"
 
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
+#: data/ui/klotski.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "_Prečaci tipkovnice"
+
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
-#: data/klotski.ui:31
+#: data/ui/klotski.ui:36
 msgid "_Help"
 msgstr "_Priručnik"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog
-#: data/klotski.ui:36
+#: data/ui/klotski.ui:41
 msgid "_About Klotski"
 msgstr "_O Klotski"
 
+#. Translators: label of an entry in the game menu (with a mnemonic that appears pressing Alt); allows to directly restart the current puzzle
+#: data/ui/klotski.ui:50
+msgid "_Start Over"
+msgstr "Pokreni ispočetka"
+
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels
-#: data/klotski.ui:78
+#: data/ui/klotski.ui:94
 msgid "Huarong Trail"
 msgstr "Huarong staza"
 
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels
-#: data/klotski.ui:90
+#: data/ui/klotski.ui:106
 msgid "Challenge Pack"
 msgstr "Paket izazova"
 
 #. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels
-#: data/klotski.ui:102
+#: data/ui/klotski.ui:118
 msgid "Skill Pack"
 msgstr "Paket vještina"
 
 #. Translators: in the Change Puzzle popover, label of the button for playing the previous level
-#: data/klotski.ui:284
+#: data/ui/klotski.ui:300
 msgid "Previous"
 msgstr "Prijašnje"
 
 #. Translators: in the Change Puzzle popover, label of the button for playing the next level
-#: data/klotski.ui:297
+#: data/ui/klotski.ui:313
 msgid "Next"
 msgstr "Sljedeće"
 
 #. Translators: application name, as used in the window manager, the window title, the about dialog...
-#: data/klotski.ui:312 data/klotski.ui:323 data/org.gnome.Klotski.desktop.in:3
-#: src/gnome-klotski.vala:25
+#: data/ui/klotski.ui:328 data/ui/klotski.ui:339
+#: data/org.gnome.Klotski.desktop.in:3 src/gnome-klotski.vala:25
 msgid "Klotski"
 msgstr "Klotski"
 
-#. Translators: in the headerbar, button that allows to directly restart the current puzzle (with a mnemonic that appears pressing Alt)
-#: data/klotski.ui:330
-msgid "_Start Over"
-msgstr "Pokreni ispočetka"
-
-#. Translators: tooltip text of the Start Over button, in the headerbar
-#: data/klotski.ui:334
-msgid "Restart the current puzzle"
-msgstr "Ponovo pokreni slagalicu"
-
 #. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
-#: data/klotski.ui:347
+#: data/ui/klotski.ui:346
 msgid "_Change Puzzle"
 msgstr "_Promijeni slagalicu"
 
 #. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
-#: data/klotski.ui:351
+#: data/ui/klotski.ui:351
 msgid "Choose an other puzzle"
 msgstr "Odaberi drugu slagalicu"
+
+#. Translators: tooltip text of the Start Over button, in the headerbar
+#: data/ui/klotski.ui:364
+msgid "Moves counter"
+msgstr "Brojač poteza"
 
 #: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
@@ -123,241 +230,255 @@ msgstr "GNOME projekt"
 msgid "game;strategy;logic;move;"
 msgstr "igra;strategija;logika;potez;"
 
-#: data/org.gnome.Klotski.gschema.xml:5
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The puzzle in play"
 msgstr "Slagalica u igri"
 
-#: data/org.gnome.Klotski.gschema.xml:6
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:8
 msgid "The number of the puzzle being played."
 msgstr "Broj odigranih slagalica."
 
-#: data/org.gnome.Klotski.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:13
+msgid "The width of the window"
+msgstr "Širina prozora"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
 msgstr "Širina prozora u pikselima"
 
-#: data/org.gnome.Klotski.gschema.xml:14
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:20
+msgid "The height of the window"
+msgstr "Visina prozora"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
 msgstr "Visina prozora u pikselima"
 
-#: data/org.gnome.Klotski.gschema.xml:18
-msgid "true if the window is maximized"
-msgstr "ako je odabrano prozor je uvećan"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "Oznaka za omogućavanje uvećanog stanja"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:29
+msgid "If “true”, the main window starts in maximized mode."
+msgstr "Ako je “true”, glavni prozor se pokreće u uvećanom načinu rada."
 
 #. Translators: command-line option description, see 'gnome-klotski --help'
 #: src/gnome-klotski.vala:32
 msgid "Print release version and exit"
 msgstr "Prikaži inačicu izdanja i zatvori"
 
+#. Translators: puzzle name
+#: src/klotski-window.vala:91
+msgid "Only 18 Steps"
+msgstr "Samo 18 koraka"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:104
+msgid "Daisy"
+msgstr "Tratinčica"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:117
+msgid "Violet"
+msgstr "Ljubičasta"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:130
+msgid "Poppy"
+msgstr "Mak"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:143
+msgid "Pansy"
+msgstr "Pansy"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:156
+msgid "Snowdrop"
+msgstr "Visibaba"
+
+#. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
+#: src/klotski-window.vala:169
+msgid "Red Donkey"
+msgstr "Crveni magarac"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:182
+msgid "Trail"
+msgstr "Staza"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:195
+msgid "Ambush"
+msgstr "Zasjeda"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:208
+msgid "Agatka"
+msgstr "Agatka"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:219
+msgid "Success"
+msgstr "Uspjeh"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:229
+msgid "Bone"
+msgstr "Kost"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:242
+msgid "Fortune"
+msgstr "Bogatstvo"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:256
+msgid "Fool"
+msgstr "Budala"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:266
+msgid "Solomon"
+msgstr "Solomon"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:279
+msgid "Cleopatra"
+msgstr "Kleopatra"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:291
+msgid "Shark"
+msgstr "Morski pas"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:303
+msgid "Rome"
+msgstr "Rim"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:315
+msgid "Pennant Puzzle"
+msgstr "Slagalica zastavica"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:328
+msgid "Ithaca"
+msgstr "Itaka"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:351
+msgid "Pelopones"
+msgstr "Peloponez"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:363
+msgid "Transeuropa"
+msgstr "Transeuropa"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:375
+msgid "Lodzianka"
+msgstr "Lodzianka"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:386
+msgid "Polonaise"
+msgstr "Poljska"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:397
+msgid "Baltic Sea"
+msgstr "Baltičko more"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:409
+msgid "American Pie"
+msgstr "Američka pita"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:425
+msgid "Traffic Jam"
+msgstr "Prometni krkanjac"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:436
+msgid "Sunshine"
+msgstr "Sunčeve zrake"
+
+#. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
+#: src/klotski-window.vala:554
+msgid "Puzzle"
+msgstr "Slagalica"
+
+#. Translators: headerbar title, when the puzzle is solved
+#: src/klotski-window.vala:893
+msgid "Level completed."
+msgstr "Razina završena."
+
 #. Translators: text crediting an author, in the about dialog
-#: src/gnome-klotski.vala:135
+#: src/klotski-window.vala:1118
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (izvorni autor)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/gnome-klotski.vala:139
+#: src/klotski-window.vala:1122
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (port u valu)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/gnome-klotski.vala:143
+#: src/klotski-window.vala:1126
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (port u valu)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/gnome-klotski.vala:147
+#: src/klotski-window.vala:1130
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/gnome-klotski.vala:155
+#: src/klotski-window.vala:1138
 msgid "Sliding block puzzles"
 msgstr "Slagalice od klizećih blokova"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/gnome-klotski.vala:159
+#: src/klotski-window.vala:1142
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Autorsko pravo © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:163
+#: src/klotski-window.vala:1146
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Autorsko pravo © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/gnome-klotski.vala:167
+#: src/klotski-window.vala:1150
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Autorsko pravo © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/gnome-klotski.vala:173
+#: src/klotski-window.vala:1156
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
-#. Translators: puzzle name
-#: src/klotski-window.vala:89
-msgid "Only 18 Steps"
-msgstr "Samo 18 koraka"
+#~ msgid "Restart the current puzzle"
+#~ msgstr "Ponovo pokreni slagalicu"
 
-#. Translators: puzzle name
-#: src/klotski-window.vala:102
-msgid "Daisy"
-msgstr "Tratinčica"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:115
-msgid "Violet"
-msgstr "Ljubičasta"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:128
-msgid "Poppy"
-msgstr "Mak"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:141
-msgid "Pansy"
-msgstr "Pansy"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:154
-msgid "Snowdrop"
-msgstr "Visibaba"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: src/klotski-window.vala:167
-msgid "Red Donkey"
-msgstr "Crveni magarac"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:180
-msgid "Trail"
-msgstr "Staza"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:193
-msgid "Ambush"
-msgstr "Zasjeda"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:206
-msgid "Agatka"
-msgstr "Agatka"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:217
-msgid "Success"
-msgstr "Uspjeh"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:227
-msgid "Bone"
-msgstr "Kost"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:240
-msgid "Fortune"
-msgstr "Bogatstvo"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:254
-msgid "Fool"
-msgstr "Budala"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:264
-msgid "Solomon"
-msgstr "Solomon"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:277
-msgid "Cleopatra"
-msgstr "Kleopatra"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:289
-msgid "Shark"
-msgstr "Morski pas"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:301
-msgid "Rome"
-msgstr "Rim"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:313
-msgid "Pennant Puzzle"
-msgstr "Slagalica zastavica"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:326
-msgid "Ithaca"
-msgstr "Itaka"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:349
-msgid "Pelopones"
-msgstr "Peloponez"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:361
-msgid "Transeuropa"
-msgstr "Transeuropa"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:373
-msgid "Lodzianka"
-msgstr "Lodzianka"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:384
-msgid "Polonaise"
-msgstr "Poljska"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:395
-msgid "Baltic Sea"
-msgstr "Baltičko more"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:407
-msgid "American Pie"
-msgstr "Američka pita"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:423
-msgid "Traffic Jam"
-msgstr "Prometni krkanjac"
-
-#. Translators: puzzle name
-#: src/klotski-window.vala:434
-msgid "Sunshine"
-msgstr "Sunčeve zrake"
-
-#. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
-#: src/klotski-window.vala:546
-msgid "Puzzle"
-msgstr "Slagalica"
-
-#. Translators: headerbar subtitle; the %d is replaced by the number of moves already done in the current game
-#: src/klotski-window.vala:860
-#, c-format
-msgid "Moves: %d"
-msgstr "Potezi: %d"
-
-#. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:864
-msgid "Level completed."
-msgstr "Razina završena."
+#~ msgid "Moves: %d"
+#~ msgstr "Potezi: %d"
 
 #~ msgid "org.gnome.Klotski"
 #~ msgstr "org.gnome.Klotski"
-
-#~ msgid "_About"
-#~ msgstr "_O programu"
-
-#~ msgid "_Quit"
-#~ msgstr "_Zatvori"
