@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2020-08-23 00:16+0900\n"
+"POT-Creation-Date: 2020-08-22 15:40+0000\n"
+"PO-Revision-Date: 2020-08-23 23:30+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -41,7 +41,7 @@ msgstr "ゲームメニューの表示を切り替える"
 #: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Restart"
-msgstr "やり直す"
+msgstr "最初からやり直す"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
 #: data/ui/help-overlay.ui:54
@@ -71,13 +71,13 @@ msgstr "次のパズルに切り替える"
 #: data/ui/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Previous puzzles group"
-msgstr "前のパズルのグループに切り替える"
+msgstr "前のパズルグループに切り替える"
 
 #. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
 #: data/ui/help-overlay.ui:91
 msgctxt "shortcut window"
 msgid "Next puzzles group"
-msgstr "次のパズルのグループに切り替える"
+msgstr "次のパズルグループに切り替える"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
@@ -423,54 +423,54 @@ msgid "Puzzle"
 msgstr "パズル"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "レベルを制覇しました"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (オリジナルの作者)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (Vala への移植)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (Vala への移植)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
 msgstr "ブロックをずらすパズルです"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Copyright © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Copyright © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Copyright © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
