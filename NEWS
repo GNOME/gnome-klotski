@@ -1,3 +1,32 @@
+3.37.91 – August 28, 2020
+============================
+
+Probably the only beta on the road of the future 3.38
+stable release. No code changes, just a bit of needed
+continuous integration works done by Jordan Petridis.
+
+Translations updated:
+  Basque: Asier Sarasua Garmendia
+  Catalan: Jordi Mas
+  Chinese (China): Boyuan Yang
+  Croatian: Goran Vidović
+  Danish: Ask Hjorth Larsen
+  Dutch: Nathan Follens
+  Finnish: Jiri Grönroos
+  Friulian: Fabio Tomat
+  Galician: Fran Dieguez
+  Indonesian: Kukuh Syafaat
+  Japanese: sicklylife
+  Kazakh: Aurimas Černius
+  Lithuanian: Aurimas Černius
+  Brazilian Portuguese: Rafael Fontenelle
+  Romanian: Florentina Mușat
+  Slovenian: Matej Urbančič
+  Spanish: Daniel Mustieles
+  Swedish: Anders Jonsson
+  Turkish: Emin Tufan Çetin
+  Ukrainian: Yuri Chornoivan
+
 3.37.2 – May 30, 2020
 ============================
 
