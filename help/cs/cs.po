@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"POT-Creation-Date: 2020-02-14 05:28+0000\n"
-"PO-Revision-Date: 2020-03-08 14:19+0100\n"
+"POT-Creation-Date: 2020-05-30 11:19+0000\n"
+"PO-Revision-Date: 2020-08-31 13:04+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -203,8 +203,8 @@ msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:145
-msgid "This manual describes version 3.34 of GNOME Klotski."
-msgstr "Tato příručka popisuje GNOME Klotski ve verzi 3.34."
+msgid "This manual describes version 3.38 of GNOME Klotski."
+msgstr "Tato příručka popisuje GNOME Klotski ve verzi 3.38."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:148
@@ -256,10 +256,10 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"This document describes version 3.34 of <application>Klotski</application>."
+"This document describes version 3.38 of <application>Klotski</application>."
 msgstr ""
 "Tento dokument popisuje aplikaci <application>Klotski</application> ve verzi "
-"3.34."
+"3.38."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:173
@@ -272,8 +272,8 @@ msgid ""
 msgstr ""
 "Tento program je šířen podle ustanovení GNU General Public License, vydávané "
 "Free Software Foundation; a to buď verze 2 této licence anebo (podle "
-"vlastního uvážení) kterékoliv pozdější verze. Kopii této licence naleznete "
-"v souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. "
+"vlastního uvážení) kterékoliv pozdější verze. Kopii této licence naleznete v "
+"souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. "
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:188
@@ -293,9 +293,9 @@ msgstr "Vítězný tah"
 #: C/index.docbook:199
 msgctxt "_"
 msgid ""
-"external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 msgstr ""
-"external ref='figures/gnotski_win.png' md5='769a90b80cc3e57f93ec11d9501f8b5c'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:197
@@ -333,8 +333,8 @@ msgstr "Hlavní okno"
 #. (itstool) path: sect2/para
 #: C/index.docbook:234
 msgid ""
-"When you start <application><application>Klotski</application></"
-"application>, the following window is displayed."
+"When you start <application>Klotski</application>, the following window is "
+"displayed."
 msgstr ""
 "Po spuštění hry <application>Klotski</application> se zobrazí následující "
 "okno."
@@ -353,10 +353,10 @@ msgstr "Okno hry <application>Klotski</application> po spuštění"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='d074091210621806bee31a938c5d1286'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 msgstr ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='a50a9e6d3879951358e8c945aed3941e'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:240
@@ -421,18 +421,20 @@ msgstr "Spuštění nové hry"
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
 msgid ""
-"Use <guibutton>Start Over</guibutton> to start a new game. <guibutton>Change "
-"Puzzle</guibutton> allows you to navigate the puzzles sequentially. Each "
-"puzzle belongs to one of the three categories found in the submenus named "
-"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>. In these submenus, each "
-"puzzle name refers to a game scenario."
+"Click on the moves counter button and use <guibutton>Start Over</guibutton> "
+"to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
+"navigate the puzzles sequentially. Each puzzle belongs to one of the three "
+"categories found in the submenus named <guisubmenu>HuaRong Trail</"
+"guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill "
+"Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
+"scenario."
 msgstr ""
-"Novou hru začnete tlačítkem <guibutton>Začít znovu</guibutton>. Pomocí "
-"<guibutton>Změnit hlavolam</guibutton> můžete procházet postupně jednotlivé "
-"hlavolamy. Hlavolamy jsou rozdělené do tří kategorií, které najdete v "
-"podnabídkách <guisubmenu>Huarongova cesta</guisubmenu>, <guisubmenu>Sada s "
-"výzvou</guisubmenu> a <guisubmenu>Sada pro znalce</guisubmenu>. V každé této "
+"Po kliknutí na tlačítko s počitadlem tahů a můžete použít tlačítko <guibutton>"
+"Začít znovu</guibutton> ke spuštění nové hry. Pomocí <guibutton>Změnit "
+"hlavolam</guibutton> můžete procházet postupně jednotlivé hlavolamy. "
+"Hlavolamy jsou rozdělené do tří kategorií, které najdete v podnabídkách "
+"<guisubmenu>Huarongova cesta</guisubmenu>, <guisubmenu>Sada s výzvou"
+"</guisubmenu> a <guisubmenu>Sada pro znalce</guisubmenu>. V každé této "
 "podnabídce jsou názvy hlavolamů, které odkazují na daný scénář hry."
 
 #. (itstool) path: sect2/title
@@ -554,44 +556,3 @@ msgstr ""
 "vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů "
 "předních desek a bez textů zadních desek. Kopii licence GFDL naleznete pod "
 "tímto <_:ulink-1/> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."
-
-#~ msgid "Menubar"
-#~ msgstr "Panel nabídek"
-
-#~ msgid "Game menu"
-#~ msgstr "Nabídka Hra"
-
-#~ msgid ""
-#~ "The game menu allows you to start new games, view the highest scores and "
-#~ "quit the program."
-#~ msgstr ""
-#~ "Nabídka Hra vám umožňuje spustit novou hru, zobrazit tabulku nejlepších "
-#~ "výsledků a ukončit program."
-
-#~ msgid "Help menu"
-#~ msgstr "Nabídka Nápověda"
-
-#~ msgid ""
-#~ "The help menu allows you to view the documentation for "
-#~ "<application>Klotski</application>"
-#~ msgstr ""
-#~ "Nabídka Nápověda vám umožňuje přístup k dokumentaci hry "
-#~ "<application>Klotski</application>."
-
-#~ msgid "Statusbar"
-#~ msgstr "Panel nástrojů"
-
-#~ msgid "The statusbar shows how many moves you have taken so far."
-#~ msgstr "Stavový řádek vás informuje, kolik jste již provedli tahů."
-
-#~ msgid "Starting a game"
-#~ msgstr "Spuštění hry"
-
-#~ msgid ""
-#~ "To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
-#~ "<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
-#~ "guimenuitem> </menuchoice>"
-#~ msgstr ""
-#~ "Když chcete začít hru, vyberte <menuchoice><guimenu>Hra</"
-#~ "guimenu><guisubmenu>[kategorie]</guisubmenu><guimenuitem>[scénář hry]</"
-#~ "guimenuitem></menuchoice>."
