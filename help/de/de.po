@@ -1,19 +1,19 @@
 # German translation of the gnotski manual.
 #
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2019.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnotski help master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-02 15:42+0000\n"
-"PO-Revision-Date: 2019-04-05 20:48+0200\n"
+"POT-Creation-Date: 2020-05-30 11:19+0000\n"
+"PO-Revision-Date: 2020-09-03 19:16+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 20.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -24,12 +24,12 @@ msgstr ""
 "Christian Kirbach <Christian.Kirbach@googlemail.com>, 2008"
 
 #. (itstool) path: articleinfo/title
-#: C/index.docbook:28
+#: C/index.docbook:25
 msgid "<application>Klotski</application> Manual"
 msgstr "<application>Klotski</application>-Handbuch"
 
 #. (itstool) path: abstract/para
-#: C/index.docbook:31
+#: C/index.docbook:28
 msgid ""
 "Klotski is a puzzle game of which the objective is to get the patterned "
 "block to the marker, which is done by moving the blocks in its way."
@@ -39,13 +39,13 @@ msgstr ""
 "müssen."
 
 #. (itstool) path: articleinfo/copyright
-#: C/index.docbook:38
+#: C/index.docbook:35
 msgid "<year>2002</year> <holder>Andrew Sobala</holder>"
 msgstr "<year>2002</year> <holder>Andrew Sobala</holder>"
 
 #. (itstool) path: publisher/publishername
 #. (itstool) path: revdescription/para
-#: C/index.docbook:54 C/index.docbook:142
+#: C/index.docbook:51 C/index.docbook:139
 msgid "GNOME Documentation Project"
 msgstr "GNOME-Dokumentationsprojekt"
 
@@ -166,7 +166,7 @@ msgstr ""
 "DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <_:orderedlist-1/>"
 
 #. (itstool) path: authorgroup/author
-#: C/index.docbook:63
+#: C/index.docbook:60
 msgid ""
 "<firstname>Andrew</firstname> <surname>Sobala</surname> <affiliation> "
 "<orgname>GNOME Documentation Project</orgname> <address> "
@@ -177,7 +177,7 @@ msgstr ""
 "<email>andrew@sobala.net</email> </address> </affiliation>"
 
 #. (itstool) path: authorgroup/othercredit
-#: C/index.docbook:72
+#: C/index.docbook:69
 msgid ""
 "<firstname>Lars</firstname> <surname>Rydlinge</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> Lars.Rydlinge@HIG.SE </"
@@ -188,7 +188,7 @@ msgstr ""
 "email> </address> </affiliation>"
 
 #. (itstool) path: authorgroup/othercredit
-#: C/index.docbook:81
+#: C/index.docbook:78
 msgid ""
 "<firstname>Ross</firstname> <surname>Burton</surname> <affiliation> "
 "<orgname>GNOME Project</orgname> <address> <email> ross@burtonini.com </"
@@ -199,12 +199,12 @@ msgstr ""
 "email> </address> </affiliation>"
 
 #. (itstool) path: revdescription/para
-#: C/index.docbook:139
+#: C/index.docbook:136
 msgid "Andrew Sobala <email>andrew@sobala.net</email>"
 msgstr "Andrew Sobala <email>andrew@sobala.net</email>"
 
 #. (itstool) path: revhistory/revision
-#: C/index.docbook:135
+#: C/index.docbook:132
 msgid ""
 "<revnumber>V2.0</revnumber> <date>13 August 2002</date> <_:revdescription-1/>"
 msgstr ""
@@ -212,40 +212,41 @@ msgstr ""
 ">"
 
 #. (itstool) path: articleinfo/releaseinfo
-#: C/index.docbook:148
-msgid "This manual describes version 2.12 of GNOME Klotski."
-msgstr "Dieses Handbuch beschreibt Version 2.12 von GNOME Klotski."
+#: C/index.docbook:145
+#| msgid "This manual describes version 2.12 of GNOME Klotski."
+msgid "This manual describes version 3.38 of GNOME Klotski."
+msgstr "Dieses Handbuch beschreibt Version 3.38 von GNOME Klotski."
 
 #. (itstool) path: legalnotice/title
-#: C/index.docbook:151
+#: C/index.docbook:148
 msgid "Feedback"
 msgstr "Rückmeldungen"
 
 #. (itstool) path: legalnotice/para
 #. (itstool) path: sect1/para
-#: C/index.docbook:152 C/index.docbook:183
+#: C/index.docbook:149 C/index.docbook:179
 msgid ""
 "To report a bug or make a suggestion regarding this application or this "
 "manual, please visit <ulink type=\"http\" url=\"https://gitlab.gnome.org/"
 "GNOME/gnome-klotski/issues\">the GNOME issue tracker</ulink>."
 msgstr ""
 "Um Fehler zu melden oder einen Vorschlag zu dieser Anwendung oder zu diesem "
-"Handbuch zu machen, nutzen Sie das <ulink type=\"http\" "
-"url=\"https://gitlab.gnome.org/"
-"GNOME/gnome-klotski/issues\">Fehlererfassungssystem von GNOME</ulink>."
+"Handbuch zu machen, nutzen Sie das <ulink type=\"http\" url=\"https://gitlab."
+"gnome.org/GNOME/gnome-klotski/issues\">Fehlererfassungssystem von GNOME</"
+"ulink>."
 
 #. (itstool) path: article/indexterm
-#: C/index.docbook:160
+#: C/index.docbook:157
 msgid "<primary>GNOME Klotski</primary>"
 msgstr "<primary>GNOME Klotski</primary>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:167
+#: C/index.docbook:164
 msgid "Introduction"
 msgstr "Einführung"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:168
+#: C/index.docbook:165
 msgid ""
 "The <application>Klotski</application> application is a clone of the Klotski "
 "game. The objective is to move the patterned block to the area bordered by "
@@ -256,7 +257,7 @@ msgstr ""
 "verschieben."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:171
+#: C/index.docbook:168
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>Lars."
 "Rydlinge@HIG.SE</email>)."
@@ -265,37 +266,47 @@ msgstr ""
 "Rydlinge@HIG.SE</email>) geschrieben."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:174
+#: C/index.docbook:171
+#| msgid ""
+#| "This document describes version 2.12 of <application>Klotski</"
+#| "application>."
 msgid ""
-"This document describes version 2.12 of <application>Klotski</application>."
+"This document describes version 3.38 of <application>Klotski</application>."
 msgstr ""
-"Dieses Handbuch beschreibt Version 2.12 von <application>Klotski</application"
-">."
+"Dieses Handbuch beschreibt Version 3.38 von <application>Klotski</"
+"application>."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:176
+#: C/index.docbook:173
+#| msgid ""
+#| "This program is distributed under the terms of the GNU General Public "
+#| "license as published by the Free Software Foundation; either version 2 of "
+#| "the License, or (at your option) any later version. A copy of this "
+#| "license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</"
+#| "ulink>, or in the file COPYING included with the source code of this "
+#| "program."
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
-"license as published by the Free Software Foundation; either version 2 of "
+"license as published by the Free Software Foundation; either version 3 of "
 "the License, or (at your option) any later version. A copy of this license "
-"can be found at this <ulink url=\"help:gpl\" type=\"help\">link</ulink>, or "
-"in the file COPYING included with the source code of this program."
+"can be found in the file COPYING included with the source code of this "
+"program."
 msgstr ""
 "Dieses Programm ist freie Software. Sie können es unter den Bedingungen der "
 "<citetitle>GNU General Public License</citetitle>, wie von der Free Software "
 "Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß "
-"Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version. Eine "
-"Kopie der <citetitle>GNU General Public License</citetitle> finden Sie in "
-"der <ulink url=\"help:gpl\" type=\"help\">GPL</ulink>, oder in der Datei "
+"Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren Version. Eine "
+"Kopie der <citetitle>GNU General Public License</citetitle> finden Sie in der"
+" Datei "
 "COPYING, die im Quellcode dieses Programms enthalten ist."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:192
+#: C/index.docbook:188
 msgid "Objective"
 msgstr "Ziel des Spiels"
 
 #. (itstool) path: figure/title
-#: C/index.docbook:199
+#: C/index.docbook:195
 msgid "The winning move"
 msgstr "Der Zug zum Gewinnen"
 
@@ -304,14 +315,19 @@ msgstr "Der Zug zum Gewinnen"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:203
+#: C/index.docbook:199
+#, fuzzy
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_win.png' "
+#| "md5='1b128968a565e5e4bb930f0f2b581623'"
 msgctxt "_"
 msgid ""
-"external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 msgstr "translated"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:201
+#: C/index.docbook:197
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_win.png\" format=\"PNG\"/"
 "> </imageobject> <textobject> <phrase>The patterned block should be moved to "
@@ -322,7 +338,7 @@ msgstr ""
 "grünen Markierungen verschoben werden. </phrase> </textobject>"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:193
+#: C/index.docbook:189
 msgid ""
 "The objective of <application>Klotski</application> is to move the patterned "
 "block to the green markers in as few moves as possible. You do this by "
@@ -336,26 +352,29 @@ msgstr ""
 "<_:figure-1/>"
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:218
+#: C/index.docbook:214
 msgid "Playing <application>Klotski</application>"
 msgstr "<application>Klotski</application> spielen"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:237
+#: C/index.docbook:233
 msgid "The main window"
 msgstr "Das Hauptfenster"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:238
+#: C/index.docbook:234
+#| msgid ""
+#| "When you start <application><application>Klotski</application></"
+#| "application>, the following window is displayed."
 msgid ""
-"When you start <application><application>Klotski</application></"
-"application>, the following window is displayed."
+"When you start <application>Klotski</application>, the following window is "
+"displayed."
 msgstr ""
 "Wenn Sie <application>Klotski</application> starten, wird folgendes Fenster "
 "angezeigt."
 
 #. (itstool) path: figure/title
-#: C/index.docbook:242
+#: C/index.docbook:238
 msgid "<application>Klotski</application> Start Up Window"
 msgstr "<application>Klotski</application>-Startfenster"
 
@@ -364,15 +383,20 @@ msgstr "<application>Klotski</application>-Startfenster"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.docbook:246
+#: C/index.docbook:242
+#, fuzzy
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_start_window.png' "
+#| "md5='d074091210621806bee31a938c5d1286'"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='d074091210621806bee31a938c5d1286'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 msgstr "translated"
 
 #. (itstool) path: screenshot/mediaobject
-#: C/index.docbook:244
+#: C/index.docbook:240
 msgid ""
 "<imageobject> <imagedata fileref=\"figures/gnotski_start_window.png\" format="
 "\"PNG\"/> </imageobject> <textobject> <phrase>Shows <application>Klotski</"
@@ -386,45 +410,31 @@ msgstr ""
 "»Hilfe«. </phrase> </textobject>"
 
 #. (itstool) path: varlistentry/term
-#: C/index.docbook:260
-msgid "Menubar"
-msgstr "Menüleiste"
+#: C/index.docbook:256
+msgid "Header bar"
+msgstr "Kopfleiste"
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:258
+msgid ""
+"The header bar allows you to start new games, shows how many moves you have "
+"taken so far, and allows you to change the puzzle. Press the menu button in "
+"the top-right corner to view the highest scores and the documentation for "
+"<application>Klotski</application>."
+msgstr ""
+"Die Kopfleiste ermöglicht es Ihnen, neue Spiele zu starten, anzuzeigen, wie"
+" viele Züge Sie bereits absolviert haben, sowie die Änderung des Puzzles."
+" Klicken Sie auf den Menüknopf in der rechten oberen Ecke des Fensters, um"
+" die Bestenliste und die Dokumentation für <application>Klotski</application>"
+" anzuzeigen."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:264
-msgid "Game menu"
-msgstr "Menü \"Spiel\""
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:266
-msgid ""
-"The game menu allows you to start new games, view the highest scores and "
-"quit the program."
-msgstr ""
-"Im Menü \"Spiel\" können Sie neue Spiele starten, die Ergebnisse betrachten "
-"und das Programm beenden."
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:271
-msgid "Help menu"
-msgstr "Hilfe-Menü"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:273
-msgid ""
-"The help menu allows you to view the documentation for <application>Klotski</"
-"application>"
-msgstr ""
-"Über das Hilfe-Menü können Sie die Dokumentation zu <application>Klotski</"
-"application> anzeigen lassen."
-
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:280
 msgid "Game area"
 msgstr "Spielfläche"
 
 #. (itstool) path: listitem/para
-#: C/index.docbook:282
+#: C/index.docbook:266
 msgid ""
 "The game area shows the blocks in the current game. You can drag the blocks "
 "around with the mouse as described in <xref linkend=\"gnotski-moving\"/>."
@@ -433,18 +443,8 @@ msgstr ""
 "\"gnotski-moving\"/> beschrieben, können Sie die Blöcke mit der Maus "
 "verschieben."
 
-#. (itstool) path: varlistentry/term
-#: C/index.docbook:288
-msgid "Statusbar"
-msgstr "Statusleiste"
-
-#. (itstool) path: listitem/para
-#: C/index.docbook:290
-msgid "The statusbar shows how many moves you have taken so far."
-msgstr "Die Statusleiste zeigt die Anzahl der bisher erfolgten Züge."
-
 #. (itstool) path: sect2/para
-#: C/index.docbook:257
+#: C/index.docbook:253
 msgid ""
 "The <application>Klotski</application> window contains the following "
 "elements: <_:variablelist-1/>"
@@ -453,53 +453,46 @@ msgstr ""
 "Elemente: <_:variablelist-1/>"
 
 #. (itstool) path: sect2/title
-#: C/index.docbook:299
+#: C/index.docbook:277
 msgid "Starting a new game"
 msgstr "Ein neues Spiel starten"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:300
+#: C/index.docbook:278
+#| msgid ""
+#| "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
+#| "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
+#| "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
+#| "belongs to one of the three categories found in the submenus named "
+#| "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
+#| "guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, "
+#| "each puzzle name refers to a game scenario."
 msgid ""
-"Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-"<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
-"guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-"belongs to one of the three categories found in the submenus named "
-"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, each "
-"puzzle name refers to a game scenario."
+"Click on the moves counter button and use <guibutton>Start Over</guibutton> "
+"to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
+"navigate the puzzles sequentially. Each puzzle belongs to one of the three "
+"categories found in the submenus named <guisubmenu>HuaRong Trail</"
+"guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill "
+"Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
+"scenario."
 msgstr ""
-"Verwenden Sie das Menü <guimenu>Spiel</guimenu>, um ein neues Spiel zu "
-"starten. Die Einträge <guimenuitem>Nächstes Puzzle</guimenuitem> und "
-"<guimenuitem>Vorheriges Puzzle</guimenuitem> erlauben Ihnen, die Puzzles der "
+"Klicken Sie auf den Zugzähler-Knopf und wählen Sie <guimenu>Neu beginnen<"
+"/guimenu>, um ein neues Spiel zu "
+"starten. <guimenuitem>Puzzle wechseln</guimenuitem> erlaubt Ihnen, die"
+" Puzzles der "
 "Reihe nach zu durchsuchen. Jedes Puzzle gehört zu einer der vier in den "
 "Untermenüs bezeichneten Kategorien: <guisubmenu>HuaRong-Pfad</guisubmenu>, "
 "<guisubmenu>Herausforderer</guisubmenu>, <guisubmenu>Könner</guisubmenu> und "
 "<guisubmenu>Minoru-Aufstieg</guisubmenu>. In diesen Untermenüs verweist "
 "jeder Puzzlename auf ein Spielszenario."
 
-#. (itstool) path: example/title
-#: C/index.docbook:308
-msgid "Starting a game"
-msgstr "Ein neues Spiel starten"
-
-#. (itstool) path: example/para
-#: C/index.docbook:309
-msgid ""
-"To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
-"<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
-"guimenuitem> </menuchoice>"
-msgstr ""
-"Um ein Spiel zu starten, wählen Sie <menuchoice><guimenu>Spiel</"
-"guimenu><guisubmenu>[Kategorie]</guisubmenu> <guimenuitem>[Spielszenario]</"
-"guimenuitem> </menuchoice>"
-
 #. (itstool) path: sect2/title
-#: C/index.docbook:320
+#: C/index.docbook:288
 msgid "Moving blocks"
 msgstr "Bewegen der Blöcke"
 
 #. (itstool) path: sect2/para
-#: C/index.docbook:321
+#: C/index.docbook:289
 msgid ""
 "To move a block, click on it, hold down the mouse button and drag it to its "
 "new location. You cannot move the green blocks or the block that borders the "
@@ -516,27 +509,27 @@ msgstr ""
 "gewinnen."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:341
+#: C/index.docbook:309
 msgid "Authors"
 msgstr "Autoren"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:342
+#: C/index.docbook:310
 msgid ""
 "<application>Klotski</application> was written by Lars Rydlinge (<email>lars."
 "rydlinge@hig.se</email>). This manual was written by Andrew Sobala."
 msgstr ""
 "<application>Klotski</application> wurde von Lars Rydlinge (<email>lars."
-"rydlinge@hig.se</email>) geschrieben. Dieses Handbuch wurde von Andrew Sobala "
-"geschrieben."
+"rydlinge@hig.se</email>) geschrieben. Dieses Handbuch wurde von Andrew "
+"Sobala geschrieben."
 
 #. (itstool) path: sect1/title
-#: C/index.docbook:359
+#: C/index.docbook:327
 msgid "License"
 msgstr "Lizenz"
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:360
+#: C/index.docbook:328
 msgid ""
 "This program and tile artwork is free software; you can redistribute it and/"
 "or modify it under the terms of the <citetitle>GNU General Public License</"
@@ -551,7 +544,7 @@ msgstr ""
 "Version 2 der Lizenz oder (nach Ihrer Wahl) jeder neueren Version."
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:367
+#: C/index.docbook:335
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -565,7 +558,7 @@ msgstr ""
 "License</ulink></citetitle> für genauere Hinweise."
 
 #. (itstool) path: para/address
-#: C/index.docbook:380
+#: C/index.docbook:348
 #, no-wrap
 msgid ""
 "\n"
@@ -583,7 +576,7 @@ msgstr ""
 "   "
 
 #. (itstool) path: sect1/para
-#: C/index.docbook:373
+#: C/index.docbook:341
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -620,3 +613,44 @@ msgstr ""
 "sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt "
 "und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <_:"
 "ulink-1/> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCs."
+
+#~ msgid "Menubar"
+#~ msgstr "Menüleiste"
+
+#~ msgid "Game menu"
+#~ msgstr "Menü \"Spiel\""
+
+#~ msgid ""
+#~ "The game menu allows you to start new games, view the highest scores and "
+#~ "quit the program."
+#~ msgstr ""
+#~ "Im Menü \"Spiel\" können Sie neue Spiele starten, die Ergebnisse "
+#~ "betrachten und das Programm beenden."
+
+#~ msgid "Help menu"
+#~ msgstr "Hilfe-Menü"
+
+#~ msgid ""
+#~ "The help menu allows you to view the documentation for "
+#~ "<application>Klotski</application>"
+#~ msgstr ""
+#~ "Über das Hilfe-Menü können Sie die Dokumentation zu <application>Klotski</"
+#~ "application> anzeigen lassen."
+
+#~ msgid "Statusbar"
+#~ msgstr "Statusleiste"
+
+#~ msgid "The statusbar shows how many moves you have taken so far."
+#~ msgstr "Die Statusleiste zeigt die Anzahl der bisher erfolgten Züge."
+
+#~ msgid "Starting a game"
+#~ msgstr "Ein neues Spiel starten"
+
+#~ msgid ""
+#~ "To start a game, choose <menuchoice> <guimenu>Game</guimenu> "
+#~ "<guisubmenu>[category]</guisubmenu> <guimenuitem>[game scenario]</"
+#~ "guimenuitem> </menuchoice>"
+#~ msgstr ""
+#~ "Um ein Spiel zu starten, wählen Sie <menuchoice><guimenu>Spiel</"
+#~ "guimenu><guisubmenu>[Kategorie]</guisubmenu> "
+#~ "<guimenuitem>[Spielszenario]</guimenuitem> </menuchoice>"
