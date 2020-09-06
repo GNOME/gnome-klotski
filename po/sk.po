@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2020-09-04 14:18+0200\n"
+"POT-Creation-Date: 2020-09-04 12:20+0000\n"
+"PO-Revision-Date: 2020-09-06 17:40+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -251,7 +251,7 @@ msgstr "Šírka okna"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
-msgstr "Šírka okna v pixeloch."
+msgstr "Šírka okna v pixeloch"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:20
@@ -261,7 +261,12 @@ msgstr "Výška okna"
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
-msgstr "Výška okna v pixeloch."
+msgstr "Výška okna v pixeloch"
+
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "Príznak povoľujúci režim maximalizovaného okna"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:29
@@ -421,54 +426,54 @@ msgid "Puzzle"
 msgstr "Hlavolam"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "Úroveň dokončená."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (pôvodný autor)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (port do jazyka vala)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (port do jazyka vala)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
 msgstr "Hlavolamy s posúvaním blokov"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Autorské práva © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Autorské práva © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Autorské práva © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
