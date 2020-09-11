@@ -5,15 +5,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnotski help master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-30 11:19+0000\n"
-"PO-Revision-Date: 2020-09-03 19:16+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2020-09-06 14:29+0000\n"
+"PO-Revision-Date: 2020-09-11 21:41+0200\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -21,7 +21,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2019\n"
-"Christian Kirbach <Christian.Kirbach@googlemail.com>, 2008"
+"Christian Kirbach <Christian.Kirbach@googlemail.com>, 2008, 2020"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:25
@@ -213,7 +213,6 @@ msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:145
-#| msgid "This manual describes version 2.12 of GNOME Klotski."
 msgid "This manual describes version 3.38 of GNOME Klotski."
 msgstr "Dieses Handbuch beschreibt Version 3.38 von GNOME Klotski."
 
@@ -267,9 +266,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
-#| msgid ""
-#| "This document describes version 2.12 of <application>Klotski</"
-#| "application>."
 msgid ""
 "This document describes version 3.38 of <application>Klotski</application>."
 msgstr ""
@@ -278,13 +274,6 @@ msgstr ""
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:173
-#| msgid ""
-#| "This program is distributed under the terms of the GNU General Public "
-#| "license as published by the Free Software Foundation; either version 2 of "
-#| "the License, or (at your option) any later version. A copy of this "
-#| "license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</"
-#| "ulink>, or in the file COPYING included with the source code of this "
-#| "program."
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 3 of "
@@ -296,9 +285,8 @@ msgstr ""
 "<citetitle>GNU General Public License</citetitle>, wie von der Free Software "
 "Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder gemäß "
 "Version 3 der Lizenz oder (nach Ihrer Option) jeder späteren Version. Eine "
-"Kopie der <citetitle>GNU General Public License</citetitle> finden Sie in der"
-" Datei "
-"COPYING, die im Quellcode dieses Programms enthalten ist."
+"Kopie der <citetitle>GNU General Public License</citetitle> finden Sie in "
+"der Datei COPYING, die im Quellcode dieses Programms enthalten ist."
 
 #. (itstool) path: sect1/title
 #: C/index.docbook:188
@@ -316,11 +304,6 @@ msgstr "Der Zug zum Gewinnen"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:199
-#, fuzzy
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/gnotski_win.png' "
-#| "md5='1b128968a565e5e4bb930f0f2b581623'"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
@@ -363,9 +346,6 @@ msgstr "Das Hauptfenster"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:234
-#| msgid ""
-#| "When you start <application><application>Klotski</application></"
-#| "application>, the following window is displayed."
 msgid ""
 "When you start <application>Klotski</application>, the following window is "
 "displayed."
@@ -384,11 +364,6 @@ msgstr "<application>Klotski</application>-Startfenster"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:242
-#, fuzzy
-#| msgctxt "_"
-#| msgid ""
-#| "external ref='figures/gnotski_start_window.png' "
-#| "md5='d074091210621806bee31a938c5d1286'"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
@@ -422,11 +397,11 @@ msgid ""
 "the top-right corner to view the highest scores and the documentation for "
 "<application>Klotski</application>."
 msgstr ""
-"Die Kopfleiste ermöglicht es Ihnen, neue Spiele zu starten, anzuzeigen, wie"
-" viele Züge Sie bereits absolviert haben, sowie die Änderung des Puzzles."
-" Klicken Sie auf den Menüknopf in der rechten oberen Ecke des Fensters, um"
-" die Bestenliste und die Dokumentation für <application>Klotski</application>"
-" anzuzeigen."
+"Die Kopfleiste ermöglicht es Ihnen, neue Spiele zu starten, anzuzeigen, wie "
+"viele Züge Sie bereits absolviert haben, sowie die Änderung des Puzzles. "
+"Klicken Sie auf den Menüknopf in der rechten oberen Ecke des Fensters, um "
+"die Bestenliste und die Dokumentation für <application>Klotski</application> "
+"anzuzeigen."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:264
@@ -459,14 +434,6 @@ msgstr "Ein neues Spiel starten"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
-#| msgid ""
-#| "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-#| "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
-#| "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-#| "belongs to one of the three categories found in the submenus named "
-#| "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-#| "guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, "
-#| "each puzzle name refers to a game scenario."
 msgid ""
 "Click on the moves counter button and use <guibutton>Start Over</guibutton> "
 "to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
@@ -476,15 +443,14 @@ msgid ""
 "Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
 "scenario."
 msgstr ""
-"Klicken Sie auf den Zugzähler-Knopf und wählen Sie <guimenu>Neu beginnen<"
-"/guimenu>, um ein neues Spiel zu "
-"starten. <guimenuitem>Puzzle wechseln</guimenuitem> erlaubt Ihnen, die"
-" Puzzles der "
-"Reihe nach zu durchsuchen. Jedes Puzzle gehört zu einer der vier in den "
-"Untermenüs bezeichneten Kategorien: <guisubmenu>HuaRong-Pfad</guisubmenu>, "
-"<guisubmenu>Herausforderer</guisubmenu>, <guisubmenu>Könner</guisubmenu> und "
-"<guisubmenu>Minoru-Aufstieg</guisubmenu>. In diesen Untermenüs verweist "
-"jeder Puzzlename auf ein Spielszenario."
+"Klicken Sie auf den Zugzähler-Knopf und wählen Sie <guimenu>Neu beginnen</"
+"guimenu>, um ein neues Spiel zu starten. <guimenuitem>Puzzle wechseln</"
+"guimenuitem> erlaubt Ihnen, die Puzzles der Reihe nach zu durchsuchen. Jedes "
+"Puzzle gehört zu einer der vier in den Untermenüs bezeichneten Kategorien: "
+"<guisubmenu>HuaRong-Pfad</guisubmenu>, <guisubmenu>Herausforderer</"
+"guisubmenu>, <guisubmenu>Könner</guisubmenu> und <guisubmenu>Minoru-"
+"Aufstieg</guisubmenu>. In diesen Untermenüs verweist jeder Puzzlename auf "
+"ein Spielszenario."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:288
