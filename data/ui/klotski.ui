@@ -330,7 +330,6 @@
             <property name="focus-on-click">False</property>
             <!-- Translators: tooltip text of the Change Puzzle menubutton, in the headerbar -->
             <property name="tooltip-text" translatable="yes">Choose an other puzzle</property>
-            <property name="direction">down</property>
             <property name="popover">puzzles_popover</property>
           </object>
         </child>
@@ -351,6 +350,7 @@
             <!-- Translators: tooltip text of the Start Over button, in the headerbar -->
             <property name="tooltip-text" translatable="yes">Moves counter</property>
             <property name="menu-model">game-menu</property>
+            <property name="direction">none</property>
           </object>
         </child>
       </object>
