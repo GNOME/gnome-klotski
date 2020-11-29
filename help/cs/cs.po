@@ -295,7 +295,7 @@ msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 msgstr ""
-"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
+"external ref='figures/gnotski_win.png' md5='dd2773eadcb60955947a944064bbd9b7'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:197
@@ -356,7 +356,7 @@ msgid ""
 "md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 msgstr ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
+"md5='f1bacbdf4045aa1843e6470118af30d3'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:240
