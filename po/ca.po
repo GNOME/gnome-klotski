@@ -204,7 +204,7 @@ msgstr "GNOME Klotski"
 
 #: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
-msgstr "Moveu els blocs per resoldre el trencaclosques"
+msgstr "Moveu els blocs per a resoldre el trencaclosques"
 
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
@@ -214,7 +214,7 @@ msgid ""
 "moves as possible!"
 msgstr ""
 "El GNOME Klotski és un conjunt de trencaclosques de moure blocs. L'objectiu "
-"és moure el bloc amb un patró a l'àrea delimitada pels punts verds. Per "
+"és moure el bloc amb un patró a l'àrea delimitada pels punts verds. Per a "
 "aconseguir-ho heu de fer que els altres blocs deixin pas. Completeu cada "
 "trencaclosques amb el menor nombre de moviments possible!"
 
