@@ -1,14 +1,14 @@
 # Hungarian translation for gnome-klotski.
-# Copyright (C) 2014, 2018, 2019, 2020 Free Software Foundation, Inc.
+# Copyright (C) 2014, 2018, 2019, 2020, 2021 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-klotski package.
 #
-# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2018, 2019, 2020.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2018, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-02-14 05:28+0000\n"
-"PO-Revision-Date: 2020-02-26 08:05+0100\n"
+"POT-Creation-Date: 2020-05-30 11:19+0000\n"
+"PO-Revision-Date: 2021-02-21 01:43+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Úr Balázs <ur.balazs at fsf dot hu>, 2014, 2018, 2019, 2020."
+msgstr "Úr Balázs <ur.balazs at fsf dot hu>, 2014, 2018, 2019, 2020, 2021."
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:25
@@ -203,9 +203,9 @@ msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:145
-#| msgid "This manual describes version 2.12 of GNOME Klotski."
-msgid "This manual describes version 3.34 of GNOME Klotski."
-msgstr "Ez a kézikönyv a GNOME Klotski 3.34-es verziójához készült."
+#| msgid "This manual describes version 3.34 of GNOME Klotski."
+msgid "This manual describes version 3.38 of GNOME Klotski."
+msgstr "Ez a kézikönyv a GNOME Klotski 3.38-as verziójához készült."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:148
@@ -256,23 +256,16 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 #| msgid ""
-#| "This document describes version 2.12 of <application>Klotski</"
+#| "This document describes version 3.34 of <application>Klotski</"
 #| "application>."
 msgid ""
-"This document describes version 3.34 of <application>Klotski</application>."
+"This document describes version 3.38 of <application>Klotski</application>."
 msgstr ""
-"Ez a kézikönyv a <application>Klotski</application> 3.34-es verziójához "
+"Ez a kézikönyv a <application>Klotski</application> 3.38-as verziójához "
 "készült."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:173
-#| msgid ""
-#| "This program is distributed under the terms of the GNU General Public "
-#| "license as published by the Free Software Foundation; either version 2 of "
-#| "the License, or (at your option) any later version. A copy of this "
-#| "license can be found at this <ulink url=\"help:gpl\" type=\"help\">link</"
-#| "ulink>, or in the file COPYING included with the source code of this "
-#| "program."
 msgid ""
 "This program is distributed under the terms of the GNU General Public "
 "license as published by the Free Software Foundation; either version 3 of "
@@ -301,11 +294,15 @@ msgstr "A nyerő lépés"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:199
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_win.png' "
+#| "md5='1b128968a565e5e4bb930f0f2b581623'"
 msgctxt "_"
 msgid ""
-"external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 msgstr ""
-"external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:197
@@ -343,12 +340,15 @@ msgstr "A főablak"
 
 #. (itstool) path: sect2/para
 #: C/index.docbook:234
+#| msgid ""
+#| "When you start <application><application>Klotski</application></"
+#| "application>, the following window is displayed."
 msgid ""
-"When you start <application><application>Klotski</application></"
-"application>, the following window is displayed."
+"When you start <application>Klotski</application>, the following window is "
+"displayed."
 msgstr ""
-"A <application><application>Klotski</application></application> indításakor "
-"a következő ablak jelenik meg."
+"A <application>Klotski</application> indításakor a következő ablak jelenik"
+" meg."
 
 #. (itstool) path: figure/title
 #: C/index.docbook:238
@@ -361,13 +361,17 @@ msgstr "A <application>Klotski</application> indítóablaka"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.docbook:242
+#| msgctxt "_"
+#| msgid ""
+#| "external ref='figures/gnotski_start_window.png' "
+#| "md5='d074091210621806bee31a938c5d1286'"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='d074091210621806bee31a938c5d1286'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 msgstr ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='d074091210621806bee31a938c5d1286'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:240
@@ -396,10 +400,10 @@ msgid ""
 "the top-right corner to view the highest scores and the documentation for "
 "<application>Klotski</application>."
 msgstr ""
-"A fejlécsáv lehetővé teszi új játékok indítását, az eddig megtett lépések"
-" számának megjelenítését, valamint lehetővé teszi a fejtörő módosítását."
-" Nyomja meg a jobb felső sarokban lévő menügombot a legmagasabb pontszámok és"
-" a <application>Klotski</application> dokumentációjának megtekintéséhez."
+"A fejlécsáv lehetővé teszi új játékok indítását, az eddig megtett lépések "
+"számának megjelenítését, valamint lehetővé teszi a fejtörő módosítását. "
+"Nyomja meg a jobb felső sarokban lévő menügombot a legmagasabb pontszámok és "
+"a <application>Klotski</application> dokumentációjának megtekintéséhez."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:264
@@ -432,28 +436,29 @@ msgstr "Egy új játék indítása"
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
 #| msgid ""
-#| "Use the <guimenu>Game menu</guimenu> to start a new game. The items "
-#| "<guimenuitem>Next Puzzle</guimenuitem> and <guimenuitem>Previous Puzzle</"
-#| "guimenuitem> allows you to navigate the puzzles sequentially. Each puzzle "
-#| "belongs to one of the three categories found in the submenus named "
-#| "<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-#| "guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>.In these submenus, "
-#| "each puzzle name refers to a game scenario."
+#| "Use <guibutton>Start Over</guibutton> to start a new game. "
+#| "<guibutton>Change Puzzle</guibutton> allows you to navigate the puzzles "
+#| "sequentially. Each puzzle belongs to one of the three categories found in "
+#| "the submenus named <guisubmenu>HuaRong Trail</guisubmenu>, "
+#| "<guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill Pack</"
+#| "guisubmenu>. In these submenus, each puzzle name refers to a game "
+#| "scenario."
 msgid ""
-"Use <guibutton>Start Over</guibutton> to start a new game. <guibutton>Change "
-"Puzzle</guibutton> allows you to navigate the puzzles sequentially. Each "
-"puzzle belongs to one of the three categories found in the submenus named "
-"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>. In these submenus, each "
-"puzzle name refers to a game scenario."
+"Click on the moves counter button and use <guibutton>Start Over</guibutton> "
+"to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
+"navigate the puzzles sequentially. Each puzzle belongs to one of the three "
+"categories found in the submenus named <guisubmenu>HuaRong Trail</"
+"guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill "
+"Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
+"scenario."
 msgstr ""
-"Az <guibutton>Újrakezdés</guibutton> használatával indíthat új játékot. A <"
-"guibutton>Fejtörő módosítása</guibutton> lehetővé teszi a fejtörők"
-" közötti egymás utáni navigációt. Minden fejtörő az almenükben található"
-" három kategória egyikéhez tartozik, név szerint <guisubmenu>HuaRong ösvény<"
-"/guisubmenu>, <guisubmenu>Kihíváscsomag</guisubmenu> és <guisubmenu>Szakértői"
-" csomag</guisubmenu>. Ezekben az almenükben minden fejtörő egy"
-" játékforgatókönyvre utal."
+"Kattintson a lépésszámláló gombra, és használja az <guibutton>Újrakezdés<"
+"/guibutton> lehetőséget egy új játék indításához. A <guibutton>Fejtörő"
+" módosítása</guibutton> lehetővé teszi a fejtörők közötti egymás utáni"
+" navigációt. Minden fejtörő az almenükben található három kategória egyikéhez"
+" tartozik, név szerint <guisubmenu>HuaRong ösvény</guisubmenu>, <guisubmenu"
+">Kihíváscsomag</guisubmenu> és <guisubmenu>Szakértői csomag</guisubmenu>."
+" Ezekben az almenükben minden fejtörő egy játékforgatókönyvre utal."
 
 #. (itstool) path: sect2/title
 #: C/index.docbook:288
