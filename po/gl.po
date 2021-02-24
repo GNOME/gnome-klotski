@@ -2,6 +2,7 @@
 # Copyright (C) 2000 Jesús Bravo Álvarez.
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en http://www.trasno.net
+#
 # Jesús Bravo Álvarez <jba@pobox.com>, 2000.
 # Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.
 # Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.
@@ -10,27 +11,25 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011-2020.
-#
+# Fran Dieguez <frandieguez@gnome.org>, 2011-2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2020-08-13 00:06+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"POT-Creation-Date: 2021-02-21 00:45+0000\n"
+"PO-Revision-Date: 2021-02-24 22:47+0100\n"
+"Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
-#| msgid "Puzzle"
 msgctxt "shortcut window"
 msgid "Puzzle-related"
 msgstr "Relacionado co quebracabezas"
@@ -49,7 +48,6 @@ msgstr "Reiniciar"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
 #: data/ui/help-overlay.ui:54
-#| msgid "_Change Puzzle"
 msgctxt "shortcut window"
 msgid "Change Puzzle popover"
 msgstr "Xanela de Cambio de quebracabezas"
@@ -62,14 +60,12 @@ msgstr "Seleccionar un novo quebracabezas"
 
 #. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
 #: data/ui/help-overlay.ui:67
-#| msgid "Previous"
 msgctxt "shortcut window"
 msgid "Previous puzzle"
 msgstr "Quebracabezas anterior"
 
 #. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
 #: data/ui/help-overlay.ui:75
-#| msgid "Pennant Puzzle"
 msgctxt "shortcut window"
 msgid "Next puzzle"
 msgstr "Quebracabezas seguinte"
@@ -88,14 +84,12 @@ msgstr "Seguinte grupo de quebracabezas"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores"
 msgstr "Puntuacións"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
 #: data/ui/help-overlay.ui:106
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores dialog"
 msgstr "Diálogo de Puntuacións"
@@ -120,21 +114,18 @@ msgstr "Atallos de teclado"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:137
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Axuda"
 
 #. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:145
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Sobre"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:153
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Saír"
@@ -226,7 +217,7 @@ msgid ""
 "moves as possible!"
 msgstr ""
 "Klotski de GNOME é un conxunto de quebracabezas de bloques deslizantes. O "
-"obectivo é mover un bloque con patrón a un área con rodeada por marcadores "
+"obxectivo é mover un bloque con patrón a un área con rodeada por marcadores "
 "verdes. Para facelo, debe deslizar outros bloques fóra do camiño. Complete "
 "cada quebracabezas nos menores movementos posíbeis!"
 
@@ -236,7 +227,7 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"Klotski de GNOMEO conta con preto de trinta disposicións de quebracabezas "
+"Klotski de GNOME conta con preto de trinta disposicións de quebracabezas "
 "diferentes que varían na dificultade. Algunhas disposicións son similares e "
 "só o tamaño dun dos bloques pode cambiar. As outras disposicións teñen máis "
 "variedade."
@@ -262,7 +253,6 @@ msgstr "O número de quebracabezas que se está realizando."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:13
-#| msgid "Width of the window in pixels"
 msgid "The width of the window"
 msgstr "Largura da xanela"
 
@@ -273,7 +263,6 @@ msgstr "Largura da xanela en píxeles"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:20
-#| msgid "Height of the window in pixels"
 msgid "The height of the window"
 msgstr "Altura da xanela"
 
@@ -289,7 +278,6 @@ msgstr "Unha bandeira para activar o modo maximizado"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:29
-#| msgid "true if the window is maximized"
 msgid "If “true”, the main window starts in maximized mode."
 msgstr "Se é «verdadeiro», a xanela principal iniciarase maximizada."
 
@@ -444,54 +432,54 @@ msgid "Puzzle"
 msgstr "Quebracabezas"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "Nivel rematado."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (autor orixinal)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (conversión a vala)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (conversión a vala)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
-msgstr "Quebracacbezas de bloques deslizantes"
+msgstr "Quebracabezas de bloques deslizantes"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Copyright © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Copyright © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Copyright © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "Fran Diéguez <frandieguez@gnome.org>, 2009-2015;\n"
