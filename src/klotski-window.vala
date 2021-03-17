@@ -44,20 +44,20 @@ private class KlotskiWindow : ApplicationWindow
     private const string KEY_LEVEL = "level";
 
     /* Widgets */
-    [GtkChild] private HeaderBar headerbar;
-    [GtkChild] private Stack stack_packs;
-    [GtkChild] private Stack stack_puzzles;
-    [GtkChild] private Popover puzzles_popover;
-    [GtkChild] private MenuButton game_menubutton;
-    [GtkChild] private MenuButton main_menubutton;
+    [GtkChild] private unowned HeaderBar headerbar;
+    [GtkChild] private unowned Stack stack_packs;
+    [GtkChild] private unowned Stack stack_puzzles;
+    [GtkChild] private unowned Popover puzzles_popover;
+    [GtkChild] private unowned MenuButton game_menubutton;
+    [GtkChild] private unowned MenuButton main_menubutton;
     private PuzzleView view;
 
-    [GtkChild] private TreeView treeview_huarong;
-    [GtkChild] private TreeView treeview_challenge;
-    [GtkChild] private TreeView treeview_skill;
+    [GtkChild] private unowned TreeView treeview_huarong;
+    [GtkChild] private unowned TreeView treeview_challenge;
+    [GtkChild] private unowned TreeView treeview_skill;
 
-    [GtkChild] private Grid main_grid;
-    [GtkChild] private Button unfullscreen_button;
+    [GtkChild] private unowned Grid main_grid;
+    [GtkChild] private unowned Button unfullscreen_button;
 
     /* Actions, to disable or enable */
     private SimpleAction prev_pack;
