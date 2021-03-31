@@ -10,138 +10,119 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2016-08-14 16:19+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"POT-Creation-Date: 2021-02-21 00:45+0000\n"
+"PO-Revision-Date: 2021-03-31 23:50+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural= (n!=1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
-"X-Poedit-Language: Hebrew\n"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
-#, fuzzy
-#| msgid "Puzzle"
 msgctxt "shortcut window"
 msgid "Puzzle-related"
-msgstr "תצרף"
+msgstr "תלוי חידה"
 
 #. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu
 #: data/ui/help-overlay.ui:36
 msgctxt "shortcut window"
 msgid "Toggle game menu"
-msgstr ""
+msgstr "להחליף מצב תפריט משחק"
 
 #. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle
 #: data/ui/help-overlay.ui:44
 msgctxt "shortcut window"
 msgid "Restart"
-msgstr ""
+msgstr "להפעיל מחדש"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
 #: data/ui/help-overlay.ui:54
-#, fuzzy
-#| msgid "_Change Puzzle"
 msgctxt "shortcut window"
 msgid "Change Puzzle popover"
-msgstr "_שינוי תצרף"
+msgstr "להחליף חלונית חידה צפה"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu
 #: data/ui/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Select new puzzle"
-msgstr ""
+msgstr "לבחור חידה חדשה"
 
 #. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
 #: data/ui/help-overlay.ui:67
-#, fuzzy
-#| msgid "Previous"
 msgctxt "shortcut window"
 msgid "Previous puzzle"
-msgstr "הקודם"
+msgstr "החידה הקודמת"
 
 #. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
 #: data/ui/help-overlay.ui:75
-#, fuzzy
-#| msgid "Pennant Puzzle"
 msgctxt "shortcut window"
 msgid "Next puzzle"
-msgstr "תצרף הבוטנים"
+msgstr "החידה הבאה"
 
 #. Translators: Page_Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzles group
 #: data/ui/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Previous puzzles group"
-msgstr ""
+msgstr "קבוצת החידות הקודמת"
 
 #. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
 #: data/ui/help-overlay.ui:91
 msgctxt "shortcut window"
 msgid "Next puzzles group"
-msgstr ""
+msgstr "קבוצת החידות הבאה"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
-#, fuzzy
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores"
-msgstr "_תוצאות"
+msgstr "תוצאות"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
 #: data/ui/help-overlay.ui:106
-#, fuzzy
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores dialog"
-msgstr "_תוצאות"
+msgstr "חלונית תוצאות"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
 #: data/ui/help-overlay.ui:116
 msgctxt "shortcut window"
 msgid "Generic"
-msgstr ""
+msgstr "גנרי"
 
 #. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
 #: data/ui/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Toggle main menu"
-msgstr ""
+msgstr "להחליף מצב תפריט ראשי"
 
 #. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
 #: data/ui/help-overlay.ui:129
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "קיצורי מקלדת"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:137
-#, fuzzy
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
-msgstr "ע_זרה"
+msgstr "עזרה"
 
 #. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:145
-#, fuzzy
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
-msgstr "על _אודות"
+msgstr "על אודות"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:153
-#, fuzzy
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "י_ציאה"
+msgstr "יציאה"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
 #: data/ui/klotski.ui:24
@@ -151,7 +132,7 @@ msgstr "_תוצאות"
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
 #: data/ui/klotski.ui:31
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_קיצורי מקלדת"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
 #: data/ui/klotski.ui:36
@@ -160,10 +141,8 @@ msgstr "ע_זרה"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog
 #: data/ui/klotski.ui:41
-#, fuzzy
-#| msgid "Klotski"
 msgid "_About Klotski"
-msgstr "בלוקים Klotski"
+msgstr "על _קלוצקי"
 
 #. Translators: label of an entry in the game menu (with a mnemonic that appears pressing Alt); allows to directly restart the current puzzle
 #: data/ui/klotski.ui:50
@@ -204,17 +183,17 @@ msgstr "בלוקים Klotski"
 #. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
 #: data/ui/klotski.ui:346
 msgid "_Change Puzzle"
-msgstr "_שינוי תצרף"
+msgstr "_שינוי חידה"
 
 #. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
 #: data/ui/klotski.ui:351
 msgid "Choose an other puzzle"
-msgstr "בחירת תצרף אחר"
+msgstr "בחירת חידה אחרת"
 
 #. Translators: tooltip text of the Start Over button, in the headerbar
 #: data/ui/klotski.ui:364
 msgid "Moves counter"
-msgstr ""
+msgstr "מונה תנועות"
 
 #: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
@@ -222,18 +201,18 @@ msgstr "בלוקים Klotski GNOME"
 
 #: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
-msgstr "יש להחליק בלוקים כדי לפתור את התצרף"
+msgstr "יש להחליק בלוקים כדי לפתור את החידה"
 
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
-"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
-"the patterned block to the area bordered by green markers. To do so, you’ll "
-"need to slide other blocks out of the way. Complete each puzzle in as few "
-"moves as possible!"
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move the "
+"patterned block to the area bordered by green markers. To do so, you’ll need "
+"to slide other blocks out of the way. Complete each puzzle in as few moves as "
+"possible!"
 msgstr ""
 "‏GNOME בלוקים Klotski הוא אוסף של תצרפי הזזת בלוקים. המטרה היא להזיז את הבלוק "
 "המיועד לאזור הגובל בסמנים הירוקים. על מנת לעשות זאת, עליך להזיז בלוקים אחרים "
-"מהדרך. יש להשלים כל תצרף במספר תזוזות קטן ככל האפשר!"
+"מהדרך. יש להשלים כל חידה במספר תנועות קטן ככל האפשר!"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -242,8 +221,8 @@ msgid ""
 "blocks differ. Other layouts have more variety."
 msgstr ""
 "‏GNOME בלוקים Klotski מגיע עם כמעט שלושים פריסות תצרפים שונים ברמות קושי "
-"שונות. כמה מהפריסות דומות אך רק הגודל של בלוק אחד או יותר שונה. לפריסות "
-"אחרות מגוון גדול יותר."
+"שונות. כמה מהפריסות דומות אך רק הגודל של בלוק אחד או יותר שונה. לפריסות אחרות "
+"מגוון גדול יותר."
 
 #: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
@@ -266,39 +245,34 @@ msgstr "The number of the puzzle being played."
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:13
-#, fuzzy
-#| msgid "Width of the window in pixels"
 msgid "The width of the window"
-msgstr "Width of the window in pixels"
+msgstr "רוחב החלון"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
-msgstr "Width of the window in pixels"
+msgstr "רוחב החלון בפיקסלים"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:20
-#, fuzzy
-#| msgid "Height of the window in pixels"
 msgid "The height of the window"
-msgstr "Height of the window in pixels"
+msgstr "גובה החלון"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
-msgstr "Height of the window in pixels"
+msgstr "גובה החלון בפיקסלים"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:27
 msgid "A flag to enable maximized mode"
-msgstr ""
+msgstr "דגלון להפעלת מצב מוגדל"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:29
-#, fuzzy
 #| msgid "true if the window is maximized"
 msgid "If “true”, the main window starts in maximized mode."
-msgstr "true if the window is maximized"
+msgstr "If “true”, the main window starts in maximized mode."
 
 #. Translators: command-line option description, see 'gnome-klotski --help'
 #: src/gnome-klotski.vala:32
@@ -398,7 +372,7 @@ msgstr "רומא"
 #. Translators: puzzle name
 #: src/klotski-window.vala:315
 msgid "Pennant Puzzle"
-msgstr "תצרף הבוטנים"
+msgstr "חידת הבוטנים"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:328
@@ -448,57 +422,57 @@ msgstr "זריחה"
 #. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
 #: src/klotski-window.vala:554
 msgid "Puzzle"
-msgstr "תצרף"
+msgstr "חידה"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
-msgstr "השלב הושלם"
+msgstr "השלב הושלם."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
-msgstr ""
+msgstr "‫Lars Rydlinge (היוצר המקורי)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
-msgstr ""
+msgstr "‫Robert Ancell (הסבה ל־vala)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
-msgstr ""
+msgstr "‫John Cheetham (הסבה ל־vala)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
-msgstr ""
+msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
-msgstr "החלקת בלוקים לפתרון התצרף"
+msgstr "החלקת בלוקים לפתרון החידה"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
-msgstr ""
+msgstr "כל הזכויות שמורות © 1999‏-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
-msgstr ""
+msgstr "כל הזכויות שמורות © %u‏-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
-msgstr ""
+msgstr "כל הזכויות שמורות © %u-‏%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
