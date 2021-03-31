@@ -6,21 +6,22 @@
 #
 # Bruno Brouard <annoa.b@gmail.com>, 2007-2008, 2012.
 # Claude Paroz <claude@2xlibre.net>, 2007-2008.
-# Charles Monzat <charles.monzat@free.fr>, 2018-2020.
 # Julien Hardelin <jhardlin@orange.fr>, 2020.
+# Charles Monzat <charles.monzat@free.fr>, 2018-2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Klotski V2.10\n"
-"POT-Creation-Date: 2020-04-01 01:17+0000\n"
-"PO-Revision-Date: 2020-05-01 08:28+0100\n"
-"Last-Translator: Julien Hardelin <jhardlin@orange.fr>\n"
-"Language-Team: French <gnomefr@traduc.org>\n"
+"POT-Creation-Date: 2021-02-24 21:59+0000\n"
+"PO-Revision-Date: 2021-03-13 11:08+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
+"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -28,7 +29,7 @@ msgid "translator-credits"
 msgstr ""
 "Bruno Brouard <annoa.b@gmail.com>, 2007-2008,2012\n"
 "Claude Paroz <claude@2xlibre.net>, 2007-2008\n"
-"Charles Monzat <charles.monzat@free.fr>, 2018-2020"
+"Charles Monzat <charles.monzat@free.fr>, 2018-2021"
 
 #. (itstool) path: articleinfo/title
 #: C/index.docbook:25
@@ -214,8 +215,8 @@ msgstr ""
 
 #. (itstool) path: articleinfo/releaseinfo
 #: C/index.docbook:145
-msgid "This manual describes version 3.34 of GNOME Klotski."
-msgstr "Ce manuel documente la version 3.34 de GNOME Klotski."
+msgid "This manual describes version 3.38 of GNOME Klotski."
+msgstr "Ce manuel documente la version 3.38 de GNOME Klotski."
 
 #. (itstool) path: legalnotice/title
 #: C/index.docbook:148
@@ -267,9 +268,9 @@ msgstr ""
 #. (itstool) path: sect1/para
 #: C/index.docbook:171
 msgid ""
-"This document describes version 3.34 of <application>Klotski</application>."
+"This document describes version 3.38 of <application>Klotski</application>."
 msgstr ""
-"Ce manuel documente la version 3.34 de <application>Klotski</application>."
+"Ce manuel documente la version 3.38 de <application>Klotski</application>."
 
 #. (itstool) path: sect1/para
 #: C/index.docbook:173
@@ -304,10 +305,9 @@ msgstr "Le mouvement gagnant"
 #: C/index.docbook:199
 msgctxt "_"
 msgid ""
-"external ref='figures/gnotski_win.png' md5='1b128968a565e5e4bb930f0f2b581623'"
+"external ref='figures/gnotski_win.png' md5='8acaaf26c37ff7e2866dcaa9adc02a21'"
 msgstr ""
-"external ref='fr/figures/klotski_win.png' "
-"md5='5ed32942a09f8becfc784d804f70ea3e'"
+"external ref='figures/klotski_win.png' md5='96d59ed2ef884d94c32fbcf86a62f301'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:197
@@ -367,10 +367,10 @@ msgstr "Fenêtre de démarrage de <application>Klotski</application>"
 msgctxt "_"
 msgid ""
 "external ref='figures/gnotski_start_window.png' "
-"md5='d074091210621806bee31a938c5d1286'"
+"md5='ca4e8ff4ac7b07242f620d0a2193c8a9'"
 msgstr ""
-"external ref='fr/figures/klotski_start_window.png' "
-"md5='23e584de3f58e5baf5c9ca5098a7961e'"
+"external ref='figures/klotski_start_window.png' "
+"md5='696f3f85c71ff2f4e95dec27f72689b7'"
 
 #. (itstool) path: screenshot/mediaobject
 #: C/index.docbook:240
@@ -436,15 +436,17 @@ msgstr "Démarrage d’un nouveau tableau"
 #. (itstool) path: sect2/para
 #: C/index.docbook:278
 msgid ""
-"Use <guibutton>Start Over</guibutton> to start a new game. <guibutton>Change "
-"Puzzle</guibutton> allows you to navigate the puzzles sequentially. Each "
-"puzzle belongs to one of the three categories found in the submenus named "
-"<guisubmenu>HuaRong Trail</guisubmenu>, <guisubmenu>Challenge Pack</"
-"guisubmenu> and <guisubmenu>Skill Pack</guisubmenu>. In these submenus, each "
-"puzzle name refers to a game scenario."
+"Click on the moves counter button and use <guibutton>Start Over</guibutton> "
+"to start a new game. <guibutton>Change Puzzle</guibutton> allows you to "
+"navigate the puzzles sequentially. Each puzzle belongs to one of the three "
+"categories found in the submenus named <guisubmenu>HuaRong Trail</"
+"guisubmenu>, <guisubmenu>Challenge Pack</guisubmenu> and <guisubmenu>Skill "
+"Pack</guisubmenu>. In these submenus, each puzzle name refers to a game "
+"scenario."
 msgstr ""
-"Utilisez <guibutton>Recommencer</guibutton> pour démarrer une nouvelle "
-"partie. <guibutton>Changer de grille</guibutton> vous permet de naviguer "
+"Cliquez sur le bouton du compteur de déplacements et utilisez "
+"<guibutton>Recommencer</guibutton> pour démarrer une nouvelle partie. "
+"<guibutton>Changer de grille</guibutton> vous permet de naviguer "
 "successivement parmi les grilles. Chaque grille appartient à une des trois "
 "catégories que vous trouvez dans les sous-menus <guisubmenu>La piste de "
 "Huarong</guisubmenu>, <guisubmenu>Paquet Défi</guisubmenu> et "
@@ -468,8 +470,8 @@ msgstr ""
 "Pour déplacer un bloc, cliquez dessus, maintenez le bouton de la souris "
 "enfoncé et glissez ce bloc jusqu’à sa nouvelle position. Vous ne pouvez pas "
 "déplacer les blocs verts ou les blocs qui entourent le jeu. Vous ne pouvez "
-"pas déplacer un bloc vers un endroit déjà occupé par un autre bloc, sauf "
-"au moment où vous déplacez le bloc à motifs à travers les blocs verts pour "
+"pas déplacer un bloc vers un endroit déjà occupé par un autre bloc, sauf au "
+"moment où vous déplacez le bloc à motifs à travers les blocs verts pour "
 "gagner."
 
 #. (itstool) path: sect1/title
