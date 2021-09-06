@@ -7,13 +7,14 @@
 # Xhacker Liu <liu.dongyuan@gmail.com>, 2010.
 # Zixing Liu <liushuyu@aosc.xyz>, 2015.
 # Jeff Bai <jeffbai@aosc.xyz>, 2016.
+# Tong Hui <tonghuix@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-08-13 12:27+0000\n"
-"PO-Revision-Date: 2020-08-24 16:17-0400\n"
+"POT-Creation-Date: 2021-02-21 00:45+0000\n"
+"PO-Revision-Date: 2021-08-10 16:32+0800\n"
 "Last-Translator: Tong Hui <tonghuix@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
@@ -69,13 +70,13 @@ msgstr "下一个谜题"
 #: data/ui/help-overlay.ui:83
 msgctxt "shortcut window"
 msgid "Previous puzzles group"
-msgstr "上一个谜题组"
+msgstr "上一组谜题"
 
 #. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
 #: data/ui/help-overlay.ui:91
 msgctxt "shortcut window"
 msgid "Next puzzles group"
-msgstr "下一个谜题组"
+msgstr "下一组谜题"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
@@ -105,7 +106,7 @@ msgstr "切换主菜单"
 #: data/ui/help-overlay.ui:129
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr "键盘快捷键"
+msgstr "快捷键"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:137
@@ -133,7 +134,7 @@ msgstr "得分(_S)"
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
 #: data/ui/klotski.ui:31
 msgid "_Keyboard Shortcuts"
-msgstr "键盘快捷键(_K)"
+msgstr "快捷键(_K)"
 
 #. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
 #: data/ui/klotski.ui:36
@@ -168,12 +169,12 @@ msgstr "技巧包"
 #. Translators: in the Change Puzzle popover, label of the button for playing the previous level
 #: data/ui/klotski.ui:300
 msgid "Previous"
-msgstr "上个"
+msgstr "上一个"
 
 #. Translators: in the Change Puzzle popover, label of the button for playing the next level
 #: data/ui/klotski.ui:313
 msgid "Next"
-msgstr "下个"
+msgstr "下一个"
 
 #. Translators: application name, as used in the window manager, the window title, the about dialog...
 #: data/ui/klotski.ui:328 data/ui/klotski.ui:339
@@ -202,7 +203,7 @@ msgstr "GNOME 华容道"
 
 #: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
-msgstr "滑动方块以解开布局"
+msgstr "滑动方块，解开谜题"
 
 #: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
@@ -211,8 +212,8 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
-"GNOME Klotski(华容道)是一套滑块谜题。游戏的目标是将带图案的块移动到绿色标记围"
-"起来的区域。这个过程中，您需要移开挡路的其他块。挑战用最少的步数完成移动！"
+"华容道，滑块类谜题。目标是移开挡路的滑块，将带图案的滑块移动到绿色标记区域。"
+"可挑战用最少的步数完成谜题！"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -220,8 +221,8 @@ msgid ""
 "difficulty. Some of the layouts are similar and only the size of one or more "
 "blocks differ. Other layouts have more variety."
 msgstr ""
-"GNOME Klotski(华容道)有近 30 种难度不一的谜局。有些布局相似，只有一两个块的大"
-"小不同。有些布局就很不一样。"
+"GNOME Klotski 有近 30 种难度不一的谜题。有些布局类似，只有一两块大小不同。有"
+"些布局就很不一样。"
 
 #: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
@@ -245,22 +246,22 @@ msgstr "正在玩的布局的编号。"
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:13
 msgid "The width of the window"
-msgstr "主窗口的宽度"
+msgstr "主窗口宽度"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
 #: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
-msgstr "主窗口的宽度（像素）"
+msgstr "主窗口宽度（像素）"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:20
 msgid "The height of the window"
-msgstr "主窗口的高度"
+msgstr "主窗口高度"
 
 #. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
 #: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
-msgstr "主窗口的高度（像素）"
+msgstr "主窗口高度（像素）"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
 #: data/org.gnome.Klotski.gschema.xml:27
@@ -315,7 +316,7 @@ msgstr "横刀立马"
 #. Translators: puzzle name
 #: src/klotski-window.vala:182
 msgid "Trail"
-msgstr "小径"
+msgstr "层层设防"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:195
@@ -380,7 +381,7 @@ msgstr "伊萨卡"
 #. Translators: puzzle name
 #: src/klotski-window.vala:351
 msgid "Pelopones"
-msgstr "伯罗奔尼"
+msgstr "波罗奔尼撒"
 
 #. Translators: puzzle name
 #: src/klotski-window.vala:363
@@ -420,12 +421,12 @@ msgstr "阳光"
 #. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
 #: src/klotski-window.vala:554
 msgid "Puzzle"
-msgstr "迷局"
+msgstr "谜题"
 
 #. Translators: headerbar title, when the puzzle is solved
 #: src/klotski-window.vala:894
 msgid "Level completed."
-msgstr "本级完成。"
+msgstr "完成本级。"
 
 #. Translators: text crediting an author, in the about dialog
 #: src/klotski-window.vala:1119
@@ -450,24 +451,24 @@ msgstr "Andrew Sobala"
 #. Translators: small description of the game, seen in the About dialog
 #: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
-msgstr "滑块迷宫"
+msgstr "滑块类谜题"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
 #: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
-msgstr "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "版权所有 © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
 #: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
-msgstr "Copyright © %u-%u – Michael Catanzaro"
+msgstr "版权所有 © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
 #: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
-msgstr "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "版权所有 © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
 #: src/klotski-window.vala:1157
@@ -480,7 +481,8 @@ msgstr ""
 "Zixing Liu <liushuyu@aosc.xyz>, 2015\n"
 "Jeff Bai <jeffbai@aosc.xyz>, 2016\n"
 "Mandy Wang <wangmychn@gmail.com>, 2016.\n"
-"Weiyi Xu <xuweiyi0923@gmail.com>, 2020."
+"Weiyi Xu <xuweiyi0923@gmail.com>, 2020.\n"
+"liulitchi <xingzuo88@qq.com>, 2021."
 
 #~ msgid "Restart the current puzzle"
 #~ msgstr "重新开始当前游戏"
