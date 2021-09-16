@@ -7,7 +7,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016, 2019.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016, 2019, 2021.
 # scootergrisen, 2020.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-05-06 16:36+0000\n"
-"PO-Revision-Date: 2020-05-08 13:27+0200\n"
-"Last-Translator: scootergrisen\n"
+"POT-Creation-Date: 2021-02-21 00:45+0000\n"
+"PO-Revision-Date: 2021-09-15 20:00+0200\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,6 @@ msgstr ""
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
-#| msgid "Puzzle"
 msgctxt "shortcut window"
 msgid "Puzzle-related"
 msgstr "Opgaverelaterede"
@@ -47,7 +46,6 @@ msgstr "Genstart"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
 #: data/ui/help-overlay.ui:54
-#| msgid "_Change Puzzle"
 msgctxt "shortcut window"
 msgid "Change Puzzle popover"
 msgstr "Popover for skift opgave"
@@ -60,14 +58,12 @@ msgstr "Vælg ny opgave"
 
 #. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
 #: data/ui/help-overlay.ui:67
-#| msgid "Previous"
 msgctxt "shortcut window"
 msgid "Previous puzzle"
 msgstr "Forrige opgave"
 
 #. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
 #: data/ui/help-overlay.ui:75
-#| msgid "Pennant Puzzle"
 msgctxt "shortcut window"
 msgid "Next puzzle"
 msgstr "Næste opgave"
@@ -86,14 +82,12 @@ msgstr "Næste gruppe med opgaver"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
 #: data/ui/help-overlay.ui:101
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores"
 msgstr "Resultater"
 
 #. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
 #: data/ui/help-overlay.ui:106
-#| msgid "_Scores"
 msgctxt "shortcut window"
 msgid "Scores dialog"
 msgstr "Dialogen Resultater"
@@ -118,21 +112,18 @@ msgstr "Tastaturgenveje"
 
 #. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
 #: data/ui/help-overlay.ui:137
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Hjælp"
 
 #. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
 #: data/ui/help-overlay.ui:145
-#| msgid "_About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Om"
 
 #. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
 #: data/ui/help-overlay.ui:153
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Afslut"
@@ -223,10 +214,10 @@ msgid ""
 "need to slide other blocks out of the way. Complete each puzzle in as few "
 "moves as possible!"
 msgstr ""
-"GNOME Klotski er et tænkespil, hvor man flytter blokke. Målet er at "
-"flytte blokken med mønsteret til området med de grønne markører. For at "
-"kunne gøre det, skal du flytte andre blokke af vejen. Gennemfør hver "
-"opgave med så få træk som muligt!"
+"GNOME Klotski er et tænkespil, hvor man flytter blokke. Målet er at flytte "
+"blokken med mønsteret til området med de grønne markører. For at kunne gøre "
+"det, skal du flytte andre blokke af vejen. Gennemfør hver opgave med så få "
+"træk som muligt!"
 
 #: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
@@ -247,25 +238,45 @@ msgstr "GNOME-projektet"
 msgid "game;strategy;logic;move;"
 msgstr "spil;strategi;logik;flyt;træk;flytte;trække;"
 
-#: data/org.gnome.Klotski.gschema.xml:5
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The puzzle in play"
 msgstr "Det igangværende spil"
 
-#: data/org.gnome.Klotski.gschema.xml:6
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:8
 msgid "The number of the puzzle being played."
 msgstr "Spillets nummer."
 
-#: data/org.gnome.Klotski.gschema.xml:10
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:13
+msgid "The width of the window"
+msgstr "Vinduets bredde"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
 msgstr "Bredden af vinduet i billedpunkter"
 
-#: data/org.gnome.Klotski.gschema.xml:14
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:20
+msgid "The height of the window"
+msgstr "Vinduets højde"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
 msgstr "Højden af vinduet i billedpunkter"
 
-#: data/org.gnome.Klotski.gschema.xml:18
-msgid "true if the window is maximized"
-msgstr "sand hvis vinduet er maksimeret"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "Flag som styrer maksimeret tilstand"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:29
+msgid "If “true”, the main window starts in maximized mode."
+msgstr "Hvis “true” starter hovedvinduet som maksimeret."
 
 #. Translators: command-line option description, see 'gnome-klotski --help'
 #: src/gnome-klotski.vala:32
@@ -302,7 +313,7 @@ msgstr "Stedmoderblomst"
 msgid "Snowdrop"
 msgstr "Vintergæk"
 
-#. puzzle name - sometimes called "Le'Ane Rouge"
+#. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
 #: src/klotski-window.vala:169
 msgid "Red Donkey"
 msgstr "Det røde æsel"
@@ -418,54 +429,56 @@ msgid "Puzzle"
 msgstr "Opgave"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "Bane fuldført."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (oprindelig forfatter)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (portering til vala)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (portering til vala)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
+# (Dette er værktøjstippet i GNOME-menuen; det er med vilje at dette forfærdeli
+# ge ordspil bliver brugt)
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
-msgstr "Opgaver med blokke der kan flyttes"
+msgstr "“Klodsede” opgaver"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Ophavsret © 1999–2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Ophavsret © %u–%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Ophavsret © %u–%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
