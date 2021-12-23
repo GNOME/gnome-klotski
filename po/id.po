@@ -5,22 +5,22 @@
 # Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2020-06-13 19:36+0000\n"
-"PO-Revision-Date: 2020-06-20 18:28+0700\n"
+"POT-Creation-Date: 2021-02-21 00:45+0000\n"
+"PO-Revision-Date: 2021-12-23 10:41+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural= n!=1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
@@ -426,54 +426,54 @@ msgid "Puzzle"
 msgstr "Teka-teki"
 
 #. Translators: headerbar title, when the puzzle is solved
-#: src/klotski-window.vala:893
+#: src/klotski-window.vala:894
 msgid "Level completed."
 msgstr "Tingkat diselesaikan."
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1118
+#: src/klotski-window.vala:1119
 msgid "Lars Rydlinge (original author)"
 msgstr "Lars Rydlinge (penulis asli)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1122
+#: src/klotski-window.vala:1123
 msgid "Robert Ancell (port to vala)"
 msgstr "Robert Ancell (port ke vala)"
 
 #. Translators: text crediting an author, in the about dialog
-#: src/klotski-window.vala:1126
+#: src/klotski-window.vala:1127
 msgid "John Cheetham (port to vala)"
 msgstr "John Cheetham (port ke vala)"
 
 #. Translators: text crediting a documenter, in the about dialog
-#: src/klotski-window.vala:1130
+#: src/klotski-window.vala:1131
 msgid "Andrew Sobala"
 msgstr "Andrew Sobala"
 
 #. Translators: small description of the game, seen in the About dialog
-#: src/klotski-window.vala:1138
+#: src/klotski-window.vala:1139
 msgid "Sliding block puzzles"
 msgstr "Teka-teki menggeser balok"
 
 #. Translators: text crediting a maintainer, seen in the About dialog
-#: src/klotski-window.vala:1142
+#: src/klotski-window.vala:1143
 msgid "Copyright © 1999-2008 – Lars Rydlinge"
 msgstr "Hak Cipta © 1999-2008 – Lars Rydlinge"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1146
+#: src/klotski-window.vala:1147
 #, c-format
 msgid "Copyright © %u-%u – Michael Catanzaro"
 msgstr "Hak Cipta © %u-%u – Michael Catanzaro"
 
 #. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
-#: src/klotski-window.vala:1150
+#: src/klotski-window.vala:1151
 #, c-format
 msgid "Copyright © %u-%u – Arnaud Bonatti"
 msgstr "Hak Cipta © %u-%u – Arnaud Bonatti"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/klotski-window.vala:1156
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
@@ -481,7 +481,7 @@ msgstr ""
 "Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
-"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020."
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021."
 
 #~ msgid "Restart the current puzzle"
 #~ msgstr "Mulai ulang teka-teki yang dimainkan"
