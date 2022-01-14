@@ -18,30 +18,201 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-14 13:20+0000\n"
-"PO-Revision-Date: 2016-09-16 12:32+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2020-06-13 19:36+0000\n"
+"PO-Revision-Date: 2022-01-11 10:19+1000\n"
+"Last-Translator: Ser82-png\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.3\n"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:1
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Puzzle-related"
+msgstr "Головоломка"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Toggle game menu"
+msgstr "Переключить меню игры"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "Начать заново"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Change Puzzle popover"
+msgstr "Всплывающее окно замены головоломки"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Select new puzzle"
+msgstr "Выбрать новую головоломку"
+
+#. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Previous puzzle"
+msgstr "Предыдущая головоломка"
+
+#. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Next puzzle"
+msgstr "Следующая головоломка"
+
+#. Translators: Page_Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzles group
+#: data/ui/help-overlay.ui:83
+msgctxt "shortcut window"
+msgid "Previous puzzles group"
+msgstr "Предыдущая группа головоломок"
+
+#. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Next puzzles group"
+msgstr "Следующая группа головоломок"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
+#: data/ui/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Scores"
+msgstr "Результаты"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Scores dialog"
+msgstr "Окно результатов"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:116
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Общее"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Переключить главное меню"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:129
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Комбинации клавиш"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Справка"
+
+#. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:145
+msgctxt "shortcut window"
+msgid "About"
+msgstr "О приложении"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Выход"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
+#: data/ui/klotski.ui:24
+msgid "_Scores"
+msgstr "_Результаты"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
+#: data/ui/klotski.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
+#: data/ui/klotski.ui:36
+msgid "_Help"
+msgstr "_Справка"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog
+#: data/ui/klotski.ui:41
+msgid "_About Klotski"
+msgstr "_О приложении Клоцки"
+
+#. Translators: label of an entry in the game menu (with a mnemonic that appears pressing Alt); allows to directly restart the current puzzle
+#: data/ui/klotski.ui:50
+msgid "_Start Over"
+msgstr "_Начать сначала"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels
+#: data/ui/klotski.ui:94
+msgid "Huarong Trail"
+msgstr "Путь Хуаронг"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels
+#: data/ui/klotski.ui:106
+msgid "Challenge Pack"
+msgstr "Набор для любителей"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels
+#: data/ui/klotski.ui:118
+msgid "Skill Pack"
+msgstr "Набор для опытных"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the previous level
+#: data/ui/klotski.ui:300
+msgid "Previous"
+msgstr "Предыдущая"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the next level
+#: data/ui/klotski.ui:313
+msgid "Next"
+msgstr "Следующая"
+
+#. Translators: application name, as used in the window manager, the window title, the about dialog...
+#: data/ui/klotski.ui:328 data/ui/klotski.ui:339
+#: data/org.gnome.Klotski.desktop.in:3 src/gnome-klotski.vala:25
+msgid "Klotski"
+msgstr "Клоцки"
+
+#. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
+#: data/ui/klotski.ui:346
+msgid "_Change Puzzle"
+msgstr "_Заменить головоломку"
+
+#. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
+#: data/ui/klotski.ui:351
+msgid "Choose an other puzzle"
+msgstr "Выбрать другую головоломку"
+
+#. Translators: tooltip text of the Start Over button, in the headerbar
+#: data/ui/klotski.ui:364
+msgid "Moves counter"
+msgstr "Счётчик ходов"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
 msgid "GNOME Klotski"
 msgstr "Клоцки GNOME"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:2
-#: ../data/gnome-klotski.desktop.in.h:2
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
 msgstr "Сдвиньте блоки, чтобы решить головоломку"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
 msgid ""
 "GNOME Klotski is a set of block sliding puzzles. The objective is to move "
 "the patterned block to the area bordered by green markers. To do so, you’ll "
@@ -51,9 +222,9 @@ msgstr ""
 "Клоцки GNOME — это набор головоломок на перемещение блоков. Цель игры — "
 "переместить блок на область с зелёными метками. Для этого необходимо убрать "
 "с пути другие блоки. На решение головоломки необходимо потратить минимальное "
-"количество ходов."
+"количество ходов!"
 
-#: ../data/gnome-klotski.appdata.xml.in.h:4
+#: data/org.gnome.Klotski.appdata.xml.in:16
 msgid ""
 "GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
 "difficulty. Some of the layouts are similar and only the size of one or more "
@@ -63,255 +234,262 @@ msgstr ""
 "головоломки похожи друг на друга, различны только некоторые блоки. Некоторые "
 "головоломки сильно отличаются от остальных."
 
-#: ../data/gnome-klotski.appdata.xml.in.h:5
+#: data/org.gnome.Klotski.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: ../data/gnome-klotski.desktop.in.h:1 ../data/klotski.ui.h:6
-#: ../src/gnome-klotski.vala:66 ../src/gnome-klotski.vala:112
-msgid "Klotski"
-msgstr "Клоцки"
-
-#: ../data/gnome-klotski.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
-msgstr "игра;стратегия;логическая;пошаговая;"
+msgstr "game;strategy;logic;move;игра;стратегия;логическая;пошаговая;"
 
-#: ../data/klotski.ui.h:1
-msgid "Huarong Trail"
-msgstr "Huarong Trail"
-
-#: ../data/klotski.ui.h:2
-msgid "Challenge Pack"
-msgstr "Набор для любителей"
-
-#: ../data/klotski.ui.h:3
-msgid "Skill Pack"
-msgstr "Набор для опытных"
-
-#: ../data/klotski.ui.h:4
-msgid "Previous"
-msgstr "Предыдущая"
-
-#: ../data/klotski.ui.h:5
-msgid "Next"
-msgstr "Следующая"
-
-#: ../data/klotski.ui.h:7
-msgid "_Start Over"
-msgstr "_Начать сначала"
-
-#: ../data/klotski.ui.h:8
-msgid "Restart the current puzzle"
-msgstr "Перезапустить головоломку"
-
-#: ../data/klotski.ui.h:9
-msgid "_Change Puzzle"
-msgstr "_Заменить головоломку"
-
-#: ../data/klotski.ui.h:10
-msgid "Choose an other puzzle"
-msgstr "Выбрать другую головоломку"
-
-#: ../data/klotski-menus.ui.h:1
-msgid "_Scores"
-msgstr "_Результаты"
-
-#: ../data/klotski-menus.ui.h:2
-msgid "_Help"
-msgstr "_Справка"
-
-#: ../data/klotski-menus.ui.h:3
-msgid "_About"
-msgstr "_О приложении"
-
-#: ../data/klotski-menus.ui.h:4
-msgid "_Quit"
-msgstr "_Завершить"
-
-#: ../data/org.gnome.klotski.gschema.xml.h:1
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The puzzle in play"
 msgstr "Текущая головоломка"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:2
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:8
 msgid "The number of the puzzle being played."
-msgstr "Номер текущей головоломки"
+msgstr "Номер текущей головоломки."
 
-#: ../data/org.gnome.klotski.gschema.xml.h:3
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:13
+msgid "The width of the window"
+msgstr "Ширина окна"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:4
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:20
+msgid "The height of the window"
+msgstr "Высота окна"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: ../data/org.gnome.klotski.gschema.xml.h:5
-msgid "true if the window is maximized"
-msgstr "окно имеет максимальный размер"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "Флаг для включения развернутого режима"
 
-#: ../src/gnome-klotski.vala:17
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:29
+msgid "If “true”, the main window starts in maximized mode."
+msgstr "Если “true”, то главное окно запускается в развёрнутом состоянии."
+
+#. Translators: command-line option description, see 'gnome-klotski --help'
+#: src/gnome-klotski.vala:32
 msgid "Print release version and exit"
 msgstr "Показать номер версии и выйти"
 
-#: ../src/gnome-klotski.vala:114
-msgid "Sliding block puzzles"
-msgstr "Головоломки на перемещение блоков"
-
-#: ../src/gnome-klotski.vala:122
-msgid "translator-credits"
-msgstr ""
-"Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2015.\n"
-"Stas Solovey <whats_up@tut.by>, 2016."
-
-#. puzzle name
-#: ../src/klotski-window.vala:74
+#. Translators: puzzle name
+#: src/klotski-window.vala:91
 msgid "Only 18 Steps"
 msgstr "Только 18 шагов"
 
-#. puzzle name
-#: ../src/klotski-window.vala:87
+#. Translators: puzzle name
+#: src/klotski-window.vala:104
 msgid "Daisy"
-msgstr "Дэйзи"
+msgstr "Маргаритка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:100
+#. Translators: puzzle name
+#: src/klotski-window.vala:117
 msgid "Violet"
-msgstr "Вайолет"
+msgstr "Фиалка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:113
+#. Translators: puzzle name
+#: src/klotski-window.vala:130
 msgid "Poppy"
-msgstr "Поппи"
+msgstr "Мак"
 
-#. puzzle name
-#: ../src/klotski-window.vala:126
+#. Translators: puzzle name
+#: src/klotski-window.vala:143
 msgid "Pansy"
-msgstr "Панси"
+msgstr "Анютины глазки"
 
-#. puzzle name
-#: ../src/klotski-window.vala:139
+#. Translators: puzzle name
+#: src/klotski-window.vala:156
 msgid "Snowdrop"
-msgstr "Снегопад"
+msgstr "Подснежник"
 
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/klotski-window.vala:152
+#. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
+#: src/klotski-window.vala:169
 msgid "Red Donkey"
 msgstr "Красный осёл"
 
-#. puzzle name
-#: ../src/klotski-window.vala:165
+#. Translators: puzzle name
+#: src/klotski-window.vala:182
 msgid "Trail"
-msgstr "Грузовик"
+msgstr "Тропа"
 
-#. puzzle name
-#: ../src/klotski-window.vala:178
+#. Translators: puzzle name
+#: src/klotski-window.vala:195
 msgid "Ambush"
 msgstr "Засада"
 
-#. puzzle name
-#: ../src/klotski-window.vala:191
+#. Translators: puzzle name
+#: src/klotski-window.vala:208
 msgid "Agatka"
 msgstr "Агатка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:202
+#. Translators: puzzle name
+#: src/klotski-window.vala:219
 msgid "Success"
 msgstr "Успех"
 
-#. puzzle name
-#: ../src/klotski-window.vala:212
+#. Translators: puzzle name
+#: src/klotski-window.vala:229
 msgid "Bone"
 msgstr "Кость"
 
-#. puzzle name
-#: ../src/klotski-window.vala:225
+#. Translators: puzzle name
+#: src/klotski-window.vala:242
 msgid "Fortune"
-msgstr "Фортуна"
+msgstr "Удача"
 
-#. puzzle name
-#: ../src/klotski-window.vala:239
+#. Translators: puzzle name
+#: src/klotski-window.vala:256
 msgid "Fool"
 msgstr "Дурак"
 
-#. puzzle name
-#: ../src/klotski-window.vala:249
+#. Translators: puzzle name
+#: src/klotski-window.vala:266
 msgid "Solomon"
 msgstr "Соломон"
 
-#. puzzle name
-#: ../src/klotski-window.vala:262
+#. Translators: puzzle name
+#: src/klotski-window.vala:279
 msgid "Cleopatra"
 msgstr "Клеопатра"
 
-#. puzzle name
-#: ../src/klotski-window.vala:274
+#. Translators: puzzle name
+#: src/klotski-window.vala:291
 msgid "Shark"
 msgstr "Акула"
 
-#. puzzle name
-#: ../src/klotski-window.vala:286
+#. Translators: puzzle name
+#: src/klotski-window.vala:303
 msgid "Rome"
 msgstr "Рим"
 
-#. puzzle name
-#: ../src/klotski-window.vala:298
+#. Translators: puzzle name
+#: src/klotski-window.vala:315
 msgid "Pennant Puzzle"
 msgstr "Головоломка Вымпел"
 
-#. puzzle name
-#: ../src/klotski-window.vala:311
+#. Translators: puzzle name
+#: src/klotski-window.vala:328
 msgid "Ithaca"
-msgstr "Итхаца"
+msgstr "Итака"
 
-#. puzzle name
-#: ../src/klotski-window.vala:334
+#. Translators: puzzle name
+#: src/klotski-window.vala:351
 msgid "Pelopones"
 msgstr "Пелопонес"
 
-#. puzzle name
-#: ../src/klotski-window.vala:346
+#. Translators: puzzle name
+#: src/klotski-window.vala:363
 msgid "Transeuropa"
 msgstr "Европа"
 
-#. puzzle name
-#: ../src/klotski-window.vala:358
+#. Translators: puzzle name
+#: src/klotski-window.vala:375
 msgid "Lodzianka"
 msgstr "Лодзянка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:369
+#. Translators: puzzle name
+#: src/klotski-window.vala:386
 msgid "Polonaise"
 msgstr "Полонез"
 
-#. puzzle name
-#: ../src/klotski-window.vala:380
+#. Translators: puzzle name
+#: src/klotski-window.vala:397
 msgid "Baltic Sea"
 msgstr "Балтийское море"
 
-#. puzzle name
-#: ../src/klotski-window.vala:392
+#. Translators: puzzle name
+#: src/klotski-window.vala:409
 msgid "American Pie"
 msgstr "Американский пирог"
 
-#. puzzle name
-#: ../src/klotski-window.vala:408
+#. Translators: puzzle name
+#: src/klotski-window.vala:425
 msgid "Traffic Jam"
 msgstr "Пробка"
 
-#. puzzle name
-#: ../src/klotski-window.vala:419
+#. Translators: puzzle name
+#: src/klotski-window.vala:436
 msgid "Sunshine"
 msgstr "Солнечное сияние"
 
-#. Label on the scores dialog, next to dropdown */
-#: ../src/klotski-window.vala:527
+#. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
+#: src/klotski-window.vala:554
 msgid "Puzzle"
 msgstr "Головоломка"
 
-#: ../src/klotski-window.vala:781
-#, c-format
-msgid "Moves: %d"
-msgstr "Ходов: %d"
-
-#: ../src/klotski-window.vala:784
+#. Translators: headerbar title, when the puzzle is solved
+#: src/klotski-window.vala:893
 msgid "Level completed."
 msgstr "Уровень пройден."
+
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1118
+msgid "Lars Rydlinge (original author)"
+msgstr "Lars Rydlinge (автор начальной версии)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1122
+msgid "Robert Ancell (port to vala)"
+msgstr "Robert Ancell (портирование на vala)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1126
+msgid "John Cheetham (port to vala)"
+msgstr "John Cheetham (портирование на vala)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/klotski-window.vala:1130
+msgid "Andrew Sobala"
+msgstr "Andrew Sobala"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/klotski-window.vala:1138
+msgid "Sliding block puzzles"
+msgstr "Головоломки на перемещение блоков"
+
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/klotski-window.vala:1142
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "Copyright © 1999-2008 – Lars Rydlinge"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/klotski-window.vala:1146
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "Copyright © %u-%u – Michael Catanzaro"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/klotski-window.vala:1150
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "Copyright © %u-%u – Arnaud Bonatti"
+
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/klotski-window.vala:1156
+msgid "translator-credits"
+msgstr ""
+"Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2015.\n"
+"Stas Solovey <whats_up@tut.by>, 2016.\n"
+"Ser82-png <sw@atrus.ru>, 2022."
+
+#~ msgid "Restart the current puzzle"
+#~ msgstr "Перезапустить головоломку"
+
+#~ msgid "Moves: %d"
+#~ msgstr "Ходов: %d"
