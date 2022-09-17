@@ -7,13 +7,13 @@
 # Bruno Brouard <annoa.b@gmail.com>, 2007-2008, 2012.
 # Claude Paroz <claude@2xlibre.net>, 2007-2008.
 # Julien Hardelin <jhardlin@orange.fr>, 2020.
-# Charles Monzat <charles.monzat@free.fr>, 2018-2021.
+# Charles Monzat <charles.monzat@free.fr>, 2018-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Klotski V2.10\n"
-"POT-Creation-Date: 2021-02-24 21:59+0000\n"
-"PO-Revision-Date: 2021-03-13 11:08+0100\n"
+"POT-Creation-Date: 2021-03-31 18:41+0000\n"
+"PO-Revision-Date: 2022-04-10 22:24+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -553,7 +553,7 @@ msgstr ""
 "GNOME</citetitle>. Vous pouvez également obtenir une copie de la "
 "<citetitle>GNU General Public License</citetitle> à la Free Software "
 "Foundation en visitant <ulink type=\"http\" url=\"http://www.fsf.org\">leur "
-"site Web</ulink> ou en écrivant à <_:address-1/>"
+"site web</ulink> ou en écrivant à <_:address-1/>"
 
 #. (itstool) path: para/ulink
 #: C/legal.xml:9
