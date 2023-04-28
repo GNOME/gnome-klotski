@@ -11,7 +11,7 @@
   <description xml:lang="en">Slide blocks to solve the puzzle</description>
 
   <homepage rdf:resource="https://wiki.gnome.org/Apps/Klotski" />
-  <mailing-list rdf:resource="https://mail.gnome.org/mailman/listinfo/games-list" />
+  <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="https://download.gnome.org/sources/gnome-klotski/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-klotski/issues/" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
