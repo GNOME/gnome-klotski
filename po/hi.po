@@ -8,296 +8,525 @@
 # Rajesh Ranjan <rranjan@redhat.com>, 2005, 2006, 2007.
 # Ravishankar Shrivastava <raviratlami@aol.in>, 2009.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009, 2013.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master.hi\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"klotski&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:17+0000\n"
-"PO-Revision-Date: 2013-03-25 15:59+0530\n"
-"Last-Translator: raj <raj>\n"
-"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
+"POT-Creation-Date: 2022-07-28 19:26+0000\n"
+"PO-Revision-Date: 2024-04-02 14:43+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 46.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../data/gnome-klotski.desktop.in.in.h:1 ../src/gnome-klotski.vala:475
-#: ../src/gnome-klotski.vala:493 ../src/gnome-klotski.vala:955
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
+#: data/ui/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Puzzle-related"
+msgstr "पहेली-संबंधी"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; toggles the game menu
+#: data/ui/help-overlay.ui:36
+msgctxt "shortcut window"
+msgid "Toggle game menu"
+msgstr "खेल मेनू टॉगल करें"
+
+#. Translators: Ctrl-Shift-N shortcut description in the Keyboard Shortcuts dialog, section "Puzzle-related"; restarts the current puzzle
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Restart"
+msgstr "पुनर्प्रारंभ"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains the actions for selecting a new puzzle
+#: data/ui/help-overlay.ui:54
+msgctxt "shortcut window"
+msgid "Change Puzzle popover"
+msgstr "पहेली पॉपओवर बदलें"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Headerbar"; toggles the Change Puzzle menu
+#: data/ui/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Select new puzzle"
+msgstr "नई पहेली चुनें"
+
+#. Translators: Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzle
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Previous puzzle"
+msgstr "पिछली पहेली"
+
+#. Translators: Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzle
+#: data/ui/help-overlay.ui:75
+msgctxt "shortcut window"
+msgid "Next puzzle"
+msgstr "अगली पहेली"
+
+#. Translators: Page_Up action description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to previous puzzles group
+#: data/ui/help-overlay.ui:83
+msgctxt "shortcut window"
+msgid "Previous puzzles group"
+msgstr "पिछला पहेली समूह"
+
+#. Translators: Page_Down shortcut description in the Keyboard Shortcuts dialog, section "Change Puzzle popover"; switch to next puzzles group
+#: data/ui/help-overlay.ui:91
+msgctxt "shortcut window"
+msgid "Next puzzles group"
+msgstr "अगला पहेली समूह"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains (only) "Scores dialog"
+#: data/ui/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "Scores"
+msgstr "स्कोर"
+
+#. Translators: Ctrl-S shortcut description in the Keyboard Shortcuts dialog, section "Scores"
+#: data/ui/help-overlay.ui:106
+msgctxt "shortcut window"
+msgid "Scores dialog"
+msgstr "स्कोर संवाद"
+
+#. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Help", "About", "Quit"...
+#: data/ui/help-overlay.ui:116
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "सामान्य"
+
+#. Translators: F10 shortcut description in the Keyboard Shortcuts dialog, section "Generic": toggles the hamburger menu
+#: data/ui/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "मुख्य मेनू टॉगल करें"
+
+#. Translators: Ctrl-? shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens Shortcuts dialog
+#: data/ui/help-overlay.ui:129
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "कीबोर्ड शॉर्टकट"
+
+#. Translators: F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": opens the application help
+#: data/ui/help-overlay.ui:137
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "सहायता"
+
+#. Translators: Shift-F1 shortcut description in the Keyboard Shortcuts dialog, section "Generic": shows the About dialog
+#: data/ui/help-overlay.ui:145
+msgctxt "shortcut window"
+msgid "About"
+msgstr "बारे में"
+
+#. Translators: Ctrl-Q shortcut description in the Keyboard Shortcuts dialog, section "Generic": quits the application
+#: data/ui/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "छोड़ें"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Scores dialog
+#: data/ui/klotski.ui:24
+msgid "_Scores"
+msgstr "स्कोर (_S)"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the Keyboard Shortcuts dialog
+#: data/ui/klotski.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "कीबोर्ड शॉर्टकट (_K)"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the help of the application
+#: data/ui/klotski.ui:36
+msgid "_Help"
+msgstr "सहायता (_H)"
+
+#. Translators: label of an entry in the Hamburger menu (with a mnemonic that appears pressing Alt); opens the About dialog
+#: data/ui/klotski.ui:41
+msgid "_About Klotski"
+msgstr "Klotski के बारे में (_A)"
+
+#. Translators: label of an entry in the game menu (with a mnemonic that appears pressing Alt); allows to directly restart the current puzzle
+#: data/ui/klotski.ui:50
+msgid "_Start Over"
+msgstr "नई शुरुआत (_S)"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains classical levels
+#: data/ui/klotski.ui:94
+msgid "Huarong Trail"
+msgstr "हुआरोंग ट्रेल"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains medium-difficulty levels
+#: data/ui/klotski.ui:106
+msgid "Challenge Pack"
+msgstr "चुनौती समूह"
+
+#. Translators: name of a levels pack, as seen in the Change Puzzle popover; contains hardest levels
+#: data/ui/klotski.ui:118
+msgid "Skill Pack"
+msgstr "कौशल समूह"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the previous level
+#: data/ui/klotski.ui:300
+msgid "Previous"
+msgstr "पिछला"
+
+#. Translators: in the Change Puzzle popover, label of the button for playing the next level
+#: data/ui/klotski.ui:313
+msgid "Next"
+msgstr "अगला"
+
+#. Translators: application name, as used in the window manager, the window title, the about dialog...
+#: data/ui/klotski.ui:328 data/ui/klotski.ui:339
+#: data/org.gnome.Klotski.desktop.in:3 src/gnome-klotski.vala:25
 msgid "Klotski"
-msgstr "क्लोत्सकी"
+msgstr "Klotski"
 
-#: ../data/gnome-klotski.desktop.in.in.h:2
+#. Translators: in the headerbar, button that allows via a popover to select a different puzzle (with a mnemonic that appears pressing Alt)
+#: data/ui/klotski.ui:346
+msgid "_Change Puzzle"
+msgstr "पहेली बदलें (_C)"
+
+#. Translators: tooltip text of the Change Puzzle menubutton, in the headerbar
+#: data/ui/klotski.ui:351
+msgid "Choose an other puzzle"
+msgstr "कोई अन्य पहेली चुनें"
+
+#. Translators: tooltip text of the Start Over button, in the headerbar
+#: data/ui/klotski.ui:364
+msgid "Moves counter"
+msgstr "चालों की गिनती"
+
+#: data/org.gnome.Klotski.appdata.xml.in:7
+msgid "GNOME Klotski"
+msgstr "GNOME Klotski"
+
+#: data/org.gnome.Klotski.appdata.xml.in:8 data/org.gnome.Klotski.desktop.in:4
 msgid "Slide blocks to solve the puzzle"
-msgstr "पज़ल समाधान के लिये ब्लॉक खिसकायें"
+msgstr "पहेली को सुलझाने के लिए ब्लॉकों को खिसकाएँ"
 
-#: ../data/gnome-klotski.desktop.in.in.h:3
+#: data/org.gnome.Klotski.appdata.xml.in:10
+msgid ""
+"GNOME Klotski is a set of block sliding puzzles. The objective is to move "
+"the patterned block to the area bordered by green markers. To do so, you’ll "
+"need to slide other blocks out of the way. Complete each puzzle in as few "
+"moves as possible!"
+msgstr ""
+"GNOME Klotski ब्लॉक फिसलन पहेलियों का एक समूह है। इसका उद्देश्य प्रतिमान वाले ब्लॉक को "
+"हरे निशान से घिरे क्षेत्र में ले जाना है। ऐसा करने के लिए, आपको अन्य ब्लॉकों को रास्ते से "
+"हटाना होगा। प्रत्येक पहेली को यथासंभव कम चालों में पूरा करें!"
+
+#: data/org.gnome.Klotski.appdata.xml.in:16
+msgid ""
+"GNOME Klotski comes with nearly thirty different puzzle layouts of varying "
+"difficulty. Some of the layouts are similar and only the size of one or more "
+"blocks differ. Other layouts have more variety."
+msgstr ""
+"GNOME Klotski अलग-अलग कठिनाई के लगभग तीस अलग-अलग पहेली अभिन्यास के साथ आता है। कुछ "
+"अभिन्यास समान हैं और केवल एक या अधिक ब्लॉक का आकार भिन्न है। अन्य अभिन्यास में अधिक "
+"विविधता है।"
+
+#: data/org.gnome.Klotski.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr "GNOME परियोजना"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
-msgstr "game;strategy;logic;move;"
+msgstr "game;strategy;logic;move;खेल;रणनीति;तर्क;चाल;"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:1
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:6
 msgid "The puzzle in play"
-msgstr "खेल में पजल"
+msgstr "खेल में पहेली"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:2
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
+#: data/org.gnome.Klotski.gschema.xml:8
 msgid "The number of the puzzle being played."
-msgstr "खेले जा रहे पजल की संख्या."
+msgstr "खेली जा रही पहेली की संख्या।"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:3
-#| msgid "The width of the main window in pixels."
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:13
+msgid "The width of the window"
+msgstr "विंडो की चौड़ाई"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-width'
+#: data/org.gnome.Klotski.gschema.xml:15
 msgid "Width of the window in pixels"
-msgstr "पिक्सेल में विंडो में चौड़ाई"
+msgstr "विंडो की चौड़ाई पिक्सल में"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:4
-#| msgid "The height of the main window in pixels."
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:20
+msgid "The height of the window"
+msgstr "विंडो की ऊंचाई"
+
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-height'
+#: data/org.gnome.Klotski.gschema.xml:22
 msgid "Height of the window in pixels"
-msgstr "पिक्सेल में विंडो की ऊंचाई."
+msgstr "विंडो की ऊंचाई पिक्सल में"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:5
-msgid "true if the window is maximized"
-msgstr "सही यदि विंडो सबसे बड़े आकार का होना चाहिए"
+#. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:27
+msgid "A flag to enable maximized mode"
+msgstr "अधिकतम मोड सक्षम करने के लिए एक ध्वज"
 
-#: ../data/org.gnome.klotski.gschema.xml.in.h:6
-msgid "true if the window is fullscren"
-msgstr "सही यदि विंडो पूर्णस्क्रीन है"
+#. Translators: description of a settings key, see 'dconf-editor /org/gnome/Klotski/window-is-maximized'
+#: data/org.gnome.Klotski.gschema.xml:29
+msgid "If “true”, the main window starts in maximized mode."
+msgstr "यदि \"सही\" है, तो मुख्य विंडो अधिकतम मोड में प्रारंभ होती है।"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:49
+#. Translators: command-line option description, see 'gnome-klotski --help'
+#: src/gnome-klotski.vala:32
+msgid "Print release version and exit"
+msgstr "रिलीज़ संस्करण प्रिंट करें और बाहर निकलें"
+
+#. Translators: puzzle name
+#: src/klotski-window.vala:91
 msgid "Only 18 Steps"
-msgstr "सिर्फ 18 चरण"
+msgstr "केवल 18 कदम"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:62
+#. Translators: puzzle name
+#: src/klotski-window.vala:104
 msgid "Daisy"
 msgstr "गुलबहार"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:75
+#. Translators: puzzle name
+#: src/klotski-window.vala:117
 msgid "Violet"
 msgstr "बैंगनी"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:88
+#. Translators: puzzle name
+#: src/klotski-window.vala:130
 msgid "Poppy"
-msgstr "पॉपी"
+msgstr "पोस्ता"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:101
+#. Translators: puzzle name
+#: src/klotski-window.vala:143
 msgid "Pansy"
 msgstr "पैंसी"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:114
+#. Translators: puzzle name
+#: src/klotski-window.vala:156
 msgid "Snowdrop"
-msgstr "स्नोड्रॉप"
+msgstr "बर्फ़ की बूँद"
 
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../src/gnome-klotski.vala:127
+#. Translators: puzzle name — sometimes called by french name "L’Âne Rouge" (with the same meaning)
+#: src/klotski-window.vala:169
 msgid "Red Donkey"
-msgstr "रेड डंकी"
+msgstr "लाल गधा"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:140
+#. Translators: puzzle name
+#: src/klotski-window.vala:182
 msgid "Trail"
-msgstr "पीछा करें"
+msgstr "पगडंडी"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:153
+#. Translators: puzzle name
+#: src/klotski-window.vala:195
 msgid "Ambush"
-msgstr "एंबुश"
+msgstr "घात"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:166
+#. Translators: puzzle name
+#: src/klotski-window.vala:208
 msgid "Agatka"
 msgstr "अगात्का"
 
 # libgnomeui/gnome-scores.c:94
-#. puzzle name
-#: ../src/gnome-klotski.vala:177
+#. Translators: puzzle name
+#: src/klotski-window.vala:219
 msgid "Success"
 msgstr "सफलता"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:187
+#. Translators: puzzle name
+#: src/klotski-window.vala:229
 msgid "Bone"
-msgstr "बोन"
+msgstr "हड्डी"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:200
+#. Translators: puzzle name
+#: src/klotski-window.vala:242
 msgid "Fortune"
 msgstr "सौभाग्य"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:214
+#. Translators: puzzle name
+#: src/klotski-window.vala:256
 msgid "Fool"
-msgstr "फूल"
+msgstr "मूर्ख"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:224
+#. Translators: puzzle name
+#: src/klotski-window.vala:266
 msgid "Solomon"
 msgstr "सोलोमन"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:237
+#. Translators: puzzle name
+#: src/klotski-window.vala:279
 msgid "Cleopatra"
 msgstr "क्लियोपैट्रा"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:249
+#. Translators: puzzle name
+#: src/klotski-window.vala:291
 msgid "Shark"
 msgstr "शार्क"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:261
+#. Translators: puzzle name
+#: src/klotski-window.vala:303
 msgid "Rome"
 msgstr "रोम"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:273
+#. Translators: puzzle name
+#: src/klotski-window.vala:315
 msgid "Pennant Puzzle"
-msgstr "पैनांट पजल"
+msgstr "पताका पहेली"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:286
+#. Translators: puzzle name
+#: src/klotski-window.vala:328
 msgid "Ithaca"
 msgstr "इथाका"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:309
+#. Translators: puzzle name
+#: src/klotski-window.vala:351
 msgid "Pelopones"
 msgstr "पेलोपोन्स"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:321
+#. Translators: puzzle name
+#: src/klotski-window.vala:363
 msgid "Transeuropa"
-msgstr "ट्रांसेरोपा"
+msgstr "ट्रांसयूरोपा"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:333
+#. Translators: puzzle name
+#: src/klotski-window.vala:375
 msgid "Lodzianka"
-msgstr "लोड्जिंका"
+msgstr "लॉड्ज़ियांका"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:344
+#. Translators: puzzle name
+#: src/klotski-window.vala:386
 msgid "Polonaise"
-msgstr "पोलोनेज"
+msgstr "पोलोनेस"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:355
+#. Translators: puzzle name
+#: src/klotski-window.vala:397
 msgid "Baltic Sea"
-msgstr "बाल्टिक सी"
+msgstr "बाल्टिक सागर"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:367
+#. Translators: puzzle name
+#: src/klotski-window.vala:409
 msgid "American Pie"
 msgstr "अमेरिकन पाई"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:383
+#. Translators: puzzle name
+#: src/klotski-window.vala:425
 msgid "Traffic Jam"
-msgstr "ट्रैफिक जाम"
+msgstr "यातायात जाम"
 
-#. puzzle name
-#: ../src/gnome-klotski.vala:394
+#. Translators: puzzle name
+#: src/klotski-window.vala:436
 msgid "Sunshine"
-msgstr "सनशाइन"
+msgstr "धूप"
 
-# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
-# libgnomeui/gnome-app-helper.c:95 libgnomeui/gnome-app-helper.h:534
-#: ../src/gnome-klotski.vala:439
-msgid "_Game"
-msgstr "खेल (_G)"
+#. Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed
+#: src/klotski-window.vala:554
+msgid "Puzzle"
+msgstr "पहेली"
 
-#. set of puzzles
-#: ../src/gnome-klotski.vala:441
-msgid "HuaRong Trail"
-msgstr "हुआरंग ट्रैल"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:443
-msgid "Challenge Pack"
-msgstr "चैलेंज पैक"
-
-#. set of puzzles
-#: ../src/gnome-klotski.vala:445
-msgid "Skill Pack"
-msgstr "स्किल पैक"
-
-#: ../src/gnome-klotski.vala:446
-msgid "_Restart Puzzle"
-msgstr "पजल पुनःप्रारंभ करें (_R)"
-
-#: ../src/gnome-klotski.vala:447
-msgid "Next Puzzle"
-msgstr "अगला पजल"
-
-#: ../src/gnome-klotski.vala:448
-msgid "Previous Puzzle"
-msgstr "पहले का पजल"
-
-#: ../src/gnome-klotski.vala:606
-msgid "_New"
-msgstr "नया (_N)"
-
-#: ../src/gnome-klotski.vala:614 ../src/gnome-klotski.vala:672
-msgid "_Fullscreen"
-msgstr "फुलस्क्रीन (_F)"
-
-#: ../src/gnome-klotski.vala:667
-msgid "_Leave Fullscreen"
-msgstr "पूर्ण स्क्रीन छोड़ें (_L)"
-
-#: ../src/gnome-klotski.vala:859
-#| msgid "Puzzle:"
-msgid "Puzzle: "
-msgstr "पहेली: "
-
-#: ../src/gnome-klotski.vala:873
-#, c-format
-msgid "Moves: %d"
-msgstr "चाल: %d"
-
-#: ../src/gnome-klotski.vala:876
+#. Translators: headerbar title, when the puzzle is solved
+#: src/klotski-window.vala:894
 msgid "Level completed."
-msgstr "स्तर पूर्ण."
+msgstr "स्तर पूर्ण।"
 
-#: ../src/gnome-klotski.vala:957
-msgid ""
-"Sliding Block Puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"स्लाइडिंग ब्लॉक पजल\n"
-"\n"
-"Klotski ग्नोम गेम का हिस्सा है."
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1119
+msgid "Lars Rydlinge (original author)"
+msgstr "लार्स रिडलिंग (मूल लेखक)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1123
+msgid "Robert Ancell (port to vala)"
+msgstr "रॉबर्ट एंसेल (वला में पोर्ट)"
+
+#. Translators: text crediting an author, in the about dialog
+#: src/klotski-window.vala:1127
+msgid "John Cheetham (port to vala)"
+msgstr "जॉन चीथम (वला में पोर्ट)"
+
+#. Translators: text crediting a documenter, in the about dialog
+#: src/klotski-window.vala:1131
+msgid "Andrew Sobala"
+msgstr "एंड्रयू सोबाला"
+
+#. Translators: small description of the game, seen in the About dialog
+#: src/klotski-window.vala:1139
+msgid "Sliding block puzzles"
+msgstr "फ़िसलने वाले ब्लॉक की पहेलियाँ"
+
+#. Translators: text crediting a maintainer, seen in the About dialog
+#: src/klotski-window.vala:1143
+msgid "Copyright © 1999-2008 – Lars Rydlinge"
+msgstr "कॉपीराइट © 1999-2008 - लार्स रिडलिंग"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/klotski-window.vala:1147
+#, c-format
+msgid "Copyright © %u-%u – Michael Catanzaro"
+msgstr "कॉपीराइट © %u-%u - माइकल कैटनज़ारो"
+
+#. Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end
+#: src/klotski-window.vala:1151
+#, c-format
+msgid "Copyright © %u-%u – Arnaud Bonatti"
+msgstr "कॉपीराइट © %u-%u - अरनॉड बोनाटी"
 
 #  Translator credits
-#: ../src/gnome-klotski.vala:964
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/klotski-window.vala:1157
 msgid "translator-credits"
 msgstr ""
 "रविशंकर श्रीवास्तव (raviratlami@yahoo.com)\n"
-"राजेश रंजन (rajeshkajha@yahoo.com)"
+"राजेश रंजन (rajeshkajha@yahoo.com)\n"
+"Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024"
+
+#~ msgid "true if the window is fullscren"
+#~ msgstr "सही यदि विंडो पूर्णस्क्रीन है"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:95 libgnomeui/gnome-app-helper.h:534
+#~ msgid "_Game"
+#~ msgstr "खेल (_G)"
+
+#~ msgid "_New"
+#~ msgstr "नया (_N)"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "फुलस्क्रीन (_F)"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "पूर्ण स्क्रीन छोड़ें (_L)"
+
+#~| msgid "Puzzle:"
+#~ msgid "Puzzle: "
+#~ msgstr "पहेली: "
+
+#, c-format
+#~ msgid "Moves: %d"
+#~ msgstr "चाल: %d"
+
+#~ msgid ""
+#~ "Sliding Block Puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "स्लाइडिंग ब्लॉक पजल\n"
+#~ "\n"
+#~ "Klotski ग्नोम गेम का हिस्सा है."
 
 # libgnomeprintui/gnome-print-paper-selector.c:1453
-#: ../src/gnome-klotski.vala:967
-msgid "GNOME Games web site"
-msgstr "ग्नोम खेल वेबसाइट"
+#~ msgid "GNOME Games web site"
+#~ msgstr "ग्नोम खेल वेबसाइट"
 
-#: ../src/gnome-klotski.vala:1017
-msgid "New Game"
-msgstr "नया खेल "
+#~ msgid "New Game"
+#~ msgstr "नया खेल "
 
-#: ../src/gnome-klotski.vala:1032
-msgid "Puzzle:"
-msgstr "पजल:"
+#~ msgid "Date"
+#~ msgstr "दिनांक"
 
-#: ../src/gnome-klotski.vala:1057
-msgid "Date"
-msgstr "दिनांक"
-
-#: ../src/gnome-klotski.vala:1060
-#| msgid "_Move"
-msgid "Moves"
-msgstr "चाल"
+#~| msgid "_Move"
+#~ msgid "Moves"
+#~ msgstr "चाल"
