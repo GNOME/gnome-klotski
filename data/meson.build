@@ -69,11 +69,11 @@ appdata_file = i18n.merge_file(
 )
 
 # Validate AppData file
-if appstream_util.found()
+if appstreamcli.found()
   test(
-    'validate-appdata', appstream_util,
+    'validate-metainfo', appstreamcli,
     args: [
-      'validate', '--nonet', appdata_file.full_path()
+      'validate', '--no-net', '--explain', appdata_file.full_path()
     ]
   )
 endif
