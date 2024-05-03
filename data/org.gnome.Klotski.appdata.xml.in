@@ -21,10 +21,9 @@
   </description>
   <screenshots>
     <screenshot height="398" width="748" type="default">
-      <image>https://people.gnome.org/~mcatanzaro/gnome-klotski.png</image>
+      <image>https://static.gnome.org/appdata/mcatanzaro-old/gnome-klotski.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://wiki.gnome.org/Apps/Klotski</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
@@ -37,33 +36,17 @@
   </provides>
   <launchable type="desktop-id">org.gnome.Klotski.desktop</launchable>
   <translation type="gettext">gnome-klotski</translation>
+  <url type="homepage">https://wiki.gnome.org/Apps/Klotski</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-klotski/issues/</url>
-  <url type="donation">https://www.gnome.org/friends/</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
   <url type="help">https://help.gnome.org/users/gnome-klotski/stable/</url>
-  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+  <url type="translate">https://l10n.gnome.org/module/gnome-klotski/</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/gnome-klotski/</url>
   <developer_name>The GNOME Project</developer_name>
-  <content_rating type="oars-1.0">
-    <content_attribute id="violence-cartoon">none</content_attribute>
-    <content_attribute id="violence-fantasy">none</content_attribute>
-    <content_attribute id="violence-realistic">none</content_attribute>
-    <content_attribute id="violence-bloodshed">none</content_attribute>
-    <content_attribute id="violence-sexual">none</content_attribute>
-    <content_attribute id="drugs-alcohol">none</content_attribute>
-    <content_attribute id="drugs-narcotics">none</content_attribute>
-    <content_attribute id="drugs-tobacco">none</content_attribute>
-    <content_attribute id="sex-nudity">none</content_attribute>
-    <content_attribute id="sex-themes">none</content_attribute>
-    <content_attribute id="language-profanity">none</content_attribute>
-    <content_attribute id="language-humor">none</content_attribute>
-    <content_attribute id="language-discrimination">none</content_attribute>
-    <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">none</content_attribute>
-    <content_attribute id="social-audio">none</content_attribute>
-    <content_attribute id="social-location">none</content_attribute>
-    <content_attribute id="social-contacts">none</content_attribute>
-    <content_attribute id="money-purchasing">none</content_attribute>
-    <content_attribute id="money-gambling">none</content_attribute>
-  </content_rating>
+  <developer id="org.gnome">
+    <name>The GNOME Project</name>
+  </developer>
+  <content_rating type="oars-1.1" />
 
   ​<releases>
     <!-- should be kept in versioning inverted order -->
