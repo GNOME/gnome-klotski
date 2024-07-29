@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-klotski\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-klotski/issues\n"
-"POT-Creation-Date: 2023-01-25 18:59+0000\n"
-"PO-Revision-Date: 2024-03-25 17:31+0300\n"
+"POT-Creation-Date: 2024-03-28 14:37+0000\n"
+"PO-Revision-Date: 2024-05-10 22:35+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.3\n"
 
 #. Translators: title of a section in the Keyboard Shortcuts dialog; contains "Toggle game menu" and "Restart"
 #: data/ui/help-overlay.ui:31
@@ -243,7 +243,7 @@ msgstr "GNOME Projesi"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Klotski.desktop.in:6
 msgid "game;strategy;logic;move;"
-msgstr "oyun;strateji;mantık;hamle;"
+msgstr "game;strategy;logic;move;oyun;strateji;mantık;hamle;"
 
 #. Translators: summary of a settings key, see 'dconf-editor /org/gnome/Klotski/level'
 #: data/org.gnome.Klotski.gschema.xml:6
