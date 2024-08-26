@@ -50,6 +50,7 @@ private class Klotski : Gtk.Application
         Intl.textdomain (GETTEXT_PACKAGE);
 
         Environment.set_application_name (PROGRAM_NAME);
+        Environment.set_prgname ("org.gnome.Klotski");
         Window.set_default_icon_name ("org.gnome.Klotski");
 
         Klotski app = new Klotski ();
