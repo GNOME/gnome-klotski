@@ -22,7 +22,7 @@ using Gtk;
 private class Klotski : Gtk.Application
 {
     /* Translators: application name, as used in the window manager, the window title, the about dialog... */
-    internal static string PROGRAM_NAME = _("Klotski");
+    internal const string PROGRAM_NAME = _("Klotski");
 
     private KlotskiWindow window;
 
