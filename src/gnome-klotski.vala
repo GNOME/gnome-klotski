@@ -81,9 +81,6 @@ private class Klotski : Gtk.Application
 
         add_action_entries (action_entries, this);
 
-        window = new KlotskiWindow ();
-        add_window (window);
-
         set_accels_for_action ("win.prev-puzzle",   {"Up"});        // TODO
         set_accels_for_action ("win.next-puzzle",   {"Down"});      // TODO a weird behaviour exists when you first change puzzle pack, then go to
         set_accels_for_action ("win.prev-pack",     {"Page_Up"});   // TODO the first/last one, click on a puzzle, and immediately hit Up or Down arrows.
@@ -102,12 +99,19 @@ private class Klotski : Gtk.Application
 
     protected override void activate ()
     {
+        if (get_active_window () == null) {
+            window = new KlotskiWindow ();
+            add_window (window);
+        }
+
         window.present ();
     }
 
     protected override void shutdown ()
     {
-        window.destroy ();
+        if (get_active_window () != null)
+            window.destroy ();
+
         base.shutdown ();
     }
 }
