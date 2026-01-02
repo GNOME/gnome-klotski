@@ -8,7 +8,7 @@ flatpak:
         MANIFEST_PATH: "build-aux/org.gnome.Klotski.json"
         FLATPAK_MODULE: "gnome-klotski"
         RUNTIME_REPO: "https://sdk.gnome.org/gnome-nightly.flatpakrepo"
-        APP_ID: " org.gnome.Klotski"
+        APP_ID: "org.gnome.Klotski"
     extends: .flatpak
 
 nightly:

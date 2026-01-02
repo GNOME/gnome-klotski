@@ -2,6 +2,7 @@
    This file is part of GNOME Klotski.
 
    Copyright (C) 2010-2013 Robert Ancell
+   Copyright (C) 2026 Andrey Kutejko
 
    GNOME Klotski is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -20,7 +21,7 @@
 using Gtk;
 
 [GtkTemplate (ui = "/org/gnome/Klotski/ui/klotski.ui")]
-private class KlotskiWindow : ApplicationWindow
+private class KlotskiWindow : Adw.ApplicationWindow
 {
     /* Puzzle Info */
     private struct LevelInfo
@@ -35,16 +36,10 @@ private class KlotskiWindow : ApplicationWindow
     /* Settings */
     private GLib.Settings settings;
 
-    private int window_width = 0;
-    private int window_height = 0;
-    private bool window_is_fullscreen = false;
-    private bool window_is_maximized = false;
-    private bool window_is_tiled = false;
-
     private const string KEY_LEVEL = "level";
 
     /* Widgets */
-    [GtkChild] private unowned HeaderBar headerbar;
+    [GtkChild] private unowned Adw.WindowTitle window_title;
     [GtkChild] private unowned Stack stack_packs;
     [GtkChild] private unowned Stack stack_puzzles;
     [GtkChild] private unowned Popover puzzles_popover;
@@ -52,9 +47,9 @@ private class KlotskiWindow : ApplicationWindow
     [GtkChild] private unowned MenuButton main_menubutton;
     private PuzzleView view;
 
-    [GtkChild] private unowned TreeView treeview_huarong;
-    [GtkChild] private unowned TreeView treeview_challenge;
-    [GtkChild] private unowned TreeView treeview_skill;
+    [GtkChild] private unowned ListView listview_huarong;
+    [GtkChild] private unowned ListView listview_challenge;
+    [GtkChild] private unowned ListView listview_skill;
 
     [GtkChild] private unowned Grid main_grid;
     [GtkChild] private unowned Button unfullscreen_button;
@@ -71,19 +66,23 @@ private class KlotskiWindow : ApplicationWindow
     private Puzzle puzzle;
 
     private int current_pack = -1;
-    private int current_level = -1;
+
+    private int _current_level = -1;
+    internal int current_level {
+        get { return _current_level; }
+        set { _current_level = value.clamp (0, levels.length - 1); }
+    }
 
     private Games.Scores.Context scores_context;
 
     /* The "puzzle name" remarks provide context for translation. Add new
      * puzzles at the end, or you'll mess up saved scores.
      */
-    private Gtk.ListStore liststore_huarong;
-    private Gtk.ListStore liststore_challenge;
-    private Gtk.ListStore liststore_skill;
-    private TreeIter [] puzzles_items;
+    private GLib.ListStore puzzle_states;
 
-    private static Gee.List<Games.Scores.Category> score_categories;
+    private string[] stack_names = { "huarong", "challenge", "skill" };
+
+    private static GenericArray<Games.Scores.Category> score_categories;
     /* Warning: reordering these will screw up import of old scores. */
     private const LevelInfo levels [] =
     {
@@ -466,6 +465,7 @@ private class KlotskiWindow : ApplicationWindow
         { "next-pack",      next_pack_cb        },
         { "prev-puzzle",    prev_puzzle_cb      },
         { "next-puzzle",    next_puzzle_cb      },
+        { "new-game-menu",  new_game_menu_cb     },
         { "start-game",     start_puzzle_cb     },
         { "unfullscreen",   unfullscreen        },
 
@@ -480,7 +480,7 @@ private class KlotskiWindow : ApplicationWindow
 
     class construct
     {
-        score_categories = new Gee.ArrayList<Games.Scores.Category> ();
+        score_categories = new GenericArray<Games.Scores.Category> ();
         for (uint8 i = 0; i < levels.length; i++)
         {
             score_categories.add (new Games.Scores.Category (normalize_map_name (levels [i].name),
@@ -498,45 +498,21 @@ private class KlotskiWindow : ApplicationWindow
         return null;
     }
 
-    private void parse_old_score (string line, out Games.Scores.Score? score, out Games.Scores.Category? category)
-    {
-        score = null;
-        category = null;
-
-        string [] tokens = line.split (" ");
-        if (tokens.length != 3)
-            return;
-
-        int64 date = Games.Scores.HistoryFileImporter.parse_date (tokens [0]);
-        if (date == 0)
-            return;
-
-        int level = int.parse (tokens [1]);
-        if (level == 0 && tokens [1] != "0")
-            return;
-        if (level < 0 || level > score_categories.size)
-            return;
-
-        int moves = int.parse (tokens [2]);
-        if (moves <= 0)
-            return;
-
-        score = new Games.Scores.Score (moves, date);
-        category = score_categories [level];
-    }
-
     construct
     {
         CssProvider css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Klotski/ui/klotski.css");
-        Gdk.Screen? gdk_screen = Gdk.Screen.get_default ();
-        if (gdk_screen != null) // else..?
-            StyleContext.add_provider_for_screen ((!) gdk_screen, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+        Gdk.Display? gdk_display = Gdk.Display.get_default ();
+        if (gdk_display != null) // else..?
+            StyleContext.add_provider_for_display ((!) gdk_display, css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         settings = new GLib.Settings ("org.gnome.Klotski");
-        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
-        if (settings.get_boolean ("window-is-maximized"))
-            maximize ();
+
+        settings.bind ("window-width", this, "default-width", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-height", this, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-is-maximized", this, "maximized", SettingsBindFlags.DEFAULT);
+
+        bind_property ("fullscreened", unfullscreen_button, "visible", BindingFlags.SYNC_CREATE);
 
         init_keyboard ();
         manage_high_contrast ();
@@ -548,61 +524,53 @@ private class KlotskiWindow : ApplicationWindow
         lookup_non_nullable_action ("next-puzzle",  out next_puzzle);
         lookup_non_nullable_action ("start-game",   out start_game);
 
-        scores_context = new Games.Scores.Context.with_importer_and_icon_name (
+        scores_context = new Games.Scores.Context (
             "gnome-klotski",
              /* Translators: in the Scores dialog, label indicating for which puzzle the best scores are displayed */
              _("Puzzle"),
-             this,
              category_request,
              Games.Scores.Style.POINTS_LESS_IS_BETTER,
-             new Games.Scores.HistoryFileImporter (parse_old_score),
              "org.gnome.Klotski");
 
-        // name, active, puzzle number (or -1), sensitive=false CSS hack
-        liststore_huarong   = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
-        liststore_challenge = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
-        liststore_skill     = new Gtk.ListStore (4, typeof (string), typeof (bool), typeof (int), typeof (bool));
-
-        puzzles_items = new TreeIter [levels.length];
+        puzzle_states = new GLib.ListStore (typeof (PuzzleState));
         for (uint8 i = 0; i < levels.length; i++)
         {
-            switch (levels [i].group)
-            {
-                case 0:
-                    liststore_huarong.append (out puzzles_items [i]);
-                    liststore_huarong.set (puzzles_items [i],
-                                           0, _(levels [i].name),
-                                           1, false,
-                                           2, i,
-                                           3, false);
-                    break;
-                case 1:
-                    liststore_challenge.append (out puzzles_items [i]);
-                    liststore_challenge.set (puzzles_items [i],
-                                             0, _(levels [i].name),
-                                             1, false,
-                                             2, i,
-                                             3, false);
-                    break;
-                case 2:
-                    liststore_skill.append (out puzzles_items [i]);
-                    liststore_skill.set (puzzles_items [i],
-                                         0, _(levels [i].name),
-                                         1, false,
-                                         2, i,
-                                         3, false);
-                    break;
-                default: assert_not_reached ();
-            }
+            var state = new PuzzleState ();
+            state.name = _(levels [i].name);
+            state.level_pack = levels [i].group;
+            state.level_index = i;
+            state.solved = false;
+            puzzle_states.append (state);
         }
 
-        treeview_huarong.set_model (liststore_huarong);
-        treeview_challenge.set_model (liststore_challenge);
-        treeview_skill.set_model (liststore_skill);
+        var puzzle_row_factory = new SignalListItemFactory ();
+        puzzle_row_factory.setup.connect (item => {
+            var list_item = (ListItem) item;
+            list_item.set_child (new PuzzleRow ());
+        });
+        puzzle_row_factory.bind.connect (item => {
+            var list_item = (ListItem) item;
+            var row = (PuzzleRow) list_item.get_child ();
+            var state = (PuzzleState) list_item.get_item ();
+            row.bind (state);
+        });
+        puzzle_row_factory.unbind.connect (item => {
+            var list_item = (ListItem) item;
+            var row = (PuzzleRow) list_item.get_child ();
+            // row.unbind ();
+        });
 
-        treeview_huarong.row_activated.connect (level_huarong_cb);
-        treeview_challenge.row_activated.connect (level_challenge_cb);
-        treeview_skill.row_activated.connect (level_skill_cb);
+        listview_huarong.set_factory (puzzle_row_factory);
+        listview_challenge.set_factory (puzzle_row_factory);
+        listview_skill.set_factory (puzzle_row_factory);
+
+        listview_huarong.model    = new SingleSelection (new FilterListModel (puzzle_states, new CustomFilter (s => ((PuzzleState ) s).level_pack == 0)));
+        listview_challenge.model  = new SingleSelection (new FilterListModel (puzzle_states, new CustomFilter (s => ((PuzzleState ) s).level_pack == 1)));
+        listview_skill.model      = new SingleSelection (new FilterListModel (puzzle_states, new CustomFilter (s => ((PuzzleState ) s).level_pack == 2)));
+
+        listview_huarong.activate.connect (level_cb);
+        listview_challenge.activate.connect (level_cb);
+        listview_skill.activate.connect (level_cb);
 
         view = new PuzzleView ();
         view.halign = Align.FILL;
@@ -610,11 +578,12 @@ private class KlotskiWindow : ApplicationWindow
         view.show ();
         view.hexpand = true;
         view.vexpand = true;
-        main_grid.add (view);
+        main_grid.attach (view, 0, 0, 1, 1);
 
         load_solved_state ();       // TODO use GSettings, or the history…
 
-        current_level = settings.get_int (KEY_LEVEL).clamp (0, levels.length - 1);
+        settings.bind (KEY_LEVEL, this, "current-level", SettingsBindFlags.DEFAULT);
+
         puzzles_popover.show.connect (() => update_popover (true));
         update_popover (true);      // or “Start Over” logically complains
 
@@ -630,86 +599,14 @@ private class KlotskiWindow : ApplicationWindow
     }
 
     /*\
-    * * Window management callbacks
-    \*/
-
-    [GtkCallback]
-    private void on_size_allocate (Allocation allocation)
-    {
-        update_window_state ();
-    }
-
-    [GtkCallback]
-    private bool on_window_state_event (Gdk.EventWindowState event)
-    {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            window_is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-
-        /* fullscreen: saved as maximized */
-        bool window_was_fullscreen = window_is_fullscreen;
-        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
-            window_is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
-        if (window_was_fullscreen && !window_is_fullscreen)
-            on_unfullscreen ();
-        else if (!window_was_fullscreen && window_is_fullscreen)
-            on_fullscreen ();
-
-        /* tiled: not saved, but should not change saved window size */
-        Gdk.WindowState tiled_state = Gdk.WindowState.TILED
-                                    | Gdk.WindowState.TOP_TILED
-                                    | Gdk.WindowState.BOTTOM_TILED
-                                    | Gdk.WindowState.LEFT_TILED
-                                    | Gdk.WindowState.RIGHT_TILED;
-        if ((event.changed_mask & tiled_state) != 0)
-            window_is_tiled = (event.new_window_state & tiled_state) != 0;
-
-        return false;
-    }
-    protected void on_fullscreen ()
-    {
-        unfullscreen_button.show ();
-    }
-    protected void on_unfullscreen ()
-    {
-        unfullscreen_button.hide ();
-    }
-
-    [GtkCallback]
-    private void on_destroy ()
-    {
-        settings.set_int (KEY_LEVEL, current_level);
-        save_window_state ();
-    }
-
-    /*\
-    * * manage window state
-    \*/
-
-    private void update_window_state () // called on size-allocate
-    {
-        if (window_is_maximized || window_is_tiled || window_is_fullscreen)
-            return;
-        int? _window_width = null;
-        int? _window_height = null;
-        get_size (out _window_width, out _window_height);
-        if (_window_width == null || _window_height == null)
-            return;
-        window_width = (!) _window_width;
-        window_height = (!) _window_height;
-    }
-
-    private void save_window_state ()   // called on destroy
-    {
-        settings.delay ();
-        settings.set_int ("window-width", window_width);
-        settings.set_int ("window-height", window_height);
-        settings.set_boolean ("window-is-maximized", window_is_maximized || window_is_fullscreen);
-        settings.apply ();
-    }
-
-    /*\
     * * Popover’s buttons callbacks
     \*/
+
+    private void new_game_menu_cb ()
+    {
+        update_popover (false);
+        puzzles_popover.popup ();
+    }
 
     private void prev_pack_cb ()
     {
@@ -765,14 +662,14 @@ private class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle_cb ()
     {
-        TreeView tree = ((TreeView) (((ScrolledWindow) (stack_puzzles.get_children ().nth_data (current_pack))).get_child ()));
-        TreeModel? model = tree.get_model ();
-        if (model == null)
-            assert_not_reached ();
-        TreeIter iter;
+        PuzzleState? state = null;
 
-        if (tree.get_selection ().get_selected (out model, out iter))
-            start_puzzle_from_iter ((Gtk.ListStore) model, iter);
+        var listview = listview_for_pack (current_pack);
+        if (listview != null)
+            state = (PuzzleState?) ((SingleSelection) ((!) listview).get_model ()).get_selected_item ();
+
+        if (state != null)
+            start_puzzle_from_state ((!) state);
         else
             start_puzzle ();
         puzzles_popover.hide ();
@@ -784,30 +681,52 @@ private class KlotskiWindow : ApplicationWindow
 
     private void update_popover (bool make_current)
     {
-        int current_level_pack;
-        TreeIter iter = puzzles_items [current_level];
-        if (liststore_huarong.iter_is_valid (iter))          // "slow"
-            current_level_pack = 0;
-        else if (liststore_challenge.iter_is_valid (iter))   // same here
-            current_level_pack = 1;
-        else
-            current_level_pack = 2;
+        var puzzle_state = (PuzzleState) puzzle_states.get_item (current_level);
+        int current_level_pack = puzzle_state.level_pack;
 
         if (make_current)
             current_pack = current_level_pack;
 
-        /* select or not a level */
-        TreeSelection selection = ((TreeView) (((ScrolledWindow) (stack_puzzles.get_children ().nth_data (current_pack))).get_child ())).get_selection ();
-        if (current_pack == current_level_pack)
-            selection.select_iter (iter);
-        else
-            selection.unselect_all ();
+        select_puzzle_state ((!) listview_for_pack (current_level_pack), puzzle_state);
 
         update_buttons_state ();
 
         /* update stacks */
-        stack_packs.set_visible_child (stack_packs.get_children ().nth_data (current_pack));
-        stack_puzzles.set_visible_child (stack_puzzles.get_children ().nth_data (current_pack));
+        stack_packs.set_visible_child_name (stack_names[current_pack]);
+        stack_puzzles.set_visible_child_name (stack_names[current_pack]);
+    }
+
+    private ListView? listview_for_pack (int level_pack)
+    {
+        switch (level_pack)
+        {
+            case 0:
+                return listview_huarong;
+
+            case 1:
+                return listview_challenge;
+
+            case 2:
+                return listview_skill;
+
+            default:
+                return null;
+        }
+    }
+
+    private static void select_puzzle_state (ListView listview, PuzzleState state)
+    {
+        var model = (!) listview.get_model ();
+        var n = model.get_n_items ();
+        for (uint i = 0; i < n; ++i)
+        {
+            if (model.get_item (i) == state)
+            {
+                model.select_item (i, true);
+                return;
+            }
+        }
+        model.unselect_all ();
     }
 
     private void update_buttons_state ()
@@ -823,36 +742,20 @@ private class KlotskiWindow : ApplicationWindow
     * * Selecting puzzle by the treeview
     \*/
 
-    private void level_huarong_cb (TreePath path, TreeViewColumn column)
+    private void level_cb (ListView view, uint row)
     {
-        level_cb (liststore_huarong, path, column);
-    }
-    private void level_challenge_cb (TreePath path, TreeViewColumn column)
-    {
-        level_cb (liststore_challenge, path, column);
-    }
-    private void level_skill_cb (TreePath path, TreeViewColumn column)
-    {
-        level_cb (liststore_skill, path, column);
-    }
-    private void level_cb (Gtk.ListStore liststore, TreePath path, TreeViewColumn column)
-    {
-        TreeIter iter;
-
-        liststore.get_iter (out iter, path);
-        start_puzzle_from_iter (liststore, iter);
+        puzzles_popover.hide ();
+        var state = (PuzzleState) ((!) view.get_model ()).get_item (row);
+        start_puzzle_from_state (state);
     }
 
     /*\
     * * Creating and starting game
     \*/
 
-    private void start_puzzle_from_iter (Gtk.ListStore model, TreeIter iter)
+    private void start_puzzle_from_state (PuzzleState state)
     {
-        Value val;
-        model.get_value (iter, 2, out val);
-
-        int requested_level = (int) val;
+        int requested_level = state.level_index;
         if (requested_level < 0)
             return;
 
@@ -863,7 +766,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private void start_puzzle ()
     {
-        headerbar.set_title (_(levels [current_level].name));
+        window_title.set_title (_(levels [current_level].name));
         if (puzzle_init_done)
             SignalHandler.disconnect_by_func (puzzle, null, this);
         puzzle = new Puzzle (levels [current_level].width, levels [current_level].height, levels [current_level].data);
@@ -891,7 +794,7 @@ private class KlotskiWindow : ApplicationWindow
         if (puzzle.game_over ())
         {
             /* Translators: headerbar title, when the puzzle is solved */
-            headerbar.set_title (_("Level completed."));    // FIXME remove the dot
+            window_title.set_title (_("Level completed."));    // FIXME remove the dot
             game_score ();
         }
     }
@@ -925,10 +828,11 @@ private class KlotskiWindow : ApplicationWindow
         {
         }
 
-        puzzle_solved (puzzles_items [current_level], true);
+        ((PuzzleState) puzzle_states.get_item (current_level)).solved = true;
 
         scores_context.add_score.begin (puzzle.moves,
                                         score_categories [current_level],
+                                        this,
                                         null,
                                         (object, result) => {
                 try
@@ -944,7 +848,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private void show_scores ()
     {
-        scores_context.run_dialog ();
+        scores_context.present_dialog (this);
     }
 
     private string get_level_key (int level_number)
@@ -993,33 +897,19 @@ private class KlotskiWindow : ApplicationWindow
             {
             }
 
-            puzzle_solved (puzzles_items [i], is_solved);
+            ((PuzzleState) puzzle_states.get_item (i)).solved = is_solved;
         }
-    }
-
-    private void puzzle_solved (TreeIter iter, bool solved)
-    {
-        if (liststore_huarong.iter_is_valid (iter))          // "slow"
-            liststore_huarong.set (iter, 1, solved);
-        else if (liststore_challenge.iter_is_valid (iter))   // same here
-            liststore_challenge.set (iter, 1, solved);
-        else
-            liststore_skill.set (iter, 1, solved);
     }
 
     /*\
     * * manage high-constrast
     \*/
 
-    private StyleContext window_style_context;
-
     private inline void manage_high_contrast ()
     {
         Gtk.Settings? nullable_gtk_settings = Gtk.Settings.get_default ();
         if (nullable_gtk_settings == null)
             return;
-
-        window_style_context = get_style_context ();
 
         Gtk.Settings gtk_settings = (!) nullable_gtk_settings;
         gtk_settings.notify ["gtk-theme-name"].connect (update_highcontrast_state);
@@ -1040,22 +930,21 @@ private class KlotskiWindow : ApplicationWindow
         highcontrast_state = highcontrast_new_state;
 
         if (highcontrast_new_state)
-            window_style_context.add_class ("hc-theme");
+            add_css_class ("hc-theme");
         else
-            window_style_context.remove_class ("hc-theme");
+            remove_css_class ("hc-theme");
     }
 
     /*\
     * * keyboard shortcuts
     \*/
 
-    private EventControllerKey key_controller;          // for keeping in memory
-
     private inline void init_keyboard ()
     {
-        key_controller = new EventControllerKey (this);
+        var key_controller = new EventControllerKey ();
         key_controller.propagation_phase = PropagationPhase.CAPTURE;
         key_controller.key_pressed.connect (on_key_pressed);
+        ((Widget) this).add_controller (key_controller);
     }
 
     private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
@@ -1102,14 +991,7 @@ private class KlotskiWindow : ApplicationWindow
 
     private inline void help_cb ()
     {
-        try
-        {
-            show_uri_on_window (this, "help:gnome-klotski", get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        new UriLauncher ("help:gnome-klotski").launch.begin (this, null, () => {});
     }
 
     private inline void about_cb ()
@@ -1124,15 +1006,20 @@ private class KlotskiWindow : ApplicationWindow
 
 
         /* Translators: text crediting an author, in the about dialog */
-            _("John Cheetham (port to vala)")
+            _("John Cheetham (port to vala)"),
+
+
+        /* Translators: text crediting an author, in the about dialog */
+            _("Andrey Kutejko (port to Gtk4 and libadwaita)")
         };
 
         /* Translators: text crediting a documenter, in the about dialog */
         string [] documenters = { _("Andrew Sobala") };
 
-        show_about_dialog (this,
+        Adw.show_about_dialog (this,
                            /* Translators: name of the program, seen in the About dialog */
-                           "program-name", Klotski.PROGRAM_NAME,
+                           "application-name", Klotski.PROGRAM_NAME,
+                           "application-icon", "org.gnome.Klotski",
 
                            "version", VERSION,
                            /* Translators: small description of the game, seen in the About dialog */
@@ -1148,13 +1035,67 @@ private class KlotskiWindow : ApplicationWindow
 
 
                              /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
-                             _("Copyright \xc2\xa9 %u-%u – Arnaud Bonatti").printf (2015, 2020),
+                             _("Copyright \xc2\xa9 %u-%u – Arnaud Bonatti").printf (2015, 2020) + "\n"+
+
+                             /* Translators: text crediting a maintainer, seen in the About dialog; the %u are replaced with the years of start and end */
+                             _("Copyright \xc2\xa9 2026 – Andrey Kutejko"),
+
                            "license-type", License.GPL_3_0, // means "GNU General Public License, version 3.0 or later"
-                           "authors", authors,
+                           "developers", authors,
                            "documenters", documenters,
-                           "logo-icon-name", "org.gnome.Klotski",
                            /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                            "translator-credits", _("translator-credits"),
-                           "website", "https://wiki.gnome.org/Apps/Klotski");
+                           "website", "https://gitlab.gnome.org/GNOME/gnome-klotski");
+    }
+}
+
+class PuzzleState : Object
+{
+    public string name { get; set; }
+    public int level_pack { get; set; }
+    public int level_index { get; set; }
+    public bool solved { get; set; default = false; }
+}
+
+class PuzzleRow : Widget {
+    public string puzzle_name { get; set; }
+    public bool solved { get; set; }
+
+    private Label name_label;
+    private Picture solved_picture;
+    private GenericArray<Binding> bindings = new GenericArray<Binding> ();
+
+    construct {
+        var layout = new BoxLayout (Orientation.HORIZONTAL);
+        layout.spacing = 2;
+        layout_manager = layout;
+
+        hexpand = true;
+        vexpand = true;
+
+        name_label = new Gtk.Label ("");
+        name_label.hexpand = true;
+        name_label.xalign = 0;
+        name_label.set_parent (this);
+
+        solved_picture = new Picture.for_resource ("/org/gnome/Klotski/ui/solved.svg");
+        solved_picture.set_parent (this);
+
+        bind_property ("puzzle_name", name_label, "label", BindingFlags.SYNC_CREATE);
+        bind_property ("solved", solved_picture, "visible", BindingFlags.SYNC_CREATE);
+    }
+
+    public void bind (PuzzleState state)
+    {
+        unbind ();
+        bindings.add (state.bind_property ("name", this, "puzzle_name", BindingFlags.SYNC_CREATE));
+        bindings.add (state.bind_property ("solved", this, "solved", BindingFlags.SYNC_CREATE));
+    }
+
+    public void unbind ()
+    {
+        foreach (var b in bindings)
+            b.unbind ();
+        bindings.remove_range (0, bindings.length);
     }
 }
