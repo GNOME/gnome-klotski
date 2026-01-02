@@ -2,6 +2,7 @@
    This file is part of GNOME Klotski.
 
    Copyright (C) 2010-2013 Robert Ancell
+   Copyright (C) 2026 Andrey Kutejko
 
    GNOME Klotski is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -17,9 +18,8 @@
    with GNOME Klotski.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-private class PuzzleView : Gtk.DrawingArea
+private class PuzzleView : Gtk.Widget
 {
-    private const int SPACE_OFFSET = 4;
     private const int SPACE_PADDING = 5;
     private const int THEME_OVERLAY_SIZE = 8;
     private const int THEME_TILE_SEGMENTS = 27;
@@ -41,13 +41,22 @@ private class PuzzleView : Gtk.DrawingArea
 
     private char last_piece_id = '\0';
 
-    private double kx = 0;
-    private double ky = 0;
+    private int kx {
+        private get {
+            int kwidth  = puzzle.width  * tile_size + SPACE_PADDING;
+            return (get_width ()  - kwidth)  / 2;
+        }
+    }
+    private int ky {
+        private get {
+            int kheight = puzzle.height * tile_size + SPACE_PADDING;
+            return (get_height () - kheight) / 2;
+        }
+    }
 
-    private bool tiles_handle_init_done = false;
     private Rsvg.Handle tiles_handle;
     private File image_file;
-    private Cairo.Surface surface;
+    private Gdk.MemoryTexture[] sprites;
 
     private bool puzzle_init_done = false;
     private Puzzle _puzzle;
@@ -70,18 +79,11 @@ private class PuzzleView : Gtk.DrawingArea
         }
     }
 
-    Gtk.StyleContext style_context;
     construct
     {
         init_mouse ();
 
-        style_context = get_style_context ();
-
         set_size_request (250, 250);    // probably too small, but window requests 600x400 anyway
-        set_events (Gdk.EventMask.EXPOSURE_MASK         |
-                    Gdk.EventMask.BUTTON_PRESS_MASK     |
-                    Gdk.EventMask.POINTER_MOTION_MASK   |
-                    Gdk.EventMask.BUTTON_RELEASE_MASK   );
 
         load_image ();
     }
@@ -90,7 +92,7 @@ private class PuzzleView : Gtk.DrawingArea
     {
         get
         {
-            int s = int.min ((get_allocated_width () - SPACE_PADDING) / puzzle.width, (get_allocated_height () - SPACE_PADDING) / puzzle.height);
+            int s = int.min ((get_width () - SPACE_PADDING) / puzzle.width, (get_height () - SPACE_PADDING) / puzzle.height);
             /* SVG theme renders best when tile size is multiple of 2 */
             if (s % 2 != 0)
                 s--;
@@ -118,131 +120,123 @@ private class PuzzleView : Gtk.DrawingArea
             stderr.printf ("%s %s\n", "Error in puzzle-view.vala load image:", e.message);
             Posix.exit (Posix.EXIT_FAILURE);
         }
-        tiles_handle_init_done = true;
     }
 
-    protected override bool draw (Cairo.Context cr)
+    protected override void snapshot (Gtk.Snapshot snapshot)
     {
+        snapshot.translate ({ (float) kx, (float) ky });
+
+        var builder = new Gsk.PathBuilder ();
+        builder.add_rect ({ { 0, 0 }, { puzzle.width * tile_size, puzzle.height * tile_size } });
+        var rect_path = builder.to_path ();
+
+        snapshot.append_stroke (rect_path, new Gsk.Stroke (1), get_color ());
+
         if (tile_size != render_size)
         {
-            if (tiles_handle_init_done)
+            try
             {
-                int height = tile_size * 2;
-                int width = tile_size * THEME_TILE_SEGMENTS;
+                int theight = tile_size * 2;
+                int twidth = tile_size * THEME_TILE_SEGMENTS;
 
-                surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, width, height);
+                var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, twidth, theight);
+
                 Cairo.Context c = new Cairo.Context (surface);
+                tiles_handle.render_document (c, {0.0, 0.0, (double) twidth, (double) theight});
 
-                /* calc scale factor */
-                double sfw = (double) width / 918.0;
-                double sfh = (double) height / 68.0;
+                int stride = surface.get_stride ();
+                unowned uchar[] data = surface.get_data ();
+                data.length = theight * stride;
 
-                c.scale (sfw, sfh);
+                var bytes = new Bytes (data);
 
-                tiles_handle.render_cairo (c);
+                sprites = new Gdk.MemoryTexture[THEME_TILE_SEGMENTS];
+                for (int s = 0; s < THEME_TILE_SEGMENTS; ++s)
+                {
+                    var offset = tile_size / 2 * stride + tile_size * s * 4;
+                    var size = tile_size * stride;
+                    assert (offset + size < bytes.get_size ());
+                    var sprite_bytes = new Bytes.from_bytes (bytes, offset, size);
+
+                    sprites[s] = new Gdk.MemoryTexture (
+                        tile_size,
+                        tile_size,
+                        Gdk.MemoryFormat.B8G8R8A8_PREMULTIPLIED,
+                        sprite_bytes,
+                        stride
+                    );
+                }
+
+                render_size = tile_size;
             }
-            render_size = tile_size;
+            catch (Error e)
+            {
+                stderr.printf ("%s %s\n", "Error in puzzle-view.vala render texture:", e.message);
+                return;
+            }
         }
 
-        style_context.save ();
-        style_context.set_state (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA fg = style_context.get_color (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
-        style_context.restore ();
-
-        Gdk.cairo_set_source_rgba (cr, bg);
-        cr.paint ();
-
-        int width = this.get_allocated_width ();
-        int height = this.get_allocated_height ();
-
-        Gdk.cairo_set_source_rgba (cr, fg);
-        cr.set_line_width (1.0);
-
-        double kwidth  = puzzle.width  * tile_size + SPACE_PADDING - 2.0;
-        double kheight = puzzle.height * tile_size + SPACE_PADDING - 2.0;
-        kx = (width  - kwidth)  / 2.0;
-        ky = (height - kheight) / 2.0;
-
-        cr.rectangle (kx, ky, kwidth, kheight);
-        cr.stroke ();
+        snapshot.translate ({ (SPACE_PADDING + 1) / 2, (SPACE_PADDING + 1) / 2 });
 
         for (uint8 y = 0; y < puzzle.height; y++)
             for (uint8 x = 0; x < puzzle.width; x++)
             {
-                draw_square (cr, x, y, kx, ky);
+                char tile_id = puzzle.get_piece_id (puzzle.map, x, y);
+                if (tile_id == ' ')
+                    continue;
 
-                if (piece_id == puzzle.get_piece_id (puzzle.map, x, y))
+                snapshot.save ();
+                snapshot.translate ({ x * tile_size, y * tile_size });
+
+                draw_sprite (snapshot, puzzle.get_piece_nr (x, y));
+
+                if (tile_id == '*')
                 {
-                    Gdk.cairo_set_source_rgba (cr, {1.0, 1.0, 1.0, 0.2});
-                    cr.rectangle (x*tile_size + kx, y*tile_size + ky, tile_size, tile_size);
-                    cr.fill ();
-                }
-            }
+                    uint8 tile_value = 22;  // pyramid; only the center will be used, for marking the red donkey
+                    if (puzzle.get_piece_id (puzzle.orig_map, x, y) == '.')
+                        tile_value = 20;    // if at the final place, just use the green dots as usual
 
-        return false;
+                    int overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
+                    int overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
+
+                    snapshot.push_clip ({ { overlay_offset, overlay_offset }, { overlay_size, overlay_size } });
+                    draw_sprite (snapshot, tile_value);
+                    snapshot.pop ();
+                }
+
+                if (piece_id == tile_id)
+                    snapshot.append_color (
+                        { 1.0f, 1.0f, 1.0f, 0.2f },
+                        { { 0, 0 }, { tile_size, tile_size } }
+                    );
+
+                snapshot.restore ();
+            }
     }
 
-    private void draw_square (Cairo.Context cr, uint8 x, uint8 y, double kx, double ky)
+    private void draw_sprite (Gtk.Snapshot snapshot, int sprite_no)
     {
-        Gdk.Rectangle rect = Gdk.Rectangle ();
-        rect.x = x * tile_size + SPACE_OFFSET + (int) kx - 1;
-        rect.y = y * tile_size + SPACE_OFFSET + (int) ky - 1;
-        rect.width = tile_size;
-        rect.height = tile_size;
-
-        style_context.save ();
-        style_context.set_state (Gtk.StateFlags.NORMAL);
-        Gdk.RGBA bg = style_context.get_background_color (Gtk.StateFlags.NORMAL);
-        style_context.restore ();
-
-        Gdk.cairo_rectangle (cr, rect);
-        Gdk.cairo_set_source_rgba (cr, bg);
-
-        cr.fill ();
-
-        if (puzzle.get_piece_id (puzzle.map, x, y) != ' ')
-        {
-            Gdk.cairo_rectangle (cr, rect);
-            cr.set_source_surface (surface, rect.x - puzzle.get_piece_nr (x, y) * tile_size, rect.y - tile_size / 2);
-            cr.fill ();
-        }
-
-        if (puzzle.get_piece_id (puzzle.map, x, y) == '*')
-        {
-            uint8 tile_value = 22;  // pyramid; only the center will be used, for marking the red donkey
-            if (puzzle.get_piece_id (puzzle.orig_map, x, y) == '.')
-                tile_value = 20;    // if at the final place, just use the green dots as usual
-
-            int overlay_size = THEME_OVERLAY_SIZE * tile_size / THEME_TILE_SIZE;
-            int overlay_offset = THEME_TILE_CENTER * tile_size / THEME_TILE_SIZE - overlay_size / 2;
-
-            cr.rectangle (rect.x + overlay_offset, rect.y + overlay_offset,
-                          overlay_size, overlay_size);
-
-            cr.set_source_surface (surface, rect.x - tile_value * tile_size, rect.y - tile_size / 2);
-            cr.fill ();
-        }
+        var sprite = sprites[sprite_no];
+        snapshot.append_texture (sprite, { { 0, 0 }, { sprite.get_width (), sprite.get_height () } });
     }
 
     /*\
     * * mouse user actions
     \*/
 
-    private Gtk.EventControllerMotion motion_controller;    // for keeping in memory
-    private Gtk.GestureMultiPress click_controller;         // for keeping in memory
-
     private void init_mouse ()  // called on construct
     {
-        motion_controller = new Gtk.EventControllerMotion (this);
+        var motion_controller = new Gtk.EventControllerMotion ();
         motion_controller.motion.connect (on_motion);
+        add_controller (motion_controller);
 
-        click_controller = new Gtk.GestureMultiPress (this);    // only targets Gdk.BUTTON_PRIMARY
+        var click_controller = new Gtk.GestureClick ();    // only targets Gdk.BUTTON_PRIMARY
         click_controller.pressed.connect (on_click);
         click_controller.released.connect (on_release);
+        add_controller (click_controller);
     }
 
-    private static inline void on_click (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private static inline void on_click (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
         if (_this.puzzle.game_over ())
@@ -278,7 +272,7 @@ private class PuzzleView : Gtk.DrawingArea
         _this.puzzle.move_map = _this.puzzle.map;
     }
 
-    private static inline void on_release (Gtk.GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private static inline void on_release (Gtk.GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         PuzzleView _this = (PuzzleView) _click_controller.get_widget ();
         if (_this.piece_id != '\0')

@@ -7,22 +7,22 @@ project_id = 'org.gnome.Klotski'
 gnome = import('gnome')
 # used for internationalization
 i18n = import('i18n')
-# used to run post install script
-python3 = import('python3')
 
-gee_dependency = dependency('gee-0.8')
-glib_dependency = dependency('glib-2.0', version: '>= 2.42.0')
-gnome_games_support_dependency = dependency('libgnome-games-support-1', version: '>= 1.7.1')
-gtk_dependency = dependency('gtk+-3.0', version: '>= 3.24.0')
-rsvg_dependency = dependency('librsvg-2.0', version: '>= 2.32.0')
+# Set gettext package name
+add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language: 'c')
+
+glib_dependency = dependency('glib-2.0', version: '>= 2.80.0')
+gtk_dependency = dependency('gtk4', version: '>= 4.16.0')
+adw_dependency = dependency('libadwaita-1', version: '>= 1.7')
+rsvg_dependency = dependency('librsvg-2.0', version: '>= 2.52.0')
 posix_dependency = meson.get_compiler('vala').find_library('posix')
+gnome_games_support = subproject ('libgnome-games-support',
+                                  default_options: 'superproject_name=gnome-klotski')
+gnome_games_support_dependency = gnome_games_support.get_variable ('lggs_dependency')
 
 appstreamcli            = find_program('appstreamcli',          required: false)
 desktop_file_validate   = find_program('desktop-file-validate', required: false)
 glib_compile_schema     = find_program('glib-compile-schemas',  required: true) # useful?
-
-# Set gettext package name
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language: 'c')
 
 localedir   = join_paths(get_option('prefix'), get_option('localedir'))
 datadir     = join_paths(get_option('prefix'), get_option('datadir'))
@@ -44,5 +44,8 @@ subdir('help')
 subdir('po')
 subdir('src')
 
-meson.add_install_script(python3.find_python().path(),
-                         join_paths(meson.source_root(), 'build-aux', 'meson_post_install.py'))
+gnome.post_install(
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: true,
+    update_desktop_database: true,
+)

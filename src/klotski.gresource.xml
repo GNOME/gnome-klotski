@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/org/gnome/Klotski/ui">
     <file preprocess="xml-stripblanks" alias="assets.svg">../data/assets.svg</file>
+    <file preprocess="xml-stripblanks" alias="solved.svg">../data/solved.svg</file>
     <file preprocess="xml-stripblanks" alias="klotski.ui">../data/ui/klotski.ui</file>
     <file alias="klotski.css">../data/klotski.css</file>
   </gresource>
