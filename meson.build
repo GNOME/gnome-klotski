@@ -12,8 +12,8 @@ i18n = import('i18n')
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language: 'c')
 
 glib_dependency = dependency('glib-2.0', version: '>= 2.80.0')
-gtk_dependency = dependency('gtk4', version: '>= 4.16.0')
-adw_dependency = dependency('libadwaita-1', version: '>= 1.7')
+gtk_dependency = dependency('gtk4', version: '>= 4.23.2')
+adw_dependency = dependency('libadwaita-1', version: '>= 1.9')
 rsvg_dependency = dependency('librsvg-2.0', version: '>= 2.52.0')
 posix_dependency = meson.get_compiler('vala').find_library('posix')
 gnome_games_support = subproject ('libgnome-games-support',

@@ -18,6 +18,11 @@
    with GNOME Klotski.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+[CCode (cname = "gtk_snapshot_set_snap")]
+public extern void gtk_snapshot_set_snap(Gtk.Snapshot snapshot, /* GskRectSnap */ uint snap);
+
+const uint GSK_RECT_SNAP_GROW = 16908801;
+
 private class PuzzleView : Gtk.Widget
 {
     private const int SPACE_PADDING = 5;
@@ -124,6 +129,7 @@ private class PuzzleView : Gtk.Widget
 
     protected override void snapshot (Gtk.Snapshot snapshot)
     {
+        gtk_snapshot_set_snap (snapshot, GSK_RECT_SNAP_GROW);
         snapshot.translate ({ (float) kx, (float) ky });
 
         var builder = new Gsk.PathBuilder ();
