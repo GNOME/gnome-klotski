@@ -1155,6 +1155,6 @@ private class KlotskiWindow : ApplicationWindow
                            "logo-icon-name", "org.gnome.Klotski",
                            /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                            "translator-credits", _("translator-credits"),
-                           "website", "https://wiki.gnome.org/Apps/Klotski");
+                           "website", "https://gitlab.gnome.org/GNOME/gnome-klotski");
     }
 }

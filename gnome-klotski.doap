@@ -10,7 +10,7 @@
   <shortdesc xml:lang="en">Slide blocks to solve the puzzle</shortdesc>
   <description xml:lang="en">Slide blocks to solve the puzzle</description>
 
-  <homepage rdf:resource="https://wiki.gnome.org/Apps/Klotski" />
+  <homepage rdf:resource="https://gitlab.gnome.org/GNOME/gnome-klotski" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="https://download.gnome.org/sources/gnome-klotski/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-klotski/issues/" />
